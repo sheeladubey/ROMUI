@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[com.sun.proxy.$Proxy11 cannot be cast to org.openqa.selenium.By]]>
+    </line>
+  </reporter-output>
+  <suite name="Suite" duration-ms="31595" started-at="2020-04-23T19:38:02Z" finished-at="2020-04-23T19:38:33Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="31595" started-at="2020-04-23T19:38:02Z" finished-at="2020-04-23T19:38:33Z">
+      <class name="com.gsicommerce.romui.selenium.ROMUI.tests.LoginTests">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.ROMUI.tests.LoginTests@7d9d1a19]" name="setup" is-config="true" duration-ms="16389" started-at="2020-04-23T15:38:02Z" finished-at="2020-04-23T15:38:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@f107c50]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="login()[pri:0, instance:com.gsicommerce.romui.selenium.ROMUI.tests.LoginTests@7d9d1a19]" name="login" duration-ms="13821" started-at="2020-04-23T15:38:18Z" finished-at="2020-04-23T15:38:32Z">
+          <reporter-output>
+            <line>
+              <![CDATA[com.sun.proxy.$Proxy11 cannot be cast to org.openqa.selenium.By]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.ROMUI.tests.LoginTests@7d9d1a19]" name="tearDown" is-config="true" duration-ms="1360" started-at="2020-04-23T15:38:32Z" finished-at="2020-04-23T15:38:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login status=SUCCESS method=LoginTests.login()[pri:0, instance:com.gsicommerce.romui.selenium.ROMUI.tests.LoginTests@7d9d1a19] output=com.sun.proxy.$Proxy11 cannot be cast to org.openqa.selenium.By]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.gsicommerce.romui.selenium.ROMUI.tests.LoginTests -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

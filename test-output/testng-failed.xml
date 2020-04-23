@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <parameter name="adminUserName" value="admin@tmsna"/>
+  <parameter name="storeEnvironment" value="lvststromsso04"/>
+  <parameter name="adminPasswd" value="Password123@"/>
+  <parameter name="waitPeriod" value="5"/>
+  <parameter name="browserType" value="chrome"/>
+  <listeners>
+    <listener class-name="com.gsicommerce.romui.selenium.ROMUI.Utilities.ExtentReporterListener"/>
+  </listeners>
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.gsicommerce.romui.selenium.ROMUI.tests.LoginTests">
+        <methods>
+          <include name="login"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.gsicommerce.romui.selenium.ROMUI.tests.LoginTests -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
