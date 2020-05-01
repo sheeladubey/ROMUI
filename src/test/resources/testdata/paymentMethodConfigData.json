@@ -1,0 +1,13 @@
+{
+	"paymentMethodCode":"Credit Card",
+	"description":"Automation - Edit Payment Method Configuration details",
+	"minWaitTime":"100",
+	"autoExpiry":"100",
+	"authReversal":"5",
+	"cashbackLimit":"100.0",
+	"chargeSequence":"100",
+	"refundConstraintValue":"90.0",
+	"refundSequence":"100",
+	"refundItemID":"Auto",
+	"refundItemUOM":"IIuom"	
+}
