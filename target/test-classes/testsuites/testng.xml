@@ -3,17 +3,18 @@
 
 <suite name="Suite">
 <listeners>
-	<listener class-name="com.gsicommerce.romui.selenium.ROMUI.Utilities.ExtentReporterListener"></listener>
+	<listener class-name="com.gsicommerce.romui.selenium.utilities.ExtentReporterListener"></listener>
 </listeners>
 <parameter name="browserType" value="chrome" />
 <parameter name="storeEnvironment" value="lvststromsso04" />
 <parameter name="adminUserName" value="admin@tmsna" />
 <parameter name="adminPasswd" value="Password123@" />
 <parameter name="waitPeriod" value="5"/>
-
+<parameter name="dataFile" value="./src/test/resources/testdata/paymentMethodConfigData.json"></parameter>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.gsicommerce.romui.selenium.ROMUI.tests.ItemSearchTests"/>
+      <!-- <class name="com.gsicommerce.romui.selenium.ROMUI.tests.ItemSearchTests"/> -->
+      <class name="com.gsicommerce.romui.selenium.tests.PaymentMethodConfigTests"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
