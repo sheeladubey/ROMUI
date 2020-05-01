@@ -3,6 +3,7 @@ package com.gsicommerce.romui.selenium.utilities;
 import java.net.IDN;
 import java.time.Duration;
 import java.util.List;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
@@ -31,6 +32,7 @@ public class Common {
 	 * Based on your tests, please set this value. 
 	 * "0" will nullify implicitlyWait and speed up a test. */ 
 	public static final int DEFAULT_WAIT_4_PAGE = 12; 
+	private static final Random RANDOM_GENERATOR = new Random();
 
 
 	/**
@@ -521,5 +523,15 @@ public class Common {
 	//	xstream.alias("Consumer", Consumer.class);
 	//	xstream.alias("Promotion", Promotion.class);
 		return xstream.fromXML(getClass().getResourceAsStream(fileName));
+	}
+	
+	/**
+	 * This method generates a 6 digit random number with a prefix
+	 * 
+	 * @param prefix
+	 * @return String - a String with prefix followed by a random number
+	 */
+	public static String generateRandomID(final String prefix) {
+		return new StringBuilder(prefix).append(RANDOM_GENERATOR.nextInt(999999)).toString();
 	}
 }
