@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.gsicommerce.romui.selenium.testdata.Environment;
 import com.gsicommerce.romui.selenium.utilities.Action;
+import com.gsicommerce.romui.selenium.utilities.Common;
 
 public class OrderManagementMenusPage {
 	WebDriver driver;
@@ -33,9 +34,9 @@ public class OrderManagementMenusPage {
 	@CacheLookup
 	WebElement lkOrders;
 	
-	@FindBy(how = How.XPATH, using = "//i/parent::a[contains(text(),'Pipelines')]")
+	@FindBy(how = How.XPATH, using = "//li/a[contains(text(),'Pipelines')]")
 	@CacheLookup
-	WebElement lkPipelines;
+	WebElement lkPipeline;
 	
 	@FindBy(how = How.XPATH, using = "//i/parent::a[contains(text(),'Service Flows')]")
 	@CacheLookup
@@ -390,4 +391,13 @@ public class OrderManagementMenusPage {
 		btnMainMenu.click();
 		lkReleaseNotes.click();
 	}
+
+	public void clickOnPipeline() {
+		btnMainMenu.click();
+		Action.waitForElementToBeClickable(driver, lkPipeline, 10);
+		lkPipeline.click();
+		
+	}
+	
+	
 }

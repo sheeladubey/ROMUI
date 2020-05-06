@@ -31,6 +31,14 @@ public class CommonElementsPage {
 	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Add')]")
 	@CacheLookup
 	private static WebElement btnAdd;	
+	
+	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Save & Exit')]")
+	@CacheLookup
+	private static WebElement btnSaveExit;
+	
+	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Cancel')]")
+	@CacheLookup
+	private static WebElement btnCancel;
 		
 		
 	public static void clickOnSaveBtn() {
@@ -41,5 +49,14 @@ public class CommonElementsPage {
 		btnAdd.click();		
 	}
 	
+	public static void clickOnSaveExitBtn()
+	{
+		btnSaveExit.click();
+	}
+
+	public static void clickOnCancelBtn() {
+		btnCancel.click();
+		
+	}
 
 }

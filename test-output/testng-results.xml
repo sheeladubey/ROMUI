@@ -1,45 +1,179 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results ignored="1" total="6" passed="5" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[com.sun.proxy.$Proxy11 cannot be cast to org.openqa.selenium.By]]>
+      <![CDATA[class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')]]>
+    </line>
+    <line>
+      <![CDATA[Expected condition failed: waiting for presence of element located by: By.id:  (tried for 3 second(s) with 500 milliseconds interval)]]>
+    </line>
+    <line>
+      <![CDATA[class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')]]>
+    </line>
+    <line>
+      <![CDATA[class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')]]>
+    </line>
+    <line>
+      <![CDATA[class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')]]>
+    </line>
+    <line>
+      <![CDATA[class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')]]>
     </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="31595" started-at="2020-04-23T19:38:02Z" finished-at="2020-04-23T19:38:33Z">
+  <suite started-at="2020-05-06T16:55:49 EDT" name="Suite" finished-at="2020-05-06T16:58:14 EDT" duration-ms="144857">
     <groups>
     </groups>
-    <test name="Test" duration-ms="31595" started-at="2020-04-23T19:38:02Z" finished-at="2020-04-23T19:38:33Z">
-      <class name="com.gsicommerce.romui.selenium.ROMUI.tests.LoginTests">
-        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.ROMUI.tests.LoginTests@7d9d1a19]" name="setup" is-config="true" duration-ms="16389" started-at="2020-04-23T15:38:02Z" finished-at="2020-04-23T15:38:18Z">
+    <test started-at="2020-05-06T16:55:49 EDT" name="Test" finished-at="2020-05-06T16:58:14 EDT" duration-ms="144857">
+      <class name="com.gsicommerce.romui.selenium.tests.PipelinesTest">
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@4c371370]" started-at="2020-05-06T16:55:49 EDT" name="setup" finished-at="2020-05-06T16:55:58 EDT" duration-ms="8160" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@f107c50]]>
+                <![CDATA[org.testng.TestRunner@2a39aa2b]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="login()[pri:0, instance:com.gsicommerce.romui.selenium.ROMUI.tests.LoginTests@7d9d1a19]" name="login" duration-ms="13821" started-at="2020-04-23T15:38:18Z" finished-at="2020-04-23T15:38:32Z">
+        <test-method signature="testAddPipeline()[pri:1, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@4c371370]" started-at="2020-05-06T16:55:58 EDT" name="testAddPipeline" description="Add Pipeline" finished-at="2020-05-06T16:56:21 EDT" duration-ms="22935" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[com.sun.proxy.$Proxy11 cannot be cast to org.openqa.selenium.By]]>
+              <![CDATA[class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')]]>
+            </line>
+            <line>
+              <![CDATA[Expected condition failed: waiting for presence of element located by: By.id:  (tried for 3 second(s) with 500 milliseconds interval)]]>
             </line>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.ROMUI.tests.LoginTests@7d9d1a19]" name="tearDown" is-config="true" duration-ms="1360" started-at="2020-04-23T15:38:32Z" finished-at="2020-04-23T15:38:33Z">
+        </test-method> <!-- testAddPipeline -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@4c371370]" started-at="2020-05-06T16:56:21 EDT" name="tearDown" finished-at="2020-05-06T16:56:21 EDT" duration-ms="661" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=login status=SUCCESS method=LoginTests.login()[pri:0, instance:com.gsicommerce.romui.selenium.ROMUI.tests.LoginTests@7d9d1a19] output=com.sun.proxy.$Proxy11 cannot be cast to org.openqa.selenium.By]]]>
+                <![CDATA[[TestResult name=testAddPipeline status=SUCCESS method=PipelinesTest.testAddPipeline()[pri:1, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@4c371370] output=class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.gsicommerce.romui.selenium.ROMUI.tests.LoginTests -->
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@4c371370]" started-at="2020-05-06T16:56:21 EDT" name="setup" finished-at="2020-05-06T16:56:31 EDT" duration-ms="9313" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@2a39aa2b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testViewPipeline()[pri:2, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@4c371370]" started-at="2020-05-06T16:56:31 EDT" name="testViewPipeline" description="View Pipeline" finished-at="2020-05-06T16:56:48 EDT" duration-ms="17408" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testViewPipeline -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@4c371370]" started-at="2020-05-06T16:56:48 EDT" name="tearDown" finished-at="2020-05-06T16:56:49 EDT" duration-ms="652" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testViewPipeline status=SUCCESS method=PipelinesTest.testViewPipeline()[pri:2, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@4c371370] output=class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@4c371370]" started-at="2020-05-06T16:56:49 EDT" name="setup" finished-at="2020-05-06T16:56:56 EDT" duration-ms="7724" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@2a39aa2b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testDeletePipeline()[pri:3, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@4c371370]" started-at="2020-05-06T16:56:56 EDT" name="testDeletePipeline" description="Delete Pipeline" finished-at="2020-05-06T16:57:15 EDT" duration-ms="19113" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testDeletePipeline -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@4c371370]" started-at="2020-05-06T16:57:15 EDT" name="tearDown" finished-at="2020-05-06T16:57:16 EDT" duration-ms="662" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testDeletePipeline status=SUCCESS method=PipelinesTest.testDeletePipeline()[pri:3, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@4c371370] output=class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@4c371370]" started-at="2020-05-06T16:57:16 EDT" name="setup" finished-at="2020-05-06T16:57:24 EDT" duration-ms="7590" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@2a39aa2b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testCopyPipeline()[pri:4, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@4c371370]" started-at="2020-05-06T16:57:24 EDT" name="testCopyPipeline" description="Copy Pipeline" finished-at="2020-05-06T16:57:45 EDT" duration-ms="21241" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testCopyPipeline -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@4c371370]" started-at="2020-05-06T16:57:45 EDT" name="tearDown" finished-at="2020-05-06T16:57:46 EDT" duration-ms="651" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCopyPipeline status=SUCCESS method=PipelinesTest.testCopyPipeline()[pri:4, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@4c371370] output=class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@4c371370]" started-at="2020-05-06T16:57:46 EDT" name="setup" finished-at="2020-05-06T16:57:53 EDT" duration-ms="7702" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@2a39aa2b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testEditPipelineConfiguration()[pri:5, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@4c371370]" started-at="2020-05-06T16:57:53 EDT" name="testEditPipelineConfiguration" description="Edit Pipeline Configuration" finished-at="2020-05-06T16:58:14 EDT" duration-ms="20356" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testEditPipelineConfiguration -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@4c371370]" started-at="2020-05-06T16:58:14 EDT" name="tearDown" finished-at="2020-05-06T16:58:14 EDT" duration-ms="658" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testEditPipelineConfiguration status=SUCCESS method=PipelinesTest.testEditPipelineConfiguration()[pri:5, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@4c371370] output=class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.gsicommerce.romui.selenium.tests.PipelinesTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

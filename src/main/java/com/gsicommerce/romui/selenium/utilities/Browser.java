@@ -76,6 +76,7 @@ public class Browser {
 			setSystemProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
 		//	DesiredCapabilities chromecapabilities = DesiredCapabilities.chrome();
          //   chromecapabilities.setBrowserName("chrome");
+			System.setProperty("webdriver.chrome.silentOutput", "true");
             ChromeOptions options = new ChromeOptions();
             options.addArguments("test-type");
             Map<String, Object> prefs = new HashMap<String, Object>();
