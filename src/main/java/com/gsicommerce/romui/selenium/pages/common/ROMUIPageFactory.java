@@ -18,7 +18,7 @@ public class ROMUIPageFactory extends PageFactory {
 	private final PaymentMethodConfigPage paymtMethdConfigPage;
 	private final CommonElementsPage commonElePage;
 	private final PipelinesPage pipeLinesPage;
-	private final ShippingLabelConfigPage shippingMthdConfigPage;
+	private final ShippingLabelConfigPage shipLbleConfigPage;
 
 	public ROMUIPageFactory(WebDriver driver, Environment env) {
 		super(driver, env);
@@ -28,7 +28,7 @@ public class ROMUIPageFactory extends PageFactory {
 		paymtMethdConfigPage = new PaymentMethodConfigPage(driver, env);
 		commonElePage = new CommonElementsPage(driver, env);
 		pipeLinesPage = new PipelinesPage(driver, env);
-		shippingMthdConfigPage = new ShippingLabelConfigPage(driver, env);
+		shipLbleConfigPage = new ShippingLabelConfigPage(driver, env);
 	}
 
 	public LoginPage loginPage() {
@@ -56,8 +56,8 @@ public class ROMUIPageFactory extends PageFactory {
 		return pipeLinesPage;
 	}
 
-	public ShippingLabelConfigPage shippingMthdConfigPage() {
+	public ShippingLabelConfigPage shipLbleConfigPage() {
 
-		return shippingMthdConfigPage;
+		return shipLbleConfigPage;
 	}
 }

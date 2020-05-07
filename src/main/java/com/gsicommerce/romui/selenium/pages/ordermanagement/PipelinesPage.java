@@ -131,8 +131,6 @@ public class PipelinesPage {
 	private WebElement btnAddConnection;
 	/*--------------------------------------------------------------*/
 
-	// @FindBy(how = How.XPATH, using =
-	// "//div[contains(@class,'pipeline-criteria-form-container')]")
 	@FindBy(how = How.CSS, using = ".pipeline-criteria-form-container")
 	@CacheLookup
 	private WebElement pipelineCriteriaFormContainer;

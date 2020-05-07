@@ -9,7 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.gsicommerce.romui.selenium.testdata.Environment;
 import com.gsicommerce.romui.selenium.utilities.Action;
-import com.gsicommerce.romui.selenium.utilities.Common;
 
 public class OrderManagementMenusPage {
 	WebDriver driver;
@@ -50,7 +49,7 @@ public class OrderManagementMenusPage {
 	@CacheLookup
 	WebElement lkReportingDashboard;
 	
-	@FindBy(how = How.XPATH, using = "//i/parent::a[contains(text(),'Omni Administration')]")
+	@FindBy(how = How.XPATH, using = "//a[contains(text(),'Omni Administration')]")
 	@CacheLookup
 	WebElement lkOmniAdministration;
 	
@@ -138,7 +137,7 @@ public class OrderManagementMenusPage {
 	@CacheLookup
 	WebElement lkShipngRegions;
 	
-	@FindBy(how = How.XPATH, using = "//li/a[contains(text(),'Seller Configurations')]")
+	@FindBy(how = How.XPATH, using = "//a[contains(text(),'Seller Configurations')]")
 	@CacheLookup
 	WebElement lkSellerConfig;
 	
@@ -158,7 +157,7 @@ public class OrderManagementMenusPage {
 	@CacheLookup
 	WebElement lkShipMthdOptimztions;
 	
-	@FindBy(how = How.XPATH, using = "//li/a[contains(text(),'Shipping Label Configurations')]")
+	@FindBy(how = How.XPATH, using = "//a[contains(text(),'Shipping Label Configurations')]")
 	@CacheLookup
 	WebElement lkShipngLabelConfig;
 	
@@ -324,8 +323,11 @@ public class OrderManagementMenusPage {
 	
 	public void clickOnShippingLabelConfig() {
 		btnMainMenu.click();
+		Action.waitForElementToBeClickable(driver, lkOmniAdministration, 10);
 		lkOmniAdministration.click();
+		Action.waitForElementToBeClickable(driver, lkSellerConfig,10);
 		lkSellerConfig.click();
+		Action.waitForElementToBeClickable(driver, lkShipngLabelConfig,10);
 		lkShipngLabelConfig.click();		
 	}
 	

@@ -1,0 +1,14 @@
+{
+	"sellerDescription":"Automation Ship Label Configuration",
+     "addressLine1":"935 FIRST AVE",
+     "addressLine2":"935 first ave",
+     "city":"KING OF PRUSSIA",
+     "state":"PA",
+     "zipcode":"19406",	
+	"parentAccountNumber":"500000",
+	"parentKey":"1111",
+	"parentPassword":"ROM",
+	"signatureOption":"Yes",
+	"labelStockType":"Stock",
+	"parentMeterNumber":"90909"
+	}

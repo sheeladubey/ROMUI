@@ -54,3 +54,70 @@
 2020-05-06 16:58:06,592 [main] INFO romui - Navigated to Pipeline page
 2020-05-06 16:58:09,014 [main] INFO romui - Edit Pipeline Config link is clicked on to enter the data and Clicked on Save btn
 2020-05-06 16:58:09,014 [main] INFO romui - Verify if Edit pipeline Config success message is displayed
+2020-05-06 21:38:07,810 [main] INFO romui - Login credentials to be entered
+2020-05-06 21:38:18,442 [main] INFO romui - Order Management link is clicked on
+2020-05-06 21:41:44,119 [main] INFO romui - Login credentials to be entered
+2020-05-06 21:41:53,410 [main] INFO romui - Order Management link is clicked on
+2020-05-06 21:46:30,569 [main] INFO romui - Login credentials to be entered
+2020-05-06 21:46:42,616 [main] INFO romui - Order Management link is clicked on
+2020-05-06 21:48:32,524 [main] INFO romui - Login credentials to be entered
+2020-05-06 21:48:42,145 [main] INFO romui - Order Management link is clicked on
+2020-05-06 21:49:54,877 [main] INFO romui - Login credentials to be entered
+2020-05-06 21:50:03,044 [main] INFO romui - Order Management link is clicked on
+2020-05-06 21:50:06,859 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-06 22:56:35,857 [main] INFO romui - Login credentials to be entered
+2020-05-06 22:56:47,341 [main] INFO romui - Order Management link is clicked on
+2020-05-06 22:56:50,926 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-06 23:13:47,673 [main] INFO romui - Login credentials to be entered
+2020-05-06 23:13:58,740 [main] INFO romui - Order Management link is clicked on
+2020-05-06 23:14:02,768 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-06 23:21:19,427 [main] INFO romui - Login credentials to be entered
+2020-05-06 23:21:27,774 [main] INFO romui - Order Management link is clicked on
+2020-05-06 23:21:31,939 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-06 23:25:50,077 [main] INFO romui - Login credentials to be entered
+2020-05-06 23:25:59,427 [main] INFO romui - Order Management link is clicked on
+2020-05-06 23:26:03,212 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-06 23:28:16,831 [main] INFO romui - Login credentials to be entered
+2020-05-06 23:28:24,976 [main] INFO romui - Order Management link is clicked on
+2020-05-06 23:28:28,585 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-06 23:38:28,731 [main] INFO romui - Login credentials to be entered
+2020-05-06 23:38:37,700 [main] INFO romui - Order Management link is clicked on
+2020-05-06 23:38:41,477 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-06 23:49:10,167 [main] INFO romui - Login credentials to be entered
+2020-05-06 23:49:25,926 [main] INFO romui - Order Management link is clicked on
+2020-05-06 23:49:30,089 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-06 23:52:31,377 [main] INFO romui - Login credentials to be entered
+2020-05-06 23:52:41,945 [main] INFO romui - Order Management link is clicked on
+2020-05-06 23:52:45,611 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-06 23:52:52,462 [main] INFO romui - Add link is clicked on to enter the Ship Label Config data and Clicked on Save btn
+2020-05-06 23:52:52,463 [main] INFO romui - Verify if ship Label Config add success message is displayed
+2020-05-06 23:55:32,805 [main] INFO romui - Login credentials to be entered
+2020-05-06 23:55:41,626 [main] INFO romui - Order Management link is clicked on
+2020-05-06 23:55:45,589 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-06 23:55:53,224 [main] INFO romui - Add link is clicked on to enter the Ship Label Config data and Clicked on Save btn
+2020-05-06 23:55:53,224 [main] INFO romui - Verify if ship Label Config add success message is displayed
+2020-05-06 23:58:20,489 [main] INFO romui - Login credentials to be entered
+2020-05-06 23:58:28,471 [main] INFO romui - Order Management link is clicked on
+2020-05-06 23:58:32,299 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-06 23:58:39,556 [main] INFO romui - Add link is clicked on to enter the Ship Label Config data and Clicked on Save btn
+2020-05-06 23:58:39,558 [main] INFO romui - Verify if ship Label Config add success message is displayed
+2020-05-07 00:29:25,717 [main] INFO romui - Login credentials to be entered
+2020-05-07 00:29:37,914 [main] INFO romui - Order Management link is clicked on
+2020-05-07 00:29:41,108 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-07 00:29:48,660 [main] INFO romui - Add link is clicked on to enter the Ship Label Config data and Clicked on Save btn
+2020-05-07 00:29:48,662 [main] INFO romui - Verify if ship Label Config add success message is displayed
+2020-05-07 00:30:34,933 [main] INFO romui - Login credentials to be entered
+2020-05-07 00:30:47,031 [main] INFO romui - Order Management link is clicked on
+2020-05-07 00:30:50,586 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-07 00:30:59,590 [main] INFO romui - Add link is clicked on to enter the Ship Label Config data and Clicked on Save btn
+2020-05-07 00:30:59,590 [main] INFO romui - Verify if ship Label Config add success message is displayed
+2020-05-07 00:32:30,855 [main] INFO romui - Login credentials to be entered
+2020-05-07 00:32:39,598 [main] INFO romui - Order Management link is clicked on
+2020-05-07 00:32:43,639 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-07 00:32:52,099 [main] INFO romui - Add link is clicked on to enter the Ship Label Config data and Clicked on Save btn
+2020-05-07 00:32:52,099 [main] INFO romui - Verify if ship Label Config add success message is displayed
+2020-05-07 00:36:21,974 [main] INFO romui - Login credentials to be entered
+2020-05-07 00:36:31,279 [main] INFO romui - Order Management link is clicked on
+2020-05-07 00:36:34,879 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-07 00:36:45,238 [main] INFO romui - Add link is clicked on to enter the Ship Label Config data and Clicked on Save btn
+2020-05-07 00:36:45,238 [main] INFO romui - Verify if ship Label Config add success message is displayed
