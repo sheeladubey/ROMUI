@@ -25,7 +25,6 @@ public class PipelinesTest extends ROMUIBasePage {
 		logger.info("Add link is clicked on to enter the data and Clicked on Save btn");
 		logger.info("Verify if add pipeline success message is displayed");
 		Assert.assertEquals(romuipages.pipeLinesPage().txtSuccessMsg.getText(), RomuiEnumValues.PIPELINE_SAVE.getMessage(), "Pipelne is not Saved successfully");
-			
 	}
 
 	@Test(enabled = true, priority=2,description = "View Pipeline")
