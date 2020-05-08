@@ -10,6 +10,7 @@ import java.util.function.Function;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -412,6 +413,8 @@ public class Common {
 			return false;
 		}
 	}
+	
+
 
 	/**
 	 * Checks if the List<WebElement> are in the DOM, regardless of being displayed

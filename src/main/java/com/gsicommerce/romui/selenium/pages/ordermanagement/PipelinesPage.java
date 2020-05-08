@@ -3,6 +3,7 @@ package com.gsicommerce.romui.selenium.pages.ordermanagement;
 import java.io.IOException;
 import java.util.Calendar;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -32,7 +33,7 @@ public class PipelinesPage {
 	Calendar futureStartDate = null;
 	Calendar dateCurrent = null;
 	Calendar endDateCal = null;
-
+	
 	public PipelinesPage(WebDriver driver, Environment env) {
 
 		this.driver = driver;
@@ -114,7 +115,10 @@ public class PipelinesPage {
 	@CacheLookup
 	public WebElement btnOrderCreate;
 
-	@FindBy(how = How.XPATH, using = "//div[contains(@class,'sidebar-body-overlay sidebar-body-overlay--active')]")
+	//@FindBy(how = How.XPATH, using = "//span[contains(@class,'sidebar-title-placeholder')]")
+//	@FindBy(how = How.XPATH, using = "//div[contains(@class,'sidebar-body-overlay')]")
+	@FindBy(how = How.XPATH, using = "//div[contains(@class,'konvajs-content')]")
+	
 	@CacheLookup
 	private WebElement OrderCreateEvent;
 
@@ -186,39 +190,85 @@ public class PipelinesPage {
 	@FindBy(how = How.XPATH, using = "//button[contains(text(),'Continue')]")
 	@CacheLookup
 	public WebElement btnContinue;
-
+	
+	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Save and Edit Configuration')]")
+	@CacheLookup
+	public WebElement btnSaveEditConfig;
+	
+	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Save and View Configuration')]")
+	@CacheLookup
+	public WebElement btnSaveViewConfig;
+	
+	@FindBy(how = How.CSS, using = ".condition-display-container-inner")
+	@CacheLookup
+	public WebElement btnCreteriaCondition;
+	
+	
 	public void addPipeline() throws JsonParseException, JsonMappingException, IOException {
 		data = PipelineData.get(env.getFileLocation());
-		Common.waitForElementPresent(driver, btnAddPipeline, 03);
+		Common.waitForElementPresent(driver, btnAddPipeline, 01);
 		btnAddPipeline.click();
 		Action.enter(txtBoxPipelineName, data.getPipelineName());
 		clickonStartDate();
 		clickonEndDate();
 		selectPipelineCriteriaByTenderType();
 		btnSaveAddConfig.click();
-		createEvents();
-
+		Common.dragAndDrop(driver, dragSalesOrderCreate, dropSalesOrderCreate, 10);
+		CommonElementsPage.clickOnSaveBtn();
+		btnContinue.click();
+		
+		//createEvents();
 		// Action.waitForElementToBeClickable(driver, btnPipelineCriteriaDelete, 10);
 		// btnPipelineCriteriaDelete.click();
 		// System.out.println("pipeline criteria button has been deleted");
 		// CommonElementsPage.clickOnSaveExitBtn();
+		
 
 	}
 
 	public void createEvents() {
 		Common.dragAndDrop(driver, dragSalesOrderCreate, dropSalesOrderCreate, 10);
-		Common.waitForElementPresent(driver, btnOrderCreate, 10);
+		//Common.waitForElementPresent(driver, OrderCreateEvent, 10);
+		Common.setImplicitWait(driver, 3000);
+		//mousehover(btnOrderCreate);		
+		//btnOrderCreate.click();
+		Actions action=new Actions(driver);
+		//action.moveToElement(btnOrderCreate).perform();
+		action.moveByOffset(400, 141).perform();
+		action.click();
 		// btnOrderCreate.click();
+		// Create instance of Javascript executor
+		
+	/*	JavascriptExecutor je = (JavascriptExecutor) driver;
 
 		Actions actions = new Actions(driver);
-		actions.moveToElement(btnOrderCreate).perform();
-		actions.click();
+		je.executeScript("arguments[0].scrollIntoView(true);", OrderCreateEvent);
+		actions.moveToElement(OrderCreateEvent, 460, 141).perform();
+		actions.click();*/
+		
 		// btnConnect.click();
 		// btnScheduling.click();
 		// btnAddConnection.click();
-		CommonElementsPage.clickOnSaveBtn();
+		//CommonElementsPage.clickOnSaveBtn();
 
 	}
+	
+	public void mousehover(WebElement a)
+	{
+		
+		try 
+		 {
+			 String mouseOverScript = "if(document.createEvent){var evObj = document.createEvent('MouseEvents');evObj.initEvent('mouseover',true, false); arguments[0].dispatchEvent(evObj);} else if(document.createEventObject) { arguments[0].fireEvent('onmouseover');}";
+			 ((JavascriptExecutor) driver).executeScript(mouseOverScript,a);
+			 Thread.sleep(1000);
+			 ((JavascriptExecutor)driver).executeScript("arguments[0].click();",a);
+			
+			
+		} catch (Exception e) {
+			System.out.println("no luck");
+		}
+		}
+	
 
 	public void clickViewPipeline() {
 		btnView.click();
@@ -271,22 +321,38 @@ public class PipelinesPage {
 			Action.selectByIndex(drpdwnPipelineStatus, 2);
 			clickonStartDate();
 			clickonEndDate();
-			pipelineCriteriaFormContainer.click();
+			if(btnCreteriaCondition.isDisplayed()) 
+			{
+			//pipelineCriteriaFormContainer.click();
+			btnPrependCondition.click();
 			selectPipelineCriteriaByOrderType();
-			CommonElementsPage.clickOnSaveExitBtn();
-			Common.waitForElementPresent(driver, btnContinue, 05);
+			btnSaveEditConfig.click();		
+			CommonElementsPage.clickOnSaveBtn();
 			btnContinue.click();
+			//CommonElementsPage.clickOnSaveExitBtn();
+			//Common.waitForElementPresent(driver, btnContinue, 05);
+			//btnContinue.click();
 		} else
 
 		if (secondColumn.getText().equals("ACTIVE")) {
 			btnEdit.click();
 			clickonStartDate();
 			clickonEndDate();
-			CommonElementsPage.clickOnSaveExitBtn();
+			//btnSaveEditConfig.click();
+			btnSaveViewConfig.click();
+			btnContinue.click();
+			//CommonElementsPage.clickOnCancelBtn();
+		}else
+			if(secondColumn.getText().equals("ACTIVE")) {
+				btnEdit.click();
+				Action.selectByIndex(drpdwnPipelineStatus, 2);	
+				clickonStartDate();
+				clickonEndDate();
+				btnSaveViewConfig.click();
+				btnContinue.click();
 		}
-
 	}
-
+}
 	public void selectPipelineCriteriaByTenderType() {
 
 		Action.selectByIndex(drpdwnPipelineCriteriaGroupStart, 1);
@@ -337,13 +403,13 @@ public class PipelinesPage {
 		//Action.scrollDown("200");
 		//Action.waitForElementToBeClickable(driver, btnEditConfig, 10);
 		btnEditConfig.click();
-		Common.dragAndDrop(driver, dragSalesOrderCreate, dropSalesOrderCreate, 10);
+		//Common.dragAndDrop(driver, dragSalesOrderCreate, dropSalesOrderCreate, 10);
 		CommonElementsPage.clickOnSaveBtn();
 		btnContinue.click();
 	}else
 		if(secondColumn.getText().equals("ACTIVE"))
 		{
-			btnEditConfig.click();
+			btnEditConfig.click();					
 			CommonElementsPage.clickOnCancelBtn();
 		}else
 		{
