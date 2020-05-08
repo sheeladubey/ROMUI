@@ -12,7 +12,7 @@ import com.gsicommerce.romui.selenium.utilities.RomuiEnumValues;
 
 public class PipelinesTest extends ROMUIBasePage {
 	
-	@Test(enabled = false, priority=1,description = "Add Pipeline")
+	@Test(enabled = true, priority=1,description = "Add Pipeline")
 	public void testAddPipeline()throws JsonParseException, JsonMappingException, IOException {
 		
 		logger.info("Login credentials to be entered");
@@ -27,7 +27,7 @@ public class PipelinesTest extends ROMUIBasePage {
 		Assert.assertEquals(romuipages.pipeLinesPage().txtSuccessMsg.getText(), RomuiEnumValues.PIPELINE_SAVE.getMessage(), "Pipelne is not Saved successfully");
 	}
 
-	@Test(enabled = false, priority=2,description = "View Pipeline")
+	@Test(enabled = true, priority=2,description = "View Pipeline")
 	public void testViewPipeline()  {
 		
 		logger.info("Login credentials to be entered");
@@ -41,7 +41,7 @@ public class PipelinesTest extends ROMUIBasePage {
 		
 	}
 	
-	@Test(enabled = false, priority=3,description = "Delete Pipeline")
+	@Test(enabled = true, priority=3,description = "Delete Pipeline")
 	public void testDeletePipeline() {
 		
 		logger.info("Login credentials to be entered");
@@ -73,7 +73,7 @@ public class PipelinesTest extends ROMUIBasePage {
 	}
 	
 	
-	@Test(enabled = false, priority=4,description = "Copy Pipeline")
+	@Test(enabled = true, priority=4,description = "Copy Pipeline")
 	public void testCopyPipeline()throws JsonParseException, JsonMappingException, IOException {
 		
 		logger.info("Login credentials to be entered");

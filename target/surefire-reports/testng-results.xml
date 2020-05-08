@@ -2,12 +2,12 @@
 <testng-results ignored="4" total="7" passed="0" failed="0" skipped="3">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-05-08T15:39:33 EDT" name="Surefire suite" finished-at="2020-05-08T15:39:33 EDT" duration-ms="108">
+  <suite started-at="2020-05-08T17:15:52 EDT" name="Surefire suite" finished-at="2020-05-08T17:15:52 EDT" duration-ms="111">
     <groups>
     </groups>
-    <test started-at="2020-05-08T15:39:33 EDT" name="Surefire test" finished-at="2020-05-08T15:39:33 EDT" duration-ms="108">
+    <test started-at="2020-05-08T17:15:52 EDT" name="Surefire test" finished-at="2020-05-08T17:15:52 EDT" duration-ms="111">
       <class name="com.gsicommerce.romui.selenium.tests.PipelinesTest">
-        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@1068e947]" started-at="2020-05-08T15:39:33 EDT" name="setup" finished-at="2020-05-08T15:39:33 EDT" duration-ms="15" status="FAIL">
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@1068e947]" started-at="2020-05-08T17:15:52 EDT" name="setup" finished-at="2020-05-08T17:15:52 EDT" duration-ms="17" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -64,7 +64,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testEditPipelineConfiguration()[pri:5, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@1068e947]" started-at="2020-05-08T15:39:33 EDT" name="testEditPipelineConfiguration" description="Edit Pipeline Configuration" finished-at="2020-05-08T15:39:33 EDT" duration-ms="0" status="SKIP">
+        <test-method signature="testEditPipelineConfiguration()[pri:5, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@1068e947]" started-at="2020-05-08T17:15:52 EDT" name="testEditPipelineConfiguration" description="Edit Pipeline Configuration" finished-at="2020-05-08T17:15:52 EDT" duration-ms="0" status="SKIP">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
@@ -114,7 +114,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testEditPipelineConfiguration -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@1068e947]" started-at="2020-05-08T15:39:33 EDT" name="tearDown" finished-at="2020-05-08T15:39:33 EDT" duration-ms="41" status="FAIL">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@1068e947]" started-at="2020-05-08T17:15:52 EDT" name="tearDown" finished-at="2020-05-08T17:15:52 EDT" duration-ms="42" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -170,11 +170,11 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@1068e947]" started-at="2020-05-08T15:39:33 EDT" name="setup" finished-at="1969-12-31T19:00:00 EST" duration-ms="-1588966773463" status="SKIP">
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@1068e947]" started-at="2020-05-08T17:15:52 EDT" name="setup" finished-at="1969-12-31T19:00:00 EST" duration-ms="-1588972552697" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@1068e947]" started-at="2020-05-08T15:39:33 EDT" name="tearDown" finished-at="2020-05-08T15:39:33 EDT" duration-ms="1" status="FAIL">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@1068e947]" started-at="2020-05-08T17:15:52 EDT" name="tearDown" finished-at="2020-05-08T17:15:52 EDT" duration-ms="1" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -230,7 +230,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method signature="testEditPipeline()[pri:6, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@1068e947]" started-at="2020-05-08T15:39:33 EDT" name="testEditPipeline" description="Edit Pipeline" finished-at="2020-05-08T15:39:33 EDT" duration-ms="0" status="SKIP">
+        <test-method signature="testEditPipeline()[pri:6, instance:com.gsicommerce.romui.selenium.tests.PipelinesTest@1068e947]" started-at="2020-05-08T17:15:52 EDT" name="testEditPipeline" description="Edit Pipeline" finished-at="2020-05-08T17:15:52 EDT" duration-ms="0" status="SKIP">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
@@ -281,7 +281,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
         </test-method> <!-- testEditPipeline -->
       </class> <!-- com.gsicommerce.romui.selenium.tests.PipelinesTest -->
       <class name="com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTest">
-        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTest@7dc222ae]" started-at="2020-05-08T15:39:33 EDT" name="setup" finished-at="2020-05-08T15:39:33 EDT" duration-ms="1" status="FAIL">
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTest@7dc222ae]" started-at="2020-05-08T17:15:52 EDT" name="setup" finished-at="2020-05-08T17:15:52 EDT" duration-ms="0" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -338,7 +338,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testAddShipLabelConfig()[pri:1, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTest@7dc222ae]" started-at="2020-05-08T15:39:33 EDT" name="testAddShipLabelConfig" description="Add Ship Label Config" finished-at="2020-05-08T15:39:33 EDT" duration-ms="0" status="SKIP">
+        <test-method signature="testAddShipLabelConfig()[pri:1, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTest@7dc222ae]" started-at="2020-05-08T17:15:52 EDT" name="testAddShipLabelConfig" description="Add Ship Label Config" finished-at="2020-05-08T17:15:52 EDT" duration-ms="0" status="SKIP">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
@@ -388,7 +388,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddShipLabelConfig -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTest@7dc222ae]" started-at="2020-05-08T15:39:33 EDT" name="tearDown" finished-at="2020-05-08T15:39:33 EDT" duration-ms="1" status="FAIL">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTest@7dc222ae]" started-at="2020-05-08T17:15:52 EDT" name="tearDown" finished-at="2020-05-08T17:15:52 EDT" duration-ms="1" status="FAIL">
           <params>
             <param index="0">
               <value>

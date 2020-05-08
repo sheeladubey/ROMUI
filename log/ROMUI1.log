@@ -1,0 +1,25 @@
+2020-05-08 17:24:14,582 [main] INFO romui - Login credentials to be entered
+2020-05-08 17:24:25,294 [main] INFO romui - Order Management link is clicked on
+2020-05-08 17:24:29,674 [main] INFO romui - Navigated to Pipeline page
+2020-05-08 17:24:44,270 [main] INFO romui - Login credentials to be entered
+2020-05-08 17:24:52,892 [main] INFO romui - Order Management link is clicked on
+2020-05-08 17:24:57,817 [main] INFO romui - Navigated to Pipeline page
+2020-05-08 17:25:08,203 [main] INFO romui - Login credentials to be entered
+2020-05-08 17:25:16,576 [main] INFO romui - Order Management link is clicked on
+2020-05-08 17:25:21,061 [main] INFO romui - Navigated to Pipeline page
+2020-05-08 17:25:26,549 [main] INFO romui - Verify if Delete pipeline success message is displayed
+2020-05-08 17:25:34,514 [main] INFO romui - Login credentials to be entered
+2020-05-08 17:25:42,417 [main] INFO romui - Order Management link is clicked on
+2020-05-08 17:25:46,505 [main] INFO romui - Navigated to Pipeline page
+2020-05-08 17:25:54,456 [main] INFO romui - Copy link is clicked on to enter the data and Clicked on Save btn
+2020-05-08 17:25:54,456 [main] INFO romui - Verify if Copy pipeline success message is displayed
+2020-05-08 17:26:03,280 [main] INFO romui - Login credentials to be entered
+2020-05-08 17:26:12,621 [main] INFO romui - Order Management link is clicked on
+2020-05-08 17:26:17,403 [main] INFO romui - Navigated to Pipeline page
+2020-05-08 17:26:19,369 [main] INFO romui - Edit Pipeline Config link is clicked on to enter the data and Clicked on Save btn
+2020-05-08 17:26:19,369 [main] INFO romui - Verify if Edit pipeline Config success message is displayed
+2020-05-08 17:26:28,705 [main] INFO romui - Login credentials to be entered
+2020-05-08 17:26:37,661 [main] INFO romui - Order Management link is clicked on
+2020-05-08 17:26:42,128 [main] INFO romui - Navigated to Pipeline page
+2020-05-08 17:26:42,163 [main] INFO romui - Edit link is clicked on to enter the data and Clicked on Save btn
+2020-05-08 17:26:42,163 [main] INFO romui - Verify if Edit pipeline success message is displayed

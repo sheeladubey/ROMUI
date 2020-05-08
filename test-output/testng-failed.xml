@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Failed suite [Suite]]" guice-stage="DEVELOPMENT">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <parameter name="adminUserName" value="admin@tmsna"/>
   <parameter name="storeEnvironment" value="lvststromsso04"/>
   <parameter name="adminPasswd" value="Password123@"/>
@@ -10,16 +10,18 @@
   <listeners>
     <listener class-name="com.gsicommerce.romui.selenium.utilities.ExtentReporterListener"/>
   </listeners>
-  <test thread-count="5" name="Test(failed)(failed)">
+  <test thread-count="5" name="Test(failed)">
     <classes>
       <class name="com.gsicommerce.romui.selenium.tests.PipelinesTest">
         <methods>
           <include name="tearDown"/>
           <include name="testEditPipeline"/>
           <include name="setup"/>
+          <include name="testViewPipeline"/>
           <include name="testEditPipelineConfiguration"/>
+          <include name="testAddPipeline"/>
         </methods>
       </class> <!-- com.gsicommerce.romui.selenium.tests.PipelinesTest -->
     </classes>
-  </test> <!-- Test(failed)(failed) -->
-</suite> <!-- Failed suite [Failed suite [Suite]] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
