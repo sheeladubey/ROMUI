@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods, 4 failed,   2 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -107,41 +107,7 @@
                         <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.PipelinesTest" class="method navigator-link" hash-for-method="testAddPipeline">testAddPipeline</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.PipelinesTest" class="method navigator-link" hash-for-method="testEditPipeline">testEditPipeline</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.PipelinesTest" class="method navigator-link" hash-for-method="testEditPipelineConfiguration">testEditPipelineConfiguration</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.PipelinesTest" class="method navigator-link" hash-for-method="testViewPipeline">testViewPipeline</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
-                    </span>
-                    <div class="method-list-content passed suite-Suite">
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.PipelinesTest" class="method navigator-link" hash-for-method="testCopyPipeline">testCopyPipeline</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.PipelinesTest" class="method navigator-link" hash-for-method="testDeletePipeline">testDeletePipeline</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -164,137 +130,34 @@
                   <a name="testAddPipeline">
                   </a> <!-- testAddPipeline -->
                   <span class="method-name">testAddPipeline</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Cannot locate option with index: 6
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=81.0.4044.138)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.132.93&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.setSelectedByIndex(Select.java:297)
-	at org.openqa.selenium.support.ui.Select.selectByIndex(Select.java:172)
-	at com.gsicommerce.romui.selenium.utilities.Action.selectByIndex(Action.java:820)
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.PipelinesPage.selectPipelineCriteriaByTenderType(PipelinesPage.java:361)
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.PipelinesPage.addPipeline(PipelinesPage.java:214)
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.132.196&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51059}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1c647919e24ccbe48d347c259a28f368
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy14.click(Unknown Source)
+	at com.gsicommerce.romui.selenium.pages.ordermanagement.PipelinesPage.addPipeline(PipelinesPage.java:220)
 	at com.gsicommerce.romui.selenium.tests.PipelinesTest.testAddPipeline(PipelinesTest.java:24)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 27 stack frames
+... Removed 36 stack frames
 </div> <!-- stack-trace -->
                   <em>
 (Add Pipeline)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testEditPipeline">
-                  </a> <!-- testEditPipeline -->
-                  <span class="method-name">testEditPipeline</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.alert-info&quot;}
-  (Session info: chrome=81.0.4044.138)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.132.93&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58630}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 6cb520acda76490e34f9cd052a4e76c9
-*** Element info: {Using=css selector, value=.alert-info}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy14.getText(Unknown Source)
-	at com.gsicommerce.romui.selenium.tests.PipelinesTest.testEditPipeline(PipelinesTest.java:71)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 32 stack frames
-</div> <!-- stack-trace -->
-                  <em>
-(Edit Pipeline)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testEditPipelineConfiguration">
-                  </a> <!-- testEditPipelineConfiguration -->
-                  <span class="method-name">testEditPipelineConfiguration</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.alert-info&quot;}
-  (Session info: chrome=81.0.4044.138)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.132.93&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58593}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: bed04dbc35a7875ba913f79229b1d157
-*** Element info: {Using=css selector, value=.alert-info}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy14.getText(Unknown Source)
-	at com.gsicommerce.romui.selenium.tests.PipelinesTest.testEditPipelineConfiguration(PipelinesTest.java:104)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 32 stack frames
-</div> <!-- stack-trace -->
-                  <em>
-(Edit Pipeline Configuration)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testViewPipeline">
-                  </a> <!-- testViewPipeline -->
-                  <span class="method-name">testViewPipeline</span>
-                  <div class="stack-trace">java.lang.AssertionError: USER does not navigated to configure Pipeline screen expected [Configure Pipeline] but found [Pipeline]
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.PipelinesPage.clickViewPipeline(PipelinesPage.java:281)
-	at com.gsicommerce.romui.selenium.tests.PipelinesTest.testViewPipeline(PipelinesTest.java:39)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 31 stack frames
-</div> <!-- stack-trace -->
-                  <em>
-(View Pipeline)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.gsicommerce.romui.selenium.tests.PipelinesTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testCopyPipeline">
-                  </a> <!-- testCopyPipeline -->
-                  <span class="method-name">testCopyPipeline</span>
-                  <em>
-(Copy Pipeline)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testDeletePipeline">
-                  </a> <!-- testDeletePipeline -->
-                  <span class="method-name">testDeletePipeline</span>
-                  <em>
-(Delete Pipeline)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -356,36 +219,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(6);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testCopyPipeline')
+data.setCell(0, 1, 'testAddPipeline')
 data.setCell(0, 2, 'com.gsicommerce.romui.selenium.tests.PipelinesTest')
-data.setCell(0, 3, 20027);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testAddPipeline')
-data.setCell(1, 2, 'com.gsicommerce.romui.selenium.tests.PipelinesTest')
-data.setCell(1, 3, 19732);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testDeletePipeline')
-data.setCell(2, 2, 'com.gsicommerce.romui.selenium.tests.PipelinesTest')
-data.setCell(2, 3, 18385);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testEditPipelineConfiguration')
-data.setCell(3, 2, 'com.gsicommerce.romui.selenium.tests.PipelinesTest')
-data.setCell(3, 3, 16102);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testViewPipeline')
-data.setCell(4, 2, 'com.gsicommerce.romui.selenium.tests.PipelinesTest')
-data.setCell(4, 3, 15437);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'testEditPipeline')
-data.setCell(5, 2, 'com.gsicommerce.romui.selenium.tests.PipelinesTest')
-data.setCell(5, 3, 13472);
+data.setCell(0, 3, 31916);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 31 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -397,49 +240,41 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">testDeletePipeline</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">testCopyPipeline</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">testEditPipeline</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
               <span class="reporter-method-name">testAddPipeline</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')</span>
                 <span class="reporter-method-output">Expected condition failed: waiting for presence of element located by: By.id:  (tried for 1 second(s) with 500 milliseconds interval)</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">testViewPipeline</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">testEditPipelineConfiguration</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')</span>
+                <span class="reporter-method-output">Expected condition failed: waiting for presence of element located by: By.id:  (tried for 5 second(s) with 500 milliseconds interval)</span>
+                <span class="reporter-method-output">Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on WINDOWS (1c647919e24ccbe48d347c259a28f368)] -> css selector: .sidebar-close-btn[type='button']] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KOP-BM5TNF2', ip: '10.140.132.196', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51059}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1c647919e24ccbe48d347c259a28f368</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">5 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.gsicommerce.romui.selenium.tests.PipelinesTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">testEditPipeline</span>
+                <br/>
+                <span class="ignored-method-name">testViewPipeline</span>
+                <br/>
+                <span class="ignored-method-name">testDeletePipeline</span>
+                <br/>
+                <span class="ignored-method-name">testCopyPipeline</span>
+                <br/>
+                <span class="ignored-method-name">testEditPipelineConfiguration</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -450,84 +285,18 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.gsicommerce.romui.selenium.tests.PipelinesTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setup(org.testng.TestRunner@1e3df614)</span>
+                <span class="method-name">setup(org.testng.TestRunner@41dc0598)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">testAddPipeline</span>
-                <span class="method-start">9014 ms</span>
+                <span class="method-start">9446 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=testAddPipeline status=FAILURE method=PipelinesTest.testAddPipeline()[pri:1, instan...)</span>
-                <span class="method-start">28750 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(org.testng.TestRunner@1e3df614)</span>
-                <span class="method-start">30289 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testViewPipeline</span>
-                <span class="method-start">38710 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=testViewPipeline status=FAILURE method=PipelinesTest.testViewPipeline()[pri:2, inst...)</span>
-                <span class="method-start">54149 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(org.testng.TestRunner@1e3df614)</span>
-                <span class="method-start">55289 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testDeletePipeline</span>
-                <span class="method-start">62642 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=testDeletePipeline status=SUCCESS method=PipelinesTest.testDeletePipeline()[pri:3, ...)</span>
-                <span class="method-start">81028 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(org.testng.TestRunner@1e3df614)</span>
-                <span class="method-start">81696 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testCopyPipeline</span>
-                <span class="method-start">88953 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=testCopyPipeline status=SUCCESS method=PipelinesTest.testCopyPipeline()[pri:4, inst...)</span>
-                <span class="method-start">108981 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(org.testng.TestRunner@1e3df614)</span>
-                <span class="method-start">109663 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testEditPipelineConfiguration</span>
-                <span class="method-start">117719 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=testEditPipelineConfiguration status=FAILURE method=PipelinesTest.testEditPipelineC...)</span>
-                <span class="method-start">133822 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(org.testng.TestRunner@1e3df614)</span>
-                <span class="method-start">135045 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testEditPipeline</span>
-                <span class="method-start">143145 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=testEditPipeline status=FAILURE method=PipelinesTest.testEditPipeline()[pri:6, inst...)</span>
-                <span class="method-start">156618 ms</span>
+                <span class="method-start">41362 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

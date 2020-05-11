@@ -15,10 +15,7 @@
       <class name="com.gsicommerce.romui.selenium.tests.PipelinesTest">
         <methods>
           <include name="tearDown"/>
-          <include name="testEditPipeline"/>
           <include name="setup"/>
-          <include name="testViewPipeline"/>
-          <include name="testEditPipelineConfiguration"/>
           <include name="testAddPipeline"/>
         </methods>
       </class> <!-- com.gsicommerce.romui.selenium.tests.PipelinesTest -->

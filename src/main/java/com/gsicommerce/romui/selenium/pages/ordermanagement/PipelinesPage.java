@@ -5,6 +5,7 @@ import java.util.Calendar;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -117,8 +118,8 @@ public class PipelinesPage {
 
 	//@FindBy(how = How.XPATH, using = "//span[contains(@class,'sidebar-title-placeholder')]")
 //	@FindBy(how = How.XPATH, using = "//div[contains(@class,'sidebar-body-overlay')]")
-	@FindBy(how = How.XPATH, using = "//div[contains(@class,'konvajs-content')]")
-	
+	//@FindBy(how = How.XPATH, using ="//div[contains(@class,'konvajs-content')]")
+	@FindBy(how = How.CSS, using =".sidebar-close-btn[type='button']")	
 	@CacheLookup
 	private WebElement OrderCreateEvent;
 
@@ -216,14 +217,6 @@ public class PipelinesPage {
 		Common.dragAndDrop(driver, dragSalesOrderCreate, dropSalesOrderCreate, 10);
 		CommonElementsPage.clickOnSaveBtn();
 		btnContinue.click();
-		
-		//createEvents();
-		// Action.waitForElementToBeClickable(driver, btnPipelineCriteriaDelete, 10);
-		// btnPipelineCriteriaDelete.click();
-		// System.out.println("pipeline criteria button has been deleted");
-		// CommonElementsPage.clickOnSaveExitBtn();
-		
-
 	}
 
 	public void createEvents() {
@@ -313,6 +306,7 @@ public class PipelinesPage {
 	}
 
 	public void EditPipeline() throws JsonParseException, JsonMappingException, IOException {
+		try {
 		data = PipelineData.get(env.getFileLocation());
 		if (secondColumn.getText().equals("DRAFT")) {
 			btnEdit.click();
@@ -323,40 +317,40 @@ public class PipelinesPage {
 			clickonEndDate();
 			if(btnCreteriaCondition.isDisplayed()) 
 			{
-			//pipelineCriteriaFormContainer.click();
 			btnPrependCondition.click();
 			selectPipelineCriteriaByOrderType();
-			btnSaveEditConfig.click();		
-			CommonElementsPage.clickOnSaveBtn();
-			btnContinue.click();
-			//CommonElementsPage.clickOnSaveExitBtn();
-			//Common.waitForElementPresent(driver, btnContinue, 05);
-			//btnContinue.click();
-		} else
-
-		if (secondColumn.getText().equals("ACTIVE")) {
+			btnSaveEditConfig.click();	
+			Common.waitForElementPresent(driver, btnContinue, 10);
+			btnContinue.click();	
+		}
+		}
+			if (secondColumn.getText().equals("ACTIVE")) {
 			btnEdit.click();
 			clickonStartDate();
 			clickonEndDate();
-			//btnSaveEditConfig.click();
 			btnSaveViewConfig.click();
+			Common.waitForElementPresent(driver, btnContinue, 05);
 			btnContinue.click();
-			//CommonElementsPage.clickOnCancelBtn();
-		}else
-			if(secondColumn.getText().equals("ACTIVE")) {
+		}
+			if(secondColumn.getText().equals("INACTIVE")) {
 				btnEdit.click();
-				Action.selectByIndex(drpdwnPipelineStatus, 2);	
+				Common.waitForElementPresent(driver, drpdwnPipelineStatus, 10);			
+				Action.selectByIndex(drpdwnPipelineStatus,1);	
 				clickonStartDate();
 				clickonEndDate();
 				btnSaveViewConfig.click();
+				Common.waitForElementPresent(driver, btnContinue, 05);
 				btnContinue.click();
-		}
-	}
+				}
+		}catch (final StaleElementReferenceException e){
+			
+			e.printStackTrace();
+	}		
 }
 	public void selectPipelineCriteriaByTenderType() {
 
 		Action.selectByIndex(drpdwnPipelineCriteriaGroupStart, 1);
-		Action.selectByIndex(drpdwnPipelineCriteriaType, 4);
+		Action.selectByIndex(drpdwnPipelineCriteriaType, 6);
 		Action.selectByIndex(drpdwnPipelineCriteriaOperator, 1);
 		Action.selectByIndex(drpdwnPipelineCriteriaValue, 6);
 		Action.selectByIndex(drpdwnPipelineCriteriaGroupEnd, 2);
@@ -392,29 +386,36 @@ public class PipelinesPage {
 		Action.enter(txtBoxPipelineName,data.getPipelineName());
 		clickonStartDate();
 		clickonEndDate();
-		CommonElementsPage.clickOnSaveExitBtn();
-		
-	}
+		btnSaveAddConfig.click();	
+		Common.dragAndDrop(driver, dragSalesOrderCreate, dropSalesOrderCreate, 10);
+		CommonElementsPage.clickOnSaveBtn();
+		Common.waitForElementPresent(driver, btnContinue, 10);
+		btnContinue.click();
+		}
 	
 	public void editPipelienConfiguration()
 	{
+		try {
 		if(secondColumn.getText().equals("DRAFT"))
 		{
-		//Action.scrollDown("200");
-		//Action.waitForElementToBeClickable(driver, btnEditConfig, 10);
 		btnEditConfig.click();
-		//Common.dragAndDrop(driver, dragSalesOrderCreate, dropSalesOrderCreate, 10);
 		CommonElementsPage.clickOnSaveBtn();
 		btnContinue.click();
-	}else
+	    }
 		if(secondColumn.getText().equals("ACTIVE"))
 		{
 			btnEditConfig.click();					
 			CommonElementsPage.clickOnCancelBtn();
-		}else
-		{
-		System.out.println("Edit pipeline cnfig didn't get complete");
 		}
-
+		if(secondColumn.getText().equals("INACTIVE"))
+		{
+			btnEditConfig.click();					
+			CommonElementsPage.clickOnCancelBtn();
+	}
+	
+}catch (Exception e)
+		{
+	e.printStackTrace();
+		}
 }
 }

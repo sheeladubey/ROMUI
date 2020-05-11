@@ -1,17 +1,20 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 9, Failures: 5, Errors: 0, Skipped: 4, Time elapsed: 0.729 sec <<< FAILURE! - in TestSuite
-setup(com.gsicommerce.romui.selenium.tests.PipelinesTest)  Time elapsed: 0.458 sec  <<< FAILURE!
+Tests run: 12, Failures: 6, Errors: 0, Skipped: 6, Time elapsed: 0.523 sec <<< FAILURE! - in TestSuite
+setup(com.gsicommerce.romui.selenium.tests.PipelinesTest)  Time elapsed: 0.308 sec  <<< FAILURE!
 java.lang.NullPointerException
 
-tearDown(com.gsicommerce.romui.selenium.tests.PipelinesTest)  Time elapsed: 0.042 sec  <<< FAILURE!
+tearDown(com.gsicommerce.romui.selenium.tests.PipelinesTest)  Time elapsed: 0.033 sec  <<< FAILURE!
 java.lang.NullPointerException
 
 tearDown(com.gsicommerce.romui.selenium.tests.PipelinesTest)  Time elapsed: 0.001 sec  <<< FAILURE!
 java.lang.NullPointerException
 
-setup(com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTest)  Time elapsed: 0.003 sec  <<< FAILURE!
+tearDown(com.gsicommerce.romui.selenium.tests.PipelinesTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTest)  Time elapsed: 0.002 sec  <<< FAILURE!
 java.lang.NullPointerException
 
 tearDown(com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTest)  Time elapsed: 0.001 sec  <<< FAILURE!
