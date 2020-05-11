@@ -37,7 +37,7 @@ public class OrderManagementMenusPage {
 	@CacheLookup
 	WebElement lkPipeline;
 	
-	@FindBy(how = How.XPATH, using = "//i/parent::a[contains(text(),'Service Flows')]")
+	@FindBy(how = How.XPATH, using = "//li/a[contains(text(),'Service Flows')]")
 	@CacheLookup
 	WebElement lkServiceFlows;
 	
@@ -398,6 +398,13 @@ public class OrderManagementMenusPage {
 		btnMainMenu.click();
 		Action.waitForElementToBeClickable(driver, lkPipeline, 10);
 		lkPipeline.click();
+		
+	}
+
+	public void clickOnServiceFlows() {
+		btnMainMenu.click();
+		Action.waitForElementToBeClickable(driver, lkServiceFlows, 10);
+		lkServiceFlows.click();
 		
 	}
 	

@@ -11,13 +11,13 @@
 <parameter name="adminPasswd" value="Password123@" />
 <parameter name="waitPeriod" value="5"/>
 <!--  parameter name="pipelineName" value="SheelaAuto28"/-->
-<parameter name="dataFile" value="./src/test/resources/testdata/pipelineData.json"/>
-<!-- parameter name="dataFile" value="./src/test/resources/testdata/ShippingLabelConfigData.json"/-->
+<!-- parameter name="dataFile" value="./src/test/resources/testdata/pipelineData.json"/-->
+<parameter name="dataFile" value="./src/test/resources/testdata/ShippingLabelConfigData.json"/>
 
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.gsicommerce.romui.selenium.tests.PipelinesTest"/>
-      <!-- class name="com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTest"/-->
+      <!-- class name="com.gsicommerce.romui.selenium.tests.PipelinesTest"/-->
+      <class name="com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

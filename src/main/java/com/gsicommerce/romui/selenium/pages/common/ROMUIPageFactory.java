@@ -7,6 +7,7 @@ import com.gsicommerce.romui.selenium.pages.ordermanagement.CommonElementsPage;
 import com.gsicommerce.romui.selenium.pages.ordermanagement.OrderManagementMenusPage;
 import com.gsicommerce.romui.selenium.pages.ordermanagement.PaymentMethodConfigPage;
 import com.gsicommerce.romui.selenium.pages.ordermanagement.PipelinesPage;
+import com.gsicommerce.romui.selenium.pages.ordermanagement.ServiceFlowPage;
 import com.gsicommerce.romui.selenium.pages.ordermanagement.ShippingLabelConfigPage;
 import com.gsicommerce.romui.selenium.testdata.Environment;
 
@@ -19,6 +20,9 @@ public class ROMUIPageFactory extends PageFactory {
 	private final CommonElementsPage commonElePage;
 	private final PipelinesPage pipeLinesPage;
 	private final ShippingLabelConfigPage shipLbleConfigPage;
+	
+	private final ServiceFlowPage serviceFlowPage;
+	
 
 	public ROMUIPageFactory(WebDriver driver, Environment env) {
 		super(driver, env);
@@ -29,6 +33,7 @@ public class ROMUIPageFactory extends PageFactory {
 		commonElePage = new CommonElementsPage(driver, env);
 		pipeLinesPage = new PipelinesPage(driver, env);
 		shipLbleConfigPage = new ShippingLabelConfigPage(driver, env);
+		serviceFlowPage=new ServiceFlowPage(driver,env);
 	}
 
 	public LoginPage loginPage() {
@@ -60,4 +65,10 @@ public class ROMUIPageFactory extends PageFactory {
 
 		return shipLbleConfigPage;
 	}
+
+	public ServiceFlowPage serviceFlowPage() {
+	
+		return serviceFlowPage;
+	}
+	
 }
