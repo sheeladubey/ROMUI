@@ -11,7 +11,17 @@ public enum RomuiEnumValues {
 	PIPELINE_VIEW_HEADER("Pipeline"),
 	PIPELINE_SUMMARY_HEADER("Manage Pipelines"),
 	PIPELINE_EDIT_HEADER("Edit Pipeline"),
-	PIPELINE_ADD_HEADER("Create Pipeline");	
+	PIPELINE_ADD_HEADER("Create Pipeline"),
+	SERVICEFLOW_HEADER("Service Flows"),
+	SERVICEFLOW_ADD_HEADER("Create Service Flow"),
+	SERVICEFLOW_EDIT_HEADER("Edit Service Flow Criteria"),
+	SERVICEFLOW_VIEW_HEADER("Service Flow"),
+	SERVICEFLOW_CONFIGURE_HEADER("Configure Service Flow Processes"),
+	SERVICEFLOW_SAVE("Heads up! Your service workflow has been saved!"),
+	SERVICEFLOW_EDIT("Heads up! Your service workflow has been updated!"),
+	SERVICEFLOW_PROCESS_HEADER("Service Flow Processes");
+	
+	
 	
 	private String updateMsg;
 	RomuiEnumValues(String updateMsg){

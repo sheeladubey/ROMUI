@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\shedubey\Desktop\ROM\ROMUI_Automation\0506\ROMUI\src\test\resources\testsuites\ROMUI_PipeLines_TestSuite.xml</span>
+                    <span>C:\Users\shedubey\Desktop\ROM\ROMUI_Automation\0506\ROMUI\src\test\resources\testsuites\ROMUI_Orders_TestSuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,26 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 2 failed,   1 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTest" class="method navigator-link" hash-for-method="testAddShipLabelConfigByFedex">testAddShipLabelConfigByFedex</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTest" class="method navigator-link" hash-for-method="testAddShipLabelConfigByUps">testAddShipLabelConfigByUps</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -123,7 +104,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTest" class="method navigator-link" hash-for-method="testAddShipLabelConfigByConsignor">testAddShipLabelConfigByConsignor</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.OrdersTest" class="method navigator-link" hash-for-method="testAddPipeline">testAddPipeline</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -138,96 +119,19 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testAddShipLabelConfigByFedex">
-                  </a> <!-- testAddShipLabelConfigByFedex -->
-                  <span class="method-name">testAddShipLabelConfigByFedex</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#shipping_label_configuration_service_provider_name&quot;}
-  (Session info: chrome=81.0.4044.138)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.134.61&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58952}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 324636ba0e511f89598de265dbd6c3b0
-*** Element info: {Using=css selector, value=#shipping_label_configuration_service_provider_name}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy14.getTagName(Unknown Source)
-	at org.openqa.selenium.support.ui.Select.&lt;init&gt;(Select.java:45)
-	at com.gsicommerce.romui.selenium.utilities.Action.selectByIndex(Action.java:819)
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.ShippingLabelConfigPage.addShippingLabelConfigByFedex(ShippingLabelConfigPage.java:118)
-	at com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTest.testAddShipLabelConfigByFedex(ShippingLabelConfigTest.java:22)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 32 stack frames
-</div> <!-- stack-trace -->
-                  <em>
-(Add Ship Label Config for Fedex)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testAddShipLabelConfigByUps">
-                  </a> <!-- testAddShipLabelConfigByUps -->
-                  <span class="method-name">testAddShipLabelConfigByUps</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot; data-new-carrier-url=&quot;/en/sellers/TMSEB2/shipping_label_configurations/add_new_carrier?provider=UPS&quot; data-additional-carrier=&quot;&quot;&gt;...&lt;/button&gt; is not clickable at point (84, 690). Other element would receive the click: &lt;div class=&quot;radial-action-bar__content&quot;&gt;&lt;/div&gt;
-  (Session info: chrome=81.0.4044.138)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.134.61&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58920}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 1e904b996d1dea5f16d7454e2efb3c6d
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy14.click(Unknown Source)
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.ShippingLabelConfigPage.addShippingLabelConfigByUPS(ShippingLabelConfigPage.java:181)
-	at com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTest.testAddShipLabelConfigByUps(ShippingLabelConfigTest.java:50)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 36 stack frames
-</div> <!-- stack-trace -->
-                  <em>
-(Add Ship Label Config for UPS)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTest</span>
+              <span class="class-name">com.gsicommerce.romui.selenium.tests.OrdersTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testAddShipLabelConfigByConsignor">
-                  </a> <!-- testAddShipLabelConfigByConsignor -->
-                  <span class="method-name">testAddShipLabelConfigByConsignor</span>
+                  <a name="testAddPipeline">
+                  </a> <!-- testAddPipeline -->
+                  <span class="method-name">testAddPipeline</span>
                   <em>
-(Add Ship Label Config for Consignor)                  </em>
+(Add Pipeline)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -235,7 +139,7 @@ Session ID: 1e904b996d1dea5f16d7454e2efb3c6d
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\shedubey\Desktop\ROM\ROMUI_Automation\0506\ROMUI\src\test\resources\testsuites\ROMUI_PipeLines_TestSuite.xml</span>
+            <span class="header-content">C:\Users\shedubey\Desktop\ROM\ROMUI_Automation\0506\ROMUI\src\test\resources\testsuites\ROMUI_Orders_TestSuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -245,7 +149,6 @@ Session ID: 1e904b996d1dea5f16d7454e2efb3c6d
   &lt;parameter name=&quot;adminUserName&quot; value=&quot;admin@tmsna&quot;/&gt;
   &lt;parameter name=&quot;storeEnvironment&quot; value=&quot;lvststromsso04&quot;/&gt;
   &lt;parameter name=&quot;adminPasswd&quot; value=&quot;Password123@&quot;/&gt;
-  &lt;parameter name=&quot;dataFile&quot; value=&quot;./src/test/resources/testdata/ShippingLabelConfigData.json&quot;/&gt;
   &lt;parameter name=&quot;waitPeriod&quot; value=&quot;5&quot;/&gt;
   &lt;parameter name=&quot;browserType&quot; value=&quot;chrome&quot;/&gt;
   &lt;listeners&gt;
@@ -253,7 +156,7 @@ Session ID: 1e904b996d1dea5f16d7454e2efb3c6d
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTest&quot;/&gt;
+      &lt;class name=&quot;com.gsicommerce.romui.selenium.tests.OrdersTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -293,24 +196,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testAddShipLabelConfigByConsignor')
-data.setCell(0, 2, 'com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTest')
-data.setCell(0, 3, 18576);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testAddShipLabelConfigByUps')
-data.setCell(1, 2, 'com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTest')
-data.setCell(1, 3, 17871);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testAddShipLabelConfigByFedex')
-data.setCell(2, 2, 'com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTest')
-data.setCell(2, 3, 11508);
+data.setCell(0, 1, 'testAddPipeline')
+data.setCell(0, 2, 'com.gsicommerce.romui.selenium.tests.OrdersTest')
+data.setCell(0, 3, 16992);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 47 seconds</span>
+              <span class="suite-total-time">Total running time: 16 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -322,19 +217,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">testAddShipLabelConfigByConsignor</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">testAddShipLabelConfigByFedex</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">testAddShipLabelConfigByUps</span>
+              <span class="reporter-method-name">testAddPipeline</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')</span>
               </div> <!-- reporter-method-output-div -->
@@ -354,46 +237,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.gsicommerce.romui.selenium.tests.OrdersTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setup(org.testng.TestRunner@91f565d)</span>
+                <span class="method-name">setup(org.testng.TestRunner@3f672204)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testAddShipLabelConfigByConsignor</span>
-                <span class="method-start">7539 ms</span>
+                <span class="method-name">testAddPipeline</span>
+                <span class="method-start">8005 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=testAddShipLabelConfigByConsignor status=SUCCESS method=ShippingLabelConfigTest.tes...)</span>
-                <span class="method-start">26118 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(org.testng.TestRunner@91f565d)</span>
-                <span class="method-start">26120 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testAddShipLabelConfigByUps</span>
-                <span class="method-start">33355 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=testAddShipLabelConfigByUps status=FAILURE method=ShippingLabelConfigTest.testAddSh...)</span>
-                <span class="method-start">51228 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(org.testng.TestRunner@91f565d)</span>
-                <span class="method-start">51637 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testAddShipLabelConfigByFedex</span>
-                <span class="method-start">58791 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=testAddShipLabelConfigByFedex status=FAILURE method=ShippingLabelConfigTest.testAdd...)</span>
-                <span class="method-start">70301 ms</span>
+                <span class="method-name">tearDown([TestResult name=testAddPipeline status=SUCCESS method=OrdersTest.testAddPipeline()[pri:1, instance:...)</span>
+                <span class="method-start">24999 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

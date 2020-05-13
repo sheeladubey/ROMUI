@@ -2,7 +2,6 @@ package com.gsicommerce.romui.selenium.pages.ordermanagement;
 
 import java.io.IOException;
 import java.util.Calendar;
-import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -19,6 +18,7 @@ import org.testng.Assert;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.gsicommerce.romui.selenium.testdata.Environment;
+import com.gsicommerce.romui.selenium.testdata.PipelineData;
 import com.gsicommerce.romui.selenium.testdata.ServiceFlowData;
 import com.gsicommerce.romui.selenium.utilities.Action;
 import com.gsicommerce.romui.selenium.utilities.Common;
@@ -132,6 +132,11 @@ public class ServiceFlowPage {
 	@CacheLookup
 	private WebElement btnSave;
 	
+	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Edit Service Flow Processes')]")
+	@CacheLookup
+	private WebElement btnEditProcess;
+	
+	
 	
 	
 	
@@ -158,6 +163,10 @@ public class ServiceFlowPage {
 	@FindBy(how = How.XPATH, using = "//div[contains(@class,'header__primary-text header__primary-text--solo')]")
 	@CacheLookup
 	public WebElement viewSvcFlwConfigHeader;
+	
+	@FindBy(how = How.XPATH, using = "//div[contains(@class,'header__primary-text header__primary-text--solo')]")
+	@CacheLookup
+	public WebElement viewSvcFlwProcessHeader;
 
 	@FindBy(how = How.XPATH, using = "//tr[1]//td[2]//span[1]")
 	@CacheLookup
@@ -167,9 +176,29 @@ public class ServiceFlowPage {
 	@CacheLookup
 	public WebElement btnConfirm;
 	
-	@FindBy(how = How.CSS, using = "#process_name")
+	@FindBy(how = How.XPATH, using = "(//select[@id='process_name'])[1]")
 	@CacheLookup
-	public WebElement drpdwnProcessName;
+	public WebElement drpdwnProcessName1;
+	
+	@FindBy(how = How.XPATH, using = "(//select[@id='process_name'])[2]")
+	@CacheLookup
+	public WebElement drpdwnProcessName2;
+	
+	@FindBy(how = How.XPATH, using = "(//select[@id='process_name'])[3]")
+	@CacheLookup
+	public WebElement drpdwnProcessName3;
+	
+	@FindBy(how = How.XPATH, using = "(//select[@id='process_name'])[4]")
+	@CacheLookup
+	public WebElement drpdwnProcessName4;
+	
+	@FindBy(how = How.XPATH, using = "(//select[@id='process_name'])[5]")
+	@CacheLookup
+	public WebElement drpdwnProcessName5;
+	
+	@FindBy(how = How.XPATH, using = "(//select[@id='process_name'])[6]")
+	@CacheLookup
+	public WebElement drpdwnProcessName6;
 
 	@FindBy(how = How.XPATH, using = "//button[contains(text(),'Continue')]")
 	@CacheLookup
@@ -182,6 +211,22 @@ public class ServiceFlowPage {
 	@FindBy(how = How.XPATH, using = "(//label[contains(text(),'Value')]/following-sibling::input)[4]")
 	@CacheLookup
 	public WebElement txtboxValue2;
+	
+	@FindBy(how = How.XPATH, using = "(//label[contains(text(),'Value')]/following-sibling::input)[5]")
+	@CacheLookup
+	public WebElement txtboxValue3;
+	
+	@FindBy(how = How.XPATH, using = "(//label[contains(text(),'Value')]/following-sibling::input)[10]")
+	@CacheLookup
+	public WebElement txtboxValue4;
+	
+	@FindBy(how = How.XPATH, using = "(//label[contains(text(),'Value')]/following-sibling::input)[12]")
+	@CacheLookup
+	public WebElement txtboxValue5;
+	
+	@FindBy(how = How.XPATH, using = "(//label[contains(text(),'Value')]/following-sibling::input)[14]")
+	@CacheLookup
+	public WebElement txtboxValue6;
 
 	public void addSvcFlw() throws JsonParseException, JsonMappingException, IOException, InterruptedException {
 		data = ServiceFlowData.get(env.getFileLocation());
@@ -189,7 +234,7 @@ public class ServiceFlowPage {
 		btnAddSvcFlw.click();
 		Action.enter(txtBoxSvcFlwName, data.getSvcFlwName());
 		Action.selectByValue(drpdwnSvcName, "Shipment");
-		selectSvcFlwCriteriaByTenderType();
+		selectSvcFlwCriteriaByshippingType();
 		btnSaveConfigProcess.click();
 		
 		//btnSave.click();
@@ -197,16 +242,22 @@ public class ServiceFlowPage {
 	public void editSvcFlw() throws JsonParseException, JsonMappingException, IOException, InterruptedException {
 		data = ServiceFlowData.get(env.getFileLocation());
 		Common.waitForElementPresent(driver, btnAddSvcFlw, 06);
-		btnAddSvcFlw.click();
+		Action.selectByValue(drpdwnService, "Shipment");
+		btnSearch.click();
+		Action.scrollDown("200");
+		iconEdit.click();
+		txtBoxSvcFlwName.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 		Action.enter(txtBoxSvcFlwName, data.getSvcFlwName());
 		Action.selectByValue(drpdwnSvcName, "Shipment");
+		btnPrependCondition.click();
 		selectSvcFlwCriteriaByTenderType();
-		btnSaveConfigProcess.click();
-		//addSvcFlwProcess();
-		//btnSave.click();
+		Thread.sleep(10000);
+		btnSave.click();
 
 	}
-	public void selectSvcFlwCriteriaByTenderType() {
+	
+	
+	public void selectSvcFlwCriteriaByshippingType() {
 
 		Action.selectByIndex(drpdwnSvcFlwCriteriaGroupStart, 1);
 		Action.selectByIndex(drpdwnSvcFlwCriteriaType, 5);
@@ -216,81 +267,95 @@ public class ServiceFlowPage {
 		btnSvcFlwCriteriaConfirm.click();
 	}
 	
-	public void addSvcFlwProcess1() {
-		
-		Action.waitForElementToBeClickable(driver, btnAddProcess, 10);
-		JavascriptExecutor js= (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click();", btnAddProcess); 
-		System.out.println("Add process btn clicked");
-		Common.waitForElement(driver, drpdwnProcessName, 10);	
-		drpdwnProcessName.submit();
-		Action.selectByIndex(drpdwnProcessName, 0);
-		selectValueFromDropDown(drpdwnProcessName,"OTF-Generation");
-		txtboxValue.clear();
-		//txtboxValue.sendKeys("Test");	
-		Action.enter(txtboxValue, "Test");
-		JavascriptExecutor js1 = (JavascriptExecutor) driver;
-		js1.executeScript("window.scrollBy(0,500)");
-		Action.waitForElementToBeClickable(driver, btnAddProcess, 10);
-		btnAddProcess.click();
-		if(!drpdwnProcessName.isSelected());
-		{
-		Common.waitForElement(driver, drpdwnProcessName, 10);	
-		drpdwnProcessName.submit();
-		Action.selectByIndex(drpdwnProcessName, 1);
-		selectValueFromDropDown(drpdwnProcessName,"HRF");
-		txtboxValue2.clear();
-		txtboxValue2.sendKeys("TestHRF");
-		}
-	//	}
-		
-		
-	//	btnSave.click();
-		}
+	public void selectSvcFlwCriteriaByTenderType() {
+
+		Action.selectByIndex(drpdwnSvcFlwCriteriaGroupStart, 1);
+		Action.selectByIndex(drpdwnSvcFlwCriteriaType, 6);
+		Action.selectByIndex(drpdwnSvcFlwCriteriaOperator, 2);
+		Action.selectByIndex(drpdwnSvcFlwCriteriaValue, 5);
+		Action.selectByIndex(drpdwnSvcFlwCriteriaGroupEnd, 5);
+		btnSvcFlwCriteriaConfirm.click();
+	}
 	
+	public void clickViewSvcFlw() throws JsonParseException, JsonMappingException, IOException, InterruptedException {
+		data = ServiceFlowData.get(env.getFileLocation());
+		Common.waitForElementPresent(driver, btnAddSvcFlw, 06);
+		Action.selectByValue(drpdwnService, "Shipment");
+		btnSearch.click();
+		iconView.click();
+		System.out.println("Clicked View Service Flow button");
+		Assert.assertEquals(viewSvcFlwConfigHeader.getText(), RomuiEnumValues.SERVICEFLOW_VIEW_HEADER.getMessage(),
+				"USER does not navigated to View Service Flow screen");
+		viewSvcFlwConfig.click();
+		System.out.println("View Service Flow Process button is Clicked");
+		String actualViewServiceFlowConfigHeader = viewSvcFlwProcessHeader.getText();
+		Assert.assertEquals(actualViewServiceFlowConfigHeader, RomuiEnumValues.SERVICEFLOW_PROCESS_HEADER.getMessage(),
+				"USER does not navigated to configure service flow screen");
+		btnEditProcess.click();
+		CommonElementsPage.clickOnCancelBtn();
+		System.out.println("Clicked Cancel button");
+	}
 	
-	public void selectValueFromDropDown(WebElement drpdwnProcessName, String value)  //You can change "By Selector" to "WebElement element"
+	public void copySvcFlw() throws JsonParseException, JsonMappingException, IOException 
 	{
+		data = ServiceFlowData.get(env.getFileLocation());
+		Common.waitForElementPresent(driver, btnAddSvcFlw, 06);
+		Action.selectByValue(drpdwnService, "Shipment");
+		btnSearch.click();
+		Action.scrollDown("200");
+		Action.waitForElementToBeClickable(driver, iconCopy, 10);
+		iconCopy.click();
+		Action.enter(txtBoxSvcFlwName,data.getSvcFlwName());
+		btnSave.click();
 		
-	    List<WebElement> DropDownlist = driver.findElements(By.cssSelector("#process_name"));
-	    System.out.println(DropDownlist.size());
-	    Assert.assertEquals(DropDownlist.size(),2, "Provinces List does not match: ");
-	    for (int i = 0; i < DropDownlist.size(); i++) {         
-	        String strText = DropDownlist.get(i).getText();
-	        System.out.println("strtext value" + strText);
-	        if(strText.contentEquals(value)) {
-	            DropDownlist.get(i).click();
-	            break; //Comment this statement to print all values from DropDown on list 
-	        }
-	        System.out.println("Province " + i + "==========> " + strText);
-	    }   
+	}
+	
+	public void editSvcFlwprocess() throws JsonParseException, JsonMappingException, IOException 
+	{
+		data = ServiceFlowData.get(env.getFileLocation());
+		Common.waitForElementPresent(driver, btnAddSvcFlw, 06);
+		Action.selectByValue(drpdwnService, "Shipment");
+		btnSearch.click();
+		Action.scrollDown("200");
+		Action.waitForElementToBeClickable(driver, iconEditProcess, 10);
+		iconEditProcess.click();
+		
 	}
 	
 	
-	/*public void addSvcFlwProcess() throws InterruptedException {
-		Action.waitForElementToBeClickable(driver, btnAddProcess, 10);
+	public void addSvcFlwProcess(){
+
 		btnAddProcess.click();
-		Thread.sleep(10000);
-		for(int i=1;i<=6;i++)
-		{
-		Action.selectByIndex(drpdwnProcessName, i);
-		 txtboxValue.clear();
-			txtboxValue.sendKeys("Test");	
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("window.scrollBy(0,500)");
+		Action.selectByValue(drpdwnProcessName1, "1");
+		txtboxValue.clear();
+		txtboxValue.sendKeys("Test");	
+		Action.scrollDown("500");
 		btnAddProcess.click();
-		Thread.sleep(10000);
-		Action.selectByIndex(drpdwnProcessName, i+1);
-		Thread.sleep(10000);
+		Action.selectByValue(drpdwnProcessName2, "2");
 		txtboxValue2.clear();
 		txtboxValue2.sendKeys("Test");
-		}
-		
-		
+		Action.scrollDown("500");
+		btnAddProcess.click();
+		Action.selectByValue(drpdwnProcessName3, "3");
+		txtboxValue3.clear();
+		txtboxValue3.sendKeys("Test123");
+		Action.scrollDown("500");
+		btnAddProcess.click();
+		Action.selectByValue(drpdwnProcessName4, "4");
+		txtboxValue4.clear();
+		txtboxValue4.sendKeys("Test@#$%^");
+		Action.scrollDown("500");
+		btnAddProcess.click();
+		Action.selectByValue(drpdwnProcessName5, "5");
+		txtboxValue5.clear();
+		txtboxValue5.sendKeys("Test12#$");
+		Action.scrollDown("500");
+		btnAddProcess.click();
+		Action.selectByValue(drpdwnProcessName6, "6");
+		txtboxValue5.clear();
+		txtboxValue5.sendKeys("Test_Test");
 		btnSave.click();
 		}
-			*/
-			
 	
 
 }

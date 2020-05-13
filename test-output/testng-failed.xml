@@ -4,7 +4,6 @@
   <parameter name="adminUserName" value="admin@tmsna"/>
   <parameter name="storeEnvironment" value="lvststromsso04"/>
   <parameter name="adminPasswd" value="Password123@"/>
-  <parameter name="dataFile" value="./src/test/resources/testdata/ShippingLabelConfigData.json"/>
   <parameter name="waitPeriod" value="5"/>
   <parameter name="browserType" value="chrome"/>
   <listeners>
@@ -12,14 +11,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTest">
+      <class name="com.gsicommerce.romui.selenium.tests.OrdersTest">
         <methods>
+          <include name="testAddPipeline"/>
           <include name="tearDown"/>
           <include name="setup"/>
-          <include name="testAddShipLabelConfigByUps"/>
-          <include name="testAddShipLabelConfigByFedex"/>
         </methods>
-      </class> <!-- com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTest -->
+      </class> <!-- com.gsicommerce.romui.selenium.tests.OrdersTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

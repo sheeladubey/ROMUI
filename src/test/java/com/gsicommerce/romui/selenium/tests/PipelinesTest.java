@@ -27,7 +27,7 @@ public class PipelinesTest extends ROMUIBasePage {
 		Assert.assertEquals(romuipages.pipeLinesPage().txtSuccessMsg.getText(), RomuiEnumValues.PIPELINE_SAVE.getMessage(), "Pipelne is not Saved successfully");
 	}
 
-	@Test(enabled = true, priority=2,description = "View Pipeline")
+	@Test(enabled = false, priority=2,description = "View Pipeline")
 	public void testViewPipeline()  {
 		
 		logger.info("Login credentials to be entered");
@@ -41,7 +41,7 @@ public class PipelinesTest extends ROMUIBasePage {
 		
 	}
 	
-	@Test(enabled = true, priority=3,description = "Delete Pipeline")
+	@Test(enabled = false, priority=3,description = "Delete Pipeline")
 	public void testDeletePipeline() {
 		
 		logger.info("Login credentials to be entered");
@@ -56,7 +56,7 @@ public class PipelinesTest extends ROMUIBasePage {
 		
 	}
 	
-	@Test(enabled = true, priority=6,invocationCount=1,description = "Edit Pipeline")
+	@Test(enabled = false, priority=6,invocationCount=1,description = "Edit Pipeline")
 	public void testEditPipeline()throws JsonParseException, JsonMappingException, IOException {
 		
 		logger.info("Login credentials to be entered");
@@ -73,7 +73,7 @@ public class PipelinesTest extends ROMUIBasePage {
 	}
 	
 	
-	@Test(enabled = true, priority=4,description = "Copy Pipeline")
+	@Test(enabled = false, priority=4,description = "Copy Pipeline")
 	public void testCopyPipeline()throws JsonParseException, JsonMappingException, IOException {
 		
 		logger.info("Login credentials to be entered");
@@ -89,7 +89,7 @@ public class PipelinesTest extends ROMUIBasePage {
 		
 }
 	
-	@Test(enabled = true, priority=5,invocationCount=1,description = "Edit Pipeline Configuration")
+	@Test(enabled = false, priority=5,invocationCount=1,description = "Edit Pipeline Configuration")
 	public void testEditPipelineConfiguration() {
 		
 		logger.info("Login credentials to be entered");

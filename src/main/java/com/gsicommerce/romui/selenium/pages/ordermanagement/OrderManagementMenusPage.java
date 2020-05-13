@@ -1,5 +1,7 @@
 package com.gsicommerce.romui.selenium.pages.ordermanagement;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -9,6 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.gsicommerce.romui.selenium.testdata.Environment;
 import com.gsicommerce.romui.selenium.utilities.Action;
+import com.gsicommerce.romui.selenium.utilities.Common;
 
 public class OrderManagementMenusPage {
 	WebDriver driver;
@@ -29,7 +32,7 @@ public class OrderManagementMenusPage {
 	@CacheLookup
 	WebElement lkCatalogInventory;
 	
-	@FindBy(how = How.XPATH, using = "//i/parent::a[contains(text(),'Orders')]")
+	@FindBy(how = How.XPATH, using = "//li/a[contains(text(),'Orders')]")
 	@CacheLookup
 	WebElement lkOrders;
 	
@@ -197,6 +200,25 @@ public class OrderManagementMenusPage {
 	@CacheLookup
 	WebElement lkReasonCodes;
 	
+	@FindBy(how=How.CLASS_NAME,using="radial-app-header__user")
+	@CacheLookup
+	WebElement btnStore;
+	
+	@FindBy(how=How.ID,using="client_store_search")
+	@CacheLookup
+	WebElement txtStoreSearch;
+	
+	@FindBy(how=How.CLASS_NAME,using="btn-default btn-search")
+	//@FindBy(how=How.CLASS_NAME,using="context-tree-action")
+	@CacheLookup
+	WebElement btnStoreSearchClick;
+	
+	//@FindBy(how=How.XPATH,using="//button[@type='submit']")
+	@FindBy(how=How.CLASS_NAME,using="context-tree-action")
+	@CacheLookup
+	List<WebElement> lkStoreList;
+	
+	
 	public void clickOnItemSearch() {
 		btnMainMenu.click();
 		lkCatalogInventory.click();
@@ -218,6 +240,12 @@ public class OrderManagementMenusPage {
 		lkCatalogInventory.click();
 		lkAvlSearch.click();
 	}
+	public void clickOnOrders() {
+		btnMainMenu.click();
+		Action.waitForElementToBeClickable(driver, lkOrders, 10);
+		lkOrders.click();
+	}
+	
 	
 	public void clickOnStoreFulfillment() {
 		btnMainMenu.click();
@@ -396,6 +424,7 @@ public class OrderManagementMenusPage {
 
 	public void clickOnPipeline() {
 		btnMainMenu.click();
+	//	selectStore("1008011");
 		Action.waitForElementToBeClickable(driver, lkPipeline, 10);
 		lkPipeline.click();
 		
@@ -408,5 +437,31 @@ public class OrderManagementMenusPage {
 		
 	}
 	
+
+	//Select Store from store list
+	public void selectStore(String storeId)
+	{
+		btnStore.click();
+		Action.enter(txtStoreSearch,storeId.substring(0,storeId.length()));
+		
+		for (int i = 0; i <lkStoreList.size();i++)
+		{
+			WebElement storeList=lkStoreList.get(i);
+		{
+			if(storeList.getText().equalsIgnoreCase(storeId))
+	
+				try {
+                    Thread.sleep(2000l);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+			
+			System.out.println("Store List are" +storeList);
+			
+			storeList.click();
+            break;
+	}
+	}
+	}
 	
 }
