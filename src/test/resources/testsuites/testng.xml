@@ -28,4 +28,29 @@
       <parameter name="dataFile" value="./src/test/resources/testdata/serviceGroupConfigsData.json"></parameter>
     </classes>
   </test>
+  
+  
+  <test thread-count="5" name="PipelineTest">
+    <classes>
+      <class name="com.gsicommerce.romui.selenium.tests.PipelinesTest"/>
+      <parameter name="dataFile" value="./src/test/resources/testdata/pipelineData.json"/>
+
+    </classes>
+  </test> <!-- Test -->
+  
+ <test thread-count="5" name="ServiceFlowTest">
+    <classes>
+      <class name="com.gsicommerce.romui.selenium.tests.ServiceFlowTest"/>
+      <parameter name="dataFile" value="./src/test/resources/testdata/serviceflowData.json"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="5" name="ShippingLabelConfigTest">
+    <classes>
+       <class name="com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTest"/>
+       <parameter name="dataFile" value="./src/test/resources/testdata/ShippingLabelConfigData.json"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  
 </suite> <!-- Suite -->

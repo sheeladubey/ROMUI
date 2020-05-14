@@ -757,3 +757,165 @@
 2020-05-14 10:57:50,755 [main] INFO romui - Login credentials to be entered
 2020-05-14 10:57:50,802 [main] INFO romui - Login credentials to be entered
 2020-05-14 10:57:50,856 [main] INFO romui - Login credentials to be entered
+2020-05-14 12:06:15,674 [main] INFO romui - Login credentials to be entered
+2020-05-14 12:06:25,003 [main] INFO romui - Order Management link is clicked on
+2020-05-14 12:06:28,482 [main] INFO romui - Navigated to PaymentMethod Config page
+2020-05-14 12:06:36,610 [main] INFO romui - Add link is clcked on to enter the data and Clicked on Save btn
+2020-05-14 12:06:36,611 [main] INFO romui - Verify if add paymentmethodconfig success message is displayed
+2020-05-14 12:06:47,083 [main] INFO romui - Login credentials to be entered
+2020-05-14 12:06:55,913 [main] INFO romui - Order Management link is clicked on
+2020-05-14 12:06:59,250 [main] INFO romui - Navigated to PaymentMethod Config page
+2020-05-14 12:07:08,135 [main] INFO romui - Login credentials to be entered
+2020-05-14 12:07:16,819 [main] INFO romui - Order Management link is clicked on
+2020-05-14 12:07:20,498 [main] INFO romui - Navigated to PaymentMethod Config page
+2020-05-14 12:07:39,752 [main] INFO romui - Login credentials to be entered
+2020-05-14 12:07:47,251 [main] INFO romui - Order Management link is clicked on
+2020-05-14 12:08:05,268 [main] INFO romui - Login credentials to be entered
+2020-05-14 12:10:51,275 [main] INFO romui - Login credentials to be entered
+2020-05-14 12:10:59,278 [main] INFO romui - Order Management link is clicked on
+2020-05-14 12:11:02,777 [main] INFO romui - Navigated to PaymentMethod Config page
+2020-05-14 12:11:10,644 [main] INFO romui - Add link is clcked on to enter the data and Clicked on Save btn
+2020-05-14 12:11:10,645 [main] INFO romui - Verify if add paymentmethodconfig success message is displayed
+2020-05-14 12:11:20,033 [main] INFO romui - Login credentials to be entered
+2020-05-14 12:11:28,173 [main] INFO romui - Order Management link is clicked on
+2020-05-14 12:11:31,490 [main] INFO romui - Navigated to PaymentMethod Config page
+2020-05-14 12:11:36,633 [main] INFO romui - Edit link is clcked on to enter the modified data and Clicked on Save btn
+2020-05-14 12:11:36,634 [main] INFO romui - Verify if edit paymentmethodconfig success message is displayed
+2020-05-14 12:11:44,730 [main] INFO romui - Login credentials to be entered
+2020-05-14 12:11:52,116 [main] INFO romui - Order Management link is clicked on
+2020-05-14 12:11:55,711 [main] INFO romui - Navigated to PaymentMethod Config page
+2020-05-14 12:11:59,145 [main] INFO romui - Delete link is clcked on to delete the config
+2020-05-14 12:11:59,146 [main] INFO romui - Verify if delete paymentmethodconfig success message is displayed
+2020-05-14 12:12:08,129 [main] INFO romui - Login credentials to be entered
+2020-05-14 12:12:17,436 [main] INFO romui - Order Management link is clicked on
+2020-05-14 12:12:26,794 [main] INFO romui - Login credentials to be entered
+2020-05-14 12:12:34,817 [main] INFO romui - Order Management link is clicked on
+2020-05-14 12:12:40,166 [main] INFO romui - Navigated to Pipeline page
+2020-05-14 12:12:47,784 [main] INFO romui - Add link is clicked on to enter the data and Clicked on Save btn
+2020-05-14 12:12:47,784 [main] INFO romui - Verify if add pipeline success message is displayed
+2020-05-14 12:12:55,625 [main] INFO romui - Login credentials to be entered
+2020-05-14 12:13:05,019 [main] INFO romui - Order Management link is clicked on
+2020-05-14 12:13:10,299 [main] INFO romui - Navigated to Pipeline page
+2020-05-14 12:13:19,882 [main] INFO romui - View Pipeline Feature has veen validated successfully
+2020-05-14 12:13:27,821 [main] INFO romui - Login credentials to be entered
+2020-05-14 12:13:36,379 [main] INFO romui - Order Management link is clicked on
+2020-05-14 12:13:41,755 [main] INFO romui - Navigated to Pipeline page
+2020-05-14 12:13:48,751 [main] INFO romui - Verify if Delete pipeline success message is displayed
+2020-05-14 12:13:57,117 [main] INFO romui - Login credentials to be entered
+2020-05-14 12:14:05,848 [main] INFO romui - Order Management link is clicked on
+2020-05-14 12:14:11,030 [main] INFO romui - Navigated to Pipeline page
+2020-05-14 12:14:17,423 [main] INFO romui - Copy link is clicked on to enter the data and Clicked on Save btn
+2020-05-14 12:14:17,424 [main] INFO romui - Verify if Copy pipeline success message is displayed
+2020-05-14 12:14:25,915 [main] INFO romui - Login credentials to be entered
+2020-05-14 12:14:35,556 [main] INFO romui - Order Management link is clicked on
+2020-05-14 12:14:40,426 [main] INFO romui - Navigated to Pipeline page
+2020-05-14 12:14:42,662 [main] INFO romui - Edit Pipeline Config link is clicked on to enter the data and Clicked on Save btn
+2020-05-14 12:14:42,662 [main] INFO romui - Verify if Edit pipeline Config success message is displayed
+2020-05-14 12:14:50,538 [main] INFO romui - Login credentials to be entered
+2020-05-14 12:14:58,085 [main] INFO romui - Order Management link is clicked on
+2020-05-14 12:15:03,384 [main] INFO romui - Navigated to Pipeline page
+2020-05-14 12:15:20,549 [main] INFO romui - Edit link is clicked on to enter the data and Clicked on Save btn
+2020-05-14 12:15:20,549 [main] INFO romui - Verify if Edit pipeline success message is displayed
+2020-05-14 12:15:28,864 [main] INFO romui - Login credentials to be entered
+2020-05-14 12:15:37,009 [main] INFO romui - Order Management link is clicked on
+2020-05-14 12:15:40,847 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-14 12:15:44,182 [main] INFO romui - Add link is clicked on to enter the Ship Label Config data and Clicked on Save btn
+2020-05-14 12:15:44,182 [main] INFO romui - Verify if ship Label Config for Consignor add success message is displayed
+2020-05-14 12:15:52,436 [main] INFO romui - Login credentials to be entered
+2020-05-14 12:15:59,951 [main] INFO romui - Order Management link is clicked on
+2020-05-14 12:16:03,782 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-14 12:16:17,638 [main] INFO romui - Login credentials to be entered
+2020-05-14 12:16:25,323 [main] INFO romui - Order Management link is clicked on
+2020-05-14 12:16:29,655 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-14 12:16:38,966 [main] INFO romui - Add link is clicked on to enter the Ship Label Config data and Clicked on Save btn
+2020-05-14 12:16:38,966 [main] INFO romui - Verify if ship Label Config for Fedex add success message is displayed
+2020-05-14 12:16:46,918 [main] INFO romui - Login credentials to be entered
+2020-05-14 12:16:56,780 [main] INFO romui - Order Management link is clicked on
+2020-05-14 12:17:00,237 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-14 12:17:12,301 [main] INFO romui - Login credentials to be entered
+2020-05-14 12:17:21,341 [main] INFO romui - Order Management link is clicked on
+2020-05-14 12:17:24,902 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-14 12:17:33,365 [main] INFO romui - Login credentials to be entered
+2020-05-14 12:17:41,273 [main] INFO romui - Order Management link is clicked on
+2020-05-14 12:17:44,777 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-14 12:17:58,764 [main] INFO romui - Login credentials to be entered
+2020-05-14 12:18:06,901 [main] INFO romui - Order Management link is clicked on
+2020-05-14 12:18:09,241 [main] INFO romui - Navigated to Service Flow page
+2020-05-14 12:18:23,700 [main] INFO romui - Add link is clicked on to enter the data and Clicked on Save btn
+2020-05-14 12:18:23,700 [main] INFO romui - Verify if add serviceflow success message is displayed
+2020-05-14 12:18:39,221 [main] INFO romui - Login credentials to be entered
+2020-05-14 12:18:46,833 [main] INFO romui - Order Management link is clicked on
+2020-05-14 12:18:49,344 [main] INFO romui - Navigated to Service Flow page
+2020-05-14 12:19:13,050 [main] INFO romui - Login credentials to be entered
+2020-05-14 12:19:21,002 [main] INFO romui - Order Management link is clicked on
+2020-05-14 12:19:23,707 [main] INFO romui - Navigated to Service Flow page
+2020-05-14 12:19:45,535 [main] INFO romui - Login credentials to be entered
+2020-05-14 12:19:54,019 [main] INFO romui - Order Management link is clicked on
+2020-05-14 12:19:56,379 [main] INFO romui - Navigated to Service Flow page
+2020-05-14 12:20:14,221 [main] INFO romui - Copy link is clicked on to enter the data and Clicked on Save btn
+2020-05-14 12:20:14,221 [main] INFO romui - Verify if Copy serviceflow success message is displayed
+2020-05-14 12:20:23,528 [main] INFO romui - Login credentials to be entered
+2020-05-14 12:20:32,458 [main] INFO romui - Order Management link is clicked on
+2020-05-14 12:20:34,858 [main] INFO romui - Navigated to Service Flow page
+2020-05-14 12:21:06,056 [main] INFO romui - Edit link is clicked on to enter the data and Clicked on Save btn
+2020-05-14 12:21:06,056 [main] INFO romui - Verify if Edit serviceflow success message is displayed
+2020-05-14 13:15:57,046 [main] INFO romui - Login credentials to be entered
+2020-05-14 13:16:11,782 [main] INFO romui - Order Management link is clicked on
+2020-05-14 13:16:15,029 [main] INFO romui - Navigated to PaymentMethod Config page
+2020-05-14 13:16:23,579 [main] INFO romui - Add link is clcked on to enter the data and Clicked on Save btn
+2020-05-14 13:16:23,579 [main] INFO romui - Verify if add paymentmethodconfig success message is displayed
+2020-05-14 13:16:34,104 [main] INFO romui - Login credentials to be entered
+2020-05-14 13:16:38,136 [main] INFO romui - Order Management link is clicked on
+2020-05-14 13:20:11,044 [main] INFO romui - Login credentials to be entered
+2020-05-14 13:20:19,044 [main] INFO romui - Order Management link is clicked on
+2020-05-14 13:20:29,043 [main] INFO romui - Login credentials to be entered
+2020-05-14 13:32:12,071 [main] INFO romui - Login credentials to be entered
+2020-05-14 13:32:23,409 [main] INFO romui - Order Management link is clicked on
+2020-05-14 13:32:26,645 [main] INFO romui - Navigated to PaymentMethod Config page
+2020-05-14 13:32:36,014 [main] INFO romui - Add link is clcked on to enter the data and Clicked on Save btn
+2020-05-14 13:32:36,015 [main] INFO romui - Verify if add paymentmethodconfig success message is displayed
+2020-05-14 13:32:46,998 [main] INFO romui - Login credentials to be entered
+2020-05-14 13:32:54,979 [main] INFO romui - Order Management link is clicked on
+2020-05-14 13:32:58,266 [main] INFO romui - Navigated to PaymentMethod Config page
+2020-05-14 13:33:08,745 [main] INFO romui - Login credentials to be entered
+2020-05-14 13:33:18,233 [main] INFO romui - Order Management link is clicked on
+2020-05-14 13:33:21,426 [main] INFO romui - Navigated to PaymentMethod Config page
+2020-05-14 13:33:44,384 [main] INFO romui - Login credentials to be entered
+2020-05-14 13:33:55,372 [main] INFO romui - Order Management link is clicked on
+2020-05-14 13:34:06,414 [main] INFO romui - Login credentials to be entered
+2020-05-14 13:34:15,589 [main] INFO romui - Order Management link is clicked on
+2020-05-14 13:34:20,825 [main] INFO romui - Navigated to Pipeline page
+2020-05-14 13:34:29,295 [main] INFO romui - Add link is clicked on to enter the data and Clicked on Save btn
+2020-05-14 13:34:29,295 [main] INFO romui - Verify if add pipeline success message is displayed
+2020-05-14 13:34:39,497 [main] INFO romui - Login credentials to be entered
+2020-05-14 13:34:48,250 [main] INFO romui - Order Management link is clicked on
+2020-05-14 13:34:54,330 [main] INFO romui - Navigated to Pipeline page
+2020-05-14 13:35:03,269 [main] INFO romui - View Pipeline Feature has veen validated successfully
+2020-05-14 13:35:14,643 [main] INFO romui - Login credentials to be entered
+2020-05-14 13:35:22,430 [main] INFO romui - Order Management link is clicked on
+2020-05-14 13:35:27,585 [main] INFO romui - Navigated to Pipeline page
+2020-05-14 13:35:35,658 [main] INFO romui - Verify if Delete pipeline success message is displayed
+2020-05-14 13:35:47,138 [main] INFO romui - Login credentials to be entered
+2020-05-14 13:35:56,362 [main] INFO romui - Order Management link is clicked on
+2020-05-14 13:36:02,282 [main] INFO romui - Navigated to Pipeline page
+2020-05-14 13:36:30,289 [main] INFO romui - Login credentials to be entered
+2020-05-14 13:36:38,800 [main] INFO romui - Order Management link is clicked on
+2020-05-14 13:36:45,385 [main] INFO romui - Navigated to Pipeline page
+2020-05-14 13:36:47,799 [main] INFO romui - Edit Pipeline Config link is clicked on to enter the data and Clicked on Save btn
+2020-05-14 13:36:47,800 [main] INFO romui - Verify if Edit pipeline Config success message is displayed
+2020-05-14 13:36:58,492 [main] INFO romui - Login credentials to be entered
+2020-05-14 13:37:08,665 [main] INFO romui - Order Management link is clicked on
+2020-05-14 13:37:14,062 [main] INFO romui - Navigated to Pipeline page
+2020-05-14 13:37:31,800 [main] INFO romui - Edit link is clicked on to enter the data and Clicked on Save btn
+2020-05-14 13:37:31,801 [main] INFO romui - Verify if Edit pipeline success message is displayed
+2020-05-14 13:43:35,620 [main] INFO romui - Login credentials to be entered
+2020-05-14 13:48:32,519 [main] INFO romui - Login credentials to be entered
+2020-05-14 13:48:41,653 [main] INFO romui - Order Management link is clicked on
+2020-05-14 13:48:45,367 [main] INFO romui - Navigated to PaymentMethod Config page
+2020-05-14 13:48:54,169 [main] INFO romui - Add link is clcked on to enter the data and Clicked on Save btn
+2020-05-14 13:48:54,169 [main] INFO romui - Verify if add paymentmethodconfig success message is displayed
+2020-05-14 13:49:04,373 [main] INFO romui - Login credentials to be entered
+2020-05-14 13:49:13,844 [main] INFO romui - Order Management link is clicked on
+2020-05-14 13:49:16,526 [main] INFO romui - Navigated to PaymentMethod Config page
+2020-05-14 13:49:22,302 [main] INFO romui - Edit link is clcked on to enter the modified data and Clicked on Save btn
+2020-05-14 13:49:22,303 [main] INFO romui - Verify if edit paymentmethodconfig success message is displayed

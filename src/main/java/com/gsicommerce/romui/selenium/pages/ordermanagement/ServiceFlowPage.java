@@ -3,9 +3,12 @@ package com.gsicommerce.romui.selenium.pages.ordermanagement;
 import java.io.IOException;
 import java.util.Calendar;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -15,6 +18,7 @@ import org.testng.Assert;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.gsicommerce.romui.selenium.testdata.Environment;
+import com.gsicommerce.romui.selenium.testdata.PipelineData;
 import com.gsicommerce.romui.selenium.testdata.ServiceFlowData;
 import com.gsicommerce.romui.selenium.utilities.Action;
 import com.gsicommerce.romui.selenium.utilities.Common;
@@ -322,7 +326,6 @@ public class ServiceFlowPage {
 		Common.waitForElementPresent(driver, btnAddSvcFlw, 06);
 		Action.selectByValue(drpdwnService, "Shipment");
 		btnSearch.click();
-		Action.scrollDown("500");
 		Action.waitForElementToBeClickable(driver, iconEditProcess, 10);
 		iconEditProcess.click();
 		
@@ -362,6 +365,19 @@ public class ServiceFlowPage {
 		Action.enter(txtboxValue6,data.getSvcFlwValue6());
 		btnSave.click();
 		}
+	
+public void editSvcFlwProcess(){
+	
+	    Action.selectByValue(drpdwnProcessName1, "1");
+		txtboxValue.clear();
+		Action.enter(txtboxValue,data.getSvcFlwValue2());
+        Action.scrollDown("500");
+		Action.selectByValue(drpdwnProcessName3, "3");
+		txtboxValue.clear();
+		Action.enter(txtboxValue3,data.getSvcFlwValue5());
+		btnSave.click();
+		}
+
 		
 
 }

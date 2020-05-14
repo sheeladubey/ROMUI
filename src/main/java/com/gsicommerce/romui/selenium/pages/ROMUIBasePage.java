@@ -8,10 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
-
 import com.gsicommerce.romui.selenium.pages.common.PageFactory;
 import com.gsicommerce.romui.selenium.pages.common.ROMUIPageFactory;
 import com.gsicommerce.romui.selenium.testdata.Environment;
@@ -24,8 +21,8 @@ public class ROMUIBasePage {
 	public ROMUIPageFactory romuipages;
 	public static Logger logger;
 	
-	//@BeforeMethod
-	@BeforeTest
+	@BeforeMethod
+	//@BeforeTest
 	public void setup(final ITestContext c) 
 	{		
 		env = Environment.getInstance(c);
@@ -36,8 +33,8 @@ public class ROMUIBasePage {
 	
 	}
 	
-	//@AfterMethod(alwaysRun = true)
-	@AfterTest(alwaysRun = true)
+	@AfterMethod(alwaysRun = true)
+	//@AfterTest(alwaysRun = true)
 	public void tearDown(final ITestResult c) throws IOException {
 		if(!c.isSuccess()){
 			Browser.screenShot(driver, env, c);

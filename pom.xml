@@ -29,10 +29,7 @@
     <version>2.19.1</version>
     <configuration>
         <suiteXmlFiles>
-		<suiteXmlFile>testng.xml</suiteXmlFile>
-		<suiteXmlFile>ROMUI_PipeLines_TestSuite.xml</suiteXmlFile>
-		<suiteXmlFile>ROMUI_ShippingLabelConfig_TestSuite.xml</suiteXmlFile>
-		<suiteXmlFile>ROMUI_ServiceFlow_TestSuite.xml</suiteXmlFile>
+		<suiteXmlFile>src/test/resources/testsuites/testng.xml</suiteXmlFile>
 		</suiteXmlFiles>
     </configuration>
 </plugin>
