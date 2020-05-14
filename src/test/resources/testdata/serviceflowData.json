@@ -1,3 +1,15 @@
 {
-	"serviceflowName":"Testaddsvcflw"
+	"serviceflowName":"Testaddsvcflw",
+	
+	"Value":"Test",
+	
+	"Value2":"Test_",
+	
+	"Value3":"Test123",
+	
+	"Value4":"Test@#$%^",
+	
+	"Value5":"Test12#$",
+	
+	"Value6":"Test_Test"
 	}

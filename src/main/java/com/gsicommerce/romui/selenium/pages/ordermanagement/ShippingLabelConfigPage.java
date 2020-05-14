@@ -20,7 +20,7 @@ public class ShippingLabelConfigPage {
 
 	WebDriver driver;
 	Environment env;
-	Action action;
+
 	private ShippingLabelConfigData shipConfigdata;
 
 	public ShippingLabelConfigPage(WebDriver driver, Environment env) {
@@ -28,7 +28,7 @@ public class ShippingLabelConfigPage {
 		this.driver = driver;
 		this.env = env;
 		PageFactory.initElements(driver, this);
-		action = new Action(driver, env);
+		
 	}
 
 	@FindBy(how = How.CSS, using = "#shipping_label_configuration_service_provider_name")

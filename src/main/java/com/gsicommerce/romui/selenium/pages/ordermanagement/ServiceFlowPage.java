@@ -3,12 +3,9 @@ package com.gsicommerce.romui.selenium.pages.ordermanagement;
 import java.io.IOException;
 import java.util.Calendar;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -18,7 +15,6 @@ import org.testng.Assert;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.gsicommerce.romui.selenium.testdata.Environment;
-import com.gsicommerce.romui.selenium.testdata.PipelineData;
 import com.gsicommerce.romui.selenium.testdata.ServiceFlowData;
 import com.gsicommerce.romui.selenium.utilities.Action;
 import com.gsicommerce.romui.selenium.utilities.Common;
@@ -151,7 +147,17 @@ public class ServiceFlowPage {
 	@FindBy(how = How.XPATH, using = "//button[contains(text(),'Add Process')]")
 	@CacheLookup
 	private WebElement btnAddProcess;
+	
+	@FindBy(how = How.XPATH, using = "//h3[contains(text(),'Step 1')]")
+	@CacheLookup
+	private WebElement btnStep;
+	
+	
 
+	@FindBy(how = How.XPATH, using = "(//span[contains(text(),'Remove Process')])[1]")
+	@CacheLookup
+	private WebElement btnRemoveProcess;
+	
 	@FindBy(how = How.XPATH, using = "//span[contains(text(),'View Service Flow Configuration')]")
 	@CacheLookup
 	private WebElement viewSvcFlwConfig;
@@ -316,7 +322,7 @@ public class ServiceFlowPage {
 		Common.waitForElementPresent(driver, btnAddSvcFlw, 06);
 		Action.selectByValue(drpdwnService, "Shipment");
 		btnSearch.click();
-		Action.scrollDown("200");
+		Action.scrollDown("500");
 		Action.waitForElementToBeClickable(driver, iconEditProcess, 10);
 		iconEditProcess.click();
 		
@@ -324,38 +330,38 @@ public class ServiceFlowPage {
 	
 	
 	public void addSvcFlwProcess(){
-
+		
 		btnAddProcess.click();
 		Action.selectByValue(drpdwnProcessName1, "1");
 		txtboxValue.clear();
-		txtboxValue.sendKeys("Test");	
+		Action.enter(txtboxValue,data.getSvcFlwValue1());	
 		Action.scrollDown("500");
 		btnAddProcess.click();
 		Action.selectByValue(drpdwnProcessName2, "2");
 		txtboxValue2.clear();
-		txtboxValue2.sendKeys("Test");
+		Action.enter(txtboxValue2,data.getSvcFlwValue2());	
 		Action.scrollDown("500");
 		btnAddProcess.click();
 		Action.selectByValue(drpdwnProcessName3, "3");
 		txtboxValue3.clear();
-		txtboxValue3.sendKeys("Test123");
+		Action.enter(txtboxValue3,data.getSvcFlwValue3());
 		Action.scrollDown("500");
 		btnAddProcess.click();
 		Action.selectByValue(drpdwnProcessName4, "4");
 		txtboxValue4.clear();
-		txtboxValue4.sendKeys("Test@#$%^");
+		Action.enter(txtboxValue4,data.getSvcFlwValue4());
 		Action.scrollDown("500");
 		btnAddProcess.click();
 		Action.selectByValue(drpdwnProcessName5, "5");
 		txtboxValue5.clear();
-		txtboxValue5.sendKeys("Test12#$");
+		Action.enter(txtboxValue5,data.getSvcFlwValue5());
 		Action.scrollDown("500");
 		btnAddProcess.click();
 		Action.selectByValue(drpdwnProcessName6, "6");
 		txtboxValue5.clear();
-		txtboxValue5.sendKeys("Test_Test");
+		Action.enter(txtboxValue6,data.getSvcFlwValue6());
 		btnSave.click();
 		}
-	
+		
 
 }

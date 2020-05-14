@@ -11,14 +11,16 @@
 <parameter name="adminPasswd" value="Password123@" />
 <parameter name="waitPeriod" value="5"/>
 
-  <test thread-count="5" name="PaymentMethodConfigTests">
+ <test thread-count="5" name="PaymentMethodConfigTests">
     <classes>
       <!-- <class name="com.gsicommerce.romui.selenium.ROMUI.tests.ItemSearchTests"/> -->
      
       <class name="com.gsicommerce.romui.selenium.tests.PaymentMethodConfigTests"/>    
        <parameter name="dataFile" value="./src/test/resources/testdata/paymentMethodConfigData.json"></parameter>  
     </classes>
-  </test> <!-- Test -->
+  </test> 
+  <!-- Test -->
+ 
   <test thread-count="5" name="ServiceGroupConfigsTests">
     <classes>
       

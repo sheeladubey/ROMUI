@@ -20,6 +20,7 @@
 		<maven.compiler.target>1.7</maven.compiler.target>
 	
   </properties>
+ 
   <build>
    <plugins>
   <plugin>
@@ -27,11 +28,16 @@
     <artifactId>maven-surefire-plugin</artifactId>
     <version>2.19.1</version>
     <configuration>
-        <testFailureIgnore>true</testFailureIgnore>
+        <suiteXmlFiles>
+		<suiteXmlFile>testng.xml</suiteXmlFile>
+		<suiteXmlFile>ROMUI_PipeLines_TestSuite.xml</suiteXmlFile>
+		<suiteXmlFile>ROMUI_ShippingLabelConfig_TestSuite.xml</suiteXmlFile>
+		<suiteXmlFile>ROMUI_ServiceFlow_TestSuite.xml</suiteXmlFile>
+		</suiteXmlFiles>
     </configuration>
 </plugin>
-     </plugins>
-  </build>
+</plugins>
+ </build>   
 
   <dependencies>
   	<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->

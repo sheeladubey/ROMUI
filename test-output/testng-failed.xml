@@ -4,33 +4,25 @@
   <parameter name="adminUserName" value="admin@tmsna"/>
   <parameter name="storeEnvironment" value="lvststromsso04"/>
   <parameter name="adminPasswd" value="Password123@"/>
+  <parameter name="dataFile" value="./src/test/resources/testdata/pipelineData.json"/>
   <parameter name="waitPeriod" value="5"/>
   <parameter name="browserType" value="chrome"/>
   <listeners>
     <listener class-name="com.gsicommerce.romui.selenium.utilities.ExtentReporterListener"/>
   </listeners>
-  <test thread-count="5" name="PaymentMethodConfigTests(failed)">
-    <parameter name="dataFile" value="./src/test/resources/testdata/paymentMethodConfigData.json"/>
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.gsicommerce.romui.selenium.tests.PaymentMethodConfigTests">
-        <methods>
-          <include name="testEditPaymentConfig"/>
-          <include name="tearDown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- com.gsicommerce.romui.selenium.tests.PaymentMethodConfigTests -->
-    </classes>
-  </test> <!-- PaymentMethodConfigTests(failed) -->
-  <test thread-count="5" name="ServiceGroupConfigsTests(failed)">
-    <parameter name="dataFile" value="./src/test/resources/testdata/serviceGroupConfigsData.json"/>
-    <classes>
-      <class name="com.gsicommerce.romui.selenium.tests.ServiceGroupConfigsTests">
+      <class name="com.gsicommerce.romui.selenium.tests.PipelinesTest">
         <methods>
           <include name="tearDown"/>
+          <include name="testEditPipeline"/>
           <include name="setup"/>
-          <include name="testEditSellerServiceGroupConfigs"/>
+          <include name="testDeletePipeline"/>
+          <include name="testViewPipeline"/>
+          <include name="testCopyPipeline"/>
+          <include name="testEditPipelineConfiguration"/>
         </methods>
-      </class> <!-- com.gsicommerce.romui.selenium.tests.ServiceGroupConfigsTests -->
+      </class> <!-- com.gsicommerce.romui.selenium.tests.PipelinesTest -->
     </classes>
-  </test> <!-- ServiceGroupConfigsTests(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -745,3 +745,15 @@
 2020-05-14 01:24:41,624 - romui -INFO - Verify if delete paymentmethodconfig success message is displayed
 2020-05-14 01:24:50,574 - romui -INFO - Login credentials to be entered
 2020-05-14 01:24:58,863 - romui -INFO - Order Management link is clicked on
+2020-05-14 10:29:10,108 - romui -INFO - Login credentials to be entered
+2020-05-14 10:29:17,873 - romui -INFO - Order Management link is clicked on
+2020-05-14 10:57:26,571 - romui -INFO - Login credentials to be entered
+2020-05-14 10:57:37,642 - romui -INFO - Order Management link is clicked on
+2020-05-14 10:57:42,336 - romui -INFO - Navigated to Pipeline page
+2020-05-14 10:57:50,629 - romui -INFO - Add link is clicked on to enter the data and Clicked on Save btn
+2020-05-14 10:57:50,631 - romui -INFO - Verify if add pipeline success message is displayed
+2020-05-14 10:57:50,652 - romui -INFO - Login credentials to be entered
+2020-05-14 10:57:50,699 - romui -INFO - Login credentials to be entered
+2020-05-14 10:57:50,755 - romui -INFO - Login credentials to be entered
+2020-05-14 10:57:50,802 - romui -INFO - Login credentials to be entered
+2020-05-14 10:57:50,856 - romui -INFO - Login credentials to be entered

@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 5 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -51,12 +51,12 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\shedubey\Desktop\ROM\ROMUI_Automation\0506\ROMUI\src\test\resources\testsuites\testng.xml</span>
+                    <span>C:\Users\shedubey\Desktop\ROM\ROMUI_Automation\0506\ROMUI\src\test\resources\testsuites\ROMUI_PipeLines_TestSuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Suite" class="navigator-link ">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 2 failed,   2 passed</span>
+                    <span class="method-stats">6 methods, 5 failed,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,12 +104,27 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.PaymentMethodConfigTests" class="method navigator-link" hash-for-method="testEditPaymentConfig">testEditPaymentConfig</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.PipelinesTest" class="method navigator-link" hash-for-method="testCopyPipeline">testCopyPipeline</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.ServiceGroupConfigsTests" class="method navigator-link" hash-for-method="testEditSellerServiceGroupConfigs">testEditSellerServiceGroupConfigs</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.PipelinesTest" class="method navigator-link" hash-for-method="testDeletePipeline">testDeletePipeline</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.PipelinesTest" class="method navigator-link" hash-for-method="testEditPipeline">testEditPipeline</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.PipelinesTest" class="method navigator-link" hash-for-method="testEditPipelineConfiguration">testEditPipelineConfiguration</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.PipelinesTest" class="method navigator-link" hash-for-method="testViewPipeline">testViewPipeline</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -123,12 +138,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.PaymentMethodConfigTests" class="method navigator-link" hash-for-method="testAddPaymentConfig">testAddPaymentConfig</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.PaymentMethodConfigTests" class="method navigator-link" hash-for-method="testDeletePaymentConfig">testDeletePaymentConfig</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.PipelinesTest" class="method navigator-link" hash-for-method="testAddPipeline">testAddPipeline</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -146,21 +156,22 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.gsicommerce.romui.selenium.tests.ServiceGroupConfigsTests</span>
+              <span class="class-name">com.gsicommerce.romui.selenium.tests.PipelinesTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testEditSellerServiceGroupConfigs">
-                  </a> <!-- testEditSellerServiceGroupConfigs -->
-                  <span class="method-name">testEditSellerServiceGroupConfigs</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+                  <a name="testCopyPipeline">
+                  </a> <!-- testCopyPipeline -->
+                  <span class="method-name">testCopyPipeline</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
   (Session info: chrome=81.0.4044.138)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.135.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.135.142&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52513}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 6bd170983e3492363ef7d45450edcd54
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65302}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 04b9b0bd2a3903537adf2b086b467804
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -168,60 +179,144 @@ Session ID: 6bd170983e3492363ef7d45450edcd54
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy14.click(Unknown Source)
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.OrderManagementMenusPage.clickOnServiceGrpConfig(OrderManagementMenusPage.java:343)
-	at com.gsicommerce.romui.selenium.tests.ServiceGroupConfigsTests.testEditSellerServiceGroupConfigs(ServiceGroupConfigsTests.java:21)
+	at com.sun.proxy.$Proxy14.sendKeys(Unknown Source)
+	at com.gsicommerce.romui.selenium.pages.LoginPage.login(LoginPage.java:39)
+	at com.gsicommerce.romui.selenium.tests.PipelinesTest.testCopyPipeline(PipelinesTest.java:80)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 35 stack frames
+... Removed 36 stack frames
 </div> <!-- stack-trace -->
                   <em>
-(to Verify Edit Seller Service Group Configurations)                  </em>
+(Copy Pipeline)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.gsicommerce.romui.selenium.tests.PaymentMethodConfigTests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testEditPaymentConfig">
-                  </a> <!-- testEditPaymentConfig -->
-                  <span class="method-name">testEditPaymentConfig</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;[data-tooltip=&apos;Edit&apos;]&quot;}
+                  <a name="testDeletePipeline">
+                  </a> <!-- testDeletePipeline -->
+                  <span class="method-name">testDeletePipeline</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
   (Session info: chrome=81.0.4044.138)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.135.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.135.142&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52447}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: fdcd0729824338c4c238aad383241a37
-*** Element info: {Using=css selector, value=[data-tooltip=&apos;Edit&apos;]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65302}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 04b9b0bd2a3903537adf2b086b467804
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy14.click(Unknown Source)
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.PaymentMethodConfigPage.editPaymentMethodConfig(PaymentMethodConfigPage.java:168)
-	at com.gsicommerce.romui.selenium.tests.PaymentMethodConfigTests.testEditPaymentConfig(PaymentMethodConfigTests.java:23)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy14.sendKeys(Unknown Source)
+	at com.gsicommerce.romui.selenium.pages.LoginPage.login(LoginPage.java:39)
+	at com.gsicommerce.romui.selenium.tests.PipelinesTest.testDeletePipeline(PipelinesTest.java:48)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 32 stack frames
+... Removed 36 stack frames
 </div> <!-- stack-trace -->
                   <em>
-(to Verify Edit PaymentMethod Configuration)                  </em>
+(Delete Pipeline)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testEditPipeline">
+                  </a> <!-- testEditPipeline -->
+                  <span class="method-name">testEditPipeline</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=81.0.4044.138)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.135.142&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65302}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 04b9b0bd2a3903537adf2b086b467804
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy14.sendKeys(Unknown Source)
+	at com.gsicommerce.romui.selenium.pages.LoginPage.login(LoginPage.java:39)
+	at com.gsicommerce.romui.selenium.tests.PipelinesTest.testEditPipeline(PipelinesTest.java:63)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Edit Pipeline)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testEditPipelineConfiguration">
+                  </a> <!-- testEditPipelineConfiguration -->
+                  <span class="method-name">testEditPipelineConfiguration</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=81.0.4044.138)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.135.142&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65302}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 04b9b0bd2a3903537adf2b086b467804
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy14.sendKeys(Unknown Source)
+	at com.gsicommerce.romui.selenium.pages.LoginPage.login(LoginPage.java:39)
+	at com.gsicommerce.romui.selenium.tests.PipelinesTest.testEditPipelineConfiguration(PipelinesTest.java:96)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Edit Pipeline Configuration)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testViewPipeline">
+                  </a> <!-- testViewPipeline -->
+                  <span class="method-name">testViewPipeline</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=81.0.4044.138)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.135.142&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65302}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 04b9b0bd2a3903537adf2b086b467804
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy14.sendKeys(Unknown Source)
+	at com.gsicommerce.romui.selenium.pages.LoginPage.login(LoginPage.java:39)
+	at com.gsicommerce.romui.selenium.tests.PipelinesTest.testViewPipeline(PipelinesTest.java:34)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(View Pipeline)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -229,25 +324,16 @@ Session ID: fdcd0729824338c4c238aad383241a37
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.gsicommerce.romui.selenium.tests.PaymentMethodConfigTests</span>
+              <span class="class-name">com.gsicommerce.romui.selenium.tests.PipelinesTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testAddPaymentConfig">
-                  </a> <!-- testAddPaymentConfig -->
-                  <span class="method-name">testAddPaymentConfig</span>
+                  <a name="testAddPipeline">
+                  </a> <!-- testAddPipeline -->
+                  <span class="method-name">testAddPipeline</span>
                   <em>
-(to Verify Add PaymentMethod Configuration)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testDeletePaymentConfig">
-                  </a> <!-- testDeletePaymentConfig -->
-                  <span class="method-name">testDeletePaymentConfig</span>
-                  <em>
-(to Verify Delete PaymentMethod Configuration)                  </em>
+(Add Pipeline)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -255,7 +341,7 @@ Session ID: fdcd0729824338c4c238aad383241a37
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\shedubey\Desktop\ROM\ROMUI_Automation\0506\ROMUI\src\test\resources\testsuites\testng.xml</span>
+            <span class="header-content">C:\Users\shedubey\Desktop\ROM\ROMUI_Automation\0506\ROMUI\src\test\resources\testsuites\ROMUI_PipeLines_TestSuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -265,23 +351,17 @@ Session ID: fdcd0729824338c4c238aad383241a37
   &lt;parameter name=&quot;adminUserName&quot; value=&quot;admin@tmsna&quot;/&gt;
   &lt;parameter name=&quot;storeEnvironment&quot; value=&quot;lvststromsso04&quot;/&gt;
   &lt;parameter name=&quot;adminPasswd&quot; value=&quot;Password123@&quot;/&gt;
+  &lt;parameter name=&quot;dataFile&quot; value=&quot;./src/test/resources/testdata/pipelineData.json&quot;/&gt;
   &lt;parameter name=&quot;waitPeriod&quot; value=&quot;5&quot;/&gt;
   &lt;parameter name=&quot;browserType&quot; value=&quot;chrome&quot;/&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.gsicommerce.romui.selenium.utilities.ExtentReporterListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;PaymentMethodConfigTests&quot;&gt;
-    &lt;parameter name=&quot;dataFile&quot; value=&quot;./src/test/resources/testdata/paymentMethodConfigData.json&quot;/&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.gsicommerce.romui.selenium.tests.PaymentMethodConfigTests&quot;/&gt;
+      &lt;class name=&quot;com.gsicommerce.romui.selenium.tests.PipelinesTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- PaymentMethodConfigTests --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;ServiceGroupConfigsTests&quot;&gt;
-    &lt;parameter name=&quot;dataFile&quot; value=&quot;./src/test/resources/testdata/serviceGroupConfigsData.json&quot;/&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;com.gsicommerce.romui.selenium.tests.ServiceGroupConfigsTests&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- ServiceGroupConfigsTests --&gt;
+  &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -293,10 +373,7 @@ Session ID: fdcd0729824338c4c238aad383241a37
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">PaymentMethodConfigTests (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">ServiceGroupConfigsTests (1 class)</span>
+                <span class="test-name">Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -322,28 +399,36 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(6);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testAddPaymentConfig')
-data.setCell(0, 2, 'com.gsicommerce.romui.selenium.tests.PaymentMethodConfigTests')
-data.setCell(0, 3, 22456);
+data.setCell(0, 1, 'testAddPipeline')
+data.setCell(0, 2, 'com.gsicommerce.romui.selenium.tests.PipelinesTest')
+data.setCell(0, 3, 24086);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testDeletePaymentConfig')
-data.setCell(1, 2, 'com.gsicommerce.romui.selenium.tests.PaymentMethodConfigTests')
-data.setCell(1, 3, 16792);
+data.setCell(1, 1, 'testDeletePipeline')
+data.setCell(1, 2, 'com.gsicommerce.romui.selenium.tests.PipelinesTest')
+data.setCell(1, 3, 56);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testEditPaymentConfig')
-data.setCell(2, 2, 'com.gsicommerce.romui.selenium.tests.PaymentMethodConfigTests')
-data.setCell(2, 3, 10175);
+data.setCell(2, 1, 'testEditPipelineConfiguration')
+data.setCell(2, 2, 'com.gsicommerce.romui.selenium.tests.PipelinesTest')
+data.setCell(2, 3, 54);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testEditSellerServiceGroupConfigs')
-data.setCell(3, 2, 'com.gsicommerce.romui.selenium.tests.ServiceGroupConfigsTests')
-data.setCell(3, 3, 8405);
+data.setCell(3, 1, 'testViewPipeline')
+data.setCell(3, 2, 'com.gsicommerce.romui.selenium.tests.PipelinesTest')
+data.setCell(3, 3, 47);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testCopyPipeline')
+data.setCell(4, 2, 'com.gsicommerce.romui.selenium.tests.PipelinesTest')
+data.setCell(4, 3, 47);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testEditPipeline')
+data.setCell(5, 2, 'com.gsicommerce.romui.selenium.tests.PipelinesTest')
+data.setCell(5, 3, 46);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 57 seconds</span>
+              <span class="suite-total-time">Total running time: 24 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -355,27 +440,75 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">testDeletePaymentConfig</span>
+              <span class="reporter-method-name">testAddPipeline</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')</span>
+                <span class="reporter-method-output">Expected condition failed: waiting for presence of element located by: By.id:  (tried for 1 second(s) with 500 milliseconds interval)</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
-              <span class="reporter-method-name">testAddPaymentConfig</span>
+              <span class="reporter-method-name">testViewPipeline</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')</span>
+                <span class="reporter-method-output">stale element reference: element is not attached to the page document
+  (Session info: chrome=81.0.4044.138)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KOP-BM5TNF2', ip: '10.140.135.142', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65302}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 04b9b0bd2a3903537adf2b086b467804</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
-              <span class="reporter-method-name">testEditPaymentConfig</span>
+              <span class="reporter-method-name">testDeletePipeline</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')</span>
+                <span class="reporter-method-output">stale element reference: element is not attached to the page document
+  (Session info: chrome=81.0.4044.138)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KOP-BM5TNF2', ip: '10.140.135.142', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65302}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 04b9b0bd2a3903537adf2b086b467804</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
-              <span class="reporter-method-name">testEditSellerServiceGroupConfigs</span>
+              <span class="reporter-method-name">testCopyPipeline</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')</span>
+                <span class="reporter-method-output">stale element reference: element is not attached to the page document
+  (Session info: chrome=81.0.4044.138)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KOP-BM5TNF2', ip: '10.140.135.142', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65302}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 04b9b0bd2a3903537adf2b086b467804</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testEditPipelineConfiguration</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">stale element reference: element is not attached to the page document
+  (Session info: chrome=81.0.4044.138)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KOP-BM5TNF2', ip: '10.140.135.142', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65302}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 04b9b0bd2a3903537adf2b086b467804</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testEditPipeline</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">stale element reference: element is not attached to the page document
+  (Session info: chrome=81.0.4044.138)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KOP-BM5TNF2', ip: '10.140.135.142', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65302}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 04b9b0bd2a3903537adf2b086b467804</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -393,62 +526,45 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.gsicommerce.romui.selenium.tests.PaymentMethodConfigTests</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(org.testng.TestRunner@75b38c36)</span>
+              <div class="chronological-class-name">com.gsicommerce.romui.selenium.tests.PipelinesTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setup(org.testng.TestRunner@354e7004)</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-method before -->
+              </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">testAddPaymentConfig</span>
-                <span class="method-start">7985 ms</span>
+                <span class="method-name">testAddPipeline</span>
+                <span class="method-start">8715 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=testAddPaymentConfig status=SUCCESS method=PaymentMethodConfigTests.testAddPaymentC...)</span>
-                <span class="method-start">30444 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(org.testng.TestRunner@75b38c36)</span>
-                <span class="method-start">31103 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">testEditPaymentConfig</span>
-                <span class="method-start">38935 ms</span>
+                <span class="method-name">testViewPipeline</span>
+                <span class="method-start">32801 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=testEditPaymentConfig status=FAILURE method=PaymentMethodConfigTests.testEditPaymen...)</span>
-                <span class="method-start">49115 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(org.testng.TestRunner@75b38c36)</span>
-                <span class="method-start">50218 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testDeletePaymentConfig</span>
-                <span class="method-start">58250 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=testDeletePaymentConfig status=SUCCESS method=PaymentMethodConfigTests.testDeletePa...)</span>
-                <span class="method-start">75043 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.gsicommerce.romui.selenium.tests.ServiceGroupConfigsTests</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(org.testng.TestRunner@47248a48)</span>
-                <span class="method-start">75952 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">testEditSellerServiceGroupConfigs</span>
-                <span class="method-start">83965 ms</span>
+                <span class="method-name">testDeletePipeline</span>
+                <span class="method-start">32848 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=testEditSellerServiceGroupConfigs status=FAILURE method=ServiceGroupConfigsTests.te...)</span>
-                <span class="method-start">92371 ms</span>
-              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testCopyPipeline</span>
+                <span class="method-start">32904 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testEditPipelineConfiguration</span>
+                <span class="method-start">32951 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testEditPipeline</span>
+                <span class="method-start">33005 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
