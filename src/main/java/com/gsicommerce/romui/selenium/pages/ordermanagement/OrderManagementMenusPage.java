@@ -442,7 +442,7 @@ public class OrderManagementMenusPage {
 	}
 	
 
-	//Select Store from store list
+	//** sheela-Select Store from store list
 	public void selectStore(String storeId)
 	{
 		btnStore.click();

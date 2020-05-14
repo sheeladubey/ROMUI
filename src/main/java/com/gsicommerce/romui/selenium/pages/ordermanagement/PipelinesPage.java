@@ -222,7 +222,12 @@ public class PipelinesPage {
 		//CommonElementsPage.clickOnSaveBtn();
 		//btnContinue.click();
 	}
-
+/*
+ * This method will be use to select different events.
+ * 
+ * 
+ * 
+ */
 	public void createEvents() {
 		Common.dragAndDrop(driver, dragSalesOrderCreate, dropSalesOrderCreate, 10);
 		OrderCreateEvent.click();
@@ -270,17 +275,13 @@ public class PipelinesPage {
 
 	public void clickViewPipeline() {
 		btnView.click();
-		System.out.println("Clicked View Pipeline button");
-		Assert.assertEquals(txtScreenHeader.getText(), RomuiEnumValues.PIPELINE_VIEW_HEADER.getMessage(),
-				"USER does not navigated to View Pipeline screen");
+		Assert.assertEquals(txtScreenHeader.getText(), RomuiEnumValues.PIPELINE_VIEW_HEADER.getMessage(),"USER does not navigated to View Pipeline screen");
 		Action.waitForElementToBeClickable(driver, lkviewPipelineConfig, 10);
 		lkviewPipelineConfig.click();
-		System.out.println("View Pipeline Configuration button Clicked");
 		String actualViewPipelineConfigHeader = viewPipelineConfigHeader.getText();
-		Assert.assertEquals(actualViewPipelineConfigHeader, RomuiEnumValues.PIPELINE_CONFIGURE_HEADER.getMessage(),
-				"USER does not navigated to configure Pipeline screen");
+		Assert.assertEquals(actualViewPipelineConfigHeader, RomuiEnumValues.PIPELINE_CONFIGURE_HEADER.getMessage(),"USER does not navigated to configure Pipeline screen");
 		CommonElementsPage.clickOnCancelBtn();
-		System.out.println("Clicked Cancel button");
+	
 	}
 	// Sheela-This method will select StartDate on Create Pipeline screen
 
@@ -293,7 +294,7 @@ public class PipelinesPage {
 			txtStartDate.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 			txtStartDate.sendKeys(SelectDate.selectStartDate(futureStartDate));
 		}
-		System.out.println("Start Date Entered");
+		
 	}
 
 	// Sheela-This method will select EndDate on Create Pipeline screen
@@ -308,7 +309,7 @@ public class PipelinesPage {
 			txtEndDate.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 			txtEndDate.sendKeys(SelectDate.selectEndDate(endDateCal));
 		}
-		System.out.println("End Date Entered");
+		
 	}
 
 	public void EditPipeline() throws JsonParseException, JsonMappingException, IOException {
