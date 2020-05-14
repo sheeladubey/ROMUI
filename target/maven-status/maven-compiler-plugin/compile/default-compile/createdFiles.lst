@@ -13,9 +13,11 @@ com\gsicommerce\romui\selenium\utilities\AssertingWebElement.class
 com\gsicommerce\romui\selenium\utilities\Common$10.class
 com\gsicommerce\romui\selenium\pages\ordermanagement\PipelinesPage.class
 com\gsicommerce\romui\selenium\utilities\ExtentReporterListener.class
+com\gsicommerce\romui\selenium\testdata\ServiceFlowData.class
 com\gsicommerce\romui\selenium\utilities\Common$3.class
 com\gsicommerce\romui\selenium\utilities\Action.class
 com\gsicommerce\romui\selenium\pages\ordermanagement\ItemSearchPage.class
+com\gsicommerce\romui\selenium\pages\ordermanagement\ServiceGroupConfigsPage.class
 com\gsicommerce\romui\selenium\utilities\Common$12.class
 com\gsicommerce\romui\selenium\utilities\SelectDate.class
 com\gsicommerce\romui\selenium\utilities\Common$6.class
@@ -29,10 +31,13 @@ com\gsicommerce\romui\selenium\utilities\Common$8.class
 com\gsicommerce\romui\selenium\utilities\Browser.class
 com\gsicommerce\romui\selenium\utilities\Webtable.class
 com\gsicommerce\romui\selenium\utilities\Common$4.class
+com\gsicommerce\romui\selenium\pages\ordermanagement\ServiceFlowPage.class
 com\gsicommerce\romui\selenium\pages\LoginPage.class
+com\gsicommerce\romui\selenium\testdata\ServiceGroupConfigsData.class
 com\gsicommerce\romui\selenium\utilities\Common.class
 com\gsicommerce\romui\selenium\utilities\GsiWebElement.class
 com\gsicommerce\romui\selenium\pages\ordermanagement\OrderManagementMenusPage.class
 com\gsicommerce\romui\selenium\utilities\RomuiEnumValues.class
+com\gsicommerce\romui\selenium\pages\ordermanagement\OrdersPage.class
 com\gsicommerce\romui\selenium\utilities\ElementPresent.class
 com\gsicommerce\romui\selenium\utilities\Common$2.class

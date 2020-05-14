@@ -504,3 +504,244 @@
 2020-05-13 00:07:37,487 [main] INFO romui - Login credentials to be entered
 2020-05-13 00:07:47,812 [main] INFO romui - Order Management link is clicked on
 2020-05-13 00:07:50,121 [main] INFO romui - Navigated to Orders page
+2020-05-13 12:23:47,302 [main] INFO romui - Login credentials to be entered
+2020-05-13 12:23:58,779 [main] INFO romui - Order Management link is clicked on
+2020-05-13 12:24:01,670 [main] INFO romui - Navigated to Orders page
+2020-05-13 12:40:10,485 [main] INFO romui - Login credentials to be entered
+2020-05-13 12:40:20,790 [main] INFO romui - Order Management link is clicked on
+2020-05-13 12:40:23,441 [main] INFO romui - Navigated to Orders page
+2020-05-13 12:44:31,277 [main] INFO romui - Login credentials to be entered
+2020-05-13 12:44:41,611 [main] INFO romui - Order Management link is clicked on
+2020-05-13 12:44:44,320 [main] INFO romui - Navigated to Orders page
+2020-05-13 13:11:19,881 [main] INFO romui - Login credentials to be entered
+2020-05-13 13:11:28,669 [main] INFO romui - Order Management link is clicked on
+2020-05-13 13:11:31,286 [main] INFO romui - Navigated to Orders page
+2020-05-13 13:24:51,615 [main] INFO romui - Login credentials to be entered
+2020-05-13 13:24:59,740 [main] INFO romui - Order Management link is clicked on
+2020-05-13 13:25:02,463 [main] INFO romui - Navigated to Orders page
+2020-05-13 13:27:55,792 [main] INFO romui - Login credentials to be entered
+2020-05-13 13:28:05,525 [main] INFO romui - Order Management link is clicked on
+2020-05-13 13:28:07,995 [main] INFO romui - Navigated to Orders page
+2020-05-13 13:33:35,299 [main] INFO romui - Login credentials to be entered
+2020-05-13 13:33:49,430 [main] INFO romui - Order Management link is clicked on
+2020-05-13 13:33:51,732 [main] INFO romui - Navigated to Orders page
+2020-05-13 13:36:25,499 [main] INFO romui - Login credentials to be entered
+2020-05-13 13:36:33,571 [main] INFO romui - Order Management link is clicked on
+2020-05-13 13:36:36,064 [main] INFO romui - Navigated to Orders page
+2020-05-13 13:45:58,025 [main] INFO romui - Login credentials to be entered
+2020-05-13 13:46:06,652 [main] INFO romui - Order Management link is clicked on
+2020-05-13 13:46:09,842 [main] INFO romui - Navigated to Orders page
+2020-05-13 15:05:11,148 [main] INFO romui - Login credentials to be entered
+2020-05-13 15:05:23,085 [main] INFO romui - Order Management link is clicked on
+2020-05-13 15:05:25,274 [main] INFO romui - Navigated to Orders page
+2020-05-13 15:07:19,726 [main] INFO romui - Login credentials to be entered
+2020-05-13 15:07:34,135 [main] INFO romui - Order Management link is clicked on
+2020-05-13 15:07:36,436 [main] INFO romui - Navigated to Orders page
+2020-05-13 15:14:47,075 [main] INFO romui - Login credentials to be entered
+2020-05-13 15:14:56,154 [main] INFO romui - Order Management link is clicked on
+2020-05-13 15:14:58,499 [main] INFO romui - Navigated to Orders page
+2020-05-13 15:20:17,980 [main] INFO romui - Login credentials to be entered
+2020-05-13 15:20:26,580 [main] INFO romui - Order Management link is clicked on
+2020-05-13 15:20:29,657 [main] INFO romui - Navigated to Orders page
+2020-05-13 15:28:29,681 [main] INFO romui - Login credentials to be entered
+2020-05-13 15:28:41,991 [main] INFO romui - Order Management link is clicked on
+2020-05-13 15:28:44,478 [main] INFO romui - Navigated to Orders page
+2020-05-13 15:31:08,018 [main] INFO romui - Login credentials to be entered
+2020-05-13 15:31:17,338 [main] INFO romui - Order Management link is clicked on
+2020-05-13 15:31:19,859 [main] INFO romui - Navigated to Orders page
+2020-05-13 15:32:45,988 [main] INFO romui - Login credentials to be entered
+2020-05-13 15:32:55,123 [main] INFO romui - Order Management link is clicked on
+2020-05-13 15:32:57,783 [main] INFO romui - Navigated to Orders page
+2020-05-13 15:38:53,188 [main] INFO romui - Login credentials to be entered
+2020-05-13 15:39:02,957 [main] INFO romui - Order Management link is clicked on
+2020-05-13 15:39:06,433 [main] INFO romui - Navigated to Orders page
+2020-05-13 16:25:05,133 [main] INFO romui - Login credentials to be entered
+2020-05-13 16:25:12,821 [main] INFO romui - Order Management link is clicked on
+2020-05-13 16:25:17,567 [main] INFO romui - Navigated to Pipeline page
+2020-05-13 16:31:20,102 [main] INFO romui - Login credentials to be entered
+2020-05-13 16:31:31,125 [main] INFO romui - Order Management link is clicked on
+2020-05-13 16:31:36,384 [main] INFO romui - Navigated to Pipeline page
+2020-05-13 16:35:38,756 [main] INFO romui - Login credentials to be entered
+2020-05-13 16:35:47,850 [main] INFO romui - Order Management link is clicked on
+2020-05-13 16:35:53,450 [main] INFO romui - Navigated to Pipeline page
+2020-05-13 16:37:10,988 [main] INFO romui - Login credentials to be entered
+2020-05-13 16:37:20,971 [main] INFO romui - Order Management link is clicked on
+2020-05-13 16:37:25,653 [main] INFO romui - Navigated to Pipeline page
+2020-05-13 16:37:34,180 [main] INFO romui - Add link is clicked on to enter the data and Clicked on Save btn
+2020-05-13 16:37:34,181 [main] INFO romui - Verify if add pipeline success message is displayed
+2020-05-13 16:38:48,787 [main] INFO romui - Login credentials to be entered
+2020-05-13 16:38:56,630 [main] INFO romui - Order Management link is clicked on
+2020-05-13 16:39:02,049 [main] INFO romui - Navigated to Pipeline page
+2020-05-13 16:39:11,136 [main] INFO romui - Add link is clicked on to enter the data and Clicked on Save btn
+2020-05-13 16:39:11,137 [main] INFO romui - Verify if add pipeline success message is displayed
+2020-05-13 16:59:04,263 [main] INFO romui - Login credentials to be entered
+2020-05-13 16:59:20,980 [main] INFO romui - Order Management link is clicked on
+2020-05-13 17:04:41,215 [main] INFO romui - Login credentials to be entered
+2020-05-13 17:04:54,749 [main] INFO romui - Order Management link is clicked on
+2020-05-13 17:49:04,571 [main] INFO romui - Login credentials to be entered
+2020-05-13 17:49:23,259 [main] INFO romui - Order Management link is clicked on
+2020-05-13 17:49:29,383 [main] INFO romui - Navigated to Pipeline page
+2020-05-13 17:49:38,645 [main] INFO romui - Add link is clicked on to enter the data and Clicked on Save btn
+2020-05-13 17:49:38,646 [main] INFO romui - Verify if add pipeline success message is displayed
+2020-05-13 17:51:50,884 [main] INFO romui - Login credentials to be entered
+2020-05-13 17:52:02,842 [main] INFO romui - Order Management link is clicked on
+2020-05-13 17:52:08,600 [main] INFO romui - Navigated to Pipeline page
+2020-05-13 17:52:16,396 [main] INFO romui - Add link is clicked on to enter the data and Clicked on Save btn
+2020-05-13 17:52:16,397 [main] INFO romui - Verify if add pipeline success message is displayed
+2020-05-13 17:52:28,690 [main] INFO romui - Login credentials to be entered
+2020-05-13 17:52:42,406 [main] INFO romui - Order Management link is clicked on
+2020-05-13 17:52:47,938 [main] INFO romui - Navigated to Pipeline page
+2020-05-13 17:52:52,904 [main] INFO romui - View Pipeline Feature has veen validated successfully
+2020-05-13 17:53:04,691 [main] INFO romui - Login credentials to be entered
+2020-05-13 17:53:17,272 [main] INFO romui - Order Management link is clicked on
+2020-05-13 17:53:22,808 [main] INFO romui - Navigated to Pipeline page
+2020-05-13 17:53:29,639 [main] INFO romui - Verify if Delete pipeline success message is displayed
+2020-05-13 17:53:40,797 [main] INFO romui - Login credentials to be entered
+2020-05-13 17:53:54,215 [main] INFO romui - Order Management link is clicked on
+2020-05-13 17:54:01,205 [main] INFO romui - Navigated to Pipeline page
+2020-05-13 17:54:17,998 [main] INFO romui - Copy link is clicked on to enter the data and Clicked on Save btn
+2020-05-13 17:54:17,998 [main] INFO romui - Verify if Copy pipeline success message is displayed
+2020-05-13 17:54:28,753 [main] INFO romui - Login credentials to be entered
+2020-05-13 17:54:39,379 [main] INFO romui - Order Management link is clicked on
+2020-05-13 17:54:45,127 [main] INFO romui - Navigated to Pipeline page
+2020-05-13 17:54:53,471 [main] INFO romui - Edit Pipeline Config link is clicked on to enter the data and Clicked on Save btn
+2020-05-13 17:54:53,471 [main] INFO romui - Verify if Edit pipeline Config success message is displayed
+2020-05-13 17:55:04,558 [main] INFO romui - Login credentials to be entered
+2020-05-13 17:55:18,051 [main] INFO romui - Order Management link is clicked on
+2020-05-13 17:55:23,411 [main] INFO romui - Navigated to Pipeline page
+2020-05-13 17:55:34,517 [main] INFO romui - Edit link is clicked on to enter the data and Clicked on Save btn
+2020-05-13 17:55:34,517 [main] INFO romui - Verify if Edit pipeline success message is displayed
+2020-05-13 23:00:54,194 [main] INFO romui - Login credentials to be entered
+2020-05-13 23:01:06,122 [main] INFO romui - Order Management link is clicked on
+2020-05-13 23:01:10,054 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-13 23:01:15,702 [main] INFO romui - Add link is clicked on to enter the Ship Label Config data and Clicked on Save btn
+2020-05-13 23:01:15,703 [main] INFO romui - Verify if ship Label Config for Consignor add success message is displayed
+2020-05-13 23:01:24,206 [main] INFO romui - Login credentials to be entered
+2020-05-13 23:01:32,419 [main] INFO romui - Order Management link is clicked on
+2020-05-13 23:01:36,182 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-13 23:01:44,444 [main] INFO romui - Login credentials to be entered
+2020-05-13 23:01:52,267 [main] INFO romui - Order Management link is clicked on
+2020-05-13 23:01:56,118 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-13 23:02:03,865 [main] INFO romui - Add link is clicked on to enter the Ship Label Config data and Clicked on Save btn
+2020-05-13 23:02:03,866 [main] INFO romui - Verify if ship Label Config for Fedex add success message is displayed
+2020-05-13 23:02:12,067 [main] INFO romui - Login credentials to be entered
+2020-05-13 23:02:20,421 [main] INFO romui - Order Management link is clicked on
+2020-05-13 23:02:24,417 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-13 23:02:36,481 [main] INFO romui - Login credentials to be entered
+2020-05-13 23:02:44,735 [main] INFO romui - Order Management link is clicked on
+2020-05-13 23:02:48,451 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-13 23:02:51,790 [main] INFO romui - Add link is clicked on to enter the Ship Label Config data and Clicked on Save btn
+2020-05-13 23:02:51,793 [main] INFO romui - Verify if ship Label Config for Consignor add success message is displayed
+2020-05-13 23:02:59,963 [main] INFO romui - Login credentials to be entered
+2020-05-13 23:03:08,341 [main] INFO romui - Order Management link is clicked on
+2020-05-13 23:03:12,060 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-13 23:30:40,867 [main] INFO romui - Login credentials to be entered
+2020-05-13 23:30:54,132 [main] INFO romui - Order Management link is clicked on
+2020-05-13 23:30:58,135 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-13 23:31:04,009 [main] INFO romui - Add link is clicked on to enter the Ship Label Config data and Clicked on Save btn
+2020-05-13 23:31:04,010 [main] INFO romui - Verify if ship Label Config for Consignor add success message is displayed
+2020-05-13 23:31:13,668 [main] INFO romui - Login credentials to be entered
+2020-05-13 23:31:22,929 [main] INFO romui - Order Management link is clicked on
+2020-05-13 23:31:26,575 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-13 23:31:37,072 [main] INFO romui - Login credentials to be entered
+2020-05-13 23:31:45,708 [main] INFO romui - Order Management link is clicked on
+2020-05-13 23:31:49,486 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-13 23:31:59,591 [main] INFO romui - Login credentials to be entered
+2020-05-13 23:32:08,817 [main] INFO romui - Order Management link is clicked on
+2020-05-13 23:32:12,421 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-13 23:32:25,668 [main] INFO romui - Login credentials to be entered
+2020-05-13 23:32:35,328 [main] INFO romui - Order Management link is clicked on
+2020-05-13 23:32:39,116 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-13 23:32:48,906 [main] INFO romui - Login credentials to be entered
+2020-05-13 23:32:57,142 [main] INFO romui - Order Management link is clicked on
+2020-05-13 23:33:00,869 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-13 23:43:28,453 [main] INFO romui - Login credentials to be entered
+2020-05-13 23:43:36,849 [main] INFO romui - Order Management link is clicked on
+2020-05-13 23:43:40,562 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-13 23:43:43,791 [main] INFO romui - Add link is clicked on to enter the Ship Label Config data and Clicked on Save btn
+2020-05-13 23:43:43,791 [main] INFO romui - Verify if ship Label Config for Consignor add success message is displayed
+2020-05-13 23:43:52,706 [main] INFO romui - Login credentials to be entered
+2020-05-13 23:44:06,947 [main] INFO romui - Order Management link is clicked on
+2020-05-13 23:44:31,552 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-13 23:44:45,703 [main] INFO romui - Login credentials to be entered
+2020-05-13 23:44:54,412 [main] INFO romui - Order Management link is clicked on
+2020-05-13 23:44:58,083 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-13 23:45:06,769 [main] INFO romui - Login credentials to be entered
+2020-05-13 23:45:15,161 [main] INFO romui - Order Management link is clicked on
+2020-05-13 23:45:19,271 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-13 23:45:27,834 [main] INFO romui - Login credentials to be entered
+2020-05-13 23:45:35,606 [main] INFO romui - Order Management link is clicked on
+2020-05-13 23:45:39,227 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-13 23:45:48,628 [main] INFO romui - Login credentials to be entered
+2020-05-13 23:45:56,636 [main] INFO romui - Order Management link is clicked on
+2020-05-13 23:46:00,591 [main] INFO romui - Navigated to Shipping Label Config page
+2020-05-14 00:30:35,157 [main] INFO romui - Login credentials to be entered
+2020-05-14 00:30:46,236 [main] INFO romui - Order Management link is clicked on
+2020-05-14 00:30:51,823 [main] INFO romui - Navigated to Pipeline page
+2020-05-14 00:31:01,194 [main] INFO romui - Add link is clicked on to enter the data and Clicked on Save btn
+2020-05-14 00:31:01,194 [main] INFO romui - Verify if add pipeline success message is displayed
+2020-05-14 00:31:11,578 [main] INFO romui - Login credentials to be entered
+2020-05-14 00:31:20,207 [main] INFO romui - Order Management link is clicked on
+2020-05-14 00:31:25,228 [main] INFO romui - Navigated to Pipeline page
+2020-05-14 00:31:36,318 [main] INFO romui - Login credentials to be entered
+2020-05-14 00:31:45,259 [main] INFO romui - Order Management link is clicked on
+2020-05-14 00:31:50,902 [main] INFO romui - Navigated to Pipeline page
+2020-05-14 00:31:57,182 [main] INFO romui - Verify if Delete pipeline success message is displayed
+2020-05-14 00:32:06,271 [main] INFO romui - Login credentials to be entered
+2020-05-14 00:32:14,202 [main] INFO romui - Order Management link is clicked on
+2020-05-14 00:32:20,033 [main] INFO romui - Navigated to Pipeline page
+2020-05-14 00:32:45,707 [main] INFO romui - Login credentials to be entered
+2020-05-14 00:32:55,502 [main] INFO romui - Order Management link is clicked on
+2020-05-14 00:33:00,524 [main] INFO romui - Navigated to Pipeline page
+2020-05-14 00:33:02,843 [main] INFO romui - Edit Pipeline Config link is clicked on to enter the data and Clicked on Save btn
+2020-05-14 00:33:02,843 [main] INFO romui - Verify if Edit pipeline Config success message is displayed
+2020-05-14 00:33:12,270 [main] INFO romui - Login credentials to be entered
+2020-05-14 00:33:20,751 [main] INFO romui - Order Management link is clicked on
+2020-05-14 00:33:26,019 [main] INFO romui - Navigated to Pipeline page
+2020-05-14 00:33:37,371 [main] INFO romui - Edit link is clicked on to enter the data and Clicked on Save btn
+2020-05-14 00:33:37,371 [main] INFO romui - Verify if Edit pipeline success message is displayed
+2020-05-14 00:42:19,375 [main] INFO romui - Login credentials to be entered
+2020-05-14 00:42:27,240 [main] INFO romui - Order Management link is clicked on
+2020-05-14 00:42:37,665 [main] INFO romui - Login credentials to be entered
+2020-05-14 00:42:46,194 [main] INFO romui - Order Management link is clicked on
+2020-05-14 00:42:51,373 [main] INFO romui - Navigated to Pipeline page
+2020-05-14 00:43:02,542 [main] INFO romui - Login credentials to be entered
+2020-05-14 00:43:11,467 [main] INFO romui - Order Management link is clicked on
+2020-05-14 00:43:16,777 [main] INFO romui - Navigated to Pipeline page
+2020-05-14 00:44:25,345 [main] INFO romui - Verify if Delete pipeline success message is displayed
+2020-05-14 00:44:34,423 [main] INFO romui - Login credentials to be entered
+2020-05-14 00:44:42,746 [main] INFO romui - Order Management link is clicked on
+2020-05-14 00:44:48,050 [main] INFO romui - Navigated to Pipeline page
+2020-05-14 00:45:02,866 [main] INFO romui - Login credentials to be entered
+2020-05-14 00:45:11,599 [main] INFO romui - Order Management link is clicked on
+2020-05-14 00:45:16,653 [main] INFO romui - Navigated to Pipeline page
+2020-05-14 00:45:24,123 [main] INFO romui - Edit Pipeline Config link is clicked on to enter the data and Clicked on Save btn
+2020-05-14 00:45:24,124 [main] INFO romui - Verify if Edit pipeline Config success message is displayed
+2020-05-14 00:45:32,772 [main] INFO romui - Login credentials to be entered
+2020-05-14 00:45:41,043 [main] INFO romui - Order Management link is clicked on
+2020-05-14 00:45:45,932 [main] INFO romui - Navigated to Pipeline page
+2020-05-14 00:45:57,308 [main] INFO romui - Edit link is clicked on to enter the data and Clicked on Save btn
+2020-05-14 00:45:57,308 [main] INFO romui - Verify if Edit pipeline success message is displayed
+2020-05-14 01:17:44,695 [main] INFO romui - Login credentials to be entered
+2020-05-14 01:17:54,930 [main] INFO romui - Order Management link is clicked on
+2020-05-14 01:18:04,090 [main] INFO romui - Login credentials to be entered
+2020-05-14 01:18:12,649 [main] INFO romui - Order Management link is clicked on
+2020-05-14 01:18:22,256 [main] INFO romui - Login credentials to be entered
+2020-05-14 01:18:31,444 [main] INFO romui - Order Management link is clicked on
+2020-05-14 01:18:40,239 [main] INFO romui - Login credentials to be entered
+2020-05-14 01:18:48,865 [main] INFO romui - Order Management link is clicked on
+2020-05-14 01:23:34,599 [main] INFO romui - Login credentials to be entered
+2020-05-14 01:23:46,250 [main] INFO romui - Order Management link is clicked on
+2020-05-14 01:23:49,559 [main] INFO romui - Navigated to PaymentMethod Config page
+2020-05-14 01:23:57,021 [main] INFO romui - Add link is clcked on to enter the data and Clicked on Save btn
+2020-05-14 01:23:57,022 [main] INFO romui - Verify if add paymentmethodconfig success message is displayed
+2020-05-14 01:24:05,543 [main] INFO romui - Login credentials to be entered
+2020-05-14 01:24:14,294 [main] INFO romui - Order Management link is clicked on
+2020-05-14 01:24:15,700 [main] INFO romui - Navigated to PaymentMethod Config page
+2020-05-14 01:24:24,859 [main] INFO romui - Login credentials to be entered
+2020-05-14 01:24:34,223 [main] INFO romui - Order Management link is clicked on
+2020-05-14 01:24:37,728 [main] INFO romui - Navigated to PaymentMethod Config page
+2020-05-14 01:24:41,623 [main] INFO romui - Delete link is clcked on to delete the config
+2020-05-14 01:24:41,624 [main] INFO romui - Verify if delete paymentmethodconfig success message is displayed
+2020-05-14 01:24:50,574 [main] INFO romui - Login credentials to be entered
+2020-05-14 01:24:58,863 [main] INFO romui - Order Management link is clicked on

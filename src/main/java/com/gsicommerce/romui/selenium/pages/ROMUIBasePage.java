@@ -29,7 +29,8 @@ public class ROMUIBasePage {
 		driver = Common.startApplication(env,env.getBrowserType());
 		logger = Logger.getLogger("romui");
 		PropertyConfigurator.configure("log4j.properties");
-		romuipages = PageFactory.getROMUIPages(driver, env);		
+		romuipages = PageFactory.getROMUIPages(driver, env);	
+	
 	}
 	
 	@AfterMethod(alwaysRun = true)
@@ -37,7 +38,7 @@ public class ROMUIBasePage {
 		if(!c.isSuccess()){
 			Browser.screenShot(driver, env, c);
 		}
-		//Browser.reset(driver);	
+		Browser.reset(driver);	
 		
 	}
 }

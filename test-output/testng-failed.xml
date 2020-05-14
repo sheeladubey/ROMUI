@@ -9,15 +9,28 @@
   <listeners>
     <listener class-name="com.gsicommerce.romui.selenium.utilities.ExtentReporterListener"/>
   </listeners>
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" name="PaymentMethodConfigTests(failed)">
+    <parameter name="dataFile" value="./src/test/resources/testdata/paymentMethodConfigData.json"/>
     <classes>
-      <class name="com.gsicommerce.romui.selenium.tests.OrdersTest">
+      <class name="com.gsicommerce.romui.selenium.tests.PaymentMethodConfigTests">
         <methods>
-          <include name="testAddPipeline"/>
+          <include name="testEditPaymentConfig"/>
           <include name="tearDown"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.gsicommerce.romui.selenium.tests.OrdersTest -->
+      </class> <!-- com.gsicommerce.romui.selenium.tests.PaymentMethodConfigTests -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- PaymentMethodConfigTests(failed) -->
+  <test thread-count="5" name="ServiceGroupConfigsTests(failed)">
+    <parameter name="dataFile" value="./src/test/resources/testdata/serviceGroupConfigsData.json"/>
+    <classes>
+      <class name="com.gsicommerce.romui.selenium.tests.ServiceGroupConfigsTests">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="testEditSellerServiceGroupConfigs"/>
+        </methods>
+      </class> <!-- com.gsicommerce.romui.selenium.tests.ServiceGroupConfigsTests -->
+    </classes>
+  </test> <!-- ServiceGroupConfigsTests(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -5,10 +5,8 @@ import java.util.Calendar;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -119,7 +117,9 @@ public class PipelinesPage {
 	//@FindBy(how = How.XPATH, using = "//span[contains(@class,'sidebar-title-placeholder')]")
 //	@FindBy(how = How.XPATH, using = "//div[contains(@class,'sidebar-body-overlay')]")
 	//@FindBy(how = How.XPATH, using ="//div[contains(@class,'konvajs-content')]")
-	@FindBy(how = How.CSS, using =".sidebar-close-btn[type='button']")	
+	//@FindBy(how = How.CSS, using =".sidebar-close-btn[type='button']")	
+	//@FindBy(how = How.CSS, using = "sidebar-container.sidebar--active")
+	@FindBy(how = How.CSS, using = ".sidebar-container")
 	@CacheLookup
 	private WebElement OrderCreateEvent;
 
@@ -215,20 +215,25 @@ public class PipelinesPage {
 		selectPipelineCriteriaByTenderType();
 		btnSaveAddConfig.click();
 		Common.dragAndDrop(driver, dragSalesOrderCreate, dropSalesOrderCreate, 10);
-		CommonElementsPage.clickOnSaveBtn();
-		btnContinue.click();
+		Action.waitForElementToBeClickable(driver, OrderCreateEvent, 03);
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("arguments[0].click();", OrderCreateEvent);
+		//OrderCreateEvent.click();
+		//CommonElementsPage.clickOnSaveBtn();
+		//btnContinue.click();
 	}
 
 	public void createEvents() {
 		Common.dragAndDrop(driver, dragSalesOrderCreate, dropSalesOrderCreate, 10);
+		OrderCreateEvent.click();
 		//Common.waitForElementPresent(driver, OrderCreateEvent, 10);
-		Common.setImplicitWait(driver, 3000);
+		//Common.setImplicitWait(driver, 3000);
 		//mousehover(btnOrderCreate);		
 		//btnOrderCreate.click();
-		Actions action=new Actions(driver);
+		//Actions action=new Actions(driver);
 		//action.moveToElement(btnOrderCreate).perform();
-		action.moveByOffset(400, 141).perform();
-		action.click();
+		//action.moveByOffset(400, 141).perform();
+		//action.click();
 		// btnOrderCreate.click();
 		// Create instance of Javascript executor
 		
@@ -268,6 +273,7 @@ public class PipelinesPage {
 		System.out.println("Clicked View Pipeline button");
 		Assert.assertEquals(txtScreenHeader.getText(), RomuiEnumValues.PIPELINE_VIEW_HEADER.getMessage(),
 				"USER does not navigated to View Pipeline screen");
+		Action.waitForElementToBeClickable(driver, lkviewPipelineConfig, 10);
 		lkviewPipelineConfig.click();
 		System.out.println("View Pipeline Configuration button Clicked");
 		String actualViewPipelineConfigHeader = viewPipelineConfigHeader.getText();
@@ -342,9 +348,9 @@ public class PipelinesPage {
 				Common.waitForElementPresent(driver, btnContinue, 05);
 				btnContinue.click();
 				}
-		}catch (final StaleElementReferenceException e){
+		}catch (Exception e){
 			
-			e.printStackTrace();
+			//e.printStackTrace();
 	}		
 }
 	public void selectPipelineCriteriaByTenderType() {
@@ -389,7 +395,7 @@ public class PipelinesPage {
 		btnSaveAddConfig.click();	
 		Common.dragAndDrop(driver, dragSalesOrderCreate, dropSalesOrderCreate, 10);
 		CommonElementsPage.clickOnSaveBtn();
-		Common.waitForElementPresent(driver, btnContinue, 10);
+		Action.waitForElementToBeClickable(driver, btnContinue, 10);
 		btnContinue.click();
 		}
 	
@@ -415,7 +421,7 @@ public class PipelinesPage {
 	
 }catch (Exception e)
 		{
-	e.printStackTrace();
+	//e.printStackTrace();
 		}
 }
 }

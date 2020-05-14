@@ -32,14 +32,12 @@ public class Reporting extends TestListenerAdapter{
 		
 		sparkReporter=new ExtentSparkReporter(System.getProperty("user.dir")+ "/test-output/"+repName);//specify location of the report
 		sparkReporter.loadXMLConfig(System.getProperty("user.dir")+ "/extent-config.xml");
-		
-		extent=new ExtentReports();
-		
+				
+		extent=new ExtentReports();		
 		extent.attachReporter(sparkReporter);
 		extent.setSystemInfo("Host name","localhost");
 		extent.setSystemInfo("Environemnt","QA");
-		extent.setSystemInfo("user","shedubey");
-		
+		extent.setSystemInfo("user","shedubey");		
 		sparkReporter.config().setDocumentTitle("ROMUI Test Project"); // Tile of report
 		sparkReporter.config().setReportName("Regression Test Automation Report"); // name of the report
 	//	htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP); //location of the chart
@@ -65,6 +63,7 @@ public class Reporting extends TestListenerAdapter{
 		{
 		try {
 			logger.fail("Screenshot is below:" + logger.addScreenCaptureFromPath(screenshotPath));	
+			
 			} 
 		catch (IOException e) 
 				{

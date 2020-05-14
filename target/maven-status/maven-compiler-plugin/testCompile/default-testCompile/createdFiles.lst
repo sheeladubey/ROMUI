@@ -1,4 +1,7 @@
 com\gsicommerce\romui\selenium\tests\PipelinesTest.class
+com\gsicommerce\romui\selenium\tests\OrdersTest.class
+com\gsicommerce\romui\selenium\tests\ServiceGroupConfigsTests.class
+com\gsicommerce\romui\selenium\tests\ItemSearchTests.class
+com\gsicommerce\romui\selenium\tests\ServiceFlowTest.class
 com\gsicommerce\romui\selenium\tests\PaymentMethodConfigTests.class
 com\gsicommerce\romui\selenium\tests\ShippingLabelConfigTest.class
-com\gsicommerce\romui\selenium\tests\ItemSearchTests.class

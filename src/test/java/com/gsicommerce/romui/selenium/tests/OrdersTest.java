@@ -10,7 +10,7 @@ import com.gsicommerce.romui.selenium.pages.ROMUIBasePage;
 
 public class OrdersTest extends ROMUIBasePage {
 	
-	@Test(enabled = true, priority=1,description = "Search Order by Order number")
+	@Test(enabled = false, priority=1,description = "Search Order by Order number")
 	public void testSearchOrderbyNumber()throws JsonParseException, JsonMappingException, IOException {
 		
 		logger.info("Login credentials to be entered");
@@ -22,7 +22,7 @@ public class OrdersTest extends ROMUIBasePage {
 		romuipages.ordersPage().searchOrderByOrderNum();
 	}
 	
-	@Test(enabled = true, priority=1,description = "Search Order by Fullfillment number")
+	@Test(enabled = false, priority=1,description = "Search Order by Fullfillment number")
 	public void testSearchOrderByFullfillmentNumber()throws JsonParseException, JsonMappingException, IOException {
 		
 		logger.info("Login credentials to be entered");
@@ -49,7 +49,7 @@ public class OrdersTest extends ROMUIBasePage {
 
 }
 	
-	@Test(enabled = true, priority=1,description = "Search Order by Email id")
+	@Test(enabled = false, priority=1,description = "Search Order by Email id")
 	public void testSearchOrderByEmail()throws JsonParseException, JsonMappingException, IOException {
 		
 		logger.info("Login credentials to be entered");

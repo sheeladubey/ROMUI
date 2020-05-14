@@ -10,11 +10,12 @@
 <parameter name="adminUserName" value="admin@tmsna" />
 <parameter name="adminPasswd" value="Password123@" />
 <parameter name="waitPeriod" value="5"/>
-<parameter name="dataFile" value="./src/test/resources/testdata/ShippingLabelConfigData.json"/>
+
 
   <test thread-count="5" name="Test">
     <classes>
        <class name="com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTest"/>
+       <parameter name="dataFile" value="./src/test/resources/testdata/ShippingLabelConfigData.json"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

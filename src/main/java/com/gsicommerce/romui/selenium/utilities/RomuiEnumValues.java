@@ -19,7 +19,8 @@ public enum RomuiEnumValues {
 	SERVICEFLOW_CONFIGURE_HEADER("Configure Service Flow Processes"),
 	SERVICEFLOW_SAVE("Heads up! Your service workflow has been saved!"),
 	SERVICEFLOW_EDIT("Heads up! Your service workflow has been updated!"),
-	SERVICEFLOW_PROCESS_HEADER("Service Flow Processes");
+	SERVICEFLOW_PROCESS_HEADER("Service Flow Processes"),
+	SERVICE_GROUP_CONFIG("Heads up! Service Group Configurations Updated Successfully");
 	
 	
 	

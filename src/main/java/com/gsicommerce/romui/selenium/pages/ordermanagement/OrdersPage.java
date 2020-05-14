@@ -72,12 +72,32 @@ public class OrdersPage {
 	@FindBy(how = How.CSS, using="#order_search_form_email")
 	@CacheLookup
 	private WebElement txtorderSearchEmail;		
+	
+	@FindBy(how = How.XPATH, using="//table[@class='reflow-table']")
+	@CacheLookup
+	private List<WebElement> tblOrder;
+	
 			
+	@FindBy(how = How.XPATH, using="//table[@class='reflow-table']/tbody/tr")
+	@CacheLookup
+	private List<WebElement> tblOrderRow;
+	
+	@FindBy(how = How.XPATH, using="//table[@class='reflow-table']/tbody/td")
+	@CacheLookup
+	private List<WebElement> tblOrderCol;
+	
+	
+	@FindBy(how = How.CSS, using="[data-tooltip='View Order']")
+	@CacheLookup
+	private WebElement btnViewOrder;
+	
+	
+	
 	  public void selectOrderSearchDropdown(String orderSearchOption) {
 		  
 		  drpdwnOrderSearchBy.click();
 		for(int i=0;i<OrderSearchSelectDropDownOption.size();i++) {
-			System.out.println(OrderSearchSelectDropDownOption.get(i).getText());
+			//System.out.println(OrderSearchSelectDropDownOption.get(i).getText());
 			 if (OrderSearchSelectDropDownOption.get(i).getText().equals(orderSearchOption)) {				
 				 Action.selectByIndex(drpdwnOrderSearchBy,i);
 	                break;
@@ -118,6 +138,8 @@ public class OrdersPage {
 	        Action.enter(txtCustomerLastName, "Doyle");
 	        //click search btn
 	        btnSearchOrder.click();
+	     //   getOrderRow("0002559330896150");
+	      //  viewOrderDetails("0002559330896150");
 	    }
 	  
 	  public void searchOrderByEmail()  {
@@ -131,5 +153,10 @@ public class OrdersPage {
 	        //click search btn
 	        btnSearchOrder.click();
 	    }
+	  
+	  public void getOrderRow(String orderid)
+	  {
+		  
+	  }
 	 
-}
+	 }

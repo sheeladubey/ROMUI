@@ -16,7 +16,7 @@ public class LoginPage {
 	Environment env;
 	
 	public LoginPage(WebDriver driver, Environment env) {
-		// TODO Auto-generated constructor stub	
+
 		this.driver = driver;
 		this.env = env;
 		PageFactory.initElements(driver, this);

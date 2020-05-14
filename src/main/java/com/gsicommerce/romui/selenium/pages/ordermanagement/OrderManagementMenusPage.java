@@ -11,7 +11,6 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.gsicommerce.romui.selenium.testdata.Environment;
 import com.gsicommerce.romui.selenium.utilities.Action;
-import com.gsicommerce.romui.selenium.utilities.Common;
 
 public class OrderManagementMenusPage {
 	WebDriver driver;
@@ -210,11 +209,12 @@ public class OrderManagementMenusPage {
 	
 	@FindBy(how=How.CLASS_NAME,using="btn-default btn-search")
 	//@FindBy(how=How.CLASS_NAME,using="context-tree-action")
+	//span[contains(text(),'Filter')]
 	@CacheLookup
 	WebElement btnStoreSearchClick;
 	
 	//@FindBy(how=How.XPATH,using="//button[@type='submit']")
-	@FindBy(how=How.CLASS_NAME,using="context-tree-action")
+	@FindBy(how=How.CLASS_NAME,using=".context-tree-action")
 	@CacheLookup
 	List<WebElement> lkStoreList;
 	
@@ -323,8 +323,11 @@ public class OrderManagementMenusPage {
 	
 	public void clickOnPaymtMethdConfig() {
 		btnMainMenu.click();
+		Action.waitForElementToBeClickable(driver, lkOmniAdministration, 10);
 		lkOmniAdministration.click();
+		Action.waitForElementToBeClickable(driver, lkSellerConfig, 10);
 		lkSellerConfig.click();
+		Action.waitForElementToBeClickable(driver, lkPaymtMethdConfig, 10);
 		lkPaymtMethdConfig.click();		
 	}
 	
@@ -424,7 +427,8 @@ public class OrderManagementMenusPage {
 
 	public void clickOnPipeline() {
 		btnMainMenu.click();
-	//	selectStore("1008011");
+	//selectStore("1008011");
+	// btnStoreSearchClick.click();
 		Action.waitForElementToBeClickable(driver, lkPipeline, 10);
 		lkPipeline.click();
 		
@@ -447,6 +451,7 @@ public class OrderManagementMenusPage {
 		for (int i = 0; i <lkStoreList.size();i++)
 		{
 			WebElement storeList=lkStoreList.get(i);
+			System.out.println("StoreList is:"+storeList);
 		{
 			if(storeList.getText().equalsIgnoreCase(storeId))
 	
