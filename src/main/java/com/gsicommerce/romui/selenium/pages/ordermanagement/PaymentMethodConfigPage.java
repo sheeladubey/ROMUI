@@ -163,20 +163,20 @@ public class PaymentMethodConfigPage {
 	public WebElement btnConfirm;
 	
 		
-	public void editPaymentMethodConfig() throws JsonParseException, JsonMappingException, IOException {
+	public void editPaymentMethodConfig(int index) throws JsonParseException, JsonMappingException, IOException {
 		data = PaymentMethodConfigData.get(env.getFileLocation());
 		lkEdit.click();
-		Action.selectByIndex(drpdwnPaymntMethdCode, 2);
+		Action.selectByVisibleText(drpdwnPaymntMethdCode, data.getPaymentMethodCode().get(index));
 		Action.enter(txtAreaDescrp, data.getDescription());
 		Action.enter(txtMinWaitTimeForConsoldtion, data.getMinWaitTime());
 		Action.enter(txtAuthexpiry, data.getAutoExpiry());
 		CommonElementsPage.clickOnSaveBtn();
 	}
 	
-	public void addPaymentMethodConfig() throws JsonParseException, JsonMappingException, IOException {
+	public void addPaymentMethodConfig(int index) throws JsonParseException, JsonMappingException, IOException {
 		data = PaymentMethodConfigData.get(env.getFileLocation());
 		CommonElementsPage.clickOnAddBtn();
-		Action.selectByIndex(drpdwnPaymntMethdCode, 2);
+		Action.selectByVisibleText(drpdwnPaymntMethdCode, data.getPaymentMethodCode().get(index));
 		chkboxActive.click();
 		Action.enter(txtAreaDescrp, data.getDescription());
 		Action.enter(txtMinWaitTimeForConsoldtion, data.getMinWaitTime());

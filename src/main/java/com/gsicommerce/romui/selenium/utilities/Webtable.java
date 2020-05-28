@@ -1,350 +1,228 @@
 package com.gsicommerce.romui.selenium.utilities;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.ElementClickInterceptedException;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import com.gsicommerce.romui.selenium.testdata.Environment;
-import com.gsicommerce.romui.selenium.utilities.Action;
-import com.gsicommerce.romui.selenium.utilities.AssertingWebElement;
-import com.gsicommerce.romui.selenium.utilities.GsiWebElement;
+public class Webtable {
 
+	private WebDriver _driver;
+	public Collection<WebElement> ColCollection;
+	public Collection<WebElement> RowCollection;
+	public static WebElement Table;
+	private static String _xpath = "";
 
-public class Webtable extends Action {
-    public WebElement webtable;
+	public Webtable(WebDriver driver, WebElement el) {
+		_driver = driver;
+		_driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		Table = el;
+		RowCollection = Table.findElements(By.xpath(".//tr")); //// div//table//tbody
+	}
 
-    public Webtable(final WebElement element, final WebDriver driver,
-            final Environment env) {
-        super(driver, env);
-        this.webtable = element;
-    }
+	public int GetNumOfRows() {
+		return RowCollection.size();
+	}
 
-    /**
-     * This method will return whether webtable exists
-     *
-     * @return
-     */
-    public boolean exists() {
-        if (null == this.webtable || ((AssertingWebElement) this.webtable).exists() == false) {
-            return false;
-        } else {
-            return true;
-        }
-    }
+	/// <summary>
+	/// This method returns whether the expected text is present within a table row
+	/// </summary>
+	/// <param name="rowNum">The row number to be searched for the string
+	/// presence@param
+	/// <param name="stringToSearch">The search string@param
+	/// <returns></returns>
+	public Boolean isTableRowContains(int rowNum, String stringToSearch) {
+		_xpath = String.format(".//tr[{0}]", rowNum);
+		Collection<WebElement> rowCollectioninput = Table.findElements(By.xpath(_xpath));
+		for (WebElement item : rowCollectioninput) {
+			if (item.getText().contains(stringToSearch))
+				return true;
+		}
+		return false;
+	}
 
-    /**
-     * This method will return the index of the column
-     *
-     * @param columnHeader
-     * @return int - index of the column. If column not found, then -1 will be
-     *         returned.
-     */
-    public int getColumnIndex(final String columnHeader) {
-        enableExplicitWait();
-        try {
-            WebElement rowData;
-            final WebElement temp = this.webtable;
-            rowData = getRowData(columnHeader);
-            this.webtable = temp;
+	// Save all the column values into an array
+	public List<String> getInputColumnValues(int col) {
 
-            disableWait();
+		_xpath = String.format(".//td[{0}]/input", col);
+		Collection<WebElement> rowCollectioninput = Table.findElements(By.xpath(_xpath));
+		List<String> _colValues = new ArrayList<String>();
+		for (WebElement item : rowCollectioninput) {
+			_colValues.add(item.getAttribute("value"));
+		}
+		return _colValues;
+	}
 
-            // search the th elements
-            final List<WebElement> thColumns = rowData.findElements(By
-                    .xpath("th"));
-            for (int i = 0; i < thColumns.size(); i++) {
-                if (thColumns.get(i).getText().equalsIgnoreCase(columnHeader)) {
-                    return i;
-                }
-            }
+	/// <summary>
+	/// Get RowNum for a specified Column# and CellText
+	/// </summary>
+	/// <param name="cellText">@param
+	/// <param name="col">@param
+	/// <returns></returns>
+	public int getTableRowNum(String cellText, int col, int inputChild) {
+		int rowNum = 0;
+		for (int i = 1; i <= RowCollection.size(); i++) {
+			if (getInputCellValue(i, col, inputChild).trim() == cellText.trim()) {
+				rowNum = i;
+				break;
+			}
+		}
+		return rowNum;
+	}
 
-            // search the td elements
-            final List<WebElement> tdColumns = rowData.findElements(By
-                    .xpath("td"));
-            for (int i = 0; i < tdColumns.size(); i++) {
-                if (tdColumns.get(i).getText().equalsIgnoreCase(columnHeader)) {
-                    return i;
-                }
-            }
+	public String getInputCellValue(int row, int col, int inputChild) {
+		if (inputChild == 0) {
+			_xpath = String.format(".//tr[{0}]/td[{1}]/input", row, col); // input
+		} else {
+			_xpath = String.format(".//tr[{0}]/td[{1}]/input[{2}]", row, col, inputChild); // input
+		}
+		WebElement el = Table.findElement(By.xpath(_xpath));
+		scrollToElement(el, _driver);
+		return Table.findElement(By.xpath(_xpath)).getAttribute("value");
 
-            return -1;
-        } finally {
-            enableWait();
-        }
-    }
+	}
 
-    /**
-     * This method will search through the column and returns whether it found
-     * the expected value
-     *
-     * @param columnHeader
-     *            - header text of the column to be searched.
-     * @param expValue
-     *            - expected value
-     * @return boolean
-     */
-    public boolean findCellData(final String columnHeader, final String expValue) {
-        final WebElement cell = getCellData(columnHeader, expValue);
+	public static void scrollToElement(WebElement el, WebDriver driver) {
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", el);
+	}
 
-        return ((AssertingWebElement) cell).exists();
-    }
+	public static String getTableCellText(int row, int col) {
+		_xpath = String.format(".//tr[" + row + "]/td[" + col + "]", row, col);
+		return Table.findElement(By.xpath(_xpath)).getText();
+	}
 
-    /**
-     * To get the cell data using column header and the text passed in.
-     * searchValue parameter is be used to search for the row where the cell
-     * resides.
-     *
-     * @param columnHeader
-     * @param searchValue
-     * @return GsiWebElement
-     */
-    public WebElement getCellData(final String columnHeader,
-            final String searchValue) {
-        disableWait();
-        try {
-            final WebElement rowData = getRowData(searchValue);
-            if (!((AssertingWebElement) rowData).exists()) {
-                return new AssertingWebElement(null);
-            }
-            final int columnIndex = getColumnIndex(columnHeader);
-            return new AssertingWebElement(rowData.findElements(
-                    By.xpath(".//td")).get(columnIndex));
-        } finally {
-            enableWait();
-        }
-    }
+	public static String getTableCellText(int col) {
+		_xpath = String.format(".//tr/td["+col+"]", col);
+		return Table.findElement(By.xpath(_xpath)).getText();
+	}
 
-    /**
-     * To get the cell data using column header and the text passed in.
-     * searchValue parameter is be used to search for the row where the cell
-     * resides. This uses exact match instead of String.contains(..)
-     *
-     * @param columnHeader
-     * @param searchValue
-     * @return GsiWebElement
-     */
-    public WebElement getCellDataUsingExactMatch(final String columnHeader,
-            final String searchValue) {
-        disableWait();
-        try {
-            final WebElement rowData = getRowDataUsingExactMatch(searchValue);
-            if (!((AssertingWebElement) rowData).exists()) {
-                return new AssertingWebElement(null);
-            }
-            final int columnIndex = getColumnIndex(columnHeader);
-            return new AssertingWebElement(rowData.findElements(
-                    By.xpath(".//td")).get(columnIndex));
-        } finally {
-            enableWait();
-        }
-    }
+	public String getTableRowCellText(int row) {
+		_xpath = String.format(".//tr[{0}]/td", row);
+		return Table.findElement(By.xpath(_xpath)).getText();
+	}
 
-    /**
-     * To get the cell data from the row passed in and the column index passed
-     *
-     * @param rowData
-     * @param columnIndex
-     * @return GsiWebElement
-     */
-    public WebElement getCellData(final WebElement rowData,
-            final int columnIndex) {
-        disableWait();
-        try {
-            if (!((AssertingWebElement) rowData).exists()) {
-                return new AssertingWebElement(null);
-            }
+	public String getInputCellValueRow0(int col, int inputChild) {
+		if (inputChild == 0) {
+			_xpath = String.format(".//tr/td[{0}]/input", col); // input
+		} else {
+			_xpath = String.format(".//tr/td[{0}]/input[{1}]", col, inputChild); // input
+		}
+		WebElement el = Table.findElement(By.xpath(_xpath));
+		scrollToElement(el, _driver);
+		return Table.findElement(By.xpath(_xpath)).getAttribute("value");
 
-            return new AssertingWebElement(rowData.findElements(
-                    By.xpath(".//td")).get(columnIndex));
-        } finally {
-            enableWait();
-        }
-    }
+	}
 
-    /**
-     * This method returns the row based on the text provided. Row is selected
-     * if any of the column has the text.
-     *
-     * @param searchValue
-     * @return row GsiWebElement
-     */
-    public WebElement getRowData(final String searchValue) {
-        disableWait();
-        try {
-            WebElement rowData = null;
-            final List<WebElement> rows = new ArrayList<WebElement>();
+	/// <summary>
+	/// Get particular row value
+	/// </summary>
+	/// <param name="row">@param
+	/// <returns></returns>
+	public static String getRowText(int row) {
+		_xpath = String.format(".//tr[" + row + "]", row);
+		return Table.findElement(By.xpath(_xpath)).getText();
+	}
 
-            rows.addAll(getHeaderRows());
-            rows.addAll(getBodyRows());
+	public static String getRowText(int row,int col) {
+		_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/span", row,col);
+		return Table.findElement(By.xpath(_xpath)).getText();
+	}
+	
+	public void setInputCellTextValue(int row, int col, String text) {
+		if (row == 0) {
+			_xpath = String.format(".//tr/td[{1}]/input", col);
+		} else {
+			_xpath = String.format(".//tr[{0}]/td[{1}]/input", row, col);
+		}
+		Table.findElement(By.xpath(_xpath)).clear();
+		Table.findElement(By.xpath(_xpath)).sendKeys(text);
+	}
 
-            for (final WebElement row : rows) {
-                { // contains
-                    if (row.getText().contains(searchValue)) {
-                        rowData = row;
-                        break;
-                    }
-                }
-            }
-            return new AssertingWebElement(rowData);
-        } finally {
-            enableWait();
-        }
-    }
+	/// <summary>
+	/// This method finds the selects webElement from the dropdown in a table
+	/// </summary>
+	/// <param name="row">@param
+	/// <param name="col">@param
 
-    public WebElement getRowDataUsingExactMatch(final String searchValue) {
-        disableWait();
-        try {
-            WebElement rowData = null;
-            final List<WebElement> rows = new ArrayList<WebElement>();
+	public WebElement setDropDownValue(int row, int col) {
+		_xpath = String.format(".//tr[{0}]/td[{1}]/select", row, col);
+		return Table.findElement(By.xpath(_xpath));
+	}
 
-            rows.addAll(getHeaderRows());
-            rows.addAll(getBodyRows());
+	public void clickIcon(int row, int col, int child) {
+		if (child == 0) {
+			_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/a", row, col);
+		} else {
+			_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/a[" + child + "]", row, col);
+		}
+		Table.findElement(By.xpath(_xpath)).click();
 
-            for (final WebElement row : rows) {
-                final List<WebElement> wes = row.findElements(By.xpath(".//td"));
-                boolean blnmatch = false;
-                for (final WebElement we : wes) {
-                    if (we.getText().equalsIgnoreCase(searchValue)) {
-                        rowData = row;
-                        blnmatch = true;
-                        break;
-                    }
-                }
-                if (blnmatch) {
-                    break;
-                }
-            }
-            return new AssertingWebElement(rowData);
-        } finally {
-            enableWait();
-        }
-    }
+	}
 
-    /**
-     * This method returns row based on the index passed in. For example,
-     * index=0, will return the first row.
-     *
-     * @param index
-     * @return GsiWebElement
-     */
-    public WebElement getRowData(final int index) {
-        disableWait();
-        try {
-            final List<WebElement> rows = new ArrayList<WebElement>();
+	//For pipeline screen-need to include span child as well
+	public void clickIcon(int row, int col, int child,int spanchild) throws InterruptedException {
+		
+		if (child == 0) {
+			_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/a", row, col);
+		} else {
+			_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/a[" + child + "]/span["+ spanchild +"]", row, col);
+		}
+		Action.scrollingToBottomofAPage();
+        Action.clickElementJavaScipt(Table.findElement(By.xpath(_xpath)));
+	}
+//For clicking delete icon on pipeline screen.
+public void clickDeleteIcon(int row, int col, int spanchild) throws InterruptedException {
+		
+		_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/button/span["+ spanchild +"]", row, col);
+		
+		Action.scrollingToBottomofAPage();
+        Action.clickElementJavaScipt(Table.findElement(By.xpath(_xpath)));
+	}
+	
+	
+	public void clickSpanElement(int row, int col) {
+		_xpath = String.format(".//tr[{0}]/td[{1}]/*/span", row, col);
+		Table.findElement(By.xpath(_xpath)).click();
+	}
 
-            rows.addAll(getHeaderRows());
-            rows.addAll(getBodyRows());
+	/// <summary>
+	/// Click on a link @given row and column
+	/// </summary>
+	/// <param name="row">@param
+	/// <param name="col">@param
+	public void clickLinkElement(int row, int col) {
+		_xpath = String.format(".//tr[{0}]/td[{1}]/a", row, col);
+		if (row == 0) {
+			_xpath = String.format(".//tr/td[{1}]/a", row, col);
+		}
 
-            return new AssertingWebElement(rows.get(index));
-        } finally {
-            enableWait();
-        }
-    }
+		Table.findElement(By.xpath(_xpath)).click();
+	}
 
-    /**
-     * This method returns the number of rows of the table
-     *
-     * @return
-     */
-    public int getRowCount() {
-        disableWait();
-        try {
-            final List<WebElement> rows = getBodyRows();
-            return rows.size();
-        } finally {
-            enableWait();
-        }
-    }
+	/// <summary>
+	/// Get RowNum for a specified Column# and CellText
+	/// </summary>
+	/// <param name="cellText">@param
+	/// <param name="col">@param
+	/// <returns></returns>
+	public int getTableRowNumForCellText(String cellText, int col) {
+		int rowNum = 0;
+		for (int i = 1; i < RowCollection.size(); i++) {
+			if (getTableCellText(i, col).trim().contains(cellText.trim())) {
+				rowNum = i;
+				break;
+			}
+		}
+		return rowNum;
+	}
 
-    /**
-     * This method returns row index of the row based on image in that row. For
-     * example, index=1, will return the first row.
-     *
-     * @param By
-     *            imgPath
-     * @return int
-     */
-    public int getRowIndex(final By imgPath) {
-        disableWait();
-        try {
-            int i = 0;
-            final List<WebElement> rows = new ArrayList<WebElement>();
-            rows.addAll(getHeaderRows());
-            rows.addAll(getBodyRows());
-
-            for (final WebElement row : rows) {
-                try {
-                    i = i + 1;
-                    final WebElement we = row.findElement(imgPath);
-                    if (we != null) {
-                        break;
-                    }
-                } catch (final NoSuchElementException e) {
-                }
-            }
-            return i;
-        } finally {
-            enableWait();
-        }
-    }
-
-    /**
-     * Get the values for a given column and return them in order as a List
-     *
-     * @param columnName
-     *            : The name of the column to get the values from
-     * @return List<GsiWebElement> : A list with the values for the column in
-     *         the order they appear on the page
-     */
-    public List<WebElement> getColumnValues(final Integer columnIndex) {
-        final List<WebElement> valuesList = new ArrayList<WebElement>();
-
-        for (int i = 0; i < getRowCount(); i++) {
-            valuesList.add(getCellData(getRowData(i), columnIndex));
-        }
-
-        return valuesList;
-    }
-
-    /**
-     * Get a list of all the header rows of the table, if there is no header, an
-     * empty list will be returned.
-     *
-     * @return List
-     */
-    private List<WebElement> getHeaderRows() {
-        try {
-            return webtable.findElement(By.xpath("./thead")).findElements(
-                    By.xpath("./tr"));
-        } catch (final NoSuchElementException e) {
-            return new ArrayList<WebElement>();
-        } catch (final NullPointerException e) {
-            return new ArrayList<WebElement>();
-        } catch (final AssertionError e) {
-            return new ArrayList<WebElement>();
-        }
-    }
-
-    /**
-     * Get a list of all the body rows of the table, if there is no body, an
-     * empty list will be returned.
-     *
-     * @return List
-     */
-    private List<WebElement> getBodyRows() {
-        try {
-            return webtable.findElement(By.xpath("./tbody")).findElements(
-                    By.xpath("./tr"));
-        } catch (final NoSuchElementException e) {
-            return new ArrayList<WebElement>();
-        } catch (final NullPointerException e) {
-            return new ArrayList<WebElement>();
-        } catch (final AssertionError e) {
-            return new ArrayList<WebElement>();
-        }
-    }
+	
+	
+	
 }

@@ -2,16 +2,18 @@ package com.gsicommerce.romui.selenium.testdata;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class PaymentMethodConfigData {
 	
 	@JsonProperty("paymentMethodCode")
-	String paymentMethodCode;
+	List<String> paymentMethodCode;
 	
 	@JsonProperty("description")
 	String description;
@@ -43,7 +45,7 @@ public class PaymentMethodConfigData {
 	@JsonProperty("refundItemUOM")
 	String refundItemUOM;
 	
-	public String getPaymentMethodCode() {
+	public List<String> getPaymentMethodCode() {
 		return paymentMethodCode;
 	}
 	
@@ -89,6 +91,7 @@ public class PaymentMethodConfigData {
 	
 	public static PaymentMethodConfigData get(String filename) throws JsonParseException, JsonMappingException, IOException{
         ObjectMapper mapper = new ObjectMapper();
+        mapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
         return mapper.readValue(new File(filename), PaymentMethodConfigData.class);
     }
 

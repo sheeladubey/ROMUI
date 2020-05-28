@@ -1,0 +1,16 @@
+{
+    "serviceProviderName":["CONSIGNOR","CONSIGNOR_MOCK","FEDEX","UPS","UPS_MOCK"],
+	"sellerDescription":"ShipLabel Configuration",
+     "addressLine1":"935 FIRST AVE",
+     "addressLine2":"935 first ave",
+     "addressLine3":"1st ave",
+     "city":"KING OF PRUSSIA",
+     "state":"Pennsylvania",
+     "zipcode":"19406",	
+	"parentAccountNumber":"500000",
+	"parentKey":"1111",
+	"parentPassword":"ROM",
+	"signatureOption":"Yes",
+	"labelStockType":"Stock",
+	"parentMeterNumber":"90909"
+	}
