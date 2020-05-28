@@ -20,26 +20,25 @@ public class ROMUIBasePage {
 	public static Environment env;
 	public ROMUIPageFactory romuipages;
 	public static Logger logger;
-	
+
 	@BeforeMethod
-	//@BeforeTest
-	public void setup(final ITestContext c) 
-	{		
+	// @BeforeTest
+	public void setup(final ITestContext c) {
 		env = Environment.getInstance(c);
-		driver = Common.startApplication(env,env.getBrowserType());
+		driver = Common.startApplication(env, env.getBrowserType());
 		logger = Logger.getLogger("romui");
 		PropertyConfigurator.configure("log4j.properties");
-		romuipages = PageFactory.getROMUIPages(driver, env);	
-	
+		romuipages = PageFactory.getROMUIPages(driver, env);
+
 	}
-	
+
 	@AfterMethod(alwaysRun = true)
-	//@AfterTest(alwaysRun = true)
+	// @AfterTest(alwaysRun = true)
 	public void tearDown(final ITestResult c) throws IOException {
-		if(!c.isSuccess()){
+		if (!c.isSuccess()) {
 			Browser.screenShot(driver, env, c);
 		}
-		//Browser.reset(driver);	
-		
+		Browser.reset(driver);
+
 	}
 }

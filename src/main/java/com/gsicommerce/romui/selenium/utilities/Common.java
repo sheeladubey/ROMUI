@@ -420,8 +420,6 @@ public class Common {
 			return false;
 		}
 	}
-	
-
 
 	/**
 	 * Checks if the List<WebElement> are in the DOM, regardless of being displayed
@@ -551,22 +549,23 @@ public class Common {
 		return new StringBuilder(prefix).append(RANDOM_GENERATOR.nextInt(999999)).toString();
 	}
 
-	public static void dragAndDrop(WebDriver driver, WebElement drag, WebElement drop,int timeOutInSeconds) {
-		
-		try{	
-			//To use WebDriverWait(), we would have to nullify implicitlyWait(). 
-			//Because implicitlyWait time also set "driver.findElement()" wait time.  
-			//info from: https://groups.google.com/forum/?fromgroups=#!topic/selenium-users/6VO_7IXylgY
-			driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS); //nullify implicitlyWait() 
-			 //Using Action class for drag and drop.		
-	         Actions drapdopaction=new Actions(driver);	
-	         drapdopaction.dragAndDrop(drag, drop).build().perform();
-			driver.manage().timeouts().implicitlyWait(DEFAULT_WAIT_4_PAGE, TimeUnit.SECONDS); //reset implicitlyWait
-			
+	public static void dragAndDrop(WebDriver driver, WebElement drag, WebElement drop, int timeOutInSeconds) {
+
+		try {
+			// To use WebDriverWait(), we would have to nullify implicitlyWait().
+			// Because implicitlyWait time also set "driver.findElement()" wait time.
+			// info from:
+			// https://groups.google.com/forum/?fromgroups=#!topic/selenium-users/6VO_7IXylgY
+			driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS); // nullify implicitlyWait()
+			// Using Action class for drag and drop.
+			Actions drapdopaction = new Actions(driver);
+			drapdopaction.dragAndDrop(drag, drop).build().perform();
+			driver.manage().timeouts().implicitlyWait(DEFAULT_WAIT_4_PAGE, TimeUnit.SECONDS); // reset implicitlyWait
+
 		} catch (Exception e) {
 			Reporter.log(e.getMessage());
-		} 
-	
+		}
+
 	}
 
 	public static String selectCurrentDate(Calendar dateCurrent) {
@@ -586,8 +585,8 @@ public class Common {
 		currentDateInstance.setTime(startDate);
 		currentDateInstance.add(Calendar.DATE, 1);
 		startDate = currentDateInstance.getTime();
-		 String futureStartDate = sdf.format(startDate);
-		return futureStartDate;		
+		String futureStartDate = sdf.format(startDate);
+		return futureStartDate;
 
 	}
 
@@ -596,17 +595,15 @@ public class Common {
 		Calendar endDateCal1 = Calendar.getInstance();
 		endDateCal1.setTime(endDate);
 		endDateCal1.add(Calendar.DATE, 7);
-		endDate = endDateCal1.getTime();	
+		endDate = endDateCal1.getTime();
 		String futureEndDate = sdf.format(endDate);
 		return futureEndDate;
 	}
-		
-		
+
 	public static void closePrintPopup() throws InterruptedException, AWTException {
 		Thread.sleep(3000);
 		Robot r = new Robot();
 		r.keyPress(KeyEvent.VK_ESCAPE);
 		r.keyRelease(KeyEvent.VK_ESCAPE);
 	}
-	}
-
+}

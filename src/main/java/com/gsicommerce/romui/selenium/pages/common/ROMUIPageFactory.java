@@ -23,7 +23,7 @@ public class ROMUIPageFactory extends PageFactory {
 	private final PaymentMethodConfigPage paymtMethdConfigPage;
 	private final CommonElementsPage commonElePage;
 	private final PipelinesPage pipeLinesPage;
-	private final ShippingLabelConfigPage shipLbleConfigPage;	
+	private final ShippingLabelConfigPage shipLbleConfigPage;
 	private final ServiceFlowPage serviceFlowPage;
 	private final OrdersPage ordersPage;
 	private final ServiceGroupConfigsPage serviceGrpConfigPage;
@@ -39,11 +39,12 @@ public class ROMUIPageFactory extends PageFactory {
 		commonElePage = new CommonElementsPage(driver, env);
 		pipeLinesPage = new PipelinesPage(driver, env);
 		shipLbleConfigPage = new ShippingLabelConfigPage(driver, env);
-		serviceFlowPage=new ServiceFlowPage(driver,env);
-		ordersPage=new OrdersPage(driver,env);
+		serviceFlowPage = new ServiceFlowPage(driver, env);
+		ordersPage = new OrdersPage(driver, env);
 		serviceGrpConfigPage = new ServiceGroupConfigsPage(driver, env);
 		storeFulflmtDashbrdPage = new StoreFulfillmentDashboardPage(driver, env);
 		ispuPickPage = new ISPUPickPage(driver, env);
+
 	}
 
 	public LoginPage loginPage() {
@@ -66,8 +67,7 @@ public class ROMUIPageFactory extends PageFactory {
 		return commonElePage;
 	}
 
-  public PipelinesPage pipeLinesPage() {
-
+	public PipelinesPage pipeLinesPage() {
 		return pipeLinesPage;
 	}
 
@@ -77,18 +77,19 @@ public class ROMUIPageFactory extends PageFactory {
 	}
 
 	public ServiceFlowPage serviceFlowPage() {
-	
+
 		return serviceFlowPage;
 	}
-	
+
 	public OrdersPage ordersPage() {
-		
+
 		return ordersPage;
 	}
-	
+
 	public ServiceGroupConfigsPage serviceGrpConfigPage() {
 		return serviceGrpConfigPage;
-	}	
+
+	}
 
 	public StoreFulfillmentDashboardPage storeFulflmtDashbrdPage() {
 		return storeFulflmtDashbrdPage;
@@ -97,5 +98,5 @@ public class ROMUIPageFactory extends PageFactory {
 	public ISPUPickPage ispuPickPage() {
 		return ispuPickPage;
 	}
-	
+
 }

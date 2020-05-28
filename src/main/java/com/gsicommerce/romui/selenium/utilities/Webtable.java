@@ -98,7 +98,7 @@ public class Webtable {
 	}
 
 	public static String getTableCellText(int col) {
-		_xpath = String.format(".//tr/td["+col+"]", col);
+		_xpath = String.format(".//tr/td[" + col + "]", col);
 		return Table.findElement(By.xpath(_xpath)).getText();
 	}
 
@@ -129,11 +129,11 @@ public class Webtable {
 		return Table.findElement(By.xpath(_xpath)).getText();
 	}
 
-	public static String getRowText(int row,int col) {
-		_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/span", row,col);
+	public static String getRowText(int row, int col) {
+		_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/span", row, col);
 		return Table.findElement(By.xpath(_xpath)).getText();
 	}
-	
+
 	public void setInputCellTextValue(int row, int col, String text) {
 		if (row == 0) {
 			_xpath = String.format(".//tr/td[{1}]/input", col);
@@ -165,27 +165,28 @@ public class Webtable {
 
 	}
 
-	//For pipeline screen-need to include span child as well
-	public void clickIcon(int row, int col, int child,int spanchild) throws InterruptedException {
-		
+	// For pipeline screen-need to include span child as well
+	public void clickIcon(int row, int col, int child, int spanchild) throws InterruptedException {
+
 		if (child == 0) {
 			_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/a", row, col);
 		} else {
-			_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/a[" + child + "]/span["+ spanchild +"]", row, col);
+			_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/a[" + child + "]/span[" + spanchild + "]",
+					row, col);
 		}
 		Action.scrollingToBottomofAPage();
-        Action.clickElementJavaScipt(Table.findElement(By.xpath(_xpath)));
+		Action.clickElementJavaScipt(Table.findElement(By.xpath(_xpath)));
 	}
+
 //For clicking delete icon on pipeline screen.
-public void clickDeleteIcon(int row, int col, int spanchild) throws InterruptedException {
-		
-		_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/button/span["+ spanchild +"]", row, col);
-		
+	public void clickDeleteIcon(int row, int col, int spanchild) throws InterruptedException {
+
+		_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/button/span[" + spanchild + "]", row, col);
+
 		Action.scrollingToBottomofAPage();
-        Action.clickElementJavaScipt(Table.findElement(By.xpath(_xpath)));
+		Action.clickElementJavaScipt(Table.findElement(By.xpath(_xpath)));
 	}
-	
-	
+
 	public void clickSpanElement(int row, int col) {
 		_xpath = String.format(".//tr[{0}]/td[{1}]/*/span", row, col);
 		Table.findElement(By.xpath(_xpath)).click();
@@ -222,7 +223,4 @@ public void clickDeleteIcon(int row, int col, int spanchild) throws InterruptedE
 		return rowNum;
 	}
 
-	
-	
-	
 }

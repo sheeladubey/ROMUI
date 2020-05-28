@@ -2,23 +2,22 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
 <suite name="Suite">
-<listeners>
-	<listener class-name="com.gsicommerce.romui.selenium.utilities.ExtentReporterListener"></listener>
-</listeners>
-<parameter name="browserType" value="chrome" />
-<parameter name="storeEnvironment" value="lvststromsso04" />
-<parameter name="adminUserName" value="admin@tmsna" />
-<parameter name="adminPasswd" value="Password123@" />
-<parameter name="waitPeriod" value="5"/>
-<!--  parameter name="pipelineName" value="SheelaAuto28"/-->
+	<listeners>
+		<listener
+			class-name="com.gsicommerce.romui.selenium.utilities.ExtentReporterListener"></listener>
+	</listeners>
+	<parameter name="browserType" value="chrome" />
+	<parameter name="storeEnvironment" value="lvststromsso04" />
+	<parameter name="adminUserName" value="admin@tmsna" />
+	<parameter name="adminPasswd" value="Password123@" />
+	<parameter name="waitPeriod" value="5" />
 
+	<test thread-count="5" name="OrdersTest">
+		<classes>
+			<class name="com.gsicommerce.romui.selenium.tests.OrdersTest" />
+			<parameter name="dataFile"
+				value="./src/test/resources/testdata/ordersData.json" />
 
-
-  <test thread-count="5" name="PipelineTest">
-    <classes>
-      <class name="com.gsicommerce.romui.selenium.tests.PipelinesTest"/>
-      <parameter name="dataFile" value="./src/test/resources/testdata/pipelineData.json"/>
-
-    </classes>
-  </test> <!-- Test -->
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -9,244 +9,244 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class ServiceGroupConfigsData {
-	
+
 	@JsonProperty("headerLogoURL")
 	String headerLogoURL;
-	
+
 	@JsonProperty("menuLogoURL")
 	String menuLogoURL;
-	
+
 	@JsonProperty("cancelCode")
 	String cancelCode;
-	
+
 	@JsonProperty("cancelReason")
 	String cancelReason;
-	
+
 	@JsonProperty("publishInvoiceValue")
 	String publishInvoiceValue;
-	
+
 	@JsonProperty("publishInvoiceDescrp")
 	String publishInvoiceDescrp;
-	
+
 	@JsonProperty("returnReasonCode")
 	String returnReasonCode;
-	
+
 	@JsonProperty("returnReason")
 	String returnReason;
-	
+
 	@JsonProperty("ftcEntryType")
 	String ftcEntryType;
-	
+
 	@JsonProperty("ftcShipToCounty")
 	String ftcShipToCounty;
-	
+
 	@JsonProperty("ftcFlow")
 	String ftcFlow;
-		
+
 	@JsonProperty("ftcTypeOfOrder")
 	String ftcTypeOfOrder;
-	
+
 	@JsonProperty("ftcNoOfHrs")
 	String ftcNoOfHrs;
-	
+
 	@JsonProperty("returnWindowDays")
 	String returnWindowDays;
-	
+
 	@JsonProperty("returnLocOverride")
 	String returnLocOverride;
-	
+
 	@JsonProperty("returnEligibleRank")
 	String returnEligibleRank;
-	
+
 	@JsonProperty("returnEligibleRankDesc")
 	String returnEligibleRankDesc;
-	
+
 	@JsonProperty("returnRefundChargeRule")
 	String returnRefundChargeRule;
-	
+
 	@JsonProperty("returnRefundReasonCode")
 	String returnRefundReasonCode;
-	
+
 	@JsonProperty("returnRefundReason")
 	String returnRefundReason;
-	
+
 	@JsonProperty("returnRefundProductCondCode")
 	String returnRefundProductCondCode;
-	
+
 	@JsonProperty("returnRefundProductCondReason")
 	String returnRefundProductCondReason;
-	
+
 	@JsonProperty("iShipSolVer")
 	String iShipSolVer;
-	
+
 	@JsonProperty("adminAddrTaxCalc")
 	String adminAddrTaxCalc;
-	
+
 	@JsonProperty("taxStrategyVal")
 	String taxStrategyVal;
-	
+
 	@JsonProperty("taxEntryType")
 	String taxEntryType;
-	
+
 	@JsonProperty("backOrderedRetryMin")
 	String backOrderedRetryMin;
-	
+
 	@JsonProperty("pinLength")
 	String pinLength;
-	
+
 	@JsonProperty("ssgISPUStPickProcessApprng")
 	String ssgISPUStPickProcessApprng;
-	
+
 	@JsonProperty("ssgISPUStPickProcessExpired")
 	String ssgISPUStPickProcessExpired;
-	
+
 	@JsonProperty("ssgISPUCompletePickingApprng")
 	String ssgISPUCompletePickingApprng;
-	
+
 	@JsonProperty("ssgISPUCompletePickingExpired")
 	String ssgISPUCompletePickingExpired;
-	
+
 	@JsonProperty("ssgISPUCustPickupApprng")
 	String ssgISPUCustPickupApprng;
-	
+
 	@JsonProperty("ssgISPUCustPickupExpired")
 	String ssgISPUCustPickupExpired;
-	
+
 	@JsonProperty("ssgSFSStPickProcessApprng")
 	String ssgSFSStPickProcessApprng;
-	
+
 	@JsonProperty("ssgSFSStPickProcessExpired")
 	String ssgSFSStPickProcessExpired;
-	
+
 	@JsonProperty("ssgSFSCompletePickingApprng")
 	String ssgSFSCompletePickingApprng;
-	
+
 	@JsonProperty("ssgSFSCompletePickingExpired")
 	String ssgSFSCompletePickingExpired;
-	
+
 	@JsonProperty("ssgSFSCompletePackingApprng")
 	String ssgSFSCompletePackingApprng;
-	
+
 	@JsonProperty("ssgSFSCompletePackingExpired")
 	String ssgSFSCompletePackingExpired;
-	
+
 	@JsonProperty("ssgSTSStPickProcessApprng")
 	String ssgSTSStPickProcessApprng;
-	
+
 	@JsonProperty("ssgSTSStPickProcessExpired")
 	String ssgSTSStPickProcessExpired;
-	
+
 	@JsonProperty("ssgSFSPickExpiredCanclSLA")
 	String ssgSFSPickExpiredCanclSLA;
-	
+
 	@JsonProperty("ssgSTSCompletePickingApprng")
 	String ssgSTSCompletePickingApprng;
-	
+
 	@JsonProperty("ssgSTSCompletePickingExpired")
 	String ssgSTSCompletePickingExpired;
-	
+
 	@JsonProperty("ssgSTSCompletePackingApprng")
 	String ssgSTSCompletePackingApprng;
-	
+
 	@JsonProperty("ssgSTSCompletePackingExpired")
 	String ssgSTSCompletePackingExpired;
-	
+
 	@JsonProperty("ssgSTSCustPickupApprng")
 	String ssgSTSCustPickupApprng;
-	
+
 	@JsonProperty("ssgSTSCustPickupExpired")
 	String ssgSTSCustPickupExpired;
-	
+
 	@JsonProperty("ssgSTSPickExpiredCanclSLA")
 	String ssgSTSPickExpiredCanclSLA;
-	
+
 	@JsonProperty("ssgAssctStPickProcessApprng")
 	String ssgAssctStPickProcessApprng;
-	
+
 	@JsonProperty("ssgAssctStPickProcessExpired")
 	String ssgAssctStPickProcessExpired;
-	
+
 	@JsonProperty("ssgAssctCompletePickingApprng")
 	String ssgAssctCompletePickingApprng;
-	
+
 	@JsonProperty("ssgAssctCompletePickingExpired")
 	String ssgAssctCompletePickingExpired;
-	
+
 	@JsonProperty("ssgAssctCmpltPackingApprng")
 	String ssgAssctCmpltPackingApprng;
-	
+
 	@JsonProperty("ssgAssctCmpltPackingExpired")
 	String ssgAssctCmpltPackingExpired;
-	
+
 	@JsonProperty("ssgAssctCustDelvryApprng")
 	String ssgAssctCustDelvryApprng;
-	
+
 	@JsonProperty("ssgAssctCustDelvryExpired")
 	String ssgAssctCustDelvryExpired;
-	
+
 	@JsonProperty("ssgPickDeclineReasonCode")
 	String ssgPickDeclineReasonCode;
-	
+
 	@JsonProperty("ssgPickDeclineReason")
 	String ssgPickDeclineReason;
-	
+
 	@JsonProperty("ssgCustPickupDeclineReasonCode")
 	String ssgCustPickupDeclineReasonCode;
-	
+
 	@JsonProperty("ssgCustPickupDeclineReason")
 	String ssgCustPickupDeclineReason;
-	
+
 	@JsonProperty("ssgPackDeclineReasonCode")
 	String ssgPackDeclineReasonCode;
-	
+
 	@JsonProperty("ssgPackDeclineReason")
 	String ssgPackDeclineReason;
-	
+
 	@JsonProperty("ssgCheckInDeclineReasonCode")
 	String ssgCheckInDeclineReasonCode;
-	
+
 	@JsonProperty("ssgCheckInDeclineReason")
 	String ssgCheckInDeclineReason;
-	
+
 	@JsonProperty("marketPlaceOrderEntryType")
 	String marketPlaceOrderEntryType;
-	
+
 	@JsonProperty("pickupExpiredCnclMin")
 	String pickupExpiredCnclMin;
-	
+
 	@JsonProperty("packageID")
 	String packageID;
-	
+
 	@JsonProperty("packageWeight")
 	String packageWeight;
-	
+
 	@JsonProperty("packageWeightUnits")
 	String packageWeightUnits;
-	
+
 	@JsonProperty("packngMaterialWeight")
 	String packngMaterialWeight;
-	
+
 	@JsonProperty("packngMaterialWeightUnits")
 	String packngMaterialWeightUnits;
-	
+
 	@JsonProperty("packageHeight")
 	String packageHeight;
-	
+
 	@JsonProperty("packageHeightUnits")
 	String packageHeightUnits;
-	
+
 	@JsonProperty("packagewidth")
 	String packagewidth;
-	
+
 	@JsonProperty("packagewidthUnits")
 	String packagewidthUnits;
-	
+
 	@JsonProperty("packageLength")
 	String packageLength;
-	
+
 	@JsonProperty("packageLengthUnits")
 	String packageLengthUnits;
-	
+
 	public String getHeaderLogoURL() {
 		return headerLogoURL;
 	}
@@ -346,7 +346,7 @@ public class ServiceGroupConfigsData {
 	public String getSsgSFSCompletePackingExpired() {
 		return ssgSFSCompletePackingExpired;
 	}
-	
+
 	public String getSsgSFSPickExpiredCanclSLA() {
 		return ssgSFSPickExpiredCanclSLA;
 	}
@@ -366,7 +366,7 @@ public class ServiceGroupConfigsData {
 	public String getSsgSTSCompletePickingExpired() {
 		return ssgSTSCompletePickingExpired;
 	}
-	
+
 	public String getSsgSTSCompletePackingApprng() {
 		return ssgSTSCompletePackingApprng;
 	}
@@ -382,11 +382,11 @@ public class ServiceGroupConfigsData {
 	public String getSsgSTSCustPickupExpired() {
 		return ssgSTSCustPickupExpired;
 	}
-	
+
 	public String getSsgSTSPickExpiredCanclSLA() {
 		return ssgSTSPickExpiredCanclSLA;
 	}
-	
+
 	public String getSsgAssctStPickProcessApprng() {
 		return ssgAssctStPickProcessApprng;
 	}
@@ -410,7 +410,7 @@ public class ServiceGroupConfigsData {
 	public String getSsgAssctCmpltPackingExpired() {
 		return ssgAssctCmpltPackingExpired;
 	}
-	
+
 	public String getSsgAssctCustDelvryApprng() {
 		return ssgAssctCustDelvryApprng;
 	}
@@ -418,7 +418,7 @@ public class ServiceGroupConfigsData {
 	public String getSsgAssctCustDelvryExpired() {
 		return ssgAssctCustDelvryExpired;
 	}
-	
+
 	public String getSsgPickDeclineReasonCode() {
 		return ssgPickDeclineReasonCode;
 	}
@@ -502,43 +502,43 @@ public class ServiceGroupConfigsData {
 	public String getPackageLengthUnits() {
 		return packageLengthUnits;
 	}
-	
+
 	public String getMenuLogoURL() {
 		return menuLogoURL;
 	}
-	
+
 	public String getCancelReason() {
 		return cancelReason;
 	}
-	
+
 	public String getPublishInvoiceValue() {
 		return publishInvoiceValue;
 	}
-	
+
 	public String getPublishInvoiceDescrp() {
 		return publishInvoiceDescrp;
 	}
-	
+
 	public String getReturnReasonCode() {
 		return returnReasonCode;
 	}
-	
+
 	public String getReturnReason() {
 		return returnReason;
 	}
-	
+
 	public String getFtcEntryType() {
 		return ftcEntryType;
 	}
-	
+
 	public String getFtcShipToCounty() {
 		return ftcShipToCounty;
 	}
-	
+
 	public String getFtcFlow() {
 		return ftcFlow;
 	}
-	
+
 	public String getReturnRefundReasonCode() {
 		return returnRefundReasonCode;
 	}
@@ -554,19 +554,19 @@ public class ServiceGroupConfigsData {
 	public String getReturnRefundProductCondReason() {
 		return returnRefundProductCondReason;
 	}
-	
+
 	public String getReturnEligibleRankDesc() {
 		return returnEligibleRankDesc;
 	}
-	
+
 	public String getPinLength() {
 		return pinLength;
 	}
-	
-	public static ServiceGroupConfigsData get(String filename) throws JsonParseException, JsonMappingException, IOException{
-        ObjectMapper mapper = new ObjectMapper();
-        return mapper.readValue(new File(filename), ServiceGroupConfigsData.class);
-    }
+
+	public static ServiceGroupConfigsData get(String filename)
+			throws JsonParseException, JsonMappingException, IOException {
+		ObjectMapper mapper = new ObjectMapper();
+		return mapper.readValue(new File(filename), ServiceGroupConfigsData.class);
+	}
 
 }
-

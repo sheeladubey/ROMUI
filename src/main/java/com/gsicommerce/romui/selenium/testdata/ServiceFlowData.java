@@ -27,45 +27,42 @@ public class ServiceFlowData {
 	@JsonProperty("FlatrateValue")
 	String FlatrateValue;
 
-	
-	
 	public String getSvcFlwName() {
-		System.out.println("Service Flow name is:" +serviceflowName+ Common.generateRandomID("Auto"));
-		return serviceflowName+ Common.generateRandomID("Auto");
+		System.out.println("Service Flow name is:" + serviceflowName + Common.generateRandomID("Auto"));
+		return serviceflowName + Common.generateRandomID("Auto");
 	}
-	
+
 	public String getSvcFlwkeyValue() {
-		return serviceflowKeyValue+ Common.generateRandomID("Auto");
+		return serviceflowKeyValue + Common.generateRandomID("Auto");
 	}
-	
+
 	public String getOtfSvcFlwValue() {
 		return OTFValue;
 	}
-	
+
 	public String getHfrSvcFlwValue() {
 		return HFRValue;
 	}
-	
+
 	public String getPickSvcFlwValue() {
 		return PickValue;
 	}
-	
+
 	public String getPackSvcFlwValue() {
 		return PackValue;
 	}
-	
+
 	public String getShipmentSvcFlwValue() {
 		return ShipmentValue;
 	}
-	
+
 	public String getFlatrateSvcFlwValue() {
 		return FlatrateValue;
 	}
-	
-	
-	public static ServiceFlowData get(String filename) throws JsonParseException, JsonMappingException, IOException{
-        ObjectMapper mapper = new ObjectMapper();
-        return mapper.readValue(new File(filename), ServiceFlowData.class);
-    }
+
+	public static ServiceFlowData get(String filename) throws JsonParseException, JsonMappingException, IOException {
+		ObjectMapper mapper = new ObjectMapper();
+		return mapper.readValue(new File(filename), ServiceFlowData.class);
+	}
 
 }

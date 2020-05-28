@@ -2,8 +2,6 @@ package com.gsicommerce.romui.selenium.pages.ordermanagement;
 
 import java.io.IOException;
 import java.util.Calendar;
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -28,15 +26,12 @@ public class PipelinesPage {
 	Environment env;
 	Action action;
 
-
 	private PipelineData data;
 	Calendar futureStartDate = null;
 	Calendar dateCurrent = null;
 	Calendar endDateCal = null;
 	private static String addpipelineName;
-	private static int rowNo ;
-	
-	
+	private static int rowNo;
 
 	public PipelinesPage(WebDriver driver, Environment env) {
 
@@ -100,8 +95,6 @@ public class PipelinesPage {
 	@FindBy(how = How.CSS, using = "#condition_value")
 	@CacheLookup
 	private WebElement drpdwnPipelineCriteriaValue;
-	
-	
 
 	/*-----------------------------------------------------Create Event-----------------------*/
 	@FindBy(how = How.CSS, using = "#SalesOrderCreate")
@@ -176,7 +169,7 @@ public class PipelinesPage {
 	@FindBy(how = How.CSS, using = ".radial-action-bar-secondary-btn")
 	@CacheLookup
 	private WebElement lkviewPipelineConfig;
-	
+
 	@FindBy(how = How.CSS, using = "[style='word-break: break-all; max-width: 131px;']")
 	@CacheLookup
 	private WebElement secondColumn;
@@ -212,60 +205,56 @@ public class PipelinesPage {
 	@FindBy(how = How.CSS, using = ".radial-action-bar-secondary-btn")
 	@CacheLookup
 	private WebElement btnCancel;
-	
-	
 
-	public void addPipeline() throws JsonParseException, JsonMappingException, IOException,Exception {
+	public void addPipeline() throws JsonParseException, JsonMappingException, IOException, Exception {
 		data = PipelineData.get(env.getFileLocation());
 		btnAddPipeline.click();
-		addpipelineName=data.getPipelineName();
-		System.out.println("ADDED PIPELINE NAME is:-"+addpipelineName);
-		Action.enter(txtBoxPipelineName,addpipelineName); 
+		addpipelineName = data.getPipelineName();
+		System.out.println("ADDED PIPELINE NAME is:-" + addpipelineName);
+		Action.enter(txtBoxPipelineName, addpipelineName);
 		clickonStartDate();
 		clickonEndDate();
 		selectPipelineCriteriaByTenderType();
 		btnSaveAddConfig.click();
 		Common.dragAndDrop(driver, dragSalesOrderCreate, dropSalesOrderCreate, 10);
 		btnSave.click();
-		btnContinueConfig.click();	
-		System.out.println("Selected row- " +CommonElementsPage.getRowNum(addpipelineName));
-		 rowNo = CommonElementsPage.getRowNum(addpipelineName);
-		/*if(Webtable.getTableCellText(rowNo,1).contains(addpipelineName))
-		{
-			System.out.println("Pipeline added successfully");
-		}else
-		{
-			System.out.println("Pipeline not added successfully");
-		} */
-	
-		Assert.assertEquals(Webtable.getTableCellText(rowNo, 1), addpipelineName,"Pipeline has not been added");	
-}	
-	
-	
-	public void clickViewPipeline() throws JsonParseException, JsonMappingException, IOException, Exception {	
+		btnContinueConfig.click();
+		System.out.println("Selected row- " + CommonElementsPage.getRowNum(addpipelineName));
+		rowNo = CommonElementsPage.getRowNum(addpipelineName);
+		/*
+		 * if(Webtable.getTableCellText(rowNo,1).contains(addpipelineName)) {
+		 * System.out.println("Pipeline added successfully"); }else {
+		 * System.out.println("Pipeline not added successfully"); }
+		 */
+
+		Assert.assertEquals(Webtable.getTableCellText(rowNo, 1), addpipelineName, "Pipeline has not been added");
+	}
+
+	public void clickViewPipeline() throws JsonParseException, JsonMappingException, IOException, Exception {
 		addPipeline();
-		CommonElementsPage.clickActionsIcon(rowNo, 5, 1,1);
-		WebElement lblNameViewPipeline=driver.findElement(By.xpath("//div[contains(text(),'"+addpipelineName+"')]"));
-		System.out.println("Name value is:" +lblNameViewPipeline.getText());
-		if(lblNameViewPipeline.getText().contains(addpipelineName))
-		{
+		CommonElementsPage.clickActionsIcon(rowNo, 5, 1, 1);
+		WebElement lblNameViewPipeline = driver
+				.findElement(By.xpath("//div[contains(text(),'" + addpipelineName + "')]"));
+		System.out.println("Name value is:" + lblNameViewPipeline.getText());
+		if (lblNameViewPipeline.getText().contains(addpipelineName)) {
 			System.out.println("view pipeline screen validated");
-		}else {
+		} else {
 			System.out.println("view pipeline screen not validated");
 		}
-		Assert.assertEquals(lblNameViewPipeline.getText(),addpipelineName,"View Pipeline screen has been validated");
-		
+		Assert.assertEquals(lblNameViewPipeline.getText(), addpipelineName, "View Pipeline screen has been validated");
+
 		Action.waitForElementToBeClickable(driver, lkviewPipelineConfig, 10);
 		Action.clickElementJavaScipt(lkviewPipelineConfig);
-		
-		WebElement lblNameConfigurePipeline=driver.findElement(By.xpath("//div[contains(text(),'Name')] | //div[contains(text(),'"+addpipelineName+"')]"));
-	/*	if(lblNameConfigurePipeline.getText().contains(addpipelineName))
-		{
-			System.out.println("Configure pipeline screen validated");
-		}else {
-			System.out.println("Configure pipeline screen not validated");
-		}*/
-		Assert.assertEquals(lblNameConfigurePipeline.getText(),addpipelineName,"Configure Pipeline screen has been validated");
+
+		WebElement lblNameConfigurePipeline = driver.findElement(
+				By.xpath("//div[contains(text(),'Name')] | //div[contains(text(),'" + addpipelineName + "')]"));
+		/*
+		 * if(lblNameConfigurePipeline.getText().contains(addpipelineName)) {
+		 * System.out.println("Configure pipeline screen validated"); }else {
+		 * System.out.println("Configure pipeline screen not validated"); }
+		 */
+		Assert.assertEquals(lblNameConfigurePipeline.getText(), addpipelineName,
+				"Configure Pipeline screen has been validated");
 		Action.waitForElementToBeVisible(driver, btnCancel, 10);
 		Action.waitForElementToBeClickable(driver, btnCancel, 15);
 		btnCancel.click();
@@ -300,53 +289,43 @@ public class PipelinesPage {
 
 	}
 
-	public void EditPipeline() throws JsonParseException, JsonMappingException, IOException ,Exception{
+	public void EditPipeline() throws JsonParseException, JsonMappingException, IOException, Exception {
 		addPipeline();
-		
-		CommonElementsPage.clickActionsIcon(rowNo, 5, 3,1);
-		//try {
-			data = PipelineData.get(env.getFileLocation());
-			//if(secondColumn.getText().equals("DRAFT")) {
-				//Action.waitForElementToBeClickable(driver, btnEdit, 10);
-				//btnEdit.click();
-				txtBoxPipelineName.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-				String editPipelineName=data.getPipelineName();
-				System.out.println("EDIT PIPELINE NAME IS:"+editPipelineName);
-			//	Action.enter(txtBoxPipelineName, data.getPipelineName());
-				Action.enter(txtBoxPipelineName, editPipelineName);
-				Action.selectByIndex(drpdwnPipelineStatus, 2);
-				clickonStartDate();
-				clickonEndDate();
-				if (btnCreteriaCondition.isDisplayed()) {
-					btnPrependCondition.click();
-					selectPipelineCriteriaByOrderType();
-					btnSaveEditConfig.click();
-					Common.waitForElementPresent(driver, btnContinue, 10);
-					btnContinue.click();
-				}
-		/*	}
-			if (secondColumn.getText().equals("ACTIVE")) {
-				btnEdit.click();
-				clickonStartDate();
-				clickonEndDate();
-				btnSaveViewConfig.click();
-				Common.waitForElementPresent(driver, btnContinue, 05);
-				btnContinue.click();
-			}
-			if (secondColumn.getText().equals("INACTIVE")) {
-				btnEdit.click();
-				Common.waitForElementPresent(driver, drpdwnPipelineStatus, 10);
-				Action.selectByIndex(drpdwnPipelineStatus, 1);
-				clickonStartDate();
-				clickonEndDate();
-				btnSaveViewConfig.click();
-				Common.waitForElementPresent(driver, btnContinue, 05);
-				btnContinue.click();
-			}
-		} catch (Exception e) {
 
-			// e.printStackTrace();
-		}*/
+		CommonElementsPage.clickActionsIcon(rowNo, 5, 3, 1);
+		// try {
+		data = PipelineData.get(env.getFileLocation());
+		// if(secondColumn.getText().equals("DRAFT")) {
+		// Action.waitForElementToBeClickable(driver, btnEdit, 10);
+		// btnEdit.click();
+		txtBoxPipelineName.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
+		String editPipelineName = data.getPipelineName();
+		System.out.println("EDIT PIPELINE NAME IS:" + editPipelineName);
+		// Action.enter(txtBoxPipelineName, data.getPipelineName());
+		Action.enter(txtBoxPipelineName, editPipelineName);
+		Action.selectByIndex(drpdwnPipelineStatus, 2);
+		clickonStartDate();
+		clickonEndDate();
+		if (btnCreteriaCondition.isDisplayed()) {
+			btnPrependCondition.click();
+			selectPipelineCriteriaByOrderType();
+			btnSaveEditConfig.click();
+			Common.waitForElementPresent(driver, btnContinue, 10);
+			btnContinue.click();
+		}
+		/*
+		 * } if (secondColumn.getText().equals("ACTIVE")) { btnEdit.click();
+		 * clickonStartDate(); clickonEndDate(); btnSaveViewConfig.click();
+		 * Common.waitForElementPresent(driver, btnContinue, 05); btnContinue.click(); }
+		 * if (secondColumn.getText().equals("INACTIVE")) { btnEdit.click();
+		 * Common.waitForElementPresent(driver, drpdwnPipelineStatus, 10);
+		 * Action.selectByIndex(drpdwnPipelineStatus, 1); clickonStartDate();
+		 * clickonEndDate(); btnSaveViewConfig.click();
+		 * Common.waitForElementPresent(driver, btnContinue, 05); btnContinue.click(); }
+		 * } catch (Exception e) {
+		 * 
+		 * // e.printStackTrace(); }
+		 */
 	}
 
 	public void selectPipelineCriteriaByTenderType() {
@@ -371,7 +350,7 @@ public class PipelinesPage {
 
 	public void deletePipeline() throws JsonParseException, JsonMappingException, IOException, Exception {
 		addPipeline();
-		CommonElementsPage.clickDeleteIcon(rowNo,5,1);
+		CommonElementsPage.clickDeleteIcon(rowNo, 5, 1);
 		System.out.println("Delete Pipeline Button Clicked");
 		Action.waitForElementToBeClickable(driver, btnConfirm, 10);
 		btnConfirm.click();
@@ -379,14 +358,14 @@ public class PipelinesPage {
 
 	}
 
-	public void copyPipeline() throws JsonParseException, JsonMappingException, IOException,Exception {
+	public void copyPipeline() throws JsonParseException, JsonMappingException, IOException, Exception {
 		data = PipelineData.get(env.getFileLocation());
 		Action.scrollDown("200");
-		CommonElementsPage.clickActionsIcon(rowNo, 5, 2,1);
+		CommonElementsPage.clickActionsIcon(rowNo, 5, 2, 1);
 		btnCopyPipeline.click();
-		String copypipelineName=data.getPipelineName();
-		System.out.println("COPY Pipeline name is:-"+copypipelineName);
-		//Action.enter(txtBoxPipelineName, data.getPipelineName());
+		String copypipelineName = data.getPipelineName();
+		System.out.println("COPY Pipeline name is:-" + copypipelineName);
+		// Action.enter(txtBoxPipelineName, data.getPipelineName());
 		Action.enter(txtBoxPipelineName, copypipelineName);
 		clickonStartDate();
 		clickonEndDate();
@@ -397,8 +376,8 @@ public class PipelinesPage {
 		btnContinueConfig.click();
 	}
 
-	public void editPipelienConfiguration() throws Exception{
-		CommonElementsPage.clickActionsIcon(rowNo, 5, 4,1);
+	public void editPipelienConfiguration() throws Exception {
+		CommonElementsPage.clickActionsIcon(rowNo, 5, 4, 1);
 		try {
 			if (secondColumn.getText().equals("DRAFT")) {
 				btnEditConfig.click();
@@ -422,5 +401,3 @@ public class PipelinesPage {
 	}
 
 }
-
-

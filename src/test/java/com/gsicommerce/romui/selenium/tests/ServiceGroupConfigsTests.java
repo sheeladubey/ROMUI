@@ -17,14 +17,15 @@ public class ServiceGroupConfigsTests extends ROMUIBasePage {
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
 		romuipages.homePage().clickOnLandingButton("Order Management");
-		logger.info("Order Management link is clicked on");		
+		logger.info("Order Management link is clicked on");
 		romuipages.orderMgmPage().clickOnServiceGrpConfig();
 		logger.info("Navigated to Seller Service Group Config page");
 		romuipages.serviceGrpConfigPage().editSellerServiceGroupConfigs();
 		logger.info("Clicked on each service to enter the modified data and Clicked on Save btn");
 		logger.info("Verify if edit Seller Service Group success message is displayed");
-		Assert.assertEquals(romuipages.serviceGrpConfigPage().txtEditSuccessMsg.getText(), RomuiEnumValues.SERVICE_GROUP_CONFIG.getMessage(), "Edit Seller Service Group Config is not updated successfully");
-	}	
+		Assert.assertEquals(romuipages.serviceGrpConfigPage().txtEditSuccessMsg.getText(),
+				RomuiEnumValues.SERVICE_GROUP_CONFIG.getMessage(),
+				"Edit Seller Service Group Config is not updated successfully");
+	}
 
 }
-

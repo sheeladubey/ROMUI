@@ -735,31 +735,32 @@ public class Action {
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		jse.executeScript("window.scrollBy(" + px + ",0)", "");
 	}
-	
-	//This will scroll the web page till end.	
+
+	// This will scroll the web page till end.
 	public static void scrollingToBottomofAPage() {
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		jse.executeScript("window.scrollTo(0, document.body.scrollHeight);");
 	}
-	
-	//This will scroll the page till the element is found
-	
+
+	// This will scroll the page till the element is found
+
 	public static void scrollingToElementofAPage(WebElement el) {
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		jse.executeScript("arguments[0].scrollIntoView(true);", el);
 	}
-	//Call executeAsyncScript() method to wait for 5 seconds	
+
+	// Call executeAsyncScript() method to wait for 5 seconds
 	public static void executeAsyncScript() {
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
-        jse.executeAsyncScript("window.setTimeout(arguments[arguments.length - 1], TimeUnit.SECONDS);");		
+		jse.executeAsyncScript("window.setTimeout(arguments[arguments.length - 1], TimeUnit.SECONDS);");
 	}
 
-	//Click element by javaScript
-	public static void clickElementJavaScipt(WebElement el)
-	{
+	// Click element by javaScript
+	public static void clickElementJavaScipt(WebElement el) {
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		jse.executeScript("arguments[0].click();", el);
 	}
+
 	/// <summary>
 	/// Select by Visible Text
 	/// </summary>

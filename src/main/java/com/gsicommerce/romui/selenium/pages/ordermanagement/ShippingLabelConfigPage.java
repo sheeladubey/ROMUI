@@ -62,7 +62,7 @@ public class ShippingLabelConfigPage {
 	@FindBy(how = How.CSS, using = "#shipping_label_configuration_seller_address_override_attributes_address_line2")
 	@CacheLookup
 	private WebElement txtAddressLine2;
-	
+
 	@FindBy(how = How.CSS, using = "#shipping_label_configuration_seller_address_override_attributes_address_line3")
 	@CacheLookup
 	private WebElement txtAddressLine3;
@@ -127,18 +127,18 @@ public class ShippingLabelConfigPage {
 	@FindBy(how = How.CSS, using = ".alert-info")
 	@CacheLookup
 	public WebElement txtSuccessMsg;
-	
+
 	@FindBy(how = How.CSS, using = ".btn-default[type='submit']")
 	@CacheLookup
 	public WebElement btnSave;
-	
+
 	@FindBy(how = How.CSS, using = "[href='/en/sellers/TMSEB2/shipping_label_configurations/new?provider=CONSIGNER']")
 	@CacheLookup
 	public WebElement btnAdd;
-	
+
 	public void addShippingLabelConfig(int index) throws JsonParseException, JsonMappingException, IOException {
 		shipConfigdata = ShippingLabelConfigData.get(env.getFileLocation());
-		//CommonElementsPage.clickOnAddBtn();
+		// CommonElementsPage.clickOnAddBtn();
 		Action.waitForElementToBeClickable(driver, btnAdd, 10);
 		btnAdd.click();
 		Action.selectByVisibleText(drpdwnServiceProviderName, shipConfigdata.getserviceProviderName().get(index));
@@ -150,34 +150,34 @@ public class ShippingLabelConfigPage {
 		Action.scrollDown("300");
 		Action.enter(txtAddressLine1, shipConfigdata.getAddressLine1());
 		Action.enter(txtAddressLine2, shipConfigdata.getAddressLine2());
-		//Action.enter(txtAddressLine2, shipConfigdata.getAddressLine3());
+		// Action.enter(txtAddressLine2, shipConfigdata.getAddressLine3());
 		Action.enter(txtCity, shipConfigdata.getCity());
-		//Action.enter(txtState, shipConfigdata.getState());
+		// Action.enter(txtState, shipConfigdata.getState());
 		drpdwnState.click();
 		Action.selectByVisibleText(drpdwnState, shipConfigdata.getState());
 		Action.enter(txtZipCode, shipConfigdata.getZipcode());
 		Action.waitForElementToBeClickable(driver, btnSave, 20);
-		//CommonElementsPage.clickOnSaveBtn();
+		// CommonElementsPage.clickOnSaveBtn();
 		btnSave.click();
 	}
 
 	public void addShippingLabelConfigByFedex(int index) throws JsonParseException, JsonMappingException, IOException {
 		shipConfigdata = ShippingLabelConfigData.get(env.getFileLocation());
-		//CommonElementsPage.clickOnAddBtn();
+		// CommonElementsPage.clickOnAddBtn();
 		Action.waitForElementToBeClickable(driver, btnAdd, 10);
 		btnAdd.click();
 		Action.selectByVisibleText(drpdwnServiceProviderName, shipConfigdata.getserviceProviderName().get(index));
 		Action.enter(txtdwnSellerDescription, shipConfigdata.getsellerDescription());
 		Action.selectByIndex(drpdwnDefaultLabelStrategy, 0);
 		Action.selectByIndex(drpdwnCountry, 3);
-	    chkboxAddressOverride.click();
+		chkboxAddressOverride.click();
 		Action.selectByIndex(drpdwnCountryOverride, 3);
 		Action.scrollDown("500");
 		Action.enter(txtAddressLine1, shipConfigdata.getAddressLine1());
 		Action.enter(txtAddressLine2, shipConfigdata.getAddressLine2());
 		Action.enter(txtAddressLine2, shipConfigdata.getAddressLine3());
 		Action.enter(txtCity, shipConfigdata.getCity());
-		//Action.enter(txtState, shipConfigdata.getState());
+		// Action.enter(txtState, shipConfigdata.getState());
 		Action.selectByValue(drpdwnState, shipConfigdata.getState());
 		Action.enter(txtZipCode, shipConfigdata.getZipcode());
 		Action.waitForElementToBeClickable(driver, btnAddCarrier, 10);
@@ -191,13 +191,13 @@ public class ShippingLabelConfigPage {
 		Action.enter(txtLabelStockType, shipConfigdata.getlabelStockType());
 		Action.enter(txtParentMeterNumber, shipConfigdata.getparentMeterNumber());
 		Action.waitForElementToBeClickable(driver, btnSave, 10);
-		//CommonElementsPage.clickOnSaveBtn();
+		// CommonElementsPage.clickOnSaveBtn();
 		btnSave.click();
 	}
 
 	public void addShippingLabelConfigByUPS(int index) throws JsonParseException, JsonMappingException, IOException {
 		shipConfigdata = ShippingLabelConfigData.get(env.getFileLocation());
-		//CommonElementsPage.clickOnAddBtn();
+		// CommonElementsPage.clickOnAddBtn();
 		Action.waitForElementToBeClickable(driver, btnAdd, 10);
 		btnAdd.click();
 		Action.selectByVisibleText(drpdwnServiceProviderName, shipConfigdata.getserviceProviderName().get(index));
@@ -210,22 +210,22 @@ public class ShippingLabelConfigPage {
 		Action.enter(txtAddressLine1, shipConfigdata.getAddressLine1());
 		Action.enter(txtAddressLine2, shipConfigdata.getAddressLine2());
 		Action.enter(txtCity, shipConfigdata.getCity());
-	//	Action.enter(txtState, shipConfigdata.getState());
+		// Action.enter(txtState, shipConfigdata.getState());
 		Action.selectByValue(drpdwnState, shipConfigdata.getState());
-		Action.enter(txtZipCode, shipConfigdata.getZipcode()); 
+		Action.enter(txtZipCode, shipConfigdata.getZipcode());
 		Action.waitForElementToBeClickable(driver, btnAddCarrier, 10);
 		btnAddCarrier.click();
 		Action.selectByIndex(drpdwnServiceName, 1);
 		Action.selectByIndex(drpdwnCarrierCode, 1);
 		Action.waitForElementToBeClickable(driver, btnSave, 10);
 		btnSave.click();
-		//CommonElementsPage.clickOnSaveBtn();
+		// CommonElementsPage.clickOnSaveBtn();
 	}
 
 	public void editShippingLabelConfigByUPS(int index) throws JsonParseException, JsonMappingException, IOException {
 		shipConfigdata = ShippingLabelConfigData.get(env.getFileLocation());
 		btnEditShippingLblConfig.click();
-		Action.selectByVisibleText(drpdwnServiceProviderName,shipConfigdata.getserviceProviderName().get(index));
+		Action.selectByVisibleText(drpdwnServiceProviderName, shipConfigdata.getserviceProviderName().get(index));
 		Action.enter(txtdwnSellerDescription, shipConfigdata.getsellerDescription());
 		Action.selectByIndex(drpdwnDefaultLabelStrategy, 0);
 		Action.selectByIndex(drpdwnCountry, 3);
@@ -235,45 +235,16 @@ public class ShippingLabelConfigPage {
 		Action.waitForElementToBeClickable(driver, drpdwnServiceName, 10);
 		Action.selectByIndex(drpdwnServiceName, 2);
 		Action.selectByIndex(drpdwnCarrierCode, 2);
-		//Common.waitForElementPresent(driver, btnSave, 20);
+		// Common.waitForElementPresent(driver, btnSave, 20);
 		Action.waitForElementToBeClickable(driver, btnSave, 20);
-		//CommonElementsPage.clickOnSaveBtn();
+		// CommonElementsPage.clickOnSaveBtn();
 		btnSave.click();
 	}
-	
-	
+
 	public void editShippingLabelConfigByFedex(int index) throws JsonParseException, JsonMappingException, IOException {
 		shipConfigdata = ShippingLabelConfigData.get(env.getFileLocation());
 		btnEditShippingLblConfig.click();
-		Action.selectByVisibleText(drpdwnServiceProviderName,shipConfigdata.getserviceProviderName().get(index));
-		Action.enter(txtdwnSellerDescription, shipConfigdata.getsellerDescription());
-		Action.selectByIndex(drpdwnDefaultLabelStrategy, 0);
-		Action.selectByIndex(drpdwnCountry, 3);
-	    chkboxAddressOverride.click();
-		System.out.println("clicked override address");
-		Action.selectByIndex(drpdwnCountryOverride, 3);
-		Action.scrollDown("300");
-		Action.enter(txtAddressLine1, shipConfigdata.getAddressLine1());
-		System.out.println("Entered address1");
-		Action.enter(txtAddressLine2, shipConfigdata.getAddressLine2());
-		Action.enter(txtCity, shipConfigdata.getCity());
-	//	Action.enter(txtState, shipConfigdata.getState());
-		Action.enter(txtZipCode, shipConfigdata.getZipcode()); 
-		Action.selectByIndex(drpdwnServiceName, 2);
-		Action.selectByIndex(drpdwnCarrierCode, 2);
-		Action.enter(txtParentAccountNumber, shipConfigdata.getparentAccountNumber());
-		Action.enter(txtParentKey, shipConfigdata.getparentKey());
-		Action.enter(txtParentPassword, shipConfigdata.getparentPassword());
-		Action.enter(txtSignatureOption, shipConfigdata.getsignatureOption());
-		Action.enter(txtLabelStockType, shipConfigdata.getlabelStockType());
-		Action.enter(txtParentMeterNumber, shipConfigdata.getparentMeterNumber());
-		CommonElementsPage.clickOnSaveBtn();
-	}
-
-	public void editShippingLabelConfigByConsignor(int index) throws JsonParseException, JsonMappingException, IOException {
-		shipConfigdata = ShippingLabelConfigData.get(env.getFileLocation());
-		btnEditShippingLblConfig.click();
-		Action.selectByVisibleText(drpdwnServiceProviderName,shipConfigdata.getserviceProviderName().get(index));
+		Action.selectByVisibleText(drpdwnServiceProviderName, shipConfigdata.getserviceProviderName().get(index));
 		Action.enter(txtdwnSellerDescription, shipConfigdata.getsellerDescription());
 		Action.selectByIndex(drpdwnDefaultLabelStrategy, 0);
 		Action.selectByIndex(drpdwnCountry, 3);
@@ -285,21 +256,49 @@ public class ShippingLabelConfigPage {
 		System.out.println("Entered address1");
 		Action.enter(txtAddressLine2, shipConfigdata.getAddressLine2());
 		Action.enter(txtCity, shipConfigdata.getCity());
-	//	Action.enter(txtState, shipConfigdata.getState());
-		Action.enter(txtZipCode, shipConfigdata.getZipcode()); 
+		// Action.enter(txtState, shipConfigdata.getState());
+		Action.enter(txtZipCode, shipConfigdata.getZipcode());
+		Action.selectByIndex(drpdwnServiceName, 2);
+		Action.selectByIndex(drpdwnCarrierCode, 2);
+		Action.enter(txtParentAccountNumber, shipConfigdata.getparentAccountNumber());
+		Action.enter(txtParentKey, shipConfigdata.getparentKey());
+		Action.enter(txtParentPassword, shipConfigdata.getparentPassword());
+		Action.enter(txtSignatureOption, shipConfigdata.getsignatureOption());
+		Action.enter(txtLabelStockType, shipConfigdata.getlabelStockType());
+		Action.enter(txtParentMeterNumber, shipConfigdata.getparentMeterNumber());
 		CommonElementsPage.clickOnSaveBtn();
 	}
-	
-	
-	
-	public String selectGroupName(String groupName,int index) {
-		//shipConfigdata = ShippingLabelConfigData.get(env.getFileLocation());
-		//drpdwnServiceProviderName.click();
-		List<WebElement> groupname=driver.findElements(By.cssSelector("tr.reflow-table-row[data-lookup-id='shipConfigdata.getserviceProviderName().get(index)']"));
+
+	public void editShippingLabelConfigByConsignor(int index)
+			throws JsonParseException, JsonMappingException, IOException {
+		shipConfigdata = ShippingLabelConfigData.get(env.getFileLocation());
+		btnEditShippingLblConfig.click();
+		Action.selectByVisibleText(drpdwnServiceProviderName, shipConfigdata.getserviceProviderName().get(index));
+		Action.enter(txtdwnSellerDescription, shipConfigdata.getsellerDescription());
+		Action.selectByIndex(drpdwnDefaultLabelStrategy, 0);
+		Action.selectByIndex(drpdwnCountry, 3);
+		chkboxAddressOverride.click();
+		System.out.println("clicked override address");
+		Action.selectByIndex(drpdwnCountryOverride, 3);
+		Action.scrollDown("300");
+		Action.enter(txtAddressLine1, shipConfigdata.getAddressLine1());
+		System.out.println("Entered address1");
+		Action.enter(txtAddressLine2, shipConfigdata.getAddressLine2());
+		Action.enter(txtCity, shipConfigdata.getCity());
+		// Action.enter(txtState, shipConfigdata.getState());
+		Action.enter(txtZipCode, shipConfigdata.getZipcode());
+		CommonElementsPage.clickOnSaveBtn();
+	}
+
+	public String selectGroupName(String groupName, int index) {
+		// shipConfigdata = ShippingLabelConfigData.get(env.getFileLocation());
+		// drpdwnServiceProviderName.click();
+		List<WebElement> groupname = driver.findElements(By.cssSelector(
+				"tr.reflow-table-row[data-lookup-id='shipConfigdata.getserviceProviderName().get(index)']"));
 		for (int i = 0; i < groupname.size(); i++) {
-			System.out.println("first group name is:" +groupname.get(i).getText());
+			System.out.println("first group name is:" + groupname.get(i).getText());
 			if (groupname.get(i).getText().equals(shipConfigdata.getserviceProviderName().get(index))) {
-				//Action.(btnEditShippingLblConfig,groupname);
+				// Action.(btnEditShippingLblConfig,groupname);
 				btnEditShippingLblConfig.click();
 				break;
 			}

@@ -17,35 +17,36 @@ import com.gsicommerce.romui.selenium.utilities.Common;
 import com.gsicommerce.romui.selenium.utilities.Webtable;
 
 public class CommonElementsPage {
-	
+
 	static WebDriver driver;
 	Environment env;
-	Action action;	
+	Action action;
+
 	public CommonElementsPage(WebDriver driver, Environment env) {
-		// TODO Auto-generated constructor stub	
+		// TODO Auto-generated constructor stub
 		this.driver = driver;
 		this.env = env;
 		PageFactory.initElements(driver, this);
 		action = new Action(driver, env);
-		
+
 	}
-	
+
 	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Save')]")
 	@CacheLookup
-	private static WebElement btnSave;	
-	
+	private static WebElement btnSave;
+
 	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Add')]")
 	@CacheLookup
-	private static WebElement btnAdd;	
-			
+	private static WebElement btnAdd;
+
 	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Save & Exit')]")
 	@CacheLookup
 	private static WebElement btnSaveExit;
-	
+
 	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Cancel')]")
 	@CacheLookup
-	private static WebElement btnCancel;		
-	
+	private static WebElement btnCancel;
+
 	@FindBy(how = How.CSS, using = "[type='submit']")
 	@CacheLookup
 	private static WebElement btnSearch;
@@ -80,21 +81,21 @@ public class CommonElementsPage {
 		Webtable wt = new Webtable(driver, (WebElement) nodeWebTable);
 		return wt;
 	}
-	
+
 	public static void clickOnSaveBtn() {
 		btnSave.click();
 	}
-	
+
 	public static void clickOnAddBtn() {
 		Action.waitForElementToBeClickable(driver, btnAdd, 10);
 		btnAdd.click();
 	}
-	
+
 	public static void clickOnCancelBtn() {
 		btnCancel.click();
-		
+
 	}
-	
+
 	public static void clickOnSearchBtn() {
 		btnSearch.click();
 	}
@@ -129,7 +130,7 @@ public class CommonElementsPage {
 	public static int getRowNo(String nodeID) throws Exception {
 		selectLimitPerPage();
 		Reporter.log("page limit drop down value is selected");
-		
+
 		int rowNo = 0;
 		rowNo = nodeWebTable().getTableRowNumForCellText(nodeID, 1);
 		while (rowNo <= 0) {
@@ -140,39 +141,44 @@ public class CommonElementsPage {
 		return rowNo;
 
 	}
-	
+
 	public static int getRowNum(String pipelineName) throws Exception {
 		int rowNo = 0;
 		rowNo = nodeWebTable().getTableRowNumForCellText(pipelineName, 1);
 		while (rowNo <= 0) {
-		//	CommonElementsPage.clickNextPage();
+			// CommonElementsPage.clickNextPage();
 			Common.waitForElement(driver, nodeWebTable, 10);
 			rowNo = nodeWebTable().getTableRowNumForCellText(pipelineName, 1);
 		}
 		return rowNo;
 
 	}
-	
-	
+
 	public static void clickActionsIcon(int row, int col, int child) throws Exception {
 		Reporter.log("Action icon is clicked on");
 		nodeWebTable().clickIcon(row, col, child);
 	}
 
-	//method to click action icons for pipeline screen
-	
-	public static void clickActionsIcon(int row, int col, int child,int spanchild) throws Exception {
-		Reporter.log("Action icon is clicked on");		
+	// method to click action icons for pipeline screen
+
+	public static void clickActionsIcon(int row, int col, int child, int spanchild) throws Exception {
+		Reporter.log("Action icon is clicked on");
 		nodeWebTable().clickIcon(row, col, child, spanchild);
 	}
-	//method to click delete action icons for pipeline screen
+
+	// method to click delete action icons for pipeline screen
 	public static void clickDeleteIcon(int row, int col, int spanchild) throws Exception {
-		Reporter.log("Action icon is clicked on");		
-		nodeWebTable().clickDeleteIcon(row, col,spanchild);
+		Reporter.log("Action icon is clicked on");
+		nodeWebTable().clickDeleteIcon(row, col, spanchild);
 	}
 
 	public static void enterStagingLoc(String loc) throws Exception {
 		Action.enter(txtStagingLoc, loc);
+		btnAdd.click();
+	}
+
+	public static void clickOnSaveExitBtn() {
+		btnSaveExit.click();
 	}
 
 }
