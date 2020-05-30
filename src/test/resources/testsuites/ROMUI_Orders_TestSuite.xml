@@ -17,7 +17,6 @@
 			<class name="com.gsicommerce.romui.selenium.tests.OrdersTest" />
 			<parameter name="dataFile"
 				value="./src/test/resources/testdata/ordersData.json" />
-
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

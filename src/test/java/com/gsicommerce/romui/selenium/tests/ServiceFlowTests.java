@@ -10,7 +10,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.gsicommerce.romui.selenium.pages.ROMUIBasePage;
 import com.gsicommerce.romui.selenium.utilities.RomuiEnumValues;
 
-public class ServiceFlowTest extends ROMUIBasePage {
+public class ServiceFlowTests extends ROMUIBasePage {
 
 	@Test(enabled = true, priority = 1, description = "Add ServiceFlow")
 	public void testAddServiceFlow()

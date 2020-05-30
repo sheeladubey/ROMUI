@@ -8,7 +8,7 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.gsicommerce.romui.selenium.pages.ROMUIBasePage;
 
-public class OrdersTest extends ROMUIBasePage {
+public class OrdersTests extends ROMUIBasePage {
 
 	@Test(enabled = true, priority = 1, description = "to Verify search order by Order number")
 	public void testSearchOrderbyNumber() throws JsonParseException, JsonMappingException, IOException, Exception {
@@ -64,7 +64,33 @@ public class OrdersTest extends ROMUIBasePage {
 
 	}
 
-	@Test(enabled = false, priority = 1, description = "View Order Detail page")
+	@Test(enabled = true, priority = 5, description = "to Verify search order by Order Status")
+	public void testSearchOrderByOrderStatus() throws JsonParseException, JsonMappingException, IOException, Exception {
+
+		logger.info("Login credentials to be entered");
+		romuipages.loginPage().login(env.getUserName(), env.getPassword());
+		romuipages.homePage().clickOnLandingButton("Order Management");
+		logger.info("Order Management link is clicked on");
+		romuipages.orderMgmPage().clickOnOrders();
+		logger.info("Navigated to Orders page");
+		romuipages.ordersPage().searchOrderByStatus("StatusFrom", "StatusTo");
+
+	}
+
+	@Test(enabled = true, priority = 6, description = "to Verify edit search order ")
+	public void testEditSearch() throws JsonParseException, JsonMappingException, IOException, Exception {
+
+		logger.info("Login credentials to be entered");
+		romuipages.loginPage().login(env.getUserName(), env.getPassword());
+		romuipages.homePage().clickOnLandingButton("Order Management");
+		logger.info("Order Management link is clicked on");
+		romuipages.orderMgmPage().clickOnOrders();
+		logger.info("Navigated to Orders page");
+		romuipages.ordersPage().clickEditSearch();
+
+	}
+
+	@Test(enabled = false, priority = 7, description = "View Order Detail page")
 	public void testViewOrder() throws JsonParseException, JsonMappingException, IOException, Exception {
 
 		logger.info("Login credentials to be entered");

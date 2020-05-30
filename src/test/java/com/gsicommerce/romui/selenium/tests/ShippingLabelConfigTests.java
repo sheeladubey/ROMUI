@@ -11,7 +11,7 @@ import com.gsicommerce.romui.selenium.utilities.RomuiEnumValues;
 
 import junit.framework.Assert;
 
-public class ShippingLabelConfigTest extends ROMUIBasePage {
+public class ShippingLabelConfigTests extends ROMUIBasePage {
 
 	@Test(enabled = true, priority = 1, description = "Add Ship Label Config for Consignor")
 	public void testAddShipLabelConfigByConsignor() throws JsonParseException, JsonMappingException, IOException {

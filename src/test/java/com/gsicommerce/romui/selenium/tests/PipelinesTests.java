@@ -10,9 +10,9 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.gsicommerce.romui.selenium.pages.ROMUIBasePage;
 import com.gsicommerce.romui.selenium.utilities.RomuiEnumValues;
 
-public class PipelinesTest extends ROMUIBasePage {
+public class PipelinesTests extends ROMUIBasePage {
 
-	@Test(enabled = false, priority = 1, description = "Add Pipeline")
+	@Test(enabled = true, priority = 1, description = "Add Pipeline")
 	public void testAddPipeline() throws JsonParseException, JsonMappingException, IOException, Exception {
 
 		logger.info("Login credentials to be entered");
@@ -56,7 +56,7 @@ public class PipelinesTest extends ROMUIBasePage {
 
 	}
 
-	@Test(enabled = true, priority = 6, invocationCount = 1, description = "Edit Pipeline")
+	@Test(enabled = false, priority = 6, invocationCount = 1, description = "Edit Pipeline")
 	public void testEditPipeline() throws JsonParseException, JsonMappingException, IOException, Exception {
 
 		logger.info("Login credentials to be entered");
@@ -65,11 +65,28 @@ public class PipelinesTest extends ROMUIBasePage {
 		logger.info("Order Management link is clicked on");
 		romuipages.orderMgmPage().clickOnPipeline();
 		logger.info("Navigated to Pipeline page");
-		romuipages.pipeLinesPage().EditPipeline();
+		romuipages.pipeLinesPage().editPipeline();
 		logger.info("Edit link is clicked on to enter the data and Clicked on Save btn");
 		logger.info("Verify if Edit pipeline success message is displayed");
 		Assert.assertEquals(romuipages.pipeLinesPage().txtSuccessMsg.getText(),
 				RomuiEnumValues.PIPELINE_EDIT.getMessage(), "Pipelne hasn't been updated");
+
+	}
+	
+	@Test(enabled = false, priority = 6, invocationCount = 1, description = "Edit Pipeline")
+	public void testeditPipelineActive() throws JsonParseException, JsonMappingException, IOException, Exception {
+
+		logger.info("Login credentials to be entered");
+		romuipages.loginPage().login(env.getUserName(), env.getPassword());
+		romuipages.homePage().clickOnLandingButton("Order Management");
+		logger.info("Order Management link is clicked on");
+		romuipages.orderMgmPage().clickOnPipeline();
+		logger.info("Navigated to Pipeline page");
+		romuipages.pipeLinesPage().editPipelineActive();
+		logger.info("Edit link is clicked on to enter the data and Clicked on Save btn");
+		logger.info("Verify if Edit pipeline success message is displayed");
+	/*	Assert.assertEquals(romuipages.pipeLinesPage().txtSuccessMsg.getText(),
+				RomuiEnumValues.PIPELINE_EDIT.getMessage(), "Pipelne hasn't been updated"); */
 
 	}
 
