@@ -180,5 +180,24 @@ public class CommonElementsPage {
 	public static void clickOnSaveExitBtn() {
 		btnSaveExit.click();
 	}
+	
+	public static int getRoleRowNum(String userId) throws Exception {
+		selectLimitPerPage();
+		Reporter.log("page limit drop down value is selected");
+		int rowNo = 0;
+		rowNo = nodeWebTable().getTableRowNumForCellText(userId, 1);
+		while (rowNo <= 0) {
+			CommonElementsPage.clickNextPage();
+			Common.waitForElement(driver, nodeWebTable, 10);
+			rowNo = nodeWebTable().getTableRowNumForCellText(userId, 1);
+		}
+		return rowNo;		
+
+	}
+	public static void clickActionsIconDelete(int row, int col, int child, int spanchild) throws Exception {
+		Reporter.log("Action icon is clicked on");
+		nodeWebTable().clickIconDelete(row, col, child, spanchild);
+	}
+
 
 }

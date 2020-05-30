@@ -222,5 +222,17 @@ public class Webtable {
 		}
 		return rowNum;
 	}
+	
+	public void clickIconDelete(int row, int col, int child,int spanchild) {
+		if (child == 0) {
+			_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/button/span["+ spanchild +"]", row, col);
+		} else {
+			_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/button[" + child +"]/span["+ spanchild +"]", row, col);
+		}
+		
+		Table.findElement(By.xpath(_xpath)).click();
+
+	}
+
 
 }
