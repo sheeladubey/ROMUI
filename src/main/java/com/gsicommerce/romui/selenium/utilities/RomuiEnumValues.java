@@ -13,7 +13,20 @@ public enum RomuiEnumValues {
 	SERVICEFLOW_PROCESS_HEADER("Service Flow Processes"),
 	SERVICE_GROUP_CONFIG("Heads up! Service Group Configurations Updated Successfully"),
 	SHIPPING_LABEL_CONFIG_ADD("Heads up! Shipping Label Configuration created successfully."),
-	SHIPPNG_LABEL_CONFIG_EDIT("Heads up! Shipping Label Configuration updated successfully.");
+	SHIPPNG_LABEL_CONFIG_EDIT("Heads up! Shipping Label Configuration updated successfully."),
+	ORDER_NOTFOUND("Heads up! No Results Found"),
+	USER_SAVE("Heads up! User Details Successfully Saved"),
+	ROLE_SAVE("Heads up! Role successfully created!"), 
+	USER_FOUND("1 User Found"), 
+	ROLE_ADD_HEADER("Add Role"),
+	ROLE_SUMMARY_HEADER("Manage Roles"),
+	USER_NOTFOUND("Heads up! No Users Found"),
+	USER_EDIT("Heads up! User Details Successfully Saved"),
+	USER_DELETE("Heads up! User Successfully Deleted"),
+	USER_VALIDATION("Oh snap! Please check your form for validation errors"),
+	ROLE_EDIT("Heads up! Role successfully updated!"),
+	ROLE_VALIDATION("Heads up! Please ensure you have selected at least one permission."),
+	ROLE_DELETE("Heads up! Role successfully deleted!");	
 
 	private String updateMsg;
 

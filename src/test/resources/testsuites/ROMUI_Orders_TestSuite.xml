@@ -12,9 +12,9 @@
 	<parameter name="adminPasswd" value="Password123@" />
 	<parameter name="waitPeriod" value="5" />
 
-	<test thread-count="5" name="OrdersTest">
+	<test thread-count="5" name="OrdersTests">
 		<classes>
-			<class name="com.gsicommerce.romui.selenium.tests.OrdersTest" />
+			<class name="com.gsicommerce.romui.selenium.tests.OrdersTests" />
 			<parameter name="dataFile"
 				value="./src/test/resources/testdata/ordersData.json" />
 		</classes>

@@ -1,14 +1,23 @@
 {
-    "SearchOrderBy":["Order Number","Fulfillment Order Number","Customer Name","Email"],
-	"SearchCriteria_OrderNumber":"Order Number",
-	"SearchCriteria_Email":"Email",
-	"SearchCriteria_CustomerName":"Customer Name",
-	"SearchCriteria_FulfillmentOrderNumner":"Fulfillment Order Number",
-	"OrderID":"00025896712416DC",
-	"FulFillmentOrderID":"100053390354000",
-	"EmailID":"RadialNRFCustomer1@gmail.com",
-	"Customer_FirstName":"Richard",
-	"Customer_LastName":"Doyle",
-	"Start_Date":"",
-	"End_Date":""
-	}
+	"SearchOrderBy": [
+		"Order Number",
+		"Fulfillment Order Number",
+		"Customer Name",
+		"Email",
+		"Order Status"
+	],
+	"SearchCriteria_OrderNumber": "Order Number",
+	"SearchCriteria_Email": "Email",
+	"SearchCriteria_CustomerName": "Customer Name",
+	"SearchCriteria_FulfillmentOrderNumner": "Fulfillment Order Number",
+	"SearchCriteria_OrderStatus":"Order Status",
+	"OrderID": "00025896712416DC",
+	"FulFillmentOrderID": "100053390354000",
+	"EmailID": "RadialNRFCustomer1@gmail.com",
+	"Customer_FirstName": "Richard",
+	"Customer_LastName": "Doyle",
+	"Start_Date": "",
+	"End_Date": "",
+	"OrderStatusFrom": "Created",
+	"OrderStatusTo": "Created"
+}

@@ -13,10 +13,10 @@
 	<parameter name="waitPeriod" value="5" />
 
 
-	<test thread-count="5" name="ShippingLabelConfigTest">
+	<test thread-count="5" name="ShippingLabelConfigTests">
 		<classes>
 			<class
-				name="com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTest" />
+				name="com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests" />
 			<parameter name="dataFile"
 				value="./src/test/resources/testdata/ShippingLabelConfigData.json" />
 		</classes>

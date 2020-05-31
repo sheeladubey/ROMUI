@@ -27,6 +27,9 @@ public class OrdersData {
 	@JsonProperty("SearchCriteria_FulfillmentOrderNumner")
 	String SearchCriteria_FulfillmentOrderNumner;
 	
+	@JsonProperty("SearchCriteria_OrderStatus")
+	String SearchCriteria_OrderStatus;
+	
 	@JsonProperty("OrderID")
 	String OrderID;
 	
@@ -48,6 +51,12 @@ public class OrdersData {
 	@JsonProperty("End_Date")
 	String End_Date;
 	
+	@JsonProperty("OrderStatusFrom")
+	String OrderStatusFrom;
+	
+	@JsonProperty("OrderStatusTo")
+	String OrderStatusTo;
+	
 	
 	public List<String> getSearchOrderBy() {
 		return SearchOrderBy;
@@ -68,6 +77,10 @@ public class OrdersData {
 	
 	public String getSearchCriteria_FulfillmentOrderNumner() {
 		return SearchCriteria_FulfillmentOrderNumner;
+	}
+	
+	public String getSearchCriteria_OrderStatus() {
+		return SearchCriteria_OrderStatus;
 	}
 	
 	public String getOrderID() {
@@ -97,6 +110,14 @@ public class OrdersData {
 	public String getEndDate() {	
 		return End_Date;
 	}
+	
+	public String getOrderStatusFrom() {	
+		return OrderStatusFrom;
+	}
+	
+	public String getOrderStatusTo() {	
+		return OrderStatusTo;
+	}	
 	
 	public static OrdersData get(String filename) throws JsonParseException, JsonMappingException, IOException{
         ObjectMapper mapper = new ObjectMapper();

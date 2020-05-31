@@ -12,9 +12,9 @@
 	<parameter name="adminPasswd" value="Password123@" />
 	<parameter name="waitPeriod" value="5" />
 
-	<test thread-count="5" name="OrdersTest">
+	<test thread-count="5" name="OrdersTests">
 		<classes>
-			<class name="com.gsicommerce.romui.selenium.tests.OrdersTest" />
+			<class name="com.gsicommerce.romui.selenium.tests.OrdersTests" />
 			<parameter name="dataFile"
 				value="./src/test/resources/testdata/ordersData.json" />
 		</classes>
@@ -39,28 +39,28 @@
 		</classes>
 	</test>
 
-	<test thread-count="5" name="PipelineTest">
+	<test thread-count="5" name="PipelineTests">
 		<classes>
 			<class
-				name="com.gsicommerce.romui.selenium.tests.PipelinesTest" />
+				name="com.gsicommerce.romui.selenium.tests.PipelinesTests" />
 			<parameter name="dataFile"
 				value="./src/test/resources/testdata/pipelineData.json" />
 		</classes>
 	</test> <!-- Test -->
 
-	<test thread-count="5" name="ServiceFlowTest">
+	<test thread-count="5" name="ServiceFlowTests">
 		<classes>
 			<class
-				name="com.gsicommerce.romui.selenium.tests.ServiceFlowTest" />
+				name="com.gsicommerce.romui.selenium.tests.ServiceFlowTests" />
 			<parameter name="dataFile"
 				value="./src/test/resources/testdata/serviceflowData.json" />
 		</classes>
 	</test> <!-- Test -->
 
-	<test thread-count="5" name="ShippingLabelConfigTest">
+	<test thread-count="5" name="ShippingLabelConfigTests">
 		<classes>
 			<class
-				name="com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTest" />
+				name="com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests" />
 			<parameter name="dataFile"
 				value="./src/test/resources/testdata/ShippingLabelConfigData.json" />
 		</classes>

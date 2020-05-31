@@ -38,7 +38,7 @@ public class ROMUIBasePage {
 		if (!c.isSuccess()) {
 			Browser.screenShot(driver, env, c);
 		}
-		Browser.reset(driver);
+		//Browser.reset(driver);
 
 	}
 }

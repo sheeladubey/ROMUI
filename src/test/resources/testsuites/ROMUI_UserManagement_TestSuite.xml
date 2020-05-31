@@ -18,10 +18,10 @@
 
 	<parameter name="waitPeriod" value="5" />
 
-	<test thread-count="5" name="UserManagementTest">
+	<test thread-count="5" name="UserManagementTests">
 		<classes>
 			<class
-				name="com.gsicommerce.romui.selenium.tests.UserManagementTest" />
+				name="com.gsicommerce.romui.selenium.tests.UserManagementTests" />
 			<parameter name="dataFile"
 				value="./src/test/resources/testdata/userManagementData.json" />
 		</classes>

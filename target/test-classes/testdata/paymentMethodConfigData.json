@@ -1,5 +1,5 @@
 {
-	"paymentMethodCode":"Credit Card",
+	"paymentMethodCode": ["Stored Value Card","Credit Card","PrePaid Card","PayPal"],
 	"description":"Automation - Edit Payment Method Configuration details",
 	"minWaitTime":"100",
 	"autoExpiry":"100",

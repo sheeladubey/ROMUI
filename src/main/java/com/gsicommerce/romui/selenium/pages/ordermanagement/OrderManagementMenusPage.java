@@ -11,6 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.gsicommerce.romui.selenium.testdata.Environment;
 import com.gsicommerce.romui.selenium.utilities.Action;
+import com.gsicommerce.romui.selenium.utilities.Common;
 
 public class OrderManagementMenusPage {
 	WebDriver driver;
@@ -274,15 +275,21 @@ public class OrderManagementMenusPage {
 
 	public void clickOnUsers() {
 		btnMainMenu.click();
+		Common.waitForElementPresent(driver, lkOmniAdministration, 06);
 		lkOmniAdministration.click();
+		Common.waitForElementPresent(driver, lkUserMgmt, 06);
 		lkUserMgmt.click();
+		Common.waitForElementPresent(driver, lkUsers, 06);
 		lkUsers.click();
 	}
 
 	public void clickOnRoles() {
 		btnMainMenu.click();
+		Common.waitForElementPresent(driver, lkOmniAdministration, 06);
 		lkOmniAdministration.click();
+		Common.waitForElementPresent(driver, lkUserMgmt, 06);
 		lkUserMgmt.click();
+		Common.waitForElementPresent(driver, lkRoles, 06);
 		lkRoles.click();
 	}
 
@@ -448,5 +455,4 @@ public class OrderManagementMenusPage {
 		lkServiceFlows.click();
 	}
 
-	
 }

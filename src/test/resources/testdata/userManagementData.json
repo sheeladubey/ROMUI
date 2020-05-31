@@ -1,0 +1,13 @@
+{
+	"roleName": "TestRole",
+	"roleDescription": "Test_Description",
+	"userPassword": "Testing@123",
+	"fName": "Test",
+	"lName": "Test_",
+	"userPhone": "1256",
+	"userEmail": "AREMANDAE@RADIAL.COM",
+	"fNameSearch": "Test",
+	"lNameSearch": "DOE",
+	"userResetPassword": "Test@12345",
+	"invaliduserId": "null"
+}
