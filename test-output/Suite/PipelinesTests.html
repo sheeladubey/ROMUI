@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>PipelinesTests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun May 31 02:27:22 EDT 2020</td>
+<td>Started on:</td><td>Sun May 31 22:25:06 EDT 2020</td>
 </tr>
-<tr><td>Total time:</td><td>140 seconds (140948 ms)</td>
+<tr><td>Total time:</td><td>107 seconds (107411 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,29 +75,69 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.gsicommerce.romui.selenium.tests.PipelinesTests.testeditPipelineActive()'><b>testeditPipelineActive</b><br>Test class: com.gsicommerce.romui.selenium.tests.PipelinesTests<br>Test method: Edit Pipeline Active Status<br/>
-<a href="#Output-1092619788" onClick='toggleBox("Output-1092619788", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.gsicommerce.romui.selenium.tests.PipelinesTests.testPipelineFormValidation()'><b>testPipelineFormValidation</b><br>Test class: com.gsicommerce.romui.selenium.tests.PipelinesTests<br>Test method: To Verify Delete Pipeline feature<br/>
+<a href="#Output-711487917" onClick='toggleBox("Output-711487917", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1092619788" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1092619788">
+<a href="#Output-711487917" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-711487917">
 class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')<br/>
-Action icon is clicked on<br/>
-Expected condition failed: waiting for presence of element located by: By.id:  (tried for 10 second(s) with 500 milliseconds interval)<br/>
-Action icon is clicked on<br/>
-Expected condition failed: waiting for presence of element located by: By.id:  (tried for 5 second(s) with 500 milliseconds interval)<br/>
 </div>
 </td>
-<td><div><pre>java.lang.AssertionError: Pipeline has not been Edited expected [SheelaaddpipelineAuto639265] but found [false]
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.PipelinesPage.editPipelineActive(PipelinesPage.java:323)
-	at com.gsicommerce.romui.selenium.tests.PipelinesTests.testeditPipelineActive(PipelinesTests.java:85)
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;[data-pipeline-submit-button=&apos;skip&apos;][type=&apos;submit&apos;]&quot;}
+  (Session info: chrome=83.0.4103.61)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.133.147&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.61, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55066}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 2726b5cfaa52c8a330b40d55897a06f3
+*** Element info: {Using=css selector, value=[data-pipeline-submit-button=&apos;skip&apos;][type=&apos;submit&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.click(Unknown Source)
+	at com.gsicommerce.romui.selenium.pages.ordermanagement.PipelinesPage.pipelineFormValidation(PipelinesPage.java:487)
+	at com.gsicommerce.romui.selenium.tests.PipelinesTests.testPipelineFormValidation(PipelinesTests.java:189)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1092619788", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1092619788'><pre>java.lang.AssertionError: Pipeline has not been Edited expected [SheelaaddpipelineAuto639265] but found [false]
-	at org.testng.Assert.fail(Assert.java:97)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.PipelinesPage.editPipelineActive(PipelinesPage.java:323)
-	at com.gsicommerce.romui.selenium.tests.PipelinesTests.testeditPipelineActive(PipelinesTests.java:85)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace711487917", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace711487917'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;[data-pipeline-submit-button=&apos;skip&apos;][type=&apos;submit&apos;]&quot;}
+  (Session info: chrome=83.0.4103.61)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.133.147&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.61, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55066}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 2726b5cfaa52c8a330b40d55897a06f3
+*** Element info: {Using=css selector, value=[data-pipeline-submit-button=&apos;skip&apos;][type=&apos;submit&apos;]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.click(Unknown Source)
+	at com.gsicommerce.romui.selenium.pages.ordermanagement.PipelinesPage.pipelineFormValidation(PipelinesPage.java:487)
+	at com.gsicommerce.romui.selenium.tests.PipelinesTests.testPipelineFormValidation(PipelinesTests.java:189)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -127,8 +167,28 @@ Expected condition failed: waiting for presence of element located by: By.id:  (
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>132</td>
-<td>com.gsicommerce.romui.selenium.tests.PipelinesTests@22555ebf</td></tr>
+<td>19</td>
+<td>com.gsicommerce.romui.selenium.tests.PipelinesTests@702657cc</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.gsicommerce.romui.selenium.tests.PipelinesTests.testAddPipeline()'><b>testAddPipeline</b><br>Test class: com.gsicommerce.romui.selenium.tests.PipelinesTests<br>Test method: To Verify Add Pipeline feature<br/>
+<a href="#Output-1540832538" onClick='toggleBox("Output-1540832538", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1540832538" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1540832538">
+class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')<br/>
+</div>
+</td>
+<td></td>
+<td>72</td>
+<td>com.gsicommerce.romui.selenium.tests.PipelinesTests@702657cc</td></tr>
 </table><p>
 </body>
 </html>

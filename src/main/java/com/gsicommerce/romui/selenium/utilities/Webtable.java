@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,7 +14,7 @@ public class Webtable {
 
 	private WebDriver _driver;
 	public Collection<WebElement> ColCollection;
-	public Collection<WebElement> RowCollection;
+	public static Collection<WebElement> RowCollection;
 	public static WebElement Table;
 	private static String _xpath = "";
 
@@ -26,7 +25,7 @@ public class Webtable {
 		RowCollection = Table.findElements(By.xpath(".//tr")); //// div//table//tbody
 	}
 
-	public int GetNumOfRows() {
+	public static int GetNumOfRows() {
 		return RowCollection.size();
 	}
 
@@ -169,7 +168,7 @@ public class Webtable {
 	public void clickIcon(int row, int col, int child, int spanchild) throws InterruptedException {
 
 		if (child == 0) {
-			_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/a", row, col);
+			_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/a/span[" + spanchild + "]", row, col);
 		} else {
 			_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/a[" + child + "]/span[" + spanchild + "]",
 					row, col);

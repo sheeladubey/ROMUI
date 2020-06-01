@@ -1,50 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="6" total="7" passed="0" failed="1" skipped="0">
+<testng-results ignored="7" total="8" passed="0" failed="1" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')]]>
     </line>
-    <line>
-      <![CDATA[Action icon is clicked on]]>
-    </line>
-    <line>
-      <![CDATA[Expected condition failed: waiting for presence of element located by: By.id:  (tried for 10 second(s) with 500 milliseconds interval)]]>
-    </line>
-    <line>
-      <![CDATA[Action icon is clicked on]]>
-    </line>
-    <line>
-      <![CDATA[Expected condition failed: waiting for presence of element located by: By.id:  (tried for 5 second(s) with 500 milliseconds interval)]]>
-    </line>
   </reporter-output>
-  <suite started-at="2020-05-31T02:27:22 EDT" name="Suite" finished-at="2020-05-31T02:29:42 EDT" duration-ms="140948">
+  <suite started-at="2020-06-01T01:25:23 EDT" name="Suite" finished-at="2020-06-01T01:25:52 EDT" duration-ms="28728">
     <groups>
     </groups>
-    <test started-at="2020-05-31T02:27:22 EDT" name="PipelinesTests" finished-at="2020-05-31T02:29:42 EDT" duration-ms="140948">
-      <class name="com.gsicommerce.romui.selenium.tests.PipelinesTests">
-        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.PipelinesTests@22555ebf]" started-at="2020-05-31T02:27:22 EDT" name="setup" finished-at="2020-05-31T02:27:29 EDT" duration-ms="7778" status="PASS">
+    <test started-at="2020-06-01T01:25:23 EDT" name="ShippingLabelConfigTests" finished-at="2020-06-01T01:25:52 EDT" duration-ms="28728">
+      <class name="com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests">
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@54d9d12d]" started-at="2020-06-01T01:25:23 EDT" name="setup" finished-at="2020-06-01T01:25:31 EDT" duration-ms="8231" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@47d6d2a7]]>
+                <![CDATA[org.testng.TestRunner@14c053c6]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testeditPipelineActive()[pri:6, instance:com.gsicommerce.romui.selenium.tests.PipelinesTests@22555ebf]" started-at="2020-05-31T02:27:29 EDT" name="testeditPipelineActive" description="Edit Pipeline Active Status" finished-at="2020-05-31T02:29:42 EDT" duration-ms="132690" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Pipeline has not been Edited expected [SheelaaddpipelineAuto639265] but found [false]]]>
-            </message>
+        <test-method signature="testeditShipLabelConfigByFedex()[pri:7, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@54d9d12d]" started-at="2020-06-01T01:25:31 EDT" name="testeditShipLabelConfigByFedex" description="Edit Ship Label Config for Fedex" finished-at="2020-06-01T01:25:51 EDT" duration-ms="19947" status="FAIL">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Pipeline has not been Edited expected [SheelaaddpipelineAuto639265] but found [false]
-at org.testng.Assert.fail(Assert.java:97)
-at org.testng.Assert.assertEqualsImpl(Assert.java:136)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at com.gsicommerce.romui.selenium.pages.ordermanagement.PipelinesPage.editPipelineActive(PipelinesPage.java:323)
-at com.gsicommerce.romui.selenium.tests.PipelinesTests.testeditPipelineActive(PipelinesTests.java:85)
+              <![CDATA[java.lang.NullPointerException
+at com.gsicommerce.romui.selenium.utilities.Webtable.getTableRowNumForCellText(Webtable.java:217)
+at com.gsicommerce.romui.selenium.pages.ordermanagement.CommonElementsPage.getRowNum(CommonElementsPage.java:147)
+at com.gsicommerce.romui.selenium.pages.ordermanagement.ShippingLabelConfigPage.editShippingLabelConfigByFedex(ShippingLabelConfigPage.java:292)
+at com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests.testeditShipLabelConfigByFedex(ShippingLabelConfigTests.java:101)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -75,37 +59,25 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
             <line>
               <![CDATA[class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')]]>
             </line>
-            <line>
-              <![CDATA[Action icon is clicked on]]>
-            </line>
-            <line>
-              <![CDATA[Expected condition failed: waiting for presence of element located by: By.id:  (tried for 10 second(s) with 500 milliseconds interval)]]>
-            </line>
-            <line>
-              <![CDATA[Action icon is clicked on]]>
-            </line>
-            <line>
-              <![CDATA[Expected condition failed: waiting for presence of element located by: By.id:  (tried for 5 second(s) with 500 milliseconds interval)]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- testeditPipelineActive -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.PipelinesTests@22555ebf]" started-at="2020-05-31T02:29:42 EDT" name="tearDown" finished-at="2020-05-31T02:29:42 EDT" duration-ms="445" status="PASS">
+        </test-method> <!-- testeditShipLabelConfigByFedex -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@54d9d12d]" started-at="2020-06-01T01:25:51 EDT" name="tearDown" finished-at="2020-06-01T01:25:52 EDT" duration-ms="523" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testeditPipelineActive status=FAILURE method=PipelinesTests.testeditPipelineActive()[pri:6, instance:com.gsicommerce.romui.selenium.tests.PipelinesTests@22555ebf] output=class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')]]]>
+                <![CDATA[[TestResult name=testeditShipLabelConfigByFedex status=FAILURE method=ShippingLabelConfigTests.testeditShipLabelConfigByFedex()[pri:7, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@54d9d12d] output=class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.gsicommerce.romui.selenium.tests.PipelinesTests -->
-    </test> <!-- PipelinesTests -->
+      </class> <!-- com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests -->
+    </test> <!-- ShippingLabelConfigTests -->
   </suite> <!-- Suite -->
 </testng-results>

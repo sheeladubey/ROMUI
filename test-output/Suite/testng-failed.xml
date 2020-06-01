@@ -9,16 +9,16 @@
   <listeners>
     <listener class-name="com.gsicommerce.romui.selenium.utilities.ExtentReporterListener"/>
   </listeners>
-  <test thread-count="5" name="PipelinesTests(failed)">
-    <parameter name="dataFile" value="./src/test/resources/testdata/pipelineData.json"/>
+  <test thread-count="5" name="ShippingLabelConfigTests(failed)">
+    <parameter name="dataFile" value="./src/test/resources/testdata/ShippingLabelConfigData.json"/>
     <classes>
-      <class name="com.gsicommerce.romui.selenium.tests.PipelinesTests">
+      <class name="com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests">
         <methods>
-          <include name="testeditPipelineActive"/>
           <include name="tearDown"/>
           <include name="setup"/>
+          <include name="testeditShipLabelConfigByFedex"/>
         </methods>
-      </class> <!-- com.gsicommerce.romui.selenium.tests.PipelinesTests -->
+      </class> <!-- com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests -->
     </classes>
-  </test> <!-- PipelinesTests(failed) -->
+  </test> <!-- ShippingLabelConfigTests(failed) -->
 </suite> <!-- Failed suite [Suite] -->

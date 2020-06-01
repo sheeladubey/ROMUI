@@ -3,19 +3,21 @@ package com.gsicommerce.romui.selenium.pages.ordermanagement;
 import java.io.IOException;
 import java.util.List;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.gsicommerce.romui.selenium.testdata.Environment;
 import com.gsicommerce.romui.selenium.testdata.ShippingLabelConfigData;
 import com.gsicommerce.romui.selenium.utilities.Action;
+import com.gsicommerce.romui.selenium.utilities.RomuiEnumValues;
+import com.gsicommerce.romui.selenium.utilities.Webtable;
 
 public class ShippingLabelConfigPage {
 
@@ -23,6 +25,10 @@ public class ShippingLabelConfigPage {
 	Environment env;
 
 	private ShippingLabelConfigData shipConfigdata;
+	private static String serviceProviderConfig;
+	private static String serviceProviderNameFedex;
+	private static int rowNo;
+	private static int rowNo1;
 
 	public ShippingLabelConfigPage(WebDriver driver, Environment env) {
 
@@ -122,7 +128,7 @@ public class ShippingLabelConfigPage {
 
 	@FindBy(how = How.XPATH, using = ".//option")
 	@CacheLookup
-	private List<WebElement> drpdwnselectServiceProvider;
+	private List<WebElement> StateSearchSelectDropDownOption;
 
 	@FindBy(how = How.CSS, using = ".alert-info")
 	@CacheLookup
@@ -135,13 +141,16 @@ public class ShippingLabelConfigPage {
 	@FindBy(how = How.CSS, using = "[href='/en/sellers/TMSEB2/shipping_label_configurations/new?provider=CONSIGNER']")
 	@CacheLookup
 	public WebElement btnAdd;
+	
+	@FindBy(how = How.CSS, using = ".alert-danger")
+	private WebElement txtformvalidationError;
 
-	public void addShippingLabelConfig(int index) throws JsonParseException, JsonMappingException, IOException {
+	public void addShippingLabelConfig(int index) throws JsonParseException, JsonMappingException, IOException ,Exception{
 		shipConfigdata = ShippingLabelConfigData.get(env.getFileLocation());
-		// CommonElementsPage.clickOnAddBtn();
 		Action.waitForElementToBeClickable(driver, btnAdd, 10);
-		btnAdd.click();
-		Action.selectByVisibleText(drpdwnServiceProviderName, shipConfigdata.getserviceProviderName().get(index));
+		Action.clickElementJavaScipt(btnAdd);
+		serviceProviderConfig=shipConfigdata.getserviceProviderName().get(index);
+		Action.selectByVisibleText(drpdwnServiceProviderName, serviceProviderConfig);
 		Action.enter(txtdwnSellerDescription, shipConfigdata.getsellerDescription());
 		Action.selectByIndex(drpdwnDefaultLabelStrategy, 0);
 		Action.selectByIndex(drpdwnCountry, 3);
@@ -152,21 +161,30 @@ public class ShippingLabelConfigPage {
 		Action.enter(txtAddressLine2, shipConfigdata.getAddressLine2());
 		// Action.enter(txtAddressLine2, shipConfigdata.getAddressLine3());
 		Action.enter(txtCity, shipConfigdata.getCity());
-		// Action.enter(txtState, shipConfigdata.getState());
-		drpdwnState.click();
-		Action.selectByVisibleText(drpdwnState, shipConfigdata.getState());
+	    drpdwnState.click();
+		selectStateDropdown(shipConfigdata.getState());
+		//Action.selectByVisibleText(drpdwnState, shipConfigdata.getState());
 		Action.enter(txtZipCode, shipConfigdata.getZipcode());
 		Action.waitForElementToBeClickable(driver, btnSave, 20);
 		// CommonElementsPage.clickOnSaveBtn();
 		btnSave.click();
+		rowNo=CommonElementsPage.getRowNum(serviceProviderConfig);
+		System.out.println("Selected row is :"+CommonElementsPage.getRowNum(serviceProviderConfig));
+		System.out.println("Row text selected:"+Webtable.getTableCellText(rowNo, 1));
+		if(Webtable.getTableCellText(rowNo, 1).equals("CONSIGNOR"))
+		{
+			CommonElementsPage.clickActionsIcon(rowNo, 3, 0, 1);
+		}
+		
 	}
 
-	public void addShippingLabelConfigByFedex(int index) throws JsonParseException, JsonMappingException, IOException {
+	public void addShippingLabelConfigByFedex(int index) throws JsonParseException, JsonMappingException, IOException ,Exception{
 		shipConfigdata = ShippingLabelConfigData.get(env.getFileLocation());
 		// CommonElementsPage.clickOnAddBtn();
 		Action.waitForElementToBeClickable(driver, btnAdd, 10);
 		btnAdd.click();
-		Action.selectByVisibleText(drpdwnServiceProviderName, shipConfigdata.getserviceProviderName().get(index));
+		serviceProviderNameFedex=shipConfigdata.getserviceProviderName().get(index);
+		Action.selectByVisibleText(drpdwnServiceProviderName, serviceProviderNameFedex);
 		Action.enter(txtdwnSellerDescription, shipConfigdata.getsellerDescription());
 		Action.selectByIndex(drpdwnDefaultLabelStrategy, 0);
 		Action.selectByIndex(drpdwnCountry, 3);
@@ -175,16 +193,25 @@ public class ShippingLabelConfigPage {
 		Action.scrollDown("500");
 		Action.enter(txtAddressLine1, shipConfigdata.getAddressLine1());
 		Action.enter(txtAddressLine2, shipConfigdata.getAddressLine2());
-		Action.enter(txtAddressLine2, shipConfigdata.getAddressLine3());
+		//Action.enter(txtAddressLine2, shipConfigdata.getAddressLine3());
 		Action.enter(txtCity, shipConfigdata.getCity());
 		// Action.enter(txtState, shipConfigdata.getState());
-		Action.selectByValue(drpdwnState, shipConfigdata.getState());
+		//Action.selectByValue(drpdwnState, shipConfigdata.getState());
+		drpdwnState.click();
+		selectStateDropdown(shipConfigdata.getState());
 		Action.enter(txtZipCode, shipConfigdata.getZipcode());
 		Action.waitForElementToBeClickable(driver, btnAddCarrier, 10);
 		btnAddCarrier.click();
+		Action.scrollingToBottomofAPage();
+		Action.waitForElementToBeClickable(driver, drpdwnServiceName, 10);
+		drpdwnServiceName.click();
 		Action.selectByIndex(drpdwnServiceName, 1);
+		Action.waitForElementToBeClickable(driver, drpdwnCarrierCode, 10);
+		drpdwnCarrierCode.click();
 		Action.selectByIndex(drpdwnCarrierCode, 1);
+		Action.waitForElementToBeClickable(driver, txtParentAccountNumber, 10);
 		Action.enter(txtParentAccountNumber, shipConfigdata.getparentAccountNumber());
+		Action.waitForElementToBeClickable(driver, txtParentKey, 10);
 		Action.enter(txtParentKey, shipConfigdata.getparentKey());
 		Action.enter(txtParentPassword, shipConfigdata.getparentPassword());
 		Action.enter(txtSignatureOption, shipConfigdata.getsignatureOption());
@@ -192,7 +219,17 @@ public class ShippingLabelConfigPage {
 		Action.enter(txtParentMeterNumber, shipConfigdata.getparentMeterNumber());
 		Action.waitForElementToBeClickable(driver, btnSave, 10);
 		// CommonElementsPage.clickOnSaveBtn();
-		btnSave.click();
+	  //btnSave.click();
+		Action.clickElementJavaScipt(btnSave);
+		Action.waitForElementToBeVisible(driver, txtSuccessMsg, 10);
+		System.out.println("Success message:" +txtSuccessMsg.getText());
+		rowNo1=CommonElementsPage.getRowNum(serviceProviderNameFedex);
+		System.out.println("Selected row is :"+CommonElementsPage.getRowNum(serviceProviderNameFedex));
+		System.out.println("Row text selected:"+Webtable.getTableCellText(rowNo1, 1));
+		if(Webtable.getTableCellText(rowNo1, 1).equals("FEDEX"))
+		{
+			CommonElementsPage.clickActionsIcon(rowNo1, 3, 0, 1);
+		}
 	}
 
 	public void addShippingLabelConfigByUPS(int index) throws JsonParseException, JsonMappingException, IOException {
@@ -211,20 +248,30 @@ public class ShippingLabelConfigPage {
 		Action.enter(txtAddressLine2, shipConfigdata.getAddressLine2());
 		Action.enter(txtCity, shipConfigdata.getCity());
 		// Action.enter(txtState, shipConfigdata.getState());
-		Action.selectByValue(drpdwnState, shipConfigdata.getState());
+		//Action.selectByValue(drpdwnState, shipConfigdata.getState());
+		drpdwnState.click();
+		selectStateDropdown(shipConfigdata.getState());
 		Action.enter(txtZipCode, shipConfigdata.getZipcode());
 		Action.waitForElementToBeClickable(driver, btnAddCarrier, 10);
 		btnAddCarrier.click();
+		Action.scrollingToBottomofAPage();
+		Action.waitForElementToBeClickable(driver, drpdwnServiceName, 10);
+		drpdwnServiceName.click();
 		Action.selectByIndex(drpdwnServiceName, 1);
+		Action.waitForElementToBeClickable(driver, drpdwnCarrierCode, 10);
 		Action.selectByIndex(drpdwnCarrierCode, 1);
 		Action.waitForElementToBeClickable(driver, btnSave, 10);
-		btnSave.click();
+		Action.clickElementJavaScipt(btnSave);
 		// CommonElementsPage.clickOnSaveBtn();
+		Action.waitForElementToBeVisible(driver, txtSuccessMsg, 10);
+		System.out.println("Success message:" +txtSuccessMsg.getText());
+
 	}
 
 	public void editShippingLabelConfigByUPS(int index) throws JsonParseException, JsonMappingException, IOException {
 		shipConfigdata = ShippingLabelConfigData.get(env.getFileLocation());
 		btnEditShippingLblConfig.click();
+		
 		Action.selectByVisibleText(drpdwnServiceProviderName, shipConfigdata.getserviceProviderName().get(index));
 		Action.enter(txtdwnSellerDescription, shipConfigdata.getsellerDescription());
 		Action.selectByIndex(drpdwnDefaultLabelStrategy, 0);
@@ -241,23 +288,33 @@ public class ShippingLabelConfigPage {
 		btnSave.click();
 	}
 
-	public void editShippingLabelConfigByFedex(int index) throws JsonParseException, JsonMappingException, IOException {
+	public void editShippingLabelConfigByFedex(int index) throws JsonParseException, JsonMappingException, IOException,Exception {
+		rowNo1=CommonElementsPage.getRowNum(serviceProviderNameFedex);
+		if(Webtable.getTableCellText(rowNo1, 1).equals("FEDEX"))
+		{
+			CommonElementsPage.clickActionsIcon(rowNo1, 3, 0, 1);
+		}
 		shipConfigdata = ShippingLabelConfigData.get(env.getFileLocation());
-		btnEditShippingLblConfig.click();
-		Action.selectByVisibleText(drpdwnServiceProviderName, shipConfigdata.getserviceProviderName().get(index));
+		
+		//Action.selectByVisibleText(drpdwnServiceProviderName, shipConfigdata.getserviceProviderName().get(index));
 		Action.enter(txtdwnSellerDescription, shipConfigdata.getsellerDescription());
 		Action.selectByIndex(drpdwnDefaultLabelStrategy, 0);
 		Action.selectByIndex(drpdwnCountry, 3);
+		if(!chkboxAddressOverride.isEnabled())
+		{
 		chkboxAddressOverride.click();
-		System.out.println("clicked override address");
 		Action.selectByIndex(drpdwnCountryOverride, 3);
 		Action.scrollDown("300");
 		Action.enter(txtAddressLine1, shipConfigdata.getAddressLine1());
-		System.out.println("Entered address1");
 		Action.enter(txtAddressLine2, shipConfigdata.getAddressLine2());
 		Action.enter(txtCity, shipConfigdata.getCity());
-		// Action.enter(txtState, shipConfigdata.getState());
+		drpdwnState.click();
+		selectStateDropdown(shipConfigdata.getState());		
 		Action.enter(txtZipCode, shipConfigdata.getZipcode());
+		}else
+		{
+			chkboxAddressOverride.click();	
+		}
 		Action.selectByIndex(drpdwnServiceName, 2);
 		Action.selectByIndex(drpdwnCarrierCode, 2);
 		Action.enter(txtParentAccountNumber, shipConfigdata.getparentAccountNumber());
@@ -290,20 +347,25 @@ public class ShippingLabelConfigPage {
 		CommonElementsPage.clickOnSaveBtn();
 	}
 
-	public String selectGroupName(String groupName, int index) {
-		// shipConfigdata = ShippingLabelConfigData.get(env.getFileLocation());
-		// drpdwnServiceProviderName.click();
-		List<WebElement> groupname = driver.findElements(By.cssSelector(
-				"tr.reflow-table-row[data-lookup-id='shipConfigdata.getserviceProviderName().get(index)']"));
-		for (int i = 0; i < groupname.size(); i++) {
-			System.out.println("first group name is:" + groupname.get(i).getText());
-			if (groupname.get(i).getText().equals(shipConfigdata.getserviceProviderName().get(index))) {
-				// Action.(btnEditShippingLblConfig,groupname);
-				btnEditShippingLblConfig.click();
-				break;
+	public void shipLabelConfigFormValidation()
+			throws JsonParseException, JsonMappingException, IOException, InterruptedException {
+		btnAdd.click();
+		btnSave.click();
+		Assert.assertEquals(txtformvalidationError.getText(), RomuiEnumValues.USER_VALIDATION.getMessage(),
+				"shipping Label form Error Validation message has not been found");
+
+	}
+	
+	// Select State options
+		public void selectStateDropdown(String searchState) {
+
+			drpdwnState.click();
+			for (int i = 0; i < StateSearchSelectDropDownOption.size(); i++) {
+				System.out.println("State list is:" +StateSearchSelectDropDownOption.get(i).getText());
+				if (StateSearchSelectDropDownOption.get(i).getText().equals(searchState)) {
+					Action.selectByIndex(drpdwnState, i);
+					break;
+				}
 			}
 		}
-		System.out.println("group name List is :" + groupName);
-		return groupName;
-	}
 }

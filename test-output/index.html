@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\shedubey\Desktop\ROM\ROMUI_Automation\ROMUI-sheela\src\test\resources\testsuites\ROMUI_PipeLines_TestSuite.xml</span>
+                    <span>C:\Users\shedubey\Desktop\ROM\ROMUI_Automation\ROMUI-sheela\src\test\resources\testsuites\ROMUI_ShippingLabelConfig_TestSuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.PipelinesTests" class="method navigator-link" hash-for-method="testeditPipelineActive">testeditPipelineActive</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests" class="method navigator-link" hash-for-method="testeditShipLabelConfigByFedex">testeditShipLabelConfigByFedex</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -122,22 +122,24 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.gsicommerce.romui.selenium.tests.PipelinesTests</span>
+              <span class="class-name">com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testeditPipelineActive">
-                  </a> <!-- testeditPipelineActive -->
-                  <span class="method-name">testeditPipelineActive</span>
-                  <div class="stack-trace">java.lang.AssertionError: Pipeline has not been Edited expected [SheelaaddpipelineAuto639265] but found [false]
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.PipelinesPage.editPipelineActive(PipelinesPage.java:323)
-	at com.gsicommerce.romui.selenium.tests.PipelinesTests.testeditPipelineActive(PipelinesTests.java:85)
+                  <a name="testeditShipLabelConfigByFedex">
+                  </a> <!-- testeditShipLabelConfigByFedex -->
+                  <span class="method-name">testeditShipLabelConfigByFedex</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.gsicommerce.romui.selenium.utilities.Webtable.getTableRowNumForCellText(Webtable.java:217)
+	at com.gsicommerce.romui.selenium.pages.ordermanagement.CommonElementsPage.getRowNum(CommonElementsPage.java:147)
+	at com.gsicommerce.romui.selenium.pages.ordermanagement.ShippingLabelConfigPage.editShippingLabelConfigByFedex(ShippingLabelConfigPage.java:292)
+	at com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests.testeditShipLabelConfigByFedex(ShippingLabelConfigTests.java:101)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 30 stack frames
+... Removed 27 stack frames
 </div> <!-- stack-trace -->
                   <em>
-(Edit Pipeline Active Status)                  </em>
+(Edit Ship Label Config for Fedex)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -145,7 +147,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\shedubey\Desktop\ROM\ROMUI_Automation\ROMUI-sheela\src\test\resources\testsuites\ROMUI_PipeLines_TestSuite.xml</span>
+            <span class="header-content">C:\Users\shedubey\Desktop\ROM\ROMUI_Automation\ROMUI-sheela\src\test\resources\testsuites\ROMUI_ShippingLabelConfig_TestSuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -160,12 +162,12 @@
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.gsicommerce.romui.selenium.utilities.ExtentReporterListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;PipelinesTests&quot;&gt;
-    &lt;parameter name=&quot;dataFile&quot; value=&quot;./src/test/resources/testdata/pipelineData.json&quot;/&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;ShippingLabelConfigTests&quot;&gt;
+    &lt;parameter name=&quot;dataFile&quot; value=&quot;./src/test/resources/testdata/ShippingLabelConfigData.json&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.gsicommerce.romui.selenium.tests.PipelinesTests&quot;/&gt;
+      &lt;class name=&quot;com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- PipelinesTests --&gt;
+  &lt;/test&gt; &lt;!-- ShippingLabelConfigTests --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -177,7 +179,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">PipelinesTests (1 class)</span>
+                <span class="test-name">ShippingLabelConfigTests (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -205,14 +207,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testeditPipelineActive')
-data.setCell(0, 2, 'com.gsicommerce.romui.selenium.tests.PipelinesTests')
-data.setCell(0, 3, 132690);
+data.setCell(0, 1, 'testeditShipLabelConfigByFedex')
+data.setCell(0, 2, 'com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests')
+data.setCell(0, 3, 19947);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 19 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -224,36 +226,34 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">testeditPipelineActive</span>
+              <span class="reporter-method-name">testeditShipLabelConfigByFedex</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')</span>
-                <span class="reporter-method-output">Action icon is clicked on</span>
-                <span class="reporter-method-output">Expected condition failed: waiting for presence of element located by: By.id:  (tried for 10 second(s) with 500 milliseconds interval)</span>
-                <span class="reporter-method-output">Action icon is clicked on</span>
-                <span class="reporter-method-output">Expected condition failed: waiting for presence of element located by: By.id:  (tried for 5 second(s) with 500 milliseconds interval)</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">6 ignored methods</span>
+            <span class="header-content">7 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.gsicommerce.romui.selenium.tests.PipelinesTests</span>
+              <span class="ignored-class-name">com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">testEditPipeline</span>
+                <span class="ignored-method-name">testEditShipLabelConfigByUps</span>
                 <br/>
-                <span class="ignored-method-name">testDeletePipeline</span>
+                <span class="ignored-method-name">testAddShipLabelConfigByFedex</span>
                 <br/>
-                <span class="ignored-method-name">testEditPipelineConfiguration</span>
+                <span class="ignored-method-name">testAddShipLabelConfigByConsignorMock</span>
                 <br/>
-                <span class="ignored-method-name">testCopyPipeline</span>
+                <span class="ignored-method-name">testAddShipLabelConfigByUPSMock</span>
                 <br/>
-                <span class="ignored-method-name">testAddPipeline</span>
+                <span class="ignored-method-name">testAddShipLabelConfigByUps</span>
                 <br/>
-                <span class="ignored-method-name">testViewPipeline</span>
+                <span class="ignored-method-name">testAddShipLabelConfigByConsignor</span>
+                <br/>
+                <span class="ignored-method-name">testeditShipLabelConfigByConsignor</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -265,20 +265,20 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.gsicommerce.romui.selenium.tests.PipelinesTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setup(org.testng.TestRunner@47d6d2a7)</span>
+                <span class="method-name">setup(org.testng.TestRunner@14c053c6)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">testeditPipelineActive</span>
-                <span class="method-start">7778 ms</span>
+                <span class="method-name">testeditShipLabelConfigByFedex</span>
+                <span class="method-start">8231 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=testeditPipelineActive status=FAILURE method=PipelinesTests.testeditPipelineActive(...)</span>
-                <span class="method-start">140471 ms</span>
+                <span class="method-name">tearDown([TestResult name=testeditShipLabelConfigByFedex status=FAILURE method=ShippingLabelConfigTests.teste...)</span>
+                <span class="method-start">28181 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

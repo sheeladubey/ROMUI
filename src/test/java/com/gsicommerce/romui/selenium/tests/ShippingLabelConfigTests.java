@@ -13,8 +13,8 @@ import junit.framework.Assert;
 
 public class ShippingLabelConfigTests extends ROMUIBasePage {
 
-	@Test(enabled = true, priority = 1, description = "Add Ship Label Config for Consignor")
-	public void testAddShipLabelConfigByConsignor() throws JsonParseException, JsonMappingException, IOException {
+	@Test(enabled = false, priority = 1, description = "Add Ship Label Config for Consignor")
+	public void testAddShipLabelConfigByConsignor() throws JsonParseException, JsonMappingException, IOException,Exception {
 
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
@@ -27,8 +27,8 @@ public class ShippingLabelConfigTests extends ROMUIBasePage {
 		logger.info("Verify if ship Label Config for Consignor add success message is displayed");
 	}
 
-	@Test(enabled = true, priority = 2, description = "Add Ship Label Config for Consignor_Mock")
-	public void testAddShipLabelConfigByConsignorMock() throws JsonParseException, JsonMappingException, IOException {
+	@Test(enabled = false, priority = 2, description = "Add Ship Label Config for Consignor_Mock")
+	public void testAddShipLabelConfigByConsignorMock() throws JsonParseException, JsonMappingException, IOException,Exception {
 
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
@@ -41,8 +41,8 @@ public class ShippingLabelConfigTests extends ROMUIBasePage {
 		logger.info("Verify if ship Label Config for Consignor add success message is displayed");
 	}
 
-	@Test(enabled = true, priority = 3, description = "Add Ship Label Config for Fedex")
-	public void testAddShipLabelConfigByFedex() throws JsonParseException, JsonMappingException, IOException {
+	@Test(enabled = false, priority = 3, description = "Add Ship Label Config for Fedex")
+	public void testAddShipLabelConfigByFedex() throws JsonParseException, JsonMappingException, IOException,Exception {
 
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
@@ -55,10 +55,10 @@ public class ShippingLabelConfigTests extends ROMUIBasePage {
 		logger.info("Verify if ship Label Config for Fedex add success message is displayed");
 		Assert.assertEquals(romuipages.shipLbleConfigPage().txtSuccessMsg.getText(),
 				RomuiEnumValues.SHIPPING_LABEL_CONFIG_ADD.getMessage(),
-				"Shipping Label Config doesn't added successfully");
+				"Shipping Label Config doesn't added successfully"); 
 	}
 
-	@Test(enabled = true, priority = 4, description = "Add Ship Label Config for UPS")
+	@Test(enabled = false, priority = 4, description = "Add Ship Label Config for UPS")
 	public void testAddShipLabelConfigByUps() throws JsonParseException, JsonMappingException, IOException {
 
 		logger.info("Login credentials to be entered");
@@ -70,10 +70,13 @@ public class ShippingLabelConfigTests extends ROMUIBasePage {
 		romuipages.shipLbleConfigPage().addShippingLabelConfigByUPS(3);
 		logger.info("Add link is clicked on to enter the Ship Label Config data and Clicked on Save btn");
 		logger.info("Verify if ship Label Config for UPS add success message is displayed");
+		Assert.assertEquals(romuipages.shipLbleConfigPage().txtSuccessMsg.getText(),
+				RomuiEnumValues.SHIPPING_LABEL_CONFIG_ADD.getMessage(),
+				"Shipping Label Config doesn't added successfully");
 	}
 
-	@Test(enabled = true, priority = 5, description = "Add Ship Label Config for UPS_Mock")
-	public void testAddShipLabelConfigByUPSMock() throws JsonParseException, JsonMappingException, IOException {
+	@Test(enabled = false, priority = 5, description = "Add Ship Label Config for UPS_Mock")
+	public void testAddShipLabelConfigByUPSMock() throws JsonParseException, JsonMappingException, IOException,Exception {
 
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
@@ -87,7 +90,7 @@ public class ShippingLabelConfigTests extends ROMUIBasePage {
 	}
 
 	@Test(enabled = true, priority = 7, description = "Edit Ship Label Config for Fedex")
-	public void testeditShipLabelConfigByFedex() throws JsonParseException, JsonMappingException, IOException {
+	public void testeditShipLabelConfigByFedex() throws JsonParseException, JsonMappingException, IOException,Exception {
 
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
@@ -101,7 +104,7 @@ public class ShippingLabelConfigTests extends ROMUIBasePage {
 		logger.info("Verify if ship Label Config for Fedex add success message is displayed");
 	}
 
-	@Test(enabled = true, priority = 8, description = "Edit Ship Label Config for Consignor")
+	@Test(enabled = false, priority = 8, description = "Edit Ship Label Config for Consignor")
 	public void testeditShipLabelConfigByConsignor() throws JsonParseException, JsonMappingException, IOException {
 
 		logger.info("Login credentials to be entered");
@@ -116,7 +119,7 @@ public class ShippingLabelConfigTests extends ROMUIBasePage {
 		logger.info("Verify if ship Label Config for Consignor add success message is displayed");
 	}
 
-	@Test(enabled = true, priority = 6, description = "Edit Ship Label Config for UPS")
+	@Test(enabled = false, priority = 6, description = "Edit Ship Label Config for UPS")
 	public void testEditShipLabelConfigByUps() throws JsonParseException, JsonMappingException, IOException {
 
 		logger.info("Login credentials to be entered");
@@ -134,16 +137,5 @@ public class ShippingLabelConfigTests extends ROMUIBasePage {
 				"Shipping Label Config doesn't Edited successfully");
 	}
 
-	@Test(enabled = false, priority = 9, description = "group name")
-	public void testEditShipLabelConfigBygroup() throws JsonParseException, JsonMappingException, IOException {
-
-		logger.info("Login credentials to be entered");
-		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		romuipages.homePage().clickOnLandingButton("Order Management");
-		logger.info("Order Management link is clicked on");
-		romuipages.orderMgmPage().clickOnShippingLabelConfig();
-		logger.info("Navigated to Shipping Label Config page");
-		romuipages.shipLbleConfigPage().selectGroupName("FEDEX", 2);
-
-	}
+	
 }

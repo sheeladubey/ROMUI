@@ -54,7 +54,7 @@
 					<i class='mdi-hardware-desktop-windows'></i>
 				</li>
 				<li>
-					<span class='suite-started-time'>2020-05-31 02:29:44</span>
+					<span class='suite-started-time'>2020-06-01 01:25:54</span>
 				</li>
 				<li>
 					<span>v2.41.1</span>
@@ -84,25 +84,25 @@
 					<div class='col l2 m4 s12'>
 						<div class='card suite-total-time-current'> 
 							<span class='panel-name'>Total Time Taken (Current Run)</span> 
-							<span class='suite-total-time-current-value panel-lead'>0h 2m 14s+822ms</span> 
+							<span class='suite-total-time-current-value panel-lead'>0h 0m 22s+241ms</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s12'>
 						<div class='card suite-total-time-overall'> 
 							<span class='panel-name'>Total Time Taken (Overall)</span> 
-							<span class='suite-total-time-overall-value panel-lead'>0h 2m 14s+822ms</span> 
+							<span class='suite-total-time-overall-value panel-lead'>0h 0m 22s+241ms</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s6 suite-start-time'>
 						<div class='card accent green-accent'> 
 							<span class='panel-name'>Start</span> 
-							<span class='panel-lead suite-started-time'>2020-05-31 02:27:29</span> 
+							<span class='panel-lead suite-started-time'>2020-06-01 01:25:31</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s6 suite-end-time'>
 						<div class='card accent pink-accent'> 
 							<span class='panel-name'>End</span> 
-							<span class='panel-lead suite-ended-time'>2020-05-31 02:29:44</span> 
+							<span class='panel-lead suite-ended-time'>2020-06-01 01:25:54</span> 
 						</div> 
 					</div>
 				</div>
@@ -238,17 +238,17 @@
 						<div class='card-panel no-padding-h no-padding-v no-margin-v'>
 							<div class='wrapper'>
 								<ul id='test-collection' class='test-collection'>
-										<li class='collection-item test displayed active fail ' extentid='f442fc7e-6cd8-4b02-9f60-c22aac5e5a15'>
+										<li class='collection-item test displayed active fail ' extentid='f90abbb0-41c1-4f5a-86f7-de99497f5c89'>
 											<div class='test-head'>
-												<span class='test-name'>testeditPipelineActive </span>
+												<span class='test-name'>testeditShipLabelConfigByFedex </span>
 												<span class='test-status label right outline capitalize fail'>fail</span>
 												<span class='category-assigned hide '></span>
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2020-05-31 02:27:29</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2020-05-31 02:29:42</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 2m 12s+690ms</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2020-06-01 01:25:31</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2020-06-01 01:25:51</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 19s+947ms</span>
 												</div>
 												<div class='test-desc'></div>
 												<div class='test-attributes'>
@@ -265,13 +265,12 @@
 														<tbody>
 																<tr>
 																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
-																	<td class='timestamp'>02:29:42</td>
-																	<td class='step-details'><pre>java.lang.AssertionError: Pipeline has not been Edited expected [SheelaaddpipelineAuto639265] but found [false]
-	at org.testng.Assert.fail(Assert.java:97)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.PipelinesPage.editPipelineActive(PipelinesPage.java:323)
-	at com.gsicommerce.romui.selenium.tests.PipelinesTests.testeditPipelineActive(PipelinesTests.java:85)
+																	<td class='timestamp'>01:25:51</td>
+																	<td class='step-details'><pre>java.lang.NullPointerException
+	at com.gsicommerce.romui.selenium.utilities.Webtable.getTableRowNumForCellText(Webtable.java:217)
+	at com.gsicommerce.romui.selenium.pages.ordermanagement.CommonElementsPage.getRowNum(CommonElementsPage.java:147)
+	at com.gsicommerce.romui.selenium.pages.ordermanagement.ShippingLabelConfigPage.editShippingLabelConfigByFedex(ShippingLabelConfigPage.java:292)
+	at com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests.testeditShipLabelConfigByFedex(ShippingLabelConfigTests.java:101)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -361,7 +360,7 @@
 									<ul id='exception-collection' class='exception-collection'>
 											<li class='exception-item displayed'>
 												<div class='exception-head'>
-													<span class='exception-name'>java.lang.AssertionError</span>
+													<span class='exception-name'>java.lang.NullPointerException</span>
 												</div>
 												<div class='exception-test-count'>
 													<span class='fail label'>1</span>
@@ -378,14 +377,13 @@
 															</thead>
 															<tbody>
                                                                    <tr class='fail'>
-                                                                       <td>2020-05-31 02:27:29</td>
-                                                                       <td><span class='exception-link linked' extentid='f442fc7e-6cd8-4b02-9f60-c22aac5e5a15'>testeditPipelineActive</span></td>
-                                                                       <td><pre class='exception-message'>java.lang.AssertionError: Pipeline has not been Edited expected [SheelaaddpipelineAuto639265] but found [false]
-	at org.testng.Assert.fail(Assert.java:97)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.PipelinesPage.editPipelineActive(PipelinesPage.java:323)
-	at com.gsicommerce.romui.selenium.tests.PipelinesTests.testeditPipelineActive(PipelinesTests.java:85)
+                                                                       <td>2020-06-01 01:25:31</td>
+                                                                       <td><span class='exception-link linked' extentid='f90abbb0-41c1-4f5a-86f7-de99497f5c89'>testeditShipLabelConfigByFedex</span></td>
+                                                                       <td><pre class='exception-message'>java.lang.NullPointerException
+	at com.gsicommerce.romui.selenium.utilities.Webtable.getTableRowNumForCellText(Webtable.java:217)
+	at com.gsicommerce.romui.selenium.pages.ordermanagement.CommonElementsPage.getRowNum(CommonElementsPage.java:147)
+	at com.gsicommerce.romui.selenium.pages.ordermanagement.ShippingLabelConfigPage.editShippingLabelConfigByFedex(ShippingLabelConfigPage.java:292)
+	at com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests.testeditShipLabelConfigByFedex(ShippingLabelConfigTests.java:101)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
