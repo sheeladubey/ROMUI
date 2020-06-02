@@ -760,6 +760,13 @@ public class Action {
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		jse.executeScript("arguments[0].click();", el);
 	}
+	//pageload wait
+	public static void waitForPageLoaded()
+	{
+	
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+		jse.executeScript("return document.readyState").toString().equals("complete");
+	}
 
 	/// <summary>
 	/// Select by Visible Text
@@ -866,4 +873,5 @@ public class Action {
 		return false;
 	}
 
+	
 }

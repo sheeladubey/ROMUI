@@ -9,16 +9,34 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">ShippingLabelConfigTests</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">28,728</td><td></td><td></td></tr>
+<tr><td><a href="#t0">OrdersTests</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">12,425</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ShippingLabelConfigTests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests</td><td><a href="#m0">testeditShipLabelConfigByFedex</a></td><td rowspan="1">1590989131995</td><td rowspan="1">19947</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">OrdersTests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.gsicommerce.romui.selenium.tests.OrdersTests</td><td><a href="#m0">testSearchOrderByCustomerNameZip</a></td><td rowspan="1">1591064811877</td><td rowspan="1">6172</td></tr></tbody>
 </table>
-<h2>ShippingLabelConfigTests</h2><h3 id="m0">com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests#testeditShipLabelConfigByFedex</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
-	at com.gsicommerce.romui.selenium.utilities.Webtable.getTableRowNumForCellText(Webtable.java:217)
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.CommonElementsPage.getRowNum(CommonElementsPage.java:147)
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.ShippingLabelConfigPage.editShippingLabelConfigByFedex(ShippingLabelConfigPage.java:292)
-	at com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests.testeditShipLabelConfigByFedex(ShippingLabelConfigTests.java:101)
+<h2>OrdersTests</h2><h3 id="m0">com.gsicommerce.romui.selenium.tests.OrdersTests#testSearchOrderByCustomerNameZip</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Unable to locate element: [data-tooltip=&apos;Main Menu&apos;]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.134.214&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 76.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200507114007, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 12108, moz:profile: C:\Users\shedubey\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b2ce4a2c-3e68-4478-acbd-3cdcd30d3a8f
+*** Element info: {Using=css selector, value=[data-tooltip=&apos;Main Menu&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.click(Unknown Source)
+	at com.gsicommerce.romui.selenium.pages.ordermanagement.OrderManagementMenusPage.clickOnOrders(OrderManagementMenusPage.java:253)
+	at com.gsicommerce.romui.selenium.tests.OrdersTests.testSearchOrderByCustomerNameZip(OrdersTests.java:123)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

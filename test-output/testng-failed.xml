@@ -5,20 +5,20 @@
   <parameter name="storeEnvironment" value="lvststromsso04"/>
   <parameter name="adminPasswd" value="Password123@"/>
   <parameter name="waitPeriod" value="5"/>
-  <parameter name="browserType" value="chrome"/>
+  <parameter name="browserType" value="firefox"/>
   <listeners>
     <listener class-name="com.gsicommerce.romui.selenium.utilities.ExtentReporterListener"/>
   </listeners>
-  <test thread-count="5" name="ShippingLabelConfigTests(failed)">
-    <parameter name="dataFile" value="./src/test/resources/testdata/ShippingLabelConfigData.json"/>
+  <test thread-count="5" name="OrdersTests(failed)">
+    <parameter name="dataFile" value="./src/test/resources/testdata/ordersData.json"/>
     <classes>
-      <class name="com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests">
+      <class name="com.gsicommerce.romui.selenium.tests.OrdersTests">
         <methods>
           <include name="tearDown"/>
           <include name="setup"/>
-          <include name="testeditShipLabelConfigByFedex"/>
+          <include name="testSearchOrderByCustomerNameZip"/>
         </methods>
-      </class> <!-- com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests -->
+      </class> <!-- com.gsicommerce.romui.selenium.tests.OrdersTests -->
     </classes>
-  </test> <!-- ShippingLabelConfigTests(failed) -->
+  </test> <!-- OrdersTests(failed) -->
 </suite> <!-- Failed suite [Suite] -->

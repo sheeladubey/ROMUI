@@ -165,10 +165,10 @@ public class Webtable {
 	}
 
 	// For pipeline screen-need to include span child as well
-	public void clickIcon(int row, int col, int child, int spanchild) throws InterruptedException {
+	public void clickIconPipeline(int row, int col, int child, int spanchild) throws InterruptedException {
 
 		if (child == 0) {
-			_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/a/span[" + spanchild + "]", row, col);
+			_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/a/span", row, col);
 		} else {
 			_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/a[" + child + "]/span[" + spanchild + "]",
 					row, col);
@@ -178,7 +178,7 @@ public class Webtable {
 	}
 
 //For clicking delete icon on pipeline screen.
-	public void clickDeleteIcon(int row, int col, int spanchild) throws InterruptedException {
+	public void clickDeleteIconPipeline(int row, int col, int spanchild) throws InterruptedException {
 
 		_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/button/span[" + spanchild + "]", row, col);
 
@@ -231,6 +231,20 @@ public class Webtable {
 		
 		Table.findElement(By.xpath(_xpath)).click();
 
+	}
+	
+	//Click view order and view audits icon on Order lookup screen
+	public void clickIconViewOrder(int row,int col,int divchild,int child,int spanchild) {
+		
+		if (divchild == 0) {
+			_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/a[" + child + "]/span[" + spanchild + "]", row, col);
+		} else {
+			_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div["+divchild+"]/a[" + child + "]/span[" + spanchild + "]",
+					row, col);
+		}
+		Action.scrollingToBottomofAPage();
+		Action.clickElementJavaScipt(Table.findElement(By.xpath(_xpath)));
+		
 	}
 
 

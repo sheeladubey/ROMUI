@@ -41,7 +41,7 @@ public class Common {
 	 * load time is 6 seconds Based on your tests, please set this value. "0" will
 	 * nullify implicitlyWait and speed up a test.
 	 */
-	public static final int DEFAULT_WAIT_4_PAGE = 12;
+	public static int DEFAULT_WAIT_4_PAGE = 12;
 	private static final Random RANDOM_GENERATOR = new Random();
 
 	/**

@@ -224,9 +224,9 @@ public class PipelinesPage {
 		if (lblNameViewPipeline.getText().contains(addpipelineName)) {
 			System.out.println("view pipeline screen validated");
 		} else {
-			System.out.println("view pipeline screen not validated");
+			System.out.println("view pipeline screen has not been validated");
 		}
-		Assert.assertEquals(lblNameViewPipeline.getText(), addpipelineName, "View Pipeline screen has been validated");
+		Assert.assertEquals(lblNameViewPipeline.getText(), addpipelineName, "View Pipeline screen has not been validated");
 
 		Action.waitForElementToBeClickable(driver, lkviewPipelineConfig, 10);
 		Action.clickElementJavaScipt(lkviewPipelineConfig);
@@ -237,11 +237,11 @@ public class PipelinesPage {
 		if (lblNameConfigurePipeline.getText().contains(addpipelineName)) {
 			System.out.println("Configure pipeline screen validated");
 		} else {
-			System.out.println("Configure pipeline screen not validated");
+			System.out.println("Configure pipeline screen has not been validated");
 		}
 
 		Assert.assertEquals(lblNameConfigurePipeline.getText(), addpipelineName,
-				"Configure Pipeline screen has been validated");
+				"Configure Pipeline screen has not been validated");
 		Action.waitForElementToBeVisible(driver, btnCancel, 10);
 		Action.waitForElementToBeClickable(driver, btnCancel, 15);
 		btnCancel.click();
@@ -485,11 +485,11 @@ public class PipelinesPage {
 			throws JsonParseException, JsonMappingException, IOException, InterruptedException {
 		 btnAddPipeline.click();
 		btnSaveExit.click();
-		Assert.assertEquals(txtformvalidationError.getText(), RomuiEnumValues.PIPELINE_FORMVALIDATION.getMessage(),
+		Assert.assertEquals(CommonElementsPage.formErrorValidation(), RomuiEnumValues.PIPELINE_FORMVALIDATION.getMessage(),
 				"Pipeline form Error Validation message has not been found");
 		selectPipelineCriteriaByTenderType();
 		btnSaveExit.click();
-		Assert.assertEquals(txtformvalidationError.getText(), RomuiEnumValues.USER_VALIDATION.getMessage(),
+		Assert.assertEquals(CommonElementsPage.formErrorValidation(), RomuiEnumValues.USER_VALIDATION.getMessage(),
 				"Pipeline form Error Validation message has not been found");
 
 	}

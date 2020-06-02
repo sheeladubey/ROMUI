@@ -82,7 +82,7 @@ public class OrdersTests extends ROMUIBasePage {
 
 	}
 
-	@Test(enabled = true, priority = 6, description = "to Verify edit search order ")
+	@Test(enabled = false, priority = 6, description = "to Verify edit search order ")
 	public void testEditSearch() throws JsonParseException, JsonMappingException, IOException, Exception {
 
 		logger.info("Login credentials to be entered");
@@ -111,5 +111,19 @@ public class OrdersTests extends ROMUIBasePage {
 		// romuipages.ordersPage().viewOrder();
 
 	}
+	
+	@Test(enabled = false, priority = 3, description = "to Verify search order by Customer Name")
+	public void testSearchOrderByCustomerNameZip()
+			throws JsonParseException, JsonMappingException, IOException, Exception {
 
+		logger.info("Login credentials to be entered");
+		romuipages.loginPage().login(env.getUserName(), env.getPassword());
+		romuipages.homePage().clickOnLandingButton("Order Management");
+		logger.info("Order Management link is clicked on");
+		romuipages.orderMgmPage().clickOnOrders();
+		logger.info("Navigated to Orders page");
+		romuipages.ordersPage().searchOrderByCustomerNameZipcode("firstname", "lastname","zipcode","startdate");
+		logger.info("Search By Customer Name verified");
+
+}
 }

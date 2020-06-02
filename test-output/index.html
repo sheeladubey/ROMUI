@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\shedubey\Desktop\ROM\ROMUI_Automation\ROMUI-sheela\src\test\resources\testsuites\ROMUI_ShippingLabelConfig_TestSuite.xml</span>
+                    <span>C:\Users\shedubey\Desktop\ROM\ROMUI_Automation\ROMUI-sheela\src\test\resources\testsuites\ROMUI_Orders_TestSuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests" class="method navigator-link" hash-for-method="testeditShipLabelConfigByFedex">testeditShipLabelConfigByFedex</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.OrdersTests" class="method navigator-link" hash-for-method="testSearchOrderByCustomerNameZip">testSearchOrderByCustomerNameZip</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -122,24 +122,42 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests</span>
+              <span class="class-name">com.gsicommerce.romui.selenium.tests.OrdersTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testeditShipLabelConfigByFedex">
-                  </a> <!-- testeditShipLabelConfigByFedex -->
-                  <span class="method-name">testeditShipLabelConfigByFedex</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at com.gsicommerce.romui.selenium.utilities.Webtable.getTableRowNumForCellText(Webtable.java:217)
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.CommonElementsPage.getRowNum(CommonElementsPage.java:147)
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.ShippingLabelConfigPage.editShippingLabelConfigByFedex(ShippingLabelConfigPage.java:292)
-	at com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests.testeditShipLabelConfigByFedex(ShippingLabelConfigTests.java:101)
+                  <a name="testSearchOrderByCustomerNameZip">
+                  </a> <!-- testSearchOrderByCustomerNameZip -->
+                  <span class="method-name">testSearchOrderByCustomerNameZip</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: [data-tooltip=&apos;Main Menu&apos;]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.134.214&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 76.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200507114007, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 12108, moz:profile: C:\Users\shedubey\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b2ce4a2c-3e68-4478-acbd-3cdcd30d3a8f
+*** Element info: {Using=css selector, value=[data-tooltip=&apos;Main Menu&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.click(Unknown Source)
+	at com.gsicommerce.romui.selenium.pages.ordermanagement.OrderManagementMenusPage.clickOnOrders(OrderManagementMenusPage.java:253)
+	at com.gsicommerce.romui.selenium.tests.OrdersTests.testSearchOrderByCustomerNameZip(OrdersTests.java:123)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 27 stack frames
+... Removed 32 stack frames
 </div> <!-- stack-trace -->
                   <em>
-(Edit Ship Label Config for Fedex)                  </em>
+(to Verify search order by Customer Name)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -147,7 +165,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\shedubey\Desktop\ROM\ROMUI_Automation\ROMUI-sheela\src\test\resources\testsuites\ROMUI_ShippingLabelConfig_TestSuite.xml</span>
+            <span class="header-content">C:\Users\shedubey\Desktop\ROM\ROMUI_Automation\ROMUI-sheela\src\test\resources\testsuites\ROMUI_Orders_TestSuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -158,16 +176,16 @@
   &lt;parameter name=&quot;storeEnvironment&quot; value=&quot;lvststromsso04&quot;/&gt;
   &lt;parameter name=&quot;adminPasswd&quot; value=&quot;Password123@&quot;/&gt;
   &lt;parameter name=&quot;waitPeriod&quot; value=&quot;5&quot;/&gt;
-  &lt;parameter name=&quot;browserType&quot; value=&quot;chrome&quot;/&gt;
+  &lt;parameter name=&quot;browserType&quot; value=&quot;firefox&quot;/&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.gsicommerce.romui.selenium.utilities.ExtentReporterListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;ShippingLabelConfigTests&quot;&gt;
-    &lt;parameter name=&quot;dataFile&quot; value=&quot;./src/test/resources/testdata/ShippingLabelConfigData.json&quot;/&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;OrdersTests&quot;&gt;
+    &lt;parameter name=&quot;dataFile&quot; value=&quot;./src/test/resources/testdata/ordersData.json&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests&quot;/&gt;
+      &lt;class name=&quot;com.gsicommerce.romui.selenium.tests.OrdersTests&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- ShippingLabelConfigTests --&gt;
+  &lt;/test&gt; &lt;!-- OrdersTests --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -179,7 +197,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">ShippingLabelConfigTests (1 class)</span>
+                <span class="test-name">OrdersTests (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -207,14 +225,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testeditShipLabelConfigByFedex')
-data.setCell(0, 2, 'com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests')
-data.setCell(0, 3, 19947);
+data.setCell(0, 1, 'testSearchOrderByCustomerNameZip')
+data.setCell(0, 2, 'com.gsicommerce.romui.selenium.tests.OrdersTests')
+data.setCell(0, 3, 6172);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 19 seconds</span>
+              <span class="suite-total-time">Total running time: 6 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -226,7 +244,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">testeditShipLabelConfigByFedex</span>
+              <span class="reporter-method-name">testSearchOrderByCustomerNameZip</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')</span>
               </div> <!-- reporter-method-output-div -->
@@ -239,21 +257,21 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests</span>
+              <span class="ignored-class-name">com.gsicommerce.romui.selenium.tests.OrdersTests</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">testEditShipLabelConfigByUps</span>
+                <span class="ignored-method-name">testSearchOrderByOrderStatus</span>
                 <br/>
-                <span class="ignored-method-name">testAddShipLabelConfigByFedex</span>
+                <span class="ignored-method-name">testSearchOrderByCustomerName</span>
                 <br/>
-                <span class="ignored-method-name">testAddShipLabelConfigByConsignorMock</span>
+                <span class="ignored-method-name">testSearchOrderByEmail</span>
                 <br/>
-                <span class="ignored-method-name">testAddShipLabelConfigByUPSMock</span>
+                <span class="ignored-method-name">testSearchOrderbyNumber</span>
                 <br/>
-                <span class="ignored-method-name">testAddShipLabelConfigByUps</span>
+                <span class="ignored-method-name">testViewOrder</span>
                 <br/>
-                <span class="ignored-method-name">testAddShipLabelConfigByConsignor</span>
+                <span class="ignored-method-name">testEditSearch</span>
                 <br/>
-                <span class="ignored-method-name">testeditShipLabelConfigByConsignor</span>
+                <span class="ignored-method-name">testSearchOrderByFullfillmentNumber</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -265,20 +283,20 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.gsicommerce.romui.selenium.tests.OrdersTests</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setup(org.testng.TestRunner@14c053c6)</span>
+                <span class="method-name">setup(org.testng.TestRunner@e72dba7)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">testeditShipLabelConfigByFedex</span>
-                <span class="method-start">8231 ms</span>
+                <span class="method-name">testSearchOrderByCustomerNameZip</span>
+                <span class="method-start">6002 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=testeditShipLabelConfigByFedex status=FAILURE method=ShippingLabelConfigTests.teste...)</span>
-                <span class="method-start">28181 ms</span>
+                <span class="method-name">tearDown([TestResult name=testSearchOrderByCustomerNameZip status=FAILURE method=OrdersTests.testSearchOrderB...)</span>
+                <span class="method-start">12189 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

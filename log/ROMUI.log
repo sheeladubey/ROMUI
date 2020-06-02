@@ -1416,3 +1416,161 @@
 2020-06-01 01:25:31,995 - romui -INFO - Login credentials to be entered
 2020-06-01 01:25:47,771 - romui -INFO - Order Management link is clicked on
 2020-06-01 01:25:51,882 - romui -INFO - Navigated to Shipping Label Config page
+2020-06-01 13:34:13,774 - romui -INFO - Login credentials to be entered
+2020-06-01 13:34:22,819 - romui -INFO - Order Management link is clicked on
+2020-06-01 13:34:25,411 - romui -INFO - Navigated to Orders page
+2020-06-01 14:18:19,745 - romui -INFO - Login credentials to be entered
+2020-06-01 14:18:28,954 - romui -INFO - Order Management link is clicked on
+2020-06-01 14:18:31,488 - romui -INFO - Navigated to Orders page
+2020-06-01 14:20:07,212 - romui -INFO - Login credentials to be entered
+2020-06-01 14:20:16,290 - romui -INFO - Order Management link is clicked on
+2020-06-01 14:20:18,445 - romui -INFO - Navigated to Orders page
+2020-06-01 14:20:21,695 - romui -INFO - Search By Order Number verified
+2020-06-01 14:23:54,950 - romui -INFO - Login credentials to be entered
+2020-06-01 14:24:05,751 - romui -INFO - Order Management link is clicked on
+2020-06-01 14:24:08,305 - romui -INFO - Navigated to Orders page
+2020-06-01 14:32:31,395 - romui -INFO - Login credentials to be entered
+2020-06-01 14:32:39,834 - romui -INFO - Order Management link is clicked on
+2020-06-01 14:32:42,572 - romui -INFO - Navigated to Orders page
+2020-06-01 14:34:37,487 - romui -INFO - Login credentials to be entered
+2020-06-01 14:34:47,908 - romui -INFO - Order Management link is clicked on
+2020-06-01 14:34:50,008 - romui -INFO - Navigated to Orders page
+2020-06-01 14:40:22,560 - romui -INFO - Login credentials to be entered
+2020-06-01 14:40:34,460 - romui -INFO - Order Management link is clicked on
+2020-06-01 14:40:36,726 - romui -INFO - Navigated to Orders page
+2020-06-01 14:42:06,903 - romui -INFO - Login credentials to be entered
+2020-06-01 14:42:15,425 - romui -INFO - Order Management link is clicked on
+2020-06-01 14:42:17,758 - romui -INFO - Navigated to Orders page
+2020-06-01 14:42:20,660 - romui -INFO - Search By Order Number verified
+2020-06-01 14:45:21,395 - romui -INFO - Login credentials to be entered
+2020-06-01 14:45:29,503 - romui -INFO - Order Management link is clicked on
+2020-06-01 14:45:32,306 - romui -INFO - Navigated to Orders page
+2020-06-01 14:57:14,373 - romui -INFO - Login credentials to be entered
+2020-06-01 14:57:19,809 - romui -INFO - Order Management link is clicked on
+2020-06-01 14:58:40,791 - romui -INFO - Login credentials to be entered
+2020-06-01 14:58:52,466 - romui -INFO - Order Management link is clicked on
+2020-06-01 14:58:54,746 - romui -INFO - Navigated to Orders page
+2020-06-01 15:09:17,076 - romui -INFO - Login credentials to be entered
+2020-06-01 15:09:26,813 - romui -INFO - Order Management link is clicked on
+2020-06-01 15:09:29,299 - romui -INFO - Navigated to Orders page
+2020-06-01 15:09:32,334 - romui -INFO - Search By Order Number verified
+2020-06-01 15:10:41,833 - romui -INFO - Login credentials to be entered
+2020-06-01 15:10:50,756 - romui -INFO - Order Management link is clicked on
+2020-06-01 15:10:53,374 - romui -INFO - Navigated to Orders page
+2020-06-01 15:10:56,277 - romui -INFO - Search By Order Number verified
+2020-06-01 16:26:16,135 - romui -INFO - Login credentials to be entered
+2020-06-01 16:26:24,536 - romui -INFO - Order Management link is clicked on
+2020-06-01 16:26:26,907 - romui -INFO - Navigated to Orders page
+2020-06-01 16:31:28,305 - romui -INFO - Login credentials to be entered
+2020-06-01 16:31:38,728 - romui -INFO - Order Management link is clicked on
+2020-06-01 16:31:43,380 - romui -INFO - Navigated to Orders page
+2020-06-01 16:38:14,270 - romui -INFO - Login credentials to be entered
+2020-06-01 16:38:19,766 - romui -INFO - Order Management link is clicked on
+2020-06-01 16:38:48,141 - romui -INFO - Login credentials to be entered
+2020-06-01 16:39:01,383 - romui -INFO - Order Management link is clicked on
+2020-06-01 16:39:03,583 - romui -INFO - Navigated to Orders page
+2020-06-01 17:07:40,718 - romui -INFO - Login credentials to be entered
+2020-06-01 17:07:51,172 - romui -INFO - Order Management link is clicked on
+2020-06-01 17:07:53,898 - romui -INFO - Navigated to Orders page
+2020-06-01 17:12:06,175 - romui -INFO - Login credentials to be entered
+2020-06-01 17:12:17,924 - romui -INFO - Order Management link is clicked on
+2020-06-01 17:12:20,071 - romui -INFO - Navigated to Orders page
+2020-06-01 17:37:49,716 - romui -INFO - Login credentials to be entered
+2020-06-01 17:37:57,636 - romui -INFO - Order Management link is clicked on
+2020-06-01 17:38:00,079 - romui -INFO - Navigated to Orders page
+2020-06-01 17:38:08,003 - romui -INFO - Search By Fulfillment Order Number verified
+2020-06-01 17:53:50,357 - romui -INFO - Login credentials to be entered
+2020-06-01 17:54:00,741 - romui -INFO - Order Management link is clicked on
+2020-06-01 17:54:03,206 - romui -INFO - Navigated to Orders page
+2020-06-01 17:58:27,652 - romui -INFO - Login credentials to be entered
+2020-06-01 17:58:36,634 - romui -INFO - Order Management link is clicked on
+2020-06-01 17:58:39,219 - romui -INFO - Navigated to Orders page
+2020-06-01 17:59:13,863 - romui -INFO - Search By Fulfillment Order Number verified
+2020-06-01 18:16:07,398 - romui -INFO - Login credentials to be entered
+2020-06-01 18:16:12,739 - romui -INFO - Order Management link is clicked on
+2020-06-01 18:16:54,654 - romui -INFO - Login credentials to be entered
+2020-06-01 18:17:03,354 - romui -INFO - Order Management link is clicked on
+2020-06-01 18:17:06,273 - romui -INFO - Navigated to Orders page
+2020-06-01 18:17:15,188 - romui -INFO - Search By Customer Name verified
+2020-06-01 18:31:21,982 - romui -INFO - Login credentials to be entered
+2020-06-01 18:31:30,405 - romui -INFO - Order Management link is clicked on
+2020-06-01 18:31:32,726 - romui -INFO - Navigated to Orders page
+2020-06-01 18:33:56,414 - romui -INFO - Login credentials to be entered
+2020-06-01 18:34:04,879 - romui -INFO - Order Management link is clicked on
+2020-06-01 18:34:07,161 - romui -INFO - Navigated to Orders page
+2020-06-01 18:40:29,856 - romui -INFO - Login credentials to be entered
+2020-06-01 18:40:35,182 - romui -INFO - Order Management link is clicked on
+2020-06-01 18:41:13,050 - romui -INFO - Login credentials to be entered
+2020-06-01 18:41:20,830 - romui -INFO - Order Management link is clicked on
+2020-06-01 18:41:23,178 - romui -INFO - Navigated to Orders page
+2020-06-01 18:43:18,641 - romui -INFO - Login credentials to be entered
+2020-06-01 18:43:28,400 - romui -INFO - Order Management link is clicked on
+2020-06-01 18:43:30,879 - romui -INFO - Navigated to Orders page
+2020-06-01 18:45:45,109 - romui -INFO - Login credentials to be entered
+2020-06-01 18:45:53,012 - romui -INFO - Order Management link is clicked on
+2020-06-01 18:45:55,516 - romui -INFO - Navigated to Orders page
+2020-06-01 19:29:22,923 - romui -INFO - Login credentials to be entered
+2020-06-01 19:29:33,154 - romui -INFO - Order Management link is clicked on
+2020-06-01 19:29:35,512 - romui -INFO - Navigated to Orders page
+2020-06-01 19:31:31,394 - romui -INFO - Login credentials to be entered
+2020-06-01 19:31:43,797 - romui -INFO - Order Management link is clicked on
+2020-06-01 19:31:46,276 - romui -INFO - Navigated to Orders page
+2020-06-01 19:31:56,532 - romui -INFO - Search By EmailID verified
+2020-06-01 19:36:46,543 - romui -INFO - Login credentials to be entered
+2020-06-01 19:36:54,261 - romui -INFO - Order Management link is clicked on
+2020-06-01 19:36:56,646 - romui -INFO - Navigated to Orders page
+2020-06-01 19:39:21,869 - romui -INFO - Login credentials to be entered
+2020-06-01 19:39:27,252 - romui -INFO - Order Management link is clicked on
+2020-06-01 19:40:02,287 - romui -INFO - Login credentials to be entered
+2020-06-01 19:40:09,878 - romui -INFO - Order Management link is clicked on
+2020-06-01 19:40:11,881 - romui -INFO - Navigated to Orders page
+2020-06-01 19:58:10,006 - romui -INFO - Login credentials to be entered
+2020-06-01 19:58:15,335 - romui -INFO - Order Management link is clicked on
+2020-06-01 19:58:42,070 - romui -INFO - Login credentials to be entered
+2020-06-01 19:58:51,326 - romui -INFO - Order Management link is clicked on
+2020-06-01 19:58:53,488 - romui -INFO - Navigated to Orders page
+2020-06-01 20:00:44,546 - romui -INFO - Login credentials to be entered
+2020-06-01 20:00:53,375 - romui -INFO - Order Management link is clicked on
+2020-06-01 20:00:55,465 - romui -INFO - Navigated to Orders page
+2020-06-01 20:06:09,435 - romui -INFO - Login credentials to be entered
+2020-06-01 20:06:17,053 - romui -INFO - Order Management link is clicked on
+2020-06-01 20:06:19,258 - romui -INFO - Navigated to Orders page
+2020-06-01 20:14:20,083 - romui -INFO - Login credentials to be entered
+2020-06-01 20:14:30,100 - romui -INFO - Order Management link is clicked on
+2020-06-01 20:14:32,240 - romui -INFO - Navigated to Orders page
+2020-06-01 20:27:40,782 - romui -INFO - Login credentials to be entered
+2020-06-01 20:27:49,374 - romui -INFO - Order Management link is clicked on
+2020-06-01 20:27:51,855 - romui -INFO - Navigated to Orders page
+2020-06-01 20:30:23,074 - romui -INFO - Login credentials to be entered
+2020-06-01 20:30:35,565 - romui -INFO - Order Management link is clicked on
+2020-06-01 20:30:37,620 - romui -INFO - Navigated to Orders page
+2020-06-01 20:34:36,920 - romui -INFO - Login credentials to be entered
+2020-06-01 20:34:46,202 - romui -INFO - Order Management link is clicked on
+2020-06-01 20:34:48,682 - romui -INFO - Navigated to Orders page
+2020-06-01 20:34:52,650 - romui -INFO - Search By Order Status verified
+2020-06-01 21:16:49,621 - romui -INFO - Login credentials to be entered
+2020-06-01 21:17:00,576 - romui -INFO - Order Management link is clicked on
+2020-06-01 21:17:02,762 - romui -INFO - Navigated to Orders page
+2020-06-01 21:21:28,951 - romui -INFO - Login credentials to be entered
+2020-06-01 21:21:37,167 - romui -INFO - Order Management link is clicked on
+2020-06-01 21:21:39,221 - romui -INFO - Navigated to Orders page
+2020-06-01 21:25:06,699 - romui -INFO - Login credentials to be entered
+2020-06-01 21:25:15,015 - romui -INFO - Order Management link is clicked on
+2020-06-01 21:25:17,083 - romui -INFO - Navigated to Orders page
+2020-06-01 22:14:14,446 - romui -INFO - Login credentials to be entered
+2020-06-01 22:14:19,902 - romui -INFO - Order Management link is clicked on
+2020-06-01 22:14:48,998 - romui -INFO - Login credentials to be entered
+2020-06-01 22:14:58,133 - romui -INFO - Order Management link is clicked on
+2020-06-01 22:15:00,470 - romui -INFO - Navigated to Orders page
+2020-06-01 22:16:26,364 - romui -INFO - Login credentials to be entered
+2020-06-01 22:16:36,512 - romui -INFO - Order Management link is clicked on
+2020-06-01 22:16:38,928 - romui -INFO - Navigated to Orders page
+2020-06-01 22:19:02,090 - romui -INFO - Login credentials to be entered
+2020-06-01 22:19:11,081 - romui -INFO - Order Management link is clicked on
+2020-06-01 22:19:13,737 - romui -INFO - Navigated to Orders page
+2020-06-01 22:24:42,302 - romui -INFO - Login credentials to be entered
+2020-06-01 22:24:47,779 - romui -INFO - Order Management link is clicked on
+2020-06-01 22:25:11,948 - romui -INFO - Login credentials to be entered
+2020-06-01 22:25:19,215 - romui -INFO - Order Management link is clicked on
+2020-06-01 22:26:51,881 - romui -INFO - Login credentials to be entered
+2020-06-01 22:26:58,032 - romui -INFO - Order Management link is clicked on

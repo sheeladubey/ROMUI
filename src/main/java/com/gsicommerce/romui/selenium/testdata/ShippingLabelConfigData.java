@@ -32,7 +32,7 @@ public class ShippingLabelConfigData {
 	String city;
 
 	@JsonProperty("state")
-	String state;
+	String  state;
 
 	@JsonProperty("zipcode")
 	String zipcode;

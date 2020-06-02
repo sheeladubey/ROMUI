@@ -5,30 +5,63 @@
       <![CDATA[class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')]]>
     </line>
   </reporter-output>
-  <suite started-at="2020-06-01T01:25:23 EDT" name="Suite" finished-at="2020-06-01T01:25:52 EDT" duration-ms="28728">
+  <suite started-at="2020-06-01T22:26:45 EDT" name="Suite" finished-at="2020-06-01T22:26:58 EDT" duration-ms="12425">
     <groups>
     </groups>
-    <test started-at="2020-06-01T01:25:23 EDT" name="ShippingLabelConfigTests" finished-at="2020-06-01T01:25:52 EDT" duration-ms="28728">
-      <class name="com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests">
-        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@54d9d12d]" started-at="2020-06-01T01:25:23 EDT" name="setup" finished-at="2020-06-01T01:25:31 EDT" duration-ms="8231" status="PASS">
+    <test started-at="2020-06-01T22:26:45 EDT" name="OrdersTests" finished-at="2020-06-01T22:26:58 EDT" duration-ms="12425">
+      <class name="com.gsicommerce.romui.selenium.tests.OrdersTests">
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.OrdersTests@54d9d12d]" started-at="2020-06-01T22:26:45 EDT" name="setup" finished-at="2020-06-01T22:26:51 EDT" duration-ms="6002" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@14c053c6]]>
+                <![CDATA[org.testng.TestRunner@e72dba7]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testeditShipLabelConfigByFedex()[pri:7, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@54d9d12d]" started-at="2020-06-01T01:25:31 EDT" name="testeditShipLabelConfigByFedex" description="Edit Ship Label Config for Fedex" finished-at="2020-06-01T01:25:51 EDT" duration-ms="19947" status="FAIL">
-          <exception class="java.lang.NullPointerException">
+        <test-method signature="testSearchOrderByCustomerNameZip()[pri:3, instance:com.gsicommerce.romui.selenium.tests.OrdersTests@54d9d12d]" started-at="2020-06-01T22:26:51 EDT" name="testSearchOrderByCustomerNameZip" description="to Verify search order by Customer Name" finished-at="2020-06-01T22:26:58 EDT" duration-ms="6172" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: [data-tooltip='Main Menu']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KOP-BM5TNF2', ip: '10.140.134.214', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 76.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200507114007, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 12108, moz:profile: C:\Users\shedubey\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b2ce4a2c-3e68-4478-acbd-3cdcd30d3a8f
+*** Element info: {Using=css selector, value=[data-tooltip='Main Menu']}]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at com.gsicommerce.romui.selenium.utilities.Webtable.getTableRowNumForCellText(Webtable.java:217)
-at com.gsicommerce.romui.selenium.pages.ordermanagement.CommonElementsPage.getRowNum(CommonElementsPage.java:147)
-at com.gsicommerce.romui.selenium.pages.ordermanagement.ShippingLabelConfigPage.editShippingLabelConfigByFedex(ShippingLabelConfigPage.java:292)
-at com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests.testeditShipLabelConfigByFedex(ShippingLabelConfigTests.java:101)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: [data-tooltip='Main Menu']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KOP-BM5TNF2', ip: '10.140.134.214', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 76.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200507114007, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 12108, moz:profile: C:\Users\shedubey\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b2ce4a2c-3e68-4478-acbd-3cdcd30d3a8f
+*** Element info: {Using=css selector, value=[data-tooltip='Main Menu']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
+at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy14.click(Unknown Source)
+at com.gsicommerce.romui.selenium.pages.ordermanagement.OrderManagementMenusPage.clickOnOrders(OrderManagementMenusPage.java:253)
+at com.gsicommerce.romui.selenium.tests.OrdersTests.testSearchOrderByCustomerNameZip(OrdersTests.java:123)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -59,25 +92,25 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
             <line>
               <![CDATA[class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')]]>
             </line>
           </reporter-output>
-        </test-method> <!-- testeditShipLabelConfigByFedex -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@54d9d12d]" started-at="2020-06-01T01:25:51 EDT" name="tearDown" finished-at="2020-06-01T01:25:52 EDT" duration-ms="523" status="PASS">
+        </test-method> <!-- testSearchOrderByCustomerNameZip -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.OrdersTests@54d9d12d]" started-at="2020-06-01T22:26:58 EDT" name="tearDown" finished-at="2020-06-01T22:26:58 EDT" duration-ms="200" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testeditShipLabelConfigByFedex status=FAILURE method=ShippingLabelConfigTests.testeditShipLabelConfigByFedex()[pri:7, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@54d9d12d] output=class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')]]]>
+                <![CDATA[[TestResult name=testSearchOrderByCustomerNameZip status=FAILURE method=OrdersTests.testSearchOrderByCustomerNameZip()[pri:3, instance:com.gsicommerce.romui.selenium.tests.OrdersTests@54d9d12d] output=class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests -->
-    </test> <!-- ShippingLabelConfigTests -->
+      </class> <!-- com.gsicommerce.romui.selenium.tests.OrdersTests -->
+    </test> <!-- OrdersTests -->
   </suite> <!-- Suite -->
 </testng-results>

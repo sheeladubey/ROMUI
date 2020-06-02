@@ -76,6 +76,13 @@ public class CommonElementsPage {
 
 	@FindBy(how = How.CSS, using = ".reflow-table")
 	private static WebElement nodeWebTable;
+	
+
+	@FindBy(how = How.CSS, using = ".table-responsive")
+	private static WebElement nodeWebTableFulfillmentOrders;
+	
+	@FindBy(how = How.CSS, using = ".alert-danger")
+	private static WebElement txtformvalidationError;
 
 	public static Webtable nodeWebTable() {
 		Webtable wt = new Webtable(driver, (WebElement) nodeWebTable);
@@ -141,7 +148,7 @@ public class CommonElementsPage {
 		return rowNo;
 
 	}
-
+//get row number for pipeline screen
 	public static int getRowNum(String pipelineName) throws Exception {
 		int rowNo = 0;
 		rowNo = nodeWebTable().getTableRowNumForCellText(pipelineName, 1);
@@ -153,7 +160,7 @@ public class CommonElementsPage {
 		return rowNo;
 
 	}
-
+	
 	public static void clickActionsIcon(int row, int col, int child) throws Exception {
 		Reporter.log("Action icon is clicked on");
 		nodeWebTable().clickIcon(row, col, child);
@@ -163,13 +170,13 @@ public class CommonElementsPage {
 
 	public static void clickActionsIcon(int row, int col, int child, int spanchild) throws Exception {
 		Reporter.log("Action icon is clicked on");
-		nodeWebTable().clickIcon(row, col, child, spanchild);
+		nodeWebTable().clickIconPipeline(row, col, child, spanchild);
 	}
 
 	// method to click delete action icons for pipeline screen
 	public static void clickDeleteIcon(int row, int col, int spanchild) throws Exception {
 		Reporter.log("Action icon is clicked on");
-		nodeWebTable().clickDeleteIcon(row, col, spanchild);
+		nodeWebTable().clickDeleteIconPipeline(row, col, spanchild);
 	}
 
 	public static void enterStagingLoc(String loc) throws Exception {
@@ -199,5 +206,51 @@ public class CommonElementsPage {
 		nodeWebTable().clickIconDelete(row, col, child, spanchild);
 	}
 
+	public static void clickViewOrderIcon(int row, int col, int divchild, int child, int spanchild) throws Exception {
+			Reporter.log("Action icon is clicked on");
+			nodeWebTable().clickIconViewOrder(row, col, divchild,child, spanchild);
+		
+	}
+	
+	public static Webtable nodeWebTableFulfillmentOrders() {
+		Webtable wt = new Webtable(driver, (WebElement) nodeWebTableFulfillmentOrders);
+		return wt;
+	}
+	
+	//get row number for fulfillment orders screen
+		public static int getRowNumFulfillmentOrders(String fulfillmentOrd) throws Exception {
+			int rowNo = 0;
+			rowNo = nodeWebTableFulfillmentOrders().getTableRowNumForCellText(fulfillmentOrd, 1);
+			while (rowNo <= 0) {
+				// CommonElementsPage.clickNextPage();
+				Common.waitForElement(driver, nodeWebTable, 10);
+				rowNo = nodeWebTableFulfillmentOrders().getTableRowNumForCellText(fulfillmentOrd, 1);
+			}
+			return rowNo;
+
+		}
+		
+		public static String formErrorValidation() {
+			return txtformvalidationError.getText();
+		}
+
+		
+		/**
+		 * This method switches focus to window with title.
+		 * 
+		 * @param windowTitle
+		 * @return boolean - whether switch was successful.
+		 */
+		public static boolean switchWindow(final String windowTitle) {
+			for (final String handle : driver.getWindowHandles()) {
+				driver.switchTo().window(handle);
+				driver.switchTo().window(handle).getTitle();
+				if (driver.getTitle()
+						.compareToIgnoreCase(windowTitle.toLowerCase()) == 0) {
+					return true;
+				}
+			}
+			return false;
+		}
 
 }
