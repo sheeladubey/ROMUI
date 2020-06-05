@@ -32,7 +32,7 @@ public class ServiceFlowTests extends ROMUIBasePage {
 
 	@Test(enabled = true, priority = 2, description = "View Service Flow")
 	public void testViewServiceFlow()
-			throws JsonParseException, JsonMappingException, IOException, InterruptedException {
+			throws Exception {
 
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
@@ -47,7 +47,7 @@ public class ServiceFlowTests extends ROMUIBasePage {
 
 	@Test(enabled = true, priority = 5, description = "Edit Service Flow")
 	public void testEditServiceFlow()
-			throws JsonParseException, JsonMappingException, IOException, InterruptedException {
+			throws Exception {
 
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
@@ -64,7 +64,7 @@ public class ServiceFlowTests extends ROMUIBasePage {
 	}
 
 	@Test(enabled = true, priority = 4, description = "Copy Service Flow")
-	public void testCopyServiceFlow() throws JsonParseException, JsonMappingException, IOException {
+	public void testCopyServiceFlow() throws Exception {
 
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
@@ -83,7 +83,7 @@ public class ServiceFlowTests extends ROMUIBasePage {
 
 	@Test(enabled = true, priority = 3, description = "Edit Service flow Processes")
 	public void testEditServiceFlowProcesses()
-			throws JsonParseException, JsonMappingException, IOException, InterruptedException {
+			throws Exception {
 
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
@@ -101,5 +101,20 @@ public class ServiceFlowTests extends ROMUIBasePage {
 				"EDIT serviceflow Processes didn't get created successfully");
 
 	}
+	
+	@Test(enabled = true, priority=6,description = "Service Flow Error Validation")
+	  public void testUserErrorValidation()throws JsonParseException,
+	  JsonMappingException, IOException, InterruptedException {
+	  
+	  logger.info("Login credentials to be entered");
+	  romuipages.loginPage().login(env.getUserName(), env.getPassword());
+	  romuipages.homePage().clickOnLandingButton("Order Management");
+	  logger.info("Order Management link is clicked on");
+	  romuipages.orderMgmPage().clickOnServiceFlows();
+	  logger.info("Navigated to Service Flow page");
+	  romuipages.serviceFlowPage().svcflwValidation();
+	  logger.info("Service Flow Error Validation Feature has been validated successfully");
+	  
+	  }
 
 }

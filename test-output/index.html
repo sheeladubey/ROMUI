@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.OrdersTests" class="method navigator-link" hash-for-method="testSearchOrderByCustomerNameZip">testSearchOrderByCustomerNameZip</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.OrdersTests" class="method navigator-link" hash-for-method="testAddZCOrder">testAddZCOrder</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -127,17 +127,18 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testSearchOrderByCustomerNameZip">
-                  </a> <!-- testSearchOrderByCustomerNameZip -->
-                  <span class="method-name">testSearchOrderByCustomerNameZip</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: [data-tooltip=&apos;Main Menu&apos;]
+                  <a name="testAddZCOrder">
+                  </a> <!-- testAddZCOrder -->
+                  <span class="method-name">testAddZCOrder</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#address_country_code&quot;}
+  (Session info: chrome=83.0.4103.61)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.134.214&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 76.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200507114007, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 12108, moz:profile: C:\Users\shedubey\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: b2ce4a2c-3e68-4478-acbd-3cdcd30d3a8f
-*** Element info: {Using=css selector, value=[data-tooltip=&apos;Main Menu&apos;]}
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.135.167&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.61, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58304}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 85da2e2a93aaf96acc6b3d9e6ac8d1d5
+*** Element info: {Using=css selector, value=#address_country_code}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -150,14 +151,17 @@ Session ID: b2ce4a2c-3e68-4478-acbd-3cdcd30d3a8f
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy14.click(Unknown Source)
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.OrderManagementMenusPage.clickOnOrders(OrderManagementMenusPage.java:253)
-	at com.gsicommerce.romui.selenium.tests.OrdersTests.testSearchOrderByCustomerNameZip(OrdersTests.java:123)
+	at com.sun.proxy.$Proxy14.getTagName(Unknown Source)
+	at org.openqa.selenium.support.ui.Select.&lt;init&gt;(Select.java:45)
+	at com.gsicommerce.romui.selenium.utilities.Action.selectByVisibleText(Action.java:777)
+	at com.gsicommerce.romui.selenium.pages.ordermanagement.OrdersPage.editBillingAddress(OrdersPage.java:392)
+	at com.gsicommerce.romui.selenium.pages.ordermanagement.OrdersPage.addZeroCostOrder(OrdersPage.java:355)
+	at com.gsicommerce.romui.selenium.tests.OrdersTests.testAddZCOrder(OrdersTests.java:205)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 32 stack frames
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                   <em>
-(to Verify search order by Customer Name)                  </em>
+(To Verify Add Zero Cost Order)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -173,10 +177,10 @@ Session ID: b2ce4a2c-3e68-4478-acbd-3cdcd30d3a8f
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;parameter name=&quot;adminUserName&quot; value=&quot;admin@tmsna&quot;/&gt;
-  &lt;parameter name=&quot;storeEnvironment&quot; value=&quot;lvststromsso04&quot;/&gt;
+  &lt;parameter name=&quot;storeEnvironment&quot; value=&quot;lvststromuiapp04&quot;/&gt;
   &lt;parameter name=&quot;adminPasswd&quot; value=&quot;Password123@&quot;/&gt;
   &lt;parameter name=&quot;waitPeriod&quot; value=&quot;5&quot;/&gt;
-  &lt;parameter name=&quot;browserType&quot; value=&quot;firefox&quot;/&gt;
+  &lt;parameter name=&quot;browserType&quot; value=&quot;chrome&quot;/&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.gsicommerce.romui.selenium.utilities.ExtentReporterListener&quot;/&gt;
   &lt;/listeners&gt;
@@ -225,14 +229,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testSearchOrderByCustomerNameZip')
+data.setCell(0, 1, 'testAddZCOrder')
 data.setCell(0, 2, 'com.gsicommerce.romui.selenium.tests.OrdersTests')
-data.setCell(0, 3, 6172);
+data.setCell(0, 3, 33087);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 33 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -244,16 +248,17 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">testSearchOrderByCustomerNameZip</span>
+              <span class="reporter-method-name">testAddZCOrder</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')</span>
+                <span class="reporter-method-output">Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.cssSelector: #address_country_code' (tried for 20 second(s) with 500 milliseconds interval)</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">7 ignored methods</span>
+            <span class="header-content">12 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
@@ -263,13 +268,23 @@ return data;
                 <br/>
                 <span class="ignored-method-name">testSearchOrderByCustomerName</span>
                 <br/>
+                <span class="ignored-method-name">testOrderSearchFormValidation</span>
+                <br/>
                 <span class="ignored-method-name">testSearchOrderByEmail</span>
                 <br/>
                 <span class="ignored-method-name">testSearchOrderbyNumber</span>
                 <br/>
+                <span class="ignored-method-name">testViewOrderByCustomername</span>
+                <br/>
+                <span class="ignored-method-name">testViewOrderByEmail</span>
+                <br/>
                 <span class="ignored-method-name">testViewOrder</span>
                 <br/>
                 <span class="ignored-method-name">testEditSearch</span>
+                <br/>
+                <span class="ignored-method-name">testViewOrderByStatus</span>
+                <br/>
+                <span class="ignored-method-name">testViewOrderByFulfillment</span>
                 <br/>
                 <span class="ignored-method-name">testSearchOrderByFullfillmentNumber</span>
                 <br/>
@@ -285,18 +300,18 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.gsicommerce.romui.selenium.tests.OrdersTests</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setup(org.testng.TestRunner@e72dba7)</span>
+                <span class="method-name">setup(org.testng.TestRunner@6940f685)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">testSearchOrderByCustomerNameZip</span>
-                <span class="method-start">6002 ms</span>
+                <span class="method-name">testAddZCOrder</span>
+                <span class="method-start">10530 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=testSearchOrderByCustomerNameZip status=FAILURE method=OrdersTests.testSearchOrderB...)</span>
-                <span class="method-start">12189 ms</span>
+                <span class="method-name">tearDown([TestResult name=testAddZCOrder status=FAILURE method=OrdersTests.testAddZCOrder()[pri:11, instance:...)</span>
+                <span class="method-start">43617 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

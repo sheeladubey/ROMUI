@@ -17,6 +17,7 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.gsicommerce.romui.selenium.testdata.Environment;
 import com.gsicommerce.romui.selenium.testdata.ServiceFlowData;
+import com.gsicommerce.romui.selenium.testdata.UserManagementData;
 import com.gsicommerce.romui.selenium.utilities.Action;
 import com.gsicommerce.romui.selenium.utilities.Common;
 import com.gsicommerce.romui.selenium.utilities.RomuiEnumValues;
@@ -27,6 +28,7 @@ public class ServiceFlowPage {
 	Environment env;
 	Action action;
 	private ServiceFlowData data;
+	private static String svcflowName;
 
 	public ServiceFlowPage(WebDriver driver, Environment env) {
 
@@ -63,6 +65,10 @@ public class ServiceFlowPage {
 	@FindBy(how = How.CSS, using = "[data-tooltip='Edit Service Flow Processes']")
 	@CacheLookup
 	private WebElement iconEditProcess;
+	
+	@FindBy(how = How.CSS, using = ".alert-danger")
+	@CacheLookup
+	public WebElement txtErrorMsg;
 
 	@FindBy(how = How.CSS, using = "#order_orchestration_service_workflow_service_flow_name")
 	@CacheLookup
@@ -122,6 +128,10 @@ public class ServiceFlowPage {
 	@CacheLookup
 	private WebElement btnSave;
 
+	@FindBy(how = How.CSS, using = ".alert-danger")
+	@CacheLookup
+	public WebElement svcflwErrorMsg;
+	
 	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Edit Service Flow Processes')]")
 	@CacheLookup
 	private WebElement btnEditProcess;
@@ -167,35 +177,15 @@ public class ServiceFlowPage {
 	@CacheLookup
 	public WebElement btnContinue;
 
-	@FindBy(how = How.XPATH, using = "(//label[contains(text(),'Value')]/following-sibling::input)[2]")
-	@CacheLookup
-	public WebElement txtboxValue;
-
-	@FindBy(how = How.XPATH, using = "(//label[contains(text(),'Value')]/following-sibling::input)[4]")
-	@CacheLookup
-	public WebElement txtboxValue2;
-
-	@FindBy(how = How.XPATH, using = "(//label[contains(text(),'Value')]/following-sibling::input)[5]")
-	@CacheLookup
-	public WebElement txtboxValue3;
-
-	@FindBy(how = How.XPATH, using = "(//label[contains(text(),'Value')]/following-sibling::input)[10]")
-	@CacheLookup
-	public WebElement txtboxValue4;
-
-	@FindBy(how = How.XPATH, using = "(//label[contains(text(),'Value')]/following-sibling::input)[12]")
-	@CacheLookup
-	public WebElement txtboxValue5;
-
-	@FindBy(how = How.XPATH, using = "(//label[contains(text(),'Value')]/following-sibling::input)[14]")
-	@CacheLookup
-	public WebElement txtboxValue6;
+	
 
 	public void addSvcFlw() throws JsonParseException, JsonMappingException, IOException, InterruptedException {
 		data = ServiceFlowData.get(env.getFileLocation());
 		Common.waitForElementPresent(driver, btnAddSvcFlw, 06);
 		btnAddSvcFlw.click();
-		Action.enter(txtBoxSvcFlwName, data.getSvcFlwName());
+		svcflowName=data.getSvcFlwName();
+        System.out.println("Service Flow name is:-"+svcflowName);
+		Action.enter(txtBoxSvcFlwName, svcflowName);
 		Action.selectByValue(drpdwnSvcName, "Shipment");
 		selectSvcFlwCriteriaByshippingType();
 		btnSaveConfigProcess.click();
@@ -203,13 +193,16 @@ public class ServiceFlowPage {
 		// btnSave.click();
 	}
 
-	public void editSvcFlw() throws JsonParseException, JsonMappingException, IOException, InterruptedException {
+	public void editSvcFlw() throws Exception {
 		data = ServiceFlowData.get(env.getFileLocation());
 		Common.waitForElementPresent(driver, btnAddSvcFlw, 06);
 		Action.selectByValue(drpdwnService, "Shipment");
 		btnSearch.click();
-		Action.scrollDown("200");
-		iconEdit.click();
+		//int rowNo = CommonElementsPage.getSvcFlwRowNum(svcflowName);
+		int rowNo = CommonElementsPage.getRowNo(svcflowName);
+		System.out.println(rowNo);
+		Action.waitForElementToBeClickable(driver, btnAddSvcFlw, 30);
+		CommonElementsPage.clickActionsIcon(rowNo, 3, 3, 1);
 		txtBoxSvcFlwName.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 		Action.enter(txtBoxSvcFlwName, data.getSvcFlwName());
 		Action.selectByValue(drpdwnSvcName, "Shipment");
@@ -240,12 +233,16 @@ public class ServiceFlowPage {
 		btnSvcFlwCriteriaConfirm.click();
 	}
 
-	public void clickViewSvcFlw() throws JsonParseException, JsonMappingException, IOException, InterruptedException {
+	public void clickViewSvcFlw() throws Exception {
 		data = ServiceFlowData.get(env.getFileLocation());
 		Common.waitForElementPresent(driver, btnAddSvcFlw, 06);
 		Action.selectByValue(drpdwnService, "Shipment");
 		btnSearch.click();
-		iconView.click();
+		//int rowNo = CommonElementsPage.getSvcFlwRowNum(svcflowName);
+		int rowNo = CommonElementsPage.getRowNo(svcflowName);
+		System.out.println(rowNo);
+		Action.waitForElementToBeClickable(driver, btnAddSvcFlw, 30);
+		CommonElementsPage.clickActionsIcon(rowNo, 3, 1, 1);
 		System.out.println("Clicked View Service Flow button");
 		Assert.assertEquals(viewSvcFlwConfigHeader.getText(), RomuiEnumValues.SERVICEFLOW_VIEW_HEADER.getMessage(),
 				"USER does not navigated to View Service Flow screen");
@@ -259,63 +256,78 @@ public class ServiceFlowPage {
 		System.out.println("Clicked Cancel button");
 	}
 
-	public void copySvcFlw() throws JsonParseException, JsonMappingException, IOException {
+	public void copySvcFlw() throws Exception {
 		data = ServiceFlowData.get(env.getFileLocation());
 		Common.waitForElementPresent(driver, btnAddSvcFlw, 06);
 		Action.selectByValue(drpdwnService, "Shipment");
 		btnSearch.click();
-		Action.scrollDown("200");
-		Action.waitForElementToBeClickable(driver, iconCopy, 10);
-		iconCopy.click();
+		int rowNo = CommonElementsPage.getRowNo(svcflowName);
+		Action.waitForElementToBeClickable(driver, btnAddSvcFlw, 30);
+		CommonElementsPage.clickActionsIcon(rowNo, 3, 2, 1);
 		Action.enter(txtBoxSvcFlwName, data.getSvcFlwName());
 		btnSave.click();
 
 	}
 
-	public void editSvcFlwprocess() throws JsonParseException, JsonMappingException, IOException {
+	public void editSvcFlwprocess() throws Exception {
 		data = ServiceFlowData.get(env.getFileLocation());
 		Common.waitForElementPresent(driver, btnAddSvcFlw, 06);
 		Action.selectByValue(drpdwnService, "Shipment");
 		btnSearch.click();
-		Action.waitForElementToBeClickable(driver, iconEditProcess, 10);
-		iconEditProcess.click();
+		int rowNo = CommonElementsPage.getRowNo(svcflowName);
+		Action.waitForElementToBeClickable(driver, btnAddSvcFlw, 30);
+		CommonElementsPage.clickActionsIcon(rowNo, 3, 4, 1);
 
 	}
 
-	public void addSvcFlwProcess() throws InterruptedException {
-
-		btnAddProcess.click();
-		for (int i = 0; i <= 5; i++) {
-			List<WebElement> drpdwnProcessName = driver.findElements(By.cssSelector("#process_name"));
-			drpdwnProcessName.get(i).click();
-			Action.selectByIndex(drpdwnProcessName.get(i), i);
+public void addSvcFlwProcess() {
+		
+		btnAddProcess.click(); 
+		for (int i=0; i<=5;i++)
+		{
+		List<WebElement> drpdwnProcessName = driver.findElements(By.cssSelector("#process_name"));
+		drpdwnProcessName.get(i).click(); 
+			Action.selectByIndex(drpdwnProcessName.get(i), i+1);
 			Action.scrollDown("500");
-			if (i < 5) {
-				btnAddProcess.click();
+			if(i<5)
+			{
+			btnAddProcess.click(); 
 			}
 			Action.scrollDown("500");
-
-		}
-		for (int j = 0; j <= 14; j++) {
-			List<WebElement> txtboxValue = driver.findElements(By.cssSelector("[name='attribute_value']"));
-			Action.enter(txtboxValue.get(j), data.getSvcFlwkeyValue());
-			Thread.sleep(10000);
-		}
-		Thread.sleep(10000);
-		btnSave.click();
-
+			
 	}
-
-	public void editSvcFlwProcess() {
-
-		// Action.selectByValue(drpdwnProcessName1, "1");
-		txtboxValue.clear();
-		Action.enter(txtboxValue, data.getHfrSvcFlwValue());
-		Action.scrollDown("500");
-		// Action.selectByValue(drpdwnProcessName3, "3");
-		txtboxValue.clear();
-		Action.enter(txtboxValue3, data.getShipmentSvcFlwValue());
+		List<WebElement> txtboxValue = driver.findElements(By.cssSelector("[name='attribute_value']"));
+	    for (int j=0; j<=txtboxValue.size()-2;j++) { 
+      
+	    Action.enter(txtboxValue.get(j),data.getSvcFlwkeyValue());
+	   }
+		
 		btnSave.click();
-	}
+		
+		}
+	
+public void editSvcFlwProcess(){
+	
+	List<WebElement> txtboxValue = driver.findElements(By.cssSelector("[name='attribute_value']"));
+    for (int j=0; j<=txtboxValue.size()-2;j++) { 
+  
+    Action.enter(txtboxValue.get(j),data.getSvcFlwkeyValue());
+   }
+		btnSave.click();
+		}
+
+public void svcflwValidation() throws JsonParseException, JsonMappingException, IOException, InterruptedException {
+	data = ServiceFlowData.get(env.getFileLocation());
+	Common.waitForElementPresent(driver, btnAddSvcFlw, 06);
+	btnAddSvcFlw.click();
+	btnSaveConfigProcess.click();
+	Assert.assertEquals(txtErrorMsg.getText(), RomuiEnumValues.SERVICEFLOW_CRITERIA_VALIDATION.getMessage(),
+			"Service Flow Criteria Validation message has not been found");
+	btnSvcFlwCriteriaDelete.click();
+	btnSave.click();
+	Assert.assertEquals(svcflwErrorMsg.getText(), RomuiEnumValues.SERVICEFLOW_VALIDATION.getMessage(),
+			"Service Flow Criteria Validation message has not been found");
+
+}
 
 }

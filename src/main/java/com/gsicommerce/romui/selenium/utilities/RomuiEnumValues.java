@@ -29,7 +29,9 @@ public enum RomuiEnumValues {
 	USER_VALIDATION("Oh snap! Please check your form for validation errors"),
 	ROLE_EDIT("Heads up! Role successfully updated!"),
 	ROLE_VALIDATION("Heads up! Please ensure you have selected at least one permission."),
-	ROLE_DELETE("Heads up! Role successfully deleted!");	
+	ROLE_DELETE("Heads up! Role successfully deleted!"),
+	SERVICEFLOW_CRITERIA_VALIDATION(""),
+	SERVICEFLOW_VALIDATION("");
 
 	private String updateMsg;
 

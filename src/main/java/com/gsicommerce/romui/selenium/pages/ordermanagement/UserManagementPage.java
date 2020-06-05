@@ -587,7 +587,7 @@ public class UserManagementPage {
 	public void editRole() throws Exception {
 		data = UserManagementData.get(env.getFileLocation());
 		Common.waitForElementPresent(driver, btnAddUser, 06);
-		int rowNo = CommonElementsPage.getRoleRowNum(userId);
+		int rowNo = CommonElementsPage.getRowNo(userId);
 		Action.waitForElementToBeClickable(driver, btnAddUser, 30);
 		CommonElementsPage.clickActionsIcon(rowNo, 4, 0, 1);
 		chkAtpRules.click();
@@ -598,7 +598,7 @@ public class UserManagementPage {
 	public void deleteRole() throws Exception {
 		data = UserManagementData.get(env.getFileLocation());
 		Common.waitForElementPresent(driver, btnAddUser, 06);
-		int rowNo = CommonElementsPage.getRoleRowNum(userId);
+	//	int rowNo = CommonElementsPage.getRowNo(userId);
 		Action.waitForElementToBeClickable(driver, btnAddUser, 30);
 		CommonElementsPage.clickActionsIconDelete(1, 4, 0, 1);
 		btnRoleConfirm.click();

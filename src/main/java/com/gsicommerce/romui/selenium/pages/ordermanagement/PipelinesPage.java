@@ -2,8 +2,7 @@ package com.gsicommerce.romui.selenium.pages.ordermanagement;
 
 import java.io.IOException;
 import java.util.Calendar;
-import java.util.concurrent.TimeUnit;
-
+import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -47,24 +46,8 @@ public class PipelinesPage {
 		action = new Action(driver, env);
 	}
 
-	@FindBy(how = How.CSS, using = "[data-tooltip='View Pipeline']")
-	@CacheLookup
-	private WebElement btnView;
-
-	@FindBy(how = How.CSS, using = "[data-tooltip='Edit Pipeline']")
-	private WebElement btnEdit;
-
-	@FindBy(how = How.CSS, using = "[data-tooltip='Edit Pipeline Configuration']")
-	@CacheLookup
-	private WebElement btnEditConfig;
-
 	@FindBy(how = How.CSS, using = "[data-tooltip='Delete Pipeline']")
-	@CacheLookup
 	private WebElement btnDeletePipeline;
-
-	@FindBy(how = How.CSS, using = "[data-tooltip='Copy Pipeline']")
-	@CacheLookup
-	private WebElement btnCopyPipeline;
 
 	@FindBy(how = How.CSS, using = "#order_orchestration_pipeline_name")
 	private WebElement txtBoxPipelineName;
@@ -93,7 +76,6 @@ public class PipelinesPage {
 	@FindBy(how = How.CSS, using = "#condition_value")
 	private WebElement drpdwnPipelineCriteriaValue;
 
-	/*-----------------------------------------------------Create Event-----------------------*/
 	@FindBy(how = How.CSS, using = "#SalesOrderCreate")
 	@CacheLookup
 	private WebElement dragSalesOrderCreate;
@@ -105,23 +87,6 @@ public class PipelinesPage {
 	@FindBy(how = How.CSS, using = "#graph-container")
 	@CacheLookup
 	public WebElement btnOrderCreate;
-
-	@FindBy(how = How.CSS, using = ".sidebar-container")
-	@CacheLookup
-	private WebElement OrderCreateEvent;
-
-	@FindBy(how = How.XPATH, using = "//button[contains(@class,'exit-event-button')]")
-	@CacheLookup
-	private WebElement btnConnect;
-
-	@FindBy(how = How.XPATH, using = "//div[contains(text(),'Scheduling')]")
-	@CacheLookup
-	private WebElement btnScheduling;
-
-	@FindBy(how = How.CSS, using = ".add-new")
-	@CacheLookup
-	private WebElement btnAddConnection;
-	/*--------------------------------------------------------------*/
 
 	@FindBy(how = How.CSS, using = ".pipeline-criteria-form-container")
 	private WebElement pipelineCriteriaFormContainer;
@@ -183,30 +148,29 @@ public class PipelinesPage {
 	@FindBy(how = How.CSS, using = ".alert-danger")
 	private WebElement txtformvalidationError;
 
+	@FindBy(how = How.CSS, using = ".reflow-table-row")
+	@CacheLookup
+	public List<WebElement> tableRows;
+
 	public void addPipeline() throws JsonParseException, JsonMappingException, IOException, Exception {
 		data = PipelineData.get(env.getFileLocation());
 		btnAddPipeline.click();
 		addpipelineName = data.getPipelineName();
 		System.out.println("ADDED PIPELINE NAME is:-" + addpipelineName);
 		Action.enter(txtBoxPipelineName, addpipelineName);
-		clickonStartDate();
-		clickonEndDate();
-		selectPipelineCriteriaByTenderType();
+		Common.clickonCalendarDate(txtStartDate, 1);
+		Common.clickonCalendarDate(txtEndDate, 7);		
+		// Select by Tender Type
+		selectPipelineCriteria(0, 5, 0, 3, 1);
 		btnPrependCondition.click();
-		selectPipelineCriteriaByOrderType();
+		// Select By Order Type
+		selectPipelineCriteria(0, 1, 0, 0, 1);
 		btnSaveAddConfig.click();
 		Common.dragAndDrop(driver, dragSalesOrderCreate, dropSalesOrderCreate, 10);
 		btnSave.click();
 		btnContinueConfig.click();
-		System.out.println("Selected row- " + CommonElementsPage.getRowNum(addpipelineName));
 		rowNo = CommonElementsPage.getRowNum(addpipelineName);
 		System.out.println("Row Selected :" + rowNo);
-		if (Webtable.getTableCellText(rowNo, 1).contains(addpipelineName)) {
-			System.out.println("Pipeline added successfully");
-		} else {
-			System.out.println("Pipeline not added successfully");
-		}
-		System.out.println("row text:" + Webtable.getTableCellText(rowNo, 1));
 		if (Webtable.getTableCellText(rowNo, 2).equals("DRAFT") && btnDeletePipeline.isDisplayed())
 			System.out.println("Delete pipeline icon exist for Draft status record");
 		else {
@@ -216,37 +180,20 @@ public class PipelinesPage {
 	}
 
 	public void clickViewPipeline() throws JsonParseException, JsonMappingException, IOException, Exception {
-		addPipeline();
+		// addPipeline();
 		CommonElementsPage.clickActionsIcon(rowNo, 5, 1, 1);
 		WebElement lblNameViewPipeline = driver
 				.findElement(By.xpath("//div[contains(text(),'" + addpipelineName + "')]"));
-		System.out.println("Name value is:" + lblNameViewPipeline.getText());
-		if (lblNameViewPipeline.getText().contains(addpipelineName)) {
-			System.out.println("view pipeline screen validated");
-		} else {
-			System.out.println("view pipeline screen has not been validated");
-		}
-		Assert.assertEquals(lblNameViewPipeline.getText(), addpipelineName, "View Pipeline screen has not been validated");
-
+		Assert.assertEquals(lblNameViewPipeline.getText().substring(5), addpipelineName,
+				"View Pipeline screen has not been validated");
 		Action.waitForElementToBeClickable(driver, lkviewPipelineConfig, 10);
 		Action.clickElementJavaScipt(lkviewPipelineConfig);
-
-		WebElement lblNameConfigurePipeline = driver.findElement(
-				By.xpath("//div[contains(text(),'Name')] | //div[contains(text(),'" + addpipelineName + "')]"));
-
-		if (lblNameConfigurePipeline.getText().contains(addpipelineName)) {
-			System.out.println("Configure pipeline screen validated");
-		} else {
-			System.out.println("Configure pipeline screen has not been validated");
-		}
-
-		Assert.assertEquals(lblNameConfigurePipeline.getText(), addpipelineName,
+		WebElement lblNameConfigurePipeline = driver.findElement(By.cssSelector(".col-sm-3.order-mobile-spacing"));
+		Assert.assertEquals(lblNameConfigurePipeline.getText().substring(5), addpipelineName,
 				"Configure Pipeline screen has not been validated");
-		Action.waitForElementToBeVisible(driver, btnCancel, 10);
 		Action.waitForElementToBeClickable(driver, btnCancel, 15);
 		btnCancel.click();
-
-	}
+}
 
 	/*
 	 * Verify Edit Pipeline feature . 1. First Added new Pipeline which is in DRAFT
@@ -255,21 +202,21 @@ public class PipelinesPage {
 	 * 
 	 */
 	public void editPipeline() throws JsonParseException, JsonMappingException, IOException, Exception {
-		addPipeline();
+		// addPipeline();
 		CommonElementsPage.clickActionsIcon(rowNo, 5, 3, 1);
 		data = PipelineData.get(env.getFileLocation());
 		editPipelineName = data.getPipelineName();
 		System.out.println("EDIT PIPELINE NAME IS:" + editPipelineName);
-		Common.waitForElementPresent(driver, txtBoxPipelineName, 10);
 		Action.waitForElementToBeClickable(driver, txtBoxPipelineName, 10);
 		txtBoxPipelineName.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 		Action.enter(txtBoxPipelineName, editPipelineName);
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		Action.selectByIndex(drpdwnPipelineStatus, 2);
-		clickonStartDate();
-		clickonEndDate();
+		Action.selectByIndex(drpdwnPipelineStatus, 2);		
+		Common.clickonCalendarDate(txtStartDate, 1);
+		Common.clickonCalendarDate(txtEndDate, 7);
 		btnPrependCondition.click();
-		selectPipelineCriteriaByPaymentMethod();
+		// selectPipelineCriteriaByPaymentMethod();
+		// Select By Fulfillment Method
+		selectPipelineCriteria(0, 0, 0, 0, 1);
 		btnSaveEditConfig.click();
 		Common.waitForElementPresent(driver, btnContinue, 10);
 		btnContinue.click();
@@ -277,9 +224,7 @@ public class PipelinesPage {
 				"Pipelne for Draft Status hasn't been updated");
 		Action.waitForElementToBeClickable(driver, btnCancel, 10);
 		Action.clickElementJavaScipt(btnCancel);
-		System.out.println("Selected row- " + CommonElementsPage.getRowNum(editPipelineName));
 		rowNo1 = CommonElementsPage.getRowNum(editPipelineName);
-		System.out.println("Edited pipeline:" + Webtable.getTableCellText(rowNo1, 1));
 		if (Webtable.getTableCellText(rowNo1, 2).equals("ACTIVE") && !btnDeletePipeline.isDisplayed())
 			System.out.println("Delete pipeline icon doesn't exist for Active status record");
 		else {
@@ -291,7 +236,8 @@ public class PipelinesPage {
 	}
 
 	/*
-	 * Verify Edit Pipeline feature of ACTIVE status . 1. First Added new Pipeline
+	 * Verify Edit Pipeline feature of ACTIVE status . 
+	 * 1. First Added new Pipeline.
 	 * which is in DRAFT status 2.Then Edit pipeline name,status ,start and end date
 	 * of recently added pipeline. 3.New pipeline is in ACTIVE status now.
 	 * 4.Selected the new recently added Active status pipeline and change the
@@ -299,11 +245,11 @@ public class PipelinesPage {
 	 * INACTIVE status.
 	 */
 	public void editPipelineActiveStatus() throws JsonParseException, JsonMappingException, IOException, Exception {
-		editPipeline();
+		// editPipeline();
 		CommonElementsPage.clickActionsIcon(rowNo1, 5, 3, 1);
-		Action.selectByIndex(drpdwnPipelineStatus, 0);
-		clickonStartDate();
-		clickonEndDate();
+		Action.selectByIndex(drpdwnPipelineStatus, 0);		
+		Common.clickonCalendarDate(txtStartDate, 1);
+		Common.clickonCalendarDate(txtEndDate, 7);
 		btnSaveViewConfig.click();
 		Common.waitForElementPresent(driver, btnContinue, 05);
 		btnContinue.click();
@@ -311,9 +257,7 @@ public class PipelinesPage {
 				"Pipelne for Active Status hasn't been updated");
 		Action.waitForElementToBeClickable(driver, btnCancel, 10);
 		Action.clickElementJavaScipt(btnCancel);
-		System.out.println("Selected row- " + CommonElementsPage.getRowNum(editPipelineName));
 		rowNo2 = CommonElementsPage.getRowNum(editPipelineName);
-		System.out.println("Selected row status is:" + Webtable.getTableCellText(rowNo2, 2));
 		if (Webtable.getTableCellText(rowNo2, 2).equals("INACTIVE") && !btnDeletePipeline.isDisplayed())
 			System.out.println("Delete pipeline icon doesn't exist for InActive status record");
 		else {
@@ -334,11 +278,11 @@ public class PipelinesPage {
 	 * validate success message.
 	 */
 	public void editPipelineInActiveStatus() throws JsonParseException, JsonMappingException, IOException, Exception {
-		editPipelineActiveStatus();
+		// editPipelineActiveStatus();
 		CommonElementsPage.clickActionsIcon(rowNo2, 5, 3, 1);
 		Action.selectByIndex(drpdwnPipelineStatus, 1);
-		clickonStartDate();
-		clickonEndDate();
+		Common.clickonCalendarDate(txtStartDate, 1);
+		Common.clickonCalendarDate(txtEndDate, 7);
 		btnSaveViewConfig.click();
 		Common.waitForElementPresent(driver, btnContinue, 05);
 		btnContinue.click();
@@ -346,102 +290,90 @@ public class PipelinesPage {
 				"Pipelne for Inactive status hasn't been updated");
 		Action.waitForElementToBeClickable(driver, btnCancel, 10);
 		Action.clickElementJavaScipt(btnCancel);
-		System.out.println("Selected row- " + CommonElementsPage.getRowNum(editPipelineName));
 		int rowNo3 = CommonElementsPage.getRowNum(editPipelineName);
-		System.out.println("Selected row status is:" + Webtable.getTableCellText(rowNo3, 2));
 		Assert.assertEquals(Webtable.getTableCellText(rowNo3, 2), "ACTIVE",
 				"Inactive status Pipeline record has not been Edited");
 	}
 
 	public void deletePipeline() throws JsonParseException, JsonMappingException, IOException, Exception {
-		addPipeline();
+		// addPipeline();
 		CommonElementsPage.clickDeleteIcon(rowNo, 5, 1);
-		System.out.println("Delete Pipeline Button Clicked");
 		Action.waitForElementToBeClickable(driver, btnConfirm, 10);
 		btnConfirm.click();
-		System.out.println("Delete Pipeline Confirm button Clicked");
-
+		
 	}
 
 	public void copyPipeline() throws JsonParseException, JsonMappingException, IOException, Exception {
-		addPipeline();
+		// addPipeline();
 		CommonElementsPage.clickActionsIcon(rowNo, 5, 2, 1);
 		data = PipelineData.get(env.getFileLocation());
 		String copypipelineName = data.getPipelineName();
-		System.out.println("Copy PIPELINE NAME IS:" + copypipelineName);
-		Common.waitForElementPresent(driver, txtBoxPipelineName, 10);
 		Action.waitForElementToBeClickable(driver, txtBoxPipelineName, 10);
 		txtBoxPipelineName.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 		Action.enter(txtBoxPipelineName, copypipelineName);
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		clickonStartDate();
-		clickonEndDate();
+		// driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		//clickonStartDate();
+		//clickonEndDate();
+		Common.clickonCalendarDate(txtStartDate, 1);
+		Common.clickonCalendarDate(txtEndDate, 7);
 		btnSaveAddConfig.click();
 		Action.waitForElementToBeClickable(driver, btnSave, 10);
 		Action.clickElementJavaScipt(btnSave);
 		Action.waitForElementToBeClickable(driver, btnContinueConfig, 10);
 		btnContinueConfig.click();
-		System.out.println("Selected row- " + CommonElementsPage.getRowNum(copypipelineName));
 		int rowNo4 = CommonElementsPage.getRowNum(copypipelineName);
-		System.out.println("Selected row pipeline name is:" + Webtable.getTableCellText(rowNo4, 1));
 		Assert.assertEquals(Webtable.getTableCellText(rowNo4, 1), copypipelineName,
 				"Copy Pipeline for Draft status has not Saved Successfull");
 
 	}
 
 	public void copyPipelineActiveStatus() throws JsonParseException, JsonMappingException, IOException, Exception {
-		editPipeline();
+		// editPipeline();
 		CommonElementsPage.clickActionsIcon(rowNo1, 5, 2, 1);
 		data = PipelineData.get(env.getFileLocation());
 		String copypipelineName = data.getPipelineName();
-		System.out.println("Copy PIPELINE NAME IS:" + copypipelineName);
-		Common.waitForElementPresent(driver, txtBoxPipelineName, 10);
 		Action.waitForElementToBeClickable(driver, txtBoxPipelineName, 10);
 		txtBoxPipelineName.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 		Action.enter(txtBoxPipelineName, copypipelineName);
-		driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
-		clickonStartDate();
-		clickonEndDate();
+		//clickonStartDate();
+		//clickonEndDate();
+		Common.clickonCalendarDate(txtStartDate, 1);
+		Common.clickonCalendarDate(txtEndDate, 7);
 		btnSaveAddConfig.click();
 		Action.waitForElementToBeClickable(driver, btnSave, 10);
 		Action.clickElementJavaScipt(btnSave);
 		Action.waitForElementToBeClickable(driver, btnContinueConfig, 10);
 		btnContinueConfig.click();
-		System.out.println("Selected row- " + CommonElementsPage.getRowNum(copypipelineName));
 		int rowNo5 = CommonElementsPage.getRowNum(copypipelineName);
-		System.out.println("Selected row pipeline name is:" + Webtable.getTableCellText(rowNo5, 1));
 		Assert.assertEquals(Webtable.getTableCellText(rowNo5, 1), copypipelineName,
 				"Copy Pipeline for Active status has not Saved Successfull");
 
 	}
 
 	public void copyPipelineInActiveStatus() throws JsonParseException, JsonMappingException, IOException, Exception {
-		editPipelineActiveStatus();
+		// editPipelineActiveStatus();
 		CommonElementsPage.clickActionsIcon(rowNo2, 5, 2, 1);
 		data = PipelineData.get(env.getFileLocation());
 		String copypipelineName = data.getPipelineName();
-		System.out.println("Copy PIPELINE NAME IS:" + copypipelineName);
-		Common.waitForElementPresent(driver, txtBoxPipelineName, 10);
 		Action.waitForElementToBeClickable(driver, txtBoxPipelineName, 10);
 		txtBoxPipelineName.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 		Action.enter(txtBoxPipelineName, copypipelineName);
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		clickonStartDate();
-		clickonEndDate();
+		//clickonStartDate();
+		//clickonEndDate();
+		Common.clickonCalendarDate(txtStartDate, 1);
+		Common.clickonCalendarDate(txtEndDate, 7);
 		btnSaveAddConfig.click();
 		Action.waitForElementToBeClickable(driver, btnSave, 10);
 		Action.clickElementJavaScipt(btnSave);
 		Action.waitForElementToBeClickable(driver, btnContinueConfig, 10);
 		btnContinueConfig.click();
-		System.out.println("Selected row- " + CommonElementsPage.getRowNum(copypipelineName));
 		int rowNo6 = CommonElementsPage.getRowNum(copypipelineName);
-		System.out.println("Selected row pipeline name is:" + Webtable.getTableCellText(rowNo6, 1));
 		Assert.assertEquals(Webtable.getTableCellText(rowNo6, 1), copypipelineName,
 				"Copy Pipeline for Inactive status has not been Saved Successfully");
 
 	}
 
-	public void editPipelienConfiguration() throws Exception {
+	public void editPipelienConfigurationDraft() throws Exception {
 		addPipeline();
 		CommonElementsPage.clickActionsIcon(rowNo, 5, 4, 1);
 		Action.waitForElementToBeClickable(driver, btnSave, 10);
@@ -451,76 +383,64 @@ public class PipelinesPage {
 
 	}
 
-	public void selectPipelineCriteriaByTenderType() {
-
-		Action.selectByIndex(drpdwnPipelineCriteriaGroupStart, 1);
-		Action.selectByIndex(drpdwnPipelineCriteriaType, 6);
-		Action.selectByIndex(drpdwnPipelineCriteriaOperator, 1);
-		Action.selectByIndex(drpdwnPipelineCriteriaValue, 6);
-		Action.selectByIndex(drpdwnPipelineCriteriaGroupEnd, 2);
-		btnPipelineCriteriaConfirm.click();
+	public void editPipelienConfigurationActive() throws Exception {
+		// addPipeline();
+		CommonElementsPage.clickActionsIcon(rowNo, 5, 4, 1);
+		Action.waitForElementToBeClickable(driver, btnCancel, 10);
+		Action.clickElementJavaScipt(btnCancel);
 	}
 
-	public void selectPipelineCriteriaByOrderType() {
-		Action.selectByIndex(drpdwnPipelineCriteriaGroupStart, 1);
-		Action.selectByIndex(drpdwnPipelineCriteriaType, 2);
-		Action.selectByIndex(drpdwnPipelineCriteriaOperator, 1);
-		Action.selectByIndex(drpdwnPipelineCriteriaValue, 0);
-		Action.selectByIndex(drpdwnPipelineCriteriaGroupEnd, 2);
+	public void selectPipelineCriteria(int grpindexstart, int typeindex, int operatorindex, int valueindex,
+			int grpindexend) throws JsonParseException, JsonMappingException, IOException {
+		data = PipelineData.get(env.getFileLocation());
+		String criteriaType = data.getPipelineCriteriaType().get(typeindex);
+		// Action.clickElementJavaScipt(btnAddPipeline);
+		if (criteriaType.equals("Order Type")) {			
+			Action.selectByVisibleText(drpdwnPipelineCriteriaGroupStart,
+					data.getPipelineCriteriaGroup().get(grpindexstart));
+			Action.selectByVisibleText(drpdwnPipelineCriteriaType, data.getPipelineCriteriaType().get(typeindex));
+			Action.selectByVisibleText(drpdwnPipelineCriteriaOperator, data.getpipelineOperator().get(operatorindex));
+			Action.selectByVisibleText(drpdwnPipelineCriteriaValue, data.getpipelineValueOrderType().get(valueindex));
+			Action.selectByVisibleText(drpdwnPipelineCriteriaGroupEnd,
+					data.getPipelineCriteriaGroup().get(grpindexend));
+		}
+		if (criteriaType.equals("Tender Type")) {			
+			Action.selectByVisibleText(drpdwnPipelineCriteriaGroupStart,
+					data.getPipelineCriteriaGroup().get(grpindexstart));
+			Action.selectByVisibleText(drpdwnPipelineCriteriaType, data.getPipelineCriteriaType().get(typeindex));
+			Action.selectByVisibleText(drpdwnPipelineCriteriaOperator, data.getpipelineOperator().get(operatorindex));
+			Action.selectByVisibleText(drpdwnPipelineCriteriaValue, data.getpipelineValueTenderType().get(valueindex));
+			Action.selectByVisibleText(drpdwnPipelineCriteriaGroupEnd,
+					data.getPipelineCriteriaGroup().get(grpindexend));
+		}
+		if (criteriaType.equals("Fulfillment Method")) {
+			Action.selectByVisibleText(drpdwnPipelineCriteriaGroupStart,
+					data.getPipelineCriteriaGroup().get(grpindexstart));
+			Action.selectByVisibleText(drpdwnPipelineCriteriaType, data.getPipelineCriteriaType().get(typeindex));
+			Action.selectByVisibleText(drpdwnPipelineCriteriaOperator, data.getpipelineOperator().get(operatorindex));
+			Action.selectByVisibleText(drpdwnPipelineCriteriaValue,
+					data.getpipelineValueFulfillmentMethod().get(valueindex));
+			Action.selectByVisibleText(drpdwnPipelineCriteriaGroupEnd,
+					data.getPipelineCriteriaGroup().get(grpindexend));
+		}
 		btnPipelineCriteriaConfirm.click();
-
-	}
-
-	public void selectPipelineCriteriaByPaymentMethod() {
-		Action.selectByIndex(drpdwnPipelineCriteriaGroupStart, 1);
-		Action.selectByIndex(drpdwnPipelineCriteriaType, 10);
-		Action.selectByIndex(drpdwnPipelineCriteriaOperator, 1);
-		Action.selectByIndex(drpdwnPipelineCriteriaValue, 1);
-		Action.selectByIndex(drpdwnPipelineCriteriaGroupEnd, 2);
-		btnPipelineCriteriaConfirm.click();
-
 	}
 
 	public void pipelineFormValidation()
 			throws JsonParseException, JsonMappingException, IOException, InterruptedException {
-		 btnAddPipeline.click();
+		btnAddPipeline.click();
 		btnSaveExit.click();
-		Assert.assertEquals(CommonElementsPage.formErrorValidation(), RomuiEnumValues.PIPELINE_FORMVALIDATION.getMessage(),
+		Assert.assertEquals(CommonElementsPage.formErrorValidation(),
+				RomuiEnumValues.PIPELINE_FORMVALIDATION.getMessage(),
 				"Pipeline form Error Validation message has not been found");
-		selectPipelineCriteriaByTenderType();
+		// selectPipelineCriteriaByTenderType();
+		// Select By Fulfillment Method
+		selectPipelineCriteria(0, 0, 0, 0, 1);
 		btnSaveExit.click();
 		Assert.assertEquals(CommonElementsPage.formErrorValidation(), RomuiEnumValues.USER_VALIDATION.getMessage(),
 				"Pipeline form Error Validation message has not been found");
 
 	}
 
-	// Sheela-This method will select StartDate on Create Pipeline screen
-
-	public void clickonStartDate() {
-		if (!txtStartDate.isSelected()) {
-			txtStartDate.click();
-			txtStartDate.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-			txtStartDate.sendKeys(Common.selectStartDate(futureStartDate));
-		} else if (txtStartDate.toString().equals(Common.selectCurrentDate(dateCurrent))) {
-			txtStartDate.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-			txtStartDate.sendKeys(Common.selectStartDate(futureStartDate));
-		}
-
-	}
-
-	// Sheela-This method will select EndDate on Create Pipeline screen
-
-	public void clickonEndDate() {
-		if (!txtEndDate.isSelected()) {
-			txtEndDate.click();
-			txtEndDate.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-
-			txtEndDate.sendKeys(Common.selectEndDate(endDateCal));
-		} else if (txtEndDate.toString().equals(Common.selectCurrentDate(dateCurrent))) {
-			txtEndDate.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-			txtEndDate.sendKeys(Common.selectEndDate(endDateCal));
-		}
-
-	}
 
 }

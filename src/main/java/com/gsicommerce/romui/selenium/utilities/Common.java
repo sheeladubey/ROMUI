@@ -12,6 +12,7 @@ import java.util.function.Function;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -33,6 +34,7 @@ import java.util.Date;
 
 public class Common {
 
+	// formate date into string
 	static SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy hh:mm aa");
 	/** Default wait time for an element. 7 seconds. */
 	public static final int DEFAULT_WAIT_4_ELEMENT = 7;
@@ -73,13 +75,25 @@ public class Common {
 	 * @return webdriver
 	 */
 	public static WebDriver startApplication(final Environment env, final String browserType) {
+		// final String url = getAppUrlSS0(env);
+		// final String url = getAppUrlUAT(env);
 		final String url = getAppUrl(env);
 		return Browser.getBrowserInstance(browserType, url, env);
 	}
 
-	public static String getAppUrl(final Environment env) {
+	public static String getAppUrlSS0(final Environment env) {
 
 		return "http://" + env.getStoreEnvironment() + "-vip.gspt.net";
+	}
+
+	public static String getAppUrl(final Environment env) {
+
+		return "http://" + env.getStoreEnvironment() + "-vip.us.gspt.net";
+	}
+
+	public static String getAppUrlUAT(final Environment env) {
+
+		return "https://" + env.getStoreEnvironment();
 	}
 
 	/**
@@ -568,42 +582,32 @@ public class Common {
 
 	}
 
-	public static String selectCurrentDate(Calendar dateCurrent) {
-		Date currentDate = new Date();
-		Calendar currentDateInstance1 = Calendar.getInstance();
-		currentDateInstance1.setTime(currentDate);
-		currentDateInstance1.add(Calendar.DATE, 0);
-		currentDate = currentDateInstance1.getTime();
-		String currentDate1 = sdf.format(currentDate);
-		return currentDate1;
-	}
-
-	public static String selectStartDate(Calendar startDateCal) {
-
-		Date startDate = new Date();
-		Calendar currentDateInstance = Calendar.getInstance();
-		currentDateInstance.setTime(startDate);
-		currentDateInstance.add(Calendar.DATE, 1);
-		startDate = currentDateInstance.getTime();
-		String futureStartDate = sdf.format(startDate);
-		return futureStartDate;
-
-	}
-
-	public static String selectEndDate(Calendar endDateCal) {
-		Date endDate = new Date();
-		Calendar endDateCal1 = Calendar.getInstance();
-		endDateCal1.setTime(endDate);
-		endDateCal1.add(Calendar.DATE, 7);
-		endDate = endDateCal1.getTime();
-		String futureEndDate = sdf.format(endDate);
-		return futureEndDate;
-	}
-
 	public static void closePrintPopup() throws InterruptedException, AWTException {
 		Thread.sleep(3000);
 		Robot r = new Robot();
 		r.keyPress(KeyEvent.VK_ESCAPE);
 		r.keyRelease(KeyEvent.VK_ESCAPE);
 	}
+
+	public static String selectDate(int days) {
+		// Create Calendar Object
+		Calendar cal = Calendar.getInstance();
+		// Create date Object
+		Date dateinstance = new Date();
+		// get specific day
+		cal.add(Calendar.DATE, days);
+		dateinstance = cal.getTime();
+		// Format date in string
+		String date = sdf.format(dateinstance);
+		return date;
+	}
+
+	public static void clickonCalendarDate(WebElement el, int days) {
+		if (!el.isSelected()) {
+			el.click();
+			el.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
+			el.sendKeys(selectDate(days));
+		}
+	}
+
 }

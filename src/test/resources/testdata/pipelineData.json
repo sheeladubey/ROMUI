@@ -1,3 +1,55 @@
 {
-	"pipelineName":"Sheelaaddpipeline"
-	}
+	"pipelineName": "Sheelaaddpipeline",
+	"pipelineCriteriaGroup": [
+		"(",
+		")",
+		"AND",
+		"AND (",
+		") AND",
+		"OR",
+		"OR (",
+		") OR"
+	],
+	"pipelineCriteriaType": [
+		"Fulfillment Method",
+		"Order Type",
+		"Entry Type",
+		"Node Type",
+		"Shipping Charge Type",
+		"Tender Type",
+		"Associate Delivery",
+		"Payment Amount",
+		"Shipping Charge Type",
+		"Payment Method",
+		"Line Type",
+		"Order Document Type"
+	],
+	"pipelineOperator": [
+		"==",
+		"!="
+	],
+	"pipelineValueOrderType": [
+		"Client Paid",
+		"In Store Return",
+		"Non-Client Paid",
+		"Request Create Return",
+		"ZCR Exchange",
+		"Zero Cost Re-Ship Return"
+	],
+	"pipelineValueTenderType": [
+		"Stored Value Physical",
+		"Stored Value Virtual",
+		"Gift Card",
+		"VISA Card",
+		"Master Card",
+		"Discover Card",
+		"Amex Card",
+		"PrePaid Card",
+		"PayPal"
+	],
+	"pipelineValueFulfillmentMethod": [
+		"Ship-to Home",
+		"Ship-to Store",
+		"Store Pickup"
+	]
+}

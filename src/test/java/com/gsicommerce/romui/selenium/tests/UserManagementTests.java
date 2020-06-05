@@ -23,8 +23,8 @@ public class UserManagementTests extends ROMUIBasePage {
 	  logger.info("Order Management link is clicked on");
 	  romuipages.orderMgmPage().clickOnRoles();
 	  logger.info("Navigated to User Role page");
-	  romuipages.userManagementPage().addRole(); logger.
-	  info("Add link is clicked on to enter the data and Clicked on Save btn");
+	  romuipages.userManagementPage().addRole();
+	  logger.info("Add link is clicked on to enter the data and Clicked on Save btn");
 	  logger.info("Verify if add Role success message is displayed");
 	  Assert.assertEquals(romuipages.userManagementPage().txtSuccessMsg.getText(),
 	  RomuiEnumValues.ROLE_SAVE.getMessage(), "Role is not created successfully");
@@ -35,13 +35,6 @@ public class UserManagementTests extends ROMUIBasePage {
 	  logger.info("User is created Sucessfully");
 	  
 	  }
-	 
-	 
-	 
-	  
-	  
-	  
-		
 		
 		  @Test(enabled = true, priority=2,description = "SearchBy UserId") public void
 		  testSearchUser()throws JsonParseException, JsonMappingException, IOException,
@@ -71,9 +64,7 @@ public class UserManagementTests extends ROMUIBasePage {
 		  romuipages.userManagementPage().userNotFound();
 		  logger.info("Error Message Feature has been validated successfully");
 		  
-		  }
-		  
-		  
+		  } 
 		  
 		  
 		  
@@ -137,12 +128,7 @@ public class UserManagementTests extends ROMUIBasePage {
 		  romuipages.userManagementPage().searchByNode();
 		  logger.info("SearchBy Node Feature has been validated successfully");
 		  
-		  }
-		 
-	  
-	
-	 
-	 
+		  } 
 		
 		
 		  @Test(enabled = true, priority=8,description = "Edit User") public void

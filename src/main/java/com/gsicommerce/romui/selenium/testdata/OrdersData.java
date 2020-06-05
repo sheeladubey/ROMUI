@@ -32,6 +32,9 @@ public class OrdersData {
 
 	@JsonProperty("OrderID")
 	String OrderID;
+	
+	@JsonProperty("OrderID1")
+	String OrderID1;
 
 	@JsonProperty("OrderStatusID")
 	String OrderStatusID;
@@ -104,7 +107,17 @@ public class OrdersData {
 	
 	@JsonProperty("BillToPhone")
 	String BillToPhone;
-
+	
+	@JsonProperty("Source")
+	List<String> Source;
+	
+	@JsonProperty("Currency")
+	String Currency;
+	
+	@JsonProperty("Locale")
+	String Locale;
+	
+	
 	public List<String> getSearchOrderBy() {
 		return SearchOrderBy;
 	}
@@ -131,6 +144,10 @@ public class OrdersData {
 
 	public String getOrderID() {
 		return OrderID;
+	}
+
+	public String getOrderID1() {
+		return OrderID1;
 	}
 
 	public String getOrderStatusID() {
@@ -172,6 +189,10 @@ public class OrdersData {
 
 	public String getOrderStatusTo() {
 		return OrderStatusTo;
+	}
+
+	public String getBillToCountry() {
+		return BillToCountry;
 	}
 
 	public String getBillToState() {
@@ -226,6 +247,17 @@ public class OrdersData {
 		return BillToPhone;
 	}
 
+	public List<String> getSource() {
+		return Source;
+	}
+	
+	public String getCurrency() {
+		return Currency;
+	}
+	
+	public String getLocale() {
+		return Locale;
+	}
 	public static OrdersData get(String filename) throws JsonParseException, JsonMappingException, IOException {
 		ObjectMapper mapper = new ObjectMapper();
 		mapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);

@@ -83,7 +83,10 @@ public class CommonElementsPage {
 	
 	@FindBy(how = How.CSS, using = ".alert-danger")
 	private static WebElement txtformvalidationError;
-
+	
+	@FindBy(how = How.XPATH, using = ".//option")
+	private static List<WebElement> selectDropDownOption;
+	
 	public static Webtable nodeWebTable() {
 		Webtable wt = new Webtable(driver, (WebElement) nodeWebTable);
 		return wt;
@@ -251,6 +254,18 @@ public class CommonElementsPage {
 				}
 			}
 			return false;
+		}
+		//Select values from dropdown 
+		public static void selectDropDwnValues(WebElement el,String selectOption) {
+			el.click();
+			for (int i = 0; i < selectDropDownOption.size(); i++) {
+				System.out.println(selectDropDownOption.get(i).getText());
+				if (selectDropDownOption.get(i).getText().equals(selectOption)) {
+					Action.selectByIndex(el, i);
+					break;
+				}
+			}
+			
 		}
 
 }

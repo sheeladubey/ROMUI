@@ -7,7 +7,8 @@
 			class-name="com.gsicommerce.romui.selenium.utilities.ExtentReporterListener"></listener>
 	</listeners>
 	<parameter name="browserType" value="chrome" />
-	<parameter name="storeEnvironment" value="lvststromsso04" />
+	<!-- parameter name="storeEnvironment" value="lvststromsso04" /-->
+	<parameter name="storeEnvironment" value="lvststromuiapp04" />
 	<parameter name="adminUserName" value="admin@tmsna" />
 	<parameter name="adminPasswd" value="Password123@" />
 	<parameter name="waitPeriod" value="5" />
