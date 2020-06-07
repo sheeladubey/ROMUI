@@ -1,7 +1,5 @@
 package com.gsicommerce.romui.selenium.pages.ordermanagement;
 
-import java.util.List;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -202,28 +200,7 @@ public class OrderManagementMenusPage {
 	@CacheLookup
 	WebElement lkReasonCodes;
 
-	@FindBy(how = How.CLASS_NAME, using = "radial-app-header__user")
-	@CacheLookup
-	WebElement btnStore;
-
-	@FindBy(how = How.ID, using = "client_store_search")
-	@CacheLookup
-	WebElement txtStoreSearch;
-
-	@FindBy(how = How.CLASS_NAME, using = "btn-default btn-search")
-	// @FindBy(how=How.CLASS_NAME,using="context-tree-action")
-	// span[contains(text(),'Filter')]
-	@CacheLookup
-	WebElement btnStoreSearchClick;
-
-//	@FindBy(how = How.XPATH, using = "//button[@type='submit']")
-	// @FindBy(how=How.CLASS_NAME,using=".context-tree-action")
-
-	// @FindBy(how=How.XPATH,using="//button[@type='submit']")
-	@FindBy(how = How.CLASS_NAME, using = ".context-tree-action")
-
-	@CacheLookup
-	List<WebElement> lkStoreList;
+	
 
 	public void clickOnItemSearch() {
 		btnMainMenu.click();
@@ -249,7 +226,7 @@ public class OrderManagementMenusPage {
 		lkAvlSearch.click();
 	}
 
-	public void clickOnOrders() {
+	public void clickOnOrders() throws InterruptedException {
 		btnMainMenu.click();
 		Action.waitForElementToBeClickable(driver, lkOrders, 10);
 		lkOrders.click();
@@ -442,8 +419,6 @@ public class OrderManagementMenusPage {
 
 	public void clickOnPipeline() {
 		btnMainMenu.click();
-		// selectStore("1008011");
-		// btnStoreSearchClick.click();
 		Action.waitForElementToBeClickable(driver, lkPipeline, 10);
 		lkPipeline.click();
 

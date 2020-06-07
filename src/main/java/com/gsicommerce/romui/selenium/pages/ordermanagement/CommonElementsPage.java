@@ -1,7 +1,6 @@
 package com.gsicommerce.romui.selenium.pages.ordermanagement;
 
 import java.util.List;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -86,6 +85,7 @@ public class CommonElementsPage {
 	
 	@FindBy(how = How.XPATH, using = ".//option")
 	private static List<WebElement> selectDropDownOption;
+	
 	
 	public static Webtable nodeWebTable() {
 		Webtable wt = new Webtable(driver, (WebElement) nodeWebTable);
@@ -237,35 +237,21 @@ public class CommonElementsPage {
 			return txtformvalidationError.getText();
 		}
 
-		
-		/**
-		 * This method switches focus to window with title.
-		 * 
-		 * @param windowTitle
-		 * @return boolean - whether switch was successful.
-		 */
-		public static boolean switchWindow(final String windowTitle) {
-			for (final String handle : driver.getWindowHandles()) {
-				driver.switchTo().window(handle);
-				driver.switchTo().window(handle).getTitle();
-				if (driver.getTitle()
-						.compareToIgnoreCase(windowTitle.toLowerCase()) == 0) {
-					return true;
-				}
-			}
-			return false;
-		}
-		//Select values from dropdown 
+			//Select values from dropdown 
 		public static void selectDropDwnValues(WebElement el,String selectOption) {
-			el.click();
+		//	el.click();
+			Action.clickElementJavaScipt(el);
 			for (int i = 0; i < selectDropDownOption.size(); i++) {
-				System.out.println(selectDropDownOption.get(i).getText());
 				if (selectDropDownOption.get(i).getText().equals(selectOption)) {
 					Action.selectByIndex(el, i);
+					
 					break;
 				}
 			}
 			
 		}
+		
+		
 
+	
 }

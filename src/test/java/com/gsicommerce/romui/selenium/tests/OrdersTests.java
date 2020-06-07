@@ -20,7 +20,6 @@ public class OrdersTests extends ROMUIBasePage {
 		logger.info("Order Management link is clicked on");
 		romuipages.orderMgmPage().clickOnOrders();
 		logger.info("Navigated to Orders page");
-		//romuipages.ordersPage().searchOrderByOrderNum("ordernumber");
 		romuipages.ordersPage().searchOrderBy(0);
 		logger.info("Search By Order Number verified");
 
@@ -67,7 +66,6 @@ public class OrdersTests extends ROMUIBasePage {
 		logger.info("Order Management link is clicked on");
 		romuipages.orderMgmPage().clickOnOrders();
 		logger.info("Navigated to Orders page");
-		//romuipages.ordersPage().searchOrderByEmail("Email");
 		romuipages.ordersPage().searchOrderBy(3);
 		logger.info("Search By EmailID verified");
 
@@ -82,7 +80,6 @@ public class OrdersTests extends ROMUIBasePage {
 		logger.info("Order Management link is clicked on");
 		romuipages.orderMgmPage().clickOnOrders();
 		logger.info("Navigated to Orders page");
-		//romuipages.ordersPage().searchOrderByOrderStatus("StatusFrom", "StatusTo");
 		romuipages.ordersPage().searchOrderBy(4);
 		logger.info("Search By Order Status verified");
 
@@ -177,7 +174,7 @@ public class OrdersTests extends ROMUIBasePage {
 	
 	
 	
-	@Test(enabled = false, priority =8, description = "form validation")
+	@Test(enabled = false, priority =12, description = "form validation")
 	public void testOrderSearchFormValidation()
 			throws JsonParseException, JsonMappingException, IOException, Exception {
 
@@ -192,7 +189,7 @@ public class OrdersTests extends ROMUIBasePage {
 
 }
 	
-	@Test(enabled = true, priority = 11, description = "To Verify Add Zero Cost Order")
+	@Test(enabled = true, priority = 13, description = "To Verify Add Zero Cost Order")
 	public void testAddZCOrder() throws JsonParseException, JsonMappingException, IOException, Exception {
 
 		logger.info("Login credentials to be entered");
@@ -203,8 +200,25 @@ public class OrdersTests extends ROMUIBasePage {
 		logger.info("Navigated to Orders page");
 		 logger.info("Verify ZC Order creation");
 		 romuipages.ordersPage().addZeroCostOrder();
-		 logger.info("Add Zero Cost Order Validated");
+		logger.info("Add Zero Cost Order Validated");
+	//	romuipages.loginPage().clickSignout();		
+		
 	}
 	
+	@Test(enabled = false, priority = 14, description = "To Verify Add Zero Cost Order")
+	public void testCreateReturnOrder() throws JsonParseException, JsonMappingException, IOException, Exception {
+
+		logger.info("Login credentials to be entered");
+		romuipages.loginPage().login(env.getUserName(), env.getPassword());
+		romuipages.homePage().clickOnLandingButton("Order Management");
+		logger.info("Order Management link is clicked on");
+		romuipages.orderMgmPage().clickOnOrders();
+		logger.info("Navigated to Orders page");
+		 logger.info("Verify Return order creation");
+		 romuipages.ordersPage().createReturnOrder();
+		logger.info("Return order creation Validated");
+	//	romuipages.loginPage().clickSignout();		
+		
+	}
 	
 }

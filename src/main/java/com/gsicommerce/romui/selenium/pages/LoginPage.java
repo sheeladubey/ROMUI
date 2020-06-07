@@ -1,5 +1,7 @@
 package com.gsicommerce.romui.selenium.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -8,7 +10,9 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 import com.gsicommerce.romui.selenium.testdata.Environment;
+import com.gsicommerce.romui.selenium.utilities.Action;
 import com.gsicommerce.romui.selenium.utilities.Common;
+import static java.lang.Thread.sleep;
 
 public class LoginPage {
 
@@ -42,6 +46,22 @@ public class LoginPage {
 	@CacheLookup
 	WebElement btnSingIn;
 	
+	@FindBy(how = How.CSS, using = ".radial-app-header__user-name")
+	private static WebElement btnStore;
+
+	@FindBy(how = How.CSS, using = "#client_store_search")
+	private static WebElement txtbxStoreSearch;
+
+	@FindBy(how = How.CSS, using = "span.input-group-btn .btn-default")
+	private static WebElement btnStoreSearch;
+
+    @FindBy(how = How.XPATH, using = "//button[@type='submit']")
+	//@FindBy(how = How.CLASS_NAME, using = "context-tree-action")
+	private static List<WebElement> lststorelist;
+    
+    @FindBy(how = How.CSS, using = "a.radial-app-user-menu__item[href='/en/session/destroy']")
+	private static List<WebElement> btnsignout;
+	
 	public void loginSSO(String username, String passwd) {		
 		Common.waitForElement(driver, txtUserNameSS0, 2);		
 		txtUserNameSS0.sendKeys(username);
@@ -54,5 +74,36 @@ public class LoginPage {
 		txtUserName.sendKeys(username);
 		txtPasswd.sendKeys(passwd);
 		btnSingIn.click();		
+		//selectStore(env.getStoreId());
 	}
+	
+	public void selectStore(String storeId)
+	{
+		 btnStore.click();
+		 Action.waitForElementToBeClickable(driver, txtbxStoreSearch, 30);
+		 Action.enter(txtbxStoreSearch, storeId.substring(0,storeId.length()));
+		 for (int i = 0; i < lststorelist.size(); i++) {
+	       //  WebElement storeOption  = lststorelist.get(i);
+	        System.out.println("Selected store1 is:" +lststorelist.get(i).getText());
+	            if (lststorelist.get(i).getText().equals(storeId)) {
+	            try {
+	                    sleep(2000l);
+	                } catch (InterruptedException e) {
+	                    e.printStackTrace();
+	                } 
+	              lststorelist.get(i).click();	   	           
+	            break;
+	            }
+	        }
+	}
+	
+	public void clickSignout()
+	{
+		Action.clickElementJavaScipt(btnStore);
+		//btnStore.click();
+		btnsignout.get(1).click();;
+	}
+	
+	
+
 }

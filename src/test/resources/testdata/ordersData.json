@@ -39,6 +39,9 @@
 	"BillToState":"Pennsylvania",
 	"BillToPostalCode":"19406",
 	"BillToEmail":"shedubey@radial.com",
-	"BillToPhone":"2345678901"
+	"BillToPhone":"2345678901",
+	"ItemID":["21-ISPUProd01","21-RITOM0191a"],
+	"QTY":["10","20"],
+	"ShippingMethod":["Second Day $20.00","Standard Ground $10.00"]
 	
 }

@@ -32,7 +32,7 @@ public class OrdersData {
 
 	@JsonProperty("OrderID")
 	String OrderID;
-	
+
 	@JsonProperty("OrderID1")
 	String OrderID1;
 
@@ -71,53 +71,61 @@ public class OrdersData {
 
 	@JsonProperty("BillToTitle")
 	String BillToTitle;
-	
+
 	@JsonProperty("BillToFirstName")
 	String BillToFirstName;
-	
+
 	@JsonProperty("BillToMiddleName")
 	String BillToMiddleName;
-	
+
 	@JsonProperty("BillToLastName")
 	String BillToLastName;
-	
+
 	@JsonProperty("BillToAddressLine1")
 	String BillToAddressLine1;
-	
+
 	@JsonProperty("BillToAddressLine2")
 	String BillToAddressLine2;
-	
+
 	@JsonProperty("BillToAddressLine3")
 	String BillToAddressLine3;
-	
+
 	@JsonProperty("BillToAddressLine4")
 	String BillToAddressLine4;
-	
+
 	@JsonProperty("BillToCity")
 	String BillToCity;
-	
+
 	@JsonProperty("BillToState")
 	String BillToState;
-	
+
 	@JsonProperty("BillToPostalCode")
 	String BillToPostalCode;
-	
+
 	@JsonProperty("BillToEmail")
 	String BillToEmail;
-	
+
 	@JsonProperty("BillToPhone")
 	String BillToPhone;
-	
+
 	@JsonProperty("Source")
 	List<String> Source;
-	
+
 	@JsonProperty("Currency")
 	String Currency;
-	
+
 	@JsonProperty("Locale")
 	String Locale;
-	
-	
+
+	@JsonProperty("ItemID")
+	List<String> ItemID;
+
+	@JsonProperty("QTY")
+	List<String> QTY;
+
+	@JsonProperty("ShippingMethod")
+	List<String> ShippingMethod;
+
 	public List<String> getSearchOrderBy() {
 		return SearchOrderBy;
 	}
@@ -250,14 +258,27 @@ public class OrdersData {
 	public List<String> getSource() {
 		return Source;
 	}
-	
+
 	public String getCurrency() {
 		return Currency;
 	}
-	
+
 	public String getLocale() {
 		return Locale;
 	}
+
+	public List<String> getItemID() {
+		return ItemID;
+	}
+
+	public List<String> getQTY() {
+		return QTY;
+	}
+
+	public List<String> getShippingMethod() {
+		return ShippingMethod;
+	}
+
 	public static OrdersData get(String filename) throws JsonParseException, JsonMappingException, IOException {
 		ObjectMapper mapper = new ObjectMapper();
 		mapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);

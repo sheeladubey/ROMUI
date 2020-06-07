@@ -425,7 +425,7 @@ public class Common {
 	 * @param by     - selector to find the element
 	 * @return boolean
 	 */
-	private static boolean isElementPresent(WebDriver driver, By by) {
+	private static boolean isElementPresent(WebDriver driver,By by) {
 		try {
 			driver.findElement(by);// if it does not find the element throw NoSuchElementException, which calls
 									// "catch(Exception)" and returns false;

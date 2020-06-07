@@ -11,7 +11,8 @@
 	<parameter name="storeEnvironment" value="lvststromuiapp04" />
 	<parameter name="adminUserName" value="admin@tmsna" />
 	<parameter name="adminPasswd" value="Password123@" />
-	
+	<parameter name="storeID" value="TMSUS" />
+		
 	<!-- parameter name="storeEnvironment"  value="uat-romui.radial.com/en"/-->	
 	<!-- parameter name="adminUserName" value="dubey1290@BBWNA" /-->	
 	<!--  parameter name="adminPasswd" value="Welcome1!" /-->
@@ -21,7 +22,7 @@
 		<classes>
 			<class name="com.gsicommerce.romui.selenium.tests.OrdersTests" />
 			<parameter name="dataFile"
-				value="./src/test/resources/testdata/ordersData.json" />
+				value="./src/test/resources/testdata/ordersData.json" />				
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
