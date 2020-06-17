@@ -171,7 +171,7 @@ public class CommonElementsPage {
 
 	// method to click action icons for pipeline screen
 
-	public static void clickActionsIcon(int row, int col, int child, int spanchild) throws Exception {
+	public static  void clickActionsIcon(int row, int col, int child, int spanchild) throws Exception {
 		Reporter.log("Action icon is clicked on");
 		nodeWebTable().clickIconPipeline(row, col, child, spanchild);
 	}
@@ -205,12 +205,12 @@ public class CommonElementsPage {
 
 	}
 	public static void clickActionsIconDelete(int row, int col, int child, int spanchild) throws Exception {
-		Reporter.log("Action icon is clicked on");
+		Reporter.log("Delete icon is clicked on");
 		nodeWebTable().clickIconDelete(row, col, child, spanchild);
 	}
 
 	public static void clickViewOrderIcon(int row, int col, int divchild, int child, int spanchild) throws Exception {
-			Reporter.log("Action icon is clicked on");
+			Reporter.log("View Order icon is clicked on");
 			nodeWebTable().clickIconViewOrder(row, col, divchild,child, spanchild);
 		
 	}
@@ -239,9 +239,10 @@ public class CommonElementsPage {
 
 			//Select values from dropdown 
 		public static void selectDropDwnValues(WebElement el,String selectOption) {
-		//	el.click();
+			//el.click();
 			Action.clickElementJavaScipt(el);
 			for (int i = 0; i < selectDropDownOption.size(); i++) {
+				System.out.println(selectDropDownOption.get(i).getText());
 				if (selectDropDownOption.get(i).getText().equals(selectOption)) {
 					Action.selectByIndex(el, i);
 					
@@ -251,7 +252,6 @@ public class CommonElementsPage {
 			
 		}
 		
-		
-
+	
 	
 }

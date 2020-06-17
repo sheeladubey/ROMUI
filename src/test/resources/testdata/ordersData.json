@@ -18,9 +18,9 @@
 	"EmailID": "RadialNRFCustomer1@gmail.com",
 	"Customer_FirstName": "Richard",
 	"Customer_LastName": "Doyle",
-	"ZipCode":"55423",
+	"ZipCode":"19406",
 	"Start_Date":"05/14/2020",
-	"End_Date":"05/28/2020",
+	"End_Date":"06/15/2020",
 	"Source":["In Store","Customer Service"],
 	"Currency":"USD",
 	"Locale":"en_US",
@@ -42,6 +42,9 @@
 	"BillToPhone":"2345678901",
 	"ItemID":["21-ISPUProd01","21-RITOM0191a"],
 	"QTY":["10","20"],
-	"ShippingMethod":["Second Day $20.00","Standard Ground $10.00"]
-	
+	"ShippingMethod":["Second Day $20.00","Standard Ground $10.00"],
+	"ReturnOrderID":"0009708019718",
+	"ReturnQty":"1",
+	"ReturnReasonCode":["Customers no longer wants","Customer wants to exchange for different item","Customer returning for price adjustment","Non-Sellable (damaged, partially used, etc.)"],
+	"ReturnComment":"Sheela"
 }

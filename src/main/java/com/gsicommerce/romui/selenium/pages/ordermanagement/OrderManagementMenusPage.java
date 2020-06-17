@@ -200,8 +200,6 @@ public class OrderManagementMenusPage {
 	@CacheLookup
 	WebElement lkReasonCodes;
 
-	
-
 	public void clickOnItemSearch() {
 		btnMainMenu.click();
 		lkCatalogInventory.click();
@@ -228,7 +226,7 @@ public class OrderManagementMenusPage {
 
 	public void clickOnOrders() throws InterruptedException {
 		btnMainMenu.click();
-		Action.waitForElementToBeClickable(driver, lkOrders, 10);
+		Action.waitForElementToBeClickable(driver, lkOrders, 20);
 		lkOrders.click();
 	}
 

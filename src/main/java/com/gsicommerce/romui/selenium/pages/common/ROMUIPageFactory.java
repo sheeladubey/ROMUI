@@ -13,8 +13,8 @@ import com.gsicommerce.romui.selenium.pages.ordermanagement.ServiceFlowPage;
 import com.gsicommerce.romui.selenium.pages.ordermanagement.ShippingLabelConfigPage;
 import com.gsicommerce.romui.selenium.pages.ordermanagement.StoreFulfillmentDashboardPage;
 import com.gsicommerce.romui.selenium.pages.ordermanagement.UserManagementPage;
-import com.gsicommerce.romui.selenium.pages.ordermanagement.ServiceGroupConfigsPage;
 import com.gsicommerce.romui.selenium.testdata.Environment;
+import com.gsicommerce.romui.selenium.pages.ordermanagement.ServiceGroupConfigsPage;
 
 public class ROMUIPageFactory extends PageFactory {
 
@@ -85,7 +85,6 @@ public class ROMUIPageFactory extends PageFactory {
 	}
 
 	public OrdersPage ordersPage() {
-
 		return ordersPage;
 	}
 

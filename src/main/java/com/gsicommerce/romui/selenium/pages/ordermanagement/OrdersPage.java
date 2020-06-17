@@ -35,6 +35,7 @@ public class OrdersPage {
 	private static String emailID;
 	private static String fulfillmentOrderNum;
 	private static String customerName;
+	private static int rowNoReturnWebOrder;
 
 	public OrdersPage(WebDriver driver, Environment env) {
 
@@ -54,7 +55,6 @@ public class OrdersPage {
 	private WebElement txtOrderNumber;
 
 	@FindBy(how = How.CSS, using = "#order_search_form_fulfillment_order_id")
-	@CacheLookup
 	private WebElement txtFulfillmentOrderNumber;
 
 	@FindBy(how = How.CSS, using = "[data-filter-submit-button='']")
@@ -149,7 +149,6 @@ public class OrdersPage {
 	@FindBy(how = How.CSS, using = "#address_region")
 	private WebElement drpdwnState;
 
-	
 	@FindBy(how = How.CSS, using = "#address_title")
 	private WebElement txtbxTitle;
 
@@ -191,7 +190,7 @@ public class OrdersPage {
 
 	@FindBy(how = How.XPATH, using = "//a[contains(@class,'btn btn-default')]")
 	private WebElement btnAddItem;
-	
+
 	@FindBy(how = How.CSS, using = ".order-add-item-action--absolute")
 	private WebElement btnAddSecondItem;
 
@@ -215,39 +214,67 @@ public class OrdersPage {
 
 	@FindBy(how = How.XPATH, using = "//button[contains(@name,'button')]")
 	private WebElement btnContinueShippingAddress;
-	
+
 	@FindBy(how = How.CSS, using = "[name='commit'][type='submit']")
 	private WebElement btnContinueNewAddress;
-	
+
 	@FindBy(how = How.CSS, using = "#orders_shipping_method_form_shipping_method_groups_0_selected_shipping_method")
 	private WebElement drpdwnShippingMethod;
-	
+
 	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Submit Order')]")
 	private WebElement btnSubmitOrderZCOrder;
-	
+
 	@FindBy(how = How.CSS, using = "[data-disable-with='Submit Order']")
 	private WebElement btnSubmitOrder;
 
 	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Return Order')]")
 	private WebElement btnReturnOrder;
-	
+
+	@FindBy(how = How.CSS, using = "[name='eligibility[]'][type='checkbox']")
+	private WebElement chkboxReturnEligibleItems;
+
+	@FindBy(how = How.CSS, using = "[type='submit'][name='next']")
+	private WebElement btnNextEligibleItems;
+
+	@FindBy(how = How.CSS, using = "#return_quantity")
+	private WebElement txtboxReturnqty;
+
+	@FindBy(how = How.CSS, using = " #return_reason")
+	private WebElement drpdwnReturnReasonCode;
+
+	@FindBy(how = How.CSS, using = "#return_rep_comment")
+	private WebElement txtboxReturnComment;
+
+	@FindBy(how = How.XPATH, using = "//button[@name='next']")
+	private WebElement btnNextItemToReturnscreen;
+
+	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Back')]")
+	private WebElement btnBackItemToReturnscreen;
+
+	@FindBy(how = How.XPATH, using = "//button[contains(@name,'done')]")
+	private WebElement btnDoneItemToReturnscreen;
+
 	@FindBy(how = How.CSS, using = ".alert-info")
 	private WebElement txtsuccessMessage;
-	
+
 	// to Verify search order
 	public void searchOrderBy(int searchindex) throws JsonParseException, JsonMappingException, IOException, Exception {
 		ordersdata = OrdersData.get(env.getFileLocation());
 		searchOrderByOption = ordersdata.getSearchOrderBy().get(searchindex);
 		webOrderNumber = ordersdata.getOrderID();
-		btnSearchIcon.click();
+		Action.waitForElementToBeClickable(driver, btnSearchIcon, 20);
+		// btnSearchIcon.click();
+		Action.clickElementJavaScipt(btnSearchIcon);
+		// select search order type
+		Action.waitForElementToBeClickable(driver, drpdwnOrderSearchBy, 20);
+		Action.selectByVisibleText(drpdwnOrderSearchBy, searchOrderByOption);
 		if (searchOrderByOption.equals("Order Number")) {
-			// select search order type
-			Action.selectByVisibleText(drpdwnOrderSearchBy, searchOrderByOption);
 			// Enter Web Order number
 			Action.waitForElementToBeClickable(driver, txtOrderNumber, 10);
 			Action.enter(txtOrderNumber, webOrderNumber);
 			// click search btn
 			btnSearchOrder.click();
+			// Get selected row
 			rowNoWebOrder = CommonElementsPage.getRowNum(webOrderNumber);
 			System.out.println("Selected Order number is:" + Webtable.getTableCellText(rowNoWebOrder, 1));
 			Assert.assertEquals(Webtable.getTableCellText(rowNoWebOrder, 1), webOrderNumber,
@@ -255,8 +282,6 @@ public class OrdersPage {
 		}
 		if (searchOrderByOption.equals("Fulfillment Order Number")) {
 			fulfillmentOrderNum = ordersdata.getFulFillmentOrderID();
-			// select search order type
-			Action.selectByVisibleText(drpdwnOrderSearchBy, searchOrderByOption);
 			// enter Fulfillment Orderid
 			Action.waitForElementToBeClickable(driver, txtFulfillmentOrderNumber, 10);
 			Action.enter(txtFulfillmentOrderNumber, fulfillmentOrderNum);
@@ -275,8 +300,6 @@ public class OrdersPage {
 			String custFirstName = ordersdata.getCustomer_FirstName();
 			String custLastName = ordersdata.getCustomer_LastName();
 			customerName = custFirstName + " " + custLastName;
-			// select search order type
-			Action.selectByVisibleText(drpdwnOrderSearchBy, searchOrderByOption);
 			// enter Customer Name
 			Action.waitForElementToBeClickable(driver, txtCustomerFirstName, 10);
 			Action.enter(txtCustomerFirstName, custFirstName);
@@ -293,8 +316,6 @@ public class OrdersPage {
 		}
 		if (searchOrderByOption.equals("Email")) {
 			emailID = ordersdata.getEmailID();
-			// select search order type
-			Action.selectByVisibleText(drpdwnOrderSearchBy, searchOrderByOption);
 			// enter Email
 			Action.waitForElementToBeClickable(driver, txtorderSearchEmail, 10);
 			Action.enter(txtorderSearchEmail, emailID);
@@ -309,7 +330,7 @@ public class OrdersPage {
 
 		}
 		if (searchOrderByOption.equals("Order Status")) {
-			String webOrderNumber1 = ordersdata.getOrderStatusID();
+			String webOrderNumberOrderStatus = ordersdata.getOrderStatusID();
 			String OrderStatusFrom = ordersdata.getOrderStatusFrom();
 			String OrderStatusTo = ordersdata.getOrderStatusTo();
 			// select search order type
@@ -318,24 +339,39 @@ public class OrdersPage {
 			Action.selectByVisibleText(drpdwnOrderStatusTo, OrderStatusTo);
 			// click search btn
 			btnSearchOrder.click();
+			System.out.println("Selected row for order status search is- "
+					+ CommonElementsPage.getRowNum(webOrderNumberOrderStatus));
+			rowNoOrderStatus = CommonElementsPage.getRowNum(webOrderNumberOrderStatus);
 			System.out.println(
-					"Selected row for order status search is- " + CommonElementsPage.getRowNum(webOrderNumber1));
-			rowNoOrderStatus = CommonElementsPage.getRowNum(webOrderNumber1);
-			System.out.println(
-					"Selected Row Text for order status search is:" + Webtable.getTableCellText(rowNoOrderStatus, 1));
+					"Selected Row Text for order status search is:" + Webtable.getTableCellText(rowNoOrderStatus, 5));
 			System.out.println("Order selected:" + Webtable.getRowText(rowNoOrderStatus));
-			Assert.assertEquals(Webtable.getTableCellText(rowNoOrderStatus, 1), webOrderNumber1,
+			Assert.assertEquals(Webtable.getTableCellText(rowNoOrderStatus, 5), OrderStatusFrom,
 					RomuiEnumValues.ORDER_NOTFOUND.getMessage());
 		}
 
 	}
 
-	public void clickEditSearch() throws JsonParseException, JsonMappingException, IOException, Exception {
-
-		searchOrderBy(0);
+	public void clickEditSearch(int searchindex)
+			throws JsonParseException, JsonMappingException, IOException, Exception {
+		ordersdata = OrdersData.get(env.getFileLocation());
+		searchOrderByOption = ordersdata.getSearchOrderBy().get(searchindex);
+		if (searchOrderByOption.equals("Order Number")) {
+			searchOrderBy(0);
+		}
+		if (searchOrderByOption.equals("Fulfillment Order Number")) {
+			searchOrderBy(1);
+		}
+		if (searchOrderByOption.equals("Customer Name")) {
+			searchOrderBy(2);
+		}
+		if (searchOrderByOption.equals("Email")) {
+			searchOrderBy(3);
+		}
+		if (searchOrderByOption.equals("Order Status")) {
+			searchOrderBy(4);
+		}
 		Action.waitForElementToBeClickable(driver, btnSearchIcon, 10);
 		btnSearchIcon.click();
-		searchOrderBy(3);
 	}
 
 	public void orderSearchFormValidation()
@@ -359,12 +395,17 @@ public class OrdersPage {
 			Assert.assertEquals(headerViewOrderNum.getText(), webOrderNumber,
 					"View Order screen has not been validated");
 			Action.waitForElementToBeClickable(driver, btnExitOrder, 10);
-		//	btnExitOrder.click();
+			btnExitOrder.click();
 		}
 		if (viewOrderBy.equals("Fulfillment Order Number")) {
-			Action.waitForElementToBeVisible(driver, btnSearchIcon, 20);
-			Action.waitForElementToBeClickable(driver, btnSearchIcon, 20);
-			Action.clickElementJavaScipt(btnSearchIcon);
+			try {
+				Action.waitForElementToBeVisible(driver, btnSearchIcon, 20);
+				Action.waitForElementToBeClickable(driver, btnSearchIcon, 20);
+				Action.clickElementJavaScipt(btnSearchIcon);
+			} finally {
+				Action.waitForElementToBeClickable(driver, btnSearchIcon, 20);
+				Action.clickElementJavaScipt(btnSearchIcon);
+			}
 			searchOrderBy(1);
 			// Click View Order icon
 			CommonElementsPage.clickViewOrderIcon(rowNo4, 6, 1, 1, 1);
@@ -381,36 +422,54 @@ public class OrdersPage {
 			btnExitOrder.click();
 		}
 		if (viewOrderBy.equals("Customer Name")) {
-			Action.clickElementJavaScipt(btnSearchIcon);
+			try {
+				Action.waitForElementToBeClickable(driver, btnSearchIcon, 20);
+				Action.clickElementJavaScipt(btnSearchIcon);
+			} finally {
+				Action.waitForElementToBeClickable(driver, btnSearchIcon, 20);
+				Action.clickElementJavaScipt(btnSearchIcon);
+			}
 			searchOrderBy(2);
 			// Click View Order icon
-			// CommonElementsPage.clickViewOrderIcon(rowNo1, 6, 0, 1, 1);
 			CommonElementsPage.clickViewOrderIcon(rowNoWebOrder, 6, 0, 1, 1);
-			Assert.assertEquals(lblCustomerName.get(1).getText().substring(5, 18), customerName,
+			Assert.assertTrue(lblCustomerName.get(1).getText().contains(customerName),
 					"Order Search By Customer Name has not been verified");
 			Action.waitForElementToBeClickable(driver, btnExitOrder, 10);
 			btnExitOrder.click();
 		}
 		if (viewOrderBy.equals("Email")) {
-			Action.waitForElementToBeClickable(driver, btnSearchIcon, 10);
-			btnSearchIcon.click();
+			try {
+				Action.waitForElementToBeClickable(driver, btnSearchIcon, 10);
+				// btnSearchIcon.click();
+				Action.clickElementJavaScipt(btnSearchIcon);
+			} finally {
+				Action.waitForElementToBeClickable(driver, btnSearchIcon, 20);
+				Action.clickElementJavaScipt(btnSearchIcon);
+			}
 			searchOrderBy(3);
 			CommonElementsPage.clickViewOrderIcon(rowNoWebOrder, 6, 0, 1, 1);
-			Assert.assertEquals(lblCustomerName.get(1).getText().substring(24, 53).trim(), emailID,
+			Assert.assertTrue(lblCustomerName.get(1).getText().contains(emailID),
 					"Order Search By Email ID has not been verified");
 			Action.waitForElementToBeClickable(driver, btnExitOrder, 10);
 			btnExitOrder.click();
 
 		}
 		if (viewOrderBy.equals("Order Status")) {
-			btnSearchIcon.click();
+			try {
+				Action.waitForElementToBeClickable(driver, btnSearchIcon, 15);
+				Action.clickElementJavaScipt(btnSearchIcon);
+			} finally {
+				Action.waitForElementToBeClickable(driver, btnSearchIcon, 15);
+				Action.clickElementJavaScipt(btnSearchIcon);
+			}
 			searchOrderBy(4);
 			// Click View Order icon
 			CommonElementsPage.clickViewOrderIcon(rowNoOrderStatus, 6, 1, 1, 1);
 		}
 	}
 
-	public void addZeroCostOrder() throws InterruptedException, JsonParseException, JsonMappingException, IOException, AWTException {
+	public void addZeroCostOrder()
+			throws InterruptedException, JsonParseException, JsonMappingException, IOException, AWTException {
 		// click add ZCO button
 		Action.clickElementJavaScipt(btnZCOrder);
 		// select all fields and continue
@@ -420,32 +479,33 @@ public class OrdersPage {
 		Action.clickElementJavaScipt(drpdwnEdit);
 		Action.waitForElementToBeClickable(driver, lkEditBillingAddress, 10);
 		Action.clickElementJavaScipt(lkEditBillingAddress);
-		editBillingAddress();
+		editAddress();
 		Action.waitForElementToBeVisible(driver, btnAddItem, 10);
 		Action.clickElementJavaScipt(btnAddItem);
-		addItem(0,0);	
+		addItem(0, 0);
 		Action.waitForElementToBeVisible(driver, btnAddNewAddressShipTo, 10);
 		Action.clickElementJavaScipt(btnAddNewAddressShipTo);
-		editBillingAddress();
+		editAddress();
 		btnContinueNewAddress.click();
 		selectShippingMethod(0);
-	/*    //Add second item
-		Action.waitForElementToBeClickable(driver, btnAddSecondItem, 10);
-		Action.clickElementJavaScipt(btnAddSecondItem);
-		//btnAddSecondItem.click();
-		addItem(1,0); */
+		/*
+		 * //Add second item Action.waitForElementToBeClickable(driver,
+		 * btnAddSecondItem, 10); Action.clickElementJavaScipt(btnAddSecondItem);
+		 * //btnAddSecondItem.click(); addItem(1,0);
+		 */
 		Action.waitForElementToBeClickable(driver, btnSubmitOrderZCOrder, 10);
 		Action.clickElementJavaScipt(btnSubmitOrderZCOrder);
 		Action.clickElementJavaScipt(btnSubmitOrder);
 		Common.closePrintPopup();
-		System.out.println("ZCO created order is:" +txtsuccessMessage.getText());
-		
+		System.out.println("ZCO created order is:" + txtsuccessMessage.getText());
+
 	}
 
 	public void selectSourceAndContinue(int sourceindex) throws JsonParseException, JsonMappingException, IOException {
 		ordersdata = OrdersData.get(env.getFileLocation());
 		// select source, currency & locale and click continue button
-		drpdwnSource.click();
+		Action.clickElementJavaScipt(drpdwnSource);
+		//drpdwnSource.click();
 		Action.selectByVisibleText(drpdwnSource, ordersdata.getSource().get(sourceindex));
 		drpdwnCurrency.click();
 		Action.selectByVisibleText(drpdwnCurrency, ordersdata.getCurrency());
@@ -454,8 +514,7 @@ public class OrdersPage {
 		btnAddOrderContinue.click();
 	}
 
-	public void editBillingAddress()
-			throws InterruptedException, JsonParseException, JsonMappingException, IOException {
+	public void editAddress() throws InterruptedException, JsonParseException, JsonMappingException, IOException {
 		ordersdata = OrdersData.get(env.getFileLocation());
 		// enter all fields data
 		drpdwnCountry.click();
@@ -470,56 +529,89 @@ public class OrdersPage {
 		Action.enter(txtbxaddressLine3, ordersdata.getBillToAddressLine3());
 		Action.enter(txtbxaddressLine4, ordersdata.getBillToAddressLine4());
 		Action.enter(txtbxCity, ordersdata.getBillToCity());
-		//Action.clickElementJavaScipt(drpdwnState);
+		// Action.clickElementJavaScipt(drpdwnState);
 		CommonElementsPage.selectDropDwnValues(drpdwnState, ordersdata.getBillToState());
-		Action.selectByVisibleText(drpdwnState,ordersdata.getBillToState());
+		Action.selectByVisibleText(drpdwnState, ordersdata.getBillToState());
 		Action.enter(txtbxPostalCode, ordersdata.getBillToPostalCode());
-		WebElement windowTitle=driver.findElement(By.xpath("//div[contains(@class,'modal-title')]"));
-		System.out.println("Current window  title is:" +windowTitle.getText());
-		if(windowTitle.getText().contains("Billing Address"))
-		{
+		WebElement windowTitle = driver.findElement(By.xpath("//div[contains(@class,'modal-title')]"));
+		System.out.println("Current window  title is:" + windowTitle.getText());
+		if (windowTitle.getText().contains("Billing Address")) {
 			Action.enter(txtbxEmail, ordersdata.getBillToEmail());
 			Action.enter(txtbxPhone, ordersdata.getBillToPhone());
-			btnSaveChanges.click();	
-		}else {		
+			btnSaveChanges.click();
+		} else {
 			Action.enter(txtbxPhone, ordersdata.getBillToPhone());
 			btnContinueNewAddress.click();
 		}
 
 	}
-	public void addItem(int itemindex,int qtyindex) throws JsonParseException, JsonMappingException, IOException {
+
+	public void addItem(int itemindex, int qtyindex) throws JsonParseException, JsonMappingException, IOException {
 		ordersdata = OrdersData.get(env.getFileLocation());
-		System.out.println("item is:" +ordersdata.getItemID().get(itemindex));
+		System.out.println("item is:" + ordersdata.getItemID().get(itemindex));
 		Action.waitForElementToBeVisible(driver, btnSearchitem, 20);
 		Action.waitForElementToBeClickable(driver, txtbxsearchitem, 30);
-		Action.enter(txtbxsearchitem,ordersdata.getItemID().get(itemindex));	
+		Action.enter(txtbxsearchitem, ordersdata.getItemID().get(itemindex));
 		Action.waitForElementToBeVisible(driver, btnSearchitem, 10);
 		btnSearchitem.click();
 		Action.enter(txtbxQty, ordersdata.getQTY().get(qtyindex));
 		btnAdd.click();
-		
+
 	}
-	
+
 	public void selectShippingMethod(int shipindex) throws JsonParseException, JsonMappingException, IOException {
 		ordersdata = OrdersData.get(env.getFileLocation());
 		Action.waitForElementToBeClickable(driver, drpdwnShippingMethod, 10);
 		drpdwnShippingMethod.click();
-		Action.selectByVisibleText(drpdwnShippingMethod,ordersdata.getShippingMethod().get(shipindex));
+		Action.selectByVisibleText(drpdwnShippingMethod, ordersdata.getShippingMethod().get(shipindex));
 		Action.waitForElementToBeVisible(driver, btnSaveChanges, 05);
 		btnSaveChanges.click();
 	}
-
+	
+	public void searchOrderforReturn() throws Exception
+	{
+		ordersdata = OrdersData.get(env.getFileLocation());
+		Action.waitForElementToBeClickable(driver, btnSearchIcon, 20);
+		//	btnSearchIcon.click();
+		Action.clickElementJavaScipt(btnSearchIcon);
+		// select search order type
+		Action.waitForElementToBeClickable(driver, drpdwnOrderSearchBy, 20);
+		Action.selectByVisibleText(drpdwnOrderSearchBy, ordersdata.getSearchOrderBy().get(0));
+		// Enter Web Order number
+		Action.waitForElementToBeClickable(driver, txtOrderNumber, 10);
+		Action.enter(txtOrderNumber, ordersdata.getReturnOrderID());
+		// click search btn
+		btnSearchOrder.click();
+		rowNoReturnWebOrder = CommonElementsPage.getRowNum(ordersdata.getReturnOrderID());
+		System.out.println("Selected Order number is:" + Webtable.getTableCellText(rowNoReturnWebOrder, 1));
+	}
 
 	public void createReturnOrder() throws JsonParseException, JsonMappingException, IOException, Exception
 	{
-		searchOrderBy(0);
-		CommonElementsPage.clickViewOrderIcon(rowNoWebOrder, 6, 1, 1, 1);
+		ordersdata = OrdersData.get(env.getFileLocation());
+		//searchOrderBy(0);
+		searchOrderforReturn();
+		
+		CommonElementsPage.clickViewOrderIcon(rowNoReturnWebOrder, 6, 1, 1, 1);
 		//viewOrders(0);
 		Action.waitForElementToBeClickable(driver, drpdwntoggleReturn, 10);
 		drpdwntoggleReturn.click();
 		Action.waitForElementToBeClickable(driver, lkReturns, 10);
 		//lkReturns.click();
 		Action.clickElementJavaScipt(lkReturns);
+		btnReturnOrder.click();
+		chkboxReturnEligibleItems.click();
+		btnNextEligibleItems.click();
+		Action.enter(txtboxReturnqty, ordersdata.getReturnQty());
+		drpdwnReturnReasonCode.click();
+		Action.selectByVisibleText(drpdwnReturnReasonCode, ordersdata.getReturnReasonCode().get(0));
+		Action.enter(txtboxReturnComment, ordersdata.getReturnComment());
+		btnNextItemToReturnscreen.click();
+		btnDoneItemToReturnscreen.click();
+		Common.closePrintPopup();
+		btnExitOrder.click();
+		searchOrderforReturn();
+		Assert.assertEquals(Webtable.getTableCellText(rowNoReturnWebOrder, 5), "Partially Return Received","Return Order didn't created successfully");
 		
 	}
 }

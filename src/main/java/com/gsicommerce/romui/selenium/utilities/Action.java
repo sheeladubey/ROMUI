@@ -534,7 +534,7 @@ public class Action {
 	 * @param sec
 	 * @return
 	 */
-	public WebElement waitForElement(WebDriver driver, By element, int sec) {
+	public static WebElement waitForElement(WebDriver driver, By element, int sec) {
 		Wait<WebDriver> wait = new WebDriverWait(driver, DELAY * sec);
 		ExpectedCondition<WebElement> condition = new ElementPresent(element);
 		try {
@@ -567,7 +567,7 @@ public class Action {
 	 * @param timeOutInSeconds
 	 * @return
 	 */
-	public WebElement waitForElementPresent(WebDriver driver, WebElement element, int timeOutInSeconds) {
+	public static WebElement waitForElementPresent(WebDriver driver, WebElement element, int timeOutInSeconds) {
 
 		try {
 

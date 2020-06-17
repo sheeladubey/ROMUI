@@ -15,6 +15,15 @@ public class PipelineData {
 
 	@JsonProperty("pipelineName")
 	String pipelineName;
+	
+	@JsonProperty("pipelineStatus")
+	List<String> pipelineStatus;
+	
+	@JsonProperty("pipelineStartDate")
+	Integer pipelineStartDate;
+	
+	@JsonProperty("pipelineEndDate")
+	Integer pipelineEndDate;
 
 	@JsonProperty("pipelineCriteriaType")
 	List<String> pipelineCriteriaType;
@@ -40,6 +49,18 @@ public class PipelineData {
 		return pipelinename;
 	}
 
+	public List<String> getpipelineStatus() {
+		return pipelineStatus;
+	}
+	
+	public Integer getpipelineStartDate() {
+		return pipelineStartDate;
+	}
+	
+	public Integer getpipelineEndDate() {
+		return pipelineEndDate;
+	}
+	
 	public List<String> getPipelineCriteriaType() {
 		return pipelineCriteriaType;
 	}

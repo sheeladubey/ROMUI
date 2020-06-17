@@ -1,5 +1,8 @@
 {
 	"pipelineName": "Sheelaaddpipeline",
+	"pipelineStatus":["DRAFT","ACTIVE","INACTIVE"],
+	"pipelineStartDate":"1",
+	"pipelineEndDate":"7",
 	"pipelineCriteriaGroup": [
 		"(",
 		")",

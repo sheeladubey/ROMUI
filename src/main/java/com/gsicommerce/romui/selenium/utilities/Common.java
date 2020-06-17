@@ -76,7 +76,7 @@ public class Common {
 	 */
 	public static WebDriver startApplication(final Environment env, final String browserType) {
 		// final String url = getAppUrlSS0(env);
-		// final String url = getAppUrlUAT(env);
+		//final String url = getAppUrlUAT(env);
 		final String url = getAppUrl(env);
 		return Browser.getBrowserInstance(browserType, url, env);
 	}

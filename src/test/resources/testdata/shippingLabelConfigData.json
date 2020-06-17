@@ -7,6 +7,12 @@
 		"UPS_MOCK"
 	],
 	"sellerDescription": "ShipLabel Configuration",
+	"DefaultLabelStrategy": "IG",
+	"country": [
+		"Czech Republic",
+		"Italy",
+		"United States"
+	],
 	"addressLine1": "935 FIRST AVE",
 	"addressLine2": "935 first ave",
 	"addressLine3": "1st ave",
@@ -18,5 +24,8 @@
 	"parentPassword": "ROM",
 	"signatureOption": "Yes",
 	"labelStockType": "Stock",
-	"parentMeterNumber": "90909"
+	"parentMeterNumber": "90909",
+	"ServiceName":["ANY_STD","ANY_STS"],
+	"CarrierCode":"FEDEX_GROUND - FEDEX_GROUND",
+	"UPSCarrierCode":"02 - UPS EXPEDITED"
 }

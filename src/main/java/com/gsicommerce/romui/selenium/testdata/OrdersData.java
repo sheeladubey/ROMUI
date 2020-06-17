@@ -9,6 +9,7 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.gsicommerce.romui.selenium.utilities.Common;
 
 public class OrdersData {
 
@@ -125,6 +126,18 @@ public class OrdersData {
 
 	@JsonProperty("ShippingMethod")
 	List<String> ShippingMethod;
+	
+	@JsonProperty("ReturnOrderID")
+	String ReturnOrderID;
+	
+	@JsonProperty("ReturnQty")
+	String ReturnQty;
+	
+	@JsonProperty("ReturnReasonCode")
+	List<String> ReturnReasonCode;
+	
+	@JsonProperty("ReturnComment")
+	String ReturnComment;
 
 	public List<String> getSearchOrderBy() {
 		return SearchOrderBy;
@@ -277,6 +290,23 @@ public class OrdersData {
 
 	public List<String> getShippingMethod() {
 		return ShippingMethod;
+	}
+
+	public String getReturnQty() {
+		return ReturnQty;
+	}
+	
+	public List<String> getReturnReasonCode() {
+		return ReturnReasonCode;
+	}
+	
+	public String getReturnComment() {
+		String returnComment = ReturnComment + Common.generateRandomID("Auto");
+		return returnComment;
+	}
+	
+	public String getReturnOrderID() {
+		return ReturnOrderID;
 	}
 
 	public static OrdersData get(String filename) throws JsonParseException, JsonMappingException, IOException {

@@ -12,17 +12,19 @@
 	<parameter name="adminUserName" value="admin@tmsna" />
 	<parameter name="adminPasswd" value="Password123@" />
 	<parameter name="storeID" value="TMSUS" />
-		
-	<!-- parameter name="storeEnvironment"  value="uat-romui.radial.com/en"/-->	
-	<!-- parameter name="adminUserName" value="dubey1290@BBWNA" /-->	
-	<!--  parameter name="adminPasswd" value="Welcome1!" /-->
+
+	<!-- <parameter name="storeEnvironment" value="uat-romui.radial.com/en" 
+		/> <parameter name="adminUserName" value="dubey1290@BBWNA" /> <parameter 
+		name="adminPasswd" value="Welcome1!" /> -->
 	<parameter name="waitPeriod" value="5" />
+
+
 
 	<test thread-count="5" name="OrdersTests">
 		<classes>
 			<class name="com.gsicommerce.romui.selenium.tests.OrdersTests" />
 			<parameter name="dataFile"
-				value="./src/test/resources/testdata/ordersData.json" />				
+				value="./src/test/resources/testdata/ordersData.json" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

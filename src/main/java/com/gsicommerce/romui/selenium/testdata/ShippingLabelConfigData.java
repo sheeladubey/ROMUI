@@ -18,6 +18,12 @@ public class ShippingLabelConfigData {
 
 	@JsonProperty("sellerDescription")
 	String sellerDescription;
+	
+	@JsonProperty("DefaultLabelStrategy")
+	String 	DefaultLabelStrategy;
+	
+	@JsonProperty("country")
+	List<String> country;
 
 	@JsonProperty("addressLine1")
 	String addressLine1;
@@ -54,7 +60,16 @@ public class ShippingLabelConfigData {
 
 	@JsonProperty("parentMeterNumber")
 	String parentMeterNumber;
+	
+	@JsonProperty("ServiceName")
+	List<String> ServiceName;
 
+	@JsonProperty("CarrierCode")
+	String CarrierCode;
+	
+	@JsonProperty("UPSCarrierCode")
+	String UPSCarrierCode;
+	
 	public List<String> getserviceProviderName() {
 		return serviceProviderName;
 	}
@@ -64,6 +79,13 @@ public class ShippingLabelConfigData {
 		return sellerDescription + Common.generateRandomID("Auto");
 	}
 
+	public String getDefaultLabelStrategy() {
+		return DefaultLabelStrategy;
+	}
+	
+	public List<String> getcountry() {
+		return country;
+	}
 	public String getAddressLine1() {
 		return addressLine1;
 	}
@@ -112,6 +134,22 @@ public class ShippingLabelConfigData {
 	public String getparentMeterNumber() {
 		return parentMeterNumber + Common.generateRandomID("000");
 	}
+	
+	public List<String> getServiceName()
+	{
+		return ServiceName;
+	}
+
+	public String getCarrierCode()
+	{
+		return CarrierCode;
+	}
+	
+	public String getUPSCarrierCode()
+	{
+		return UPSCarrierCode;
+	}
+
 
 	public static ShippingLabelConfigData get(String filename)
 			throws JsonParseException, JsonMappingException, IOException {
