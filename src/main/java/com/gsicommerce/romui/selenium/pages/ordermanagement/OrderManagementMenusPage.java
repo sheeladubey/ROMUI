@@ -225,7 +225,9 @@ public class OrderManagementMenusPage {
 	}
 
 	public void clickOnOrders() throws InterruptedException {
-		btnMainMenu.click();
+		Action.waitForElementToBeClickable(driver, btnMainMenu, 40);
+		// btnMainMenu.click();
+		Action.clickElementJavaScipt(btnMainMenu);
 		Action.waitForElementToBeClickable(driver, lkOrders, 20);
 		lkOrders.click();
 	}
@@ -342,7 +344,9 @@ public class OrderManagementMenusPage {
 	}
 
 	public void clickOnShippingLabelConfig() {
-		btnMainMenu.click();
+		Action.waitForElementToBeClickable(driver, btnMainMenu,40);
+		//btnMainMenu.click();
+		Action.clickElementJavaScipt(btnMainMenu);
 		Action.waitForElementToBeClickable(driver, lkOmniAdministration, 10);
 		lkOmniAdministration.click();
 		Action.waitForElementToBeClickable(driver, lkSellerConfig, 10);
@@ -416,7 +420,9 @@ public class OrderManagementMenusPage {
 	}
 
 	public void clickOnPipeline() {
-		btnMainMenu.click();
+		Action.waitForElementToBeClickable(driver, btnMainMenu, 40);
+		// btnMainMenu.click();
+		Action.clickElementJavaScipt(btnMainMenu);
 		Action.waitForElementToBeClickable(driver, lkPipeline, 10);
 		lkPipeline.click();
 

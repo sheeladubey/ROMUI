@@ -1,53 +1,449 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="12" total="13" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="11" passed="9" failed="2" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')]]>
+      <![CDATA[Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on WINDOWS (42d2ebf053d74f062dd5a27982d81aba)] -> xpath: //a[contains(text(),'Seller Configurations')]] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KOP-BM5TNF2', ip: '10.140.135.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64876}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 42d2ebf053d74f062dd5a27982d81aba]]>
     </line>
     <line>
-      <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.cssSelector: #address_country_code' (tried for 20 second(s) with 500 milliseconds interval)]]>
+      <![CDATA[Action icon is clicked on]]>
+    </line>
+    <line>
+      <![CDATA[Action icon is clicked on]]>
+    </line>
+    <line>
+      <![CDATA[Action icon is clicked on]]>
+    </line>
+    <line>
+      <![CDATA[Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on WINDOWS (07ecdfe45cef5c544118e76554ffa11e)] -> css selector: #client_store_search] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KOP-BM5TNF2', ip: '10.140.135.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50270}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 07ecdfe45cef5c544118e76554ffa11e]]>
+    </line>
+    <line>
+      <![CDATA[Action icon is clicked on]]>
+    </line>
+    <line>
+      <![CDATA[Action icon is clicked on]]>
     </line>
   </reporter-output>
-  <suite started-at="2020-06-05T01:47:05 EDT" name="Suite" finished-at="2020-06-05T01:47:50 EDT" duration-ms="44072">
+  <suite started-at="2020-06-17T17:02:42 EDT" name="Suite" finished-at="2020-06-17T17:12:46 EDT" duration-ms="604475">
     <groups>
     </groups>
-    <test started-at="2020-06-05T01:47:05 EDT" name="OrdersTests" finished-at="2020-06-05T01:47:50 EDT" duration-ms="44072">
-      <class name="com.gsicommerce.romui.selenium.tests.OrdersTests">
-        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.OrdersTests@40a4337a]" started-at="2020-06-05T01:47:05 EDT" name="setup" finished-at="2020-06-05T01:47:16 EDT" duration-ms="10529" status="PASS">
+    <test started-at="2020-06-17T17:02:42 EDT" name="ShippingLabelConfigTests" finished-at="2020-06-17T17:12:46 EDT" duration-ms="604475">
+      <class name="com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests">
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:02:42 EDT" name="setup" finished-at="2020-06-17T17:02:54 EDT" duration-ms="12564" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@6940f685]]>
+                <![CDATA[org.testng.TestRunner@48d14ea0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testAddZCOrder()[pri:11, instance:com.gsicommerce.romui.selenium.tests.OrdersTests@40a4337a]" started-at="2020-06-05T01:47:16 EDT" name="testAddZCOrder" description="To Verify Add Zero Cost Order" finished-at="2020-06-05T01:47:49 EDT" duration-ms="33087" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="testAddShipLabelConfigByConsignor()[pri:1, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:02:54 EDT" name="testAddShipLabelConfigByConsignor" description="Add Ship Label Config for Consignor" finished-at="2020-06-17T17:03:32 EDT" duration-ms="37901" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddShipLabelConfigByConsignor -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:03:32 EDT" name="tearDown" finished-at="2020-06-17T17:03:32 EDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testAddShipLabelConfigByConsignor status=SUCCESS method=ShippingLabelConfigTests.testAddShipLabelConfigByConsignor()[pri:1, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:03:32 EDT" name="setup" finished-at="2020-06-17T17:03:45 EDT" duration-ms="12273" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@48d14ea0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testAddShipLabelConfigByConsignorMock()[pri:2, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:03:45 EDT" name="testAddShipLabelConfigByConsignorMock" description="Add Ship Label Config for Consignor_Mock" finished-at="2020-06-17T17:04:28 EDT" duration-ms="43304" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddShipLabelConfigByConsignorMock -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:04:28 EDT" name="tearDown" finished-at="2020-06-17T17:04:28 EDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testAddShipLabelConfigByConsignorMock status=SUCCESS method=ShippingLabelConfigTests.testAddShipLabelConfigByConsignorMock()[pri:2, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:04:28 EDT" name="setup" finished-at="2020-06-17T17:04:42 EDT" duration-ms="13787" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@48d14ea0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testAddShipLabelConfigByFedex()[pri:3, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:04:42 EDT" name="testAddShipLabelConfigByFedex" description="Add Ship Label Config for Fedex" finished-at="2020-06-17T17:05:45 EDT" duration-ms="63167" status="FAIL">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#address_country_code"}
-  (Session info: chrome=83.0.4103.61)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[element not interactable
+  (Session info: chrome=83.0.4103.97)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'KOP-BM5TNF2', ip: '10.140.135.167', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+System info: host: 'KOP-BM5TNF2', ip: '10.140.135.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.61, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58304}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 85da2e2a93aaf96acc6b3d9e6ac8d1d5
-*** Element info: {Using=css selector, value=#address_country_code}]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64876}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 42d2ebf053d74f062dd5a27982d81aba]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#address_country_code"}
-  (Session info: chrome=83.0.4103.61)
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=83.0.4103.97)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KOP-BM5TNF2', ip: '10.140.135.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64876}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 42d2ebf053d74f062dd5a27982d81aba
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at jdk.internal.reflect.GeneratedMethodAccessor6.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at com.sun.proxy.$Proxy14.click(Unknown Source)
+at com.gsicommerce.romui.selenium.pages.ordermanagement.OrderManagementMenusPage.clickOnShippingLabelConfig(OrderManagementMenusPage.java:353)
+at com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests.testAddShipLabelConfigByFedex(ShippingLabelConfigTests.java:71)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:767)
+at org.testng.TestRunner.run(TestRunner.java:588)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
+at org.testng.TestNG.runSuites(TestNG.java:1066)
+at org.testng.TestNG.run(TestNG.java:1034)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+            <line>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on WINDOWS (42d2ebf053d74f062dd5a27982d81aba)] -> xpath: //a[contains(text(),'Seller Configurations')]] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KOP-BM5TNF2', ip: '10.140.135.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64876}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 42d2ebf053d74f062dd5a27982d81aba]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testAddShipLabelConfigByFedex -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:05:45 EDT" name="tearDown" finished-at="2020-06-17T17:05:45 EDT" duration-ms="557" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testAddShipLabelConfigByFedex status=FAILURE method=ShippingLabelConfigTests.testAddShipLabelConfigByFedex()[pri:3, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc] output=Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on WINDOWS (42d2ebf053d74f062dd5a27982d81aba)] -> xpath: //a[contains(text(),'Seller Configurations')]] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KOP-BM5TNF2', ip: '10.140.135.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64876}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 42d2ebf053d74f062dd5a27982d81aba]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:05:45 EDT" name="setup" finished-at="2020-06-17T17:05:58 EDT" duration-ms="13073" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@48d14ea0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testAddShipLabelConfigByUps()[pri:4, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:05:58 EDT" name="testAddShipLabelConfigByUps" description="Add Ship Label Config for UPS" finished-at="2020-06-17T17:06:40 EDT" duration-ms="41520" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddShipLabelConfigByUps -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:06:40 EDT" name="tearDown" finished-at="2020-06-17T17:06:40 EDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testAddShipLabelConfigByUps status=SUCCESS method=ShippingLabelConfigTests.testAddShipLabelConfigByUps()[pri:4, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:06:40 EDT" name="setup" finished-at="2020-06-17T17:06:51 EDT" duration-ms="11270" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@48d14ea0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testAddShipLabelConfigByUPSMock()[pri:5, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:06:51 EDT" name="testAddShipLabelConfigByUPSMock" description="Add Ship Label Config for UPS_Mock" finished-at="2020-06-17T17:07:27 EDT" duration-ms="35625" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddShipLabelConfigByUPSMock -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:07:27 EDT" name="tearDown" finished-at="2020-06-17T17:07:27 EDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testAddShipLabelConfigByUPSMock status=SUCCESS method=ShippingLabelConfigTests.testAddShipLabelConfigByUPSMock()[pri:5, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:07:27 EDT" name="setup" finished-at="2020-06-17T17:07:39 EDT" duration-ms="12466" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@48d14ea0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testeditShipLabelConfigByConsignor()[pri:6, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:07:39 EDT" name="testeditShipLabelConfigByConsignor" description="Edit Ship Label Config for Consignor" finished-at="2020-06-17T17:08:15 EDT" duration-ms="35882" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Action icon is clicked on]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testeditShipLabelConfigByConsignor -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:08:15 EDT" name="tearDown" finished-at="2020-06-17T17:08:15 EDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testeditShipLabelConfigByConsignor status=SUCCESS method=ShippingLabelConfigTests.testeditShipLabelConfigByConsignor()[pri:6, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc] output=Action icon is clicked on]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:08:15 EDT" name="setup" finished-at="2020-06-17T17:08:27 EDT" duration-ms="11271" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@48d14ea0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testEditShipLabelConfigByConsignor_mock()[pri:7, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:08:27 EDT" name="testEditShipLabelConfigByConsignor_mock" description="Edit Ship Label Config for Consignor_mock" finished-at="2020-06-17T17:08:59 EDT" duration-ms="32936" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Action icon is clicked on]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testEditShipLabelConfigByConsignor_mock -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:08:59 EDT" name="tearDown" finished-at="2020-06-17T17:08:59 EDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testEditShipLabelConfigByConsignor_mock status=SUCCESS method=ShippingLabelConfigTests.testEditShipLabelConfigByConsignor_mock()[pri:7, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc] output=Action icon is clicked on]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:08:59 EDT" name="setup" finished-at="2020-06-17T17:09:11 EDT" duration-ms="11531" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@48d14ea0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testeditShipLabelConfigByFedex()[pri:8, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:09:11 EDT" name="testeditShipLabelConfigByFedex" description="Edit Ship Label Config for Fedex" finished-at="2020-06-17T17:09:44 EDT" duration-ms="33477" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Action icon is clicked on]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testeditShipLabelConfigByFedex -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:09:44 EDT" name="tearDown" finished-at="2020-06-17T17:09:44 EDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testeditShipLabelConfigByFedex status=SUCCESS method=ShippingLabelConfigTests.testeditShipLabelConfigByFedex()[pri:8, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc] output=Action icon is clicked on]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:09:44 EDT" name="setup" finished-at="2020-06-17T17:09:56 EDT" duration-ms="11518" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@48d14ea0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testEditShipLabelConfigByUps()[pri:9, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:09:56 EDT" name="testEditShipLabelConfigByUps" description="Edit Ship Label Config for UPS" finished-at="2020-06-17T17:11:07 EDT" duration-ms="71131" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on WINDOWS (07ecdfe45cef5c544118e76554ffa11e)] -> css selector: #client_store_search] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KOP-BM5TNF2', ip: '10.140.135.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50270}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 07ecdfe45cef5c544118e76554ffa11e]]>
+            </line>
+            <line>
+              <![CDATA[Action icon is clicked on]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testEditShipLabelConfigByUps -->
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:11:07 EDT" name="setup" finished-at="2020-06-17T17:11:18 EDT" duration-ms="11190" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@48d14ea0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:11:07 EDT" name="tearDown" finished-at="2020-06-17T17:11:07 EDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testEditShipLabelConfigByUps status=SUCCESS method=ShippingLabelConfigTests.testEditShipLabelConfigByUps()[pri:9, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc] output=Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on WINDOWS (07ecdfe45cef5c544118e76554ffa11e)] -> css selector: #client_store_search] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KOP-BM5TNF2', ip: '10.140.135.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50270}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 07ecdfe45cef5c544118e76554ffa11e]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="testEditShipLabelConfigByUps_mock()[pri:10, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:11:18 EDT" name="testEditShipLabelConfigByUps_mock" description="Edit Ship Label Config for UPS_MOCK" finished-at="2020-06-17T17:11:51 EDT" duration-ms="33050" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Action icon is clicked on]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testEditShipLabelConfigByUps_mock -->
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:11:51 EDT" name="setup" finished-at="2020-06-17T17:12:03 EDT" duration-ms="11596" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@48d14ea0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:11:51 EDT" name="tearDown" finished-at="2020-06-17T17:11:51 EDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testEditShipLabelConfigByUps_mock status=SUCCESS method=ShippingLabelConfigTests.testEditShipLabelConfigByUps_mock()[pri:10, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc] output=Action icon is clicked on]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="testShipLabelConfigFormValidation()[pri:11, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:12:03 EDT" name="testShipLabelConfigFormValidation" description="Ship Label Config form validation" finished-at="2020-06-17T17:12:46 EDT" duration-ms="42850" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":".btn-default[type='submit']"}
+  (Session info: chrome=83.0.4103.97)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'KOP-BM5TNF2', ip: '10.140.135.167', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+System info: host: 'KOP-BM5TNF2', ip: '10.140.135.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.61, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58304}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 85da2e2a93aaf96acc6b3d9e6ac8d1d5
-*** Element info: {Using=css selector, value=#address_country_code}
-at jdk.internal.reflect.GeneratedConstructorAccessor18.newInstance(Unknown Source)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50379}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 9aa4e9b6e01a960e854ae4fd12cdcc1e
+*** Element info: {Using=css selector, value=.btn-default[type='submit']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".btn-default[type='submit']"}
+  (Session info: chrome=83.0.4103.97)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KOP-BM5TNF2', ip: '10.140.135.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50379}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 9aa4e9b6e01a960e854ae4fd12cdcc1e
+*** Element info: {Using=css selector, value=.btn-default[type='submit']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
@@ -63,12 +459,9 @@ at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy14.getTagName(Unknown Source)
-at org.openqa.selenium.support.ui.Select.<init>(Select.java:45)
-at com.gsicommerce.romui.selenium.utilities.Action.selectByVisibleText(Action.java:777)
-at com.gsicommerce.romui.selenium.pages.ordermanagement.OrdersPage.editBillingAddress(OrdersPage.java:392)
-at com.gsicommerce.romui.selenium.pages.ordermanagement.OrdersPage.addZeroCostOrder(OrdersPage.java:355)
-at com.gsicommerce.romui.selenium.tests.OrdersTests.testAddZCOrder(OrdersTests.java:205)
+at com.sun.proxy.$Proxy14.click(Unknown Source)
+at com.gsicommerce.romui.selenium.pages.ordermanagement.ShippingLabelConfigPage.shipLabelConfigFormValidation(ShippingLabelConfigPage.java:349)
+at com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests.testShipLabelConfigFormValidation(ShippingLabelConfigTests.java:234)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -101,26 +494,20 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
-            <line>
-              <![CDATA[class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')]]>
-            </line>
-            <line>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.cssSelector: #address_country_code' (tried for 20 second(s) with 500 milliseconds interval)]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- testAddZCOrder -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.OrdersTests@40a4337a]" started-at="2020-06-05T01:47:49 EDT" name="tearDown" finished-at="2020-06-05T01:47:50 EDT" duration-ms="433" status="PASS">
+        </test-method> <!-- testShipLabelConfigFormValidation -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc]" started-at="2020-06-17T17:12:46 EDT" name="tearDown" finished-at="2020-06-17T17:12:46 EDT" duration-ms="475" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testAddZCOrder status=FAILURE method=OrdersTests.testAddZCOrder()[pri:11, instance:com.gsicommerce.romui.selenium.tests.OrdersTests@40a4337a] output=class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')]]]>
+                <![CDATA[[TestResult name=testShipLabelConfigFormValidation status=FAILURE method=ShippingLabelConfigTests.testShipLabelConfigFormValidation()[pri:11, instance:com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests@702657cc] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.gsicommerce.romui.selenium.tests.OrdersTests -->
-    </test> <!-- OrdersTests -->
+      </class> <!-- com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests -->
+    </test> <!-- ShippingLabelConfigTests -->
   </suite> <!-- Suite -->
 </testng-results>

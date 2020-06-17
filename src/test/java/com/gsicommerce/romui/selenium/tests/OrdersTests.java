@@ -16,13 +16,12 @@ public class OrdersTests extends ROMUIBasePage {
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
 		// romuipages.loginPage().loginSSO(env.getUserName(), env.getPassword());
-		//romuipages.homePage().clickOnLandingButton("Order Management");
-		//logger.info("Order Management link is clicked on");
+		// romuipages.homePage().clickOnLandingButton("Order Management");
+		// logger.info("Order Management link is clicked on");
 		romuipages.orderMgmPage().clickOnOrders();
 		logger.info("Navigated to Orders page");
 		romuipages.ordersPage().searchOrderBy(0);
 		logger.info("Search By Order Number verified");
-
 	}
 
 	@Test(enabled = true, priority = 2, description = "to Verify search order by Fullfillment number")
@@ -31,8 +30,8 @@ public class OrdersTests extends ROMUIBasePage {
 
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		//romuipages.homePage().clickOnLandingButton("Order Management");
-		//logger.info("Order Management link is clicked on");
+		// romuipages.homePage().clickOnLandingButton("Order Management");
+		// logger.info("Order Management link is clicked on");
 		romuipages.orderMgmPage().clickOnOrders();
 		logger.info("Navigated to Orders page");
 		// romuipages.ordersPage().searchOrderByFulfillOrderNum("FulfillmentOrderID");
@@ -47,8 +46,8 @@ public class OrdersTests extends ROMUIBasePage {
 
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		//romuipages.homePage().clickOnLandingButton("Order Management");
-		//logger.info("Order Management link is clicked on");
+		// romuipages.homePage().clickOnLandingButton("Order Management");
+		// logger.info("Order Management link is clicked on");
 		romuipages.orderMgmPage().clickOnOrders();
 		logger.info("Navigated to Orders page");
 		// romuipages.ordersPage().searchOrderByCustomerName("firstname", "lastname");
@@ -62,8 +61,8 @@ public class OrdersTests extends ROMUIBasePage {
 
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		//romuipages.homePage().clickOnLandingButton("Order Management");
-		//logger.info("Order Management link is clicked on");
+		// romuipages.homePage().clickOnLandingButton("Order Management");
+		// logger.info("Order Management link is clicked on");
 		romuipages.orderMgmPage().clickOnOrders();
 		logger.info("Navigated to Orders page");
 		romuipages.ordersPage().searchOrderBy(3);
@@ -76,8 +75,8 @@ public class OrdersTests extends ROMUIBasePage {
 
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		//romuipages.homePage().clickOnLandingButton("Order Management");
-	//	logger.info("Order Management link is clicked on");
+		// romuipages.homePage().clickOnLandingButton("Order Management");
+		// logger.info("Order Management link is clicked on");
 		romuipages.orderMgmPage().clickOnOrders();
 		logger.info("Navigated to Orders page");
 		romuipages.ordersPage().searchOrderBy(4);
@@ -90,8 +89,8 @@ public class OrdersTests extends ROMUIBasePage {
 
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		//romuipages.homePage().clickOnLandingButton("Order Management");
-		//logger.info("Order Management link is clicked on");
+		// romuipages.homePage().clickOnLandingButton("Order Management");
+		// logger.info("Order Management link is clicked on");
 		romuipages.orderMgmPage().clickOnOrders();
 		logger.info("Navigated to Orders page");
 		romuipages.ordersPage().clickEditSearch(0);
@@ -118,14 +117,16 @@ public class OrdersTests extends ROMUIBasePage {
 		logger.info("Verify view order screen for Order number search");
 		romuipages.ordersPage().viewOrders(0);
 		logger.info("View order screen has been verified by Search  Order number");
-		romuipages.ordersPage().viewOrders(1);
-		logger.info("View order screen has been verified by Search  Fulfillment Order number");
-		romuipages.ordersPage().viewOrders(2);
-		logger.info("View order screen has been verified by Search  Customer Name");
-		romuipages.ordersPage().viewOrders(3);
-		logger.info("View order screen has been verified by Search  Email");
-		romuipages.ordersPage().viewOrders(4);
-		logger.info("View order screen has been verified by Search  order status");
+		/*
+		 * romuipages.ordersPage().viewOrders(1); logger.
+		 * info("View order screen has been verified by Search  Fulfillment Order number"
+		 * ); romuipages.ordersPage().viewOrders(2);
+		 * logger.info("View order screen has been verified by Search  Customer Name");
+		 * romuipages.ordersPage().viewOrders(3);
+		 * logger.info("View order screen has been verified by Search  Email");
+		 * romuipages.ordersPage().viewOrders(4);
+		 * logger.info("View order screen has been verified by Search  order status");
+		 */
 
 	}
 

@@ -345,7 +345,9 @@ public class ShippingLabelConfigPage {
 
 	public void shipLabelConfigFormValidation()
 			throws JsonParseException, JsonMappingException, IOException, InterruptedException {
-		btnAdd.click();
+		Action.waitForElementToBeClickable(driver, btnAdd, 10);
+		Action.clickElementJavaScipt(btnAdd);
+		Action.waitForElementToBeClickable(driver, btnSave, 20);
 		btnSave.click();
 		Assert.assertEquals(txtformvalidationError.getText(), RomuiEnumValues.USER_VALIDATION.getMessage(),
 				"shipping Label form Error Validation message has not been found");

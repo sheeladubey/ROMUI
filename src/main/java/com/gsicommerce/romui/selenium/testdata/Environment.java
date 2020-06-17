@@ -56,6 +56,10 @@ public class Environment {
 	}
 
 	public String getStoreId() {
-	return getParam("storeID");
-}
+		return getParam("storeID");
+	}
+	
+	public String getSellerId() {
+		return getParam("sellerID");
+	}
 }

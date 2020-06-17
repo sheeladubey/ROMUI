@@ -75,7 +75,7 @@ public class LoginPage {
 		txtUserName.sendKeys(username);
 		txtPasswd.sendKeys(passwd);
 		btnSingIn.click();		
-		//selectStore(env.getStoreId(), passwd);
+		selectStore(env.getSellerId(),env.getStoreId());
 	}
 	
 /*	public void selectStore(String storeId)

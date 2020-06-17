@@ -173,7 +173,7 @@ public class Webtable {
 			_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/a[" + child + "]/span[" + spanchild + "]",
 					row, col);
 		}
-		Action.scrollingToBottomofAPage();
+		// Action.scrollingToBottomofAPage();
 		Action.clickElementJavaScipt(Table.findElement(By.xpath(_xpath)));
 	}
 
@@ -181,7 +181,7 @@ public class Webtable {
 	public void clickDeleteIconPipeline(int row, int col, int spanchild) throws InterruptedException {
 
 		_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/button/span[" + spanchild + "]", row, col);
-		Action.scrollingToBottomofAPage();
+		//Action.scrollingToBottomofAPage();
 		Action.clickElementJavaScipt(Table.findElement(By.xpath(_xpath)));
 	}
 
@@ -220,31 +220,33 @@ public class Webtable {
 		}
 		return rowNum;
 	}
-	
-	public void clickIconDelete(int row, int col, int child,int spanchild) {
+
+	public void clickIconDelete(int row, int col, int child, int spanchild) {
 		if (child == 0) {
-			_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/button/span["+ spanchild +"]", row, col);
+			_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/button/span[" + spanchild + "]", row, col);
 		} else {
-			_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/button[" + child +"]/span["+ spanchild +"]", row, col);
+			_xpath = String.format(
+					".//tr[" + row + "]/td[" + col + "]/div/button[" + child + "]/span[" + spanchild + "]", row, col);
 		}
-		
+
 		Table.findElement(By.xpath(_xpath)).click();
 
 	}
-	
-	//Click view order and view audits icon on Order lookup screen
-	public void clickIconViewOrder(int row,int col,int divchild,int child,int spanchild) {		
+
+	// Click view order and view audits icon on Order lookup screen
+	public void clickIconViewOrder(int row, int col, int divchild, int child, int spanchild) {
 		if (divchild == 0) {
-		//	_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/a[" + child + "]/span[" + spanchild + "]", row, col);
+			// _xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/a[" + child +
+			// "]/span[" + spanchild + "]", row, col);
 			_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/a/span", row, col);
 		} else {
-			_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div["+divchild+"]/a[" + child + "]/span[" + spanchild + "]",
+			_xpath = String.format(
+					".//tr[" + row + "]/td[" + col + "]/div[" + divchild + "]/a[" + child + "]/span[" + spanchild + "]",
 					row, col);
 		}
-		Action.scrollingToBottomofAPage();
+		// Action.scrollingToBottomofAPage();
 		Action.clickElementJavaScipt(Table.findElement(By.xpath(_xpath)));
-		
+
 	}
 
-	
 }

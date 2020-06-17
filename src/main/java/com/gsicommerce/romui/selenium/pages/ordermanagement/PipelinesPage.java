@@ -12,6 +12,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.Reporter;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
@@ -165,11 +166,11 @@ public class PipelinesPage {
 		Common.clickonCalendarDate(txtStartDate, pipelinedata.getpipelineStartDate());
 		Common.clickonCalendarDate(txtEndDate, pipelinedata.getpipelineEndDate());
 		// Select by Tender Type
-		// logger.info("Selecting PIPELINE CRITERIA BY TENDER TYPE");
+		Reporter.log("Selecting PIPELINE CRITERIA BY TENDER TYPE");
 		selectPipelineCriteria(0, 5, 0, 3, 1);
 		btnPrependCondition.click();
 		// Select By Order Type
-		logger.info("Selecting PIPELINE CRITERIA BY ORDER TYPE");
+		Reporter.log("Selecting PIPELINE CRITERIA BY ORDER TYPE");
 		selectPipelineCriteria(0, 1, 0, 0, 1);
 		btnSaveAddConfig.click();
 		Common.dragAndDrop(driver, dragSalesOrderCreate, dropSalesOrderCreate, 10);
@@ -180,7 +181,8 @@ public class PipelinesPage {
 		Assert.assertEquals(Webtable.getTableCellText(rowNoaddPipeline, 1), addpipelineName,
 				"Pipeline has not been added");
 		Assert.assertTrue(
-				Webtable.getTableCellText(rowNoaddPipeline, 2).equals("DRAFT") && Webtable.getTableCellText(rowNoaddPipeline, 5).contains("Delete Pipeline"),
+				Webtable.getTableCellText(rowNoaddPipeline, 2).equals("DRAFT")
+						&& Webtable.getTableCellText(rowNoaddPipeline, 5).contains("Delete Pipeline"),
 				"Delete pipeline icon doesn't exist for Draft status record");
 	}
 
@@ -210,6 +212,8 @@ public class PipelinesPage {
 		// addPipeline();
 		pipelinedata = PipelineData.get(env.getFileLocation());
 		editPipelineName = pipelinedata.getPipelineName();
+		Action.scrollingToBottomofAPage();
+		Reporter.log("Click Edit Pipeline Icon for Draft status record");
 		CommonElementsPage.clickActionsIcon(rowNoaddPipeline, 5, 3, 1);
 		System.out.println("EDIT PIPELINE NAME for Active status IS:" + editPipelineName);
 		Action.waitForElementToBeClickable(driver, txtBoxPipelineName, 10);
@@ -220,7 +224,7 @@ public class PipelinesPage {
 		Common.clickonCalendarDate(txtEndDate, pipelinedata.getpipelineEndDate());
 		btnPrependCondition.click();
 		// Select By Fulfillment Method
-		System.out.println("Selecting Fulfillment Method type" );
+		Reporter.log("Selecting Fulfillment Method type");
 		selectPipelineCriteria(0, 0, 0, 0, 1);
 		btnSaveEditConfig.click();
 		Common.waitForElementPresent(driver, btnContinue, 10);
@@ -233,9 +237,11 @@ public class PipelinesPage {
 		System.out.println("Edited pipeline name is:" + Webtable.getTableCellText(rowNoeditpipelineDraft, 1));
 		Assert.assertEquals(Webtable.getTableCellText(rowNoeditpipelineDraft, 1), editPipelineName,
 				"Draft status Pipeline record has not been Edited");
-		Assert.assertTrue(Webtable.getTableCellText(rowNoeditpipelineDraft, 2).equals("ACTIVE")
-				&& !Webtable.getTableCellText(rowNoeditpipelineDraft, 5).contains("Delete Pipeline"), "Delete pipeline icon exist for Active status record");
-  
+		Assert.assertTrue(
+				Webtable.getTableCellText(rowNoeditpipelineDraft, 2).equals("ACTIVE")
+						&& !Webtable.getTableCellText(rowNoeditpipelineDraft, 5).contains("Delete Pipeline"),
+				"Delete pipeline icon exist for Active status record");
+
 	}
 
 	/*
@@ -249,6 +255,8 @@ public class PipelinesPage {
 	public void editPipelineActiveStatus() throws JsonParseException, JsonMappingException, IOException, Exception {
 		// editPipeline();
 		pipelinedata = PipelineData.get(env.getFileLocation());
+		Action.scrollingToBottomofAPage();
+		Reporter.log("Click Edit Pipeline Icon for Active status record");
 		CommonElementsPage.clickActionsIcon(rowNoeditpipelineDraft, 5, 3, 1);
 		Action.selectByIndex(drpdwnPipelineStatus, 0);
 		Common.clickonCalendarDate(txtStartDate, pipelinedata.getpipelineStartDate());
@@ -261,17 +269,13 @@ public class PipelinesPage {
 		Action.waitForElementToBeClickable(driver, btnCancel, 10);
 		Action.clickElementJavaScipt(btnCancel);
 		rowNoeditpipelineActive = CommonElementsPage.getRowNum(editPipelineName);
-		System.out.println("Edited pipeline active 5th column is:" +	Webtable.getTableCellText(rowNoeditpipelineActive, 5));
-		if (Webtable.getTableCellText(rowNoeditpipelineActive, 2).equals("INACTIVE")
-				&& !btnDeletePipeline.isDisplayed())
-			System.out.println("Delete pipeline icon doesn't exist for InActive status record");
-		else {
-			System.out.println("Delete pipeline icon exist for InActive status record");
-		}
 		Assert.assertEquals(Webtable.getTableCellText(rowNoeditpipelineActive, 2), "INACTIVE",
 				"Active status Pipeline record has not been Edited");
-		Assert.assertTrue(Webtable.getTableCellText(rowNoeditpipelineActive, 2).equals("INACTIVE") && !Webtable.getTableCellText(rowNoeditpipelineActive, 5).contains("Delete Pipeline"), "Delete pipeline icon exist for InActive status record");
-				
+		Assert.assertTrue(
+				Webtable.getTableCellText(rowNoeditpipelineActive, 2).equals("INACTIVE")
+						&& !Webtable.getTableCellText(rowNoeditpipelineActive, 5).contains("Delete Pipeline"),
+				"Delete pipeline icon exist for InActive status record");
+
 	}
 
 	/*
@@ -287,6 +291,8 @@ public class PipelinesPage {
 	public void editPipelineInActiveStatus() throws JsonParseException, JsonMappingException, IOException, Exception {
 		// editPipelineActiveStatus();
 		pipelinedata = PipelineData.get(env.getFileLocation());
+		Action.scrollingToBottomofAPage();
+		Reporter.log("Click Edit Pipeline Icon for Inactive status record");
 		CommonElementsPage.clickActionsIcon(rowNoeditpipelineActive, 5, 3, 1);
 		Action.selectByIndex(drpdwnPipelineStatus, 1);
 		Common.clickonCalendarDate(txtStartDate, pipelinedata.getpipelineStartDate());
@@ -299,25 +305,29 @@ public class PipelinesPage {
 		Action.waitForElementToBeClickable(driver, btnCancel, 10);
 		Action.clickElementJavaScipt(btnCancel);
 		int rowNoeditpipelineInActive = CommonElementsPage.getRowNum(editPipelineName);
-		System.out.println("Edited pipeline inactive 5th column is:" +	Webtable.getTableCellText(rowNoeditpipelineInActive, 5));
+		System.out.println(
+				"Edited pipeline inactive 5th column is:" + Webtable.getTableCellText(rowNoeditpipelineInActive, 5));
 		Assert.assertEquals(Webtable.getTableCellText(rowNoeditpipelineInActive, 2), "ACTIVE",
 				"Inactive status Pipeline record has not been Edited");
 	}
 
 	public void deletePipeline() throws JsonParseException, JsonMappingException, IOException, Exception {
 		// addPipeline();
-		if(Webtable.getTableCellText(rowNoaddPipeline, 2).equals("DRAFT") && btnDeletePipeline.isDisplayed()){
-		CommonElementsPage.clickDeleteIcon(rowNoaddPipeline, 5, 1);
-		Action.waitForElementToBeClickable(driver, btnConfirm, 10);
-		btnConfirm.click();
-		}else
-		{
-			System.out.println("delete Icon not found");
+		if (Webtable.getTableCellText(rowNoaddPipeline, 2).equals("DRAFT") && btnDeletePipeline.isDisplayed()) {
+			Action.scrollingToBottomofAPage();
+			Reporter.log("Click delete icon for draft status record" );
+			CommonElementsPage.clickDeleteIcon(rowNoaddPipeline, 5, 1);
+			Action.waitForElementToBeClickable(driver, btnConfirm, 10);
+			btnConfirm.click();
+		} else {
+			System.out.println("delete Icon not found for Draft Status Record");
 		}
 	}
 
 	public void copyPipelineDraftStatus() throws JsonParseException, JsonMappingException, IOException, Exception {
 		// addPipeline();
+		Action.scrollingToBottomofAPage();
+		Reporter.log("Click Copy Pipeline Icon for Draft status record");
 		CommonElementsPage.clickActionsIcon(rowNoaddPipeline, 5, 2, 1);
 		pipelinedata = PipelineData.get(env.getFileLocation());
 		String copypipelineName = pipelinedata.getPipelineName();
@@ -339,6 +349,8 @@ public class PipelinesPage {
 
 	public void copyPipelineActiveStatus() throws JsonParseException, JsonMappingException, IOException, Exception {
 		// editPipeline();
+		Action.scrollingToBottomofAPage();
+		Reporter.log("Click Copy Pipeline Icon for Active status record");
 		CommonElementsPage.clickActionsIcon(rowNoeditpipelineDraft, 5, 2, 1);
 		pipelinedata = PipelineData.get(env.getFileLocation());
 		String copypipelineName = pipelinedata.getPipelineName();
@@ -360,6 +372,8 @@ public class PipelinesPage {
 
 	public void copyPipelineInActiveStatus() throws JsonParseException, JsonMappingException, IOException, Exception {
 		// editPipelineActiveStatus();
+		Action.scrollingToBottomofAPage();
+		Reporter.log("Click Copy Pipeline Icon for Inactive status record");
 		CommonElementsPage.clickActionsIcon(rowNoeditpipelineActive, 5, 2, 1);
 		pipelinedata = PipelineData.get(env.getFileLocation());
 		String copypipelineName = pipelinedata.getPipelineName();
@@ -381,6 +395,8 @@ public class PipelinesPage {
 
 	public void editPipelienConfigurationDraft() throws Exception {
 		addPipeline();
+		Action.scrollingToBottomofAPage();
+		Reporter.log("Click Edit Pipeline Configuration Icon for Draft status record");
 		CommonElementsPage.clickActionsIcon(rowNoaddPipeline, 5, 4, 1);
 		Action.waitForElementToBeClickable(driver, btnSave, 10);
 		Action.clickElementJavaScipt(btnSave);
@@ -391,10 +407,13 @@ public class PipelinesPage {
 
 	public void editPipelienConfigurationActive() throws Exception {
 		// addPipeline();
+		Action.scrollingToBottomofAPage();
+		Reporter.log("Click Edit Pipeline Configuration Icon for Active status record");
 		CommonElementsPage.clickActionsIcon(rowNoaddPipeline, 5, 4, 1);
 		Action.waitForElementToBeClickable(driver, btnCancel, 10);
 		Action.clickElementJavaScipt(btnCancel);
 	}
+
 //Below method is to select Pipeline criteria 
 	public void selectPipelineCriteria(int grpindexstart, int typeindex, int operatorindex, int valueindex,
 			int grpindexend) throws JsonParseException, JsonMappingException, IOException {
@@ -420,10 +439,11 @@ public class PipelinesPage {
 		}
 		Action.selectByVisibleText(drpdwnPipelineCriteriaGroupEnd,
 				pipelinedata.getPipelineCriteriaGroup().get(grpindexend));
+		Action.waitForElementToBeClickable(driver, btnPipelineCriteriaConfirm, 10);
 		btnPipelineCriteriaConfirm.click();
 	}
 
-	//Below method is for form validation
+	// Below method is for form validation
 	public void pipelineFormValidation()
 			throws JsonParseException, JsonMappingException, IOException, InterruptedException {
 		btnAddPipeline.click();
@@ -432,6 +452,7 @@ public class PipelinesPage {
 				RomuiEnumValues.PIPELINE_FORMVALIDATION.getMessage(),
 				"Pipeline form Error Validation message has not been found");
 		// Select By Fulfillment Method
+		Reporter.log("Selecting Fulfillment Method type for Pipeline Criteria");
 		selectPipelineCriteria(0, 0, 0, 0, 1);
 		btnSaveExit.click();
 		Assert.assertEquals(CommonElementsPage.formErrorValidation(), RomuiEnumValues.USER_VALIDATION.getMessage(),

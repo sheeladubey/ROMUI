@@ -11,6 +11,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.Reporter;
+
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.gsicommerce.romui.selenium.testdata.Environment;
@@ -390,6 +392,8 @@ public class OrdersPage {
 		if (viewOrderBy.equals("Order Number")) {
 			searchOrderBy(0);
 			// Click View Order icon
+			Action.scrollingToBottomofAPage();
+			Reporter.log("Click View Order icon");
 			CommonElementsPage.clickViewOrderIcon(rowNoWebOrder, 6, 1, 1, 1);
 			System.out.println("Order numbere is:" + headerViewOrderNum.getText());
 			Assert.assertEquals(headerViewOrderNum.getText(), webOrderNumber,
@@ -408,6 +412,8 @@ public class OrdersPage {
 			}
 			searchOrderBy(1);
 			// Click View Order icon
+			Action.scrollingToBottomofAPage();
+			Reporter.log("Click View Order icon");
 			CommonElementsPage.clickViewOrderIcon(rowNo4, 6, 1, 1, 1);
 			Action.waitForElementToBeClickable(driver, drpdwntoggleReturn, 10);
 			drpdwntoggleReturn.click();
@@ -431,6 +437,8 @@ public class OrdersPage {
 			}
 			searchOrderBy(2);
 			// Click View Order icon
+			Action.scrollingToBottomofAPage();
+			Reporter.log("Click View Order icon");
 			CommonElementsPage.clickViewOrderIcon(rowNoWebOrder, 6, 0, 1, 1);
 			Assert.assertTrue(lblCustomerName.get(1).getText().contains(customerName),
 					"Order Search By Customer Name has not been verified");
@@ -447,6 +455,8 @@ public class OrdersPage {
 				Action.clickElementJavaScipt(btnSearchIcon);
 			}
 			searchOrderBy(3);
+			Action.scrollingToBottomofAPage();
+			Reporter.log("Click View Order icon");
 			CommonElementsPage.clickViewOrderIcon(rowNoWebOrder, 6, 0, 1, 1);
 			Assert.assertTrue(lblCustomerName.get(1).getText().contains(emailID),
 					"Order Search By Email ID has not been verified");
@@ -464,6 +474,8 @@ public class OrdersPage {
 			}
 			searchOrderBy(4);
 			// Click View Order icon
+			Action.scrollingToBottomofAPage();
+			Reporter.log("Click View Order icon");
 			CommonElementsPage.clickViewOrderIcon(rowNoOrderStatus, 6, 1, 1, 1);
 		}
 	}
@@ -473,6 +485,7 @@ public class OrdersPage {
 		// click add ZCO button
 		Action.clickElementJavaScipt(btnZCOrder);
 		// select all fields and continue
+		Action.switchWindow("Order Lookup - Radial Order Management");
 		selectSourceAndContinue(0);
 		// select edit billing address
 		Action.waitForElementToBeClickable(driver, drpdwnEdit, 20);
@@ -505,7 +518,7 @@ public class OrdersPage {
 		ordersdata = OrdersData.get(env.getFileLocation());
 		// select source, currency & locale and click continue button
 		Action.clickElementJavaScipt(drpdwnSource);
-		//drpdwnSource.click();
+		// drpdwnSource.click();
 		Action.selectByVisibleText(drpdwnSource, ordersdata.getSource().get(sourceindex));
 		drpdwnCurrency.click();
 		Action.selectByVisibleText(drpdwnCurrency, ordersdata.getCurrency());
@@ -567,12 +580,11 @@ public class OrdersPage {
 		Action.waitForElementToBeVisible(driver, btnSaveChanges, 05);
 		btnSaveChanges.click();
 	}
-	
-	public void searchOrderforReturn() throws Exception
-	{
+
+	public void searchOrderforReturn() throws Exception {
 		ordersdata = OrdersData.get(env.getFileLocation());
 		Action.waitForElementToBeClickable(driver, btnSearchIcon, 20);
-		//	btnSearchIcon.click();
+		// btnSearchIcon.click();
 		Action.clickElementJavaScipt(btnSearchIcon);
 		// select search order type
 		Action.waitForElementToBeClickable(driver, drpdwnOrderSearchBy, 20);
@@ -586,18 +598,18 @@ public class OrdersPage {
 		System.out.println("Selected Order number is:" + Webtable.getTableCellText(rowNoReturnWebOrder, 1));
 	}
 
-	public void createReturnOrder() throws JsonParseException, JsonMappingException, IOException, Exception
-	{
+	public void createReturnOrder() throws JsonParseException, JsonMappingException, IOException, Exception {
 		ordersdata = OrdersData.get(env.getFileLocation());
-		//searchOrderBy(0);
+		// searchOrderBy(0);
 		searchOrderforReturn();
-		
+		Action.scrollingToBottomofAPage();
+		Reporter.log("Click View Order icon");
 		CommonElementsPage.clickViewOrderIcon(rowNoReturnWebOrder, 6, 1, 1, 1);
-		//viewOrders(0);
+		// viewOrders(0);
 		Action.waitForElementToBeClickable(driver, drpdwntoggleReturn, 10);
 		drpdwntoggleReturn.click();
 		Action.waitForElementToBeClickable(driver, lkReturns, 10);
-		//lkReturns.click();
+		// lkReturns.click();
 		Action.clickElementJavaScipt(lkReturns);
 		btnReturnOrder.click();
 		chkboxReturnEligibleItems.click();
@@ -611,7 +623,8 @@ public class OrdersPage {
 		Common.closePrintPopup();
 		btnExitOrder.click();
 		searchOrderforReturn();
-		Assert.assertEquals(Webtable.getTableCellText(rowNoReturnWebOrder, 5), "Partially Return Received","Return Order didn't created successfully");
-		
+		Assert.assertEquals(Webtable.getTableCellText(rowNoReturnWebOrder, 5), "Partially Return Received",
+				"Return Order didn't created successfully");
+
 	}
 }
