@@ -31,7 +31,8 @@ public enum RomuiEnumValues {
 	ROLE_VALIDATION("Heads up! Please ensure you have selected at least one permission."),
 	ROLE_DELETE("Heads up! Role successfully deleted!"),
 	SERVICEFLOW_CRITERIA_VALIDATION(""),
-	SERVICEFLOW_VALIDATION("");
+	SERVICEFLOW_VALIDATION(""),
+	SELLERCONFIG_EDIT("Heads up! Seller Updated Successfully");
 
 	private String updateMsg;
 

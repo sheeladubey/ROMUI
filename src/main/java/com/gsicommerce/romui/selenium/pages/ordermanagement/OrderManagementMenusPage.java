@@ -53,7 +53,6 @@ public class OrderManagementMenusPage {
 	WebElement lkReportingDashboard;
 
 	@FindBy(how = How.XPATH, using = "//a[contains(text(),'Omni Administration')]")
-	@CacheLookup
 	WebElement lkOmniAdministration;
 
 	@FindBy(how = How.XPATH, using = "//i/parent::a[contains(text(),'Help Documentation')]")
@@ -140,17 +139,16 @@ public class OrderManagementMenusPage {
 	@CacheLookup
 	WebElement lkShipngRegions;
 
-	@FindBy(how = How.XPATH, using = "//a[contains(text(),'Seller Configurations')]")
-	@CacheLookup
+	@FindBy(how = How.XPATH, using = "//li/a[contains(text(),'Seller Configurations')]")
 	WebElement lkSellerConfig;
 
-	@FindBy(how = How.XPATH, using = "//li/a[contains(text(),'Payment Method Configurations')]")
+	@FindBy(how = How.XPATH, using = "//a[contains(text(),'Payment Method Configurations')]")
 	@CacheLookup
 	WebElement lkPaymtMethdConfig;
 
-	@FindBy(how = How.XPATH, using = "//li/a[contains(text(),'Seller')]")
-	@CacheLookup
-	WebElement lkSeller;
+	//@FindBy(how = How.XPATH, using = "//a[contains(text(),'Seller Configurations')]")
+	@FindBy(how = How.CSS, using = "a[href='/en/organizations/TMSNA/sellers']")
+	WebElement lkSellerConfigurations;
 
 	@FindBy(how = How.XPATH, using = "//li/a[contains(text(),'Service Group Configurations')]")
 	@CacheLookup
@@ -322,13 +320,6 @@ public class OrderManagementMenusPage {
 		lkPaymtMethdConfig.click();
 	}
 
-	public void clickOnSeller() {
-		btnMainMenu.click();
-		lkOmniAdministration.click();
-		lkSellerConfig.click();
-		lkSeller.click();
-	}
-
 	public void clickOnServiceGrpConfig() {
 		btnMainMenu.click();
 		lkOmniAdministration.click();
@@ -344,8 +335,8 @@ public class OrderManagementMenusPage {
 	}
 
 	public void clickOnShippingLabelConfig() {
-		Action.waitForElementToBeClickable(driver, btnMainMenu,40);
-		//btnMainMenu.click();
+		Action.waitForElementToBeClickable(driver, btnMainMenu, 40);
+		// btnMainMenu.click();
 		Action.clickElementJavaScipt(btnMainMenu);
 		Action.waitForElementToBeClickable(driver, lkOmniAdministration, 10);
 		lkOmniAdministration.click();
@@ -424,7 +415,8 @@ public class OrderManagementMenusPage {
 		// btnMainMenu.click();
 		Action.clickElementJavaScipt(btnMainMenu);
 		Action.waitForElementToBeClickable(driver, lkPipeline, 10);
-		lkPipeline.click();
+		//lkPipeline.click();
+		Action.clickElementJavaScipt(lkPipeline);
 
 	}
 
@@ -434,4 +426,14 @@ public class OrderManagementMenusPage {
 		lkServiceFlows.click();
 	}
 
+	public void clickOnSellerConfigurations() {
+		Action.clickElementJavaScipt(btnMainMenu);
+		Action.waitForElementToBeClickable(driver, lkOmniAdministration, 10);
+		lkOmniAdministration.click();
+		Action.waitForElementToBeClickable(driver, lkSellerConfig, 10);
+		lkSellerConfig.click();
+		Action.scrollingToBottomofAPage();
+		Action.waitForElementToBeClickable(driver, lkSellerConfigurations, 10);
+		lkSellerConfigurations.click();
+	}
 }

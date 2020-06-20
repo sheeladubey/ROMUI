@@ -159,7 +159,9 @@ public class PipelinesPage {
 
 	public void addPipeline() throws JsonParseException, JsonMappingException, IOException, Exception {
 		pipelinedata = PipelineData.get(env.getFileLocation());
-		btnAddPipeline.click();
+		Action.waitForElementToBeClickable(driver, btnAddPipeline, 20);
+		Action.clickElementJavaScipt(btnAddPipeline);
+		//btnAddPipeline.click();
 		addpipelineName = pipelinedata.getPipelineName();
 		System.out.println("ADDED PIPELINE NAME is:-" + addpipelineName);
 		Action.enter(txtBoxPipelineName, addpipelineName);
@@ -168,14 +170,19 @@ public class PipelinesPage {
 		// Select by Tender Type
 		Reporter.log("Selecting PIPELINE CRITERIA BY TENDER TYPE");
 		selectPipelineCriteria(0, 5, 0, 3, 1);
-		btnPrependCondition.click();
+	//	btnPrependCondition.click();
+		Action.waitForElementToBeClickable(driver, btnPrependCondition, 20);
+		Action.clickElementJavaScipt(btnPrependCondition);
 		// Select By Order Type
 		Reporter.log("Selecting PIPELINE CRITERIA BY ORDER TYPE");
 		selectPipelineCriteria(0, 1, 0, 0, 1);
-		btnSaveAddConfig.click();
+		Action.clickElementJavaScipt(btnSaveAddConfig);
+		//btnSaveAddConfig.click();
 		Common.dragAndDrop(driver, dragSalesOrderCreate, dropSalesOrderCreate, 10);
-		btnSave.click();
-		btnContinueConfig.click();
+		//btnSave.click();
+		Action.clickElementJavaScipt(btnSave);
+		//btnContinueConfig.click();
+		Action.clickElementJavaScipt(btnContinueConfig);
 		rowNoaddPipeline = CommonElementsPage.getRowNum(addpipelineName);
 		System.out.println("Row Selected :" + rowNoaddPipeline);
 		Assert.assertEquals(Webtable.getTableCellText(rowNoaddPipeline, 1), addpipelineName,
@@ -440,7 +447,8 @@ public class PipelinesPage {
 		Action.selectByVisibleText(drpdwnPipelineCriteriaGroupEnd,
 				pipelinedata.getPipelineCriteriaGroup().get(grpindexend));
 		Action.waitForElementToBeClickable(driver, btnPipelineCriteriaConfirm, 10);
-		btnPipelineCriteriaConfirm.click();
+	//	btnPipelineCriteriaConfirm.click();
+		Action.clickElementJavaScipt(btnPipelineCriteriaConfirm);
 	}
 
 	// Below method is for form validation

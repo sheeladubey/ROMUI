@@ -744,7 +744,7 @@ public class Action {
 
 	// This will scroll the page till the element is found
 
-	public static void scrollingToElementofAPage(WebElement el) {
+	public static void scrollToElementofAPage(WebElement el) {
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		jse.executeScript("arguments[0].scrollIntoView(true);", el);
 	}

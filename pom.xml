@@ -121,12 +121,19 @@
 			<version>3.8.1</version>
 			<type>maven-plugin</type>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.apache.maven.plugins</groupId>
 			<artifactId>maven-surefire-plugin</artifactId>
 			<version>3.0.0-M4</version>
 			<type>maven-plugin</type>
+		</dependency>
+
+		<!-- https://help.crossbrowsertesting.com/selenium-testing/getting-started/java/ -->
+		<dependency>
+			<groupId>com.crossbrowsertesting</groupId>
+			<artifactId>CBT_Helper</artifactId>
+			<version>1.0.0</version>
 		</dependency>
 
 		<dependency>

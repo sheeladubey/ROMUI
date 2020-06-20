@@ -11,17 +11,16 @@
   <listeners>
     <listener class-name="com.gsicommerce.romui.selenium.utilities.ExtentReporterListener"/>
   </listeners>
-  <test thread-count="5" name="ShippingLabelConfigTests(failed)">
-    <parameter name="dataFile" value="./src/test/resources/testdata/ShippingLabelConfigData.json"/>
+  <test thread-count="5" name="SellerConfigsTests(failed)">
+    <parameter name="dataFile" value="./src/test/resources/testdata/sellerConfigsData.json"/>
     <classes>
-      <class name="com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests">
+      <class name="com.gsicommerce.romui.selenium.tests.SellerConfigsTests">
         <methods>
-          <include name="testAddShipLabelConfigByFedex"/>
           <include name="tearDown"/>
           <include name="setup"/>
-          <include name="testShipLabelConfigFormValidation"/>
+          <include name="testEditSellerFromViewSellerScreen"/>
         </methods>
-      </class> <!-- com.gsicommerce.romui.selenium.tests.ShippingLabelConfigTests -->
+      </class> <!-- com.gsicommerce.romui.selenium.tests.SellerConfigsTests -->
     </classes>
-  </test> <!-- ShippingLabelConfigTests(failed) -->
+  </test> <!-- SellerConfigsTests(failed) -->
 </suite> <!-- Failed suite [Suite] -->

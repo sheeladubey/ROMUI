@@ -1,0 +1,11 @@
+{
+"SellerID":"TMSEB2",
+"InventoryOrganizationID":"TMSNA_INV_ORG",
+"SellerName":"The Model Store - EB2",
+"MaxDuration":"199",
+"OSDescriptionsCreated":"Created",
+"OSDescriptionsPre-SellLineCreated":"Pre-Sell Line Created",
+"OSDescriptionsDummyReturn":"DummyReturn Sheela",
+"InventoryAdjReasonsCode":"Sheela",
+"SellerRegionLookupStrategy":"Country Code"
+}

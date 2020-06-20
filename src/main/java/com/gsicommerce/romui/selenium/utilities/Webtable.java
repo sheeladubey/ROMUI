@@ -181,7 +181,7 @@ public class Webtable {
 	public void clickDeleteIconPipeline(int row, int col, int spanchild) throws InterruptedException {
 
 		_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/button/span[" + spanchild + "]", row, col);
-		//Action.scrollingToBottomofAPage();
+		// Action.scrollingToBottomofAPage();
 		Action.clickElementJavaScipt(Table.findElement(By.xpath(_xpath)));
 	}
 
@@ -246,6 +246,27 @@ public class Webtable {
 		}
 		// Action.scrollingToBottomofAPage();
 		Action.clickElementJavaScipt(Table.findElement(By.xpath(_xpath)));
+
+	}
+	
+	public void clickButton(int row, int col) {
+		_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/button", row, col);
+		Table.findElement(By.xpath(_xpath)).click();
+
+	}
+	
+	public void clickSpanElement(int row, int col, int index) {
+		_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/*//span[1]", row, col);
+		Table.findElements(By.xpath(_xpath)).get(index).click();
+	}
+	
+	public void clickSpanIconForSingleRow(int col, int child) {
+		if (child == 0) {
+			_xpath = String.format(".//tr/td[" + col + "]/div/a/span[1]", col);
+		} else {
+			_xpath = String.format(".//tr/td[" + col + "]/div/a[" + child + "]/span[1]", col);
+		}
+		Table.findElement(By.xpath(_xpath)).click();
 
 	}
 

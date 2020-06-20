@@ -9,6 +9,7 @@ import com.gsicommerce.romui.selenium.pages.ordermanagement.OrderManagementMenus
 import com.gsicommerce.romui.selenium.pages.ordermanagement.OrdersPage;
 import com.gsicommerce.romui.selenium.pages.ordermanagement.PaymentMethodConfigPage;
 import com.gsicommerce.romui.selenium.pages.ordermanagement.PipelinesPage;
+import com.gsicommerce.romui.selenium.pages.ordermanagement.SellerConfigurationsPage;
 import com.gsicommerce.romui.selenium.pages.ordermanagement.ServiceFlowPage;
 import com.gsicommerce.romui.selenium.pages.ordermanagement.ShippingLabelConfigPage;
 import com.gsicommerce.romui.selenium.pages.ordermanagement.StoreFulfillmentDashboardPage;
@@ -31,6 +32,7 @@ public class ROMUIPageFactory extends PageFactory {
 	private final StoreFulfillmentDashboardPage storeFulflmtDashbrdPage;
 	private final ISPUPickPage ispuPickPage;
 	private final UserManagementPage userManagementPage;
+	private final SellerConfigurationsPage sellerConfigurationsPage;
 
 	public ROMUIPageFactory(WebDriver driver, Environment env) {
 		super(driver, env);
@@ -47,6 +49,7 @@ public class ROMUIPageFactory extends PageFactory {
 		storeFulflmtDashbrdPage = new StoreFulfillmentDashboardPage(driver, env);
 		ispuPickPage = new ISPUPickPage(driver, env);
 		userManagementPage=new UserManagementPage(driver,env);
+		sellerConfigurationsPage=new SellerConfigurationsPage(driver,env);
 
 	}
 
@@ -102,8 +105,10 @@ public class ROMUIPageFactory extends PageFactory {
 	}
 
 	public UserManagementPage userManagementPage() {
-		// TODO Auto-generated method stub
 		return userManagementPage;
 	}
 
+	public SellerConfigurationsPage sellerConfigurationsPage() {
+		return sellerConfigurationsPage;
+	}
 }

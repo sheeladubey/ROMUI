@@ -3824,3 +3824,416 @@
 2020-06-17 17:11:51,861 - romui -INFO - Ship Label Config for UPS_MOCK Group Name edited successfully
 2020-06-17 17:12:03,459 - romui -INFO - Login credentials to be entered
 2020-06-17 17:12:34,241 - romui -INFO - Navigated to Shipping Label Config page
+2020-06-17 22:33:28,651 - romui -INFO - Login credentials to be entered
+2020-06-17 22:33:51,162 - romui -INFO - Order Management link is clicked on
+2020-06-17 22:33:54,632 - romui -INFO - Navigated to Orders page
+2020-06-17 22:33:54,632 - romui -INFO - Verify ZC Order creation
+2020-06-17 22:36:34,038 - romui -INFO - Login credentials to be entered
+2020-06-17 22:36:57,101 - romui -INFO - Order Management link is clicked on
+2020-06-17 22:36:59,966 - romui -INFO - Navigated to Orders page
+2020-06-17 22:36:59,967 - romui -INFO - Verify ZC Order creation
+2020-06-17 23:08:15,509 - romui -INFO - Login credentials to be entered
+2020-06-17 23:08:44,600 - romui -INFO - Navigated to Seller Configurations page
+2020-06-17 23:10:00,425 - romui -INFO - Login credentials to be entered
+2020-06-17 23:11:51,639 - romui -INFO - Login credentials to be entered
+2020-06-17 23:12:16,191 - romui -INFO - Navigated to Seller Configurations page
+2020-06-17 23:16:33,276 - romui -INFO - Login credentials to be entered
+2020-06-17 23:17:07,873 - romui -INFO - Login credentials to be entered
+2020-06-17 23:17:13,177 - romui -INFO - Order Management link is clicked on
+2020-06-17 23:17:16,353 - romui -INFO - Navigated to PaymentMethod Config page
+2020-06-17 23:23:02,615 - romui -INFO - Login credentials to be entered
+2020-06-17 23:23:35,787 - romui -INFO - Navigated to Shipping Label Config page
+2020-06-17 23:23:43,259 - romui -INFO - Add link is clicked on to enter the Ship Label Config data and Clicked on Save btn
+2020-06-17 23:23:43,260 - romui -INFO - Verify if ship Label Config for Consignor add success message is displayed
+2020-06-17 23:23:43,285 - romui -INFO - Ship Label Config for CONSIGNOR Group Name ADDED successfully
+2020-06-17 23:26:49,638 - romui -INFO - Login credentials to be entered
+2020-06-17 23:27:17,816 - romui -INFO - Navigated to Seller Configurations page
+2020-06-17 23:29:07,132 - romui -INFO - Login credentials to be entered
+2020-06-17 23:29:32,802 - romui -INFO - Navigated to Seller Configurations page
+2020-06-17 23:31:23,113 - romui -INFO - Login credentials to be entered
+2020-06-17 23:31:29,018 - romui -INFO - Navigated to Seller Configurations page
+2020-06-17 23:33:24,580 - romui -INFO - Login credentials to be entered
+2020-06-17 23:33:29,126 - romui -INFO - Order Management link is clicked on
+2020-06-17 23:33:30,531 - romui -INFO - Navigated to PaymentMethod Config page
+2020-06-17 23:35:53,039 - romui -INFO - Login credentials to be entered
+2020-06-17 23:35:59,961 - romui -INFO - Order Management link is clicked on
+2020-06-17 23:36:03,200 - romui -INFO - Navigated to PaymentMethod Config page
+2020-06-17 23:36:09,537 - romui -INFO - Edit link is clcked on to enter the modified data and Clicked on Save btn
+2020-06-17 23:36:09,537 - romui -INFO - Verify if edit paymentmethodconfig success message is displayed
+2020-06-17 23:36:59,123 - romui -INFO - Login credentials to be entered
+2020-06-17 23:37:04,742 - romui -INFO - Navigated to Seller Configurations page
+2020-06-17 23:42:36,117 - romui -INFO - Login credentials to be entered
+2020-06-17 23:42:44,890 - romui -INFO - Navigated to Seller Configurations page
+2020-06-17 23:43:58,221 - romui -INFO - Login credentials to be entered
+2020-06-17 23:44:04,300 - romui -INFO - Navigated to Seller Configurations page
+2020-06-17 23:45:32,915 - romui -INFO - Login credentials to be entered
+2020-06-17 23:45:39,138 - romui -INFO - Navigated to Seller Configurations page
+2020-06-17 23:49:53,766 - romui -INFO - Login credentials to be entered
+2020-06-17 23:50:02,837 - romui -INFO - Navigated to Seller Configurations page
+2020-06-18 00:42:42,054 - romui -INFO - Login credentials to be entered
+2020-06-18 00:42:55,347 - romui -INFO - Navigated to Seller Configurations page
+2020-06-18 00:47:05,610 - romui -INFO - Login credentials to be entered
+2020-06-18 00:47:14,804 - romui -INFO - Navigated to Seller Configurations page
+2020-06-18 23:39:34,625 - romui -INFO - Login credentials to be entered
+2020-06-18 23:39:46,167 - romui -INFO - Navigated to Seller Configurations page
+2020-06-18 23:44:18,812 - romui -INFO - Login credentials to be entered
+2020-06-18 23:44:27,872 - romui -INFO - Navigated to Seller Configurations page
+2020-06-18 23:45:16,014 - romui -INFO - Login credentials to be entered
+2020-06-18 23:45:25,104 - romui -INFO - Navigated to Seller Configurations page
+2020-06-18 23:48:28,673 - romui -INFO - Login credentials to be entered
+2020-06-18 23:48:37,379 - romui -INFO - Navigated to Seller Configurations page
+2020-06-18 23:49:37,476 - romui -INFO - Login credentials to be entered
+2020-06-18 23:49:46,325 - romui -INFO - Navigated to Seller Configurations page
+2020-06-18 23:50:59,478 - romui -INFO - Login credentials to be entered
+2020-06-18 23:51:08,976 - romui -INFO - Navigated to Seller Configurations page
+2020-06-18 23:52:19,943 - romui -INFO - Login credentials to be entered
+2020-06-18 23:52:30,513 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 00:28:12,597 - romui -INFO - Login credentials to be entered
+2020-06-19 00:28:25,553 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 00:29:48,928 - romui -INFO - Login credentials to be entered
+2020-06-19 00:29:58,314 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 00:31:08,946 - romui -INFO - Login credentials to be entered
+2020-06-19 00:31:19,602 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 00:32:55,268 - romui -INFO - Login credentials to be entered
+2020-06-19 00:33:05,308 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 00:48:12,030 - romui -INFO - Login credentials to be entered
+2020-06-19 00:48:23,301 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 11:31:06,719 - romui -INFO - Login credentials to be entered
+2020-06-19 11:31:56,681 - romui -INFO - Login credentials to be entered
+2020-06-19 11:48:23,129 - romui -INFO - Login credentials to be entered
+2020-06-19 11:48:31,820 - romui -INFO - Navigated to Pipeline page
+2020-06-19 11:49:03,756 - romui -INFO - Login credentials to be entered
+2020-06-19 11:49:12,834 - romui -INFO - Navigated to Pipeline page
+2020-06-19 11:49:37,592 - romui -INFO - Login credentials to be entered
+2020-06-19 11:49:46,280 - romui -INFO - Navigated to Pipeline page
+2020-06-19 11:54:53,370 - romui -INFO - Login credentials to be entered
+2020-06-19 11:55:01,949 - romui -INFO - Navigated to Pipeline page
+2020-06-19 11:56:32,378 - romui -INFO - Login credentials to be entered
+2020-06-19 11:56:38,517 - romui -INFO - Navigated to Pipeline page
+2020-06-19 11:58:46,770 - romui -INFO - Login credentials to be entered
+2020-06-19 11:58:57,323 - romui -INFO - Navigated to Pipeline page
+2020-06-19 11:59:30,209 - romui -INFO - Login credentials to be entered
+2020-06-19 12:08:53,977 - romui -INFO - Login credentials to be entered
+2020-06-19 12:09:00,126 - romui -INFO - Navigated to Pipeline page
+2020-06-19 12:09:25,434 - romui -INFO - Login credentials to be entered
+2020-06-19 12:11:03,916 - romui -INFO - Login credentials to be entered
+2020-06-19 12:11:10,574 - romui -INFO - Navigated to Pipeline page
+2020-06-19 12:19:03,590 - romui -INFO - Login credentials to be entered
+2020-06-19 12:19:11,153 - romui -INFO - Navigated to Pipeline page
+2020-06-19 12:23:23,219 - romui -INFO - Login credentials to be entered
+2020-06-19 12:23:32,845 - romui -INFO - Navigated to Pipeline page
+2020-06-19 15:56:53,256 - romui -INFO - Login credentials to be entered
+2020-06-19 15:57:04,453 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 16:01:30,803 - romui -INFO - Login credentials to be entered
+2020-06-19 16:01:39,820 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 16:08:52,163 - romui -INFO - Login credentials to be entered
+2020-06-19 16:09:01,265 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 16:10:30,589 - romui -INFO - Login credentials to be entered
+2020-06-19 16:10:42,476 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 16:15:12,628 - romui -INFO - Login credentials to be entered
+2020-06-19 16:15:23,142 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 16:17:09,665 - romui -INFO - Login credentials to be entered
+2020-06-19 16:17:18,859 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 16:20:42,897 - romui -INFO - Login credentials to be entered
+2020-06-19 16:20:51,465 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 16:32:11,622 - romui -INFO - Login credentials to be entered
+2020-06-19 16:32:22,697 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 16:34:55,168 - romui -INFO - Login credentials to be entered
+2020-06-19 16:35:04,020 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 16:37:12,335 - romui -INFO - Login credentials to be entered
+2020-06-19 16:37:21,210 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 16:39:16,490 - romui -INFO - Login credentials to be entered
+2020-06-19 16:39:25,629 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 17:33:38,947 - romui -INFO - Login credentials to be entered
+2020-06-19 17:33:51,355 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 17:33:51,356 - romui -INFO - Verify Manager Seller Configuration display Seller id,Sellername
+2020-06-19 17:35:45,620 - romui -INFO - Login credentials to be entered
+2020-06-19 17:35:55,492 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 17:35:55,492 - romui -INFO - Verify Manager Seller Configuration display Seller id,Sellername
+2020-06-19 17:39:39,481 - romui -INFO - Login credentials to be entered
+2020-06-19 17:39:50,940 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 17:39:50,940 - romui -INFO - Verify Manager Seller Configuration display Seller id,Sellername
+2020-06-19 17:39:51,259 - romui -INFO - Manager Seller config screen verified successfully
+2020-06-19 18:00:50,690 - romui -INFO - Login credentials to be entered
+2020-06-19 18:01:03,008 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 18:01:03,008 - romui -INFO - Verify Manager Seller Configuration display Seller id,Sellername
+2020-06-19 18:01:03,353 - romui -INFO - Manager Seller config screen verified successfully
+2020-06-19 18:01:14,347 - romui -INFO - Login credentials to be entered
+2020-06-19 18:01:24,354 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 18:01:24,355 - romui -INFO - Click Edit Seller Icon and edit the field on Edit Seller Configuration page
+2020-06-19 18:01:36,692 - romui -INFO - Verify Edit Seller updated successfully Message
+2020-06-19 18:01:36,723 - romui -INFO - Edit Seller config verified successfully
+2020-06-19 18:14:28,196 - romui -INFO - Login credentials to be entered
+2020-06-19 18:14:37,418 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 18:14:37,419 - romui -INFO - Verify Manager Seller Configuration display Seller id,Sellername
+2020-06-19 18:14:37,811 - romui -INFO - Manager Seller config screen verified successfully
+2020-06-19 18:14:47,892 - romui -INFO - Login credentials to be entered
+2020-06-19 18:14:56,460 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 18:14:56,460 - romui -INFO - Click Edit Seller Icon and edit the field on Edit Seller Configuration page
+2020-06-19 18:16:08,451 - romui -INFO - Login credentials to be entered
+2020-06-19 18:16:22,198 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 18:16:22,199 - romui -INFO - Click Edit Seller Icon and edit the field on Edit Seller Configuration page
+2020-06-19 18:17:19,391 - romui -INFO - Login credentials to be entered
+2020-06-19 18:17:28,480 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 18:17:28,480 - romui -INFO - Click Edit Seller Icon and edit the field on Edit Seller Configuration page
+2020-06-19 18:19:40,959 - romui -INFO - Login credentials to be entered
+2020-06-19 18:19:50,476 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 18:19:50,477 - romui -INFO - Click Edit Seller Icon and edit the field on Edit Seller Configuration page
+2020-06-19 18:22:38,748 - romui -INFO - Login credentials to be entered
+2020-06-19 18:22:49,764 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 18:22:49,765 - romui -INFO - Click Edit Seller Icon and edit the field on Edit Seller Configuration page
+2020-06-19 18:26:46,800 - romui -INFO - Login credentials to be entered
+2020-06-19 18:26:56,811 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 18:26:56,811 - romui -INFO - Click Edit Seller Icon and edit the field on Edit Seller Configuration page
+2020-06-19 18:31:51,490 - romui -INFO - Login credentials to be entered
+2020-06-19 18:32:04,218 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 18:32:04,218 - romui -INFO - Click Edit Seller Icon and edit the field on Edit Seller Configuration page
+2020-06-19 18:33:30,768 - romui -INFO - Login credentials to be entered
+2020-06-19 18:33:39,895 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 18:33:39,895 - romui -INFO - Click Edit Seller Icon and edit the field on Edit Seller Configuration page
+2020-06-19 18:34:33,970 - romui -INFO - Login credentials to be entered
+2020-06-19 18:34:42,184 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 18:34:42,184 - romui -INFO - Click Edit Seller Icon and edit the field on Edit Seller Configuration page
+2020-06-19 18:35:58,703 - romui -INFO - Login credentials to be entered
+2020-06-19 18:36:07,784 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 18:36:07,785 - romui -INFO - Click Edit Seller Icon and edit the field on Edit Seller Configuration page
+2020-06-19 18:36:43,930 - romui -INFO - Login credentials to be entered
+2020-06-19 18:36:52,429 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 18:36:52,430 - romui -INFO - Click Edit Seller Icon and edit the field on Edit Seller Configuration page
+2020-06-19 18:37:59,608 - romui -INFO - Login credentials to be entered
+2020-06-19 18:38:07,518 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 18:38:07,519 - romui -INFO - Click Edit Seller Icon and edit the field on Edit Seller Configuration page
+2020-06-19 18:39:21,016 - romui -INFO - Login credentials to be entered
+2020-06-19 18:39:30,345 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 18:39:30,345 - romui -INFO - Click Edit Seller Icon and edit the field on Edit Seller Configuration page
+2020-06-19 18:39:36,785 - romui -INFO - Verify Edit Seller updated successfully Message
+2020-06-19 18:42:52,976 - romui -INFO - Login credentials to be entered
+2020-06-19 18:43:02,536 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 18:43:02,536 - romui -INFO - Click Edit Seller Icon and edit the field on Edit Seller Configuration page
+2020-06-19 18:44:44,309 - romui -INFO - Login credentials to be entered
+2020-06-19 18:44:56,589 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 18:44:56,590 - romui -INFO - Click Edit Seller Icon and edit the field on Edit Seller Configuration page
+2020-06-19 18:45:09,601 - romui -INFO - Verify Edit Seller updated successfully Message
+2020-06-19 18:45:09,627 - romui -INFO - Edit Seller config verified successfully
+2020-06-19 18:49:15,349 - romui -INFO - Login credentials to be entered
+2020-06-19 18:49:26,236 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 18:49:26,237 - romui -INFO - Click Edit Seller Icon and edit the field on Edit Seller Configuration page
+2020-06-19 18:54:14,745 - romui -INFO - Login credentials to be entered
+2020-06-19 18:54:26,613 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 18:54:26,614 - romui -INFO - Click Edit Seller Icon and edit the field on Edit Seller Configuration page
+2020-06-19 18:58:50,617 - romui -INFO - Login credentials to be entered
+2020-06-19 18:58:59,516 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 18:58:59,517 - romui -INFO - Click Edit Seller Icon and edit the field on Edit Seller Configuration page
+2020-06-19 19:02:23,348 - romui -INFO - Login credentials to be entered
+2020-06-19 19:02:32,518 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 19:02:32,518 - romui -INFO - Click Edit Seller Icon and edit the field on Edit Seller Configuration page
+2020-06-19 19:04:41,529 - romui -INFO - Login credentials to be entered
+2020-06-19 19:04:51,578 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 19:04:51,578 - romui -INFO - Verify Manager Seller Configuration display Seller id,Sellername
+2020-06-19 19:04:51,910 - romui -INFO - Manager Seller config screen verified successfully
+2020-06-19 19:05:02,552 - romui -INFO - Login credentials to be entered
+2020-06-19 19:05:10,478 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 19:05:10,478 - romui -INFO - Click Edit Seller Icon and edit the field on Edit Seller Configuration page
+2020-06-19 19:07:45,485 - romui -INFO - Login credentials to be entered
+2020-06-19 19:07:53,385 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 19:07:53,385 - romui -INFO - Verify Manager Seller Configuration display Seller id,Sellername
+2020-06-19 19:07:53,778 - romui -INFO - Manager Seller config screen verified successfully
+2020-06-19 19:08:04,645 - romui -INFO - Login credentials to be entered
+2020-06-19 19:08:12,517 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 19:08:12,517 - romui -INFO - Click Edit Seller Icon and edit the field on Edit Seller Configuration page
+2020-06-19 19:10:51,676 - romui -INFO - Login credentials to be entered
+2020-06-19 19:11:03,565 - romui -INFO - Navigated to Seller Configurations page
+2020-06-19 19:11:03,566 - romui -INFO - Click View Seller Icon and view the data on View Seller Configuration page
+2020-06-19 19:11:05,871 - romui -INFO - View Seller config verified successfully
+2020-06-20 00:38:15,360 - romui -INFO - Login credentials to be entered
+2020-06-20 00:38:27,733 - romui -INFO - Navigated to Seller Configurations page
+2020-06-20 00:38:27,792 - romui -INFO - Clicking on View Seller icon for the View Seller Configuration screen to be viewed
+2020-06-20 00:38:30,584 - romui -INFO - Validate Seller ID:TMSEB2
+2020-06-20 00:41:40,619 - romui -INFO - Login credentials to be entered
+2020-06-20 00:41:49,935 - romui -INFO - Navigated to Seller Configurations page
+2020-06-20 00:41:49,995 - romui -INFO - Clicking on View Seller icon for the View Seller Configuration screen to be viewed
+2020-06-20 00:41:51,971 - romui -INFO - Validate Seller ID:TMSEB2
+2020-06-20 00:43:31,042 - romui -INFO - Login credentials to be entered
+2020-06-20 00:43:40,033 - romui -INFO - Navigated to Seller Configurations page
+2020-06-20 00:43:40,091 - romui -INFO - Clicking on View Seller icon for the View Seller Configuration screen to be viewed
+2020-06-20 00:43:42,745 - romui -INFO - Validate Seller ID:TMSEB2
+2020-06-20 00:45:13,768 - romui -INFO - Login credentials to be entered
+2020-06-20 00:45:25,021 - romui -INFO - Navigated to Seller Configurations page
+2020-06-20 00:45:25,080 - romui -INFO - Clicking on View Seller icon for the View Seller Configuration screen to be viewed
+2020-06-20 00:45:27,495 - romui -INFO - Validate Seller ID:TMSEB2
+2020-06-20 00:45:27,586 - romui -INFO - Validate Inventory Organization ID:TMSNA_INV_ORG
+2020-06-20 00:45:27,646 - romui -INFO - Validate Seller Name:The Model Store - EB2
+2020-06-20 00:45:27,705 - romui -INFO - Validate Seller Name:199
+2020-06-20 00:48:58,589 - romui -INFO - Login credentials to be entered
+2020-06-20 00:49:07,166 - romui -INFO - Navigated to Seller Configurations page
+2020-06-20 00:49:07,224 - romui -INFO - Clicking on View Seller icon for the View Seller Configuration screen to be viewed
+2020-06-20 00:49:08,997 - romui -INFO - Validate Seller ID:TMSEB2
+2020-06-20 00:49:09,026 - romui -INFO - Validate Inventory Organization ID:TMSNA_INV_ORG
+2020-06-20 00:49:09,048 - romui -INFO - Validate Seller Name:The Model Store - EB2
+2020-06-20 00:49:09,074 - romui -INFO - Validate Seller Name:199
+2020-06-20 01:11:11,031 - romui -INFO - Login credentials to be entered
+2020-06-20 01:11:24,855 - romui -INFO - Navigated to Seller Configurations page
+2020-06-20 01:11:24,917 - romui -INFO - Clicking on View Seller icon for the View Seller Configuration screen to be viewed
+2020-06-20 01:11:26,955 - romui -INFO - Validate Seller ID:TMSEB2
+2020-06-20 01:13:41,648 - romui -INFO - Login credentials to be entered
+2020-06-20 01:13:53,874 - romui -INFO - Navigated to Seller Configurations page
+2020-06-20 01:13:53,936 - romui -INFO - Clicking on View Seller icon for the View Seller Configuration screen to be viewed
+2020-06-20 01:13:56,259 - romui -INFO - Validate Seller ID:TMSEB2
+2020-06-20 01:13:56,289 - romui -INFO - Validate Inventory Organization ID:TMSNA_INV_ORG
+2020-06-20 01:13:56,311 - romui -INFO - Validate Seller Name:The Model Store - EB2
+2020-06-20 01:13:56,333 - romui -INFO - Validate Max Duration:199
+2020-06-20 01:13:56,353 - romui -INFO - Validate In-Store Pickup checkbpx checked:
+2020-06-20 01:25:58,314 - romui -INFO - Login credentials to be entered
+2020-06-20 01:26:06,760 - romui -INFO - Navigated to Seller Configurations page
+2020-06-20 01:26:06,816 - romui -INFO - Clicking on View Seller icon for the View Seller Configuration screen to be viewed
+2020-06-20 01:26:08,675 - romui -INFO - Validate Seller ID:TMSEB2
+2020-06-20 01:26:08,707 - romui -INFO - Validate Inventory Organization ID:TMSNA_INV_ORG
+2020-06-20 01:26:08,728 - romui -INFO - Validate Seller Name:The Model Store - EB2
+2020-06-20 01:26:08,749 - romui -INFO - Validate Max Duration:199
+2020-06-20 01:26:08,768 - romui -INFO - Validate In-Store Pickup checkbox checked:
+2020-06-20 01:26:08,786 - romui -INFO - Validate Ship-To-Store  checkbox checked:
+2020-06-20 01:26:08,804 - romui -INFO - Validate Ship-From-Store checkbox checked:
+2020-06-20 01:26:08,824 - romui -INFO - Validate Order Status Description:DummyReturn SheelaAuto783491
+2020-06-20 01:28:02,259 - romui -INFO - Login credentials to be entered
+2020-06-20 01:28:13,082 - romui -INFO - Navigated to Seller Configurations page
+2020-06-20 01:28:13,142 - romui -INFO - Clicking on View Seller icon for the View Seller Configuration screen to be viewed
+2020-06-20 01:28:15,311 - romui -INFO - Validate Seller ID:TMSEB2
+2020-06-20 01:28:15,341 - romui -INFO - Validate Inventory Organization ID:TMSNA_INV_ORG
+2020-06-20 01:28:15,364 - romui -INFO - Validate Seller Name:The Model Store - EB2
+2020-06-20 01:28:15,384 - romui -INFO - Validate Max Duration:199
+2020-06-20 01:28:15,404 - romui -INFO - Validate In-Store Pickup checkbox checked:
+2020-06-20 01:28:15,423 - romui -INFO - Validate Ship-To-Store  checkbox checked:
+2020-06-20 01:28:15,446 - romui -INFO - Validate Ship-From-Store checkbox checked:
+2020-06-20 01:28:15,467 - romui -INFO - Validate Order Status Description:DummyReturn SheelaAuto199334
+2020-06-20 01:29:09,597 - romui -INFO - Login credentials to be entered
+2020-06-20 01:29:21,428 - romui -INFO - Navigated to Seller Configurations page
+2020-06-20 01:29:21,489 - romui -INFO - Clicking on View Seller icon for the View Seller Configuration screen to be viewed
+2020-06-20 01:29:23,520 - romui -INFO - Validate Seller ID:TMSEB2
+2020-06-20 01:29:23,554 - romui -INFO - Validate Inventory Organization ID:TMSNA_INV_ORG
+2020-06-20 01:29:23,575 - romui -INFO - Validate Seller Name:The Model Store - EB2
+2020-06-20 01:29:23,596 - romui -INFO - Validate Max Duration:199
+2020-06-20 01:29:23,616 - romui -INFO - Validate In-Store Pickup checkbox checked:
+2020-06-20 01:29:23,638 - romui -INFO - Validate Ship-To-Store  checkbox checked:
+2020-06-20 01:29:23,658 - romui -INFO - Validate Ship-From-Store checkbox checked:
+2020-06-20 01:29:23,681 - romui -INFO - Validate Order Status Description:DummyReturn SheelaAuto660293
+2020-06-20 01:30:50,626 - romui -INFO - Login credentials to be entered
+2020-06-20 01:31:03,068 - romui -INFO - Navigated to Seller Configurations page
+2020-06-20 01:31:03,132 - romui -INFO - Clicking on View Seller icon for the View Seller Configuration screen to be viewed
+2020-06-20 01:31:05,017 - romui -INFO - Validate Seller ID:TMSEB2
+2020-06-20 01:31:05,048 - romui -INFO - Validate Inventory Organization ID:TMSNA_INV_ORG
+2020-06-20 01:31:05,068 - romui -INFO - Validate Seller Name:The Model Store - EB2
+2020-06-20 01:31:05,089 - romui -INFO - Validate Max Duration:199
+2020-06-20 01:31:05,111 - romui -INFO - Validate In-Store Pickup checkbox checked:
+2020-06-20 01:31:05,131 - romui -INFO - Validate Ship-To-Store  checkbox checked:
+2020-06-20 01:31:05,153 - romui -INFO - Validate Ship-From-Store checkbox checked:
+2020-06-20 01:31:05,190 - romui -INFO - Validate Order Status Description:DummyReturn SheelaAuto380179
+2020-06-20 01:32:47,841 - romui -INFO - Login credentials to be entered
+2020-06-20 01:32:56,810 - romui -INFO - Navigated to Seller Configurations page
+2020-06-20 01:32:56,874 - romui -INFO - Clicking on View Seller icon for the View Seller Configuration screen to be viewed
+2020-06-20 01:32:59,003 - romui -INFO - Validate Seller ID:TMSEB2
+2020-06-20 01:32:59,031 - romui -INFO - Validate Inventory Organization ID:TMSNA_INV_ORG
+2020-06-20 01:32:59,052 - romui -INFO - Validate Seller Name:The Model Store - EB2
+2020-06-20 01:32:59,075 - romui -INFO - Validate Max Duration:199
+2020-06-20 01:32:59,103 - romui -INFO - Validate In-Store Pickup checkbox checked:
+2020-06-20 01:32:59,126 - romui -INFO - Validate Ship-To-Store  checkbox checked:
+2020-06-20 01:32:59,147 - romui -INFO - Validate Ship-From-Store checkbox checked:
+2020-06-20 01:32:59,177 - romui -INFO - Validate Order Status Description:DummyReturn SheelaAuto773762
+2020-06-20 01:33:39,080 - romui -INFO - Login credentials to be entered
+2020-06-20 01:33:47,824 - romui -INFO - Navigated to Seller Configurations page
+2020-06-20 01:33:47,886 - romui -INFO - Clicking on View Seller icon for the View Seller Configuration screen to be viewed
+2020-06-20 01:33:50,327 - romui -INFO - Validate Seller ID:TMSEB2
+2020-06-20 01:33:50,357 - romui -INFO - Validate Inventory Organization ID:TMSNA_INV_ORG
+2020-06-20 01:33:50,376 - romui -INFO - Validate Seller Name:The Model Store - EB2
+2020-06-20 01:33:50,397 - romui -INFO - Validate Max Duration:199
+2020-06-20 01:33:50,417 - romui -INFO - Validate In-Store Pickup checkbox checked:
+2020-06-20 01:33:50,435 - romui -INFO - Validate Ship-To-Store  checkbox checked:
+2020-06-20 01:33:50,457 - romui -INFO - Validate Ship-From-Store checkbox checked:
+2020-06-20 01:33:50,487 - romui -INFO - Validate Order Status Description:DummyReturn SheelaAuto680022
+2020-06-20 01:41:29,484 - romui -INFO - Login credentials to be entered
+2020-06-20 01:41:38,773 - romui -INFO - Navigated to Seller Configurations page
+2020-06-20 01:41:38,835 - romui -INFO - Clicking on View Seller icon for the View Seller Configuration screen to be viewed
+2020-06-20 01:41:41,409 - romui -INFO - Validate Seller ID:TMSEB2
+2020-06-20 01:41:41,438 - romui -INFO - Validate Inventory Organization ID:TMSNA_INV_ORG
+2020-06-20 01:41:41,460 - romui -INFO - Validate Seller Name:The Model Store - EB2
+2020-06-20 01:41:41,490 - romui -INFO - Validate Max Duration:199
+2020-06-20 01:41:41,514 - romui -INFO - Validate In-Store Pickup checkbox checked:
+2020-06-20 01:41:41,535 - romui -INFO - Validate Ship-To-Store  checkbox checked:
+2020-06-20 01:41:41,555 - romui -INFO - Validate Ship-From-Store checkbox checked:
+2020-06-20 01:41:41,592 - romui -INFO - Validate Order Status Description:DummyReturn SheelaAuto121996
+2020-06-20 01:44:35,589 - romui -INFO - Login credentials to be entered
+2020-06-20 01:44:46,595 - romui -INFO - Navigated to Seller Configurations page
+2020-06-20 01:44:46,656 - romui -INFO - Clicking on View Seller icon for the View Seller Configuration screen to be viewed
+2020-06-20 01:44:49,032 - romui -INFO - Validate Seller ID:TMSEB2
+2020-06-20 01:44:49,066 - romui -INFO - Validate Inventory Organization ID:TMSNA_INV_ORG
+2020-06-20 01:44:49,087 - romui -INFO - Validate Seller Name:The Model Store - EB2
+2020-06-20 01:44:49,108 - romui -INFO - Validate Max Duration:199
+2020-06-20 01:44:49,128 - romui -INFO - Validate In-Store Pickup checkbox checked:
+2020-06-20 01:44:49,147 - romui -INFO - Validate Ship-To-Store  checkbox checked:
+2020-06-20 01:44:49,168 - romui -INFO - Validate Ship-From-Store checkbox checked:
+2020-06-20 01:44:49,215 - romui -INFO - Validate Seller Region Lookup Strategy:Country Code
+2020-06-20 01:56:19,403 - romui -INFO - Login credentials to be entered
+2020-06-20 01:56:31,443 - romui -INFO - Navigated to Seller Configurations page
+2020-06-20 01:56:31,506 - romui -INFO - Clicking on View Seller icon for the View Seller Configuration screen to be viewed
+2020-06-20 01:56:33,363 - romui -INFO - Validate Seller ID:TMSEB2
+2020-06-20 01:59:00,314 - romui -INFO - Login credentials to be entered
+2020-06-20 01:59:08,465 - romui -INFO - Navigated to Seller Configurations page
+2020-06-20 01:59:08,526 - romui -INFO - Clicking on View Seller icon for the View Seller Configuration screen to be viewed
+2020-06-20 01:59:10,936 - romui -INFO - Validate Seller ID:TMSEB2
+2020-06-20 02:00:38,320 - romui -INFO - Login credentials to be entered
+2020-06-20 02:00:48,636 - romui -INFO - Navigated to Seller Configurations page
+2020-06-20 02:00:48,695 - romui -INFO - Clicking on View Seller icon for the View Seller Configuration screen to be viewed
+2020-06-20 02:00:51,501 - romui -INFO - Validate Seller ID:TMSEB2
+2020-06-20 02:00:51,558 - romui -INFO - Validate Inventory Organization ID:TMSNA_INV_ORG
+2020-06-20 02:00:51,604 - romui -INFO - Validate Seller Name:The Model Store - EB2
+2020-06-20 02:00:51,649 - romui -INFO - Validate Max Duration:199
+2020-06-20 02:00:51,699 - romui -INFO - Validate In-Store Pickup checkbox checked:
+2020-06-20 02:00:51,719 - romui -INFO - Validate Ship-To-Store  checkbox checked:
+2020-06-20 02:00:51,739 - romui -INFO - Validate Ship-From-Store checkbox checked:
+2020-06-20 02:00:51,766 - romui -INFO - Validate Seller Region Lookup Strategy:Country Code
+2020-06-20 02:02:16,783 - romui -INFO - Login credentials to be entered
+2020-06-20 02:02:27,300 - romui -INFO - Navigated to Seller Configurations page
+2020-06-20 02:02:27,362 - romui -INFO - Clicking on View Seller icon for the View Seller Configuration screen to be viewed
+2020-06-20 02:02:29,531 - romui -INFO - Validate Seller ID:TMSEB2
+2020-06-20 02:02:29,588 - romui -INFO - Validate Inventory Organization ID:TMSNA_INV_ORG
+2020-06-20 02:02:29,632 - romui -INFO - Validate Seller Name:The Model Store - EB2
+2020-06-20 02:02:29,680 - romui -INFO - Validate Max Duration:199
+2020-06-20 02:02:29,728 - romui -INFO - Validate In-Store Pickup checkbox checked:
+2020-06-20 02:02:29,746 - romui -INFO - Validate Ship-To-Store  checkbox checked:
+2020-06-20 02:02:29,764 - romui -INFO - Validate Ship-From-Store checkbox checked:
+2020-06-20 02:02:29,789 - romui -INFO - Validate Seller Region Lookup Strategy:Country Code
+2020-06-20 02:09:37,408 - romui -INFO - Login credentials to be entered
+2020-06-20 02:09:46,607 - romui -INFO - Navigated to Seller Configurations page
+2020-06-20 02:09:46,671 - romui -INFO - Clicking on View Seller icon for the View Seller Configuration screen to be viewed
+2020-06-20 02:09:49,322 - romui -INFO - Validate Seller ID:TMSEB2
+2020-06-20 02:09:49,355 - romui -INFO - Validate Inventory Organization ID:TMSNA_INV_ORG
+2020-06-20 02:09:49,376 - romui -INFO - Validate Seller Name:The Model Store - EB2
+2020-06-20 02:09:49,397 - romui -INFO - Validate Max Duration:199
+2020-06-20 02:09:49,418 - romui -INFO - Validate In-Store Pickup checkbox checked:
+2020-06-20 02:09:49,440 - romui -INFO - Validate Ship-To-Store  checkbox checked:
+2020-06-20 02:09:49,460 - romui -INFO - Validate Ship-From-Store checkbox checked:
+2020-06-20 02:09:49,488 - romui -INFO - Validate Order Status Description:DummyReturn SheelaAuto374084
+2020-06-20 02:11:48,149 - romui -INFO - Login credentials to be entered
+2020-06-20 02:11:57,636 - romui -INFO - Navigated to Seller Configurations page
+2020-06-20 02:11:57,701 - romui -INFO - Clicking on View Seller icon for the View Seller Configuration screen to be viewed
+2020-06-20 02:12:00,071 - romui -INFO - Validate Seller ID:TMSEB2
+2020-06-20 02:12:00,104 - romui -INFO - Validate Inventory Organization ID:TMSNA_INV_ORG
+2020-06-20 02:12:00,124 - romui -INFO - Validate Seller Name:The Model Store - EB2
+2020-06-20 02:12:00,145 - romui -INFO - Validate Max Duration:199
+2020-06-20 02:12:00,166 - romui -INFO - Validate In-Store Pickup checkbox checked:
+2020-06-20 02:12:00,185 - romui -INFO - Validate Ship-To-Store  checkbox checked:
+2020-06-20 02:12:00,203 - romui -INFO - Validate Ship-From-Store checkbox checked:
+2020-06-20 02:12:00,244 - romui -INFO - Validate Order Status Description:DummyReturn SheelaAuto718440
+2020-06-20 02:19:40,938 - romui -INFO - Login credentials to be entered
+2020-06-20 02:19:53,606 - romui -INFO - Navigated to Seller Configurations page
+2020-06-20 02:19:53,670 - romui -INFO - Clicking on View Seller icon for the View Seller Configuration screen to be viewed
+2020-06-20 02:19:56,286 - romui -INFO - Validate Seller ID:TMSEB2
+2020-06-20 02:19:56,319 - romui -INFO - Validate Inventory Organization ID:TMSNA_INV_ORG
+2020-06-20 02:19:56,341 - romui -INFO - Validate Seller Name:The Model Store - EB2
+2020-06-20 02:19:56,362 - romui -INFO - Validate Max Duration:199
+2020-06-20 02:19:56,384 - romui -INFO - Validate In-Store Pickup checkbox checked:
+2020-06-20 02:19:56,405 - romui -INFO - Validate Ship-To-Store  checkbox checked:
+2020-06-20 02:19:56,427 - romui -INFO - Validate Ship-From-Store checkbox checked:
+2020-06-20 02:19:56,451 - romui -INFO - Validate Seller Region Lookup Strategy:Country Code
+2020-06-20 02:20:06,370 - romui -INFO - Login credentials to be entered
+2020-06-20 02:20:14,561 - romui -INFO - Navigated to Seller Configurations page
+2020-06-20 02:20:14,562 - romui -INFO - Click Edit Seller Icon from View Seller Configuation screen and edit the field on Edit Seller Configuration page

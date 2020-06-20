@@ -495,7 +495,7 @@ public class OrdersPage {
 		editAddress();
 		Action.waitForElementToBeVisible(driver, btnAddItem, 10);
 		Action.clickElementJavaScipt(btnAddItem);
-		addItem(0, 0);
+		addItem(0,0);
 		Action.waitForElementToBeVisible(driver, btnAddNewAddressShipTo, 10);
 		Action.clickElementJavaScipt(btnAddNewAddressShipTo);
 		editAddress();
@@ -562,8 +562,8 @@ public class OrdersPage {
 	public void addItem(int itemindex, int qtyindex) throws JsonParseException, JsonMappingException, IOException {
 		ordersdata = OrdersData.get(env.getFileLocation());
 		System.out.println("item is:" + ordersdata.getItemID().get(itemindex));
-		Action.waitForElementToBeVisible(driver, btnSearchitem, 20);
-		Action.waitForElementToBeClickable(driver, txtbxsearchitem, 30);
+		Action.waitForElementToBeVisible(driver, txtbxsearchitem, 10);
+		Action.waitForElementToBeClickable(driver, txtbxsearchitem,10);
 		Action.enter(txtbxsearchitem, ordersdata.getItemID().get(itemindex));
 		Action.waitForElementToBeVisible(driver, btnSearchitem, 10);
 		btnSearchitem.click();

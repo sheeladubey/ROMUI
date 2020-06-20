@@ -163,6 +163,11 @@ public class CommonElementsPage {
 		return rowNo;
 
 	}
+	public static int getTotalRows() throws Exception {
+		Reporter.log("Get Total No of Rows in the webtable");
+		return nodeWebTable().GetNumOfRows();
+	}
+
 	
 	public static void clickActionsIcon(int row, int col, int child) throws Exception {
 		Reporter.log("Action icon is clicked on");
@@ -250,6 +255,21 @@ public class CommonElementsPage {
 				}
 			}
 			
+		}
+		
+		public static void clickSingleRowActionsIcon(int col, int child) throws Exception {
+			Reporter.log("Action icon is clicked on");
+			nodeWebTable().clickSpanIconForSingleRow(col, child);
+		}
+
+		public static void clickSelectLink(int row, int col) throws Exception {
+			Reporter.log("Action icon is clicked on");
+			nodeWebTable().clickButton(row, col);
+		}
+
+		public static void clickActionsSpanIcon(int row, int col, int index) throws Exception {
+			Reporter.log("Action icon is clicked on");
+			nodeWebTable().clickSpanElement(row, col, index);
 		}
 		
 	

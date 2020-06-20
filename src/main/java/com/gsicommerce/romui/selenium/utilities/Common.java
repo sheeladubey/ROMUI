@@ -76,7 +76,7 @@ public class Common {
 	 */
 	public static WebDriver startApplication(final Environment env, final String browserType) {
 		// final String url = getAppUrlSS0(env);
-		//final String url = getAppUrlUAT(env);
+		// final String url = getAppUrlUAT(env);
 		final String url = getAppUrl(env);
 		return Browser.getBrowserInstance(browserType, url, env);
 	}
@@ -422,10 +422,10 @@ public class Common {
 	 * Checks if the elment is in the DOM, regardless of being displayed or not.
 	 * 
 	 * @param driver - The driver object to use to perform this element search
-	 * @param by     - selector to find the element
+	 * @param txtboxSellerID     - selector to find the element
 	 * @return boolean
 	 */
-	private static boolean isElementPresent(WebDriver driver,By by) {
+	private static boolean isElementPresent(WebDriver driver, By by) {
 		try {
 			driver.findElement(by);// if it does not find the element throw NoSuchElementException, which calls
 									// "catch(Exception)" and returns false;
@@ -604,7 +604,8 @@ public class Common {
 
 	public static void clickonCalendarDate(WebElement el, int days) {
 		if (!el.isSelected()) {
-			el.click();
+			// el.click();
+			Action.clickElementJavaScipt(el);
 			el.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 			el.sendKeys(selectDate(days));
 		}
