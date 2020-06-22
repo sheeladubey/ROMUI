@@ -113,7 +113,6 @@ public class SellerConfigurationsPage {
 
 	public void verifyEditSellerConfig() throws JsonParseException, JsonMappingException, IOException, Exception {
 		sellerConfigData = SellerConfigurationsData.get(env.getFileLocation());
-		// sellerid=sellerConfigData.getSellerID();
 		selleridselected = CommonElementsPage.getRowNum(sellerConfigData.getSellerID());
 		System.out.println("Row Selected is :" + selleridselected);
 		Reporter.log("Click Edit Seller Configurations Icon");
@@ -141,7 +140,8 @@ public class SellerConfigurationsPage {
 		int Adjreasonsize = txtboxAdjReason.size();
 		// int btnAdjDeletesize=btnInvAdjDelete.size();
 		System.out.println("Exist code textbox is::" + Adjcodesize);
-		btnAddAdjReason.click();
+		//btnAddAdjReason.click();
+		Action.clickElementJavaScipt(btnAddAdjReason);
 		Action.enter(txtboxAdjReasoncode.get(Adjcodesize), sellerConfigData.getInventoryAdjReasonsCode());
 		Action.enter(txtboxAdjReason.get(Adjreasonsize), sellerConfigData.getInventoryAdjReasonsCode());
 		Action.scrollDown("600");

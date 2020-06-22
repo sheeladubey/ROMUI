@@ -18,7 +18,7 @@ public class SellerConfigsTests extends ROMUIBasePage {
 	private SellerConfigurationsData sellerConfigData;
 	private static int selleridselected;
 
-	@Test(enabled = true, priority = 1, description = "To Verify Manage Seller Configurations ")
+	@Test(enabled = false, priority = 1, description = "To Verify Manage Seller Configurations ")
 	public void testVerifyManageSellerConfig() throws JsonParseException, JsonMappingException, IOException, Exception {
 
 		logger.info("Login credentials to be entered");
@@ -30,7 +30,7 @@ public class SellerConfigsTests extends ROMUIBasePage {
 		logger.info("Manager Seller config screen verified successfully");
 	}
 
-	@Test(enabled = true, priority = 2, description = "To Verify Edit Seller Configurations feature")
+	@Test(enabled = false, priority = 2, description = "To Verify Edit Seller Configurations feature")
 	public void testEditSeller() throws JsonParseException, JsonMappingException, IOException, Exception {
 
 		logger.info("Login credentials to be entered");

@@ -93,7 +93,8 @@ public class CommonElementsPage {
 	}
 
 	public static void clickOnSaveBtn() {
-		btnSave.click();
+	//	btnSave.click();
+		Action.clickElementJavaScipt(btnSave);
 	}
 
 	public static void clickOnAddBtn() {

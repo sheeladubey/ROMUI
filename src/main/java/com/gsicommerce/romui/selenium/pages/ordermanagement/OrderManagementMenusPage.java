@@ -146,8 +146,8 @@ public class OrderManagementMenusPage {
 	@CacheLookup
 	WebElement lkPaymtMethdConfig;
 
-	//@FindBy(how = How.XPATH, using = "//a[contains(text(),'Seller Configurations')]")
-	@FindBy(how = How.CSS, using = "a[href='/en/organizations/TMSNA/sellers']")
+	@FindBy(how = How.XPATH, using = "(//a[contains(text(),'Seller Configurations')])[2]")
+	//@FindBy(how = How.CSS, using = "a[href='/en/organizations/TMSNA/sellers']")
 	WebElement lkSellerConfigurations;
 
 	@FindBy(how = How.XPATH, using = "//li/a[contains(text(),'Service Group Configurations')]")
@@ -427,13 +427,17 @@ public class OrderManagementMenusPage {
 	}
 
 	public void clickOnSellerConfigurations() {
+		Action.waitForElementToBeClickable(driver, btnMainMenu, 10);
 		Action.clickElementJavaScipt(btnMainMenu);
 		Action.waitForElementToBeClickable(driver, lkOmniAdministration, 10);
-		lkOmniAdministration.click();
+		//lkOmniAdministration.click();
+		Action.clickElementJavaScipt(lkOmniAdministration);
 		Action.waitForElementToBeClickable(driver, lkSellerConfig, 10);
-		lkSellerConfig.click();
+	//	lkSellerConfig.click();
+		Action.clickElementJavaScipt(lkSellerConfig);
 		Action.scrollingToBottomofAPage();
 		Action.waitForElementToBeClickable(driver, lkSellerConfigurations, 10);
-		lkSellerConfigurations.click();
+	//	lkSellerConfigurations.click();
+		Action.clickElementJavaScipt(lkSellerConfigurations);
 	}
 }

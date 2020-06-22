@@ -74,9 +74,9 @@ public class LoginPage {
 		Common.waitForElement(driver, txtUserName, 2);
 		txtUserName.sendKeys(username);
 		txtPasswd.sendKeys(passwd);
-	//	btnSingIn.click();
+		// btnSingIn.click();
 		Action.clickElementJavaScipt(btnSingIn);
-	//	selectStore(env.getSellerId(), env.getStoreId());
+		selectStore(env.getSellerId(), env.getStoreId());
 	}
 
 	public void selectStore(String sellerid, String storeId) {
