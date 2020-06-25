@@ -34,11 +34,11 @@ public class StoreFulfillmentDashboardPage {
 	@CacheLookup
 	private WebElement lkISPUCustomerPickup;
 
-	@FindBy(how = How.CSS, using = "[href*='SHIP_TO_STORE&type=WAITING_FOR_PICK']")
+	@FindBy(how = How.CSS, using = "[href*='SHIP_TO_HOME&type=WAITING_FOR_PICK']")
 	@CacheLookup
 	private WebElement lkSFSWaitingForPick;
 
-	@FindBy(how = How.CSS, using = "[href*='SHIP_TO_STORE&type=WAITING_FOR_PACK']")
+	@FindBy(how = How.CSS, using = "[href*='SHIP_TO_HOME&type=WAITING_FOR_PACK']")
 	@CacheLookup
 	private WebElement lkSFSWaitingForPack;
 
@@ -95,5 +95,26 @@ public class StoreFulfillmentDashboardPage {
 		Reporter.log("Click on Order Search");
 		lkOPOrderSearch.click();
 	}
+
+	public void navigateToISPUCustPickup() throws Exception {
+		Reporter.log("Click on ISPU Customer Pickup Icon");
+		lkISPUCustomerPickup.click();
+	}
+
+	public void navigateToSFSPick() throws Exception {
+		Reporter.log("Click on SFS Pick Icon");
+		lkSFSWaitingForPick.click();
+	}
+
+	public void navigateToSFSPack() throws Exception {
+		Reporter.log("Click on SFS Pack Icon");
+		lkSFSWaitingForPack.click();
+	}
+	
+	public void navigateToReturnItems() throws Exception {
+		Reporter.log("Click on Return items Icon");
+		lkOPReturnItems.click();
+	}
+
 
 }

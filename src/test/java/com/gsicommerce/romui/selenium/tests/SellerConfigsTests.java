@@ -30,7 +30,7 @@ public class SellerConfigsTests extends ROMUIBasePage {
 		logger.info("Manager Seller config screen verified successfully");
 	}
 
-	@Test(enabled = false, priority = 2, description = "To Verify Edit Seller Configurations feature")
+	@Test(enabled = true, priority = 2, description = "To Verify Edit Seller Configurations feature")
 	public void testEditSeller() throws JsonParseException, JsonMappingException, IOException, Exception {
 
 		logger.info("Login credentials to be entered");
@@ -45,7 +45,7 @@ public class SellerConfigsTests extends ROMUIBasePage {
 		logger.info("Edit Seller config verified successfully");
 	}
 
-	@Test(enabled = true, priority = 3, description = "To Verify View Seller Configurations feature")
+	@Test(enabled = false, priority = 3, description = "To Verify View Seller Configurations feature")
 	public void testViewSeller() throws JsonParseException, JsonMappingException, IOException, Exception {
 		sellerConfigData = SellerConfigurationsData.get(env.getFileLocation());
 
@@ -53,9 +53,10 @@ public class SellerConfigsTests extends ROMUIBasePage {
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
 		romuipages.orderMgmPage().clickOnSellerConfigurations();
 		logger.info("Navigated to Seller Configurations page");
-		selleridselected = CommonElementsPage.getRowNum(sellerConfigData.getSellerID());
+		selleridselected = CommonElementsPage.getRowNo(sellerConfigData.getSellerID());
 		logger.info("Clicking on View Seller icon for the View Seller Configuration screen to be viewed");
-		CommonElementsPage.clickActionsIcon(selleridselected, 3, 1, 1);
+		//CommonElementsPage.clickActionsIcon(selleridselected, 3, 1, 1);
+		CommonElementsPage.clickDivSpanLink(selleridselected, 3, 0, 1, 1);
 		// romuipages.sellerConfigurationsPage().viewSellerConfig();
 		logger.info("Validate Seller ID:" + sellerConfigData.getSellerID());
 		Assert.assertTrue(
@@ -86,7 +87,7 @@ public class SellerConfigsTests extends ROMUIBasePage {
 		Assert.assertTrue(
 				(romuipages.sellerConfigurationsPage().chkboxShipFromStore.getAttribute("checked").equals("true")),
 				"Ship-From-Store Checkbox not checked");
-		Action.scrollingToBottomofAPage();
+		Action.scrollToBottomofPage();
 		logger.info("Validate Seller Region Lookup Strategy:" + sellerConfigData.getSellerRegionLookupStrategy());
 		Assert.assertTrue(
 				(romuipages.sellerConfigurationsPage().lookupStrategyPanel.get(3).getText()

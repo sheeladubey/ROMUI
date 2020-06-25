@@ -68,4 +68,13 @@
 				value="./src/test/resources/testdata/ShippingLabelConfigData.json" />
 		</classes>
 	</test> <!-- Test -->
+	
+	<test thread-count="5" name="SellerConfigsTests">
+		<classes>
+			<class
+				name="com.gsicommerce.romui.selenium.tests.SellerConfigsTests" />
+			<parameter name="dataFile"
+				value="./src/test/resources/testdata/sellerConfigsData.json" />
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

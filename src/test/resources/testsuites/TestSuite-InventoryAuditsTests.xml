@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener
+			class-name="com.gsicommerce.romui.selenium.utilities.ExtentReporterListener"></listener>
+	</listeners>
+	<parameter name="browserType" value="chrome" />
+	<parameter name="storeEnvironment" value="lvststromuiapp04" />
+	<parameter name="adminUserName" value="admin@tmsna" />
+	<parameter name="adminPasswd" value="Password123@" />
+	<parameter name="waitPeriod" value="5" />
+	<test thread-count="5" name="InventoryAuditsTests">
+		<classes>
+			<class
+				name="com.gsicommerce.romui.selenium.tests.InventoryAuditsTests" />
+			<parameter name="dataFile"
+				value="./src/test/resources/testdata/catalogInventorySearchTestData.json"></parameter>
+		</classes>
+	</test> <!-- InventoryAuditsTests -->
+</suite> <!-- Suite -->

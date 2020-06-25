@@ -17,8 +17,8 @@ public class PipelinesTests extends ROMUIBasePage {
 
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-	//	romuipages.homePage().clickOnLandingButton("Order Management");
-	//	logger.info("Order Management link is clicked on");
+		// romuipages.homePage().clickOnLandingButton("Order Management");
+		// logger.info("Order Management link is clicked on");
 		romuipages.orderMgmPage().clickOnPipeline();
 		logger.info("Navigated to Pipeline page");
 		romuipages.pipeLinesPage().addPipeline();
@@ -26,83 +26,75 @@ public class PipelinesTests extends ROMUIBasePage {
 		logger.info("Verify if add pipeline success message is displayed");
 		Assert.assertEquals(romuipages.pipeLinesPage().txtSuccessMsg.getText(),
 				RomuiEnumValues.PIPELINE_SAVE.getMessage(), "Pipelne is not Saved successfully");
+		logger.info("Add Pipeline Feature Has Been validated successfully");
 	}
 
-	@Test(enabled = false, priority = 2, description = "To Verify View Pipeline feature")
+	@Test(enabled = true, priority = 2, description = "To Verify View Pipeline feature")
 	public void testViewPipeline() throws JsonParseException, JsonMappingException, IOException, Exception {
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		//romuipages.homePage().clickOnLandingButton("Order Management");
-	//	logger.info("Order Management link is clicked on");
+		// romuipages.homePage().clickOnLandingButton("Order Management");
+		// logger.info("Order Management link is clicked on");
 		romuipages.orderMgmPage().clickOnPipeline();
 		logger.info("Navigated to Pipeline page");
 		romuipages.pipeLinesPage().clickViewPipeline();
-		logger.info("View Pipeline Feature has veen validated successfully");
+		logger.info("View Pipeline Feature has Been validated successfully");
 
 	}
 
-	@Test(enabled = false, priority = 3, invocationCount = 1, description = "To verfiy Edit Pipeline feature of draft status")
+	@Test(enabled = true, priority = 3, invocationCount = 1, description = "To verfiy Edit Pipeline feature of draft status")
 	public void testEditPipeline() throws JsonParseException, JsonMappingException, IOException, Exception {
 
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		//romuipages.homePage().clickOnLandingButton("Order Management");
-		//logger.info("Order Management link is clicked on");
+		// romuipages.homePage().clickOnLandingButton("Order Management");
+		// logger.info("Order Management link is clicked on");
 		romuipages.orderMgmPage().clickOnPipeline();
 		logger.info("Navigated to Pipeline page");
-		//romuipages.pipeLinesPage().editPipeline(1);
+		// romuipages.pipeLinesPage().editPipeline(1);
 		romuipages.pipeLinesPage().editPipelineDraftStatus();
 		logger.info("Edit link is clicked on to enter the data and Clicked on Save btn");
-		logger.info("Edit pipeline verified successfully");
+		logger.info("Edit pipeline has Been validated successfully");
 	}
 
-	@Test(enabled = false, priority = 4, invocationCount = 1, description = "To Verify Edit Pipeline feature of Active Status")
+	@Test(enabled = true, priority = 4, invocationCount = 1, description = "To Verify Edit Pipeline feature of Active Status")
 	public void testeditPipelineActive() throws JsonParseException, JsonMappingException, IOException, Exception {
 
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		//romuipages.homePage().clickOnLandingButton("Order Management");
-	//	logger.info("Order Management link is clicked on");
+		// romuipages.homePage().clickOnLandingButton("Order Management");
+		// logger.info("Order Management link is clicked on");
 		romuipages.orderMgmPage().clickOnPipeline();
 		logger.info("Navigated to Pipeline page");
 		romuipages.pipeLinesPage().editPipelineActiveStatus();
-		//romuipages.pipeLinesPage().editPipeline(2);
 		logger.info("Edit link is clicked on to enter the data and Clicked on Save btn");
-		logger.info("Edit Pipeline Active status verified successfully.");
-		/*
-		 * Assert.assertEquals(romuipages.pipeLinesPage().txtSuccessMsg.getText(),
-		 * RomuiEnumValues.PIPELINE_EDIT.getMessage(), "Pipelne hasn't been updated");
-		 */
-
+		logger.info("Edit Pipeline Active status has been Validated successfully.");
 	}
 
-	@Test(enabled = false, priority = 5, invocationCount = 1, description = "To Verify Edit Pipeline feature of Inactive Status")
+	@Test(enabled = true, priority = 5, invocationCount = 1, description = "To Verify Edit Pipeline feature of Inactive Status")
 	public void testeditPipelineInActive() throws JsonParseException, JsonMappingException, IOException, Exception {
 
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		//romuipages.homePage().clickOnLandingButton("Order Management");
-	//	logger.info("Order Management link is clicked on");
+		// romuipages.homePage().clickOnLandingButton("Order Management");
+		// logger.info("Order Management link is clicked on");
 		romuipages.orderMgmPage().clickOnPipeline();
 		logger.info("Navigated to Pipeline page");
 		romuipages.pipeLinesPage().editPipelineInActiveStatus();
-		//romuipages.pipeLinesPage().editPipeline(1);
+		// romuipages.pipeLinesPage().editPipeline(1);
 		logger.info("Edit link is clicked on to enter the data and Clicked on Save btn");
-		logger.info("Edit Pipeline InActive status verified successfully.");
-		/*
-		 * Assert.assertEquals(romuipages.pipeLinesPage().txtSuccessMsg.getText(),
-		 * RomuiEnumValues.PIPELINE_EDIT.getMessage(), "Pipelne hasn't been updated");
-		 */
+		logger.info("Edit Pipeline InActive status has Been validated successfully.");
+		
 
 	}
 
-	@Test(enabled = false, priority = 6, description = "To Verify Copy Pipeline feature for Draft status")
+	@Test(enabled = true, priority = 6, description = "To Verify Copy Pipeline feature for Draft status")
 	public void testCopyPipeline() throws JsonParseException, JsonMappingException, IOException, Exception {
 
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		//romuipages.homePage().clickOnLandingButton("Order Management");
-	//	logger.info("Order Management link is clicked on");
+		// romuipages.homePage().clickOnLandingButton("Order Management");
+		// logger.info("Order Management link is clicked on");
 		romuipages.orderMgmPage().clickOnPipeline();
 		logger.info("Navigated to Pipeline page");
 		romuipages.pipeLinesPage().copyPipelineDraftStatus();
@@ -114,13 +106,13 @@ public class PipelinesTests extends ROMUIBasePage {
 		logger.info("Draft Status Copy pipeline has been verified successfully");
 	}
 
-	@Test(enabled = false, priority = 7, description = "To Verify Copy Pipeline feature for Active status")
+	@Test(enabled = true, priority = 7, description = "To Verify Copy Pipeline feature for Active status")
 	public void testCopyPipelineActiveStatus() throws JsonParseException, JsonMappingException, IOException, Exception {
 
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		//romuipages.homePage().clickOnLandingButton("Order Management");
-		//logger.info("Order Management link is clicked on");
+		// romuipages.homePage().clickOnLandingButton("Order Management");
+		// logger.info("Order Management link is clicked on");
 		romuipages.orderMgmPage().clickOnPipeline();
 		logger.info("Navigated to Pipeline page");
 		romuipages.pipeLinesPage().copyPipelineActiveStatus();
@@ -132,14 +124,14 @@ public class PipelinesTests extends ROMUIBasePage {
 		logger.info("Active Status Copy pipeline has been verified successfully");
 	}
 
-	@Test(enabled = false, priority = 8, description = "To Verify Copy Pipeline feature for Inactive status")
+	@Test(enabled = true, priority = 8, description = "To Verify Copy Pipeline feature for Inactive status")
 	public void testCopyPipelineInActiveStatus()
 			throws JsonParseException, JsonMappingException, IOException, Exception {
 
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		//romuipages.homePage().clickOnLandingButton("Order Management");
-	//	logger.info("Order Management link is clicked on");
+		// romuipages.homePage().clickOnLandingButton("Order Management");
+		// logger.info("Order Management link is clicked on");
 		romuipages.orderMgmPage().clickOnPipeline();
 		logger.info("Navigated to Pipeline page");
 		romuipages.pipeLinesPage().copyPipelineInActiveStatus();
@@ -151,12 +143,12 @@ public class PipelinesTests extends ROMUIBasePage {
 		logger.info("InActive Status Copy pipeline has been verified successfully");
 	}
 
-	@Test(enabled = false, priority = 9, invocationCount = 1, description = "To Verify Edit Pipeline Configuration for Active status")
+	@Test(enabled = true, priority = 9, invocationCount = 1, description = "To Verify Edit Pipeline Configuration for Active status")
 	public void testEditPipelineConfigurationActiveStatus() throws Exception {
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		//romuipages.homePage().clickOnLandingButton("Order Management");
-	//	logger.info("Order Management link is clicked on");
+		// romuipages.homePage().clickOnLandingButton("Order Management");
+		// logger.info("Order Management link is clicked on");
 		romuipages.orderMgmPage().clickOnPipeline();
 		logger.info("Navigated to Pipeline page");
 		romuipages.pipeLinesPage().editPipelienConfigurationActive();
@@ -164,12 +156,12 @@ public class PipelinesTests extends ROMUIBasePage {
 		logger.info("Edit pipeline Config for ACTIVE status has been verified successfully");
 	}
 
-	@Test(enabled = false, priority = 10, invocationCount = 1, description = "To Verify Delete Pipeline feature")
+	@Test(enabled = true, priority = 10, invocationCount = 1, description = "To Verify Delete Pipeline feature")
 	public void testDeletePipeline() throws JsonParseException, JsonMappingException, IOException, Exception {
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		//romuipages.homePage().clickOnLandingButton("Order Management");
-		//logger.info("Order Management link is clicked on");
+		// romuipages.homePage().clickOnLandingButton("Order Management");
+		// logger.info("Order Management link is clicked on");
 		romuipages.orderMgmPage().clickOnPipeline();
 		logger.info("Navigated to Pipeline page");
 		romuipages.pipeLinesPage().deletePipeline();
@@ -179,12 +171,12 @@ public class PipelinesTests extends ROMUIBasePage {
 
 	}
 
-	@Test(enabled = false, priority = 11, description = "To Verify Pipeline form validation")
+	@Test(enabled = true, priority = 11, description = "To Verify Pipeline form validation")
 	public void testPipelineFormValidation() throws JsonParseException, JsonMappingException, IOException, Exception {
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		//romuipages.homePage().clickOnLandingButton("Order Management");
-	//	logger.info("Order Management link is clicked on");
+		// romuipages.homePage().clickOnLandingButton("Order Management");
+		// logger.info("Order Management link is clicked on");
 		romuipages.orderMgmPage().clickOnPipeline();
 		logger.info("Navigated to Pipeline page");
 		romuipages.pipeLinesPage().pipelineFormValidation();
@@ -192,12 +184,12 @@ public class PipelinesTests extends ROMUIBasePage {
 
 	}
 
-	@Test(enabled = false, priority = 12, invocationCount = 1, description = "To Verify Edit Pipeline Configuration for Draft status")
+	@Test(enabled = true, priority = 12, invocationCount = 1, description = "To Verify Edit Pipeline Configuration for Draft status")
 	public void testeditPipelienConfigurationDraft() throws Exception {
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		//romuipages.homePage().clickOnLandingButton("Order Management");
-	//	logger.info("Order Management link is clicked on");
+		// romuipages.homePage().clickOnLandingButton("Order Management");
+		// logger.info("Order Management link is clicked on");
 		romuipages.orderMgmPage().clickOnPipeline();
 		logger.info("Navigated to Pipeline page");
 		romuipages.pipeLinesPage().editPipelienConfigurationDraft();
@@ -208,5 +200,4 @@ public class PipelinesTests extends ROMUIBasePage {
 		logger.info("Edit pipeline Config for draft status has been verified successfully");
 	}
 
-	
 }

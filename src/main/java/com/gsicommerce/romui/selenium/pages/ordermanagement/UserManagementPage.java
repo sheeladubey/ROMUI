@@ -566,7 +566,7 @@ public class UserManagementPage {
 		Common.waitForElementPresent(driver, btnAddUser, 06);
 		searchByUserId();
 		Action.waitForElementToBeClickable(driver, btnAddUser, 30);
-		CommonElementsPage.clickActionsIcon(1, 4, 0, 1);
+		CommonElementsPage.clickDivSpanLink(1, 4,0, 0, 1);
 		Action.scrollDown("500");
 		Action.enter(txtResetPwd, data.getrstPwd());
 		Action.enter(txtCnfrmResetPwd, data.getrstPwd());
@@ -579,7 +579,7 @@ public class UserManagementPage {
 		Common.waitForElementPresent(driver, btnAddUser, 06);
 		searchByUserId();
 		Action.waitForElementToBeClickable(driver, btnAddUser, 30);
-		CommonElementsPage.clickActionsIconDelete(1, 4, 0, 1);
+		//CommonElementsPage.clickActionsIconDelete(1, 4, 0, 1);
 		btnConfirm.click();
 
 	}
@@ -589,7 +589,7 @@ public class UserManagementPage {
 		Common.waitForElementPresent(driver, btnAddUser, 06);
 		int rowNo = CommonElementsPage.getRowNo(userId);
 		Action.waitForElementToBeClickable(driver, btnAddUser, 30);
-		CommonElementsPage.clickActionsIcon(rowNo, 4, 0, 1);
+		CommonElementsPage.clickDivSpanLink(rowNo, 4,0,0, 1);
 		chkAtpRules.click();
 		btnSave.click();
 
@@ -600,7 +600,7 @@ public class UserManagementPage {
 		Common.waitForElementPresent(driver, btnAddUser, 06);
 	//	int rowNo = CommonElementsPage.getRowNo(userId);
 		Action.waitForElementToBeClickable(driver, btnAddUser, 30);
-		CommonElementsPage.clickActionsIconDelete(1, 4, 0, 1);
+		//CommonElementsPage.clickActionsIconDelete(1, 4, 0, 1);
 		btnRoleConfirm.click();
 
 	}

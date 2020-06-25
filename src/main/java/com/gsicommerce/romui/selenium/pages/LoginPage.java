@@ -20,7 +20,6 @@ public class LoginPage {
 	Environment env;
 
 	public LoginPage(WebDriver driver, Environment env) {
-
 		this.driver = driver;
 		this.env = env;
 		PageFactory.initElements(driver, this);
@@ -28,21 +27,21 @@ public class LoginPage {
 
 	@FindBy(how = How.CSS, using = "#login_form_user_id")
 	@CacheLookup
-	WebElement txtUserNameSS0;
-
-	@FindBy(how = How.CSS, using = "#login_form_password")
-	WebElement txtPasswd;
-
-	@FindBy(how = How.CSS, using = "[name='button']")
-	@CacheLookup
-	WebElement btnSingInSSO;
+	WebElement txtUserSSOName;
 
 	@FindBy(how = How.CSS, using = "#login_form_username")
 	@CacheLookup
 	WebElement txtUserName;
 
-	// @FindBy(how=How.CSS, using="[data-disable-with='Sign in']")
-	@FindBy(how = How.CSS, using = ".btn-block[type='submit']")
+	@FindBy(how = How.CSS, using = "#login_form_password")
+	@CacheLookup
+	WebElement txtPasswd;
+
+	@FindBy(how = How.CSS, using = "[name='button']")
+	@CacheLookup
+	WebElement btnSSOSingIn;
+
+	@FindBy(how = How.CSS, using = "[type='submit']")
 	@CacheLookup
 	WebElement btnSingIn;
 
@@ -63,34 +62,28 @@ public class LoginPage {
 	@FindBy(how = How.CSS, using = "a.radial-app-user-menu__item[href='/en/session/destroy']")
 	private static List<WebElement> btnsignout;
 
-	public void loginSSO(String username, String passwd) {
-		Common.waitForElement(driver, txtUserNameSS0, 2);
-		txtUserNameSS0.sendKeys(username);
-		txtPasswd.sendKeys(passwd);
-		btnSingInSSO.click();
-	}
-
 	public void login(String username, String passwd) {
 		Common.waitForElement(driver, txtUserName, 2);
 		txtUserName.sendKeys(username);
 		txtPasswd.sendKeys(passwd);
 		// btnSingIn.click();
-		Action.clickElementJavaScipt(btnSingIn);
-		selectStore(env.getSellerId(), env.getStoreId());
+		Action.clickUsingJavaScipt(btnSingIn);
+		//selectStore(env.getSellerId(), env.getStoreId());
 	}
 
 	public void selectStore(String sellerid, String storeId) {
 		try {
-			btnStore.click();
+			// btnStore.click();
+			Action.clickUsingJavaScipt(btnStore);
 			Action.waitForElementToBeClickable(driver, txtbxStoreSearch, 30);
 			Action.enter(txtbxStoreSearch, storeId);
 			List<WebElement> storeList = driver.findElements(By.xpath("//button[contains(text(),'" + storeId + "')]"));
 			int size = lststorelist.size();
 			for (int i = 0; i < size; i++) {
-				// WebElement storeOption = lststorelist.get(i);
-				System.out.println("Selected store1 is:" + lststorelist.get(i).getText());
+
 				if (lststorelist.get(i).getText().contains(sellerid)) {
-					storeList.get(i - 1).click();
+					//storeList.get(i - 1).click();
+					Action.clickUsingJavaScipt(storeList.get(i - 1));
 					break;
 				}
 			}
@@ -100,10 +93,10 @@ public class LoginPage {
 	}
 
 	public void clickSignout() {
-		Action.clickElementJavaScipt(btnStore);
+		Action.clickUsingJavaScipt(btnStore);
 		// btnStore.click();
 		btnsignout.get(1).click();
-		;
+
 	}
 
 }

@@ -1,6 +1,7 @@
 package com.gsicommerce.romui.selenium.pages.ordermanagement;
 
 import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -22,7 +23,6 @@ public class CommonElementsPage {
 	Action action;
 
 	public CommonElementsPage(WebDriver driver, Environment env) {
-		// TODO Auto-generated constructor stub
 		this.driver = driver;
 		this.env = env;
 		PageFactory.initElements(driver, this);
@@ -31,24 +31,13 @@ public class CommonElementsPage {
 	}
 
 	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Save')]")
-	@CacheLookup
-	private static WebElement btnSave;
+	public static WebElement btnSave;
 
 	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Add')]")
-	@CacheLookup
 	private static WebElement btnAdd;
 
-	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Save & Exit')]")
-	@CacheLookup
-	private static WebElement btnSaveExit;
-
-	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Cancel')]")
-	@CacheLookup
-	private static WebElement btnCancel;
-
 	@FindBy(how = How.CSS, using = "[type='submit']")
-	@CacheLookup
-	private static WebElement btnSearch;
+	public static WebElement btnSearch;
 
 	@FindBy(how = How.CSS, using = "[data-tooltip='Show Advanced Search']")
 	@CacheLookup
@@ -62,7 +51,6 @@ public class CommonElementsPage {
 	private static WebElement lkNextPage;
 
 	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Confirm')]")
-	@CacheLookup
 	private static WebElement btnConfirm;
 
 	@FindBy(how = How.CSS, using = "#store_fulfillment_pick_ticket_hold_location")
@@ -75,36 +63,38 @@ public class CommonElementsPage {
 
 	@FindBy(how = How.CSS, using = ".reflow-table")
 	private static WebElement nodeWebTable;
-	
 
-	@FindBy(how = How.CSS, using = ".table-responsive")
-	private static WebElement nodeWebTableFulfillmentOrders;
-	
-	@FindBy(how = How.CSS, using = ".alert-danger")
-	private static WebElement txtformvalidationError;
-	
+	@FindBy(how = How.CSS, using = ".alert-info")
+	@CacheLookup
+	public WebElement txtEditSuccessMsg;
+
+	@FindBy(how = How.CSS, using = "[data-tooltip='Search']")
+	private static WebElement iconSearch;
+
+	@FindBy(how = How.CSS, using = "[role='alert']")
+	public static WebElement txtAlertErrorMsg;
+
 	@FindBy(how = How.XPATH, using = ".//option")
-	private static List<WebElement> selectDropDownOption;
+	public static List<WebElement> selectDropDownOption;
 	
-	
+	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Cancel')]")
+	private static WebElement btnCancel;
+
 	public static Webtable nodeWebTable() {
 		Webtable wt = new Webtable(driver, (WebElement) nodeWebTable);
 		return wt;
 	}
 
 	public static void clickOnSaveBtn() {
-	//	btnSave.click();
-		Action.clickElementJavaScipt(btnSave);
+		Action.waitForElementToBeClickable(driver, btnSave, 30);
+		//btnSave.click();
+		Action.clickUsingJavaScipt(btnSave);
 	}
 
 	public static void clickOnAddBtn() {
-		Action.waitForElementToBeClickable(driver, btnAdd, 10);
-		btnAdd.click();
-	}
-
-	public static void clickOnCancelBtn() {
-		btnCancel.click();
-
+		Action.waitForElementToBeClickable(driver, btnAdd, 30);
+		//btnAdd.click();
+		Action.clickUsingJavaScipt(btnAdd);
 	}
 
 	public static void clickOnSearchBtn() {
@@ -116,6 +106,7 @@ public class CommonElementsPage {
 	}
 
 	public static void clickOnConfirmBtn() {
+		Action.waitForElementToBeClickable(driver, btnConfirm, 10);
 		btnConfirm.click();
 	}
 
@@ -124,11 +115,15 @@ public class CommonElementsPage {
 	}
 
 	public static void selectLimitPerPage() {
-		if (drpdwnPagLimit.isDisplayed()) {
-			Select se = new Select(drpdwnPagLimit);
-			List<WebElement> listOfOptions = se.getOptions();
-			int count = listOfOptions.size();
-			Action.selectByIndex(drpdwnPagLimit, count - 1);
+		try {
+			if (drpdwnPagLimit.isDisplayed()) {
+				Select se = new Select(drpdwnPagLimit);
+				List<WebElement> listOfOptions = se.getOptions();
+				int count = listOfOptions.size();
+				Action.selectByIndex(drpdwnPagLimit, count - 1);
+			}
+		} catch (Exception ex) {
+			Reporter.log("There is no page limit option displayed");
 		}
 	}
 
@@ -140,8 +135,8 @@ public class CommonElementsPage {
 
 	public static int getRowNo(String nodeID) throws Exception {
 		selectLimitPerPage();
+		Thread.sleep(3000);
 		Reporter.log("page limit drop down value is selected");
-
 		int rowNo = 0;
 		rowNo = nodeWebTable().getTableRowNumForCellText(nodeID, 1);
 		while (rowNo <= 0) {
@@ -152,127 +147,74 @@ public class CommonElementsPage {
 		return rowNo;
 
 	}
-//get row number for pipeline screen
-	public static int getRowNum(String pipelineName) throws Exception {
-		int rowNo = 0;
-		rowNo = nodeWebTable().getTableRowNumForCellText(pipelineName, 1);
-		while (rowNo <= 0) {
-			// CommonElementsPage.clickNextPage();
-			Common.waitForElement(driver, nodeWebTable, 10);
-			rowNo = nodeWebTable().getTableRowNumForCellText(pipelineName, 1);
-		}
-		return rowNo;
 
-	}
-	public static int getTotalRows() throws Exception {
-		Reporter.log("Get Total No of Rows in the webtable");
-		return nodeWebTable().GetNumOfRows();
-	}
-
-	
 	public static void clickActionsIcon(int row, int col, int child) throws Exception {
 		Reporter.log("Action icon is clicked on");
 		nodeWebTable().clickIcon(row, col, child);
 	}
 
-	// method to click action icons for pipeline screen
-
-	public static  void clickActionsIcon(int row, int col, int child, int spanchild) throws Exception {
-		Reporter.log("Action icon is clicked on");
-		nodeWebTable().clickIconPipeline(row, col, child, spanchild);
-	}
-
-	// method to click delete action icons for pipeline screen
-	public static void clickDeleteIcon(int row, int col, int spanchild) throws Exception {
-		Reporter.log("Action icon is clicked on");
-		nodeWebTable().clickDeleteIconPipeline(row, col, spanchild);
-	}
-
 	public static void enterStagingLoc(String loc) throws Exception {
 		Action.enter(txtStagingLoc, loc);
-		btnAdd.click();
 	}
 
-	public static void clickOnSaveExitBtn() {
-		btnSaveExit.click();
-	}
-	
-	public static int getRoleRowNum(String userId) throws Exception {
-		selectLimitPerPage();
-		Reporter.log("page limit drop down value is selected");
-		int rowNo = 0;
-		rowNo = nodeWebTable().getTableRowNumForCellText(userId, 1);
-		while (rowNo <= 0) {
-			CommonElementsPage.clickNextPage();
-			Common.waitForElement(driver, nodeWebTable, 10);
-			rowNo = nodeWebTable().getTableRowNumForCellText(userId, 1);
-		}
-		return rowNo;		
-
-	}
-	public static void clickActionsIconDelete(int row, int col, int child, int spanchild) throws Exception {
-		Reporter.log("Delete icon is clicked on");
-		nodeWebTable().clickIconDelete(row, col, child, spanchild);
+	public static void clickOnSearchIcon() {
+		Action.waitForElementToBeClickable(driver, iconSearch, 30);
+		iconSearch.click();
 	}
 
-	public static void clickViewOrderIcon(int row, int col, int divchild, int child, int spanchild) throws Exception {
-			Reporter.log("View Order icon is clicked on");
-			nodeWebTable().clickIconViewOrder(row, col, divchild,child, spanchild);
-		
+	public static String getRowCellTextVal(int row, int col) throws Exception {
+		Reporter.log("Getting the column value of the first row");
+		return nodeWebTable().getTableCellText(row, col);
 	}
-	
-	public static Webtable nodeWebTableFulfillmentOrders() {
-		Webtable wt = new Webtable(driver, (WebElement) nodeWebTableFulfillmentOrders);
-		return wt;
+
+	public static void clickSingleRowActionsIcon(int col, int child) throws Exception {
+		Reporter.log("Action icon is clicked on");
+		nodeWebTable().clickSpanIconForSingleRow(col, child);
 	}
-	
-	//get row number for fulfillment orders screen
-		public static int getRowNumFulfillmentOrders(String fulfillmentOrd) throws Exception {
-			int rowNo = 0;
-			rowNo = nodeWebTableFulfillmentOrders().getTableRowNumForCellText(fulfillmentOrd, 1);
-			while (rowNo <= 0) {
-				// CommonElementsPage.clickNextPage();
-				Common.waitForElement(driver, nodeWebTable, 10);
-				rowNo = nodeWebTableFulfillmentOrders().getTableRowNumForCellText(fulfillmentOrd, 1);
+
+	public static int getTotalRows() throws Exception {
+		Reporter.log("Get Total No of Rows in the webtable");
+		return nodeWebTable().GetNumOfRows();
+	}
+
+	public static void clickSelectLink(int row, int col) throws Exception {
+		Reporter.log("Action icon is clicked on");
+		nodeWebTable().clickButton(row, col);
+	}
+
+	public static void clickActionsSpanIcon(int row, int col, int index) throws Exception {
+		Reporter.log("Action icon is clicked on");
+		nodeWebTable().clickSpanElement(row, col, index);
+	}
+
+	public static void clickDivSpanLink(int row, int col, int divchild, int child, int spanchild) throws Exception {
+		Reporter.log("View Order icon is clicked on");
+		nodeWebTable().clickDivLinkSpanElement(row, col, divchild, child, spanchild);
+
+	}
+
+	public static void clickSelectBtnSpanLink(int row, int col, int spanChild) throws Exception {
+		Reporter.log("Action icon for span element is clicked on");
+		nodeWebTable().clickButtonSpanElement(row, col, spanChild);
+	}
+
+	// Select values from dropdown
+	public static void selectDropDwnValues(WebElement el, String selectOption) {
+		// el.click();
+		Action.clickUsingJavaScipt(el);
+		for (int i = 0; i < selectDropDownOption.size(); i++) {
+		//	System.out.println(selectDropDownOption.get(i).getText());
+			if (selectDropDownOption.get(i).getText().equals(selectOption)) {
+				Action.selectByIndex(el, i);
+
+				break;
 			}
-			return rowNo;
-
-		}
-		
-		public static String formErrorValidation() {
-			return txtformvalidationError.getText();
 		}
 
-			//Select values from dropdown 
-		public static void selectDropDwnValues(WebElement el,String selectOption) {
-			//el.click();
-			Action.clickElementJavaScipt(el);
-			for (int i = 0; i < selectDropDownOption.size(); i++) {
-				System.out.println(selectDropDownOption.get(i).getText());
-				if (selectDropDownOption.get(i).getText().equals(selectOption)) {
-					Action.selectByIndex(el, i);
-					
-					break;
-				}
-			}
-			
-		}
-		
-		public static void clickSingleRowActionsIcon(int col, int child) throws Exception {
-			Reporter.log("Action icon is clicked on");
-			nodeWebTable().clickSpanIconForSingleRow(col, child);
-		}
+	}
 
-		public static void clickSelectLink(int row, int col) throws Exception {
-			Reporter.log("Action icon is clicked on");
-			nodeWebTable().clickButton(row, col);
-		}
+	public static void clickOnCancelBtn() {
+		btnCancel.click();
+	}
 
-		public static void clickActionsSpanIcon(int row, int col, int index) throws Exception {
-			Reporter.log("Action icon is clicked on");
-			nodeWebTable().clickSpanElement(row, col, index);
-		}
-		
-	
-	
 }

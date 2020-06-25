@@ -1,5 +1,6 @@
 package com.gsicommerce.romui.selenium.pages.ordermanagement;
 
+import org.openqa.selenium.JavascriptException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -9,7 +10,6 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.gsicommerce.romui.selenium.testdata.Environment;
 import com.gsicommerce.romui.selenium.utilities.Action;
-import com.gsicommerce.romui.selenium.utilities.Common;
 
 public class OrderManagementMenusPage {
 	WebDriver driver;
@@ -25,7 +25,6 @@ public class OrderManagementMenusPage {
 	}
 
 	@FindBy(how = How.CSS, using = "[data-tooltip='Main Menu']")
-	@CacheLookup
 	WebElement btnMainMenu;
 
 	@FindBy(how = How.XPATH, using = "//i/parent::a[contains(text(),'Catalog & Inventory')]")
@@ -40,7 +39,7 @@ public class OrderManagementMenusPage {
 	@CacheLookup
 	WebElement lkPipeline;
 
-	@FindBy(how = How.XPATH, using = "//li/a[contains(text(),'Service Flows')]")
+	@FindBy(how = How.XPATH, using = "//i/parent::a[contains(text(),'Service Flows')]")
 	@CacheLookup
 	WebElement lkServiceFlows;
 
@@ -52,7 +51,8 @@ public class OrderManagementMenusPage {
 	@CacheLookup
 	WebElement lkReportingDashboard;
 
-	@FindBy(how = How.XPATH, using = "//a[contains(text(),'Omni Administration')]")
+	@FindBy(how = How.XPATH, using = "//i/parent::a[contains(text(),'Omni Administration')]")
+	@CacheLookup
 	WebElement lkOmniAdministration;
 
 	@FindBy(how = How.XPATH, using = "//i/parent::a[contains(text(),'Help Documentation')]")
@@ -142,12 +142,12 @@ public class OrderManagementMenusPage {
 	@FindBy(how = How.XPATH, using = "//li/a[contains(text(),'Seller Configurations')]")
 	WebElement lkSellerConfig;
 
-	@FindBy(how = How.XPATH, using = "//a[contains(text(),'Payment Method Configurations')]")
+	@FindBy(how = How.XPATH, using = "//li/a[contains(text(),'Payment Method Configurations')]")
 	@CacheLookup
 	WebElement lkPaymtMethdConfig;
 
+	// @FindBy(how = How.CSS, using = "a[href='/en/organizations/TMSNA/sellers']")
 	@FindBy(how = How.XPATH, using = "(//a[contains(text(),'Seller Configurations')])[2]")
-	//@FindBy(how = How.CSS, using = "a[href='/en/organizations/TMSNA/sellers']")
 	WebElement lkSellerConfigurations;
 
 	@FindBy(how = How.XPATH, using = "//li/a[contains(text(),'Service Group Configurations')]")
@@ -158,7 +158,7 @@ public class OrderManagementMenusPage {
 	@CacheLookup
 	WebElement lkShipMthdOptimztions;
 
-	@FindBy(how = How.XPATH, using = "//a[contains(text(),'Shipping Label Configurations')]")
+	@FindBy(how = How.XPATH, using = "//li/a[contains(text(),'Shipping Label Configurations')]")
 	@CacheLookup
 	WebElement lkShipngLabelConfig;
 
@@ -222,14 +222,6 @@ public class OrderManagementMenusPage {
 		lkAvlSearch.click();
 	}
 
-	public void clickOnOrders() throws InterruptedException {
-		Action.waitForElementToBeClickable(driver, btnMainMenu, 40);
-		// btnMainMenu.click();
-		Action.clickElementJavaScipt(btnMainMenu);
-		Action.waitForElementToBeClickable(driver, lkOrders, 20);
-		lkOrders.click();
-	}
-
 	public void clickOnStoreFulfillment() {
 		btnMainMenu.click();
 		lkFulfillment.click();
@@ -250,21 +242,15 @@ public class OrderManagementMenusPage {
 
 	public void clickOnUsers() {
 		btnMainMenu.click();
-		Common.waitForElementPresent(driver, lkOmniAdministration, 06);
 		lkOmniAdministration.click();
-		Common.waitForElementPresent(driver, lkUserMgmt, 06);
 		lkUserMgmt.click();
-		Common.waitForElementPresent(driver, lkUsers, 06);
 		lkUsers.click();
 	}
 
 	public void clickOnRoles() {
 		btnMainMenu.click();
-		Common.waitForElementPresent(driver, lkOmniAdministration, 06);
 		lkOmniAdministration.click();
-		Common.waitForElementPresent(driver, lkUserMgmt, 06);
 		lkUserMgmt.click();
-		Common.waitForElementPresent(driver, lkRoles, 06);
 		lkRoles.click();
 	}
 
@@ -272,7 +258,8 @@ public class OrderManagementMenusPage {
 		btnMainMenu.click();
 		lkOmniAdministration.click();
 		lkInvAvailability.click();
-		lkATPRules.click();
+		//lkATPRules.click();
+		Action.clickUsingJavaScipt(lkATPRules);
 	}
 
 	public void clickOnSafetyStockConfig() {
@@ -314,9 +301,7 @@ public class OrderManagementMenusPage {
 		btnMainMenu.click();
 		Action.waitForElementToBeClickable(driver, lkOmniAdministration, 10);
 		lkOmniAdministration.click();
-		Action.waitForElementToBeClickable(driver, lkSellerConfig, 10);
 		lkSellerConfig.click();
-		Action.waitForElementToBeClickable(driver, lkPaymtMethdConfig, 10);
 		lkPaymtMethdConfig.click();
 	}
 
@@ -337,13 +322,14 @@ public class OrderManagementMenusPage {
 	public void clickOnShippingLabelConfig() {
 		Action.waitForElementToBeClickable(driver, btnMainMenu, 40);
 		// btnMainMenu.click();
-		Action.clickElementJavaScipt(btnMainMenu);
+		Action.clickUsingJavaScipt(btnMainMenu);
 		Action.waitForElementToBeClickable(driver, lkOmniAdministration, 10);
-		lkOmniAdministration.click();
+	    lkOmniAdministration.click();
 		Action.waitForElementToBeClickable(driver, lkSellerConfig, 10);
 		lkSellerConfig.click();
 		Action.waitForElementToBeClickable(driver, lkShipngLabelConfig, 10);
 		lkShipngLabelConfig.click();
+	
 	}
 
 	public void clickOnInvOrganization() {
@@ -410,34 +396,41 @@ public class OrderManagementMenusPage {
 		lkReleaseNotes.click();
 	}
 
+	public void clickOnOrders() throws InterruptedException {
+		Action.waitForElementToBeClickable(driver, btnMainMenu, 40);
+		Action.clickUsingJavaScipt(btnMainMenu);
+		Action.waitForElementToBeClickable(driver, lkOrders, 20);
+		// lkOrders.click();
+		Action.clickUsingJavaScipt(lkOrders);
+	}
+
 	public void clickOnPipeline() {
 		Action.waitForElementToBeClickable(driver, btnMainMenu, 40);
 		// btnMainMenu.click();
-		Action.clickElementJavaScipt(btnMainMenu);
+		Action.clickUsingJavaScipt(btnMainMenu);
 		Action.waitForElementToBeClickable(driver, lkPipeline, 10);
-		//lkPipeline.click();
-		Action.clickElementJavaScipt(lkPipeline);
+		// lkPipeline.click();
+		Action.clickUsingJavaScipt(lkPipeline);
 
-	}
-
-	public void clickOnServiceFlows() {
-		btnMainMenu.click();
-		Action.waitForElementToBeClickable(driver, lkServiceFlows, 10);
-		lkServiceFlows.click();
 	}
 
 	public void clickOnSellerConfigurations() {
+		try {
 		Action.waitForElementToBeClickable(driver, btnMainMenu, 10);
-		Action.clickElementJavaScipt(btnMainMenu);
+		Action.clickUsingJavaScipt(btnMainMenu);
 		Action.waitForElementToBeClickable(driver, lkOmniAdministration, 10);
 		//lkOmniAdministration.click();
-		Action.clickElementJavaScipt(lkOmniAdministration);
+		Action.clickUsingJavaScipt(lkOmniAdministration);
 		Action.waitForElementToBeClickable(driver, lkSellerConfig, 10);
 	//	lkSellerConfig.click();
-		Action.clickElementJavaScipt(lkSellerConfig);
-		Action.scrollingToBottomofAPage();
+		Action.clickUsingJavaScipt(lkSellerConfig);
+		Action.scrollToBottomofPage();
 		Action.waitForElementToBeClickable(driver, lkSellerConfigurations, 10);
 	//	lkSellerConfigurations.click();
-		Action.clickElementJavaScipt(lkSellerConfigurations);
+		Action.clickUsingJavaScipt(lkSellerConfigurations);
+		}catch(JavascriptException jse){
+			jse.printStackTrace();
+			
+		}
 	}
 }

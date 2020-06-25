@@ -9,9 +9,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
+import com.gsicommerce.romui.selenium.testdata.CatalogInventorySearchData;
 import com.gsicommerce.romui.selenium.testdata.Environment;
 import com.gsicommerce.romui.selenium.utilities.Action;
-import com.gsicommerce.romui.selenium.utilities.Webtable;
 
 public class ItemSearchPage {
 
@@ -20,7 +20,6 @@ public class ItemSearchPage {
 	Action action;
 
 	public ItemSearchPage(WebDriver driver, Environment env) {
-		// TODO Auto-generated constructor stub
 		this.driver = driver;
 		this.env = env;
 		PageFactory.initElements(driver, this);
@@ -29,10 +28,16 @@ public class ItemSearchPage {
 	}
 
 	@FindBy(how = How.CSS, using = "#items_item_search_form_query")
-	@CacheLookup
-	private WebElement txtSearch;
+	private WebElement txtItemIDSearch;
 
 	@FindBy(how = How.CSS, using = "#items_item_search_form_client_item_id")
+	private WebElement txtClientIDSearch;
+
+	@FindBy(how = How.CSS, using = "#items_item_search_form_style_id")
+	@CacheLookup
+	private WebElement txtStyleIDSearch;
+
+	@FindBy(how = How.CSS, using = "#items_item_client_item_id")
 	@CacheLookup
 	private WebElement txtClientItemID;
 
@@ -42,9 +47,13 @@ public class ItemSearchPage {
 
 	@FindBy(how = How.CSS, using = "#items_item_search_form_status")
 	@CacheLookup
+	private WebElement drpdwnSearchStatus;
+
+	@FindBy(how = How.CSS, using = "#items_item_status")
+	@CacheLookup
 	private WebElement dropDownStatus;
 
-	@FindBy(how = How.CSS, using = "#items_item_search_form_style_id")
+	@FindBy(how = How.CSS, using = "#items_item_style_id")
 	@CacheLookup
 	private WebElement txtStyleID;
 
@@ -118,15 +127,39 @@ public class ItemSearchPage {
 
 	@FindBy(how = How.CSS, using = "#items_item_upcs_attributes_0_upc")
 	@CacheLookup
-	private WebElement drpdwnUPC;
+	private WebElement txtUPC;
 
 	@FindBy(how = How.CSS, using = "#items_item_sales_class")
 	@CacheLookup
 	private WebElement drpdwnSalesClass;
 
-	@FindBy(how = How.CSS, using = "//button[text(),'Add']")
+	@FindBy(how = How.CSS, using = ".btn.btn-default.item-add-more-btn")
 	@CacheLookup
 	private List<WebElement> btnAddAttributes;
+
+	@FindBy(how = How.CSS, using = "#items_item_color_code")
+	@CacheLookup
+	private WebElement txtColorCode;
+
+	@FindBy(how = How.CSS, using = "#items_item_color_descriptions_attributes_0_locale")
+	@CacheLookup
+	private WebElement drpdwnColorLocale;
+
+	@FindBy(how = How.CSS, using = "#items_item_color_descriptions_attributes_0_description")
+	@CacheLookup
+	private WebElement txtColorDescrp;
+
+	@FindBy(how = How.CSS, using = "#items_item_size_code")
+	@CacheLookup
+	private WebElement txtSizeCode;
+
+	@FindBy(how = How.CSS, using = "#items_item_size_descriptions_attributes_0_locale")
+	@CacheLookup
+	private WebElement drpdwnSizeLocale;
+
+	@FindBy(how = How.CSS, using = "#items_item_size_descriptions_attributes_0_description")
+	@CacheLookup
+	private WebElement txtSizeDescrp;
 
 	@FindBy(how = How.CSS, using = "#items_item_style_id")
 	@CacheLookup
@@ -168,7 +201,7 @@ public class ItemSearchPage {
 	@CacheLookup
 	private WebElement chkboxEligibleToModify;
 
-	@FindBy(how = How.CSS, using = "[type='checkbox'][name='items_item[item_eligibility_attributes][set_infinite_inventory]']']")
+	@FindBy(how = How.CSS, using = "[type='checkbox'][name='items_item[item_eligibility_attributes][set_infinite_inventory]']")
 	@CacheLookup
 	private WebElement chkboxSetInfiniteInvtry;
 
@@ -316,23 +349,157 @@ public class ItemSearchPage {
 	@CacheLookup
 	private WebElement txtAttrbValue;
 
-	@FindBy(how = How.CSS, using = ".reflow-table")
+	@FindBy(how = How.XPATH, using = "//button[contains(text(),'Select')]")
 	@CacheLookup
-	private List<WebElement> itemWebTable;
+	private WebElement lkSelectATPRule;
 
-	public void searchForItem(String searchterm) {
-		Action.enter(txtSearch, searchterm);
-		CommonElementsPage.clickOnSearchBtn();
+	@FindBy(how = How.CSS, using = ".order-line-item-attribute")
+	@CacheLookup
+	public WebElement txtItemID;
+
+	@FindBy(how = How.CSS, using = ".col-sm-3")
+	@CacheLookup
+	public List<WebElement> viewItemDetailsPanel;
+
+	@FindBy(how = How.CSS, using = ".item-summary-desc")
+	@CacheLookup
+	public WebElement txtItemSummaryDescrp;
+
+	public void searchForItem(String searchterm, String type) {
+		CommonElementsPage.clickOnSearchIcon();
+		if (type.contains("clientItemID")) {
+			Action.enter(txtClientIDSearch, searchterm);
+		} else if (type.contains("productID")) {
+			Action.enter(txtDisProdID, searchterm);
+		} else if (type.contains("status")) {
+			Action.selectByVisibleText(drpdwnSearchStatus, searchterm);
+		}
+		// CommonElementsPage.clickOnSearchBtn();
+		Action.clickUsingJavaScipt(CommonElementsPage.btnSearch);
 	}
 
-	public void addItem() {
+	public void searchForMultipleOptions(CatalogInventorySearchData data) {
+		CommonElementsPage.clickOnSearchIcon();
+		Action.enter(txtItemIDSearch, data.getItemID());
+		Action.enter(txtClientIDSearch, data.getClientItemID());
+		Action.enter(txtDisProdID, data.getProductID());
+		Action.selectByVisibleText(drpdwnSearchStatus, data.getStatus());
+		Action.enter(txtStyleIDSearch, data.getStyleID());
+
+		// CommonElementsPage.clickOnSearchBtn();
+		Action.clickUsingJavaScipt(CommonElementsPage.btnSearch);
+	}
+
+	public void addItem(CatalogInventorySearchData data, String clientItemID) {
 		CommonElementsPage.clickOnAddBtn();
+		Action.waitForElementToBeClickable(driver, drpdwnCatalogID, 30);
+		Action.selectByIndex(drpdwnCatalogID, 1);
+		Action.enter(txtClientItemID, clientItemID);
+		Action.enter(txtItemDescrp, data.getItemDescrp());
+		Action.enter(txtTaxCode, data.getTaxCode());
+		Action.selectByVisibleText(drpdwnItemType, data.getItemType());
+		Action.selectByVisibleText(drpdwnStatus, data.getStatus());
+		Action.enter(txtDispProdID, data.getProductID());
+		Action.enter(txtDispProdTitle, data.getProductTitle());
+		Action.selectByVisibleText(drpdwnCurrency, data.getCurrency());
+		Action.enter(txtUnitCost, data.getUnitCost());
+		Action.selectByVisibleText(drpdwnCountyOfOrigin, data.getCountryOfOrigin());
+		Action.enter(txtBrandName, data.getBrandName());
+		btnAddBrandDesc.click();
+		Action.selectByVisibleText(drpdwnBrandLocale, data.getBrandLocale());
+		Action.enter(txtBrandDesc, data.getBrandDescp());
+		Action.scrollDown("500");
+		btnAddUPC.click();
+		Action.selectByVisibleText(drpdwnUPCType, data.getUpcType());
+		Action.enter(txtUPC, data.getUpc());
+		Action.selectByIndex(drpdwnSalesClass, 1);
+		btnAddAttributes.get(0).click();
+		Action.enter(txtColorCode, data.getColorCode());
+		Action.selectByVisibleText(drpdwnColorLocale, data.getColorLocale());
+		Action.enter(txtColorDescrp, data.getColorDescrp());
+		Action.scrollDown("500");
+		btnAddAttributes.get(1).click();
+		Action.enter(txtSizeCode, data.getSizeCode());
+		Action.selectByVisibleText(drpdwnSizeLocale, data.getSizeLocale());
+		Action.enter(txtSizeDescrp, data.getSizeDescrp());
+		Action.enter(txtStyleID, data.getStyleID());
+		Action.enter(txtItemStyleDesc, data.getStyleDescrp());
+		Action.enter(txtDSSupplierName, data.getDsSupplierName());
+		Action.enter(txtDSSupplierNo, data.getDsSupplierNo());
+		Action.enter(txtDSSupplierPartName, data.getDsSupplierPartNo());
+		chkboxISPUEligible.click();
+		chkboxSFSEligible.click();
+		chkboxSTSEligible.click();
+		chkboxAsscDelvryEligible.click();
+		Action.scrollDown("500");
+		chkboxSetInfiniteInvtry.click();
+		chkboxShipMethdOptmzEligible.click();
+		chkboxHFReturnsEligible.click();
+		Action.selectByVisibleText(drpdwnSurcngOverride, data.getSourcingOverride());
+		Action.selectByVisibleText(drpdwnSurcngPrefrnce, data.getSourcingPreference());
+		Action.enter(txtSurcngClassfctn1, data.getSourcingClassfication1());
+		Action.enter(txtSurcngClassfctn2, data.getSourcingClassfication2());
+		Action.enter(txtSurcngClassfctn3, data.getSourcingClassfication3());
+		Action.enter(txtHazardousMatrialCode, data.getHazardousMaterlCode());
+		Action.selectByVisibleText(drpdwnMassWtUnitOfMeasure, data.getWeightUnitOfMeasure());
+		Action.enter(txtMassItemWt, data.getItemWeight());
+		Action.selectByVisibleText(drpdwnPackngDimensionUnitOfMeasure, data.getDimensionUnitOfMeasure());
+		Action.enter(txtItemPackgeWidth, data.getItemPackWidth());
+		Action.enter(txtItemPackgeLength, data.getItemPackLength());
+		Action.enter(txtItemPackgeHeight, data.getItemPackHeight());
+		Action.enter(txtItemPackgeType, data.getItemPackType());
+		Action.selectByVisibleText(drpdwnDimensionlWtUOM, data.getDimensionalWeightUOM());
+		Action.enter(txtDimensionlWeight, data.getDimensionalWeight());
+		Action.enter(txtFreightClass, data.getFreightClass());
+		Action.selectByVisibleText(drpdwnShipAlone, data.getShipAlone());
+		Action.enter(txtShippngSurchrgOverride, data.getShippingSurchargeOverride());
+		Action.enter(txtShippngChrgOverride, data.getShippingChargeOverride());
+		Action.enter(txtMinShmptProcssngDays, data.getMinShipmtProcessingDays());
+		Action.enter(txtMaxShmptProcssngDays, data.getMaxShipmtProcessingDays());
+		Action.enter(txtMinOrderableQty, data.getMinOrderableQty());
+		Action.enter(txtMaxOrderableQty, data.getMaxOrderableQty());
+		txtStreetDt.click();
+		btnATPConfigID.click();
+		Action.waitForElementToBeClickable(driver, lkSelectATPRule, 30);
+		lkSelectATPRule.click();
+		Action.waitForElementToBeClickable(driver, btnAddImg, 60);
+		btnAddImg.click();
+		Action.enter(txtImgType, data.getImgType());
+		Action.enter(txtImgView, data.getImgView());
+		Action.enter(txtImgHeight, data.getImgHeight());
+		Action.enter(txtImgWidth, data.getImgWidth());
+		Action.enter(txtImgURL, data.getImgURL());
+		btnAddAttribute.click();
+		Action.enter(txtAttrbName, data.getAttribName());
+		Action.enter(txtAttrbValue, data.getAttribVal());
+		CommonElementsPage.clickOnSaveBtn();
 	}
 
-	public Webtable itemWebTable(int i) {
-		Webtable wt = new Webtable(driver, (WebElement) itemWebTable(i));
-		return wt;
+	public void editItem(CatalogInventorySearchData data) throws Exception {
+		CommonElementsPage.clickSingleRowActionsIcon(4, 2);
+		Action.enter(txtItemDescrp, "Auto - " + data.getItemDescrp());
+		CommonElementsPage.clickOnSaveBtn();
+	}
 
+	public boolean verifyViewItem(int index, String expected) throws Exception {
+		boolean found = false;
+		String actual = viewItemDetailsPanel.get(index).getText();
+		if (actual.contains(expected)) {
+			found = true;
+		} else {
+			found = false;
+		}
+		return found;
+	}
+
+	public boolean verifySearch(int row, int col, String expected) throws Exception {
+		boolean found = false;
+		if (CommonElementsPage.getRowCellTextVal(row, col).contains(expected)) {
+			found = true;
+		} else {
+			found = false;
+		}
+		return found;
 	}
 
 }

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.gsicommerce.romui.selenium.tests.PipelinesTests">
+      <class name="com.gsicommerce.romui.selenium.tests.OrdersTests">
         <methods>
           <include name="tearDown"/>
           <include name="setup"/>
-          <include name="testViewPipeline"/>
+          <include name="testViewOrder"/>
         </methods>
-      </class> <!-- com.gsicommerce.romui.selenium.tests.PipelinesTests -->
+      </class> <!-- com.gsicommerce.romui.selenium.tests.OrdersTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

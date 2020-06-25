@@ -796,4 +796,9 @@ public class ServiceGroupConfigsPage {
 		CommonElementsPage.clickOnSaveBtn();
 	}
 
+	public void addSvcFlwProcess() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

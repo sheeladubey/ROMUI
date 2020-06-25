@@ -12,6 +12,8 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -34,6 +36,9 @@ import org.testng.ITestResult;
 import com.gsicommerce.romui.selenium.testdata.Environment;
 
 public class Browser {
+	
+	static String username = "usoni%40radial.com"; // Your username
+	static String authkey = "u61969854dbbf6ad"; // Your authkey
 	/**
 	 * This method will get the browser instance for the browser type and url
 	 * provided. If the browser instance does not exist, then it will start another
@@ -43,10 +48,11 @@ public class Browser {
 	 * @param url
 	 * @return driver object
 	 */
+	
 	public static WebDriver getBrowserInstance(final String browserType, final String url, final Environment env) {
 
 		final WebDriver driver = buildBrowserInstance(env, browserType);
-
+		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(env.getWaitPeriod(), TimeUnit.SECONDS);
 		driver.get(url);
 
@@ -71,9 +77,9 @@ public class Browser {
 
 		if (browserType.equalsIgnoreCase("chrome")) {
 			setSystemProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.silentOutput", "true");
 			// DesiredCapabilities chromecapabilities = DesiredCapabilities.chrome();
 			// chromecapabilities.setBrowserName("chrome");
-			System.setProperty("webdriver.chrome.silentOutput", "true");
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("test-type");
 			Map<String, Object> prefs = new HashMap<String, Object>();
@@ -93,26 +99,18 @@ public class Browser {
 
 		if (browserType.equalsIgnoreCase("ie")) {
 			InternetExplorerOptions options = new InternetExplorerOptions();
-			//code added by sheela
-			DesiredCapabilities ieCapabilities = DesiredCapabilities.internetExplorer();
-			/*ieCapabilities.setCapability("nativeEvents", false);    
-			ieCapabilities.setCapability("unexpectedAlertBehaviour", "accept");
-			ieCapabilities.setCapability("ignoreProtectedModeSettings", true);
-			ieCapabilities.setCapability("disable-popup-blocking", true);
-			ieCapabilities.setCapability("enablePersistentHover", true);*/
-			ieCapabilities.setJavascriptEnabled(true);
-			//code added by sheela
 			options.introduceFlakinessByIgnoringSecurityDomains();
 			options.enablePersistentHovering();
 			options.destructivelyEnsureCleanSession();
-			options.requireWindowFocus();
+			options.requireWindowFocus();	
+			options.setCapability("EnableNativeEvents", false);
+			options.setCapability("ignoreZoomSetting", true);
 			File file = new File("C:\\Program Files\\Internet Explorer\\IEDriverServer.exe");
-			System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
-			//driver = new InternetExplorerDriver(options);
-			driver = new InternetExplorerDriver(options);
-			
-			
-			
+			System.setProperty("webdriver.ie.driver", file.getAbsolutePath());	
+			driver = new InternetExplorerDriver(options);	
+			// Press CTRL + 0 keys of keyboard to set IEDriver Instance zoom level to 100%.
+			driver.findElement(By.tagName("html")).sendKeys(Keys.chord(Keys.CONTROL, "0"));
+		
 		} else if (browserType.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "C:\\geckodriver.exe");
 			FirefoxOptions options = new FirefoxOptions();
@@ -155,8 +153,8 @@ public class Browser {
 		try {
 			if (env.getBrowserType().equalsIgnoreCase("remote-firefox")) {
 
-				String username = "usoni%40radial.com"; // Your username
-				String authkey = "u61969854dbbf6ad"; // Your authkey
+			/*	String username = "usoni%40radial.com"; // Your username
+				String authkey = "u61969854dbbf6ad"; // Your authkey */
 
 				final FirefoxProfile profile = new FirefoxProfile();
 				profile.setAcceptUntrustedCertificates(true);
@@ -174,15 +172,15 @@ public class Browser {
 				capabilities.setCapability("record_video", "true");
 				// final WebDriver remoteFirefoxDriver = new RemoteWebDriver(new
 				// URL(env.getRemoteUrl()), capabilities);
-				RemoteWebDriver remoteFirefoxDriver = new RemoteWebDriver(
+				final RemoteWebDriver remoteFirefoxDriver = new RemoteWebDriver(
 						new URL("http://" + username + ":" + authkey + "@hub.crossbrowsertesting.com:80/wd/hub"),
 						capabilities);
 				return remoteFirefoxDriver;
 			}
 
 			if (env.getBrowserType().equalsIgnoreCase("remote-ie")) {
-				String username = "usoni%40radial.com"; // Your username
-				String authkey = "u61969854dbbf6ad"; // Your authkey
+			/*	String username = "usoni%40radial.com"; // Your username
+				String authkey = "u61969854dbbf6ad"; // Your authkey */
 				final DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
 				capabilities.setCapability(CapabilityType.ForSeleniumServer.ENSURING_CLEAN_SESSION, true);
 				capabilities.setCapability(InternetExplorerDriver.ENABLE_PERSISTENT_HOVERING, true);
@@ -192,18 +190,20 @@ public class Browser {
 				capabilities.setCapability("requireWindowFocus", true);
 				capabilities.setCapability(CapabilityType.SUPPORTS_JAVASCRIPT, true);
 				capabilities.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, true);
+				capabilities.setCapability("ignoreZoomSetting", true);
 				// capabilities.setJavascriptEnabled(true);
-				capabilities.setCapability("name", "Basic Test Example");
+				capabilities.setCapability("name", "Sheela CBT IE test");
 				capabilities.setCapability("build", "1.0");
 				capabilities.setCapability("browserName", "Internet Explorer");
 				capabilities.setCapability("version", "11");
 				capabilities.setCapability("platform", "Windows 10");
 				capabilities.setCapability("screenResolution", "1366x768");
+				capabilities.setCapability("record_video", "true");
 				File file = new File("C:\\Program Files\\Internet Explorer\\IEDriverServer.exe");
 				System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
 				// final WebDriver remoteIEDriver = new RemoteWebDriver(new
 				// URL(env.getRemoteUrl()), capabilities);
-				RemoteWebDriver remoteIEDriver = new RemoteWebDriver(
+				final RemoteWebDriver remoteIEDriver = new RemoteWebDriver(
 						new URL("http://" + username + ":" + authkey + "@hub.crossbrowsertesting.com:80/wd/hub"),
 						capabilities);
 				return remoteIEDriver;
@@ -217,10 +217,10 @@ public class Browser {
 			}
 
 			if (env.getBrowserType().equalsIgnoreCase("remote-chrome")) {
-				String username = "usoni%40radial.com"; // Your username
-				String authkey = "u61969854dbbf6ad"; // Your authkey
+				/*String username = "usoni%40radial.com"; // Your username
+				String authkey = "u61969854dbbf6ad"; // Your authkey */
 				final DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-				capabilities.setCapability("name", "Sheela CBT test");
+				capabilities.setCapability("name", "Sheela CBT Chrome test");
 				capabilities.setCapability("browserName", "Chrome");
 				capabilities.setCapability("platform", "Windows 10");
 				capabilities.setCapability("screenResolution", "1366x768");
@@ -246,25 +246,6 @@ public class Browser {
 				SafariOptions options = new SafariOptions();
 				options.setUseTechnologyPreview(true);
 				final WebDriver remoteDriver = new RemoteWebDriver(new URL(env.getRemoteUrl()), options);
-				return remoteDriver;
-			}
-			if (env.getBrowserType().equalsIgnoreCase("remote-ipad")) {
-				String username = "usoni%40radial.com"; // Your username
-				String authkey = "u61969854dbbf6ad"; // Your authkey
-				final DesiredCapabilities capabilities = DesiredCapabilities.ipad();
-				capabilities.setCapability("name", "Sheela ipad CBT test");
-				capabilities.setCapability("build", "1.0");
-				capabilities.setCapability("browserName", "Safari");
-				capabilities.setCapability("deviceName", "iPad Air 2 Simulator");
-				capabilities.setCapability("platformVersion", "9.3");
-				capabilities.setCapability("platformName", "iOS");
-				capabilities.setCapability("deviceOrientation", "landscape");
-				capabilities.setJavascriptEnabled(true);
-				// final WebDriver remoteDriver = new RemoteWebDriver(new
-				// URL(env.getRemoteUrl()), capabilities);
-				final WebDriver remoteDriver = new RemoteWebDriver(
-						new URL("http://" + username + ":" + authkey + "@hub.crossbrowsertesting.com:80/wd/hub"),
-						capabilities);
 				return remoteDriver;
 			}
 		} catch (final Exception e) {
@@ -315,6 +296,23 @@ public class Browser {
 		File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(screenshot, new File(NewFileNamePath));
 		NewFileNamePath = "<a href=file:///" + NewFileNamePath + ">ScreenShot" + "</a>";
+
+	}
+
+	public static String screenShot2(final WebDriver driver, final Environment env, final ITestResult c)
+			throws IOException {
+
+		String NewFileNamePath;
+		File directory = new File(".");
+		DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd_hhmmssaa");
+		Date date = new Date();
+		NewFileNamePath = directory.getCanonicalPath() + "\\ScreenShots\\" + "_" + dateFormat.format(date) + "_"
+				+ env.getStoreEnvironment() + ".png";
+		File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(screenshot, new File(NewFileNamePath));
+		// NewFileNamePath = "<a href=file:///" + NewFileNamePath + ">ScreenShot"
+		// + "</a>";
+		return NewFileNamePath;
 
 	}
 

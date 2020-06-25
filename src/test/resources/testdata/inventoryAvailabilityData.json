@@ -1,0 +1,11 @@
+{
+"ATP Rule Name":"ROM",
+"ATP Rule Description":"ROMDescription",
+"Overdue Supply":"10",
+"Overdue Demand":"11",
+"Forward Days to Consider Supply":"12",
+"Backward Days to Consider Supply":"13",
+"Receipt Processing Time":"14",
+"Advance Notification Time":"15"
+
+}

@@ -1,87 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="4" passed="1" failed="1" skipped="0">
+<testng-results ignored="2" total="4" passed="0" failed="2" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[Action icon is clicked on]]>
+      <![CDATA[There is no page limit option displayed]]>
     </line>
     <line>
-      <![CDATA[Click View Seller Configurations Icon]]>
+      <![CDATA[page limit drop down value is selected]]>
     </line>
     <line>
-      <![CDATA[Action icon is clicked on]]>
+      <![CDATA[Click Delete ATP Rule icon]]>
     </line>
     <line>
-      <![CDATA[Click Edit button from VIEW SELLER CONFIGURATION SCREEN]]>
+      <![CDATA[View Order icon is clicked on]]>
     </line>
   </reporter-output>
-  <suite started-at="2020-06-20T02:19:30 EDT" name="Suite" finished-at="2020-06-20T02:20:29 EDT" duration-ms="58979">
+  <suite started-at="2020-06-25T00:09:24 EDT" name="Suite" finished-at="2020-06-25T00:10:45 EDT" duration-ms="80431">
     <groups>
     </groups>
-    <test started-at="2020-06-20T02:19:30 EDT" name="SellerConfigsTests" finished-at="2020-06-20T02:20:29 EDT" duration-ms="58979">
-      <class name="com.gsicommerce.romui.selenium.tests.SellerConfigsTests">
-        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.SellerConfigsTests@43bc63a3]" started-at="2020-06-20T02:19:30 EDT" name="setup" finished-at="2020-06-20T02:19:40 EDT" duration-ms="10300" status="PASS">
+    <test started-at="2020-06-25T00:09:24 EDT" name="ATPRulesTests" finished-at="2020-06-25T00:10:45 EDT" duration-ms="80431">
+      <class name="com.gsicommerce.romui.selenium.tests.ATPRulesTests">
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ATPRulesTests@557caf28]" started-at="2020-06-25T00:09:24 EDT" name="setup" finished-at="2020-06-25T00:09:36 EDT" duration-ms="11343" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@1c5c616f]]>
+                <![CDATA[org.testng.TestRunner@21e20ad5]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testViewSeller()[pri:3, instance:com.gsicommerce.romui.selenium.tests.SellerConfigsTests@43bc63a3]" started-at="2020-06-20T02:19:40 EDT" name="testViewSeller" description="To Verify View Seller Configurations feature" finished-at="2020-06-20T02:19:56 EDT" duration-ms="15730" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Action icon is clicked on]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- testViewSeller -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.SellerConfigsTests@43bc63a3]" started-at="2020-06-20T02:19:56 EDT" name="tearDown" finished-at="2020-06-20T02:19:56 EDT" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testViewSeller status=SUCCESS method=SellerConfigsTests.testViewSeller()[pri:3, instance:com.gsicommerce.romui.selenium.tests.SellerConfigsTests@43bc63a3] output=Action icon is clicked on]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.SellerConfigsTests@43bc63a3]" started-at="2020-06-20T02:19:56 EDT" name="setup" finished-at="2020-06-20T02:20:06 EDT" duration-ms="9879" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@1c5c616f]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="testEditSellerFromViewSellerScreen()[pri:4, instance:com.gsicommerce.romui.selenium.tests.SellerConfigsTests@43bc63a3]" started-at="2020-06-20T02:20:06 EDT" name="testEditSellerFromViewSellerScreen" description="To Verify Edit Seller Configurations feature by clicking edit button from view seller screen" finished-at="2020-06-20T02:20:28 EDT" duration-ms="22610" status="FAIL">
+        <test-method signature="testAddATPRule()[pri:2, instance:com.gsicommerce.romui.selenium.tests.ATPRulesTests@557caf28]" started-at="2020-06-25T00:09:36 EDT" name="testAddATPRule" description="to Verify user able to Add ATP rule in Manage ATP rules page" finished-at="2020-06-25T00:10:15 EDT" duration-ms="39508" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":".reflow-table"}
-  (Session info: chrome=83.0.4103.106)
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"span.ss-icon.ss-navigateright.ss-black-tie-bold"}
+  (Session info: chrome=83.0.4103.116)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'KOP-BM5TNF2', ip: '10.140.134.238', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+System info: host: 'KOP-BM5TNF2', ip: '10.140.132.109', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54585}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 9d017ec47ba4d286d3f60b176fda0b94
-*** Element info: {Using=css selector, value=.reflow-table}]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60157}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 2374d555bd567cfc342f98e096eb1354
+*** Element info: {Using=css selector, value=span.ss-icon.ss-navigateright.ss-black-tie-bold}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".reflow-table"}
-  (Session info: chrome=83.0.4103.106)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"span.ss-icon.ss-navigateright.ss-black-tie-bold"}
+  (Session info: chrome=83.0.4103.116)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'KOP-BM5TNF2', ip: '10.140.134.238', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+System info: host: 'KOP-BM5TNF2', ip: '10.140.132.109', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54585}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 9d017ec47ba4d286d3f60b176fda0b94
-*** Element info: {Using=css selector, value=.reflow-table}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60157}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 2374d555bd567cfc342f98e096eb1354
+*** Element info: {Using=css selector, value=span.ss-icon.ss-navigateright.ss-black-tie-bold}
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -99,13 +70,11 @@ at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy14.findElements(Unknown Source)
-at com.gsicommerce.romui.selenium.utilities.Webtable.<init>(Webtable.java:25)
-at com.gsicommerce.romui.selenium.pages.ordermanagement.CommonElementsPage.nodeWebTable(CommonElementsPage.java:91)
-at com.gsicommerce.romui.selenium.pages.ordermanagement.CommonElementsPage.getRowNum(CommonElementsPage.java:157)
-at com.gsicommerce.romui.selenium.pages.ordermanagement.SellerConfigurationsPage.verifyEditSellerConfig(SellerConfigurationsPage.java:118)
-at com.gsicommerce.romui.selenium.pages.ordermanagement.SellerConfigurationsPage.VerifyEditSellerFromViewSellerScreen(SellerConfigurationsPage.java:165)
-at com.gsicommerce.romui.selenium.tests.SellerConfigsTests.testEditSellerFromViewSellerScreen(SellerConfigsTests.java:109)
+at com.sun.proxy.$Proxy14.isEnabled(Unknown Source)
+at com.gsicommerce.romui.selenium.pages.ordermanagement.CommonElementsPage.clickNextPage(CommonElementsPage.java:131)
+at com.gsicommerce.romui.selenium.pages.ordermanagement.CommonElementsPage.getRowNo(CommonElementsPage.java:143)
+at com.gsicommerce.romui.selenium.pages.ordermanagement.ATPRulesPage.addATPRule(ATPRulesPage.java:82)
+at com.gsicommerce.romui.selenium.tests.ATPRulesTests.testAddATPRule(ATPRulesTests.java:34)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -139,28 +108,136 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
             <line>
-              <![CDATA[Click View Seller Configurations Icon]]>
+              <![CDATA[There is no page limit option displayed]]>
             </line>
             <line>
-              <![CDATA[Action icon is clicked on]]>
-            </line>
-            <line>
-              <![CDATA[Click Edit button from VIEW SELLER CONFIGURATION SCREEN]]>
+              <![CDATA[page limit drop down value is selected]]>
             </line>
           </reporter-output>
-        </test-method> <!-- testEditSellerFromViewSellerScreen -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.SellerConfigsTests@43bc63a3]" started-at="2020-06-20T02:20:28 EDT" name="tearDown" finished-at="2020-06-20T02:20:29 EDT" duration-ms="426" status="PASS">
+        </test-method> <!-- testAddATPRule -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ATPRulesTests@557caf28]" started-at="2020-06-25T00:10:15 EDT" name="tearDown" finished-at="2020-06-25T00:10:16 EDT" duration-ms="404" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testEditSellerFromViewSellerScreen status=FAILURE method=SellerConfigsTests.testEditSellerFromViewSellerScreen()[pri:4, instance:com.gsicommerce.romui.selenium.tests.SellerConfigsTests@43bc63a3] output=Click View Seller Configurations Icon]]]>
+                <![CDATA[[TestResult name=testAddATPRule status=FAILURE method=ATPRulesTests.testAddATPRule()[pri:2, instance:com.gsicommerce.romui.selenium.tests.ATPRulesTests@557caf28] output=There is no page limit option displayed]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.gsicommerce.romui.selenium.tests.SellerConfigsTests -->
-    </test> <!-- SellerConfigsTests -->
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ATPRulesTests@557caf28]" started-at="2020-06-25T00:10:16 EDT" name="setup" finished-at="2020-06-25T00:10:25 EDT" duration-ms="9770" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@21e20ad5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testDeleteATPRule()[pri:2, instance:com.gsicommerce.romui.selenium.tests.ATPRulesTests@557caf28]" started-at="2020-06-25T00:10:25 EDT" name="testDeleteATPRule" description="to Verify user able to delete ATP rule in Manage ATP rules page" finished-at="2020-06-25T00:10:44 EDT" duration-ms="18988" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":".//tr[0]/td[4]/div/a[2]/span[1]"}
+  (Session info: chrome=83.0.4103.116)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KOP-BM5TNF2', ip: '10.140.132.109', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60209}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 5494602a09d068c9700b0045202e1016
+*** Element info: {Using=xpath, value=.//tr[0]/td[4]/div/a[2]/span[1]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":".//tr[0]/td[4]/div/a[2]/span[1]"}
+  (Session info: chrome=83.0.4103.116)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KOP-BM5TNF2', ip: '10.140.132.109', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60209}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 5494602a09d068c9700b0045202e1016
+*** Element info: {Using=xpath, value=.//tr[0]/td[4]/div/a[2]/span[1]}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:185)
+at org.openqa.selenium.remote.RemoteWebElement.findElementByXPath(RemoteWebElement.java:261)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:181)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at com.sun.proxy.$Proxy14.findElement(Unknown Source)
+at com.gsicommerce.romui.selenium.utilities.Webtable.clickDivLinkSpanElement(Webtable.java:225)
+at com.gsicommerce.romui.selenium.pages.ordermanagement.CommonElementsPage.clickDivSpanLink(CommonElementsPage.java:192)
+at com.gsicommerce.romui.selenium.pages.ordermanagement.ATPRulesPage.deleteATPRule(ATPRulesPage.java:112)
+at com.gsicommerce.romui.selenium.tests.ATPRulesTests.testDeleteATPRule(ATPRulesTests.java:64)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:767)
+at org.testng.TestRunner.run(TestRunner.java:588)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
+at org.testng.TestNG.runSuites(TestNG.java:1066)
+at org.testng.TestNG.run(TestNG.java:1034)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+            <line>
+              <![CDATA[Click Delete ATP Rule icon]]>
+            </line>
+            <line>
+              <![CDATA[View Order icon is clicked on]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testDeleteATPRule -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ATPRulesTests@557caf28]" started-at="2020-06-25T00:10:44 EDT" name="tearDown" finished-at="2020-06-25T00:10:45 EDT" duration-ms="388" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testDeleteATPRule status=FAILURE method=ATPRulesTests.testDeleteATPRule()[pri:2, instance:com.gsicommerce.romui.selenium.tests.ATPRulesTests@557caf28] output=Click Delete ATP Rule icon]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.gsicommerce.romui.selenium.tests.ATPRulesTests -->
+    </test> <!-- ATPRulesTests -->
   </suite> <!-- Suite -->
 </testng-results>

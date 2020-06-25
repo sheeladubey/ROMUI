@@ -201,7 +201,7 @@ public class ServiceFlowPage {
 		int rowNo = CommonElementsPage.getRowNo(svcflowName);
 		System.out.println(rowNo);
 		Action.waitForElementToBeClickable(driver, btnAddSvcFlw, 30);
-		CommonElementsPage.clickActionsIcon(rowNo, 3, 3, 1);
+		CommonElementsPage.clickDivSpanLink(rowNo, 3, 0,3, 1);
 		txtBoxSvcFlwName.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 		Action.enter(txtBoxSvcFlwName, data.getSvcFlwName());
 		Action.selectByValue(drpdwnSvcName, "Shipment");
@@ -241,7 +241,7 @@ public class ServiceFlowPage {
 		int rowNo = CommonElementsPage.getRowNo(svcflowName);
 		System.out.println(rowNo);
 		Action.waitForElementToBeClickable(driver, btnAddSvcFlw, 30);
-		CommonElementsPage.clickActionsIcon(rowNo, 3, 1, 1);
+		CommonElementsPage.clickDivSpanLink(rowNo, 3,0, 1, 1);
 		System.out.println("Clicked View Service Flow button");
 		Assert.assertEquals(viewSvcFlwConfigHeader.getText(), RomuiEnumValues.SERVICEFLOW_VIEW_HEADER.getMessage(),
 				"USER does not navigated to View Service Flow screen");
@@ -262,7 +262,7 @@ public class ServiceFlowPage {
 		btnSearch.click();
 		int rowNo = CommonElementsPage.getRowNo(svcflowName);
 		Action.waitForElementToBeClickable(driver, btnAddSvcFlw, 30);
-		CommonElementsPage.clickActionsIcon(rowNo, 3, 2, 1);
+		CommonElementsPage.clickDivSpanLink(rowNo, 3,0, 2, 1);
 		Action.enter(txtBoxSvcFlwName, data.getSvcFlwName());
 		btnSave.click();
 
@@ -275,7 +275,7 @@ public class ServiceFlowPage {
 		btnSearch.click();
 		int rowNo = CommonElementsPage.getRowNo(svcflowName);
 		Action.waitForElementToBeClickable(driver, btnAddSvcFlw, 30);
-		CommonElementsPage.clickActionsIcon(rowNo, 3, 4, 1);
+		CommonElementsPage.clickDivSpanLink(rowNo, 3,0, 4, 1);
 
 	}
 

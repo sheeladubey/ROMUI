@@ -11,6 +11,7 @@ import org.openqa.selenium.WebElement;
 import com.gsicommerce.romui.selenium.testdata.Environment;
 import com.gsicommerce.romui.selenium.utilities.Action;
 import com.gsicommerce.romui.selenium.utilities.AssertingWebElement;
+import com.gsicommerce.romui.selenium.utilities.GsiWebElement;
 
 
 public class Webtable_Old extends Action {

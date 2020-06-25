@@ -16,8 +16,8 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.gsicommerce.romui.selenium.testdata.Environment;
 import com.gsicommerce.romui.selenium.testdata.ShippingLabelConfigData;
 import com.gsicommerce.romui.selenium.utilities.Action;
+import com.gsicommerce.romui.selenium.utilities.Common;
 import com.gsicommerce.romui.selenium.utilities.RomuiEnumValues;
-import com.gsicommerce.romui.selenium.utilities.Webtable;
 
 public class ShippingLabelConfigPage {
 
@@ -118,25 +118,24 @@ public class ShippingLabelConfigPage {
 	@FindBy(how = How.CSS, using = "[data-shipping-label-configuration-carrier-delete=''][value='fulfillment-node-sourcing-index-0']")
 	public WebElement btnDeleteCarrier;
 
-	@FindBy(how = How.CSS, using = ".alert-danger")
-	private WebElement txtformvalidationError;
-
 	public void addShippingLabelConfig(int shipconfigindex)
 			throws JsonParseException, JsonMappingException, IOException, Exception {
 		shipConfigdata = ShippingLabelConfigData.get(env.getFileLocation());
 		serviceProviderConfig = shipConfigdata.getserviceProviderName().get(shipconfigindex);
 		Action.waitForElementToBeClickable(driver, btnAdd, 10);
-		Action.clickElementJavaScipt(btnAdd);
+		Action.clickUsingJavaScipt(btnAdd);
 		Action.waitForElementToBeClickable(driver, drpdwnServiceProviderName, 20);
 		Action.selectByVisibleText(drpdwnServiceProviderName, serviceProviderConfig);
+		Common.waitForPageLoaded(driver);
 		Action.waitForElementToBeClickable(driver, txtdwnSellerDescription, 20);
 		Action.enter(txtdwnSellerDescription, shipConfigdata.getsellerDescription());
 		Action.selectByVisibleText(drpdwnDefaultLabelStrategy, shipConfigdata.getDefaultLabelStrategy());
 		drpdwnCountry.click();
 		Action.selectByVisibleText(drpdwnCountry, shipConfigdata.getcountry().get(2));
-		chkboxAddressOverride.click();
+		//chkboxAddressOverride.click();
+		Action.clickUsingJavaScipt(chkboxAddressOverride);
 		Action.selectByVisibleText(drpdwnCountryOverride, shipConfigdata.getcountry().get(2));
-		Action.scrollingToBottomofAPage();
+		Action.scrollToBottomofPage();
 		Action.enter(txtAddressLine1, shipConfigdata.getAddressLine1());
 		Action.enter(txtAddressLine2, shipConfigdata.getAddressLine2());
 		Action.enter(txtAddressLine3, shipConfigdata.getAddressLine3());
@@ -156,27 +155,27 @@ public class ShippingLabelConfigPage {
 		if (serviceProviderConfig.equals("CONSIGNOR")) {
 			Action.waitForElementToBeClickable(driver, btnSave, 20);
 			btnSave.click();
-			rowNoGroupName = CommonElementsPage.getRowNum(serviceProviderConfig);
-			System.out.println("Selected row is :" + CommonElementsPage.getRowNum(serviceProviderConfig));
-			System.out.println(
-					"Row text selected:" + Webtable.getTableCellText(rowNoGroupName, 1).equals(serviceProviderConfig));
-			Assert.assertTrue(Webtable.getTableCellText(rowNoGroupName, 1).contains(serviceProviderConfig),
+			rowNoGroupName = CommonElementsPage.getRowNo(serviceProviderConfig);
+			System.out.println("Selected row is :" + CommonElementsPage.getRowNo(serviceProviderConfig));
+			System.out.println("Row text selected:"
+					+ CommonElementsPage.getRowCellTextVal(rowNoGroupName, 1).equals(serviceProviderConfig));
+			Assert.assertTrue(CommonElementsPage.getRowCellTextVal(rowNoGroupName, 1).contains(serviceProviderConfig),
 					"NEW SHIPPING LABEL CONFIGURATION for service provider CONSIGNOR has not been added");
 		}
 		if (serviceProviderConfig.equals("CONSIGNOR_MOCK")) {
 			Action.waitForElementToBeClickable(driver, btnSave, 20);
 			btnSave.click();
-			rowNoGroupName = CommonElementsPage.getRowNum(serviceProviderConfig);
-			System.out.println("Selected row is :" + CommonElementsPage.getRowNum(serviceProviderConfig));
-			System.out.println("Row text selected:" + Webtable.getTableCellText(rowNoGroupName, 1));
-			Assert.assertEquals(Webtable.getTableCellText(rowNoGroupName, 1), serviceProviderConfig,
+			rowNoGroupName = CommonElementsPage.getRowNo(serviceProviderConfig);
+			System.out.println("Selected row is :" + CommonElementsPage.getRowNo(serviceProviderConfig));
+			System.out.println("Row text selected:" + CommonElementsPage.getRowCellTextVal(rowNoGroupName, 1));
+			Assert.assertEquals(CommonElementsPage.getRowCellTextVal(rowNoGroupName, 1), serviceProviderConfig,
 					"NEW SHIPPING LABEL CONFIGURATION for service provider CONSIGNOR_MOCK has not been added");
 		}
 		if (serviceProviderConfig.equals("FEDEX")) {
-			Action.scrollingToBottomofAPage();
+			Action.scrollToBottomofPage();
 			Action.waitForElementToBeClickable(driver, btnAddCarrier, 10);
 			// btnAddCarrier.click();
-			Action.clickElementJavaScipt(btnAddCarrier);
+			Action.clickUsingJavaScipt(btnAddCarrier);
 			Action.waitForElementToBeClickable(driver, drpdwnServiceName, 10);
 			drpdwnServiceName.click();
 			Action.selectByVisibleText(drpdwnServiceName, shipConfigdata.getServiceName().get(1));
@@ -192,37 +191,37 @@ public class ShippingLabelConfigPage {
 			Action.enter(txtLabelStockType, shipConfigdata.getlabelStockType());
 			Action.enter(txtParentMeterNumber, shipConfigdata.getparentMeterNumber());
 			Action.waitForElementToBeClickable(driver, btnSave, 10);
-			Action.clickElementJavaScipt(btnSave);
-			rowNoGroupName = CommonElementsPage.getRowNum(serviceProviderConfig);
-			System.out.println("Selected row is :" + CommonElementsPage.getRowNum(serviceProviderConfig));
-			System.out.println("Row text selected:" + Webtable.getTableCellText(rowNoGroupName, 1));
-			Assert.assertEquals(Webtable.getTableCellText(rowNoGroupName, 1), serviceProviderConfig,
+			Action.clickUsingJavaScipt(btnSave);
+			rowNoGroupName = CommonElementsPage.getRowNo(serviceProviderConfig);
+			System.out.println("Selected row is :" + CommonElementsPage.getRowNo(serviceProviderConfig));
+			System.out.println("Row text selected:" + CommonElementsPage.getRowCellTextVal(rowNoGroupName, 1));
+			Assert.assertEquals(CommonElementsPage.getRowCellTextVal(rowNoGroupName, 1), serviceProviderConfig,
 					"NEW SHIPPING LABEL CONFIGURATION for service provider FEDEX has not been added");
 		}
 		if (serviceProviderConfig.equals("UPS")) {
 			Action.waitForElementToBeClickable(driver, btnAddCarrier, 10);
 			btnAddCarrier.click();
-			Action.scrollingToBottomofAPage();
+			Action.scrollToBottomofPage();
 			Action.waitForElementToBeClickable(driver, drpdwnServiceName, 10);
 			drpdwnServiceName.click();
 			Action.selectByVisibleText(drpdwnServiceName, shipConfigdata.getServiceName().get(1));
 			Action.waitForElementToBeClickable(driver, drpdwnCarrierCode, 10);
 			Action.selectByVisibleText(drpdwnCarrierCode, shipConfigdata.getUPSCarrierCode());
 			Action.waitForElementToBeClickable(driver, btnSave, 10);
-			Action.clickElementJavaScipt(btnSave);
-			rowNoGroupName = CommonElementsPage.getRowNum(serviceProviderConfig);
-			System.out.println("Selected row is :" + CommonElementsPage.getRowNum(serviceProviderConfig));
-			System.out.println("Row text selected:" + Webtable.getTableCellText(rowNoGroupName, 1));
-			Assert.assertEquals(Webtable.getTableCellText(rowNoGroupName, 1), serviceProviderConfig,
+			Action.clickUsingJavaScipt(btnSave);
+			rowNoGroupName = CommonElementsPage.getRowNo(serviceProviderConfig);
+			System.out.println("Selected row is :" + CommonElementsPage.getRowNo(serviceProviderConfig));
+			System.out.println("Row text selected:" + CommonElementsPage.getRowCellTextVal(rowNoGroupName, 1));
+			Assert.assertEquals(CommonElementsPage.getRowCellTextVal(rowNoGroupName, 1), serviceProviderConfig,
 					"NEW SHIPPING LABEL CONFIGURATION for service provider UPS has not been added");
 		}
 		if (serviceProviderConfig.equals("UPS_MOCK")) {
 			Action.waitForElementToBeClickable(driver, btnSave, 10);
-			Action.clickElementJavaScipt(btnSave);
-			rowNoGroupName = CommonElementsPage.getRowNum(serviceProviderConfig);
-			System.out.println("Selected row is :" + CommonElementsPage.getRowNum(serviceProviderConfig));
-			System.out.println("Row text selected:" + Webtable.getTableCellText(rowNoGroupName, 1));
-			Assert.assertTrue(Webtable.getTableCellText(rowNoGroupName, 1).contains(serviceProviderConfig),
+			Action.clickUsingJavaScipt(btnSave);
+			rowNoGroupName = CommonElementsPage.getRowNo(serviceProviderConfig);
+			System.out.println("Selected row is :" + CommonElementsPage.getRowNo(serviceProviderConfig));
+			System.out.println("Row text selected:" + CommonElementsPage.getRowCellTextVal(rowNoGroupName, 1));
+			Assert.assertTrue(CommonElementsPage.getRowCellTextVal(rowNoGroupName, 1).contains(serviceProviderConfig),
 					"NEW SHIPPING LABEL CONFIGURATION for service provider UPS_MOCK has not been added");
 		}
 	}
@@ -231,9 +230,9 @@ public class ShippingLabelConfigPage {
 		shipConfigdata = ShippingLabelConfigData.get(env.getFileLocation());
 		editServiceProviderConfig = shipConfigdata.getserviceProviderName().get(editshipLabelConfigindex);
 		// Get selected row
-		rowNoEditGroupName = CommonElementsPage.getRowNum(editServiceProviderConfig);
+		rowNoEditGroupName = CommonElementsPage.getRowNo(editServiceProviderConfig);
 		System.out.println("Selected row is:" + rowNoEditGroupName);
-		CommonElementsPage.clickActionsIcon(rowNoEditGroupName, 3, 0, 1);
+		CommonElementsPage.clickActionsSpanIcon(rowNoEditGroupName, 3, 0);
 		if (editServiceProviderConfig.equals("CONSIGNOR")) {
 			Action.waitForElementToBeClickable(driver, txtdwnSellerDescription, 20);
 			txtdwnSellerDescription.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
@@ -241,7 +240,7 @@ public class ShippingLabelConfigPage {
 			if (!chkboxAddressOverride.isSelected()) {
 				chkboxAddressOverride.click();
 				Action.selectByVisibleText(drpdwnCountryOverride, shipConfigdata.getcountry().get(2));
-				Action.scrollingToBottomofAPage();
+				Action.scrollToBottomofPage();
 				Action.enter(txtAddressLine1, shipConfigdata.getAddressLine1());
 				Action.enter(txtAddressLine2, shipConfigdata.getAddressLine2());
 				Action.enter(txtAddressLine3, shipConfigdata.getAddressLine3());
@@ -259,7 +258,7 @@ public class ShippingLabelConfigPage {
 			if (!chkboxAddressOverride.isSelected()) {
 				chkboxAddressOverride.click();
 				Action.selectByVisibleText(drpdwnCountryOverride, shipConfigdata.getcountry().get(2));
-				Action.scrollingToBottomofAPage();
+				Action.scrollToBottomofPage();
 				Action.enter(txtAddressLine1, shipConfigdata.getAddressLine1());
 				Action.enter(txtAddressLine2, shipConfigdata.getAddressLine2());
 				Action.enter(txtAddressLine3, shipConfigdata.getAddressLine3());
@@ -278,7 +277,7 @@ public class ShippingLabelConfigPage {
 			if (!chkboxAddressOverride.isSelected()) {
 				chkboxAddressOverride.click();
 				Action.selectByVisibleText(drpdwnCountryOverride, shipConfigdata.getcountry().get(2));
-				Action.scrollingToBottomofAPage();
+				Action.scrollToBottomofPage();
 				Action.enter(txtAddressLine1, shipConfigdata.getAddressLine1());
 				Action.enter(txtAddressLine2, shipConfigdata.getAddressLine2());
 				Action.enter(txtAddressLine3, shipConfigdata.getAddressLine3());
@@ -298,7 +297,7 @@ public class ShippingLabelConfigPage {
 			if (!chkboxAddressOverride.isSelected()) {
 				chkboxAddressOverride.click();
 				Action.selectByVisibleText(drpdwnCountryOverride, shipConfigdata.getcountry().get(2));
-				Action.scrollingToBottomofAPage();
+				Action.scrollToBottomofPage();
 				Action.enter(txtAddressLine1, shipConfigdata.getAddressLine1());
 				Action.enter(txtAddressLine2, shipConfigdata.getAddressLine2());
 				Action.enter(txtAddressLine3, shipConfigdata.getAddressLine3());
@@ -307,7 +306,7 @@ public class ShippingLabelConfigPage {
 			} else {
 				chkboxAddressOverride.click();
 			}
-			Action.scrollingToBottomofAPage();
+			Action.scrollToBottomofPage();
 			if (!btnDeleteCarrier.isDisplayed()) {
 				Action.waitForElementToBeClickable(driver, btnAddCarrier, 20);
 				btnAddCarrier.click();
@@ -329,7 +328,7 @@ public class ShippingLabelConfigPage {
 			if (!chkboxAddressOverride.isSelected()) {
 				chkboxAddressOverride.click();
 				Action.selectByVisibleText(drpdwnCountryOverride, shipConfigdata.getcountry().get(2));
-				Action.scrollingToBottomofAPage();
+				Action.scrollToBottomofPage();
 				Action.enter(txtAddressLine1, shipConfigdata.getAddressLine1());
 				Action.enter(txtAddressLine2, shipConfigdata.getAddressLine2());
 				Action.enter(txtAddressLine3, shipConfigdata.getAddressLine3());
@@ -346,10 +345,10 @@ public class ShippingLabelConfigPage {
 	public void shipLabelConfigFormValidation()
 			throws JsonParseException, JsonMappingException, IOException, InterruptedException {
 		Action.waitForElementToBeClickable(driver, btnAdd, 10);
-		Action.clickElementJavaScipt(btnAdd);
+		Action.clickUsingJavaScipt(btnAdd);
 		Action.waitForElementToBeClickable(driver, btnSave, 20);
 		btnSave.click();
-		Assert.assertEquals(txtformvalidationError.getText(), RomuiEnumValues.USER_VALIDATION.getMessage(),
+		Assert.assertEquals(CommonElementsPage.txtAlertErrorMsg.getText(), RomuiEnumValues.FORM_ERROR.getMessage(),
 				"shipping Label form Error Validation message has not been found");
 
 	}

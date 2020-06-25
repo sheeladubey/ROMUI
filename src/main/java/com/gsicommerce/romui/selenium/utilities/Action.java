@@ -19,6 +19,7 @@ import org.openqa.selenium.UnhandledAlertException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -534,7 +535,7 @@ public class Action {
 	 * @param sec
 	 * @return
 	 */
-	public static WebElement waitForElement(WebDriver driver, By element, int sec) {
+	public WebElement waitForElement(WebDriver driver, By element, int sec) {
 		Wait<WebDriver> wait = new WebDriverWait(driver, DELAY * sec);
 		ExpectedCondition<WebElement> condition = new ElementPresent(element);
 		try {
@@ -567,7 +568,7 @@ public class Action {
 	 * @param timeOutInSeconds
 	 * @return
 	 */
-	public static WebElement waitForElementPresent(WebDriver driver, WebElement element, int timeOutInSeconds) {
+	public WebElement waitForElementPresent(WebDriver driver, WebElement element, int timeOutInSeconds) {
 
 		try {
 
@@ -736,38 +737,6 @@ public class Action {
 		jse.executeScript("window.scrollBy(" + px + ",0)", "");
 	}
 
-	// This will scroll the web page till end.
-	public static void scrollingToBottomofAPage() {
-		JavascriptExecutor jse = (JavascriptExecutor) driver;
-		jse.executeScript("window.scrollTo(0, document.body.scrollHeight);");
-	}
-
-	// This will scroll the page till the element is found
-
-	public static void scrollToElementofAPage(WebElement el) {
-		JavascriptExecutor jse = (JavascriptExecutor) driver;
-		jse.executeScript("arguments[0].scrollIntoView(true);", el);
-	}
-
-	// Call executeAsyncScript() method to wait for 5 seconds
-	public static void executeAsyncScript() {
-		JavascriptExecutor jse = (JavascriptExecutor) driver;
-		jse.executeAsyncScript("window.setTimeout(arguments[arguments.length - 1], TimeUnit.SECONDS);");
-	}
-
-	// Click element by javaScript
-	public static void clickElementJavaScipt(WebElement el) {
-		JavascriptExecutor jse = (JavascriptExecutor) driver;
-		jse.executeScript("arguments[0].click();", el);
-	}
-	//pageload wait
-	public static void waitForPageLoaded()
-	{
-	
-		JavascriptExecutor jse = (JavascriptExecutor) driver;
-		jse.executeScript("return document.readyState").toString().equals("complete");
-	}
-
 	/// <summary>
 	/// Select by Visible Text
 	/// </summary>
@@ -873,7 +842,42 @@ public class Action {
 		return false;
 	}
 
-	
-	
-	
+	// Click element by javaScript
+	public static void clickUsingJavaScipt(WebElement el) {
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+		jse.executeScript("arguments[0].click();", el);
+	}
+
+	// This will scroll the web page till end.
+	public static void scrollToBottomofPage() {
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+		jse.executeScript("window.scrollTo(0, document.body.scrollHeight);");
+	}
+
+	// This will scroll the page till the element is found
+
+	public static void scrollToElementofPage(WebElement el) {
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+		jse.executeScript("arguments[0].scrollIntoView(true);", el);
+	}
+
+	public static void dragAndDrop(WebDriver driver, WebElement drag, WebElement drop, int timeOutInSeconds) {
+
+		try {
+			// To use WebDriverWait(), we would have to nullify implicitlyWait().
+			// Because implicitlyWait time also set "driver.findElement()" wait time.
+			// info from:
+			// https://groups.google.com/forum/?fromgroups=#!topic/selenium-users/6VO_7IXylgY
+			driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS); // nullify implicitlyWait()
+			// Using Action class for drag and drop.
+			Actions drapdopaction = new Actions(driver);
+			drapdopaction.dragAndDrop(drag, drop).build().perform();
+			driver.manage().timeouts().implicitlyWait(DEFAULT_WAIT_4_PAGE, TimeUnit.SECONDS); // reset implicitlyWait
+
+		} catch (Exception e) {
+			Reporter.log(e.getMessage());
+		}
+
+	}
+
 }

@@ -18,13 +18,12 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
-public class ExtentReporterListener implements IReporter{
-	
+public class ExtentReporterListener implements IReporter {
+
 	private ExtentReports extent;
 
-	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites,String outputDirectory) {
-		extent = new ExtentReports(outputDirectory + File.separator
-				+ "ROMUI_Extent.html", true);
+	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
+		extent = new ExtentReports(outputDirectory + File.separator + "ROMUI_ExtentReport.html", true);
 
 		for (ISuite suite : suites) {
 			Map<String, ISuiteResult> result = suite.getResults();
@@ -56,10 +55,9 @@ public class ExtentReporterListener implements IReporter{
 					test.assignCategory(group);
 
 				if (result.getThrowable() != null) {
-					test.log(status, result.getThrowable());					
+					test.log(status, result.getThrowable());
 				} else {
-					test.log(status, "Test " + status.toString().toLowerCase()
-							+ "ed");
+					test.log(status, "Test " + status.toString().toLowerCase() + "ed");
 				}
 
 				extent.endTest(test);

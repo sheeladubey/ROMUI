@@ -4,7 +4,10 @@ import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.net.IDN;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -12,30 +15,24 @@ import java.util.function.Function;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.gsicommerce.romui.selenium.testdata.Environment;
 import com.gsicommerce.romui.selenium.testdata.PaymentMethodConfigData;
 import com.thoughtworks.xstream.XStream;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-
 public class Common {
 
-	// formate date into string
-	static SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy hh:mm aa");
 	/** Default wait time for an element. 7 seconds. */
 	public static final int DEFAULT_WAIT_4_ELEMENT = 7;
 	/**
@@ -43,8 +40,10 @@ public class Common {
 	 * load time is 6 seconds Based on your tests, please set this value. "0" will
 	 * nullify implicitlyWait and speed up a test.
 	 */
-	public static int DEFAULT_WAIT_4_PAGE = 12;
+	public static final int DEFAULT_WAIT_4_PAGE = 12;
 	private static final Random RANDOM_GENERATOR = new Random();
+	// formate date into string
+	private static SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy hh:mm aa");
 
 	/**
 	 * Converts string to int
@@ -75,25 +74,20 @@ public class Common {
 	 * @return webdriver
 	 */
 	public static WebDriver startApplication(final Environment env, final String browserType) {
-		// final String url = getAppUrlSS0(env);
-		// final String url = getAppUrlUAT(env);
 		final String url = getAppUrl(env);
+		final String url1 = getUATAppUrl(env);
 		return Browser.getBrowserInstance(browserType, url, env);
-	}
-
-	public static String getAppUrlSS0(final Environment env) {
-
-		return "http://" + env.getStoreEnvironment() + "-vip.gspt.net";
+		//return Browser.getBrowserInstance(browserType, url1, env);
 	}
 
 	public static String getAppUrl(final Environment env) {
 
-		return "http://" + env.getStoreEnvironment() + "-vip.us.gspt.net";
+		return "http://" + env.getStoreEnvironment() + "-vip.gspt.net";
 	}
+	
+	public static String getUATAppUrl(final Environment env) {
 
-	public static String getAppUrlUAT(final Environment env) {
-
-		return "https://" + env.getStoreEnvironment();
+		return "http://" + env.getStoreEnvironment() ;
 	}
 
 	/**
@@ -422,7 +416,7 @@ public class Common {
 	 * Checks if the elment is in the DOM, regardless of being displayed or not.
 	 * 
 	 * @param driver - The driver object to use to perform this element search
-	 * @param txtboxSellerID     - selector to find the element
+	 * @param by     - selector to find the element
 	 * @return boolean
 	 */
 	private static boolean isElementPresent(WebDriver driver, By by) {
@@ -501,7 +495,7 @@ public class Common {
 		return foo;
 	};
 
-	public void waitForElementToLoad(WebDriver driver, final By locator) {
+	public static void waitForElementToLoad(WebDriver driver, final By locator) {
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(60))
 				.pollingEvery(Duration.ofMillis(250)).ignoring(NoSuchElementException.class);
 		Function<WebDriver, WebElement> function = new Function<WebDriver, WebElement>() {
@@ -563,30 +557,13 @@ public class Common {
 		return new StringBuilder(prefix).append(RANDOM_GENERATOR.nextInt(999999)).toString();
 	}
 
-	public static void dragAndDrop(WebDriver driver, WebElement drag, WebElement drop, int timeOutInSeconds) {
-
-		try {
-			// To use WebDriverWait(), we would have to nullify implicitlyWait().
-			// Because implicitlyWait time also set "driver.findElement()" wait time.
-			// info from:
-			// https://groups.google.com/forum/?fromgroups=#!topic/selenium-users/6VO_7IXylgY
-			driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS); // nullify implicitlyWait()
-			// Using Action class for drag and drop.
-			Actions drapdopaction = new Actions(driver);
-			drapdopaction.dragAndDrop(drag, drop).build().perform();
-			driver.manage().timeouts().implicitlyWait(DEFAULT_WAIT_4_PAGE, TimeUnit.SECONDS); // reset implicitlyWait
-
-		} catch (Exception e) {
-			Reporter.log(e.getMessage());
-		}
-
-	}
-
 	public static void closePrintPopup() throws InterruptedException, AWTException {
-		Thread.sleep(3000);
+		Thread.sleep(15000L);
 		Robot r = new Robot();
+		r.delay(6000);
 		r.keyPress(KeyEvent.VK_ESCAPE);
 		r.keyRelease(KeyEvent.VK_ESCAPE);
+
 	}
 
 	public static String selectDate(int days) {
@@ -604,11 +581,26 @@ public class Common {
 
 	public static void clickonCalendarDate(WebElement el, int days) {
 		if (!el.isSelected()) {
-			// el.click();
-			Action.clickElementJavaScipt(el);
+			el.click();
 			el.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 			el.sendKeys(selectDate(days));
 		}
 	}
-
+	//Wait for page to be load.
+	 public static void waitForPageLoaded(WebDriver driver) {
+	        ExpectedCondition<Boolean> expectation = new
+	                ExpectedCondition<Boolean>() {
+	                    public Boolean apply(WebDriver driver) {
+	                        return ((JavascriptExecutor) driver).executeScript("return document.readyState").toString().equals("complete");
+	                    }
+	                };
+	        try {
+	            Thread.sleep(1000);
+	            WebDriverWait wait = new WebDriverWait(driver, 40);
+	            wait.until(expectation);
+	        } catch (Throwable error) {
+	            Assert.fail("Timeout waiting for Page Load Request to complete.");
+	        }
+	    }
+	
 }

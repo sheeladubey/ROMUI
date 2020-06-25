@@ -5,22 +5,23 @@
   <parameter name="sellerID" value="TMSEB2"/>
   <parameter name="storeEnvironment" value="lvststromuiapp04"/>
   <parameter name="adminPasswd" value="Password123@"/>
-  <parameter name="storeID" value="TMS_NA-Store1"/>
+  <parameter name="storeID" value="TMS-NA-Store1"/>
   <parameter name="waitPeriod" value="5"/>
   <parameter name="browserType" value="chrome"/>
   <listeners>
     <listener class-name="com.gsicommerce.romui.selenium.utilities.ExtentReporterListener"/>
   </listeners>
-  <test thread-count="5" name="SellerConfigsTests(failed)">
-    <parameter name="dataFile" value="./src/test/resources/testdata/sellerConfigsData.json"/>
+  <test thread-count="5" name="ATPRulesTests(failed)">
+    <parameter name="dataFile" value="./src/test/resources/testdata/inventoryAvailabilityData.json"/>
     <classes>
-      <class name="com.gsicommerce.romui.selenium.tests.SellerConfigsTests">
+      <class name="com.gsicommerce.romui.selenium.tests.ATPRulesTests">
         <methods>
+          <include name="testAddATPRule"/>
           <include name="tearDown"/>
+          <include name="testDeleteATPRule"/>
           <include name="setup"/>
-          <include name="testEditSellerFromViewSellerScreen"/>
         </methods>
-      </class> <!-- com.gsicommerce.romui.selenium.tests.SellerConfigsTests -->
+      </class> <!-- com.gsicommerce.romui.selenium.tests.ATPRulesTests -->
     </classes>
-  </test> <!-- SellerConfigsTests(failed) -->
+  </test> <!-- ATPRulesTests(failed) -->
 </suite> <!-- Failed suite [Suite] -->

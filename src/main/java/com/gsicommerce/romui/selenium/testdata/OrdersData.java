@@ -126,16 +126,16 @@ public class OrdersData {
 
 	@JsonProperty("ShippingMethod")
 	List<String> ShippingMethod;
-	
+
 	@JsonProperty("ReturnOrderID")
 	String ReturnOrderID;
-	
+
 	@JsonProperty("ReturnQty")
 	String ReturnQty;
-	
+
 	@JsonProperty("ReturnReasonCode")
 	List<String> ReturnReasonCode;
-	
+
 	@JsonProperty("ReturnComment")
 	String ReturnComment;
 
@@ -295,16 +295,16 @@ public class OrdersData {
 	public String getReturnQty() {
 		return ReturnQty;
 	}
-	
+
 	public List<String> getReturnReasonCode() {
 		return ReturnReasonCode;
 	}
-	
+
 	public String getReturnComment() {
 		String returnComment = ReturnComment + Common.generateRandomID("Auto");
 		return returnComment;
 	}
-	
+
 	public String getReturnOrderID() {
 		return ReturnOrderID;
 	}

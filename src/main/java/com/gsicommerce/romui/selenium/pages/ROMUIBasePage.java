@@ -9,6 +9,7 @@ import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+
 import com.gsicommerce.romui.selenium.pages.common.PageFactory;
 import com.gsicommerce.romui.selenium.pages.common.ROMUIPageFactory;
 import com.gsicommerce.romui.selenium.testdata.Environment;
@@ -22,23 +23,19 @@ public class ROMUIBasePage {
 	public static Logger logger;
 
 	@BeforeMethod
-	// @BeforeTest
 	public void setup(final ITestContext c) {
 		env = Environment.getInstance(c);
 		driver = Common.startApplication(env, env.getBrowserType());
 		logger = Logger.getLogger("romui");
 		PropertyConfigurator.configure("log4j.properties");
 		romuipages = PageFactory.getROMUIPages(driver, env);
-
 	}
 
 	@AfterMethod(alwaysRun = true)
-	// @AfterTest(alwaysRun = true)
 	public void tearDown(final ITestResult c) throws IOException {
 		if (!c.isSuccess()) {
 			Browser.screenShot(driver, env, c);
 		}
-		//Browser.reset(driver);
-
+	//	Browser.reset(driver);
 	}
 }
