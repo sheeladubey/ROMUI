@@ -35,6 +35,7 @@ public enum RomuiEnumValues {
 	ATPRULES_ADD("Heads up! ATP Rule created successfully!"),
 	ATPRULES_DELETE("Heads up! ATP Rule deleted."),
 	ATPRULES_EDIT("Heads up! ATP Rule updated successfully!"),
+	SAFETYSTOCK_NOTFOUND("Heads up! No Safety Stock Found"),
 	SERVICEFLOW_CRITERIA_VALIDATION(""),
 	SERVICEFLOW_VALIDATION(""),
 	USER_NOTFOUND(""),

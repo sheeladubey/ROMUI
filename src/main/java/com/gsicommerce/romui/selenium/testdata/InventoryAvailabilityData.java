@@ -2,6 +2,7 @@ package com.gsicommerce.romui.selenium.testdata;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonParseException;
@@ -35,6 +36,24 @@ public class InventoryAvailabilityData {
 	@JsonProperty("Advance Notification Time")
 	String Advance_Notification;
 	
+	@JsonProperty("Choose a Type")
+	List<String> Choose_a_Type;
+	
+	@JsonProperty("Item Id")
+	String ItemId;
+	
+	@JsonProperty("Node Id")
+	String NodeId;
+	
+	@JsonProperty("Fulfillment Type Id")
+	List<String> Fulfillment_Type_Id;
+	
+	@JsonProperty("Supply Type Id")
+	List<String> Supply_Type_Id;
+	
+	@JsonProperty("Node Type")
+	List<String> Node_Type;
+	
 	
 	public String getATP_Rule_Name() {
 		return ATP_Rule_Name + Common.generateRandomID("Automation");
@@ -59,6 +78,29 @@ public class InventoryAvailabilityData {
 	}
 	public String getAdvance_Notification() {
 		return Advance_Notification;
+	}
+	
+	public List<String> getChoose_a_Type() {
+		return Choose_a_Type;
+	}
+	
+	public String getItemId() {
+		return ItemId;
+	}
+	public String getNodeId() {
+		return NodeId;
+	}
+	
+	public List<String> getFulfillment_Type_Id() {
+		return Fulfillment_Type_Id;
+	}
+	
+	public List<String> getSupply_Type_Id() {
+		return Supply_Type_Id;
+	}
+	
+	public List<String> getNode_Type() {
+		return Node_Type;
 	}
 	
 	public static InventoryAvailabilityData get(String filename) throws JsonParseException, JsonMappingException, IOException {

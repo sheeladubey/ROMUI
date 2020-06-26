@@ -11,17 +11,17 @@
   <listeners>
     <listener class-name="com.gsicommerce.romui.selenium.utilities.ExtentReporterListener"/>
   </listeners>
-  <test thread-count="5" name="ATPRulesTests(failed)">
+  <test thread-count="5" name="SafetyStockConfigsTests(failed)">
     <parameter name="dataFile" value="./src/test/resources/testdata/inventoryAvailabilityData.json"/>
     <classes>
-      <class name="com.gsicommerce.romui.selenium.tests.ATPRulesTests">
+      <class name="com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests">
         <methods>
-          <include name="testAddATPRule"/>
+          <include name="testSafetyStockSearchByGlobalNodeType"/>
           <include name="tearDown"/>
-          <include name="testDeleteATPRule"/>
           <include name="setup"/>
+          <include name="testSafetyStockSearchByNodeTypeItemAttribute"/>
         </methods>
-      </class> <!-- com.gsicommerce.romui.selenium.tests.ATPRulesTests -->
+      </class> <!-- com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests -->
     </classes>
-  </test> <!-- ATPRulesTests(failed) -->
+  </test> <!-- SafetyStockConfigsTests(failed) -->
 </suite> <!-- Failed suite [Suite] -->

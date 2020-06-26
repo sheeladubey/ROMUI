@@ -9,7 +9,7 @@ import com.gsicommerce.romui.selenium.utilities.RomuiEnumValues;
 public class ATPRulesTests extends ROMUIBasePage {
 	
 	
-	@Test(enabled = false, priority = 1, description = "to Verify Manage ATP rules displays all the ATP rules available for the store")
+	@Test(enabled = true, priority = 1, description = "to Verify Manage ATP rules displays all the ATP rules available for the store")
 	public void testVerifyManageATPRule() throws Exception {
 		
 		logger.info("Login credentials to be entered");
@@ -37,7 +37,7 @@ public class ATPRulesTests extends ROMUIBasePage {
 		logger.info("Add ATP Rule verified successfully");
 	}
 	
-	@Test(enabled = false, priority = 2, description = "to Verify user able to edit ATP rule in Manage ATP rules page")
+	@Test(enabled = true, priority = 2, description = "to Verify user able to edit ATP rule in Manage ATP rules page")
 	public void testEditATPRule() throws Exception {
 		
 		logger.info("Login credentials to be entered");

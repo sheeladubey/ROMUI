@@ -1,58 +1,259 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="4" passed="0" failed="2" skipped="0">
+<testng-results ignored="3" total="8" passed="3" failed="2" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[There is no page limit option displayed]]>
+      <![CDATA[Get Total No of Rows in the webtable]]>
     </line>
     <line>
-      <![CDATA[page limit drop down value is selected]]>
+      <![CDATA[Get Total No of Rows in the webtable]]>
     </line>
     <line>
-      <![CDATA[Click Delete ATP Rule icon]]>
+      <![CDATA[Get Total No of Rows in the webtable]]>
     </line>
     <line>
-      <![CDATA[View Order icon is clicked on]]>
+      <![CDATA[Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on WINDOWS (58a587427b10c2af29d5e1a500c6865e)] -> css selector: #store_fulfillment_safety_stock_search_type] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KOP-BM5TNF2', ip: '10.140.132.202', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55853}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 58a587427b10c2af29d5e1a500c6865e]]>
+    </line>
+    <line>
+      <![CDATA[Get Total No of Rows in the webtable]]>
     </line>
   </reporter-output>
-  <suite started-at="2020-06-25T00:09:24 EDT" name="Suite" finished-at="2020-06-25T00:10:45 EDT" duration-ms="80431">
+  <suite started-at="2020-06-26T00:22:33 EDT" name="Suite" finished-at="2020-06-26T00:24:37 EDT" duration-ms="123961">
     <groups>
     </groups>
-    <test started-at="2020-06-25T00:09:24 EDT" name="ATPRulesTests" finished-at="2020-06-25T00:10:45 EDT" duration-ms="80431">
-      <class name="com.gsicommerce.romui.selenium.tests.ATPRulesTests">
-        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ATPRulesTests@557caf28]" started-at="2020-06-25T00:09:24 EDT" name="setup" finished-at="2020-06-25T00:09:36 EDT" duration-ms="11343" status="PASS">
+    <test started-at="2020-06-26T00:22:33 EDT" name="SafetyStockConfigsTests" finished-at="2020-06-26T00:24:37 EDT" duration-ms="123961">
+      <class name="com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests">
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@36ebc363]" started-at="2020-06-26T00:22:33 EDT" name="setup" finished-at="2020-06-26T00:22:44 EDT" duration-ms="10560" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@21e20ad5]]>
+                <![CDATA[org.testng.TestRunner@9e54c59]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testAddATPRule()[pri:2, instance:com.gsicommerce.romui.selenium.tests.ATPRulesTests@557caf28]" started-at="2020-06-25T00:09:36 EDT" name="testAddATPRule" description="to Verify user able to Add ATP rule in Manage ATP rules page" finished-at="2020-06-25T00:10:15 EDT" duration-ms="39508" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="testSafetyStockSearchByNodeItem()[pri:1, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@36ebc363]" started-at="2020-06-26T00:22:44 EDT" name="testSafetyStockSearchByNodeItem" description="to Verify Safety stock is searched through Node Item in Manage Safety Stock Configuration page" finished-at="2020-06-26T00:22:55 EDT" duration-ms="10881" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Get Total No of Rows in the webtable]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testSafetyStockSearchByNodeItem -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@36ebc363]" started-at="2020-06-26T00:22:55 EDT" name="tearDown" finished-at="2020-06-26T00:22:55 EDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testSafetyStockSearchByNodeItem status=SUCCESS method=SafetyStockConfigsTests.testSafetyStockSearchByNodeItem()[pri:1, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@36ebc363] output=Get Total No of Rows in the webtable]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@36ebc363]" started-at="2020-06-26T00:22:55 EDT" name="setup" finished-at="2020-06-26T00:23:05 EDT" duration-ms="9890" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@9e54c59]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testSafetyStockSearchByNodeTypeItem()[pri:2, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@36ebc363]" started-at="2020-06-26T00:23:05 EDT" name="testSafetyStockSearchByNodeTypeItem" description="to Verify Safety stock is searched through Node Type Item  in Manage Safety Stock Configuration page" finished-at="2020-06-26T00:23:18 EDT" duration-ms="12711" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Get Total No of Rows in the webtable]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testSafetyStockSearchByNodeTypeItem -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@36ebc363]" started-at="2020-06-26T00:23:18 EDT" name="tearDown" finished-at="2020-06-26T00:23:18 EDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testSafetyStockSearchByNodeTypeItem status=SUCCESS method=SafetyStockConfigsTests.testSafetyStockSearchByNodeTypeItem()[pri:2, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@36ebc363] output=Get Total No of Rows in the webtable]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@36ebc363]" started-at="2020-06-26T00:23:18 EDT" name="setup" finished-at="2020-06-26T00:23:27 EDT" duration-ms="9940" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@9e54c59]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testSafetyStockSearchByNodeItemAttribute()[pri:3, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@36ebc363]" started-at="2020-06-26T00:23:27 EDT" name="testSafetyStockSearchByNodeItemAttribute" description="to Verify Safety stock is searched through Node Item Attribute in Manage Safety Stock Configuration page" finished-at="2020-06-26T00:23:37 EDT" duration-ms="10001" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Get Total No of Rows in the webtable]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testSafetyStockSearchByNodeItemAttribute -->
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@36ebc363]" started-at="2020-06-26T00:23:37 EDT" name="setup" finished-at="2020-06-26T00:23:48 EDT" duration-ms="10131" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@9e54c59]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@36ebc363]" started-at="2020-06-26T00:23:37 EDT" name="tearDown" finished-at="2020-06-26T00:23:37 EDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testSafetyStockSearchByNodeItemAttribute status=SUCCESS method=SafetyStockConfigsTests.testSafetyStockSearchByNodeItemAttribute()[pri:3, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@36ebc363] output=Get Total No of Rows in the webtable]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="testSafetyStockSearchByNodeTypeItemAttribute()[pri:4, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@36ebc363]" started-at="2020-06-26T00:23:48 EDT" name="testSafetyStockSearchByNodeTypeItemAttribute" description="to Verify Safety stock is searched through Node Type Item Attribute in Manage Safety Stock Configuration page" finished-at="2020-06-26T00:24:05 EDT" duration-ms="17649" status="FAIL">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"span.ss-icon.ss-navigateright.ss-black-tie-bold"}
+              <![CDATA[element not interactable: Element is not currently visible and may not be manipulated
   (Session info: chrome=83.0.4103.116)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'KOP-BM5TNF2', ip: '10.140.132.109', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+System info: host: 'KOP-BM5TNF2', ip: '10.140.132.202', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60157}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 2374d555bd567cfc342f98e096eb1354
-*** Element info: {Using=css selector, value=span.ss-icon.ss-navigateright.ss-black-tie-bold}]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55853}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 58a587427b10c2af29d5e1a500c6865e]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"span.ss-icon.ss-navigateright.ss-black-tie-bold"}
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable: Element is not currently visible and may not be manipulated
+  (Session info: chrome=83.0.4103.116)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KOP-BM5TNF2', ip: '10.140.132.202', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55853}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 58a587427b10c2af29d5e1a500c6865e
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at org.openqa.selenium.support.ui.Select.setSelected(Select.java:311)
+at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:116)
+at com.gsicommerce.romui.selenium.utilities.Action.selectByVisibleText(Action.java:747)
+at com.gsicommerce.romui.selenium.pages.ordermanagement.SafetyStockConfigsPage.searchSafetyStockByType(SafetyStockConfigsPage.java:82)
+at com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests.testSafetyStockSearchByNodeTypeItemAttribute(SafetyStockConfigsTests.java:78)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:767)
+at org.testng.TestRunner.run(TestRunner.java:588)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
+at org.testng.TestNG.runSuites(TestNG.java:1066)
+at org.testng.TestNG.run(TestNG.java:1034)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+            <line>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on WINDOWS (58a587427b10c2af29d5e1a500c6865e)] -> css selector: #store_fulfillment_safety_stock_search_type] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KOP-BM5TNF2', ip: '10.140.132.202', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55853}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 58a587427b10c2af29d5e1a500c6865e]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testSafetyStockSearchByNodeTypeItemAttribute -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@36ebc363]" started-at="2020-06-26T00:24:05 EDT" name="tearDown" finished-at="2020-06-26T00:24:06 EDT" duration-ms="401" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testSafetyStockSearchByNodeTypeItemAttribute status=FAILURE method=SafetyStockConfigsTests.testSafetyStockSearchByNodeTypeItemAttribute()[pri:4, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@36ebc363] output=Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on WINDOWS (58a587427b10c2af29d5e1a500c6865e)] -> css selector: #store_fulfillment_safety_stock_search_type] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KOP-BM5TNF2', ip: '10.140.132.202', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55853}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 58a587427b10c2af29d5e1a500c6865e]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@36ebc363]" started-at="2020-06-26T00:24:06 EDT" name="setup" finished-at="2020-06-26T00:24:17 EDT" duration-ms="11143" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@9e54c59]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testSafetyStockSearchByGlobalNodeType()[pri:5, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@36ebc363]" started-at="2020-06-26T00:24:17 EDT" name="testSafetyStockSearchByGlobalNodeType" description="to Verify Safety stock is searched through Global  Node Type in Manage Safety Stock Configuration page" finished-at="2020-06-26T00:24:37 EDT" duration-ms="20191" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":".reflow-table"}
   (Session info: chrome=83.0.4103.116)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'KOP-BM5TNF2', ip: '10.140.132.109', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+System info: host: 'KOP-BM5TNF2', ip: '10.140.132.202', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60157}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 2374d555bd567cfc342f98e096eb1354
-*** Element info: {Using=css selector, value=span.ss-icon.ss-navigateright.ss-black-tie-bold}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55893}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 3a7afe9306963ea81d3b7d9a29195c2e
+*** Element info: {Using=css selector, value=.reflow-table}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".reflow-table"}
+  (Session info: chrome=83.0.4103.116)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KOP-BM5TNF2', ip: '10.140.132.202', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55893}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 3a7afe9306963ea81d3b7d9a29195c2e
+*** Element info: {Using=css selector, value=.reflow-table}
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -70,11 +271,12 @@ at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy14.isEnabled(Unknown Source)
-at com.gsicommerce.romui.selenium.pages.ordermanagement.CommonElementsPage.clickNextPage(CommonElementsPage.java:131)
-at com.gsicommerce.romui.selenium.pages.ordermanagement.CommonElementsPage.getRowNo(CommonElementsPage.java:143)
-at com.gsicommerce.romui.selenium.pages.ordermanagement.ATPRulesPage.addATPRule(ATPRulesPage.java:82)
-at com.gsicommerce.romui.selenium.tests.ATPRulesTests.testAddATPRule(ATPRulesTests.java:34)
+at com.sun.proxy.$Proxy14.findElements(Unknown Source)
+at com.gsicommerce.romui.selenium.utilities.Webtable.<init>(Webtable.java:25)
+at com.gsicommerce.romui.selenium.pages.ordermanagement.CommonElementsPage.nodeWebTable(CommonElementsPage.java:84)
+at com.gsicommerce.romui.selenium.pages.ordermanagement.CommonElementsPage.getTotalRows(CommonElementsPage.java:178)
+at com.gsicommerce.romui.selenium.pages.ordermanagement.SafetyStockConfigsPage.verfiySafetyStockRecord(SafetyStockConfigsPage.java:91)
+at com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests.testSafetyStockSearchByGlobalNodeType(SafetyStockConfigsTests.java:94)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -108,136 +310,22 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
             <line>
-              <![CDATA[There is no page limit option displayed]]>
-            </line>
-            <line>
-              <![CDATA[page limit drop down value is selected]]>
+              <![CDATA[Get Total No of Rows in the webtable]]>
             </line>
           </reporter-output>
-        </test-method> <!-- testAddATPRule -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ATPRulesTests@557caf28]" started-at="2020-06-25T00:10:15 EDT" name="tearDown" finished-at="2020-06-25T00:10:16 EDT" duration-ms="404" status="PASS">
+        </test-method> <!-- testSafetyStockSearchByGlobalNodeType -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@36ebc363]" started-at="2020-06-26T00:24:37 EDT" name="tearDown" finished-at="2020-06-26T00:24:37 EDT" duration-ms="434" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testAddATPRule status=FAILURE method=ATPRulesTests.testAddATPRule()[pri:2, instance:com.gsicommerce.romui.selenium.tests.ATPRulesTests@557caf28] output=There is no page limit option displayed]]]>
+                <![CDATA[[TestResult name=testSafetyStockSearchByGlobalNodeType status=FAILURE method=SafetyStockConfigsTests.testSafetyStockSearchByGlobalNodeType()[pri:5, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@36ebc363] output=Get Total No of Rows in the webtable]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ATPRulesTests@557caf28]" started-at="2020-06-25T00:10:16 EDT" name="setup" finished-at="2020-06-25T00:10:25 EDT" duration-ms="9770" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@21e20ad5]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="testDeleteATPRule()[pri:2, instance:com.gsicommerce.romui.selenium.tests.ATPRulesTests@557caf28]" started-at="2020-06-25T00:10:25 EDT" name="testDeleteATPRule" description="to Verify user able to delete ATP rule in Manage ATP rules page" finished-at="2020-06-25T00:10:44 EDT" duration-ms="18988" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":".//tr[0]/td[4]/div/a[2]/span[1]"}
-  (Session info: chrome=83.0.4103.116)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'KOP-BM5TNF2', ip: '10.140.132.109', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60209}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 5494602a09d068c9700b0045202e1016
-*** Element info: {Using=xpath, value=.//tr[0]/td[4]/div/a[2]/span[1]}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":".//tr[0]/td[4]/div/a[2]/span[1]"}
-  (Session info: chrome=83.0.4103.116)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'KOP-BM5TNF2', ip: '10.140.132.109', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60209}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 5494602a09d068c9700b0045202e1016
-*** Element info: {Using=xpath, value=.//tr[0]/td[4]/div/a[2]/span[1]}
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:185)
-at org.openqa.selenium.remote.RemoteWebElement.findElementByXPath(RemoteWebElement.java:261)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:181)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at com.sun.proxy.$Proxy14.findElement(Unknown Source)
-at com.gsicommerce.romui.selenium.utilities.Webtable.clickDivLinkSpanElement(Webtable.java:225)
-at com.gsicommerce.romui.selenium.pages.ordermanagement.CommonElementsPage.clickDivSpanLink(CommonElementsPage.java:192)
-at com.gsicommerce.romui.selenium.pages.ordermanagement.ATPRulesPage.deleteATPRule(ATPRulesPage.java:112)
-at com.gsicommerce.romui.selenium.tests.ATPRulesTests.testDeleteATPRule(ATPRulesTests.java:64)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-at org.testng.TestRunner.privateRun(TestRunner.java:767)
-at org.testng.TestRunner.run(TestRunner.java:588)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
-at org.testng.TestNG.runSuites(TestNG.java:1066)
-at org.testng.TestNG.run(TestNG.java:1034)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-            <line>
-              <![CDATA[Click Delete ATP Rule icon]]>
-            </line>
-            <line>
-              <![CDATA[View Order icon is clicked on]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- testDeleteATPRule -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.ATPRulesTests@557caf28]" started-at="2020-06-25T00:10:44 EDT" name="tearDown" finished-at="2020-06-25T00:10:45 EDT" duration-ms="388" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testDeleteATPRule status=FAILURE method=ATPRulesTests.testDeleteATPRule()[pri:2, instance:com.gsicommerce.romui.selenium.tests.ATPRulesTests@557caf28] output=Click Delete ATP Rule icon]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.gsicommerce.romui.selenium.tests.ATPRulesTests -->
-    </test> <!-- ATPRulesTests -->
+      </class> <!-- com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests -->
+    </test> <!-- SafetyStockConfigsTests -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -265,8 +265,10 @@ public class OrderManagementMenusPage {
 	public void clickOnSafetyStockConfig() {
 		btnMainMenu.click();
 		lkOmniAdministration.click();
-		lkInvAvailability.click();
-		lkSafetyStckConfig.click();
+		Action.clickUsingJavaScipt(lkInvAvailability);
+		//lkInvAvailability.click();
+		//lkSafetyStckConfig.click();
+		Action.clickUsingJavaScipt(lkSafetyStckConfig);
 	}
 
 	public void clickOnCoreRules() {

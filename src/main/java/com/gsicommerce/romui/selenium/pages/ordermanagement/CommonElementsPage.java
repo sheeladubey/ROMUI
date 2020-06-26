@@ -159,7 +159,8 @@ public class CommonElementsPage {
 
 	public static void clickOnSearchIcon() {
 		Action.waitForElementToBeClickable(driver, iconSearch, 30);
-		iconSearch.click();
+		//iconSearch.click();
+		Action.clickUsingJavaScipt(iconSearch);
 	}
 
 	public static String getRowCellTextVal(int row, int col) throws Exception {
