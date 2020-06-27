@@ -32,112 +32,124 @@ public class InventoryAvailabilityData {
 
 	@JsonProperty("Receipt Processing Time")
 	String Receipt_Processing_Time;
-	
+
 	@JsonProperty("Advance Notification Time")
 	String Advance_Notification;
-	
+
 	@JsonProperty("Choose a Type")
 	List<String> Choose_a_Type;
-	
+
 	@JsonProperty("Item Id")
 	String ItemId;
-	
+
 	@JsonProperty("Node Id")
 	String NodeId;
-	
+
 	@JsonProperty("Fulfillment Type Id")
 	List<String> Fulfillment_Type_Id;
-	
+
 	@JsonProperty("Supply Type Id")
 	List<String> Supply_Type_Id;
-	
+
 	@JsonProperty("Node Type")
 	List<String> Node_Type;
-	
+
 	@JsonProperty("Safety Stock Type")
 	List<String> Safety_Stock_Type;
-	
+
 	@JsonProperty("Safety Stock Value")
 	String Safety_Stock_Value;
-	
+
 	@JsonProperty("Item Attribute")
 	List<String> Item_Attribute;
-	
+
 	@JsonProperty("Item Attribute Value")
 	String Item_Attribute_Value;
-	
-	
+
+	@JsonProperty("Edit Safety Stock Value")
+	String EditSafety_Stock_Value;
+
 	public String getATP_Rule_Name() {
 		return ATP_Rule_Name + Common.generateRandomID("Automation");
 	}
+
 	public String getATP_Rule_Description() {
 		return ATP_Rule_Description + Common.generateRandomID("Automation");
 	}
+
 	public String getOverdue_Supply() {
 		return Overdue_Supply;
 	}
+
 	public String getOverdue_Demand() {
 		return Overdue_Demand;
 	}
+
 	public String getForward_Days() {
 		return Forward_Days;
 	}
+
 	public String getBackward_Days() {
 		return Backward_Days;
 	}
+
 	public String getReceipt_Processing_Time() {
 		return Receipt_Processing_Time;
 	}
+
 	public String getAdvance_Notification() {
 		return Advance_Notification;
 	}
-	
+
 	public List<String> getChoose_a_Type() {
 		return Choose_a_Type;
 	}
-	
+
 	public String getItemId() {
 		return ItemId;
 	}
+
 	public String getNodeId() {
 		return NodeId;
 	}
-	
+
 	public List<String> getFulfillment_Type_Id() {
 		return Fulfillment_Type_Id;
 	}
-	
+
 	public List<String> getSupply_Type_Id() {
 		return Supply_Type_Id;
 	}
-	
+
 	public List<String> getNode_Type() {
 		return Node_Type;
 	}
-	
+
 	public List<String> getSafety_Stock_Type() {
 		return Safety_Stock_Type;
 	}
-	
+
 	public String getSafety_Stock_Value() {
 		return Safety_Stock_Value;
 	}
-	
+
 	public List<String> getItem_Attribute() {
 		return Item_Attribute;
 	}
-	
+
 	public String getItem_Attribute_Value() {
 		return Item_Attribute_Value;
 	}
 
+	public String getEditSafety_Stock_Value() {
+		return EditSafety_Stock_Value;
+	}
 
-	
-	public static InventoryAvailabilityData get(String filename) throws JsonParseException, JsonMappingException, IOException {
+	public static InventoryAvailabilityData get(String filename)
+			throws JsonParseException, JsonMappingException, IOException {
 		ObjectMapper mapper = new ObjectMapper();
 		mapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
 		return mapper.readValue(new File(filename), InventoryAvailabilityData.class);
 	}
-
 
 }

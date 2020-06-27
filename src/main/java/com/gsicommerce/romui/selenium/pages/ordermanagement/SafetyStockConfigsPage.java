@@ -1,5 +1,7 @@
 package com.gsicommerce.romui.selenium.pages.ordermanagement;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -100,6 +102,19 @@ public class SafetyStockConfigsPage {
 	@FindBy(how = How.CSS, using = ".btn-default[type='submit']")
 	private WebElement btnSave;
 
+	@FindBy(how = How.CSS, using = "[name='data-delete-safety-stock-rule-action'] [type='submit']")
+	private WebElement btnConfirmDeleteSafety;
+	
+	@FindBy(how = How.CSS, using = ".radial-filter-menu-toggle-btn")
+	private WebElement btnSearchIcon;
+	
+	//@FindBy(how = How.CSS, using = "//p[contains(text(),'NODE ITEM')]")
+	@FindBy(how = How.CSS, using = ".page-body p")
+	private List<WebElement> editSafetyStockNodeItem;
+	
+	@FindBy(how = How.CSS, using = "//p[contains(text(),'NODE TYPE ITEM')]")
+	private WebElement editSafetyStockNodetypeItem;
+
 	public void addSafetyStock(int indexType, int indexFulfillType, int indexSuppyType, int indexNodeType,
 			int indexSafetyStockType, int indexItemAttr) throws Exception {
 		inventoryAvailabilityData = InventoryAvailabilityData.get(env.getFileLocation());
@@ -136,16 +151,6 @@ public class SafetyStockConfigsPage {
 					inventoryAvailabilityData.getNode_Type().get(indexNodeType));
 
 		}
-		/*
-		 * if (inventoryAvailabilityData.getChoose_a_Type().get(indexType).
-		 * equals("GLOBAL SUPPLY TYPE")) {
-		 * 
-		 * } if (inventoryAvailabilityData.getChoose_a_Type().get(indexType).
-		 * equals("AGGREGRATED GLOBAL")) {
-		 * 
-		 * }
-		 */
-
 		Action.selectByVisibleText(drpdwnFulfillTypeSafetyStockadd,
 				inventoryAvailabilityData.getFulfillment_Type_Id().get(indexFulfillType));
 		Action.selectByVisibleText(drpdwnSupplyTypeSafetyStockadd,
@@ -190,8 +195,28 @@ public class SafetyStockConfigsPage {
 					"No Safety Stock added by Node type item attribute  ");
 		}
 	}
+
 	
-	public void editSafetyStock() {
+	public void editSafetyStock() throws Exception {
+		inventoryAvailabilityData = InventoryAvailabilityData.get(env.getFileLocation());		
+       //  Assert.assertTrue(inventoryAvailabilityData.getChoose_a_Type().get(indexType).equals(editSafetyStockNodeItem.get(1)),"Selected record is not having Correct Type");
+       // Assert.assertTrue(editSafetyStockNodeItem.get(1).equals(inventoryAvailabilityData.getChoose_a_Type().get(indexType)));	
+         CommonElementsPage.clickDivChildSpanLink(rowNodeItem, 7, 0, 0, 1);
+			Action.waitForElementToBeClickable(driver, txtboxSafetyStockvalue, 10);
+			Action.enter(txtboxSafetyStockvalue,inventoryAvailabilityData.getEditSafety_Stock_Value());
+			Action.waitForElementToBeClickable(driver,btnSave, 10);
+			Action.clickUsingJavaScipt(btnSave);
+	
+	}
+	
+	public void deleteSafetyStock() throws Exception {
+
+		//if (inventoryAvailabilityData.getChoose_a_Type().get(indexType).equals("NODE ITEM")) {
+
+			CommonElementsPage.clickSelectBtnSpanLink(rowNodeItem,7,1);
+			Action.waitForElementToBeClickable(driver, btnConfirmDeleteSafety, 10);
+			Action.clickUsingJavaScipt(btnConfirmDeleteSafety);
+		//}
 		
 	}
 
@@ -218,20 +243,29 @@ public class SafetyStockConfigsPage {
 		btnSelectitemNode.click();
 	}
 
-	public void searchSafetyStockByNodeItemFulfillType(int indexType, int indexFulfillType, int indexSuppyType)
-			throws Exception {
+	public void searchSafetyStockByNodeItemFulfillType(int indexType, int indexFulfillType, int indexSuppyType,
+			int indexNodeType) throws Exception {
 		inventoryAvailabilityData = InventoryAvailabilityData.get(env.getFileLocation());
-		CommonElementsPage.clickOnSearchIcon();
+		Action.waitForElementToBeClickable(driver, btnSearchIcon, 20);
+		Action.clickUsingJavaScipt(btnSearchIcon);
 		Action.waitForElementToBeClickable(driver, drpdwnType, 10);
 		Action.selectByVisibleText(drpdwnType, inventoryAvailabilityData.getChoose_a_Type().get(indexType));
-		Action.enter(txtboxItemId, inventoryAvailabilityData.getItemId());
-		Action.enter(txtboxNodeId, inventoryAvailabilityData.getNodeId());
+		if (inventoryAvailabilityData.getChoose_a_Type().get(indexType).contains("NODE ITEM")) {
+			Action.enter(txtboxItemId, inventoryAvailabilityData.getItemId());
+			Action.enter(txtboxNodeId, inventoryAvailabilityData.getNodeId());
+		}
+		if (inventoryAvailabilityData.getChoose_a_Type().get(indexType).contains("NODE TYPE ITEM")) {
+			Action.enter(txtboxItemId, inventoryAvailabilityData.getItemId());
+			Action.selectByVisibleText(drpdwnNodeType, inventoryAvailabilityData.getNode_Type().get(indexNodeType));
+
+		}
 		Action.selectByVisibleText(drpdwnFulfillType,
 				inventoryAvailabilityData.getFulfillment_Type_Id().get(indexFulfillType));
 		Action.selectByVisibleText(drpdwnSupplyType, inventoryAvailabilityData.getSupply_Type_Id().get(indexSuppyType));
 		Action.waitForElementToBeClickable(driver, btnSearch, 10);
 		Action.clickUsingJavaScipt(btnSearch);
 		int rowSS = CommonElementsPage.getRowNo(inventoryAvailabilityData.getItemId());
+		System.out.println("Selected row is:" + CommonElementsPage.getRowNo(inventoryAvailabilityData.getItemId()));
 		Assert.assertEquals(CommonElementsPage.getRowCellTextVal(rowSS, 1), inventoryAvailabilityData.getItemId(),
 				"No Safety Stock Found by Node item Search ");
 	}

@@ -16,5 +16,6 @@
 "Safety Stock Type":["Application Type","Percentage","Quantity"],
 "Safety Stock Value":"50",
 "Item Attribute":["HullType","Season","test"],
-"Item Attribute Value":"100"
+"Item Attribute Value":"100",
+"Edit Safety Stock Value":"60"
 }

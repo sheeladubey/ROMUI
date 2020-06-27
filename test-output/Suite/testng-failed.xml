@@ -16,11 +16,9 @@
     <classes>
       <class name="com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests">
         <methods>
-          <include name="testaddSafetyStockByGLOBALSUPPLYTYPE"/>
-          <include name="testaddSafetyStockByAGGREGRATEDGLOBAL"/>
           <include name="tearDown"/>
+          <include name="testEditSafetyStockByNodeItem"/>
           <include name="setup"/>
-          <include name="testaddSafetyStockByNodeTypeItem"/>
         </methods>
       </class> <!-- com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests -->
     </classes>

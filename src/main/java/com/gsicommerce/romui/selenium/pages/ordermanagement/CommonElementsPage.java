@@ -218,4 +218,9 @@ public class CommonElementsPage {
 		btnCancel.click();
 	}
 
+	public static void clickDivChildSpanLink(int row, int col, int divchild, int child, int spanchild) throws Exception {
+		Reporter.log("View Order icon is clicked on");
+		nodeWebTable().clickDivChildLinkSpanElement(row, col, divchild, child, spanchild);
+
+	}
 }
