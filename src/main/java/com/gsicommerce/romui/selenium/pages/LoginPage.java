@@ -92,6 +92,24 @@ public class LoginPage {
 		}
 	}
 
+	
+	public void selectNode(String nodeId, String storeId,int index) {
+       // int index = 0;
+		index=0;
+        btnStore.click();
+        Action.waitForElementToBeClickable(driver, txtbxStoreSearch, 30);
+        Action.enter(txtbxStoreSearch, storeId);
+     //   if(nodeId=="TMSUS") {
+        if(nodeId==env.getSellerId()) {
+           index = 6;        	
+            } else if(nodeId==env.getSellerId()) {
+                index = 1;
+            }
+        storeId=env.getStoreId();
+        driver.findElement(By.xpath(".//li["+index+"]//form/button[contains(text(), '"+storeId+"')]")).click();
+    }
+	
+	
 	public void clickSignout() {
 		Action.clickUsingJavaScipt(btnStore);
 		// btnStore.click();

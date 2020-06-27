@@ -9,9 +9,12 @@
 "Advance Notification Time":"15",
 "Choose a Type":["NODE ITEM","NODE TYPE ITEM" ,"NODE ITEM ATTRIBUTE","NODE TYPE ITEM ATTRIBUTE","GLOBAL NODE TYPE","GLOBAL SUPPLY TYPE","AGGREGRATED GLOBAL"],
 "Item Id":"21-ISPUProd01",
-"Node Id":"100801",
+"Node Id":"TMS_NA-Store1",
 "Fulfillment Type Id":["SHIP_TO_STORE","SHIP_TO_HOME","STORE_PICK_UP"],
 "Supply Type Id":["Held","In Transit","On Hand","Purchase Order","PO Placed","PO Released"],
-"Node Type":["DROP_SHIP_CLIENTPAID","CLIENT_DC","RETAIL_STORE","RADIAL_DC","GSI_WHSE","RIT_WHSE"]
-
+"Node Type":["DROP_SHIP_CLIENTPAID","CLIENT_DC","DROP_SHIP","RETAIL_STORE","RADIAL_DC","GSI_WHSE","RIT_WHSE"],
+"Safety Stock Type":["Application Type","Percentage","Quantity"],
+"Safety Stock Value":"50",
+"Item Attribute":["HullType","Season","test"],
+"Item Attribute Value":"100"
 }

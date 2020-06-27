@@ -16,10 +16,11 @@
     <classes>
       <class name="com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests">
         <methods>
-          <include name="testSafetyStockSearchByGlobalNodeType"/>
+          <include name="testaddSafetyStockByGLOBALSUPPLYTYPE"/>
+          <include name="testaddSafetyStockByAGGREGRATEDGLOBAL"/>
           <include name="tearDown"/>
           <include name="setup"/>
-          <include name="testSafetyStockSearchByNodeTypeItemAttribute"/>
+          <include name="testaddSafetyStockByNodeTypeItem"/>
         </methods>
       </class> <!-- com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests -->
     </classes>

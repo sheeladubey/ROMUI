@@ -5209,3 +5209,110 @@
 2020-06-26 00:24:17,311 [main] INFO romui - Login credentials to be entered
 2020-06-26 00:24:21,696 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
 2020-06-26 00:24:24,207 [main] INFO romui - Verify Safety stock is searched through Node Item
+2020-06-26 16:04:50,928 [main] INFO romui - Login credentials to be entered
+2020-06-26 16:04:58,975 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-06-26 16:05:01,824 [main] INFO romui - Verify Safety stock add through Node Item
+2020-06-26 16:05:10,426 [main] INFO romui - Safety Stock add by NODE ITEM,FULFILLMENT TYPE,SUPPLY TYPE verified
+2020-06-26 16:07:22,054 [main] INFO romui - Login credentials to be entered
+2020-06-26 16:07:27,910 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-06-26 16:07:30,144 [main] INFO romui - Verify Safety stock add through Node Item
+2020-06-26 16:07:39,103 [main] INFO romui - Safety Stock add by NODE ITEM,FULFILLMENT TYPE,SUPPLY TYPE verified
+2020-06-26 16:12:24,689 [main] INFO romui - Login credentials to be entered
+2020-06-26 16:12:29,369 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-06-26 16:12:32,081 [main] INFO romui - Verify Safety stock add through Node Item
+2020-06-26 16:12:44,722 [main] INFO romui - Safety Stock add by NODE ITEM,FULFILLMENT TYPE,SUPPLY TYPE verified
+2020-06-26 16:15:49,506 [main] INFO romui - Login credentials to be entered
+2020-06-26 16:15:54,352 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-06-26 16:16:00,999 [main] INFO romui - Verify Safety stock add through Node Item
+2020-06-26 16:16:16,629 [main] INFO romui - Safety Stock add by NODE ITEM,FULFILLMENT TYPE,SUPPLY TYPE verified
+2020-06-26 16:18:12,947 [main] INFO romui - Login credentials to be entered
+2020-06-26 16:18:19,194 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-06-26 16:18:21,930 [main] INFO romui - Verify Safety stock add through Node Item
+2020-06-26 16:18:35,405 [main] INFO romui - Safety Stock add by NODE ITEM,FULFILLMENT TYPE,SUPPLY TYPE verified
+2020-06-26 16:19:18,400 [main] INFO romui - Login credentials to be entered
+2020-06-26 16:19:23,258 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-06-26 16:19:25,367 [main] INFO romui - Verify Safety stock add through Node Item
+2020-06-26 16:25:48,031 [main] INFO romui - Login credentials to be entered
+2020-06-26 16:25:56,444 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-06-26 16:25:58,849 [main] INFO romui - Verify Safety stock add through Node Item
+2020-06-26 16:26:11,985 [main] INFO romui - Safety Stock add by NODE ITEM,FULFILLMENT TYPE,SUPPLY TYPE verified
+2020-06-26 16:39:15,913 [main] INFO romui - Login credentials to be entered
+2020-06-26 16:39:20,589 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-06-26 16:39:23,611 [main] INFO romui - Verify Safety stock add through Node Item
+2020-06-26 16:39:37,148 [main] INFO romui - Safety Stock add by NODE ITEM,FULFILLMENT TYPE,SUPPLY TYPE verified
+2020-06-26 16:39:47,165 [main] INFO romui - Login credentials to be entered
+2020-06-26 16:39:54,025 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-06-26 16:39:56,326 [main] INFO romui - Verify Safety stock add through Node Item
+2020-06-26 16:43:17,548 [main] INFO romui - Login credentials to be entered
+2020-06-26 16:43:23,898 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-06-26 16:43:26,221 [main] INFO romui - Verify Safety stock add through Node Item
+2020-06-26 16:45:10,564 [main] INFO romui - Login credentials to be entered
+2020-06-26 16:45:16,328 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-06-26 16:45:18,845 [main] INFO romui - Verify Safety stock add through Node Item
+2020-06-26 16:45:32,325 [main] INFO romui - Safety Stock add by NODE ITEM,FULFILLMENT TYPE,SUPPLY TYPE verified
+2020-06-26 16:45:42,297 [main] INFO romui - Login credentials to be entered
+2020-06-26 16:45:46,826 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-06-26 16:45:49,168 [main] INFO romui - Verify Safety stock add through Node Item
+2020-06-26 16:49:51,022 [main] INFO romui - Login credentials to be entered
+2020-06-26 16:49:56,115 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-06-26 16:49:58,543 [main] INFO romui - Verify Safety stock add through Node Item
+2020-06-26 16:50:11,452 [main] INFO romui - Safety Stock add by NODE ITEM,FULFILLMENT TYPE,SUPPLY TYPE verified
+2020-06-26 16:50:21,465 [main] INFO romui - Login credentials to be entered
+2020-06-26 16:50:25,896 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-06-26 16:50:28,167 [main] INFO romui - Verify Safety stock add through Node Item
+2020-06-26 16:50:39,795 [main] INFO romui - Safety Stock add by NODE TYPE ITEM,FULFILLMENT TYPE,SUPPLY TYPE verified
+2020-06-26 18:04:08,508 [main] INFO romui - Login credentials to be entered
+2020-06-26 18:04:16,585 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-06-26 18:04:19,216 [main] INFO romui - Verify Safety stock add through Node Item
+2020-06-26 18:04:40,039 [main] INFO romui - Login credentials to be entered
+2020-06-26 18:04:47,069 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-06-26 18:04:49,624 [main] INFO romui - Verify Safety stock add through Node Item
+2020-06-26 18:05:03,086 [main] INFO romui - Safety Stock add by NODE TYPE ITEM,FULFILLMENT TYPE,SUPPLY TYPE verified
+2020-06-26 18:05:13,033 [main] INFO romui - Login credentials to be entered
+2020-06-26 18:05:18,185 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-06-26 18:05:20,885 [main] INFO romui - Verify Safety stock add through Node Item
+2020-06-26 18:05:41,243 [main] INFO romui - Login credentials to be entered
+2020-06-26 18:05:46,332 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-06-26 18:05:49,140 [main] INFO romui - Verify Safety stock add through Node Item
+2020-06-26 18:05:59,914 [main] INFO romui - Safety Stock add by NODE TYPE ITEM ATTRIBUTE verified
+2020-06-26 18:09:39,673 [main] INFO romui - Login credentials to be entered
+2020-06-26 18:09:44,350 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-06-26 18:09:46,253 [main] INFO romui - Verify Safety stock add through Node Item
+2020-06-26 18:09:59,509 [main] INFO romui - Safety Stock add by NODE ITEM,FULFILLMENT TYPE,SUPPLY TYPE verified
+2020-06-26 18:10:09,870 [main] INFO romui - Login credentials to be entered
+2020-06-26 18:10:14,411 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-06-26 18:10:17,130 [main] INFO romui - Verify Safety stock add through Node Item
+2020-06-26 18:10:28,672 [main] INFO romui - Safety Stock add by NODE TYPE ITEM,FULFILLMENT TYPE,SUPPLY TYPE verified
+2020-06-26 18:10:39,112 [main] INFO romui - Login credentials to be entered
+2020-06-26 18:10:44,271 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-06-26 18:10:47,153 [main] INFO romui - Verify Safety stock add through Node Item
+2020-06-26 18:11:00,981 [main] INFO romui - Safety Stock add by NODE ITEM ATTRIBUTEE verified
+2020-06-26 18:11:11,583 [main] INFO romui - Login credentials to be entered
+2020-06-26 18:11:16,361 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-06-26 18:11:19,058 [main] INFO romui - Verify Safety stock add through Node Item
+2020-06-26 18:11:28,443 [main] INFO romui - Safety Stock add by NODE TYPE ITEM ATTRIBUTE verified
+2020-06-26 18:42:44,345 [main] INFO romui - Login credentials to be entered
+2020-06-26 18:42:52,182 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-06-26 18:42:54,458 [main] INFO romui - Verify Safety stock add through Node Item
+2020-06-26 18:43:24,052 [main] INFO romui - Safety Stock add by NODE ITEM,FULFILLMENT TYPE,SUPPLY TYPE verified
+2020-06-26 18:43:33,918 [main] INFO romui - Login credentials to be entered
+2020-06-26 18:43:40,251 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-06-26 18:43:42,540 [main] INFO romui - Verify Safety stock add through Node Item
+2020-06-26 18:44:30,446 [main] INFO romui - Login credentials to be entered
+2020-06-26 18:44:35,447 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-06-26 18:44:37,610 [main] INFO romui - Verify Safety stock add through Node Item
+2020-06-26 18:45:05,451 [main] INFO romui - Safety Stock add by NODE ITEM ATTRIBUTEE verified
+2020-06-26 18:45:15,909 [main] INFO romui - Login credentials to be entered
+2020-06-26 18:45:19,846 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-06-26 18:45:22,445 [main] INFO romui - Verify Safety stock add through Node Item
+2020-06-26 18:45:46,538 [main] INFO romui - Safety Stock add by NODE TYPE ITEM ATTRIBUTE verified
+2020-06-26 18:45:56,960 [main] INFO romui - Login credentials to be entered
+2020-06-26 18:46:01,396 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-06-26 18:46:03,900 [main] INFO romui - Verify Safety stock add through Node Item
+2020-06-26 18:46:13,157 [main] INFO romui - Safety Stock add by GLOBAL NODE TYPE verified
+2020-06-26 18:46:24,000 [main] INFO romui - Login credentials to be entered
+2020-06-26 18:46:28,305 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-06-26 18:46:30,769 [main] INFO romui - Verify Safety stock add through Node Item
+2020-06-26 18:46:59,199 [main] INFO romui - Login credentials to be entered
+2020-06-26 18:47:06,830 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-06-26 18:47:09,651 [main] INFO romui - Verify Safety stock add through Node Item

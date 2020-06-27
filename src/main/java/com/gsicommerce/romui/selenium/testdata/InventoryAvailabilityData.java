@@ -54,6 +54,18 @@ public class InventoryAvailabilityData {
 	@JsonProperty("Node Type")
 	List<String> Node_Type;
 	
+	@JsonProperty("Safety Stock Type")
+	List<String> Safety_Stock_Type;
+	
+	@JsonProperty("Safety Stock Value")
+	String Safety_Stock_Value;
+	
+	@JsonProperty("Item Attribute")
+	List<String> Item_Attribute;
+	
+	@JsonProperty("Item Attribute Value")
+	String Item_Attribute_Value;
+	
 	
 	public String getATP_Rule_Name() {
 		return ATP_Rule_Name + Common.generateRandomID("Automation");
@@ -102,6 +114,24 @@ public class InventoryAvailabilityData {
 	public List<String> getNode_Type() {
 		return Node_Type;
 	}
+	
+	public List<String> getSafety_Stock_Type() {
+		return Safety_Stock_Type;
+	}
+	
+	public String getSafety_Stock_Value() {
+		return Safety_Stock_Value;
+	}
+	
+	public List<String> getItem_Attribute() {
+		return Item_Attribute;
+	}
+	
+	public String getItem_Attribute_Value() {
+		return Item_Attribute_Value;
+	}
+
+
 	
 	public static InventoryAvailabilityData get(String filename) throws JsonParseException, JsonMappingException, IOException {
 		ObjectMapper mapper = new ObjectMapper();
