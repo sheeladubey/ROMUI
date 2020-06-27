@@ -17,6 +17,10 @@ public class SafetyStockConfigsPage {
 	WebDriver driver;
 	Environment env;
 	private InventoryAvailabilityData inventoryAvailabilityData;
+	private static int rowNodeItem;
+	private static int rowNodeTypeItem;
+	private static int rowNodeItemAttri;
+	private static int rowNodeItemAttrid;
 
 	public SafetyStockConfigsPage(WebDriver driver, Environment env) {
 		this.driver = driver;
@@ -153,15 +157,14 @@ public class SafetyStockConfigsPage {
 		Action.waitForElementToBeClickable(driver, btnSave, 10);
 		Action.clickUsingJavaScipt(btnSave);
 		if (inventoryAvailabilityData.getChoose_a_Type().get(indexType).equals("NODE ITEM")) {
-			int rowNodeItem = CommonElementsPage.getRowNo(inventoryAvailabilityData.getItemId());
+			rowNodeItem = CommonElementsPage.getRowNo(inventoryAvailabilityData.getItemId());
 			System.out.println(
 					"Selected item id is for node item ::" + CommonElementsPage.getRowCellTextVal(rowNodeItem, 1));
 			Assert.assertEquals(CommonElementsPage.getRowCellTextVal(rowNodeItem, 1),
 					inventoryAvailabilityData.getItemId(), "No Safety Stock added by Node item ");
 		}
 		if (inventoryAvailabilityData.getChoose_a_Type().get(indexType).equals("NODE TYPE ITEM")) {
-			int rowNodeTypeItem = CommonElementsPage
-					.getRowNo(inventoryAvailabilityData.getNode_Type().get(indexNodeType));
+			rowNodeTypeItem = CommonElementsPage.getRowNo(inventoryAvailabilityData.getNode_Type().get(indexNodeType));
 			System.out.println("Selected node type item is for node type item ::"
 					+ CommonElementsPage.getRowCellTextVal(rowNodeTypeItem, 2));
 			Assert.assertEquals(CommonElementsPage.getRowCellTextVal(rowNodeTypeItem, 2),
@@ -169,7 +172,7 @@ public class SafetyStockConfigsPage {
 					"No Safety Stock added by Node type item  ");
 		}
 		if (inventoryAvailabilityData.getChoose_a_Type().get(indexType).equals("NODE ITEM ATTRIBUTE")) {
-			int rowNodeItemAttri = CommonElementsPage
+			rowNodeItemAttri = CommonElementsPage
 					.getRowNo(inventoryAvailabilityData.getItem_Attribute().get(indexItemAttr));
 			System.out.println("Selected item attribute id is for node item attribute::"
 					+ CommonElementsPage.getRowCellTextVal(rowNodeItemAttri, 1));
@@ -178,7 +181,7 @@ public class SafetyStockConfigsPage {
 					"No Safety Stock added by Node item attribute  ");
 		}
 		if (inventoryAvailabilityData.getChoose_a_Type().get(indexType).equals("NODE TYPE ITEM ATTRIBUTE")) {
-			int rowNodeItemAttrid = CommonElementsPage
+			rowNodeItemAttrid = CommonElementsPage
 					.getRowNo(inventoryAvailabilityData.getItem_Attribute().get(indexItemAttr));
 			System.out.println("Selected item attribute id is for node type item attribute::"
 					+ CommonElementsPage.getRowCellTextVal(rowNodeItemAttrid, 1));
@@ -186,6 +189,10 @@ public class SafetyStockConfigsPage {
 					inventoryAvailabilityData.getItem_Attribute().get(indexItemAttr),
 					"No Safety Stock added by Node type item attribute  ");
 		}
+	}
+	
+	public void editSafetyStock() {
+		
 	}
 
 	public void clickItemIDLookup() {
