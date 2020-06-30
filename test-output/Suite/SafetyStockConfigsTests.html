@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>SafetyStockConfigsTests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Jun 27 02:46:18 EDT 2020</td>
+<td>Started on:</td><td>Tue Jun 30 00:47:22 EDT 2020</td>
 </tr>
-<tr><td>Total time:</td><td>176 seconds (176553 ms)</td>
+<tr><td>Total time:</td><td>43 seconds (43936 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,73 +75,27 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests.testEditSafetyStockByNodeItem()'><b>testEditSafetyStockByNodeItem</b><br>Test class: com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests<br>Test method: to Verify edit Safety stock through Node Item & Fulfillment type & supply type in Manage Safety Stock Configuration page<br/>
-<a href="#Output-117911771" onClick='toggleBox("Output-117911771", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-117911771" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-117911771">
-There is no page limit option displayed<br/>
-page limit drop down value is selected<br/>
-There is no page limit option displayed<br/>
-page limit drop down value is selected<br/>
-Getting the column value of the first row<br/>
-</div>
-</td>
-<td><div><pre>org.openqa.selenium.InvalidSelectorException: invalid selector: An invalid or illegal selector was specified
-  (Session info: chrome=83.0.4103.116)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+<td title='com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests.testaddSafetyStockByAGGREGRATEDGLOBAL()'><b>testaddSafetyStockByAGGREGRATEDGLOBAL</b><br>Test class: com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests<br>Test method: to Verify add Safety stock through AGGREGRATED GLOBAL in Manage Safety Stock Configuration page</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Cannot locate element with text: AGGREGRATED GLOBAL
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.133.47&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50058}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: d3ecb8941634d20f2c98f3b569a25208
-*** Element info: {Using=css selector, value=//p[contains(text(),&apos;NODE ITEM&apos;)]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy14.getText(Unknown Source)
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.SafetyStockConfigsPage.editSafetyStock(SafetyStockConfigsPage.java:207)
-	at com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests.testEditSafetyStockByNodeItem(SafetyStockConfigsTests.java:182)
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.134.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
+	at com.gsicommerce.romui.selenium.utilities.Action.selectByVisibleText(Action.java:747)
+	at com.gsicommerce.romui.selenium.pages.ordermanagement.SafetyStockConfigsPage.addGlobal_AggregatedGlobalType(SafetyStockConfigsPage.java:178)
+	at com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests.testaddSafetyStockByAGGREGRATEDGLOBAL(SafetyStockConfigsTests.java:363)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace117911771", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace117911771'><pre>org.openqa.selenium.InvalidSelectorException: invalid selector: An invalid or illegal selector was specified
-  (Session info: chrome=83.0.4103.116)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1217741734", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1217741734'><pre>org.openqa.selenium.NoSuchElementException: Cannot locate element with text: AGGREGRATED GLOBAL
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.133.47&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50058}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: d3ecb8941634d20f2c98f3b569a25208
-*** Element info: {Using=css selector, value=//p[contains(text(),&apos;NODE ITEM&apos;)]}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy14.getText(Unknown Source)
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.SafetyStockConfigsPage.editSafetyStock(SafetyStockConfigsPage.java:207)
-	at com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests.testEditSafetyStockByNodeItem(SafetyStockConfigsTests.java:182)
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.134.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
+	at com.gsicommerce.romui.selenium.utilities.Action.selectByVisibleText(Action.java:747)
+	at com.gsicommerce.romui.selenium.pages.ordermanagement.SafetyStockConfigsPage.addGlobal_AggregatedGlobalType(SafetyStockConfigsPage.java:178)
+	at com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests.testaddSafetyStockByAGGREGRATEDGLOBAL(SafetyStockConfigsTests.java:363)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -171,54 +125,8 @@ Session ID: d3ecb8941634d20f2c98f3b569a25208
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>51</td>
-<td>com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@54d9d12d</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests.testAddSafetyStockByNodeItem()'><b>testAddSafetyStockByNodeItem</b><br>Test class: com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests<br>Test method: to Verify add Safety stock through Node Item & Fulfillment type & supply type in Manage Safety Stock Configuration page<br/>
-<a href="#Output-118363130" onClick='toggleBox("Output-118363130", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-118363130" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-118363130">
-There is no page limit option displayed<br/>
-page limit drop down value is selected<br/>
-Getting the column value of the first row<br/>
-Getting the column value of the first row<br/>
-</div>
-</td>
-<td></td>
-<td>39</td>
-<td>com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@54d9d12d</td></tr>
-<tr>
-<td title='com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests.testDeleteSafetyStockByNodeItem()'><b>testDeleteSafetyStockByNodeItem</b><br>Test class: com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests<br>Test method: to Verify delete Safety stock through Node Item in Manage Safety Stock Configuration page<br/>
-<a href="#Output-134943275" onClick='toggleBox("Output-134943275", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-134943275" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-134943275">
-Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on WINDOWS (555ed706b052ae476cbf38627fb5e954)] -> css selector: #store_fulfillment_safety_stock_search_type] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'KOP-BM5TNF2', ip: '10.140.133.47', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50162}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 555ed706b052ae476cbf38627fb5e954<br/>
-There is no page limit option displayed<br/>
-page limit drop down value is selected<br/>
-There is no page limit option displayed<br/>
-page limit drop down value is selected<br/>
-Getting the column value of the first row<br/>
-Action icon for span element is clicked on<br/>
-</div>
-</td>
-<td></td>
-<td>54</td>
-<td>com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@54d9d12d</td></tr>
+<td>33</td>
+<td>com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@1165b38</td></tr>
 </table><p>
 </body>
 </html>

@@ -1,157 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="9" total="12" passed="2" failed="1" skipped="0">
+<testng-results ignored="23" total="24" passed="0" failed="1" skipped="0">
   <reporter-output>
-    <line>
-      <![CDATA[There is no page limit option displayed]]>
-    </line>
-    <line>
-      <![CDATA[page limit drop down value is selected]]>
-    </line>
-    <line>
-      <![CDATA[Getting the column value of the first row]]>
-    </line>
-    <line>
-      <![CDATA[Getting the column value of the first row]]>
-    </line>
-    <line>
-      <![CDATA[There is no page limit option displayed]]>
-    </line>
-    <line>
-      <![CDATA[page limit drop down value is selected]]>
-    </line>
-    <line>
-      <![CDATA[There is no page limit option displayed]]>
-    </line>
-    <line>
-      <![CDATA[page limit drop down value is selected]]>
-    </line>
-    <line>
-      <![CDATA[Getting the column value of the first row]]>
-    </line>
-    <line>
-      <![CDATA[Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on WINDOWS (555ed706b052ae476cbf38627fb5e954)] -> css selector: #store_fulfillment_safety_stock_search_type] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'KOP-BM5TNF2', ip: '10.140.133.47', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50162}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 555ed706b052ae476cbf38627fb5e954]]>
-    </line>
-    <line>
-      <![CDATA[There is no page limit option displayed]]>
-    </line>
-    <line>
-      <![CDATA[page limit drop down value is selected]]>
-    </line>
-    <line>
-      <![CDATA[There is no page limit option displayed]]>
-    </line>
-    <line>
-      <![CDATA[page limit drop down value is selected]]>
-    </line>
-    <line>
-      <![CDATA[Getting the column value of the first row]]>
-    </line>
-    <line>
-      <![CDATA[Action icon for span element is clicked on]]>
-    </line>
   </reporter-output>
-  <suite started-at="2020-06-27T02:46:18 EDT" name="Suite" finished-at="2020-06-27T02:49:14 EDT" duration-ms="176553">
+  <suite started-at="2020-06-30T00:47:22 EDT" name="Suite" finished-at="2020-06-30T00:48:06 EDT" duration-ms="43936">
     <groups>
     </groups>
-    <test started-at="2020-06-27T02:46:18 EDT" name="SafetyStockConfigsTests" finished-at="2020-06-27T02:49:14 EDT" duration-ms="176553">
+    <test started-at="2020-06-30T00:47:22 EDT" name="SafetyStockConfigsTests" finished-at="2020-06-30T00:48:06 EDT" duration-ms="43936">
       <class name="com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests">
-        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@54d9d12d]" started-at="2020-06-27T02:46:18 EDT" name="setup" finished-at="2020-06-27T02:46:28 EDT" duration-ms="10358" status="PASS">
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@1165b38]" started-at="2020-06-30T00:47:22 EDT" name="setup" finished-at="2020-06-30T00:47:32 EDT" duration-ms="10294" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@3a7b2e2]]>
+                <![CDATA[org.testng.TestRunner@325bb9a6]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testAddSafetyStockByNodeItem()[pri:8, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@54d9d12d]" started-at="2020-06-27T02:46:28 EDT" name="testAddSafetyStockByNodeItem" description="to Verify add Safety stock through Node Item &amp; Fulfillment type &amp; supply type in Manage Safety Stock Configuration page" finished-at="2020-06-27T02:47:08 EDT" duration-ms="39790" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[There is no page limit option displayed]]>
-            </line>
-            <line>
-              <![CDATA[page limit drop down value is selected]]>
-            </line>
-            <line>
-              <![CDATA[Getting the column value of the first row]]>
-            </line>
-            <line>
-              <![CDATA[Getting the column value of the first row]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- testAddSafetyStockByNodeItem -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@54d9d12d]" started-at="2020-06-27T02:47:08 EDT" name="tearDown" finished-at="2020-06-27T02:47:08 EDT" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testAddSafetyStockByNodeItem status=SUCCESS method=SafetyStockConfigsTests.testAddSafetyStockByNodeItem()[pri:8, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@54d9d12d] output=There is no page limit option displayed]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@54d9d12d]" started-at="2020-06-27T02:47:08 EDT" name="setup" finished-at="2020-06-27T02:47:18 EDT" duration-ms="10016" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@3a7b2e2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="testEditSafetyStockByNodeItem()[pri:9, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@54d9d12d]" started-at="2020-06-27T02:47:18 EDT" name="testEditSafetyStockByNodeItem" description="to Verify edit Safety stock through Node Item &amp; Fulfillment type &amp; supply type in Manage Safety Stock Configuration page" finished-at="2020-06-27T02:48:10 EDT" duration-ms="51561" status="FAIL">
-          <exception class="org.openqa.selenium.InvalidSelectorException">
+        <test-method signature="testaddSafetyStockByAGGREGRATEDGLOBAL()[pri:20, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@1165b38]" started-at="2020-06-30T00:47:32 EDT" name="testaddSafetyStockByAGGREGRATEDGLOBAL" description="to Verify add Safety stock through AGGREGRATED GLOBAL in Manage Safety Stock Configuration page" finished-at="2020-06-30T00:48:05 EDT" duration-ms="33179" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[invalid selector: An invalid or illegal selector was specified
-  (Session info: chrome=83.0.4103.116)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+              <![CDATA[Cannot locate element with text: AGGREGRATED GLOBAL
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'KOP-BM5TNF2', ip: '10.140.133.47', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50058}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: d3ecb8941634d20f2c98f3b569a25208
-*** Element info: {Using=css selector, value=//p[contains(text(),'NODE ITEM')]}]]>
+System info: host: 'KOP-BM5TNF2', ip: '10.140.134.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: driver.version: unknown]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.InvalidSelectorException: invalid selector: An invalid or illegal selector was specified
-  (Session info: chrome=83.0.4103.116)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate element with text: AGGREGRATED GLOBAL
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'KOP-BM5TNF2', ip: '10.140.133.47', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50058}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: d3ecb8941634d20f2c98f3b569a25208
-*** Element info: {Using=css selector, value=//p[contains(text(),'NODE ITEM')]}
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
-at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy14.getText(Unknown Source)
-at com.gsicommerce.romui.selenium.pages.ordermanagement.SafetyStockConfigsPage.editSafetyStock(SafetyStockConfigsPage.java:207)
-at com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests.testEditSafetyStockByNodeItem(SafetyStockConfigsTests.java:182)
+System info: host: 'KOP-BM5TNF2', ip: '10.140.134.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: driver.version: unknown
+at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
+at com.gsicommerce.romui.selenium.utilities.Action.selectByVisibleText(Action.java:747)
+at com.gsicommerce.romui.selenium.pages.ordermanagement.SafetyStockConfigsPage.addGlobal_AggregatedGlobalType(SafetyStockConfigsPage.java:178)
+at com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests.testaddSafetyStockByAGGREGRATEDGLOBAL(SafetyStockConfigsTests.java:363)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -182,87 +67,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.InvalidSelectorException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
-            <line>
-              <![CDATA[There is no page limit option displayed]]>
-            </line>
-            <line>
-              <![CDATA[page limit drop down value is selected]]>
-            </line>
-            <line>
-              <![CDATA[There is no page limit option displayed]]>
-            </line>
-            <line>
-              <![CDATA[page limit drop down value is selected]]>
-            </line>
-            <line>
-              <![CDATA[Getting the column value of the first row]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- testEditSafetyStockByNodeItem -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@54d9d12d]" started-at="2020-06-27T02:48:10 EDT" name="tearDown" finished-at="2020-06-27T02:48:10 EDT" duration-ms="379" status="PASS">
+        </test-method> <!-- testaddSafetyStockByAGGREGRATEDGLOBAL -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@1165b38]" started-at="2020-06-30T00:48:05 EDT" name="tearDown" finished-at="2020-06-30T00:48:06 EDT" duration-ms="441" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testEditSafetyStockByNodeItem status=FAILURE method=SafetyStockConfigsTests.testEditSafetyStockByNodeItem()[pri:9, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@54d9d12d] output=There is no page limit option displayed]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@54d9d12d]" started-at="2020-06-27T02:48:10 EDT" name="setup" finished-at="2020-06-27T02:48:20 EDT" duration-ms="9911" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@3a7b2e2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="testDeleteSafetyStockByNodeItem()[pri:10, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@54d9d12d]" started-at="2020-06-27T02:48:20 EDT" name="testDeleteSafetyStockByNodeItem" description="to Verify delete Safety stock through Node Item in Manage Safety Stock Configuration page" finished-at="2020-06-27T02:49:14 EDT" duration-ms="54509" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on WINDOWS (555ed706b052ae476cbf38627fb5e954)] -> css selector: #store_fulfillment_safety_stock_search_type] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'KOP-BM5TNF2', ip: '10.140.133.47', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50162}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 555ed706b052ae476cbf38627fb5e954]]>
-            </line>
-            <line>
-              <![CDATA[There is no page limit option displayed]]>
-            </line>
-            <line>
-              <![CDATA[page limit drop down value is selected]]>
-            </line>
-            <line>
-              <![CDATA[There is no page limit option displayed]]>
-            </line>
-            <line>
-              <![CDATA[page limit drop down value is selected]]>
-            </line>
-            <line>
-              <![CDATA[Getting the column value of the first row]]>
-            </line>
-            <line>
-              <![CDATA[Action icon for span element is clicked on]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- testDeleteSafetyStockByNodeItem -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@54d9d12d]" started-at="2020-06-27T02:49:14 EDT" name="tearDown" finished-at="2020-06-27T02:49:14 EDT" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testDeleteSafetyStockByNodeItem status=SUCCESS method=SafetyStockConfigsTests.testDeleteSafetyStockByNodeItem()[pri:10, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@54d9d12d] output=Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on WINDOWS (555ed706b052ae476cbf38627fb5e954)] -> css selector: #store_fulfillment_safety_stock_search_type] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'KOP-BM5TNF2', ip: '10.140.133.47', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50162}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 555ed706b052ae476cbf38627fb5e954]]]>
+                <![CDATA[[TestResult name=testaddSafetyStockByAGGREGRATEDGLOBAL status=FAILURE method=SafetyStockConfigsTests.testaddSafetyStockByAGGREGRATEDGLOBAL()[pri:20, instance:com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@1165b38] output={null}]]]>
               </value>
             </param>
           </params>
