@@ -130,17 +130,30 @@
                   <a name="testaddSafetyStockByAGGREGRATEDGLOBAL">
                   </a> <!-- testaddSafetyStockByAGGREGRATEDGLOBAL -->
                   <span class="method-name">testaddSafetyStockByAGGREGRATEDGLOBAL</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Cannot locate element with text: AGGREGRATED GLOBAL
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to find element with css selector == .alert-info
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.134.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
-	at com.gsicommerce.romui.selenium.utilities.Action.selectByVisibleText(Action.java:747)
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.SafetyStockConfigsPage.addGlobal_AggregatedGlobalType(SafetyStockConfigsPage.java:178)
-	at com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests.testaddSafetyStockByAGGREGRATEDGLOBAL(SafetyStockConfigsTests.java:363)
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.134.25&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: false, ie.browserCommandLineSwitches: , ie.edgechromium: false, ie.edgepath: , ie.ensureCleanSession: true, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: true, initialBrowserUrl: http://localhost:10447/, nativeEvents: true, requireWindowFocus: true}, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fadc8130-d476-4c19-b108-b88827fb2d02
+*** Element info: {Using=css selector, value=.alert-info}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.getText(Unknown Source)
+	at com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests.testaddSafetyStockByAGGREGRATEDGLOBAL(SafetyStockConfigsTests.java:355)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 27 stack frames
+... Removed 32 stack frames
 </div> <!-- stack-trace -->
                   <em>
 (to Verify add Safety stock through AGGREGRATED GLOBAL in Manage Safety Stock Configuration page)                  </em>
@@ -164,7 +177,7 @@ Driver info: driver.version: unknown
   &lt;parameter name=&quot;adminPasswd&quot; value=&quot;Password123@&quot;/&gt;
   &lt;parameter name=&quot;storeID&quot; value=&quot;TMS-NA-Store1&quot;/&gt;
   &lt;parameter name=&quot;waitPeriod&quot; value=&quot;5&quot;/&gt;
-  &lt;parameter name=&quot;browserType&quot; value=&quot;chrome&quot;/&gt;
+  &lt;parameter name=&quot;browserType&quot; value=&quot;ie&quot;/&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.gsicommerce.romui.selenium.utilities.ExtentReporterListener&quot;/&gt;
   &lt;/listeners&gt;
@@ -215,12 +228,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testaddSafetyStockByAGGREGRATEDGLOBAL')
 data.setCell(0, 2, 'com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests')
-data.setCell(0, 3, 33179);
+data.setCell(0, 3, 31576);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 33 seconds</span>
+              <span class="suite-total-time">Total running time: 31 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -235,7 +248,7 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">23 ignored methods</span>
+            <span class="header-content">28 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
@@ -249,37 +262,47 @@ return data;
                 <br/>
                 <span class="ignored-method-name">testSafetyStockSearchByNodeItem</span>
                 <br/>
-                <span class="ignored-method-name">testDeleteSafetyStockByNodeItem</span>
-                <br/>
-                <span class="ignored-method-name">testDeleteSafetyStockByNodeTypeItem</span>
-                <br/>
-                <span class="ignored-method-name">testEditSafetyStockByAGGREGRATEDGLOBAL</span>
-                <br/>
-                <span class="ignored-method-name">testEditSafetyStockByGLOBALSUPPLYTYPE</span>
-                <br/>
                 <span class="ignored-method-name">testEditSafetyStockByNodeTypeItem</span>
-                <br/>
-                <span class="ignored-method-name">testaddSafetyStockByGLOBALSUPPLYTYPE</span>
                 <br/>
                 <span class="ignored-method-name">testSafetyStockSearchByNodeItemAttribute</span>
                 <br/>
-                <span class="ignored-method-name">testaddSafetyStockByGLOBALNODETYPE</span>
+                <span class="ignored-method-name">testaddSafetyStockByGLOBALSUPPLYTYPE</span>
                 <br/>
                 <span class="ignored-method-name">testEditSafetyStockByNodeItem</span>
                 <br/>
                 <span class="ignored-method-name">testaddSafetyStockByNodeTypeItemAttribute</span>
                 <br/>
-                <span class="ignored-method-name">testAddSafetyStockByNodeItem</span>
-                <br/>
-                <span class="ignored-method-name">testEditSafetyStockByNodeItemAttribute</span>
-                <br/>
-                <span class="ignored-method-name">testDeleteSafetyStockByGLOBALNODETYPE</span>
+                <span class="ignored-method-name">testSafetyStockSearchByAggregatedGlobal</span>
                 <br/>
                 <span class="ignored-method-name">testDeleteSafetyStockByNodeItemAttribute</span>
                 <br/>
                 <span class="ignored-method-name">testDeleteSafetyStockByAGGREGRATEDGLOBAL</span>
                 <br/>
                 <span class="ignored-method-name">testEditSafetyStockByGLOBALNODETYPE</span>
+                <br/>
+                <span class="ignored-method-name">testSafetyStockSearchByGlobalNodeType</span>
+                <br/>
+                <span class="ignored-method-name">testSafetyStockSearchByNodeTypeItem</span>
+                <br/>
+                <span class="ignored-method-name">testDeleteSafetyStockByNodeItem</span>
+                <br/>
+                <span class="ignored-method-name">testSafetyStockSearchByNodeTypeItemAttribute</span>
+                <br/>
+                <span class="ignored-method-name">testEditSafetyStockByAGGREGRATEDGLOBAL</span>
+                <br/>
+                <span class="ignored-method-name">testDeleteSafetyStockByNodeTypeItem</span>
+                <br/>
+                <span class="ignored-method-name">testEditSafetyStockByGLOBALSUPPLYTYPE</span>
+                <br/>
+                <span class="ignored-method-name">testSafetyStockSearchByGlobalSupplyType</span>
+                <br/>
+                <span class="ignored-method-name">testaddSafetyStockByGLOBALNODETYPE</span>
+                <br/>
+                <span class="ignored-method-name">testAddSafetyStockByNodeItem</span>
+                <br/>
+                <span class="ignored-method-name">testEditSafetyStockByNodeItemAttribute</span>
+                <br/>
+                <span class="ignored-method-name">testDeleteSafetyStockByGLOBALNODETYPE</span>
                 <br/>
                 <span class="ignored-method-name">testSafetyStockSearchBy</span>
                 <br/>
@@ -299,18 +322,18 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setup(org.testng.TestRunner@325bb9a6)</span>
+                <span class="method-name">setup(org.testng.TestRunner@7d37f1c)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">testaddSafetyStockByAGGREGRATEDGLOBAL</span>
-                <span class="method-start">10294 ms</span>
+                <span class="method-start">11567 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=testaddSafetyStockByAGGREGRATEDGLOBAL status=FAILURE method=SafetyStockConfigsTests...)</span>
-                <span class="method-start">43473 ms</span>
+                <span class="method-start">43146 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

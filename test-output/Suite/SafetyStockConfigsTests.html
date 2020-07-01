@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jun 30 00:47:22 EDT 2020</td>
+<td>Started on:</td><td>Wed Jul 01 00:34:19 EDT 2020</td>
 </tr>
-<tr><td>Total time:</td><td>43 seconds (43936 ms)</td>
+<tr><td>Total time:</td><td>44 seconds (44083 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,26 +76,57 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests.testaddSafetyStockByAGGREGRATEDGLOBAL()'><b>testaddSafetyStockByAGGREGRATEDGLOBAL</b><br>Test class: com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests<br>Test method: to Verify add Safety stock through AGGREGRATED GLOBAL in Manage Safety Stock Configuration page</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Cannot locate element with text: AGGREGRATED GLOBAL
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with css selector == .alert-info
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.134.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
-	at com.gsicommerce.romui.selenium.utilities.Action.selectByVisibleText(Action.java:747)
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.SafetyStockConfigsPage.addGlobal_AggregatedGlobalType(SafetyStockConfigsPage.java:178)
-	at com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests.testaddSafetyStockByAGGREGRATEDGLOBAL(SafetyStockConfigsTests.java:363)
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.134.25&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: false, ie.browserCommandLineSwitches: , ie.edgechromium: false, ie.edgepath: , ie.ensureCleanSession: true, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: true, initialBrowserUrl: http://localhost:10447/, nativeEvents: true, requireWindowFocus: true}, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fadc8130-d476-4c19-b108-b88827fb2d02
+*** Element info: {Using=css selector, value=.alert-info}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.getText(Unknown Source)
+	at com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests.testaddSafetyStockByAGGREGRATEDGLOBAL(SafetyStockConfigsTests.java:355)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1217741734", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1217741734'><pre>org.openqa.selenium.NoSuchElementException: Cannot locate element with text: AGGREGRATED GLOBAL
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace4015102", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace4015102'><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with css selector == .alert-info
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.134.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
-	at com.gsicommerce.romui.selenium.utilities.Action.selectByVisibleText(Action.java:747)
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.SafetyStockConfigsPage.addGlobal_AggregatedGlobalType(SafetyStockConfigsPage.java:178)
-	at com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests.testaddSafetyStockByAGGREGRATEDGLOBAL(SafetyStockConfigsTests.java:363)
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.134.25&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: false, ie.browserCommandLineSwitches: , ie.edgechromium: false, ie.edgepath: , ie.ensureCleanSession: true, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: true, initialBrowserUrl: http://localhost:10447/, nativeEvents: true, requireWindowFocus: true}, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fadc8130-d476-4c19-b108-b88827fb2d02
+*** Element info: {Using=css selector, value=.alert-info}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.getText(Unknown Source)
+	at com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests.testaddSafetyStockByAGGREGRATEDGLOBAL(SafetyStockConfigsTests.java:355)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -125,8 +156,8 @@ Driver info: driver.version: unknown
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>33</td>
-<td>com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@1165b38</td></tr>
+<td>31</td>
+<td>com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests@5542c4ed</td></tr>
 </table><p>
 </body>
 </html>

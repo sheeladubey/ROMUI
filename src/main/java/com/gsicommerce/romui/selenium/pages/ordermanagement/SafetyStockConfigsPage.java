@@ -23,6 +23,7 @@ public class SafetyStockConfigsPage {
 	private static int rowNodeItemAttrid;
 	private static int rowGlobalNode;
 	private static int rowGlobalSupply;
+	private static int rowAGGREGATED;
 
 	public SafetyStockConfigsPage(WebDriver driver, Environment env) {
 		this.driver = driver;
@@ -43,7 +44,7 @@ public class SafetyStockConfigsPage {
 	private WebElement drpdwnFulfillType;
 
 	@FindBy(how = How.CSS, using = "#store_fulfillment_safety_stock_search_supply_type")
-	private WebElement drpdwnSupplyType;
+	private WebElement drpdwnSearchSupplyType;
 
 	@FindBy(how = How.CSS, using = "#store_fulfillment_safety_stock_search_node_type")
 	private WebElement drpdwnSearchNodeType;
@@ -115,7 +116,7 @@ public class SafetyStockConfigsPage {
 	private WebElement btnSearchIcon;
 
 	@FindBy(how = How.CSS, using = ".alert-danger")
-	private WebElement msgErrorAlert;
+	public WebElement msgErrorAlert;
 
 	public void addSafetyStock(int indexType, int indexFulfillType, int indexSuppyType, int indexNodeType,
 			int indexSafetyStockType, int indexItemAttr) throws Exception {
@@ -165,43 +166,39 @@ public class SafetyStockConfigsPage {
 		Action.waitForElementToBeClickable(driver, btnSave, 10);
 		Action.clickUsingJavaScipt(btnSave);
 		}catch(Exception e) {
-			System.out.println("Oh snap! Safety Stock already exists");
-			Assert.assertTrue(true, msgErrorAlert.getText());
+			//System.out.println("Oh snap! Safety Stock already exists");
+		//	Assert.assertTrue(true, msgErrorAlert.getText());
+			Assert.assertTrue(msgErrorAlert.getText().contains(RomuiEnumValues.SAFETYSTOCK_EXIST.getMessage()),"Safety Stock already not exists");	
 		}
 
 	}
 	
 	public void addGlobal_AggregatedGlobalType(int indexType,int indexSuppyType,int indexSafetyStockType) throws Exception {
+		try {
 		inventoryAvailabilityData = InventoryAvailabilityData.get(env.getFileLocation());
 		CommonElementsPage.clickOnAddBtn();
+		//Common.waitForPageLoaded(driver);
 		Action.waitForElementToBeClickable(driver, drpdwnSafetyStockConditionType, 30);
+		drpdwnSafetyStockConditionType.click();
 		Action.selectByVisibleText(drpdwnSafetyStockConditionType,inventoryAvailabilityData.getChoose_a_Type().get(indexType));
 		Common.waitForPageLoaded(driver);
 		if (inventoryAvailabilityData.getChoose_a_Type().get(indexType).equals("GLOBAL SUPPLY TYPE")) {			
 		Action.waitForElementToBeClickable(driver, drpdwnSupplyTypeSafetyStockadd, 10);
 		Action.selectByVisibleText(drpdwnSupplyTypeSafetyStockadd, inventoryAvailabilityData.getSupply_Type_Id().get(indexSuppyType));
-		Action.selectByVisibleText(drpdwnSafetyStockTypeadd,inventoryAvailabilityData.getSafety_Stock_Type().get(indexSafetyStockType));
-		Action.waitForElementToBeClickable(driver, txtboxSafetyStockvalue, 10);
-		Action.enter(txtboxSafetyStockvalue, inventoryAvailabilityData.getSafety_Stock_Value());
-		Action.waitForElementToBeClickable(driver, btnSave, 10);
-		Action.clickUsingJavaScipt(btnSave);
-		Common.waitForPageLoaded(driver);
-		rowGlobalSupply=CommonElementsPage.getRowNo(inventoryAvailabilityData.getSupply_Type_Id().get(indexSuppyType));
-		System.out.println("Selected Supply Type id is for GLOBAL SUPPLY TYPE attribute::"
-				+ CommonElementsPage.getRowCellTextVal(rowGlobalSupply, 1));
-		Assert.assertEquals(CommonElementsPage.getRowCellTextVal(rowGlobalSupply, 1),
-				inventoryAvailabilityData.getSupply_Type_Id().get(indexSuppyType),
-				"No Safety Stock added by GLOBAL SUPPLY TYPE attribute");
-		}
-		if (inventoryAvailabilityData.getChoose_a_Type().get(indexType).equals("AGGREGRATED GLOBAL")) {
-			Action.selectByVisibleText(drpdwnSafetyStockTypeadd,inventoryAvailabilityData.getSafety_Stock_Type().get(indexSafetyStockType));
-			Action.waitForElementToBeClickable(driver, txtboxSafetyStockvalue, 10);
-			Action.enter(txtboxSafetyStockvalue, inventoryAvailabilityData.getSafety_Stock_Value());
-			Action.waitForElementToBeClickable(driver, btnSave, 10);
-			Action.clickUsingJavaScipt(btnSave);
-			Common.waitForPageLoaded(driver);
-		}
 		
+		}
+		if (inventoryAvailabilityData.getChoose_a_Type().get(indexType).equals("AGGREGATED GLOBAL")) 
+		Action.waitForElementToBeClickable(driver, drpdwnSafetyStockTypeadd, 10);	
+		Action.selectByVisibleText(drpdwnSafetyStockTypeadd,inventoryAvailabilityData.getSafety_Stock_Type().get(indexSafetyStockType));
+		Action.waitForElementToBeClickable(driver, txtboxSafetyStockvalue, 20);
+		Action.enter(txtboxSafetyStockvalue, inventoryAvailabilityData.getSafety_Stock_Value());
+		Action.waitForElementToBeClickable(driver, btnSave,20);
+		Action.clickUsingJavaScipt(btnSave);		
+		}catch(Exception e)
+		{
+			Assert.assertTrue(msgErrorAlert.getText().contains(RomuiEnumValues.SAFETYSTOCK_EXIST.getMessage()),"Safety Stock already not exists");	
+			e.printStackTrace();
+		}
 	}
 
 	public void editSafetyStock(int indexType) throws Exception {
@@ -222,6 +219,8 @@ public class SafetyStockConfigsPage {
 			CommonElementsPage.clickDivChildSpanLink(rowGlobalNode, 6, 0, 0, 1);
 		}if (inventoryAvailabilityData.getChoose_a_Type().get(indexType).equals("GLOBAL SUPPLY TYPE")) {
 			CommonElementsPage.clickDivChildSpanLink(rowGlobalSupply, 4, 0, 0, 1);
+		}if (inventoryAvailabilityData.getChoose_a_Type().get(indexType).equals("AGGREGATED GLOBAL")) {	
+			CommonElementsPage.clickDivChildSpanLink(rowAGGREGATED, 3, 0, 0, 1);
 		}
 		Common.waitForPageLoaded(driver);
 		Action.waitForElementToBeClickable(driver, txtboxSafetyStockvalue, 10);
@@ -245,7 +244,9 @@ public class SafetyStockConfigsPage {
 		}if (inventoryAvailabilityData.getChoose_a_Type().get(indexType).equals("GLOBAL NODE TYPE")) {
 			CommonElementsPage.clickSelectBtnSpanLink(rowGlobalNode, 6, 1);
 		}if (inventoryAvailabilityData.getChoose_a_Type().get(indexType).equals("GLOBAL SUPPLY TYPE")) {
-			CommonElementsPage.clickSelectBtnSpanLink(rowGlobalNode, 6, 1);;
+			CommonElementsPage.clickSelectBtnSpanLink(rowGlobalSupply, 4, 1);;
+		}if (inventoryAvailabilityData.getChoose_a_Type().get(indexType).equals("AGGREGATED GLOBAL")) {	
+			CommonElementsPage.clickSelectBtnSpanLink(rowAGGREGATED, 3, 1);
 		}
 		Action.waitForElementToBeClickable(driver, btnConfirmDeleteSafety, 20);
 		Action.clickUsingJavaScipt(btnConfirmDeleteSafety);
@@ -276,7 +277,7 @@ public class SafetyStockConfigsPage {
 		btnSelectitemNode.click();
 	}
 
-	public void searchSafetyStockByNodeItemFulfillType(int indexType, int indexFulfillType, int indexSuppyType,
+	public void searchSafetyStock(int indexType, int indexFulfillType, int indexSuppyType,
 			int indexNodeType, int indexItemAttr) throws Exception {
 		inventoryAvailabilityData = InventoryAvailabilityData.get(env.getFileLocation());
 		Common.waitForPageLoaded(driver);
@@ -316,7 +317,7 @@ public class SafetyStockConfigsPage {
 		}
 		Action.selectByVisibleText(drpdwnFulfillType,
 				inventoryAvailabilityData.getFulfillment_Type_Id().get(indexFulfillType));
-		Action.selectByVisibleText(drpdwnSupplyType, inventoryAvailabilityData.getSupply_Type_Id().get(indexSuppyType));
+		Action.selectByVisibleText(drpdwnSearchSupplyType, inventoryAvailabilityData.getSupply_Type_Id().get(indexSuppyType));
 		Action.waitForElementToBeClickable(driver, btnSearch, 10);
 		Action.clickUsingJavaScipt(btnSearch);
 
@@ -367,9 +368,48 @@ public class SafetyStockConfigsPage {
 					
 		}
 	}
+	
+	public void searchGlobal_AggregatedGlobalType(int indexType,int indexSuppyType,int indexSafetyStockType) throws Exception
+	{
+		inventoryAvailabilityData = InventoryAvailabilityData.get(env.getFileLocation());
+	Common.waitForPageLoaded(driver);
+	Action.waitForElementToBeClickable(driver, btnSearchIcon, 30);
+	Action.clickUsingJavaScipt(btnSearchIcon);
+	Action.waitForElementToBeClickable(driver, drpdwnType, 10);
+	Action.selectByVisibleText(drpdwnType, inventoryAvailabilityData.getChoose_a_Type().get(indexType));
+	if (inventoryAvailabilityData.getChoose_a_Type().get(indexType).equals("GLOBAL SUPPLY TYPE")) {	
+		Action.selectByVisibleText(drpdwnSearchSupplyType, inventoryAvailabilityData.getSupply_Type_Id().get(indexSuppyType));
+		}
+	if (inventoryAvailabilityData.getChoose_a_Type().get(indexType).equals("AGGREGATED GLOBAL")) 		
+	
+	Action.waitForElementToBeClickable(driver, btnSearch, 10);
+	Action.clickUsingJavaScipt(btnSearch);
+	{
+	if (inventoryAvailabilityData.getChoose_a_Type().get(indexType).equals("GLOBAL SUPPLY TYPE")) {	
+		Common.waitForPageLoaded(driver);
+		rowGlobalSupply=CommonElementsPage.getRowNo(inventoryAvailabilityData.getSupply_Type_Id().get(indexSuppyType));
+		System.out.println("Selected Supply Type id is for GLOBAL SUPPLY TYPE attribute::"
+				+ CommonElementsPage.getRowCellTextVal(rowGlobalSupply, 1));
+		Assert.assertEquals(CommonElementsPage.getRowCellTextVal(rowGlobalSupply,1),
+				inventoryAvailabilityData.getSupply_Type_Id().get(indexSuppyType),
+				"No Safety Stock added by GLOBAL SUPPLY TYPE attribute");
+		
+	}if (inventoryAvailabilityData.getChoose_a_Type().get(indexType).equals("AGGREGATED GLOBAL")) 		
+	{
+		Common.waitForPageLoaded(driver);
+		rowAGGREGATED=CommonElementsPage.getRowNo(inventoryAvailabilityData.getSafety_Stock_Type().get(indexSafetyStockType));
+		System.out.println("Selected Safety Stock Type id is for AGGREGATED GLOBAL::"
+				+ CommonElementsPage.getRowCellTextVal(rowAGGREGATED, 1));
+		Assert.assertEquals(CommonElementsPage.getRowCellTextVal(rowAGGREGATED, 1),
+				inventoryAvailabilityData.getSafety_Stock_Type().get(indexSafetyStockType),
+				"No Safety Stock added by AGGREGATED GLOBAL attribute");
+	}
+	}
+}
 
 	public void searchSafetyStockByType(int indexType) throws Exception {
 		inventoryAvailabilityData = InventoryAvailabilityData.get(env.getFileLocation());
+		Common.waitForPageLoaded(driver);
 		CommonElementsPage.clickOnSearchIcon();
 		Action.waitForElementToBeClickable(driver, drpdwnType, 10);
 		Action.selectByVisibleText(drpdwnType, inventoryAvailabilityData.getChoose_a_Type().get(indexType));
@@ -380,12 +420,12 @@ public class SafetyStockConfigsPage {
 	public boolean verfiySafetyStockRecord() throws Exception {
 		boolean found = false;
 		int rowNo = CommonElementsPage.getTotalRows();
-		if (headerSafetyStock.getText().contains("Safety Stocks Found") && (rowNo > 0)) {
+		if (headerSafetyStock.getText().contains("Safety Stocks Found")|| headerSafetyStock.getText().contains("Safety Stock Found") && (rowNo > 0)) {
 			found = true;
 		} else {
 			Assert.assertTrue(txtSuccessMsg.getText().contains(RomuiEnumValues.SAFETYSTOCK_NOTFOUND.getMessage()),
-					"No search found");
-		}
+					"No SAFETY STOCK search found");
+			}
 		return found;
 
 	}

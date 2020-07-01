@@ -7,7 +7,7 @@
   <parameter name="adminPasswd" value="Password123@"/>
   <parameter name="storeID" value="TMS-NA-Store1"/>
   <parameter name="waitPeriod" value="5"/>
-  <parameter name="browserType" value="chrome"/>
+  <parameter name="browserType" value="ie"/>
   <listeners>
     <listener class-name="com.gsicommerce.romui.selenium.utilities.ExtentReporterListener"/>
   </listeners>

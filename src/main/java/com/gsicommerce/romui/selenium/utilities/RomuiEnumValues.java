@@ -39,6 +39,7 @@ public enum RomuiEnumValues {
 	SAFETYSTOCK_ADD("Heads up! Safety Stock was successfully created"),
 	SAFETYSTOCK_EDIT("Heads up! Safety Stock was successfully updated"),
 	SAFETYSTOCK_DELETE("Heads up! The Safety Stock Was Successfully Deleted!"),
+	SAFETYSTOCK_EXIST("Oh snap! Safety Stock already exists"),
 	SERVICEFLOW_CRITERIA_VALIDATION(""),
 	SERVICEFLOW_VALIDATION(""),
 	USER_NOTFOUND(""),
