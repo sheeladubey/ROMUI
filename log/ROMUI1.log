@@ -6287,3 +6287,190 @@
 2020-07-01 15:40:12,539 [main] INFO romui - Verify Safety stock is searched through Node type Item Attribute
 2020-07-01 15:40:16,432 [main] INFO romui - NodeTypeItemAttribute Safety Stock Search verified
 2020-07-01 15:40:16,432 [main] INFO romui - Verify Safety stock is searched through Global  Node Type
+2020-07-02 15:17:30,694 [main] INFO romui - Login credentials to be entered
+2020-07-02 15:17:36,286 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 15:17:38,813 [main] INFO romui - Verify Inventory Organization Found record display
+2020-07-02 15:18:19,702 [main] INFO romui - Login credentials to be entered
+2020-07-02 15:18:25,606 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 15:18:28,245 [main] INFO romui - Verify Inventory Organization Found record display
+2020-07-02 15:18:59,145 [main] INFO romui - Login credentials to be entered
+2020-07-02 15:19:00,607 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 15:19:09,069 [main] INFO romui - Verify Inventory Organization Found record display
+2020-07-02 15:19:41,529 [main] INFO romui - Login credentials to be entered
+2020-07-02 15:19:41,629 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 15:26:04,378 [main] INFO romui - Login credentials to be entered
+2020-07-02 15:26:04,487 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 15:27:04,345 [main] INFO romui - Login credentials to be entered
+2020-07-02 15:27:04,454 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 15:28:19,318 [main] INFO romui - Login credentials to be entered
+2020-07-02 15:28:19,420 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 15:29:43,278 [main] INFO romui - Login credentials to be entered
+2020-07-02 15:29:43,385 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 15:31:21,583 [main] INFO romui - Login credentials to be entered
+2020-07-02 15:31:21,685 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 15:32:51,325 [main] INFO romui - Login credentials to be entered
+2020-07-02 15:32:51,422 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 15:34:13,506 [main] INFO romui - Login credentials to be entered
+2020-07-02 15:34:13,607 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 15:35:03,395 [main] INFO romui - Login credentials to be entered
+2020-07-02 15:35:03,496 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 15:37:18,769 [main] INFO romui - Login credentials to be entered
+2020-07-02 15:37:22,024 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 15:37:49,071 [main] INFO romui - Login credentials to be entered
+2020-07-02 15:37:50,376 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 15:37:58,990 [main] INFO romui - Verify Inventory Organization Found record display
+2020-07-02 15:43:38,384 [main] INFO romui - Login credentials to be entered
+2020-07-02 15:43:39,954 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 15:43:48,662 [main] INFO romui - Verify Inventory Organization Found record display
+2020-07-02 15:43:49,263 [main] INFO romui - Inventory Organization Found record displayed
+2020-07-02 16:06:26,216 [main] INFO romui - Login credentials to be entered
+2020-07-02 16:06:27,933 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 16:06:39,712 [main] INFO romui - Verify View Inventory Organization 
+2020-07-02 16:07:34,786 [main] INFO romui - Login credentials to be entered
+2020-07-02 16:07:40,105 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 16:07:42,662 [main] INFO romui - Verify View Inventory Organization 
+2020-07-02 16:08:59,311 [main] INFO romui - Login credentials to be entered
+2020-07-02 16:09:04,208 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 16:09:06,625 [main] INFO romui - Verify View Inventory Organization 
+2020-07-02 16:10:45,252 [main] INFO romui - Login credentials to be entered
+2020-07-02 16:10:50,490 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 16:10:52,686 [main] INFO romui - Verify View Inventory Organization 
+2020-07-02 16:18:13,072 [main] INFO romui - Login credentials to be entered
+2020-07-02 16:18:18,352 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 16:18:21,123 [main] INFO romui - Verify View Inventory Organization 
+2020-07-02 16:18:39,404 [main] INFO romui - View Inventory Organization  verified
+2020-07-02 16:20:34,262 [main] INFO romui - Login credentials to be entered
+2020-07-02 16:20:39,416 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 16:20:42,100 [main] INFO romui - Verify View Inventory Organization 
+2020-07-02 16:20:59,888 [main] INFO romui - View Inventory Organization  verified
+2020-07-02 16:40:19,304 [main] INFO romui - Login credentials to be entered
+2020-07-02 16:40:27,915 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 16:40:30,398 [main] INFO romui - Verify User able to click View Inventory Organization 
+2020-07-02 16:40:48,586 [main] INFO romui - View Inventory Organization clicked successfully
+2020-07-02 16:40:48,587 [main] INFO romui - Validate Inventory Orgs ID on View Inventory Organization Page 
+2020-07-02 16:40:48,613 [main] INFO romui - Validate Inventory Organization Name on View Inventory Organization Page 
+2020-07-02 16:43:23,445 [main] INFO romui - Login credentials to be entered
+2020-07-02 16:43:31,442 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 16:43:34,066 [main] INFO romui - Verify User able to click View Inventory Organization 
+2020-07-02 16:43:51,988 [main] INFO romui - View Inventory Organization clicked successfully
+2020-07-02 16:43:51,988 [main] INFO romui - Validate Inventory Orgs ID on View Inventory Organization Page 
+2020-07-02 16:46:27,270 [main] INFO romui - Login credentials to be entered
+2020-07-02 16:46:32,531 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 16:46:35,165 [main] INFO romui - Verify User able to click View Inventory Organization 
+2020-07-02 16:46:53,021 [main] INFO romui - View Inventory Organization clicked successfully
+2020-07-02 16:46:53,022 [main] INFO romui - Validate Inventory Orgs ID on View Inventory Organization Page 
+2020-07-02 16:49:41,658 [main] INFO romui - Login credentials to be entered
+2020-07-02 16:49:46,709 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 16:49:49,626 [main] INFO romui - Verify User able to click View Inventory Organization 
+2020-07-02 16:50:06,829 [main] INFO romui - View Inventory Organization clicked successfully
+2020-07-02 16:50:06,830 [main] INFO romui - Validate Inventory Orgs ID on View Inventory Organization Page 
+2020-07-02 16:52:40,625 [main] INFO romui - Login credentials to be entered
+2020-07-02 16:52:44,863 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 16:52:47,070 [main] INFO romui - Verify User able to click View Inventory Organization 
+2020-07-02 16:53:04,571 [main] INFO romui - View Inventory Organization clicked successfully
+2020-07-02 16:53:04,572 [main] INFO romui - Validate Inventory Orgs ID on View Inventory Organization Page 
+2020-07-02 16:55:08,088 [main] INFO romui - Login credentials to be entered
+2020-07-02 16:55:12,320 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 16:55:15,058 [main] INFO romui - Verify User able to click View Inventory Organization 
+2020-07-02 16:55:32,396 [main] INFO romui - View Inventory Organization clicked successfully
+2020-07-02 16:55:32,397 [main] INFO romui - Validate Inventory Orgs ID on View Inventory Organization Page 
+2020-07-02 16:57:58,312 [main] INFO romui - Login credentials to be entered
+2020-07-02 16:58:08,806 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 16:58:11,526 [main] INFO romui - Verify User able to click View Inventory Organization 
+2020-07-02 16:58:30,159 [main] INFO romui - View Inventory Organization clicked successfully
+2020-07-02 16:58:30,159 [main] INFO romui - Validate Inventory Orgs ID on View Inventory Organization Page 
+2020-07-02 17:00:16,579 [main] INFO romui - Login credentials to be entered
+2020-07-02 17:00:26,056 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 17:00:28,595 [main] INFO romui - Verify User able to click View Inventory Organization 
+2020-07-02 17:00:46,802 [main] INFO romui - View Inventory Organization clicked successfully
+2020-07-02 17:00:46,803 [main] INFO romui - Validate Inventory Orgs ID on View Inventory Organization Page 
+2020-07-02 17:00:46,879 [main] INFO romui - Validate Inventory Organization Name on View Inventory Organization Page 
+2020-07-02 17:13:10,504 [main] INFO romui - Login credentials to be entered
+2020-07-02 17:13:17,632 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 17:13:20,309 [main] INFO romui - Verify User able to click View Inventory Organization 
+2020-07-02 17:13:38,157 [main] INFO romui - View Inventory Organization clicked successfully
+2020-07-02 17:13:38,157 [main] INFO romui - Validate Inventory Orgs ID on View Inventory Organization Page 
+2020-07-02 17:13:38,184 [main] INFO romui - Validate Inventory Organization Name on View Inventory Organization Page 
+2020-07-02 17:13:38,197 [main] INFO romui - Validate Default Shipping Calendar ID on View Inventory Organization Page 
+2020-07-02 17:13:38,211 [main] INFO romui - Validate Default ATP Rule on View Inventory Organization Page 
+2020-07-02 17:13:38,224 [main] INFO romui - Validate Node Rejected Supply Action on View Inventory Organization Page 
+2020-07-02 17:14:24,093 [main] INFO romui - Login credentials to be entered
+2020-07-02 17:14:25,710 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 17:14:37,906 [main] INFO romui - Verify User able to click View Inventory Organization 
+2020-07-02 17:14:55,449 [main] INFO romui - View Inventory Organization clicked successfully
+2020-07-02 17:14:55,450 [main] INFO romui - Validate Inventory Orgs ID on View Inventory Organization Page 
+2020-07-02 17:14:57,988 [main] INFO romui - Validate Inventory Organization Name on View Inventory Organization Page 
+2020-07-02 17:14:58,187 [main] INFO romui - Validate Default Shipping Calendar ID on View Inventory Organization Page 
+2020-07-02 17:14:58,388 [main] INFO romui - Validate Default ATP Rule on View Inventory Organization Page 
+2020-07-02 17:14:58,588 [main] INFO romui - Validate Node Rejected Supply Action on View Inventory Organization Page 
+2020-07-02 17:25:57,111 [main] INFO romui - Login credentials to be entered
+2020-07-02 17:26:02,712 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 17:26:05,450 [main] INFO romui - Verify User able to click Edit Inventory Organization 
+2020-07-02 17:26:23,161 [main] INFO romui - Edit Inventory Organization Icon clicked successfully
+2020-07-02 17:54:21,369 [main] INFO romui - Login credentials to be entered
+2020-07-02 17:54:29,708 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 17:54:32,671 [main] INFO romui - Verify User able to click Edit Inventory Organization 
+2020-07-02 17:55:06,929 [main] INFO romui - Edit Inventory Organization Icon clicked successfully
+2020-07-02 18:47:20,126 [main] INFO romui - Login credentials to be entered
+2020-07-02 18:47:27,115 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 18:47:30,077 [main] INFO romui - Verify User able to click Edit Inventory Organization 
+2020-07-02 18:50:47,821 [main] INFO romui - Login credentials to be entered
+2020-07-02 18:50:55,220 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 18:50:58,330 [main] INFO romui - Verify User able to click Edit Inventory Organization 
+2020-07-02 18:51:33,124 [main] INFO romui - Edit Inventory Organization Icon clicked successfully
+2020-07-02 18:54:03,759 [main] INFO romui - Login credentials to be entered
+2020-07-02 18:54:09,092 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 18:54:11,764 [main] INFO romui - Verify User able to click Edit Inventory Organization 
+2020-07-02 18:55:47,828 [main] INFO romui - Login credentials to be entered
+2020-07-02 18:55:53,059 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 18:55:55,460 [main] INFO romui - Verify User able to click Edit Inventory Organization 
+2020-07-02 18:58:15,709 [main] INFO romui - Login credentials to be entered
+2020-07-02 18:58:20,739 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 18:58:22,976 [main] INFO romui - Verify User able to click Edit Inventory Organization 
+2020-07-02 19:00:22,103 [main] INFO romui - Login credentials to be entered
+2020-07-02 19:00:27,194 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 19:00:30,140 [main] INFO romui - Verify User able to click Edit Inventory Organization 
+2020-07-02 19:01:05,526 [main] INFO romui - Edit Inventory Organization Icon clicked successfully
+2020-07-02 19:04:54,081 [main] INFO romui - Login credentials to be entered
+2020-07-02 19:04:55,420 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 19:05:08,032 [main] INFO romui - Verify User able to click Edit Inventory Organization 
+2020-07-02 19:05:57,540 [main] INFO romui - Edit Inventory Organization Icon clicked successfully
+2020-07-02 19:07:40,761 [main] INFO romui - Login credentials to be entered
+2020-07-02 19:07:42,193 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 19:07:55,254 [main] INFO romui - Verify User able to click Edit Inventory Organization 
+2020-07-02 19:08:46,476 [main] INFO romui - Edit Inventory Organization Icon clicked successfully
+2020-07-02 19:18:00,919 [main] INFO romui - Login credentials to be entered
+2020-07-02 19:18:02,484 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 19:18:11,085 [main] INFO romui - Verify User able to click Edit Inventory Organization 
+2020-07-02 19:20:15,085 [main] INFO romui - Login credentials to be entered
+2020-07-02 19:20:16,702 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 19:20:25,955 [main] INFO romui - Verify User able to click Edit Inventory Organization 
+2020-07-02 19:26:21,843 [main] INFO romui - Login credentials to be entered
+2020-07-02 19:26:23,444 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 19:26:37,017 [main] INFO romui - Verify User able to click Edit Inventory Organization 
+2020-07-02 19:27:30,445 [main] INFO romui - Edit Inventory Organization Icon clicked successfully
+2020-07-02 19:27:30,447 [main] INFO romui - Edit Data on Edit Inventory Organization page
+2020-07-02 19:27:30,447 [main] INFO romui - Edit Inventory Organization from View Inventory Organization page Verified
+2020-07-02 19:31:06,611 [main] INFO romui - Login credentials to be entered
+2020-07-02 19:31:11,889 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 19:31:14,635 [main] INFO romui - Verify Inventory Organization Found record display
+2020-07-02 19:31:14,689 [main] INFO romui - Inventory Organization Found record displayed
+2020-07-02 19:31:24,775 [main] INFO romui - Login credentials to be entered
+2020-07-02 19:31:29,629 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 19:31:32,143 [main] INFO romui - Verify User able to click Edit Inventory Organization 
+2020-07-02 19:31:51,234 [main] INFO romui - Edit Inventory Organization Icon clicked successfully
+2020-07-02 19:31:51,234 [main] INFO romui - Verify User able to Edit Inventory Organization data .
+2020-07-02 19:32:13,846 [main] INFO romui - Edit Inventory Organization data Verified
+2020-07-02 19:32:24,352 [main] INFO romui - Login credentials to be entered
+2020-07-02 19:32:28,534 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 19:32:31,589 [main] INFO romui - Verify User able to click View Inventory Organization 
+2020-07-02 19:32:49,555 [main] INFO romui - View Inventory Organization Icon clicked successfully
+2020-07-02 19:32:49,555 [main] INFO romui - Validate Inventory Orgs ID on View Inventory Organization Page 
+2020-07-02 19:32:49,580 [main] INFO romui - Validate Inventory Organization Name on View Inventory Organization Page 
+2020-07-02 19:32:49,599 [main] INFO romui - Validate Default Shipping Calendar ID on View Inventory Organization Page 
+2020-07-02 19:33:01,647 [main] INFO romui - Login credentials to be entered
+2020-07-02 19:33:06,848 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-02 19:33:09,354 [main] INFO romui - Verify User able to click Edit Inventory Organization 
+2020-07-02 19:33:51,820 [main] INFO romui - Edit Inventory Organization Icon clicked successfully
+2020-07-02 19:33:51,821 [main] INFO romui - Edit Data on Edit Inventory Organization page
+2020-07-02 19:33:51,821 [main] INFO romui - Edit Inventory Organization from View Inventory Organization page Verified

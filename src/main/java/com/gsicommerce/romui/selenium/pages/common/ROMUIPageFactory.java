@@ -7,6 +7,7 @@ import com.gsicommerce.romui.selenium.pages.ordermanagement.AvailabilitySearchPa
 import com.gsicommerce.romui.selenium.pages.ordermanagement.CommonElementsPage;
 import com.gsicommerce.romui.selenium.pages.ordermanagement.ISPUPickPage;
 import com.gsicommerce.romui.selenium.pages.ordermanagement.InventoryAuditsPage;
+import com.gsicommerce.romui.selenium.pages.ordermanagement.InventoryOrganizationPage;
 import com.gsicommerce.romui.selenium.pages.ordermanagement.ATPRulesPage;
 import com.gsicommerce.romui.selenium.pages.ordermanagement.InventorySearchPage;
 import com.gsicommerce.romui.selenium.pages.ordermanagement.ItemSearchPage;
@@ -45,6 +46,7 @@ public class ROMUIPageFactory extends PageFactory {
 	private final SellerConfigurationsPage sellerConfigurationsPage;
 	private final ATPRulesPage atpRulesPage;
 	private final SafetyStockConfigsPage safetyStockConfigsPage;
+	private final InventoryOrganizationPage inventoryOrganizationPage;
 
 	public ROMUIPageFactory(WebDriver driver, Environment env) {
 		super(driver, env);
@@ -67,7 +69,8 @@ public class ROMUIPageFactory extends PageFactory {
 		ordersPage = new OrdersPage(driver, env);
 		sellerConfigurationsPage = new SellerConfigurationsPage(driver, env);
 		atpRulesPage = new ATPRulesPage(driver, env);
-		safetyStockConfigsPage=new SafetyStockConfigsPage(driver,env);
+		safetyStockConfigsPage = new SafetyStockConfigsPage(driver, env);
+		inventoryOrganizationPage = new InventoryOrganizationPage(driver, env);
 	}
 
 	public LoginPage loginPage() {
@@ -147,9 +150,15 @@ public class ROMUIPageFactory extends PageFactory {
 
 		return atpRulesPage;
 	}
-	
+
 	public SafetyStockConfigsPage safetyStockConfigsPage() {
 
 		return safetyStockConfigsPage;
 	}
+
+	public InventoryOrganizationPage inventoryOrganizationPage() {
+
+		return inventoryOrganizationPage;
+	}
+
 }

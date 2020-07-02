@@ -11,17 +11,16 @@
   <listeners>
     <listener class-name="com.gsicommerce.romui.selenium.utilities.ExtentReporterListener"/>
   </listeners>
-  <test thread-count="5" name="SafetyStockConfigsTests(failed)">
-    <parameter name="dataFile" value="./src/test/resources/testdata/inventoryAvailabilityData.json"/>
+  <test thread-count="5" name="InventoryOrganizationTests(failed)">
+    <parameter name="dataFile" value="./src/test/resources/testdata/inventoryOrganizationData.json"/>
     <classes>
-      <class name="com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests">
+      <class name="com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests">
         <methods>
-          <include name="testDeleteSafetyStockByNodeTypeItemAttribute"/>
           <include name="tearDown"/>
           <include name="setup"/>
-          <include name="testSafetyStockSearchBy"/>
+          <include name="testViewInventoryOrgsRecord"/>
         </methods>
-      </class> <!-- com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests -->
+      </class> <!-- com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests -->
     </classes>
-  </test> <!-- SafetyStockConfigsTests(failed) -->
+  </test> <!-- InventoryOrganizationTests(failed) -->
 </suite> <!-- Failed suite [Suite] -->

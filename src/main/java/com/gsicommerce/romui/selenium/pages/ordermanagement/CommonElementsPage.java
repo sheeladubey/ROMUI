@@ -178,9 +178,9 @@ public class CommonElementsPage {
 		return nodeWebTable().GetNumOfRows();
 	}
 
-	public static void clickSelectLink(int row, int col) throws Exception {
+	public static void clickSelectLink(int row, int col,int divchild,int buttonchild) throws Exception {
 		Reporter.log("Action icon is clicked on");
-		nodeWebTable().clickButton(row, col);
+		nodeWebTable().clickButton(row, col,divchild,buttonchild);
 	}
 
 	public static void clickActionsSpanIcon(int row, int col, int index) throws Exception {

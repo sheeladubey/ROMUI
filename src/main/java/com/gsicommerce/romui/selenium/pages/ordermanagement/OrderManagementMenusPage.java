@@ -10,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.gsicommerce.romui.selenium.testdata.Environment;
 import com.gsicommerce.romui.selenium.utilities.Action;
+import com.gsicommerce.romui.selenium.utilities.Common;
 
 public class OrderManagementMenusPage {
 	WebDriver driver;
@@ -17,14 +18,15 @@ public class OrderManagementMenusPage {
 	Action action;
 
 	public OrderManagementMenusPage(WebDriver driver, Environment env) {
-		// TODO Auto-generated constructor stub
+
 		this.driver = driver;
 		this.env = env;
 		PageFactory.initElements(driver, this);
 		action = new Action(driver, env);
 	}
 
-	@FindBy(how = How.CSS, using = "[data-tooltip='Main Menu']")
+	// @FindBy(how = How.CSS, using = "[data-tooltip='Main Menu']")
+	@FindBy(how = How.CSS, using = ".radial-app-menu-open-icon")
 	WebElement btnMainMenu;
 
 	@FindBy(how = How.XPATH, using = "//i/parent::a[contains(text(),'Catalog & Inventory')]")
@@ -258,17 +260,17 @@ public class OrderManagementMenusPage {
 		btnMainMenu.click();
 		lkOmniAdministration.click();
 		lkInvAvailability.click();
-		//lkATPRules.click();
+		// lkATPRules.click();
 		Action.clickUsingJavaScipt(lkATPRules);
 	}
 
 	public void clickOnSafetyStockConfig() {
 		btnMainMenu.click();
-		//lkOmniAdministration.click();
+		// lkOmniAdministration.click();
 		Action.clickUsingJavaScipt(lkOmniAdministration);
 		Action.clickUsingJavaScipt(lkInvAvailability);
-		//lkInvAvailability.click();
-		//lkSafetyStckConfig.click();
+		// lkInvAvailability.click();
+		// lkSafetyStckConfig.click();
 		Action.clickUsingJavaScipt(lkSafetyStckConfig);
 	}
 
@@ -327,18 +329,21 @@ public class OrderManagementMenusPage {
 		// btnMainMenu.click();
 		Action.clickUsingJavaScipt(btnMainMenu);
 		Action.waitForElementToBeClickable(driver, lkOmniAdministration, 10);
-	    lkOmniAdministration.click();
+		lkOmniAdministration.click();
 		Action.waitForElementToBeClickable(driver, lkSellerConfig, 10);
 		lkSellerConfig.click();
 		Action.waitForElementToBeClickable(driver, lkShipngLabelConfig, 10);
 		lkShipngLabelConfig.click();
-	
+
 	}
 
 	public void clickOnInvOrganization() {
+		// Action.clickUsingJavaScipt(btnMainMenu);
 		btnMainMenu.click();
 		lkOmniAdministration.click();
+		// Action.clickUsingJavaScipt(lkOmniAdministration);
 		lkInvOrgzation.click();
+		// Action.clickUsingJavaScipt(lkInvOrgzation);
 	}
 
 	public void clickOnFulfillmentNode() {
@@ -419,21 +424,21 @@ public class OrderManagementMenusPage {
 
 	public void clickOnSellerConfigurations() {
 		try {
-		Action.waitForElementToBeClickable(driver, btnMainMenu, 10);
-		Action.clickUsingJavaScipt(btnMainMenu);
-		Action.waitForElementToBeClickable(driver, lkOmniAdministration, 10);
-		//lkOmniAdministration.click();
-		Action.clickUsingJavaScipt(lkOmniAdministration);
-		Action.waitForElementToBeClickable(driver, lkSellerConfig, 10);
-	//	lkSellerConfig.click();
-		Action.clickUsingJavaScipt(lkSellerConfig);
-		Action.scrollToBottomofPage();
-		Action.waitForElementToBeClickable(driver, lkSellerConfigurations, 10);
-	//	lkSellerConfigurations.click();
-		Action.clickUsingJavaScipt(lkSellerConfigurations);
-		}catch(JavascriptException jse){
+			Action.waitForElementToBeClickable(driver, btnMainMenu, 10);
+			Action.clickUsingJavaScipt(btnMainMenu);
+			Action.waitForElementToBeClickable(driver, lkOmniAdministration, 10);
+			// lkOmniAdministration.click();
+			Action.clickUsingJavaScipt(lkOmniAdministration);
+			Action.waitForElementToBeClickable(driver, lkSellerConfig, 10);
+			// lkSellerConfig.click();
+			Action.clickUsingJavaScipt(lkSellerConfig);
+			Action.scrollToBottomofPage();
+			Action.waitForElementToBeClickable(driver, lkSellerConfigurations, 10);
+			// lkSellerConfigurations.click();
+			Action.clickUsingJavaScipt(lkSellerConfigurations);
+		} catch (JavascriptException jse) {
 			jse.printStackTrace();
-			
+
 		}
 	}
 }

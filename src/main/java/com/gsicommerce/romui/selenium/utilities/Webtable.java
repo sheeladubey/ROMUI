@@ -206,10 +206,15 @@ public class Webtable {
 		return rowNum;
 	}
 
-	public void clickButton(int row, int col) {
+	public void clickButton(int row, int col,int divchild,int buttonchild) {
+		if(divchild==0 && buttonchild==0) {
 		_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/button", row, col);
-		Table.findElement(By.xpath(_xpath)).click();
-
+		
+		}else
+		{
+			_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div["+divchild+"]/button["+buttonchild+"]", row, col);
+		}
+		Action.clickUsingJavaScipt(Table.findElement(By.xpath(_xpath)));
 	}
 
 	public void clickDivLinkSpanElement(int row, int col, int divchild, int child, int spanchild) {

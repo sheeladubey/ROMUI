@@ -140,7 +140,7 @@ public class InventorySearchPage {
 		// Action.clickUsingJavaScipt(CommonElementsPage.btnSearch);
 		clickOnManageInventorySearchBtn(3);
 		int rowNo = CommonElementsPage.getRowNo(data.getClientItemID());
-		CommonElementsPage.clickSelectLink(rowNo, 4);
+		CommonElementsPage.clickSelectLink(rowNo, 4,0,0);
 		lookUpList.get(1).click();
 		Action.waitForElementToBeClickable(driver, txtNodeID.get(1), 30);
 		Action.enter(txtNodeID.get(1), data.getNodeID());

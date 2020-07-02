@@ -8,7 +8,7 @@ import com.gsicommerce.romui.selenium.utilities.RomuiEnumValues;
 
 public class SafetyStockConfigsTests extends ROMUIBasePage {
 
-	@Test(enabled = false, priority = 1, description = "to Verify add Safety stock through Node Item in Manage Safety Stock Configuration page")
+	@Test(enabled = true, priority = 1, description = "to Verify add Safety stock through Node Item in Manage Safety Stock Configuration page")
 	public void testAddSafetyStockByNodeItem() throws Exception {
 
 		logger.info("Login credentials to be entered");
@@ -41,7 +41,7 @@ public class SafetyStockConfigsTests extends ROMUIBasePage {
 		logger.info("Safety Stock edit by NODE ITEM verified");
 	}
 
-//	@Test(enabled = false, priority = 3, description = "to Verify Safety stock is searched through Node Item in Manage Safety Stock Configuration page")
+//	@Test(enabled = true, priority = 3, description = "to Verify Safety stock is searched through Node Item in Manage Safety Stock Configuration page")
 //	public void testSafetyStockSearchByNodeItem() throws Exception {
 //
 //		logger.info("Login credentials to be entered");
@@ -73,7 +73,7 @@ public class SafetyStockConfigsTests extends ROMUIBasePage {
 		logger.info("Delete Safety Stock by NODE ITEM verified");
 	}
 
-	@Test(enabled = false, priority = 5, description = "to Verify add Safety stock through Node Type Item in Manage Safety Stock Configuration page")
+	@Test(enabled = true, priority = 5, description = "to Verify add Safety stock through Node Type Item in Manage Safety Stock Configuration page")
 	public void testaddSafetyStockByNodeTypeItem() throws Exception {
 
 		logger.info("Login credentials to be entered");
@@ -126,7 +126,7 @@ public class SafetyStockConfigsTests extends ROMUIBasePage {
 		logger.info("Delete Safety Stock by NODE TYPE ITEM verified");
 	}
 
-	@Test(enabled = false, priority = 8, description = "to Verify add Safety stock through NODE ITEM ATTRIBUTE in Manage Safety Stock Configuration page")
+	@Test(enabled = true, priority = 8, description = "to Verify add Safety stock through NODE ITEM ATTRIBUTE in Manage Safety Stock Configuration page")
 	public void testaddSafetyStockByNodeItemAttribute() throws Exception {
 
 		logger.info("Login credentials to be entered");
@@ -179,7 +179,7 @@ public class SafetyStockConfigsTests extends ROMUIBasePage {
 		logger.info("Delete Safety Stock by NodeItemAttributeNode verified");
 	}
 
-	@Test(enabled = false, priority = 11, description = "to Verify add Safety stock through NODE TYPE ITEM ATTRIBUTE in Manage Safety Stock Configuration page")
+	@Test(enabled = true, priority = 11, description = "to Verify add Safety stock through NODE TYPE ITEM ATTRIBUTE in Manage Safety Stock Configuration page")
 	public void testaddSafetyStockByNodeTypeItemAttribute() throws Exception {
 
 		logger.info("Login credentials to be entered");
@@ -233,7 +233,7 @@ public class SafetyStockConfigsTests extends ROMUIBasePage {
 		logger.info("Delete Safety Stock by NodeTypeItemAttribute verified");
 	}
 
-	@Test(enabled = false, priority = 14, description = "to Verify add Safety stock through GLOBAL NODE TYPE & Fulfillment type & supply type in Manage Safety Stock Configuration page")
+	@Test(enabled = true, priority = 14, description = "to Verify add Safety stock through GLOBAL NODE TYPE & Fulfillment type & supply type in Manage Safety Stock Configuration page")
 	public void testaddSafetyStockByGLOBALNODETYPE() throws Exception {
 
 		logger.info("Login credentials to be entered");
@@ -286,7 +286,7 @@ public class SafetyStockConfigsTests extends ROMUIBasePage {
 		logger.info("Delete Safety Stock by NodeTypeItemAttribute verified");
 	}
 
-	@Test(enabled = false, priority = 17, description = "to Verify add Safety stock through GLOBAL SUPPLY TYPE in Manage Safety Stock Configuration page")
+	@Test(enabled = true, priority = 17, description = "to Verify add Safety stock through GLOBAL SUPPLY TYPE in Manage Safety Stock Configuration page")
 	public void testaddSafetyStockByGLOBALSUPPLYTYPE() throws Exception {
 
 		logger.info("Login credentials to be entered");
@@ -304,7 +304,7 @@ public class SafetyStockConfigsTests extends ROMUIBasePage {
 
 	}
 
-	@Test(enabled = false, priority = 18, description = "to Verify edit Safety stock through GLOBALSUPPLYTYPE in Manage Safety Stock Configuration page")
+	@Test(enabled = true, priority = 18, description = "to Verify edit Safety stock through GLOBALSUPPLYTYPE in Manage Safety Stock Configuration page")
 	public void testEditSafetyStockByGLOBALSUPPLYTYPE() throws Exception {
 
 		logger.info("Login credentials to be entered");
@@ -323,7 +323,7 @@ public class SafetyStockConfigsTests extends ROMUIBasePage {
 		logger.info("Safety Stock edit by GLOBALSUPPLYTYPE verified");
 	}
 
-	@Test(enabled = false, priority = 19, description = "to Verify delete Safety stock through GLOBALSUPPLYTYPE in Manage Safety Stock Configuration page")
+	@Test(enabled = true, priority = 19, description = "to Verify delete Safety stock through GLOBALSUPPLYTYPE in Manage Safety Stock Configuration page")
 	public void testDeleteSafetyStockByGLOBALSUPPLYTYPE() throws Exception {
 
 		logger.info("Login credentials to be entered");
@@ -342,7 +342,7 @@ public class SafetyStockConfigsTests extends ROMUIBasePage {
 		logger.info("Delete Safety Stock by GLOBALSUPPLYTYPE verified");
 	}
 
-	@Test(enabled = false, priority = 20, description = "to Verify add Safety stock through AGGREGRATED GLOBAL in Manage Safety Stock Configuration page")
+	@Test(enabled = true, priority = 20, description = "to Verify add Safety stock through AGGREGRATED GLOBAL in Manage Safety Stock Configuration page")
 	public void testaddSafetyStockByAGGREGRATEDGLOBAL() throws Exception {
 
 		logger.info("Login credentials to be entered");
@@ -359,7 +359,7 @@ public class SafetyStockConfigsTests extends ROMUIBasePage {
 		//romuipages.safetyStockConfigsPage().searchGlobal_AggregatedGlobalType(6, 0, 0);
 	}
 
-	@Test(enabled = false, priority = 21, description = "to Verify edit Safety stock through AGGREGRATEDGLOBAL in Manage Safety Stock Configuration page")
+	@Test(enabled = true, priority = 21, description = "to Verify edit Safety stock through AGGREGRATEDGLOBAL in Manage Safety Stock Configuration page")
 	public void testEditSafetyStockByAGGREGRATEDGLOBAL() throws Exception {
 
 		logger.info("Login credentials to be entered");
@@ -379,7 +379,7 @@ public class SafetyStockConfigsTests extends ROMUIBasePage {
 		logger.info("Safety Stock edit by AGGREGRATEDGLOBAL verified");
 	}
 
-	@Test(enabled = false, priority = 22, description = "to Verify delete Safety stock through AGGREGRATEDGLOBAL in Manage Safety Stock Configuration page")
+	@Test(enabled = true, priority = 22, description = "to Verify delete Safety stock through AGGREGRATEDGLOBAL in Manage Safety Stock Configuration page")
 	public void testDeleteSafetyStockByAGGREGRATEDGLOBAL() throws Exception {
 
 		logger.info("Login credentials to be entered");
@@ -443,7 +443,7 @@ public class SafetyStockConfigsTests extends ROMUIBasePage {
 
 	}
 
-	@Test(enabled = false, priority = 24, description = "to Verify Safety stock is searched through Node Item in Manage Safety Stock Configuration page")
+	@Test(enabled = true, priority = 24, description = "to Verify Safety stock is searched through Node Item in Manage Safety Stock Configuration page")
 	public void testSafetyStockSearchByNodeItem() throws Exception {
 
 		logger.info("Login credentials to be entered");
@@ -458,7 +458,7 @@ public class SafetyStockConfigsTests extends ROMUIBasePage {
 		logger.info("Node Item Safety Stock Search verified");
 	}
 
-	@Test(enabled = false, priority = 25, description = "to Verify Safety stock is searched through Node Type Item  in Manage Safety Stock Configuration page")
+	@Test(enabled = true, priority = 25, description = "to Verify Safety stock is searched through Node Type Item  in Manage Safety Stock Configuration page")
 	public void testSafetyStockSearchByNodeTypeItem() throws Exception {
 
 		logger.info("Login credentials to be entered");
@@ -473,7 +473,7 @@ public class SafetyStockConfigsTests extends ROMUIBasePage {
 
 	}
 
-	@Test(enabled = false, priority = 26, description = "to Verify Safety stock is searched through Node Item Attribute in Manage Safety Stock Configuration page")
+	@Test(enabled = true, priority = 26, description = "to Verify Safety stock is searched through Node Item Attribute in Manage Safety Stock Configuration page")
 	public void testSafetyStockSearchByNodeItemAttribute() throws Exception {
 
 		logger.info("Login credentials to be entered");
@@ -487,7 +487,7 @@ public class SafetyStockConfigsTests extends ROMUIBasePage {
 		logger.info("NodeItemAttribute Safety Stock Search verified");
 	}
 
-	@Test(enabled = false, priority = 27, description = "to Verify Safety stock is searched through Node Type Item Attribute in Manage Safety Stock Configuration page")
+	@Test(enabled = true, priority = 27, description = "to Verify Safety stock is searched through Node Type Item Attribute in Manage Safety Stock Configuration page")
 	public void testSafetyStockSearchByNodeTypeItemAttribute() throws Exception {
 
 		logger.info("Login credentials to be entered");
@@ -502,7 +502,7 @@ public class SafetyStockConfigsTests extends ROMUIBasePage {
 
 	}
 
-	@Test(enabled = false, priority = 28, description = "to Verify Safety stock is searched through Global  Node Type in Manage Safety Stock Configuration page")
+	@Test(enabled = true, priority = 28, description = "to Verify Safety stock is searched through Global  Node Type in Manage Safety Stock Configuration page")
 	public void testSafetyStockSearchByGlobalNodeType() throws Exception {
 
 		logger.info("Login credentials to be entered");
@@ -516,7 +516,7 @@ public class SafetyStockConfigsTests extends ROMUIBasePage {
 		logger.info("GlobalNodeType Safety Stock Search verified");
 	}
 
-	@Test(enabled = false, priority = 29, description = "to Verify Safety stock is searched through Global  Supply Type in Manage Safety Stock Configuration page")
+	@Test(enabled = true, priority = 29, description = "to Verify Safety stock is searched through Global  Supply Type in Manage Safety Stock Configuration page")
 	public void testSafetyStockSearchByGlobalSupplyType() throws Exception {
 
 		logger.info("Login credentials to be entered");
@@ -530,7 +530,7 @@ public class SafetyStockConfigsTests extends ROMUIBasePage {
 		logger.info("Global  Supply Type Safety Stock Search verified");
 	}
 
-	@Test(enabled = false, priority = 30, description = "to Verify Safety stock is searched through Aggregated Global in Manage Safety Stock Configuration page")
+	@Test(enabled = true, priority = 30, description = "to Verify Safety stock is searched through Aggregated Global in Manage Safety Stock Configuration page")
 	public void testSafetyStockSearchByAggregatedGlobal() throws Exception {
 
 		logger.info("Login credentials to be entered");
