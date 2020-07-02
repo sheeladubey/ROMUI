@@ -384,28 +384,29 @@ public class SafetyStockConfigsPage {
 	
 	Action.waitForElementToBeClickable(driver, btnSearch, 10);
 	Action.clickUsingJavaScipt(btnSearch);
-	{
+	
 	if (inventoryAvailabilityData.getChoose_a_Type().get(indexType).equals("GLOBAL SUPPLY TYPE")) {	
 		Common.waitForPageLoaded(driver);
-		rowGlobalSupply=CommonElementsPage.getRowNo(inventoryAvailabilityData.getSupply_Type_Id().get(indexSuppyType));
+		rowGlobalSupply=CommonElementsPage.getRowNo(inventoryAvailabilityData.getSupply_Type_Id().get(indexSuppyType).toUpperCase().replaceAll("\\s+",""));
 		System.out.println("Selected Supply Type id is for GLOBAL SUPPLY TYPE attribute::"
 				+ CommonElementsPage.getRowCellTextVal(rowGlobalSupply, 1));
 		Assert.assertEquals(CommonElementsPage.getRowCellTextVal(rowGlobalSupply,1),
-				inventoryAvailabilityData.getSupply_Type_Id().get(indexSuppyType),
+				inventoryAvailabilityData.getSupply_Type_Id().get(indexSuppyType).toUpperCase().replaceAll("\\s+",""),
 				"No Safety Stock added by GLOBAL SUPPLY TYPE attribute");
+		
 		
 	}if (inventoryAvailabilityData.getChoose_a_Type().get(indexType).equals("AGGREGATED GLOBAL")) 		
 	{
 		Common.waitForPageLoaded(driver);
-		rowAGGREGATED=CommonElementsPage.getRowNo(inventoryAvailabilityData.getSafety_Stock_Type().get(indexSafetyStockType));
+		rowAGGREGATED=CommonElementsPage.getRowNo(inventoryAvailabilityData.getSafety_Stock_Type().get(indexSafetyStockType).toUpperCase());
 		System.out.println("Selected Safety Stock Type id is for AGGREGATED GLOBAL::"
 				+ CommonElementsPage.getRowCellTextVal(rowAGGREGATED, 1));
 		Assert.assertEquals(CommonElementsPage.getRowCellTextVal(rowAGGREGATED, 1),
-				inventoryAvailabilityData.getSafety_Stock_Type().get(indexSafetyStockType),
+				inventoryAvailabilityData.getSafety_Stock_Type().get(indexSafetyStockType).toUpperCase(),
 				"No Safety Stock added by AGGREGATED GLOBAL attribute");
 	}
 	}
-}
+
 
 	public void searchSafetyStockByType(int indexType) throws Exception {
 		inventoryAvailabilityData = InventoryAvailabilityData.get(env.getFileLocation());

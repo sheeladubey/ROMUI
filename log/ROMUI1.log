@@ -6151,3 +6151,139 @@
 2020-07-01 00:34:31,190 [main] INFO romui - Login credentials to be entered
 2020-07-01 00:34:32,302 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
 2020-07-01 00:34:38,768 [main] INFO romui - Verify Safety stock add through AGGREGRATED GLOBAL Type
+2020-07-01 10:56:28,777 [main] INFO romui - Login credentials to be entered
+2020-07-01 10:56:36,469 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-07-01 10:56:43,654 [main] INFO romui - Verify Safety stock is searched through AGGREGRATED GLOBAL
+2020-07-01 11:06:10,038 [main] INFO romui - Login credentials to be entered
+2020-07-01 11:06:23,174 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-07-01 11:06:25,880 [main] INFO romui - Verify Safety stock is searched through AGGREGRATED GLOBAL
+2020-07-01 11:10:58,648 [main] INFO romui - Login credentials to be entered
+2020-07-01 11:11:03,625 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-07-01 11:11:06,173 [main] INFO romui - Verify Safety stock is searched through AGGREGRATED GLOBAL
+2020-07-01 14:15:03,189 [main] INFO romui - Login credentials to be entered
+2020-07-01 14:15:10,447 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-07-01 14:15:12,496 [main] INFO romui - Verify Safety stock is searched through AGGREGRATED GLOBAL
+2020-07-01 14:18:13,223 [main] INFO romui - Login credentials to be entered
+2020-07-01 14:18:18,017 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-07-01 14:18:20,305 [main] INFO romui - Verify Safety stock is searched through AGGREGRATED GLOBAL
+2020-07-01 14:20:44,647 [main] INFO romui - Login credentials to be entered
+2020-07-01 14:20:50,807 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-07-01 14:20:53,376 [main] INFO romui - Verify Safety stock is searched through AGGREGRATED GLOBAL
+2020-07-01 14:41:13,034 [main] INFO romui - Login credentials to be entered
+2020-07-01 14:41:22,015 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-07-01 14:41:24,625 [main] INFO romui - Verify Safety stock is searched through AGGREGRATED GLOBAL
+2020-07-01 14:41:44,960 [main] INFO romui - Safety Stock Search by AGGREGRATEDGLOBAL verified
+2020-07-01 14:41:44,960 [main] INFO romui - Verify Safety stock edit through AGGREGRATED GLOBAL
+2020-07-01 14:41:52,311 [main] INFO romui - Safety Stock edit by AGGREGRATEDGLOBAL verified
+2020-07-01 14:44:28,682 [main] INFO romui - Login credentials to be entered
+2020-07-01 14:44:35,243 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-07-01 14:44:37,618 [main] INFO romui - Verify Safety stock is searched through AGGREGRATED GLOBAL
+2020-07-01 14:44:57,534 [main] INFO romui - Safety Stock Search by AGGREGRATEDGLOBAL verified
+2020-07-01 14:44:57,549 [main] INFO romui - Verify Safety stock edit through AGGREGRATED GLOBAL
+2020-07-01 14:45:04,293 [main] INFO romui - Safety Stock edit by AGGREGRATEDGLOBAL verified
+2020-07-01 14:46:43,712 [main] INFO romui - Login credentials to be entered
+2020-07-01 14:46:48,372 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-07-01 14:46:51,147 [main] INFO romui - Verify Safety stock is searched through GLOBALSUPPLYTYPE
+2020-07-01 14:47:32,308 [main] INFO romui - Login credentials to be entered
+2020-07-01 14:47:37,340 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-07-01 14:47:39,950 [main] INFO romui - Verify Safety stock is searched through GLOBALSUPPLYTYPE
+2020-07-01 14:48:20,817 [main] INFO romui - Login credentials to be entered
+2020-07-01 14:48:25,750 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-07-01 14:48:28,315 [main] INFO romui - Verify Safety stock is searched through AGGREGRATED GLOBAL
+2020-07-01 14:48:48,227 [main] INFO romui - Safety Stock Search by AGGREGRATEDGLOBAL verified
+2020-07-01 14:48:48,227 [main] INFO romui - Verify Safety stock edit through AGGREGRATED GLOBAL
+2020-07-01 14:48:55,314 [main] INFO romui - Safety Stock edit by AGGREGRATEDGLOBAL verified
+2020-07-01 14:49:05,686 [main] INFO romui - Login credentials to be entered
+2020-07-01 14:49:10,180 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-07-01 14:49:13,024 [main] INFO romui - Verify Safety stock is searched through AGGREGRATED GLOBAL
+2020-07-01 14:49:32,948 [main] INFO romui - Safety Stock Search by AGGREGRATEDGLOBAL verified
+2020-07-01 14:49:32,948 [main] INFO romui - Verify delete Safety stock through AGGREGRATED GLOBAL
+2020-07-01 14:49:36,936 [main] INFO romui - Delete Safety Stock by AGGREGRATEDGLOBAL verified
+2020-07-01 14:52:35,129 [main] INFO romui - Login credentials to be entered
+2020-07-01 14:52:39,669 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-07-01 14:52:42,442 [main] INFO romui - Verify Safety stock is searched through GLOBALSUPPLYTYPE
+2020-07-01 14:59:01,184 [main] INFO romui - Login credentials to be entered
+2020-07-01 14:59:07,245 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-07-01 14:59:09,792 [main] INFO romui - Verify Safety stock is searched through GLOBALSUPPLYTYPE
+2020-07-01 15:03:33,973 [main] INFO romui - Login credentials to be entered
+2020-07-01 15:03:41,005 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-07-01 15:03:43,939 [main] INFO romui - Verify Safety stock is searched through GLOBALSUPPLYTYPE
+2020-07-01 15:07:06,490 [main] INFO romui - Login credentials to be entered
+2020-07-01 15:07:11,139 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-07-01 15:07:13,740 [main] INFO romui - Verify Safety stock is searched through GLOBALSUPPLYTYPE
+2020-07-01 15:07:33,895 [main] INFO romui - Safety Stock Search by GLOBALSUPPLYTYPE verified
+2020-07-01 15:07:33,895 [main] INFO romui - Verify Safety stock edit through GLOBALSUPPLYTYPE
+2020-07-01 15:07:39,995 [main] INFO romui - Safety Stock edit by GLOBALSUPPLYTYPE verified
+2020-07-01 15:07:50,305 [main] INFO romui - Login credentials to be entered
+2020-07-01 15:07:54,823 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-07-01 15:07:57,392 [main] INFO romui - Verify Safety stock is searched through GLOBALSUPPLYTYPE
+2020-07-01 15:08:16,968 [main] INFO romui - Safety Stock Search by GLOBALSUPPLYTYPE verified
+2020-07-01 15:08:16,968 [main] INFO romui - Verify delete Safety stock through GLOBALSUPPLYTYPE
+2020-07-01 15:08:20,782 [main] INFO romui - Delete Safety Stock by GLOBALSUPPLYTYPE verified
+2020-07-01 15:32:15,902 [main] INFO romui - Login credentials to be entered
+2020-07-01 15:32:24,252 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-07-01 15:32:26,911 [main] INFO romui - Verify Safety stock is searched through Node Item
+2020-07-01 15:32:46,583 [main] INFO romui - Safety Stock Search by NODE ITEM verified
+2020-07-01 15:32:46,583 [main] INFO romui - Verify Safety stock edit through Node Item
+2020-07-01 15:32:53,055 [main] INFO romui - Safety Stock edit by NODE ITEM verified
+2020-07-01 15:33:04,013 [main] INFO romui - Login credentials to be entered
+2020-07-01 15:33:09,354 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-07-01 15:33:11,893 [main] INFO romui - Verify Safety stock is searched through Node Item
+2020-07-01 15:33:31,376 [main] INFO romui - Safety Stock Search by NODE ITEM verified
+2020-07-01 15:33:31,376 [main] INFO romui - Verify delete Safety stock through Node Item
+2020-07-01 15:33:34,492 [main] INFO romui - Delete Safety Stock by NODE ITEM verified
+2020-07-01 15:33:44,818 [main] INFO romui - Login credentials to be entered
+2020-07-01 15:33:49,633 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-07-01 15:33:52,196 [main] INFO romui - Verify Safety stock is searched through Node Type Item
+2020-07-01 15:34:11,067 [main] INFO romui - Safety Stock Search by Node Type Item verified
+2020-07-01 15:34:11,067 [main] INFO romui - Verify Safety stock edit through Node Type Item
+2020-07-01 15:34:17,796 [main] INFO romui - Safety Stock edit by NODE  TYPE ITEM verified
+2020-07-01 15:34:28,098 [main] INFO romui - Login credentials to be entered
+2020-07-01 15:34:34,922 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-07-01 15:34:37,241 [main] INFO romui - Verify Safety stock is searched through Node Type Item
+2020-07-01 15:34:56,043 [main] INFO romui - Safety Stock Search by Node Type Item verified
+2020-07-01 15:34:56,043 [main] INFO romui - Verify delete Safety stock through Node Type Item
+2020-07-01 15:34:59,820 [main] INFO romui - Delete Safety Stock by NODE TYPE ITEM verified
+2020-07-01 15:35:10,089 [main] INFO romui - Login credentials to be entered
+2020-07-01 15:35:14,887 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-07-01 15:35:17,794 [main] INFO romui - Verify Safety stock is searched through Node Item
+2020-07-01 15:35:50,478 [main] INFO romui - Safety Stock Search by NODE ITEM verified
+2020-07-01 15:35:50,478 [main] INFO romui - Verify Safety stock edit through Node Item
+2020-07-01 15:35:57,149 [main] INFO romui - Safety Stock edit by NodeItemAttribute verified
+2020-07-01 15:36:07,442 [main] INFO romui - Login credentials to be entered
+2020-07-01 15:36:11,788 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-07-01 15:36:14,144 [main] INFO romui - Verify Safety stock is searched through Node Item
+2020-07-01 15:36:46,375 [main] INFO romui - Safety Stock Search by NodeItemAttributeNode verified
+2020-07-01 15:36:46,375 [main] INFO romui - Verify delete Safety stock through Node Item
+2020-07-01 15:36:50,286 [main] INFO romui - Delete Safety Stock by NodeItemAttributeNode verified
+2020-07-01 15:37:02,609 [main] INFO romui - Login credentials to be entered
+2020-07-01 15:37:09,417 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-07-01 15:37:12,102 [main] INFO romui - Verify Safety stock is searched through NodeTypeItemAttribute
+2020-07-01 15:37:32,164 [main] INFO romui - Safety Stock Search by NodeTypeItemAttribute verified
+2020-07-01 15:37:32,164 [main] INFO romui - Verify Safety stock edit through NodeTypeItemAttribute
+2020-07-01 15:37:39,076 [main] INFO romui - Safety Stock edit by NodeTypeItemAttribute verified
+2020-07-01 15:37:49,882 [main] INFO romui - Login credentials to be entered
+2020-07-01 15:37:54,200 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-07-01 15:38:25,278 [main] INFO romui - Login credentials to be entered
+2020-07-01 15:38:29,742 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-07-01 15:38:32,507 [main] INFO romui - Verify Safety stock is searched through Node Item
+2020-07-01 15:38:51,510 [main] INFO romui - Safety Stock Search by GLOBALNODETYPE verified
+2020-07-01 15:38:51,510 [main] INFO romui - Verify Safety stock edit through Node Item
+2020-07-01 15:38:58,420 [main] INFO romui - Safety Stock edit by GLOBALNODETYPE verified
+2020-07-01 15:39:09,305 [main] INFO romui - Login credentials to be entered
+2020-07-01 15:39:13,882 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-07-01 15:39:16,356 [main] INFO romui - Verify Safety stock is searched through Node Item
+2020-07-01 15:39:35,161 [main] INFO romui - Safety Stock Search by NodeTypeItemAttribute verified
+2020-07-01 15:39:35,161 [main] INFO romui - Verify delete Safety stock through Node Item
+2020-07-01 15:39:38,843 [main] INFO romui - Delete Safety Stock by NodeTypeItemAttribute verified
+2020-07-01 15:39:49,185 [main] INFO romui - Login credentials to be entered
+2020-07-01 15:39:53,700 [main] INFO romui - Navigate to Manage Safety Stock Configuration page
+2020-07-01 15:39:56,541 [main] INFO romui - Verify Safety stock is searched through Node Item
+2020-07-01 15:40:00,032 [main] INFO romui - NodeItem Safety Stock Search verified
+2020-07-01 15:40:00,032 [main] INFO romui - Verify Safety stock is searched through Node type Item
+2020-07-01 15:40:08,233 [main] INFO romui - NodeTypeItem Safety Stock Search verified
+2020-07-01 15:40:08,234 [main] INFO romui - Verify Safety stock is searched through Node Item Attribute
+2020-07-01 15:40:12,539 [main] INFO romui - NodeItemAttribute Safety Stock Search verified
+2020-07-01 15:40:12,539 [main] INFO romui - Verify Safety stock is searched through Node type Item Attribute
+2020-07-01 15:40:16,432 [main] INFO romui - NodeTypeItemAttribute Safety Stock Search verified
+2020-07-01 15:40:16,432 [main] INFO romui - Verify Safety stock is searched through Global  Node Type

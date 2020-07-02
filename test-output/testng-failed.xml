@@ -7,7 +7,7 @@
   <parameter name="adminPasswd" value="Password123@"/>
   <parameter name="storeID" value="TMS-NA-Store1"/>
   <parameter name="waitPeriod" value="5"/>
-  <parameter name="browserType" value="ie"/>
+  <parameter name="browserType" value="chrome"/>
   <listeners>
     <listener class-name="com.gsicommerce.romui.selenium.utilities.ExtentReporterListener"/>
   </listeners>
@@ -16,9 +16,10 @@
     <classes>
       <class name="com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests">
         <methods>
-          <include name="testaddSafetyStockByAGGREGRATEDGLOBAL"/>
+          <include name="testDeleteSafetyStockByNodeTypeItemAttribute"/>
           <include name="tearDown"/>
           <include name="setup"/>
+          <include name="testSafetyStockSearchBy"/>
         </methods>
       </class> <!-- com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests -->
     </classes>
