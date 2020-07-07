@@ -18,7 +18,7 @@ public class SellerConfigsTests extends ROMUIBasePage {
 	private SellerConfigurationsData sellerConfigData;
 	private static int selleridselected;
 
-	@Test(enabled = false, priority = 1, description = "To Verify Manage Seller Configurations ")
+	@Test(enabled = true, priority = 1, description = "To Verify Manage Seller Configurations ")
 	public void testVerifyManageSellerConfig() throws JsonParseException, JsonMappingException, IOException, Exception {
 
 		logger.info("Login credentials to be entered");
@@ -45,7 +45,7 @@ public class SellerConfigsTests extends ROMUIBasePage {
 		logger.info("Edit Seller config verified successfully");
 	}
 
-	@Test(enabled = false, priority = 3, description = "To Verify View Seller Configurations feature")
+	@Test(enabled = true, priority = 3, description = "To Verify View Seller Configurations feature")
 	public void testViewSeller() throws JsonParseException, JsonMappingException, IOException, Exception {
 		sellerConfigData = SellerConfigurationsData.get(env.getFileLocation());
 

@@ -6,7 +6,7 @@ import com.gsicommerce.romui.selenium.pages.ROMUIBasePage;
 
 public class ISPUTests extends ROMUIBasePage {
 
-	@Test(enabled = false, description = "to Verify ISPU Pick Order")
+	@Test(enabled = true, description = "to Verify ISPU Pick Order")
 	public void testISPUPickOrder() throws Exception {
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());

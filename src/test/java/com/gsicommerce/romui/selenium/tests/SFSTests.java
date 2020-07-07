@@ -12,7 +12,7 @@ import com.gsicommerce.romui.selenium.utilities.RomuiEnumValues;
 
 public class SFSTests extends ROMUIBasePage {
 
-	@Test(enabled = false, description = "to Verify SFS Pick Order")
+	@Test(enabled = true, description = "to Verify SFS Pick Order")
 	public void testSFSPickOrder() throws Exception {
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
