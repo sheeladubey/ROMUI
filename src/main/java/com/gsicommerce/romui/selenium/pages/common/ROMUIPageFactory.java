@@ -11,6 +11,8 @@ import com.gsicommerce.romui.selenium.pages.ordermanagement.InventoryOrganizatio
 import com.gsicommerce.romui.selenium.pages.ordermanagement.ATPRulesPage;
 import com.gsicommerce.romui.selenium.pages.ordermanagement.InventorySearchPage;
 import com.gsicommerce.romui.selenium.pages.ordermanagement.ItemSearchPage;
+import com.gsicommerce.romui.selenium.pages.ordermanagement.NodeCalendarsPage;
+import com.gsicommerce.romui.selenium.pages.ordermanagement.OrderCreatePage;
 import com.gsicommerce.romui.selenium.pages.ordermanagement.OrderManagementMenusPage;
 import com.gsicommerce.romui.selenium.pages.ordermanagement.OrdersPage;
 import com.gsicommerce.romui.selenium.pages.ordermanagement.PaymentMethodConfigPage;
@@ -47,6 +49,8 @@ public class ROMUIPageFactory extends PageFactory {
 	private final ATPRulesPage atpRulesPage;
 	private final SafetyStockConfigsPage safetyStockConfigsPage;
 	private final InventoryOrganizationPage inventoryOrganizationPage;
+	private final OrderCreatePage orderCreatePage;
+	private final NodeCalendarsPage nodeCalendarsPage;
 
 	public ROMUIPageFactory(WebDriver driver, Environment env) {
 		super(driver, env);
@@ -71,6 +75,8 @@ public class ROMUIPageFactory extends PageFactory {
 		atpRulesPage = new ATPRulesPage(driver, env);
 		safetyStockConfigsPage = new SafetyStockConfigsPage(driver, env);
 		inventoryOrganizationPage = new InventoryOrganizationPage(driver, env);
+		orderCreatePage = new OrderCreatePage(driver, env);
+		nodeCalendarsPage = new NodeCalendarsPage(driver, env);
 	}
 
 	public LoginPage loginPage() {
@@ -161,4 +167,13 @@ public class ROMUIPageFactory extends PageFactory {
 		return inventoryOrganizationPage;
 	}
 
+	public OrderCreatePage orderCreatePage() {
+
+		return orderCreatePage;
+	}
+
+	public NodeCalendarsPage nodeCalendarsPage() {
+
+		return nodeCalendarsPage;
+	}
 }

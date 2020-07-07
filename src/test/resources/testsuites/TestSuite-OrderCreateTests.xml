@@ -7,22 +7,26 @@
 			class-name="com.gsicommerce.romui.selenium.utilities.ExtentReporterListener"></listener>
 	</listeners>
 	<parameter name="browserType" value="chrome" />
-	<!-- parameter name="storeEnvironment" value="lvststromsso04" / -->
+	<!--  parameter name="storeEnvironment" value="lvststromsso04" / -->
 	<parameter name="storeEnvironment" value="lvststromuiapp04" />
 	<parameter name="adminUserName" value="admin@tmsna" />
 	<parameter name="adminPasswd" value="Password123@" />
 	<parameter name="sellerID" value="TMSEB2" />
-	<parameter name="storeID" value="TMS_NA-Store1" />
+	<parameter name="storeID" value="TMS-NA-Store1" />
+	<parameter name="HOST" value="https://tst01-epapi-na.gsipartners.com" />
+	<parameter name="apikey" value="pj8PGCIGPXy3U8F71ZC5xKGVG8Gm3Vr5" />
+	<parameter name="content-type" value="application/xml" />
 	<!-- <parameter name="storeEnvironment" value="uat-romui.radial.com/en" 
 		/> <parameter name="adminUserName" value="dubey1290@BBWNA" /> <parameter 
 		name="adminPasswd" value="Welcome1!" /> -->
 	<parameter name="waitPeriod" value="5" />
 
-	<test thread-count="5" name="OrdersTests">
+	<test thread-count="5" name="OrderCreateTests">
 		<classes>
-			<class name="com.gsicommerce.romui.selenium.tests.OrdersTests" />
+			<!-- class name="com.gsicommerce.romui.selenium.pages.ordermanagement.OrderCreatePage" /-->
+			<class name="com.gsicommerce.romui.selenium.tests.OrderCreateTests" />
 			<parameter name="dataFile"
-				value="./src/test/resources/testdata/ordersData.json" />
+				value="./src/test/resources/testdata/orderCreateData.json" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

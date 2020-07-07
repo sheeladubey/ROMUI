@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\shedubey\Desktop\ROM\ROMUI_Automation\ROMUI-sheela\src\test\resources\testsuites\TestSuite-InventoryOrganizationTests.xml</span>
+                    <span>C:\Users\shedubey\Desktop\ROM\ROMUI_Automation\ROMUI-sheela\src\test\resources\testsuites\TestSuite-NodeCalendarsTests.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,34 +104,10 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests" class="method navigator-link" hash-for-method="testViewInventoryOrgsRecord">testViewInventoryOrgsRecord</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.NodeCalendarsTests" class="method navigator-link" hash-for-method="testSearchOrderbyNumber">testSearchOrderbyNumber</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
-                    </span>
-                    <div class="method-list-content passed suite-Suite">
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests" class="method navigator-link" hash-for-method="testEditInventoryOrgs">testEditInventoryOrgs</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests" class="method navigator-link" hash-for-method="testEditInventoryOrgsFromView">testEditInventoryOrgsFromView</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests" class="method navigator-link" hash-for-method="testverfiyInventoryOrgsRecord">testverfiyInventoryOrgsRecord</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -146,64 +122,33 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests</span>
+              <span class="class-name">com.gsicommerce.romui.selenium.tests.NodeCalendarsTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testViewInventoryOrgsRecord">
-                  </a> <!-- testViewInventoryOrgsRecord -->
-                  <span class="method-name">testViewInventoryOrgsRecord</span>
-                  <div class="stack-trace">java.lang.AssertionError: No Data found for Default Shipping Calendar ID expected [true] but found [false]
-	at com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests.testViewInventoryOrgsRecord(InventoryOrganizationTests.java:46)
+                  <a name="testSearchOrderbyNumber">
+                  </a> <!-- testSearchOrderbyNumber -->
+                  <span class="method-name">testSearchOrderbyNumber</span>
+                  <div class="stack-trace">java.lang.IllegalArgumentException: Cannot format given Object as a Date
+	at java.base/java.text.DateFormat.format(DateFormat.java:338)
+	at java.base/java.text.Format.format(Format.java:158)
+	at com.gsicommerce.romui.selenium.utilities.Common.selectTime(Common.java:614)
+	at com.gsicommerce.romui.selenium.pages.ordermanagement.NodeCalendarsPage.addNodeCalendars(NodeCalendarsPage.java:81)
+	at com.gsicommerce.romui.selenium.tests.NodeCalendarsTests.testSearchOrderbyNumber(NodeCalendarsTests.java:22)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 30 stack frames
+... Removed 27 stack frames
 </div> <!-- stack-trace -->
                   <em>
-(to Verify user able to view Inventory Organization )                  </em>
+(to Verify search order by Order number)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testEditInventoryOrgs">
-                  </a> <!-- testEditInventoryOrgs -->
-                  <span class="method-name">testEditInventoryOrgs</span>
-                  <em>
-(to Verify user able to Edit Inventory Organization )                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testEditInventoryOrgsFromView">
-                  </a> <!-- testEditInventoryOrgsFromView -->
-                  <span class="method-name">testEditInventoryOrgsFromView</span>
-                  <em>
-(to Verify user able to Edit Inventory Organization data from View Page )                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testverfiyInventoryOrgsRecord">
-                  </a> <!-- testverfiyInventoryOrgsRecord -->
-                  <span class="method-name">testverfiyInventoryOrgsRecord</span>
-                  <em>
-(to Verify user able to see Inventory Organization records displayed)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\shedubey\Desktop\ROM\ROMUI_Automation\ROMUI-sheela\src\test\resources\testsuites\TestSuite-InventoryOrganizationTests.xml</span>
+            <span class="header-content">C:\Users\shedubey\Desktop\ROM\ROMUI_Automation\ROMUI-sheela\src\test\resources\testsuites\TestSuite-NodeCalendarsTests.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -220,12 +165,12 @@
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.gsicommerce.romui.selenium.utilities.ExtentReporterListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;InventoryOrganizationTests&quot;&gt;
-    &lt;parameter name=&quot;dataFile&quot; value=&quot;./src/test/resources/testdata/inventoryOrganizationData.json&quot;/&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;NodeCalendarsTests&quot;&gt;
+    &lt;parameter name=&quot;dataFile&quot; value=&quot;./src/test/resources/testdata/nodeCalendarsData.json&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests&quot;/&gt;
+      &lt;class name=&quot;com.gsicommerce.romui.selenium.tests.NodeCalendarsTests&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- InventoryOrganizationTests --&gt;
+  &lt;/test&gt; &lt;!-- NodeCalendarsTests --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -237,7 +182,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">InventoryOrganizationTests (1 class)</span>
+                <span class="test-name">NodeCalendarsTests (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -263,28 +208,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testEditInventoryOrgsFromView')
-data.setCell(0, 2, 'com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests')
-data.setCell(0, 3, 50176);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testEditInventoryOrgs')
-data.setCell(1, 2, 'com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests')
-data.setCell(1, 3, 49071);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testViewInventoryOrgsRecord')
-data.setCell(2, 2, 'com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests')
-data.setCell(2, 3, 25268);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testverfiyInventoryOrgsRecord')
-data.setCell(3, 2, 'com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests')
-data.setCell(3, 3, 8094);
+data.setCell(0, 1, 'testSearchOrderbyNumber')
+data.setCell(0, 2, 'com.gsicommerce.romui.selenium.tests.NodeCalendarsTests')
+data.setCell(0, 3, 10456);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 10 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -295,55 +228,6 @@ return data;
             <span class="header-content">Reporter output for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">testverfiyInventoryOrgsRecord</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Get Total No of Rows in the webtable</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">testEditInventoryOrgs</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">There is no page limit option displayed</span>
-                <span class="reporter-method-output">page limit drop down value is selected</span>
-                <span class="reporter-method-output">Getting the column value of the first row</span>
-                <span class="reporter-method-output">View Order icon is clicked on</span>
-                <span class="reporter-method-output">page limit drop down value is selected</span>
-                <span class="reporter-method-output">page limit drop down value is selected</span>
-                <span class="reporter-method-output">Action icon is clicked on</span>
-                <span class="reporter-method-output">There is no page limit option displayed</span>
-                <span class="reporter-method-output">page limit drop down value is selected</span>
-                <span class="reporter-method-output">There is no page limit option displayed</span>
-                <span class="reporter-method-output">page limit drop down value is selected</span>
-                <span class="reporter-method-output">Action icon is clicked on</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">testEditInventoryOrgsFromView</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">There is no page limit option displayed</span>
-                <span class="reporter-method-output">page limit drop down value is selected</span>
-                <span class="reporter-method-output">Getting the column value of the first row</span>
-                <span class="reporter-method-output">View Order icon is clicked on</span>
-                <span class="reporter-method-output">page limit drop down value is selected</span>
-                <span class="reporter-method-output">page limit drop down value is selected</span>
-                <span class="reporter-method-output">Action icon is clicked on</span>
-                <span class="reporter-method-output">There is no page limit option displayed</span>
-                <span class="reporter-method-output">page limit drop down value is selected</span>
-                <span class="reporter-method-output">There is no page limit option displayed</span>
-                <span class="reporter-method-output">page limit drop down value is selected</span>
-                <span class="reporter-method-output">Action icon is clicked on</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">testViewInventoryOrgsRecord</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">There is no page limit option displayed</span>
-                <span class="reporter-method-output">page limit drop down value is selected</span>
-                <span class="reporter-method-output">Getting the column value of the first row</span>
-                <span class="reporter-method-output">View Order icon is clicked on</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
@@ -359,56 +243,20 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.gsicommerce.romui.selenium.tests.NodeCalendarsTests</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setup(org.testng.TestRunner@7e15f4d4)</span>
+                <span class="method-name">setup(org.testng.TestRunner@25d3cfc8)</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testverfiyInventoryOrgsRecord</span>
-                <span class="method-start">10612 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=testverfiyInventoryOrgsRecord status=SUCCESS method=InventoryOrganizationTests.test...)</span>
-                <span class="method-start">18708 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(org.testng.TestRunner@7e15f4d4)</span>
-                <span class="method-start">18709 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testEditInventoryOrgs</span>
-                <span class="method-start">28791 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=testEditInventoryOrgs status=SUCCESS method=InventoryOrganizationTests.testEditInve...)</span>
-                <span class="method-start">77863 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(org.testng.TestRunner@7e15f4d4)</span>
-                <span class="method-start">77863 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">testViewInventoryOrgsRecord</span>
-                <span class="method-start">88366 ms</span>
+                <span class="method-name">testSearchOrderbyNumber</span>
+                <span class="method-start">10340 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=testViewInventoryOrgsRecord status=FAILURE method=InventoryOrganizationTests.testVi...)</span>
-                <span class="method-start">113640 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(org.testng.TestRunner@7e15f4d4)</span>
-                <span class="method-start">114256 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testEditInventoryOrgsFromView</span>
-                <span class="method-start">125662 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=testEditInventoryOrgsFromView status=SUCCESS method=InventoryOrganizationTests.test...)</span>
-                <span class="method-start">175839 ms</span>
+                <span class="method-name">tearDown([TestResult name=testSearchOrderbyNumber status=FAILURE method=NodeCalendarsTests.testSearchOrderbyN...)</span>
+                <span class="method-start">20800 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

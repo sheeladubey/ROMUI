@@ -11,16 +11,16 @@
   <listeners>
     <listener class-name="com.gsicommerce.romui.selenium.utilities.ExtentReporterListener"/>
   </listeners>
-  <test thread-count="5" name="InventoryOrganizationTests(failed)">
-    <parameter name="dataFile" value="./src/test/resources/testdata/inventoryOrganizationData.json"/>
+  <test thread-count="5" name="NodeCalendarsTests(failed)">
+    <parameter name="dataFile" value="./src/test/resources/testdata/nodeCalendarsData.json"/>
     <classes>
-      <class name="com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests">
+      <class name="com.gsicommerce.romui.selenium.tests.NodeCalendarsTests">
         <methods>
           <include name="tearDown"/>
           <include name="setup"/>
-          <include name="testViewInventoryOrgsRecord"/>
+          <include name="testSearchOrderbyNumber"/>
         </methods>
-      </class> <!-- com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests -->
+      </class> <!-- com.gsicommerce.romui.selenium.tests.NodeCalendarsTests -->
     </classes>
-  </test> <!-- InventoryOrganizationTests(failed) -->
+  </test> <!-- NodeCalendarsTests(failed) -->
 </suite> <!-- Failed suite [Suite] -->

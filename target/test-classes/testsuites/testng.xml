@@ -7,7 +7,7 @@
 			class-name="com.gsicommerce.romui.selenium.utilities.ExtentReporterListener"></listener>
 	</listeners>
 	<parameter name="browserType" value="chrome" />
-	<!-- parameter name="storeEnvironment" value="lvststromsso04" /-->
+	<!-- parameter name="storeEnvironment" value="lvststromsso04" / -->
 	<parameter name="storeEnvironment" value="lvststromuiapp04" />
 	<parameter name="adminUserName" value="admin@tmsna" />
 	<parameter name="adminPasswd" value="Password123@" />
@@ -15,30 +15,91 @@
 	<parameter name="storeID" value="TMS_NA-Store1" />
 	<parameter name="waitPeriod" value="5" />
 
+	<test thread-count="5" name="ATPRulesTests">
+		<classes>
+			<class
+				name="com.gsicommerce.romui.selenium.tests.ATPRulesTests" />
+			<parameter name="dataFile"
+				value="./src/test/resources/testdata/inventoryAvailabilityData.json" />
+		</classes>
+	</test>
+
+	<test thread-count="5" name="AvailabilitySearchTests">
+		<classes>
+			<class
+				name="com.gsicommerce.romui.selenium.tests.AvailabilitySearchTests" />
+			<parameter name="dataFile"
+				value="./src/test/resources/testdata/catalogInventorySearchTestData.json" />
+		</classes>
+	</test>
+
+	<test thread-count="5" name="InventoryAuditsTests">
+		<classes>
+			<class
+				name="com.gsicommerce.romui.selenium.tests.InventoryAuditsTests" />
+			<parameter name="dataFile"
+				value="./src/test/resources/testdata/catalogInventorySearchTestData.json" />
+		</classes>
+	</test>
+
+	<test thread-count="5" name="InventoryOrganizationTests">
+		<classes>
+			<class
+				name="com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests" />
+			<parameter name="dataFile"
+				value="./src/test/resources/testdata/inventoryOrganizationData.json" />
+		</classes>
+	</test>
+
+	<test thread-count="5" name="InventorySearchTests">
+		<classes>
+			<class
+				name="com.gsicommerce.romui.selenium.tests.InventorySearchTests" />
+			<parameter name="dataFile"
+				value="./src/test/resources/testdata/catalogInventorySearchTestData.json" />
+		</classes>
+	</test>
+
+	<test thread-count="5" name="ISPUTests">
+		<classes>
+			<class name="com.gsicommerce.romui.selenium.tests.ISPUTests" />
+			<parameter name="dataFile"
+				value="./src/test/resources/testdata/ispuTestData.json" />
+		</classes>
+	</test>
+
+	<test thread-count="5" name="ItemSearchtests">
+		<classes>
+			<class
+				name="com.gsicommerce.romui.selenium.tests.ItemSearchTests" />
+			<parameter name="dataFile"
+				value="./src/test/resources/testdata/catalogInventorySearchTestData.json" />
+		</classes>
+	</test>
+
+	<test thread-count="5" name="NodeCalendarsTests">
+		<classes>
+			<class
+				name="com.gsicommerce.romui.selenium.tests.NodeCalendarsTests" />
+			<parameter name="dataFile"
+				value="./src/test/resources/testdata/nodeCalendarsData.json" />
+		</classes>
+	</test>
+
 	<test thread-count="5" name="OrdersTests">
 		<classes>
 			<class name="com.gsicommerce.romui.selenium.tests.OrdersTests" />
 			<parameter name="dataFile"
 				value="./src/test/resources/testdata/ordersData.json" />
 		</classes>
-	</test> <!-- Test -->
+	</test>
 
 	<test thread-count="5" name="PaymentMethodConfigTests">
 		<classes>
 			<class
 				name="com.gsicommerce.romui.selenium.tests.PaymentMethodConfigTests" />
 			<parameter name="dataFile"
-				value="./src/test/resources/testdata/paymentMethodConfigData.json"></parameter>
-		</classes>
-	</test>
-	<!-- Test -->
-
-	<test thread-count="5" name="ServiceGroupConfigsTests">
-		<classes>
-			<class
-				name="com.gsicommerce.romui.selenium.tests.ServiceGroupConfigsTests" />
-			<parameter name="dataFile"
-				value="./src/test/resources/testdata/serviceGroupConfigsData.json"></parameter>
+				value="./src/test/resources/testdata/paymentMethodConfigData.json" />
 		</classes>
 	</test>
 
@@ -49,16 +110,52 @@
 			<parameter name="dataFile"
 				value="./src/test/resources/testdata/pipelineData.json" />
 		</classes>
-	</test> <!-- Test -->
+	</test>
 
-	<test thread-count="5" name="ServiceFlowTests">
+	<test thread-count="5" name="ReturnItemsTests">
 		<classes>
 			<class
-				name="com.gsicommerce.romui.selenium.tests.ServiceFlowTests" />
+				name="com.gsicommerce.romui.selenium.tests.ReturnItemsTests" />
 			<parameter name="dataFile"
-				value="./src/test/resources/testdata/serviceflowData.json" />
+				value="./src/test/resources/testdata/ordersData.json" />
 		</classes>
-	</test> <!-- Test -->
+	</test>
+
+	<test thread-count="5" name="SafetyStockConfigsTests">
+		<classes>
+			<class
+				name="com.gsicommerce.romui.selenium.tests.SafetyStockConfigsTests" />
+			<parameter name="dataFile"
+				value="./src/test/resources/testdata/inventoryAvailabilityData.json" />
+		</classes>
+	</test>
+
+	<test thread-count="5" name="SellerConfigsTests">
+		<!-- parameter name="browserType" value="remote-ie" / -->
+		<classes>
+			<class
+				name="com.gsicommerce.romui.selenium.tests.SellerConfigsTests" />
+			<parameter name="dataFile"
+				value="./src/test/resources/testdata/sellerConfigsData.json" />
+		</classes>
+	</test>
+
+	<test thread-count="5" name="ServiceGroupConfigsTests">
+		<classes>
+			<class
+				name="com.gsicommerce.romui.selenium.tests.ServiceGroupConfigsTests" />
+			<parameter name="dataFile"
+				value="./src/test/resources/testdata/serviceGroupConfigsData.json" />
+		</classes>
+	</test>
+
+	<test thread-count="5" name="SFSTests">
+		<classes>
+			<class name="com.gsicommerce.romui.selenium.tests.SFSTests" />
+			<parameter name="dataFile"
+				value="./src/test/resources/testdata/sfsTestData.json" />
+		</classes>
+	</test>
 
 	<test thread-count="5" name="ShippingLabelConfigTests">
 		<classes>
@@ -67,14 +164,24 @@
 			<parameter name="dataFile"
 				value="./src/test/resources/testdata/ShippingLabelConfigData.json" />
 		</classes>
-	</test> <!-- Test -->
-	
-	<test thread-count="5" name="SellerConfigsTests">
+	</test>
+
+	<test thread-count="5" name="ShippingRegionGroupsTests">
 		<classes>
 			<class
-				name="com.gsicommerce.romui.selenium.tests.SellerConfigsTests" />
+				name="com.gsicommerce.romui.selenium.tests.ShippingRegionGroupsTests" />
 			<parameter name="dataFile"
-				value="./src/test/resources/testdata/sellerConfigsData.json" />
+				value="./src/test/resources/testdata/regionConfigurationData.json" />
 		</classes>
-	</test> <!-- Test -->
+	</test>
+
+	<test thread-count="5" name="ServiceFlowTests">
+		<classes>
+			<class
+				name="com.gsicommerce.romui.selenium.tests.ServiceFlowTests" />
+			<parameter name="dataFile"
+				value="./src/test/resources/testdata/serviceflowData.json" />
+		</classes>
+	</test>
+
 </suite> <!-- Suite -->

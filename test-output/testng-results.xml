@@ -1,212 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
-    <line>
-      <![CDATA[Get Total No of Rows in the webtable]]>
-    </line>
-    <line>
-      <![CDATA[There is no page limit option displayed]]>
-    </line>
-    <line>
-      <![CDATA[page limit drop down value is selected]]>
-    </line>
-    <line>
-      <![CDATA[Getting the column value of the first row]]>
-    </line>
-    <line>
-      <![CDATA[View Order icon is clicked on]]>
-    </line>
-    <line>
-      <![CDATA[page limit drop down value is selected]]>
-    </line>
-    <line>
-      <![CDATA[page limit drop down value is selected]]>
-    </line>
-    <line>
-      <![CDATA[Action icon is clicked on]]>
-    </line>
-    <line>
-      <![CDATA[There is no page limit option displayed]]>
-    </line>
-    <line>
-      <![CDATA[page limit drop down value is selected]]>
-    </line>
-    <line>
-      <![CDATA[There is no page limit option displayed]]>
-    </line>
-    <line>
-      <![CDATA[page limit drop down value is selected]]>
-    </line>
-    <line>
-      <![CDATA[Action icon is clicked on]]>
-    </line>
-    <line>
-      <![CDATA[There is no page limit option displayed]]>
-    </line>
-    <line>
-      <![CDATA[page limit drop down value is selected]]>
-    </line>
-    <line>
-      <![CDATA[Getting the column value of the first row]]>
-    </line>
-    <line>
-      <![CDATA[View Order icon is clicked on]]>
-    </line>
-    <line>
-      <![CDATA[There is no page limit option displayed]]>
-    </line>
-    <line>
-      <![CDATA[page limit drop down value is selected]]>
-    </line>
-    <line>
-      <![CDATA[Getting the column value of the first row]]>
-    </line>
-    <line>
-      <![CDATA[View Order icon is clicked on]]>
-    </line>
-    <line>
-      <![CDATA[page limit drop down value is selected]]>
-    </line>
-    <line>
-      <![CDATA[page limit drop down value is selected]]>
-    </line>
-    <line>
-      <![CDATA[Action icon is clicked on]]>
-    </line>
-    <line>
-      <![CDATA[There is no page limit option displayed]]>
-    </line>
-    <line>
-      <![CDATA[page limit drop down value is selected]]>
-    </line>
-    <line>
-      <![CDATA[There is no page limit option displayed]]>
-    </line>
-    <line>
-      <![CDATA[page limit drop down value is selected]]>
-    </line>
-    <line>
-      <![CDATA[Action icon is clicked on]]>
-    </line>
   </reporter-output>
-  <suite started-at="2020-07-02T19:30:55 EDT" name="Suite" finished-at="2020-07-02T19:33:51 EDT" duration-ms="175863">
+  <suite started-at="2020-07-07T00:20:37 EDT" name="Suite" finished-at="2020-07-07T00:20:58 EDT" duration-ms="21249">
     <groups>
     </groups>
-    <test started-at="2020-07-02T19:30:55 EDT" name="InventoryOrganizationTests" finished-at="2020-07-02T19:33:51 EDT" duration-ms="175863">
-      <class name="com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests">
-        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests@557caf28]" started-at="2020-07-02T19:30:55 EDT" name="setup" finished-at="2020-07-02T19:31:06 EDT" duration-ms="10612" status="PASS">
+    <test started-at="2020-07-07T00:20:37 EDT" name="NodeCalendarsTests" finished-at="2020-07-07T00:20:58 EDT" duration-ms="21249">
+      <class name="com.gsicommerce.romui.selenium.tests.NodeCalendarsTests">
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.NodeCalendarsTests@3c41ed1d]" started-at="2020-07-07T00:20:37 EDT" name="setup" finished-at="2020-07-07T00:20:48 EDT" duration-ms="10339" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@7e15f4d4]]>
+                <![CDATA[org.testng.TestRunner@25d3cfc8]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testverfiyInventoryOrgsRecord()[pri:1, instance:com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests@557caf28]" started-at="2020-07-02T19:31:06 EDT" name="testverfiyInventoryOrgsRecord" description="to Verify user able to see Inventory Organization records displayed" finished-at="2020-07-02T19:31:14 EDT" duration-ms="8094" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Get Total No of Rows in the webtable]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- testverfiyInventoryOrgsRecord -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests@557caf28]" started-at="2020-07-02T19:31:14 EDT" name="tearDown" finished-at="2020-07-02T19:31:14 EDT" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testverfiyInventoryOrgsRecord status=SUCCESS method=InventoryOrganizationTests.testverfiyInventoryOrgsRecord()[pri:1, instance:com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests@557caf28] output=Get Total No of Rows in the webtable]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests@557caf28]" started-at="2020-07-02T19:31:14 EDT" name="setup" finished-at="2020-07-02T19:31:24 EDT" duration-ms="10082" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@7e15f4d4]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="testEditInventoryOrgs()[pri:2, instance:com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests@557caf28]" started-at="2020-07-02T19:31:24 EDT" name="testEditInventoryOrgs" description="to Verify user able to Edit Inventory Organization " finished-at="2020-07-02T19:32:13 EDT" duration-ms="49071" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[There is no page limit option displayed]]>
-            </line>
-            <line>
-              <![CDATA[page limit drop down value is selected]]>
-            </line>
-            <line>
-              <![CDATA[Getting the column value of the first row]]>
-            </line>
-            <line>
-              <![CDATA[View Order icon is clicked on]]>
-            </line>
-            <line>
-              <![CDATA[page limit drop down value is selected]]>
-            </line>
-            <line>
-              <![CDATA[page limit drop down value is selected]]>
-            </line>
-            <line>
-              <![CDATA[Action icon is clicked on]]>
-            </line>
-            <line>
-              <![CDATA[There is no page limit option displayed]]>
-            </line>
-            <line>
-              <![CDATA[page limit drop down value is selected]]>
-            </line>
-            <line>
-              <![CDATA[There is no page limit option displayed]]>
-            </line>
-            <line>
-              <![CDATA[page limit drop down value is selected]]>
-            </line>
-            <line>
-              <![CDATA[Action icon is clicked on]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- testEditInventoryOrgs -->
-        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests@557caf28]" started-at="2020-07-02T19:32:13 EDT" name="setup" finished-at="2020-07-02T19:32:24 EDT" duration-ms="10502" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@7e15f4d4]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests@557caf28]" started-at="2020-07-02T19:32:13 EDT" name="tearDown" finished-at="2020-07-02T19:32:13 EDT" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testEditInventoryOrgs status=SUCCESS method=InventoryOrganizationTests.testEditInventoryOrgs()[pri:2, instance:com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests@557caf28] output=There is no page limit option displayed]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method signature="testViewInventoryOrgsRecord()[pri:3, instance:com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests@557caf28]" started-at="2020-07-02T19:32:24 EDT" name="testViewInventoryOrgsRecord" description="to Verify user able to view Inventory Organization " finished-at="2020-07-02T19:32:49 EDT" duration-ms="25268" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method signature="testSearchOrderbyNumber()[pri:1, instance:com.gsicommerce.romui.selenium.tests.NodeCalendarsTests@3c41ed1d]" started-at="2020-07-07T00:20:48 EDT" name="testSearchOrderbyNumber" description="to Verify search order by Order number" finished-at="2020-07-07T00:20:58 EDT" duration-ms="10456" status="FAIL">
+          <exception class="java.lang.IllegalArgumentException">
             <message>
-              <![CDATA[No Data found for Default Shipping Calendar ID expected [true] but found [false]]]>
+              <![CDATA[Cannot format given Object as a Date]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: No Data found for Default Shipping Calendar ID expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:97)
-at org.testng.Assert.failNotEquals(Assert.java:968)
-at org.testng.Assert.assertTrue(Assert.java:43)
-at com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests.testViewInventoryOrgsRecord(InventoryOrganizationTests.java:46)
+              <![CDATA[java.lang.IllegalArgumentException: Cannot format given Object as a Date
+at java.base/java.text.DateFormat.format(DateFormat.java:338)
+at java.base/java.text.Format.format(Format.java:158)
+at com.gsicommerce.romui.selenium.utilities.Common.selectTime(Common.java:614)
+at com.gsicommerce.romui.selenium.pages.ordermanagement.NodeCalendarsPage.addNodeCalendars(NodeCalendarsPage.java:81)
+at com.gsicommerce.romui.selenium.tests.NodeCalendarsTests.testSearchOrderbyNumber(NodeCalendarsTests.java:22)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -237,96 +60,22 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
-            <line>
-              <![CDATA[There is no page limit option displayed]]>
-            </line>
-            <line>
-              <![CDATA[page limit drop down value is selected]]>
-            </line>
-            <line>
-              <![CDATA[Getting the column value of the first row]]>
-            </line>
-            <line>
-              <![CDATA[View Order icon is clicked on]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- testViewInventoryOrgsRecord -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests@557caf28]" started-at="2020-07-02T19:32:49 EDT" name="tearDown" finished-at="2020-07-02T19:32:50 EDT" duration-ms="616" status="PASS">
+        </test-method> <!-- testSearchOrderbyNumber -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.NodeCalendarsTests@3c41ed1d]" started-at="2020-07-07T00:20:58 EDT" name="tearDown" finished-at="2020-07-07T00:20:58 EDT" duration-ms="426" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testViewInventoryOrgsRecord status=FAILURE method=InventoryOrganizationTests.testViewInventoryOrgsRecord()[pri:3, instance:com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests@557caf28] output=There is no page limit option displayed]]]>
+                <![CDATA[[TestResult name=testSearchOrderbyNumber status=FAILURE method=NodeCalendarsTests.testSearchOrderbyNumber()[pri:1, instance:com.gsicommerce.romui.selenium.tests.NodeCalendarsTests@3c41ed1d] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests@557caf28]" started-at="2020-07-02T19:32:50 EDT" name="setup" finished-at="2020-07-02T19:33:01 EDT" duration-ms="11406" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@7e15f4d4]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="testEditInventoryOrgsFromView()[pri:4, instance:com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests@557caf28]" started-at="2020-07-02T19:33:01 EDT" name="testEditInventoryOrgsFromView" description="to Verify user able to Edit Inventory Organization data from View Page " finished-at="2020-07-02T19:33:51 EDT" duration-ms="50176" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[There is no page limit option displayed]]>
-            </line>
-            <line>
-              <![CDATA[page limit drop down value is selected]]>
-            </line>
-            <line>
-              <![CDATA[Getting the column value of the first row]]>
-            </line>
-            <line>
-              <![CDATA[View Order icon is clicked on]]>
-            </line>
-            <line>
-              <![CDATA[page limit drop down value is selected]]>
-            </line>
-            <line>
-              <![CDATA[page limit drop down value is selected]]>
-            </line>
-            <line>
-              <![CDATA[Action icon is clicked on]]>
-            </line>
-            <line>
-              <![CDATA[There is no page limit option displayed]]>
-            </line>
-            <line>
-              <![CDATA[page limit drop down value is selected]]>
-            </line>
-            <line>
-              <![CDATA[There is no page limit option displayed]]>
-            </line>
-            <line>
-              <![CDATA[page limit drop down value is selected]]>
-            </line>
-            <line>
-              <![CDATA[Action icon is clicked on]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- testEditInventoryOrgsFromView -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests@557caf28]" started-at="2020-07-02T19:33:51 EDT" name="tearDown" finished-at="2020-07-02T19:33:51 EDT" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testEditInventoryOrgsFromView status=SUCCESS method=InventoryOrganizationTests.testEditInventoryOrgsFromView()[pri:4, instance:com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests@557caf28] output=There is no page limit option displayed]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.gsicommerce.romui.selenium.tests.InventoryOrganizationTests -->
-    </test> <!-- InventoryOrganizationTests -->
+      </class> <!-- com.gsicommerce.romui.selenium.tests.NodeCalendarsTests -->
+    </test> <!-- NodeCalendarsTests -->
   </suite> <!-- Suite -->
 </testng-results>

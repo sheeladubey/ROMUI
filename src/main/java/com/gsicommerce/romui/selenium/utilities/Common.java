@@ -6,6 +6,7 @@ import java.awt.event.KeyEvent;
 import java.net.IDN;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.time.LocalTime;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -30,6 +31,8 @@ import org.testng.Reporter;
 import com.gsicommerce.romui.selenium.testdata.Environment;
 import com.gsicommerce.romui.selenium.testdata.PaymentMethodConfigData;
 import com.thoughtworks.xstream.XStream;
+
+
 
 public class Common {
 
@@ -601,6 +604,17 @@ public class Common {
 	        } catch (Throwable error) {
 	            Assert.fail("Timeout waiting for Page Load Request to complete.");
 	        }
-	    }
+	    }	 
 	
+
+	public static String selectTime(int time)
+	{
+		LocalTime currenttime = LocalTime.now();  
+	    System.out.println(currenttime);  
+	    String time1 = sdf.format(currenttime);
+	    LocalTime timeahead = currenttime.plusHours(1);
+	    System.out.println(timeahead);
+		return time1;
+	  
+	}
 }

@@ -17,5 +17,5 @@
 			<parameter name="dataFile"
 				value="./src/test/resources/testdata/catalogInventorySearchTestData.json"></parameter>
 		</classes>
-	</test> <!-- AvailabilitySearchTests -->
+	</test> <!--Test -->
 </suite> <!-- Suite -->

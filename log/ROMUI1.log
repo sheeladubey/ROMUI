@@ -6474,3 +6474,16 @@
 2020-07-02 19:33:51,820 [main] INFO romui - Edit Inventory Organization Icon clicked successfully
 2020-07-02 19:33:51,821 [main] INFO romui - Edit Data on Edit Inventory Organization page
 2020-07-02 19:33:51,821 [main] INFO romui - Edit Inventory Organization from View Inventory Organization page Verified
+2020-07-06 20:08:17,732 [main] INFO romui - Login credentials to be entered
+2020-07-06 20:08:29,013 [main] INFO romui - Navigated to Orders page
+2020-07-06 20:08:48,097 [main] INFO romui - Search By Order Number verified
+2020-07-06 20:08:58,614 [main] INFO romui - Login credentials to be entered
+2020-07-06 20:09:07,010 [main] INFO romui - Navigated to Orders page
+2020-07-07 00:19:04,247 [main] INFO romui - Login credentials to be entered
+2020-07-07 00:19:09,446 [main] INFO romui - Click on NodeCalendars page
+2020-07-07 00:19:12,640 [main] INFO romui - Navigated to NodeCalendars page
+2020-07-07 00:19:12,640 [main] INFO romui - Enter data on NodeCalendars page
+2020-07-07 00:20:48,070 [main] INFO romui - Login credentials to be entered
+2020-07-07 00:20:52,776 [main] INFO romui - Click on NodeCalendars page
+2020-07-07 00:20:55,625 [main] INFO romui - Navigated to NodeCalendars page
+2020-07-07 00:20:55,626 [main] INFO romui - Enter data on NodeCalendars page

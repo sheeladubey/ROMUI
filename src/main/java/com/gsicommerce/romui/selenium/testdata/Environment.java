@@ -38,6 +38,19 @@ public class Environment {
 	public String getFileLocation() {
 		return getParam("dataFile");
 	}
+	
+	public String getHost() {
+		return getParam("HOST");
+	}
+	
+	public String getApikey() {
+		return getParam("apikey");
+	}
+	
+	public String getContentType() {
+		return getParam("content-type");
+	}
+	
 
 	public Integer getWaitPeriod() {
 		try {
