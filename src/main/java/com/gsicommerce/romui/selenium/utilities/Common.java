@@ -607,14 +607,13 @@ public class Common {
 	    }	 
 	
 
-	public static String selectTime(int time)
+	public static int selectTime(int time)
 	{
 		LocalTime currenttime = LocalTime.now();  
-	    System.out.println(currenttime);  
-	    String time1 = sdf.format(currenttime);
-	    LocalTime timeahead = currenttime.plusHours(1);
-	    System.out.println(timeahead);
-		return time1;
+	    System.out.println("CURRENT TIME IS" +currenttime);  
+	     LocalTime timeahead = currenttime.plusHours(1);
+	    System.out.println("TIME AHEAD IS:" +timeahead);
+		return time;
 	  
 	}
 }

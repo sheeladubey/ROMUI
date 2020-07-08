@@ -45,7 +45,9 @@ public enum RomuiEnumValues {
 	USER_NOTFOUND(""),
 	USER_FOUND(""),
 	ROLE_VALIDATION(""),
-	USER_VALIDATION("");
+	USER_VALIDATION(""),
+	NODECALENDARS_ADD("Heads up! Calendar Successfully Saved!"),
+	NODECALENDARS_DELETE("Heads up! The Calendar was successfully deleted!");
 
 	private String updateMsg;
 

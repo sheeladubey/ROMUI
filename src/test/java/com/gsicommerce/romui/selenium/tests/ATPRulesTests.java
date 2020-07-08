@@ -19,6 +19,7 @@ public class ATPRulesTests extends ROMUIBasePage {
 		romuipages.orderMgmPage().clickOnATPRules();
 		logger.info(" Verify Manage ATP rules displays");
 		Assert.assertTrue(romuipages.atpRulesPage().verifyInvAvail(), "Manage ATP rules screen doesn't displays all the ATP rules ");
+		logger.info("Manage ATP rules display VERIFIED");
 	}
 
 	

@@ -6487,3 +6487,302 @@
 2020-07-07 00:20:52,776 [main] INFO romui - Click on NodeCalendars page
 2020-07-07 00:20:55,625 [main] INFO romui - Navigated to NodeCalendars page
 2020-07-07 00:20:55,626 [main] INFO romui - Enter data on NodeCalendars page
+2020-07-07 17:54:25,259 [main] INFO romui - Login credentials to be entered
+2020-07-07 17:54:32,392 [main] INFO romui - Navigate to ATP Rules page
+2020-07-07 17:54:36,632 [main] INFO romui -  Verify Manage ATP rules displays
+2020-07-07 17:54:57,343 [main] INFO romui - Login credentials to be entered
+2020-07-07 17:55:04,343 [main] INFO romui - Navigate to ATP Rules page
+2020-07-07 17:55:08,288 [main] INFO romui -  Verify user able to Add ATP rule in Manage ATP rules page
+2020-07-07 17:56:21,667 [main] INFO romui - Login credentials to be entered
+2020-07-07 17:56:28,477 [main] INFO romui - Navigate to ATP Rules page
+2020-07-07 17:56:33,379 [main] INFO romui -  Verify user able to Edit ATP rule in Manage ATP rules page
+2020-07-07 17:57:04,748 [main] INFO romui - Login credentials to be entered
+2020-07-07 17:57:13,775 [main] INFO romui - Navigate to ATP Rules page
+2020-07-07 17:57:18,048 [main] INFO romui -  Verify user able to Edit ATP rule in Manage ATP rules page
+2020-07-07 17:57:49,644 [main] INFO romui - Login credentials to be entered
+2020-07-07 17:58:00,708 [main] INFO romui - Search for Availabiltiy
+2020-07-07 17:58:42,949 [main] INFO romui - Login credentials to be entered
+2020-07-07 17:58:53,780 [main] INFO romui - Search for Inventory Audits
+2020-07-07 17:59:38,979 [main] INFO romui - Login credentials to be entered
+2020-07-07 17:59:48,831 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-07 17:59:52,448 [main] INFO romui - Verify Inventory Organization Found record display
+2020-07-07 17:59:53,114 [main] INFO romui - Inventory Organization Found record displayed
+2020-07-07 18:00:13,318 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:00:20,509 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-07 18:00:32,969 [main] INFO romui - Verify User able to click Edit Inventory Organization 
+2020-07-07 18:00:57,930 [main] INFO romui - Edit Inventory Organization Icon clicked successfully
+2020-07-07 18:00:57,930 [main] INFO romui - Verify User able to Edit Inventory Organization data .
+2020-07-07 18:02:00,695 [main] INFO romui - Edit Inventory Organization data Verified
+2020-07-07 18:02:22,468 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:02:29,270 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-07 18:02:33,008 [main] INFO romui - Verify User able to click View Inventory Organization 
+2020-07-07 18:02:55,388 [main] INFO romui - View Inventory Organization Icon clicked successfully
+2020-07-07 18:02:55,389 [main] INFO romui - Validate Inventory Orgs ID on View Inventory Organization Page 
+2020-07-07 18:02:57,976 [main] INFO romui - Validate Inventory Organization Name on View Inventory Organization Page 
+2020-07-07 18:02:58,242 [main] INFO romui - Validate Default Shipping Calendar ID on View Inventory Organization Page 
+2020-07-07 18:03:20,140 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:03:27,186 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-07 18:03:31,035 [main] INFO romui - Verify User able to click Edit Inventory Organization 
+2020-07-07 18:04:49,235 [main] INFO romui - Edit Inventory Organization Icon clicked successfully
+2020-07-07 18:04:49,235 [main] INFO romui - Edit Data on Edit Inventory Organization page
+2020-07-07 18:04:49,236 [main] INFO romui - Edit Inventory Organization from View Inventory Organization page Verified
+2020-07-07 18:05:10,148 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:05:24,326 [main] INFO romui - Item for which inventory to be added:21-UIAuto992307
+2020-07-07 18:06:49,272 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:07:01,824 [main] INFO romui - Item for which inventory to be added:AutoItem001
+2020-07-07 18:07:58,972 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:08:09,469 [main] INFO romui - Item for which inventory to be added:25077y
+2020-07-07 18:10:03,601 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:10:21,389 [main] INFO romui - Status for which inventory to be added:Item is active
+2020-07-07 18:11:26,250 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:11:36,783 [main] INFO romui - Selection of Items for which inventory to be added:
+2020-07-07 18:12:38,550 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:12:49,017 [main] INFO romui - Validate error alert message for blank ItemID Search
+2020-07-07 18:12:52,706 [main] INFO romui - Search for ItemID:21-UIAuto992307
+2020-07-07 18:12:57,567 [main] INFO romui - Search for nodeList:100801
+2020-07-07 18:13:09,668 [main] INFO romui - Search for node type:Retail Store
+2020-07-07 18:13:17,281 [main] INFO romui - Search for Supply type:On Hand
+2020-07-07 18:13:25,066 [main] INFO romui - Search for All Options
+2020-07-07 18:14:37,215 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:14:47,852 [main] INFO romui - Search for All Options
+2020-07-07 18:16:19,384 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:17:47,565 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:19:00,324 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:22:31,085 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:26:20,880 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:26:37,641 [main] INFO romui - Item to be added:UIAuto983917
+2020-07-07 18:27:26,862 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:27:37,122 [main] INFO romui - Item to be edited:UIAuto983917
+2020-07-07 18:28:15,182 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:28:26,234 [main] INFO romui - Item to be searched:UIAuto983917
+2020-07-07 18:28:30,862 [main] INFO romui - Clicking on View icon for the item to be viewed
+2020-07-07 18:29:02,579 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:29:14,042 [main] INFO romui - Search for clientItemID:UIAuto983917
+2020-07-07 18:29:47,909 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:29:59,600 [main] INFO romui - Search for productID:AutoItem001
+2020-07-07 18:30:24,535 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:30:34,482 [main] INFO romui - Search for Status:Item is active
+2020-07-07 18:31:24,740 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:31:34,681 [main] INFO romui - Search for All Options
+2020-07-07 18:32:04,145 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:32:13,333 [main] INFO romui - Click on NodeCalendars page
+2020-07-07 18:32:16,697 [main] INFO romui - Navigated to NodeCalendars page
+2020-07-07 18:32:16,698 [main] INFO romui - Enter data on NodeCalendars page
+2020-07-07 18:32:41,524 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:32:52,006 [main] INFO romui - Navigated to Orders page
+2020-07-07 18:33:16,404 [main] INFO romui - Search By Order Number verified
+2020-07-07 18:33:37,363 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:33:48,636 [main] INFO romui - Navigated to Orders page
+2020-07-07 18:34:27,113 [main] INFO romui - Search By Fulfillment Order Number verified
+2020-07-07 18:34:48,033 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:35:01,255 [main] INFO romui - Navigated to Orders page
+2020-07-07 18:35:45,184 [main] INFO romui - Search By Customer Name verified
+2020-07-07 18:36:08,976 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:36:23,669 [main] INFO romui - Navigated to Orders page
+2020-07-07 18:37:12,789 [main] INFO romui - Search By EmailID verified
+2020-07-07 18:37:34,507 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:37:46,293 [main] INFO romui - Navigated to Orders page
+2020-07-07 18:38:40,607 [main] INFO romui - Search By Order Status verified
+2020-07-07 18:39:00,861 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:39:12,996 [main] INFO romui - Navigated to Orders page
+2020-07-07 18:39:44,338 [main] INFO romui - Edit Search verified for order number
+2020-07-07 18:40:29,690 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:40:52,776 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:41:09,077 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:41:24,736 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:41:41,534 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:41:58,100 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:42:13,301 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:42:28,560 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:42:46,518 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:43:02,045 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:43:17,685 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:43:33,124 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:43:53,474 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:44:11,959 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:44:28,829 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:44:43,795 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:45:04,079 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:45:19,377 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:45:34,212 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:45:51,845 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:46:15,265 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:46:30,857 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:46:47,610 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:47:03,487 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:47:18,820 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:47:35,675 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:47:50,963 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:48:06,387 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:48:23,105 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:48:38,438 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:48:54,595 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:49:09,763 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:49:25,283 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:49:43,246 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:49:59,334 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:50:14,899 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:50:32,397 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:50:49,657 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:51:05,657 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:51:21,167 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:51:37,663 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:51:52,142 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:52:10,293 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:52:25,562 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:52:40,365 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:52:57,206 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:53:12,910 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:53:27,940 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:53:45,164 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:54:04,376 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:54:20,103 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:54:36,621 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:54:53,171 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:55:10,224 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:55:30,118 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:55:47,318 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:56:05,608 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:56:21,414 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:56:36,858 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:56:52,449 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:57:07,565 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:57:23,093 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:57:46,451 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:58:03,266 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:58:18,249 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:58:33,522 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:58:48,874 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:59:04,947 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:59:23,433 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:59:42,245 [main] INFO romui - Login credentials to be entered
+2020-07-07 18:59:57,708 [main] INFO romui - Login credentials to be entered
+2020-07-07 19:00:26,572 [main] INFO romui - Login credentials to be entered
+2020-07-07 19:00:47,646 [main] INFO romui - Login credentials to be entered
+2020-07-07 19:01:07,809 [main] INFO romui - Login credentials to be entered
+2020-07-07 19:01:26,905 [main] INFO romui - Login credentials to be entered
+2020-07-07 19:01:43,035 [main] INFO romui - Login credentials to be entered
+2020-07-07 19:02:07,542 [main] INFO romui - Login credentials to be entered
+2020-07-07 19:02:30,473 [main] INFO romui - Login credentials to be entered
+2020-07-07 19:02:50,239 [main] INFO romui - Login credentials to be entered
+2020-07-07 19:03:05,724 [main] INFO romui - Login credentials to be entered
+2020-07-07 19:03:23,571 [main] INFO romui - Login credentials to be entered
+2020-07-07 19:03:42,602 [main] INFO romui - Login credentials to be entered
+2020-07-07 19:03:58,699 [main] INFO romui - Login credentials to be entered
+2020-07-07 19:04:19,500 [main] INFO romui - Login credentials to be entered
+2020-07-07 19:04:35,730 [main] INFO romui - Login credentials to be entered
+2020-07-07 19:04:52,271 [main] INFO romui - Login credentials to be entered
+2020-07-07 19:05:11,185 [main] INFO romui - Login credentials to be entered
+2020-07-07 19:05:34,296 [main] INFO romui - Login credentials to be entered
+2020-07-07 19:06:00,354 [main] INFO romui - Login credentials to be entered
+2020-07-07 19:06:14,357 [main] INFO romui - Delete Shipping Region
+2020-07-07 23:47:19,394 [main] INFO romui - Login credentials to be entered
+2020-07-07 23:47:29,295 [main] INFO romui - Navigate to ATP Rules page
+2020-07-07 23:47:33,369 [main] INFO romui -  Verify Manage ATP rules displays
+2020-07-07 23:47:59,677 [main] INFO romui - Login credentials to be entered
+2020-07-07 23:48:07,793 [main] INFO romui - Navigate to ATP Rules page
+2020-07-07 23:48:12,093 [main] INFO romui -  Verify user able to Add ATP rule in Manage ATP rules page
+2020-07-07 23:49:22,640 [main] INFO romui - Login credentials to be entered
+2020-07-07 23:49:30,227 [main] INFO romui - Navigate to ATP Rules page
+2020-07-07 23:49:34,158 [main] INFO romui -  Verify user able to Edit ATP rule in Manage ATP rules page
+2020-07-07 23:50:08,401 [main] INFO romui - Login credentials to be entered
+2020-07-07 23:50:15,487 [main] INFO romui - Navigate to ATP Rules page
+2020-07-07 23:50:19,753 [main] INFO romui -  Verify user able to Edit ATP rule in Manage ATP rules page
+2020-07-07 23:50:56,018 [main] INFO romui - Login credentials to be entered
+2020-07-07 23:51:10,109 [main] INFO romui - Search for Availabiltiy
+2020-07-07 23:51:48,071 [main] INFO romui - Login credentials to be entered
+2020-07-07 23:51:58,972 [main] INFO romui - Search for Inventory Audits
+2020-07-07 23:52:35,827 [main] INFO romui - Login credentials to be entered
+2020-07-07 23:52:45,082 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-07 23:52:49,708 [main] INFO romui - Verify Inventory Organization Found record display
+2020-07-07 23:52:50,403 [main] INFO romui - Inventory Organization Found record displayed
+2020-07-07 23:53:10,908 [main] INFO romui - Login credentials to be entered
+2020-07-07 23:53:21,066 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-07 23:53:24,612 [main] INFO romui - Verify User able to click Edit Inventory Organization 
+2020-07-07 23:53:47,720 [main] INFO romui - Edit Inventory Organization Icon clicked successfully
+2020-07-07 23:53:47,720 [main] INFO romui - Verify User able to Edit Inventory Organization data .
+2020-07-07 23:54:45,431 [main] INFO romui - Edit Inventory Organization data Verified
+2020-07-07 23:55:06,235 [main] INFO romui - Login credentials to be entered
+2020-07-07 23:55:13,019 [main] INFO romui - Navigate to Manage Inventory Organizations page
+2020-07-07 23:55:16,160 [main] INFO romui - Verify User able to click View Inventory Organization 
+2020-07-07 23:55:38,092 [main] INFO romui - View Inventory Organization Icon clicked successfully
+2020-07-07 23:55:38,092 [main] INFO romui - Validate Inventory Orgs ID on View Inventory Organization Page 
+2020-07-07 23:55:41,056 [main] INFO romui - Validate Inventory Organization Name on View Inventory Organization Page 
+2020-07-07 23:55:41,341 [main] INFO romui - Validate Default Shipping Calendar ID on View Inventory Organization Page 
+2020-07-07 23:56:38,230 [main] INFO romui - Login credentials to be entered
+2020-07-07 23:56:43,289 [main] INFO romui - Click on NodeCalendars page
+2020-07-07 23:56:46,633 [main] INFO romui - Navigated to NodeCalendars page
+2020-07-07 23:56:46,633 [main] INFO romui - Enter data on NodeCalendars page
+2020-07-07 23:58:56,174 [main] INFO romui - Login credentials to be entered
+2020-07-07 23:59:00,495 [main] INFO romui - Click on NodeCalendars page
+2020-07-07 23:59:02,856 [main] INFO romui - Navigated to NodeCalendars page
+2020-07-07 23:59:02,857 [main] INFO romui - Enter data on NodeCalendars page
+2020-07-08 00:02:13,804 [main] INFO romui - Login credentials to be entered
+2020-07-08 00:02:18,818 [main] INFO romui - Click on NodeCalendars page
+2020-07-08 00:02:21,585 [main] INFO romui - Navigated to NodeCalendars page
+2020-07-08 00:02:21,586 [main] INFO romui - Enter data on NodeCalendars page
+2020-07-08 00:03:52,062 [main] INFO romui - Login credentials to be entered
+2020-07-08 00:03:59,451 [main] INFO romui - Click on NodeCalendars page
+2020-07-08 00:04:02,645 [main] INFO romui - Navigated to NodeCalendars page
+2020-07-08 00:04:02,645 [main] INFO romui - Enter data on NodeCalendars page
+2020-07-08 00:07:44,232 [main] INFO romui - Login credentials to be entered
+2020-07-08 00:07:48,484 [main] INFO romui - Click on NodeCalendars page
+2020-07-08 00:07:51,337 [main] INFO romui - Navigated to NodeCalendars page
+2020-07-08 00:07:51,337 [main] INFO romui - Enter data on NodeCalendars page
+2020-07-08 00:10:56,981 [main] INFO romui - Login credentials to be entered
+2020-07-08 00:11:03,885 [main] INFO romui - Click on NodeCalendars page
+2020-07-08 00:11:06,846 [main] INFO romui - Navigated to NodeCalendars page
+2020-07-08 00:11:06,847 [main] INFO romui - Enter data on NodeCalendars page
+2020-07-08 00:16:06,514 [main] INFO romui - Login credentials to be entered
+2020-07-08 00:16:10,653 [main] INFO romui - Click on NodeCalendars page
+2020-07-08 00:16:13,568 [main] INFO romui - Navigated to NodeCalendars page
+2020-07-08 00:16:13,568 [main] INFO romui - Enter data on NodeCalendars page
+2020-07-08 00:31:08,642 [main] INFO romui - Login credentials to be entered
+2020-07-08 00:31:13,082 [main] INFO romui - Click on NodeCalendars page
+2020-07-08 00:31:16,021 [main] INFO romui - Navigated to NodeCalendars page
+2020-07-08 00:31:16,022 [main] INFO romui - Enter data on NodeCalendars page
+2020-07-08 00:37:47,168 [main] INFO romui - Login credentials to be entered
+2020-07-08 00:37:54,528 [main] INFO romui - Click on NodeCalendars page
+2020-07-08 00:37:57,064 [main] INFO romui - Navigated to NodeCalendars page
+2020-07-08 00:37:57,064 [main] INFO romui - Enter data on NodeCalendars page
+2020-07-08 00:40:27,230 [main] INFO romui - Login credentials to be entered
+2020-07-08 00:40:32,425 [main] INFO romui - Click on NodeCalendars page
+2020-07-08 00:40:35,310 [main] INFO romui - Navigated to NodeCalendars page
+2020-07-08 00:40:35,311 [main] INFO romui - Enter data on NodeCalendars page
+2020-07-08 00:42:54,538 [main] INFO romui - Login credentials to be entered
+2020-07-08 00:43:01,495 [main] INFO romui - Click on NodeCalendars page
+2020-07-08 00:43:04,048 [main] INFO romui - Navigated to NodeCalendars page
+2020-07-08 00:43:04,049 [main] INFO romui - Enter data on NodeCalendars page
+2020-07-08 00:44:02,170 [main] INFO romui - Login credentials to be entered
+2020-07-08 00:44:06,531 [main] INFO romui - Click on NodeCalendars page
+2020-07-08 00:44:09,712 [main] INFO romui - Navigated to NodeCalendars page
+2020-07-08 00:44:09,712 [main] INFO romui - Enter data on NodeCalendars page
+2020-07-08 00:45:37,901 [main] INFO romui - Login credentials to be entered
+2020-07-08 00:45:43,116 [main] INFO romui - Click on NodeCalendars page
+2020-07-08 00:45:45,882 [main] INFO romui - Navigated to NodeCalendars page
+2020-07-08 00:45:45,883 [main] INFO romui - Enter data on NodeCalendars page
+2020-07-08 00:47:10,302 [main] INFO romui - Login credentials to be entered
+2020-07-08 00:47:15,196 [main] INFO romui - Click on NodeCalendars page
+2020-07-08 00:47:18,103 [main] INFO romui - Navigated to NodeCalendars page
+2020-07-08 00:47:18,103 [main] INFO romui - Enter data on NodeCalendars page
+2020-07-08 00:48:56,116 [main] INFO romui - Login credentials to be entered
+2020-07-08 00:49:01,043 [main] INFO romui - Click on NodeCalendars page
+2020-07-08 00:49:03,897 [main] INFO romui - Navigated to NodeCalendars page
+2020-07-08 00:49:03,897 [main] INFO romui - Enter data on NodeCalendars page
+2020-07-08 00:50:06,595 [main] INFO romui - Login credentials to be entered
+2020-07-08 00:50:11,159 [main] INFO romui - Click on NodeCalendars page
+2020-07-08 00:50:14,026 [main] INFO romui - Navigated to NodeCalendars page
+2020-07-08 00:50:14,027 [main] INFO romui - Enter data on NodeCalendars page
+2020-07-08 00:52:30,057 [main] INFO romui - Login credentials to be entered
+2020-07-08 00:52:35,034 [main] INFO romui - Click on NodeCalendars page
+2020-07-08 00:52:37,944 [main] INFO romui - Navigated to NodeCalendars page
+2020-07-08 00:52:37,945 [main] INFO romui - Enter data on NodeCalendars page
+2020-07-08 01:01:04,039 [main] INFO romui - Login credentials to be entered
+2020-07-08 01:01:08,578 [main] INFO romui - Click on NodeCalendars page
+2020-07-08 01:01:11,561 [main] INFO romui - Navigated to NodeCalendars page
+2020-07-08 01:01:11,562 [main] INFO romui - Enter data on NodeCalendars page
+2020-07-08 01:02:41,716 [main] INFO romui - Login credentials to be entered
+2020-07-08 01:02:46,907 [main] INFO romui - Click on NodeCalendars page
+2020-07-08 01:02:49,148 [main] INFO romui - Navigated to NodeCalendars page
+2020-07-08 01:02:49,149 [main] INFO romui - Enter data on NodeCalendars page
+2020-07-08 01:02:56,634 [main] INFO romui - Add Node Calendars Has Been validated successfully
