@@ -176,14 +176,4 @@
 				value="./src/test/resources/testdata/regionConfigurationData.json" />
 		</classes>
 	</test>
-
-	<!-- test thread-count="5" name="ServiceFlowTests">
-		<classes>
-			<class
-				name="com.gsicommerce.romui.selenium.tests.ServiceFlowTests" />
-			<parameter name="dataFile"
-				value="./src/test/resources/testdata/serviceflowData.json" />
-		</classes>
-	</test -->
-
 </suite> <!-- Suite -->

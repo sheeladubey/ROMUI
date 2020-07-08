@@ -34,15 +34,11 @@ import org.openqa.selenium.safari.SafariOptions;
 import org.testng.ITestResult;
 
 import com.gsicommerce.romui.selenium.testdata.Environment;
-import com.crossbrowsertesting.AutomatedTest;
-import com.crossbrowsertesting.Video;
-import com.crossbrowsertesting.Snapshot;
 
 public class Browser {
-
+	
 	static String username = "usoni%40radial.com"; // Your username
 	static String authkey = "u61969854dbbf6ad"; // Your authkey
-
 	/**
 	 * This method will get the browser instance for the browser type and url
 	 * provided. If the browser instance does not exist, then it will start another
@@ -52,7 +48,7 @@ public class Browser {
 	 * @param url
 	 * @return driver object
 	 */
-
+	
 	public static WebDriver getBrowserInstance(final String browserType, final String url, final Environment env) {
 
 		final WebDriver driver = buildBrowserInstance(env, browserType);
@@ -106,15 +102,15 @@ public class Browser {
 			options.introduceFlakinessByIgnoringSecurityDomains();
 			options.enablePersistentHovering();
 			options.destructivelyEnsureCleanSession();
-			options.requireWindowFocus();
+			options.requireWindowFocus();	
 			options.setCapability("EnableNativeEvents", false);
 			options.setCapability("ignoreZoomSetting", true);
 			File file = new File("C:\\Program Files\\Internet Explorer\\IEDriverServer.exe");
-			System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
-			driver = new InternetExplorerDriver(options);
+			System.setProperty("webdriver.ie.driver", file.getAbsolutePath());	
+			driver = new InternetExplorerDriver(options);	
 			// Press CTRL + 0 keys of keyboard to set IEDriver Instance zoom level to 100%.
 			driver.findElement(By.tagName("html")).sendKeys(Keys.chord(Keys.CONTROL, "0"));
-
+		
 		} else if (browserType.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "C:\\geckodriver.exe");
 			FirefoxOptions options = new FirefoxOptions();
@@ -156,6 +152,10 @@ public class Browser {
 	private static WebDriver remoteWebDriver(final Environment env) {
 		try {
 			if (env.getBrowserType().equalsIgnoreCase("remote-firefox")) {
+
+			/*	String username = "usoni%40radial.com"; // Your username
+				String authkey = "u61969854dbbf6ad"; // Your authkey */
+
 				final FirefoxProfile profile = new FirefoxProfile();
 				profile.setAcceptUntrustedCertificates(true);
 				profile.setAssumeUntrustedCertificateIssuer(false);
@@ -170,32 +170,17 @@ public class Browser {
 				capabilities.setCapability("platform", "Windows 10");
 				capabilities.setCapability("screenResolution", "1366x768");
 				capabilities.setCapability("record_video", "true");
-				capabilities.setCapability("max_duration","1800");
-				capabilities.setCapability("idle_timeout","180");
-				capabilities.setCapability("timezone","GMT-05:00");
+				// final WebDriver remoteFirefoxDriver = new RemoteWebDriver(new
+				// URL(env.getRemoteUrl()), capabilities);
 				final RemoteWebDriver remoteFirefoxDriver = new RemoteWebDriver(
 						new URL("http://" + username + ":" + authkey + "@hub.crossbrowsertesting.com:80/wd/hub"),
 						capabilities);
-				// initialize an AutomatedTest object with CBT selenium session id
-				AutomatedTest myTest = new AutomatedTest(remoteFirefoxDriver.getSessionId().toString());
-				// start up a video
-				Video video = myTest.startRecordingVideo();
-				// take a snapshot of where we currently are
-				Snapshot googleSnap = myTest.takeSnapshot();
-				googleSnap.setDescription("ROMUI FIREFOX TEST RESULT");
-				googleSnap.saveLocally("C:\\Users\\shedubey\\Desktop\\ROM\\ROMUI_Automation\\ROMUI-sheela\\ScreenShots");
-				// stop our video and set a description
-				video.stopRecording();
-				// set a score for our test and end it
-				myTest.setScore("pass");
-				myTest.stop();
-				// save our video
-				video.saveLocally("test/FirefoxTestResult.mp4");
 				return remoteFirefoxDriver;
-
 			}
 
 			if (env.getBrowserType().equalsIgnoreCase("remote-ie")) {
+			/*	String username = "usoni%40radial.com"; // Your username
+				String authkey = "u61969854dbbf6ad"; // Your authkey */
 				final DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
 				capabilities.setCapability(CapabilityType.ForSeleniumServer.ENSURING_CLEAN_SESSION, true);
 				capabilities.setCapability(InternetExplorerDriver.ENABLE_PERSISTENT_HOVERING, true);
@@ -216,6 +201,8 @@ public class Browser {
 				capabilities.setCapability("record_video", "true");
 				File file = new File("C:\\Program Files\\Internet Explorer\\IEDriverServer.exe");
 				System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
+				// final WebDriver remoteIEDriver = new RemoteWebDriver(new
+				// URL(env.getRemoteUrl()), capabilities);
 				final RemoteWebDriver remoteIEDriver = new RemoteWebDriver(
 						new URL("http://" + username + ":" + authkey + "@hub.crossbrowsertesting.com:80/wd/hub"),
 						capabilities);
@@ -230,34 +217,23 @@ public class Browser {
 			}
 
 			if (env.getBrowserType().equalsIgnoreCase("remote-chrome")) {
+				/*String username = "usoni%40radial.com"; // Your username
+				String authkey = "u61969854dbbf6ad"; // Your authkey */
 				final DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 				capabilities.setCapability("name", "Sheela CBT Chrome test");
 				capabilities.setCapability("browserName", "Chrome");
 				capabilities.setCapability("platform", "Windows 10");
 				capabilities.setCapability("screenResolution", "1366x768");
 				capabilities.setCapability("record_video", "true");
-				capabilities.setCapability("max_duration","1800");
-				capabilities.setCapability("idle_timeout","180");
-				capabilities.setCapability("timezone","GMT-05:00");
 				capabilities.setJavascriptEnabled(true);
-				final RemoteWebDriver remoteDriver = new RemoteWebDriver(
+				// final WebDriver remoteDriver = new RemoteWebDriver(new
+				// URL(env.getRemoteUrl()), capabilities);
+				// final WebDriver remoteDriver = new RemoteWebDriver(new URL("http://" +
+				// username + ":" + authkey +"@hub-cloud.crossbrowsertesting.com:80/wd/hub"),
+				// capabilities);
+				final WebDriver remoteDriver = new RemoteWebDriver(
 						new URL("http://" + username + ":" + authkey + "@hub.crossbrowsertesting.com:80/wd/hub"),
 						capabilities);
-			/*	// initialize an AutomatedTest object with CBT selenium session id
-				AutomatedTest myTest = new AutomatedTest((remoteDriver).getSessionId().toString());
-				// start up a video
-				Video video = myTest.startRecordingVideo();
-				// take a snapshot of where we currently are
-				Snapshot googleSnap = myTest.takeSnapshot();
-				googleSnap.setDescription("ROMUI FIREFOX TEST RESULT");
-				googleSnap.saveLocally("C:\\Users\\shedubey\\Desktop\\ROM\\ROMUI_Automation\\ROMUI-sheela\\ScreenShots");
-				// stop our video and set a description
-				video.stopRecording();
-				// set a score for our test and end it
-				myTest.setScore("pass");
-				myTest.stop();
-				// save our video
-				video.saveLocally("C:\\Users\\shedubey\\Desktop\\ROM\\ROMUI_Automation\\ROMUI-sheela\\ScreenShots\\FirefoxTestResult.mp4");*/
 				return remoteDriver;
 			}
 			if (env.getBrowserType().equalsIgnoreCase("remote-iphone")) {
@@ -339,5 +315,5 @@ public class Browser {
 		return NewFileNamePath;
 
 	}
-	
+
 }

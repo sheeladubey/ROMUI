@@ -8,7 +8,6 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.gsicommerce.romui.selenium.utilities.Common;
 
 public class NodeCalendarsData {
 	
@@ -22,11 +21,11 @@ public class NodeCalendarsData {
 	String MaxItems;
 	
 	public String getCalendarID() {
-		return CalendarID + Common.generateRandomID("Auto");
+		return CalendarID;
 	}
 	
 	public String getCalendarDescription() {
-		return CalendarDescription + Common.generateRandomID("Auto");
+		return CalendarDescription;
 	}
 	
 	public String getMaxItems() {
