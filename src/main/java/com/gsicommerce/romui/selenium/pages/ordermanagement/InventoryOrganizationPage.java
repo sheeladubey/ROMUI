@@ -134,7 +134,8 @@ public class InventoryOrganizationPage {
 		EditInventoryOrgs();
 	}
 
-	public void inventoryOrgsformValidation() throws Exception {
+	public void inventoryOrgsformValidation() throws Exception
+	{
 		clickEditInventoryOrgs();
 		Action.scrollToBottomofPage();
 		btnAddAttribute.click();

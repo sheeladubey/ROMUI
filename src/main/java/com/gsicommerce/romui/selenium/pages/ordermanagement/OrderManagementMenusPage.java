@@ -17,7 +17,6 @@ public class OrderManagementMenusPage {
 	Action action;
 
 	public OrderManagementMenusPage(WebDriver driver, Environment env) {
-
 		this.driver = driver;
 		this.env = env;
 		PageFactory.initElements(driver, this);
@@ -25,7 +24,6 @@ public class OrderManagementMenusPage {
 	}
 
 	@FindBy(how = How.CSS, using = "[data-tooltip='Main Menu']")
-	//@FindBy(how = How.CSS, using = ".radial-app-menu-open-icon")
 	WebElement btnMainMenu;
 
 	@FindBy(how = How.XPATH, using = "//i/parent::a[contains(text(),'Catalog & Inventory')]")
@@ -52,7 +50,7 @@ public class OrderManagementMenusPage {
 	@CacheLookup
 	WebElement lkReportingDashboard;
 
-	@FindBy(how = How.XPATH, using = "//i/parent::a[contains(text(),'Omni Administration')]")
+	@FindBy(how = How.XPATH, using = "//i/parent::a[contains(text(),'Omni Administration')]")	
 	WebElement lkOmniAdministration;
 
 	@FindBy(how = How.XPATH, using = "//i/parent::a[contains(text(),'Help Documentation')]")
@@ -145,7 +143,6 @@ public class OrderManagementMenusPage {
 	@CacheLookup
 	WebElement lkPaymtMethdConfig;
 
-	// @FindBy(how = How.CSS, using = "a[href='/en/organizations/TMSNA/sellers']")
 	@FindBy(how = How.XPATH, using = "(//a[contains(text(),'Seller Configurations')])[2]")
 	WebElement lkSellerConfigurations;
 
@@ -215,15 +212,23 @@ public class OrderManagementMenusPage {
 		lkInvAudits.click();
 	}
 
-	public void clickOnAvailabilitySearch() {
+	public void clickOnAvailabilitySearch() throws InterruptedException {
 		btnMainMenu.click();
-		lkCatalogInventory.click();
-		lkAvlSearch.click();
+		if (env.getBrowserType().contains("ie")) {
+			Action.clickUsingJavaScipt(lkCatalogInventory);
+			Action.clickUsingJavaScipt(lkAvlSearch);
+		} else {
+			lkCatalogInventory.click();
+			lkAvlSearch.click();
+		}
+
 	}
 
 	public void clickOnStoreFulfillment() {
 		btnMainMenu.click();
+		Action.waitForElementToBeClickable(driver, lkFulfillment, 30);
 		lkFulfillment.click();
+		Action.waitForElementToBeClickable(driver, lkStoreFulfillment, 30);
 		lkStoreFulfillment.click();
 	}
 
@@ -335,12 +340,9 @@ public class OrderManagementMenusPage {
 	}
 
 	public void clickOnInvOrganization() {
-		// Action.clickUsingJavaScipt(btnMainMenu);
 		btnMainMenu.click();
 		lkOmniAdministration.click();
-		// Action.clickUsingJavaScipt(lkOmniAdministration);
 		lkInvOrgzation.click();
-		// Action.clickUsingJavaScipt(lkInvOrgzation);
 	}
 
 	public void clickOnFulfillmentNode() {

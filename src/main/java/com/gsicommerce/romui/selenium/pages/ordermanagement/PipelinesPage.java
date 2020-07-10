@@ -329,7 +329,7 @@ public class PipelinesPage {
 				.println("Selected row is for deletion::" + CommonElementsPage.getRowCellTextVal(rowNoaddPipeline, 1));
 		if (CommonElementsPage.getRowCellTextVal(rowNoaddPipeline, 2).equals("DRAFT")
 				&& btnDeletePipeline.isDisplayed()) {
-			//Action.scrollToBottomofPage();
+			Action.scrollToBottomofPage();
 			Reporter.log("Click delete icon for draft status record");
 			CommonElementsPage.clickSelectBtnSpanLink(rowNoaddPipeline, 5, 1);
 			Action.waitForElementToBeClickable(driver, btnConfirm, 10);
