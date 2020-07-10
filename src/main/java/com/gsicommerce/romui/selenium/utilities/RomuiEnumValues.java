@@ -30,22 +30,22 @@ public enum RomuiEnumValues {
 			"Please confirm the pipeline criteria form data you entered or remove it entirely before submitting."),
 	SHIPPING_LABEL_CONFIG_ADD("Heads up! Shipping Label Configuration created successfully."),
 	SHIPPNG_LABEL_CONFIG_EDIT("Heads up! Shipping Label Configuration updated successfully."),
-	ORDER_NOTFOUND("Heads up! No Results Found"),
+	ORDER_NOTFOUND("Heads up! No Results Found"), READY_FOR_PICKUP("Ready For Pickup"),
+	PICKUP_COMPLETE("Pickup Complete"), READY_FOR_PACK("Ready For Pack"),
+	SFS_BULK_DECLINE_SUCCESS_MSG("Heads up! Orders were successfully removed from your store queue."),
+	USER_FOUND("1 User Found"), USER_NOTFOUND("Heads up! No Users Found"),
+	USER_VALIDATION("Oh snap! Please check your form for validation errors"),
+	ROLE_VALIDATION("Oh snap! Please check your form for validation errors"),
 	SELLERCONFIG_EDIT("Heads up! Seller Updated Successfully"),
-	ATPRULES_ADD("Heads up! ATP Rule created successfully!"),
-	ATPRULES_DELETE("Heads up! ATP Rule deleted."),
-	ATPRULES_EDIT("Heads up! ATP Rule updated successfully!"),
-	SAFETYSTOCK_NOTFOUND("Heads up! No Safety Stock Found"),
+	ATPRULES_ADD("Heads up! ATP Rule created successfully!"), ATPRULES_DELETE("Heads up! ATP Rule deleted."),
+	ATPRULES_EDIT("Heads up! ATP Rule updated successfully!"), SAFETYSTOCK_NOTFOUND("Heads up! No Safety Stock Found"),
 	SAFETYSTOCK_ADD("Heads up! Safety Stock was successfully created"),
 	SAFETYSTOCK_EDIT("Heads up! Safety Stock was successfully updated"),
 	SAFETYSTOCK_DELETE("Heads up! The Safety Stock Was Successfully Deleted!"),
 	SAFETYSTOCK_EXIST("Oh snap! Safety Stock already exists"),
-	SERVICEFLOW_CRITERIA_VALIDATION(""),
-	SERVICEFLOW_VALIDATION(""),
-	USER_NOTFOUND(""),
-	USER_FOUND(""),
-	ROLE_VALIDATION(""),
-	USER_VALIDATION("");
+	ORDERAUDITS_NOTFOUND("Heads up! No Audits Found"),
+	NODECALENDARS_ADD("Heads up! Calendar Successfully Saved!"),
+	SERVICEFLOW_CRITERIA_VALIDATION(""), SERVICEFLOW_VALIDATION("");
 
 	private String updateMsg;
 

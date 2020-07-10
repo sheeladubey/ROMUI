@@ -53,9 +53,9 @@ public class SellerConfigsTests extends ROMUIBasePage {
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
 		romuipages.orderMgmPage().clickOnSellerConfigurations();
 		logger.info("Navigated to Seller Configurations page");
-		selleridselected = CommonElementsPage.getRowNo(sellerConfigData.getSellerID());
+		selleridselected = CommonElementsPage.getRowNo(sellerConfigData.getSellerID(), 1);
 		logger.info("Clicking on View Seller icon for the View Seller Configuration screen to be viewed");
-		//CommonElementsPage.clickActionsIcon(selleridselected, 3, 1, 1);
+		// CommonElementsPage.clickActionsIcon(selleridselected, 3, 1, 1);
 		CommonElementsPage.clickDivSpanLink(selleridselected, 3, 0, 1, 1);
 		// romuipages.sellerConfigurationsPage().viewSellerConfig();
 		logger.info("Validate Seller ID:" + sellerConfigData.getSellerID());

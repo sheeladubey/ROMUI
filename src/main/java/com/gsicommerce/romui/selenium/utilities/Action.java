@@ -2,6 +2,9 @@ package com.gsicommerce.romui.selenium.utilities;
 
 import static org.testng.Assert.fail;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -878,6 +881,27 @@ public class Action {
 			Reporter.log(e.getMessage());
 		}
 
+	}
+	
+	public static void navigateBack() {
+		try {
+			driver.navigate().back(); 
+		} catch (final NoSuchFrameException ne) {
+			ne.printStackTrace();
+		}
+	}
+	
+	public static void closePrintDialog() throws InterruptedException, AWTException {
+		Thread.sleep(15000L);
+		driver.switchTo().window(driver.getWindowHandles().toArray()[1].toString());
+		Robot r = new Robot();
+		r.delay(6000);
+		r.keyPress(KeyEvent.VK_ESCAPE);
+		r.keyRelease(KeyEvent.VK_ESCAPE);
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
+	//	executor.executeScript("return document.querySelector('print-preview-app').shadowRoot.querySelector('print-preview-sidebar').shadowRoot.querySelector('print-preview-button-strip').shadowRoot.querySelector('cr-button.cancel-button').click();");
+	//	executor.executeScript("document.getElementsByClassName('cancel')[0].click();");
+		driver.switchTo().window(driver.getWindowHandles().toArray()[0].toString());
 	}
 
 }

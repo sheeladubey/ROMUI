@@ -138,6 +138,12 @@ public class OrdersData {
 
 	@JsonProperty("ReturnComment")
 	String ReturnComment;
+	
+	@JsonProperty("nodeID")
+	String nodeID;
+	
+	@JsonProperty("storeIndex")
+	int storeIndex;
 
 	public List<String> getSearchOrderBy() {
 		return SearchOrderBy;
@@ -308,11 +314,23 @@ public class OrdersData {
 	public String getReturnOrderID() {
 		return ReturnOrderID;
 	}
+	
+	public int getStoreIndex() {
+	
+		return storeIndex;
+	}
+
+	public String getNodeID() {
+	
+		return nodeID;
+	}
 
 	public static OrdersData get(String filename) throws JsonParseException, JsonMappingException, IOException {
 		ObjectMapper mapper = new ObjectMapper();
 		mapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
 		return mapper.readValue(new File(filename), OrdersData.class);
 	}
+
+	
 
 }

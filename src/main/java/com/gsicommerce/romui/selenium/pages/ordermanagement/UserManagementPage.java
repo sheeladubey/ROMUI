@@ -587,7 +587,7 @@ public class UserManagementPage {
 	public void editRole() throws Exception {
 		data = UserManagementData.get(env.getFileLocation());
 		Common.waitForElementPresent(driver, btnAddUser, 06);
-		int rowNo = CommonElementsPage.getRowNo(userId);
+		int rowNo = CommonElementsPage.getRowNo(userId, 1);
 		Action.waitForElementToBeClickable(driver, btnAddUser, 30);
 		CommonElementsPage.clickDivSpanLink(rowNo, 4,0,0, 1);
 		chkAtpRules.click();

@@ -6489,3 +6489,52 @@
 2020-07-07 00:20:55,626 - romui -INFO - Enter data on NodeCalendars page
 2020-07-07 16:45:27,471 - romui -INFO - Login credentials to be entered
 2020-07-07 16:45:30,102 - romui -INFO - Navigate to ATP Rules page
+2020-07-08 12:36:20,986 - romui -INFO - Login credentials to be entered
+2020-07-08 12:36:28,874 - romui -INFO - Click on NodeCalendars page
+2020-07-08 12:36:31,643 - romui -INFO - Navigated to NodeCalendars page
+2020-07-08 12:36:31,644 - romui -INFO - Enter data on NodeCalendars page
+2020-07-08 13:00:19,296 - romui -INFO - Login credentials to be entered
+2020-07-08 13:00:28,968 - romui -INFO - Navigate to ATP Rules page
+2020-07-08 13:00:36,647 - romui -INFO -  Verify Manage ATP rules displays
+2020-07-08 13:00:37,670 - romui -INFO - Manage ATP rules display VERIFIED
+2020-07-08 13:04:12,187 - romui -INFO - Login credentials to be entered
+2020-07-08 13:04:20,332 - romui -INFO - Navigate to ATP Rules page
+2020-07-08 13:04:24,747 - romui -INFO -  Verify Manage ATP rules displays
+2020-07-08 13:04:25,752 - romui -INFO - Manage ATP rules display VERIFIED
+2020-07-08 13:04:45,106 - romui -INFO - Login credentials to be entered
+2020-07-08 13:04:56,392 - romui -INFO - Navigate to ATP Rules page
+2020-07-08 13:05:00,525 - romui -INFO -  Verify user able to Add ATP rule in Manage ATP rules page
+2020-07-08 13:06:21,032 - romui -INFO - Login credentials to be entered
+2020-07-08 13:06:30,986 - romui -INFO - Navigate to ATP Rules page
+2020-07-08 13:06:34,939 - romui -INFO -  Verify user able to Edit ATP rule in Manage ATP rules page
+2020-07-08 13:07:05,202 - romui -INFO - Login credentials to be entered
+2020-07-08 13:07:12,755 - romui -INFO - Navigate to ATP Rules page
+2020-07-08 13:07:19,475 - romui -INFO -  Verify user able to Edit ATP rule in Manage ATP rules page
+2020-07-08 13:12:33,557 - romui -INFO - Login credentials to be entered
+2020-07-08 13:12:38,304 - romui -INFO - Navigate to ATP Rules page
+2020-07-08 13:12:41,288 - romui -INFO -  Verify user able to Add ATP rule in Manage ATP rules page
+2020-07-08 13:45:23,813 - romui -INFO - Login credentials to be entered
+2020-07-08 13:45:31,088 - romui -INFO - Navigate to ATP Rules page
+2020-07-08 13:45:35,985 - romui -INFO -  Verify user able to Add ATP rule in Manage ATP rules page
+2020-07-08 13:46:19,073 - romui -INFO - Login credentials to be entered
+2020-07-08 13:46:25,901 - romui -INFO - Navigate to ATP Rules page
+2020-07-08 13:46:28,272 - romui -INFO -  Verify user able to Edit ATP rule in Manage ATP rules page
+2020-07-08 13:46:49,554 - romui -INFO - Login credentials to be entered
+2020-07-08 13:46:54,406 - romui -INFO - Navigate to ATP Rules page
+2020-07-08 13:46:57,544 - romui -INFO -  Verify user able to Edit ATP rule in Manage ATP rules page
+2020-07-10 00:25:03,333 - romui -INFO - Login credentials to be entered
+2020-07-10 00:25:07,496 - romui -INFO - Navigate to ATP Rules page
+2020-07-10 00:25:09,779 - romui -INFO -  Verify Manage ATP rules displays
+2020-07-10 00:25:09,864 - romui -INFO - Manage ATP rules display VERIFIED
+2020-07-10 00:25:19,645 - romui -INFO - Login credentials to be entered
+2020-07-10 00:25:25,000 - romui -INFO - Navigate to ATP Rules page
+2020-07-10 00:25:27,602 - romui -INFO -  Verify user able to Add ATP rule in Manage ATP rules page
+2020-07-10 00:26:10,139 - romui -INFO - Login credentials to be entered
+2020-07-10 00:26:15,277 - romui -INFO - Navigate to ATP Rules page
+2020-07-10 00:26:18,214 - romui -INFO -  Verify user able to Edit ATP rule in Manage ATP rules page
+2020-07-10 00:26:39,059 - romui -INFO - Login credentials to be entered
+2020-07-10 00:26:43,140 - romui -INFO - Navigate to ATP Rules page
+2020-07-10 00:26:46,074 - romui -INFO -  Verify user able to Edit ATP rule in Manage ATP rules page
+2020-07-10 00:45:34,817 - romui -INFO - Login credentials to be entered
+2020-07-10 00:45:41,646 - romui -INFO - Select Seller and Node
+2020-07-10 00:45:53,555 - romui -INFO - Navigate to ATP Rules page

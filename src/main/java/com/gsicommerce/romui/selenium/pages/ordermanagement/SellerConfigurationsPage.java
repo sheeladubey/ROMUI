@@ -112,13 +112,13 @@ public class SellerConfigurationsPage {
 
 	public void verifyEditSellerConfig() throws JsonParseException, JsonMappingException, IOException, Exception {
 		sellerConfigData = SellerConfigurationsData.get(env.getFileLocation());
-		selleridselected = CommonElementsPage.getRowNo(sellerConfigData.getSellerID());
+		selleridselected = CommonElementsPage.getRowNo(sellerConfigData.getSellerID(), 1);
 		System.out.println("Row Selected is :" + selleridselected);
 		Reporter.log("Click Edit Seller Configurations Icon");
 		System.out.println("Seller id Selected is ::" + CommonElementsPage.getRowCellTextVal(selleridselected, 1));
 		System.out.println("Click Edit Seller Config Icon");
-		//CommonElementsPage.clickActionsIcon(selleridselected, 3, 2, 1);
-		CommonElementsPage.clickDivSpanLink(selleridselected, 3,0, 2, 1);
+		// CommonElementsPage.clickActionsIcon(selleridselected, 3, 2, 1);
+		CommonElementsPage.clickDivSpanLink(selleridselected, 3, 0, 2, 1);
 		// Validate Seller ID,Inventory Organization ID,Seller Name is not editable
 		Reporter.log("Validate Seller ID,Inventory Organization ID,Seller Name is not editable");
 		Assert.assertTrue((txtboxSellerID.getAttribute("readonly").equals("true")), "Seller ID Field is editable");
@@ -140,7 +140,7 @@ public class SellerConfigurationsPage {
 		int Adjreasonsize = txtboxAdjReason.size();
 		// int btnAdjDeletesize=btnInvAdjDelete.size();
 		System.out.println("Exist code textbox is::" + Adjcodesize);
-		//btnAddAdjReason.click();
+		// btnAddAdjReason.click();
 		Action.clickUsingJavaScipt(btnAddAdjReason);
 		Action.enter(txtboxAdjReasoncode.get(Adjcodesize), sellerConfigData.getInventoryAdjReasonsCode());
 		Action.enter(txtboxAdjReason.get(Adjreasonsize), sellerConfigData.getInventoryAdjReasonsCode());
@@ -165,15 +165,17 @@ public class SellerConfigurationsPage {
 
 	public boolean verifyManageSellerConfig() throws Exception {
 		sellerConfigData = SellerConfigurationsData.get(env.getFileLocation());
-		selleridselected = CommonElementsPage.getRowNo(sellerConfigData.getSellerID());
+		selleridselected = CommonElementsPage.getRowNo(sellerConfigData.getSellerID(), 1);
 		boolean found = false;
 		int rowNo = CommonElementsPage.getTotalRows();
 		if (sellerConfigHeader.getText().contains("Sellers Found") && (rowNo > 0)) {
 			found = true;
 		}
-		Assert.assertTrue(CommonElementsPage.getRowCellTextVal(selleridselected, 1).contains(sellerConfigData.getSellerID()),
+		Assert.assertTrue(
+				CommonElementsPage.getRowCellTextVal(selleridselected, 1).contains(sellerConfigData.getSellerID()),
 				"Seller ID doesn't display on Manager Seller Config Screen");
-		Assert.assertTrue(CommonElementsPage.getRowCellTextVal(selleridselected, 2).contains(sellerConfigData.getSellerName()),
+		Assert.assertTrue(
+				CommonElementsPage.getRowCellTextVal(selleridselected, 2).contains(sellerConfigData.getSellerName()),
 				"Seller Name doesn't display on Manager Seller Config Screen");
 		return found;
 

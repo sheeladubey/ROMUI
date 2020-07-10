@@ -17,5 +17,7 @@
 "Safety Stock Value":"50",
 "Item Attribute":["HullType","Season","test"],
 "Item Attribute Value":"100",
-"Edit Safety Stock Value":"60"
+"Edit Safety Stock Value":"60",
+"nodeID":"TMS_NA-Store1",
+"storeIndex":"0"
 }

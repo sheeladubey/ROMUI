@@ -19,7 +19,7 @@ import com.gsicommerce.romui.selenium.utilities.Webtable;
 public class CommonElementsPage {
 
 	static WebDriver driver;
-	Environment env;
+	static Environment env;
 	Action action;
 
 	public CommonElementsPage(WebDriver driver, Environment env) {
@@ -27,7 +27,6 @@ public class CommonElementsPage {
 		this.env = env;
 		PageFactory.initElements(driver, this);
 		action = new Action(driver, env);
-
 	}
 
 	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Save')]")
@@ -68,7 +67,7 @@ public class CommonElementsPage {
 	@CacheLookup
 	public WebElement txtEditSuccessMsg;
 
-	@FindBy(how = How.CSS, using = "[data-tooltip='Search']")
+	@FindBy(how = How.CSS, using = "[data-tooltip='Search'] span.ss-search.ss-icon")
 	private static WebElement iconSearch;
 
 	@FindBy(how = How.CSS, using = "[role='alert']")
@@ -76,7 +75,16 @@ public class CommonElementsPage {
 
 	@FindBy(how = How.XPATH, using = ".//option")
 	public static List<WebElement> selectDropDownOption;
-	
+
+	@FindBy(how = How.CSS, using = "[name='pick_selected'] span")
+	public static WebElement btnPickSelected;
+
+	@FindBy(how = How.CSS, using = "[data-bulk-decline=''] span")
+	public static WebElement btnBulkDecline;
+
+	@FindBy(how = How.XPATH, using = "//a[contains(text(),'Get My Tickets')]")
+	private static WebElement btnGetMyTickets;
+
 	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Cancel')]")
 	private static WebElement btnCancel;
 
@@ -87,18 +95,19 @@ public class CommonElementsPage {
 
 	public static void clickOnSaveBtn() {
 		Action.waitForElementToBeClickable(driver, btnSave, 30);
-		//btnSave.click();
+		// btnSave.click();
 		Action.clickUsingJavaScipt(btnSave);
 	}
 
 	public static void clickOnAddBtn() {
 		Action.waitForElementToBeClickable(driver, btnAdd, 30);
-		//btnAdd.click();
+		// btnAdd.click();
 		Action.clickUsingJavaScipt(btnAdd);
 	}
 
 	public static void clickOnSearchBtn() {
-		btnSearch.click();
+		// btnSearch.click();
+		Action.clickUsingJavaScipt(btnSearch);
 	}
 
 	public static void clickOnAdvncSearchBtn() {
@@ -133,24 +142,27 @@ public class CommonElementsPage {
 		}
 	}
 
-	public static int getRowNo(String nodeID) throws Exception {
+	public static int getRowNo(String nodeID, int col) throws Exception {
 		selectLimitPerPage();
 		Thread.sleep(3000);
 		Reporter.log("page limit drop down value is selected");
 		int rowNo = 0;
-		rowNo = nodeWebTable().getTableRowNumForCellText(nodeID, 1);
+		rowNo = nodeWebTable().getTableRowNumForCellText(nodeID, col);
 		while (rowNo <= 0) {
 			CommonElementsPage.clickNextPage();
 			Common.waitForElement(driver, nodeWebTable, 10);
-			rowNo = nodeWebTable().getTableRowNumForCellText(nodeID, 1);
+			rowNo = nodeWebTable().getTableRowNumForCellText(nodeID, col);
 		}
 		return rowNo;
-
 	}
 
 	public static void clickActionsIcon(int row, int col, int child) throws Exception {
 		Reporter.log("Action icon is clicked on");
-		nodeWebTable().clickIcon(row, col, child);
+		if (row == 0) {
+			nodeWebTable().clickSpanIconForSingleRow(col, child);
+		} else {
+			nodeWebTable().clickIcon(row, col, child);
+		}
 	}
 
 	public static void enterStagingLoc(String loc) throws Exception {
@@ -159,8 +171,12 @@ public class CommonElementsPage {
 
 	public static void clickOnSearchIcon() {
 		Action.waitForElementToBeClickable(driver, iconSearch, 30);
-		//iconSearch.click();
-		Action.clickUsingJavaScipt(iconSearch);
+		if ("firefox,ie".contains(env.getBrowserType())) {
+			Action.clickUsingJavaScipt(iconSearch);
+		} else {
+			/* iconSearch.click(); */
+			Action.clickUsingJavaScipt(iconSearch);
+		}
 	}
 
 	public static String getRowCellTextVal(int row, int col) throws Exception {
@@ -178,9 +194,9 @@ public class CommonElementsPage {
 		return nodeWebTable().GetNumOfRows();
 	}
 
-	public static void clickSelectLink(int row, int col,int divchild,int buttonchild) throws Exception {
+	public static void clickSelectLink(int row, int col, int divchild, int buttonchild) throws Exception {
 		Reporter.log("Action icon is clicked on");
-		nodeWebTable().clickButton(row, col,divchild,buttonchild);
+		nodeWebTable().clickButton(row, col, divchild, buttonchild);
 	}
 
 	public static void clickActionsSpanIcon(int row, int col, int index) throws Exception {
@@ -204,7 +220,7 @@ public class CommonElementsPage {
 		// el.click();
 		Action.clickUsingJavaScipt(el);
 		for (int i = 0; i < selectDropDownOption.size(); i++) {
-		//	System.out.println(selectDropDownOption.get(i).getText());
+			// System.out.println(selectDropDownOption.get(i).getText());
 			if (selectDropDownOption.get(i).getText().equals(selectOption)) {
 				Action.selectByIndex(el, i);
 
@@ -214,13 +230,33 @@ public class CommonElementsPage {
 
 	}
 
+	public static String getSingleRowCellTextVal(int col) throws Exception {
+		Reporter.log("Getting the column value of the row");
+		return nodeWebTable().getTableCellText(col);
+	}
+
+	public static void clickActionsIconWithoutSpan(int row, int col, int child) throws Exception {
+		Reporter.log("Action icon is clicked on");
+		if (row == 0) {
+			nodeWebTable().clickSingleRowActionIconWithChild(col, child);
+		} else {
+			nodeWebTable().clickIcon(row, col, child);
+		}
+	}
+
+	public static void clickOnGetMyTicketsBtn() {
+		// btnGetMyTickets.click();
+		Action.clickUsingJavaScipt(btnGetMyTickets);
+	}
+
 	public static void clickOnCancelBtn() {
 		btnCancel.click();
 	}
 
-	public static void clickDivChildSpanLink(int row, int col, int divchild, int child, int spanchild) throws Exception {
+	public static void clickDivChildSpanLink(int row, int col, int divchild, int child, int spanchild)
+			throws Exception {
 		Reporter.log("View Order icon is clicked on");
 		nodeWebTable().clickDivChildLinkSpanElement(row, col, divchild, child, spanchild);
-
 	}
+
 }

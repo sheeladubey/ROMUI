@@ -24,8 +24,8 @@ public class OrderManagementMenusPage {
 		action = new Action(driver, env);
 	}
 
-	// @FindBy(how = How.CSS, using = "[data-tooltip='Main Menu']")
-	@FindBy(how = How.CSS, using = ".radial-app-menu-open-icon")
+	@FindBy(how = How.CSS, using = "[data-tooltip='Main Menu']")
+	//@FindBy(how = How.CSS, using = ".radial-app-menu-open-icon")
 	WebElement btnMainMenu;
 
 	@FindBy(how = How.XPATH, using = "//i/parent::a[contains(text(),'Catalog & Inventory')]")
@@ -53,7 +53,6 @@ public class OrderManagementMenusPage {
 	WebElement lkReportingDashboard;
 
 	@FindBy(how = How.XPATH, using = "//i/parent::a[contains(text(),'Omni Administration')]")
-	@CacheLookup
 	WebElement lkOmniAdministration;
 
 	@FindBy(how = How.XPATH, using = "//i/parent::a[contains(text(),'Help Documentation')]")
@@ -105,7 +104,6 @@ public class OrderManagementMenusPage {
 	WebElement lkRoles;
 
 	@FindBy(how = How.XPATH, using = "//li/a[contains(text(),'Inventory Availability')]")
-	@CacheLookup
 	WebElement lkInvAvailability;
 
 	@FindBy(how = How.XPATH, using = "//li/a[contains(text(),'ATP Rules')]")

@@ -63,5 +63,7 @@
 		"Customer returning for price adjustment",
 		"Non-Sellable (damaged, partially used, etc.)"
 	],
-	"ReturnComment": "Sheela"
+	"ReturnComment": "Sheela",
+	"nodeID":"TMS_NA-Store1",
+	"storeIndex":"0"
 }

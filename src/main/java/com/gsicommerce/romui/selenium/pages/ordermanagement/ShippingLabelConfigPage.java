@@ -132,7 +132,7 @@ public class ShippingLabelConfigPage {
 		Action.selectByVisibleText(drpdwnDefaultLabelStrategy, shipConfigdata.getDefaultLabelStrategy());
 		drpdwnCountry.click();
 		Action.selectByVisibleText(drpdwnCountry, shipConfigdata.getcountry().get(2));
-		//chkboxAddressOverride.click();
+		// chkboxAddressOverride.click();
 		Action.clickUsingJavaScipt(chkboxAddressOverride);
 		Action.selectByVisibleText(drpdwnCountryOverride, shipConfigdata.getcountry().get(2));
 		Action.scrollToBottomofPage();
@@ -155,8 +155,8 @@ public class ShippingLabelConfigPage {
 		if (serviceProviderConfig.equals("CONSIGNOR")) {
 			Action.waitForElementToBeClickable(driver, btnSave, 20);
 			btnSave.click();
-			rowNoGroupName = CommonElementsPage.getRowNo(serviceProviderConfig);
-			System.out.println("Selected row is :" + CommonElementsPage.getRowNo(serviceProviderConfig));
+			rowNoGroupName = CommonElementsPage.getRowNo(serviceProviderConfig, 1);
+			System.out.println("Selected row is :" + CommonElementsPage.getRowNo(serviceProviderConfig, 1));
 			System.out.println("Row text selected:"
 					+ CommonElementsPage.getRowCellTextVal(rowNoGroupName, 1).equals(serviceProviderConfig));
 			Assert.assertTrue(CommonElementsPage.getRowCellTextVal(rowNoGroupName, 1).contains(serviceProviderConfig),
@@ -165,8 +165,8 @@ public class ShippingLabelConfigPage {
 		if (serviceProviderConfig.equals("CONSIGNOR_MOCK")) {
 			Action.waitForElementToBeClickable(driver, btnSave, 20);
 			btnSave.click();
-			rowNoGroupName = CommonElementsPage.getRowNo(serviceProviderConfig);
-			System.out.println("Selected row is :" + CommonElementsPage.getRowNo(serviceProviderConfig));
+			rowNoGroupName = CommonElementsPage.getRowNo(serviceProviderConfig, 1);
+			System.out.println("Selected row is :" + CommonElementsPage.getRowNo(serviceProviderConfig, 1));
 			System.out.println("Row text selected:" + CommonElementsPage.getRowCellTextVal(rowNoGroupName, 1));
 			Assert.assertEquals(CommonElementsPage.getRowCellTextVal(rowNoGroupName, 1), serviceProviderConfig,
 					"NEW SHIPPING LABEL CONFIGURATION for service provider CONSIGNOR_MOCK has not been added");
@@ -192,8 +192,8 @@ public class ShippingLabelConfigPage {
 			Action.enter(txtParentMeterNumber, shipConfigdata.getparentMeterNumber());
 			Action.waitForElementToBeClickable(driver, btnSave, 10);
 			Action.clickUsingJavaScipt(btnSave);
-			rowNoGroupName = CommonElementsPage.getRowNo(serviceProviderConfig);
-			System.out.println("Selected row is :" + CommonElementsPage.getRowNo(serviceProviderConfig));
+			rowNoGroupName = CommonElementsPage.getRowNo(serviceProviderConfig, 1);
+			System.out.println("Selected row is :" + CommonElementsPage.getRowNo(serviceProviderConfig, 1));
 			System.out.println("Row text selected:" + CommonElementsPage.getRowCellTextVal(rowNoGroupName, 1));
 			Assert.assertEquals(CommonElementsPage.getRowCellTextVal(rowNoGroupName, 1), serviceProviderConfig,
 					"NEW SHIPPING LABEL CONFIGURATION for service provider FEDEX has not been added");
@@ -209,8 +209,8 @@ public class ShippingLabelConfigPage {
 			Action.selectByVisibleText(drpdwnCarrierCode, shipConfigdata.getUPSCarrierCode());
 			Action.waitForElementToBeClickable(driver, btnSave, 10);
 			Action.clickUsingJavaScipt(btnSave);
-			rowNoGroupName = CommonElementsPage.getRowNo(serviceProviderConfig);
-			System.out.println("Selected row is :" + CommonElementsPage.getRowNo(serviceProviderConfig));
+			rowNoGroupName = CommonElementsPage.getRowNo(serviceProviderConfig, 1);
+			System.out.println("Selected row is :" + CommonElementsPage.getRowNo(serviceProviderConfig, 1));
 			System.out.println("Row text selected:" + CommonElementsPage.getRowCellTextVal(rowNoGroupName, 1));
 			Assert.assertEquals(CommonElementsPage.getRowCellTextVal(rowNoGroupName, 1), serviceProviderConfig,
 					"NEW SHIPPING LABEL CONFIGURATION for service provider UPS has not been added");
@@ -218,8 +218,8 @@ public class ShippingLabelConfigPage {
 		if (serviceProviderConfig.equals("UPS_MOCK")) {
 			Action.waitForElementToBeClickable(driver, btnSave, 10);
 			Action.clickUsingJavaScipt(btnSave);
-			rowNoGroupName = CommonElementsPage.getRowNo(serviceProviderConfig);
-			System.out.println("Selected row is :" + CommonElementsPage.getRowNo(serviceProviderConfig));
+			rowNoGroupName = CommonElementsPage.getRowNo(serviceProviderConfig, 1);
+			System.out.println("Selected row is :" + CommonElementsPage.getRowNo(serviceProviderConfig, 1));
 			System.out.println("Row text selected:" + CommonElementsPage.getRowCellTextVal(rowNoGroupName, 1));
 			Assert.assertTrue(CommonElementsPage.getRowCellTextVal(rowNoGroupName, 1).contains(serviceProviderConfig),
 					"NEW SHIPPING LABEL CONFIGURATION for service provider UPS_MOCK has not been added");
@@ -230,7 +230,7 @@ public class ShippingLabelConfigPage {
 		shipConfigdata = ShippingLabelConfigData.get(env.getFileLocation());
 		editServiceProviderConfig = shipConfigdata.getserviceProviderName().get(editshipLabelConfigindex);
 		// Get selected row
-		rowNoEditGroupName = CommonElementsPage.getRowNo(editServiceProviderConfig);
+		rowNoEditGroupName = CommonElementsPage.getRowNo(editServiceProviderConfig, 1);
 		System.out.println("Selected row is:" + rowNoEditGroupName);
 		CommonElementsPage.clickActionsSpanIcon(rowNoEditGroupName, 3, 0);
 		if (editServiceProviderConfig.equals("CONSIGNOR")) {

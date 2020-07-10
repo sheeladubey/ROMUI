@@ -26,7 +26,7 @@ public class OrdersPage {
 
 	WebDriver driver;
 	Environment env;
-	Action action;
+
 	private OrdersData ordersdata;
 	private static String webOrderNumber;
 	private static String searchOrderByOption;
@@ -38,13 +38,13 @@ public class OrdersPage {
 	private static String fulfillmentOrderNum;
 	private static String customerName;
 	private static int rowNoReturnWebOrder;
+	private static boolean found = false;
 
 	public OrdersPage(WebDriver driver, Environment env) {
 
 		this.driver = driver;
 		this.env = env;
 		PageFactory.initElements(driver, this);
-		action = new Action(driver, env);
 	}
 
 	@FindBy(how = How.CSS, using = ".radial-filter-menu-toggle-btn")
@@ -126,8 +126,8 @@ public class OrdersPage {
 	@FindBy(how = How.CSS, using = "[type='button'][data-create-zero-cost-order='true']")
 	private WebElement btnZCOrder;
 
-	@FindBy(how = How.XPATH, using = "//h2[contains(.,'Add Order')]")
-	private WebElement addOrderscrn;
+	@FindBy(how = How.CSS, using = ".new-order-form-modal .modal-title")
+	private WebElement addOrderWinTitle;
 
 	@FindBy(how = How.CSS, using = "#orders_new_cart_form_source")
 	private WebElement drpdwnSource;
@@ -144,7 +144,6 @@ public class OrdersPage {
 	@FindBy(how = How.CSS, using = ".btn--charcoal-ghost[type='button']")
 	private WebElement drpdwnEdit;
 
-	// @FindBy(how = How.CSS, using = ".dropdown-menu-right")
 	@FindBy(how = How.XPATH, using = "//li/a[contains(text(),'Edit billing address')]")
 	private WebElement lkEditBillingAddress;
 
@@ -241,8 +240,9 @@ public class OrdersPage {
 	@FindBy(how = How.CSS, using = "[type='submit'][name='next']")
 	private WebElement btnNextEligibleItems;
 
-	@FindBy(how = How.CSS, using = "#return_quantity")
-	private WebElement txtboxReturnqty;
+	// @FindBy(how = How.CSS, using = "#return_quantity")
+	@FindBy(how = How.CSS, using = ".return-request__quantity-column [type='number']")
+	private List<WebElement> txtboxReturnqty;
 
 	@FindBy(how = How.CSS, using = " #return_reason")
 	private WebElement drpdwnReturnReasonCode;
@@ -268,18 +268,22 @@ public class OrdersPage {
 	@FindBy(how = How.CSS, using = ".pagination-heading")
 	private WebElement orderAuditHeader;
 
+	@FindBy(how = How.CSS, using = ".reflow-table")
+	public List<WebElement> table;
+
 	public Webtable fulfillmentOrdersWebTable() {
 		Webtable wt = new Webtable(driver, fulfillmentOrdersWebTable);
 		return wt;
 	}
 
 	// to Verify search order
-	public void searchOrderBy(int searchindex) throws JsonParseException, JsonMappingException, IOException, Exception {
+	public boolean searchOrderBy(int searchindex)
+			throws JsonParseException, JsonMappingException, IOException, Exception {
+		// found = false;
 		ordersdata = OrdersData.get(env.getFileLocation());
 		searchOrderByOption = ordersdata.getSearchOrderBy().get(searchindex);
 		webOrderNumber = ordersdata.getOrderID();
-		Action.waitForElementToBeClickable(driver, btnSearchIcon, 20);
-		// btnSearchIcon.click();
+		Action.waitForElementToBeClickable(driver, btnSearchIcon, 30);
 		Action.clickUsingJavaScipt(btnSearchIcon);
 		// select search order type
 		Action.waitForElementToBeClickable(driver, drpdwnOrderSearchBy, 20);
@@ -289,12 +293,22 @@ public class OrdersPage {
 			Action.waitForElementToBeClickable(driver, txtOrderNumber, 10);
 			Action.enter(txtOrderNumber, webOrderNumber);
 			// click search btn
-			btnSearchOrder.click();
-			// Get selected row
-			rowNoWebOrder = CommonElementsPage.getRowNo(webOrderNumber);
-			System.out.println("Selected Order number is:" + CommonElementsPage.getRowCellTextVal(rowNoWebOrder, 1));
-			Assert.assertEquals(CommonElementsPage.getRowCellTextVal(rowNoWebOrder, 1), webOrderNumber,
-					RomuiEnumValues.ORDER_NOTFOUND.getMessage());
+			Action.waitForElementToBeClickable(driver, btnSearchOrder, 10);
+			Action.clickUsingJavaScipt(btnSearchOrder);
+			if (driver.findElements(By.cssSelector(".reflow-table")).size() > 0) {
+				// Get selected row
+				rowNoWebOrder = CommonElementsPage.getRowNo(webOrderNumber, 1);
+				if (orderAuditHeader.getText().contains("Result Found") && (rowNoWebOrder > 0)) {
+					found = true;
+					System.out.println(
+							"Selected Order number is:" + CommonElementsPage.getRowCellTextVal(rowNoWebOrder, 1));
+					Assert.assertEquals(CommonElementsPage.getRowCellTextVal(rowNoWebOrder, 1), webOrderNumber,
+							RomuiEnumValues.ORDER_NOTFOUND.getMessage());
+				}
+			} else {
+				found = false;
+				Assert.assertTrue(txtsuccessMessage.getText().contains(RomuiEnumValues.ORDER_NOTFOUND.getMessage()));
+			}
 		}
 		if (searchOrderByOption.equals("Fulfillment Order Number")) {
 			fulfillmentOrderNum = ordersdata.getFulFillmentOrderID();
@@ -303,14 +317,24 @@ public class OrdersPage {
 			Action.enter(txtFulfillmentOrderNumber, fulfillmentOrderNum);
 			// click search btn
 			btnSearchOrder.click();
-			System.out.println(
-					"Selected row for fulfillment order search - " + CommonElementsPage.getRowNo(webOrderNumber));
-			rowNo4 = CommonElementsPage.getRowNo(webOrderNumber);
-			System.out.println("Selected Row Text for fulfillment order search is:"
-					+ CommonElementsPage.getRowCellTextVal(rowNo4, 1));
-			Assert.assertEquals(CommonElementsPage.getRowCellTextVal(rowNo4, 1), webOrderNumber,
-					RomuiEnumValues.ORDER_NOTFOUND.getMessage());
+			System.out.println("WeborderNumber is::" + webOrderNumber);
+			if (driver.findElements(By.cssSelector(".reflow-table")).size() > 0) {
+				System.out.println("Selected row for fulfillment order search - "
+						+ CommonElementsPage.getRowNo(webOrderNumber, 1));
+				rowNo4 = CommonElementsPage.getRowNo(webOrderNumber, 1);
+				if (orderAuditHeader.getText().contains("Result Found") && (rowNo4 > 0)) {
+					found = true;
+					System.out.println("Selected Row Text for fulfillment order search is:"
+							+ CommonElementsPage.getRowCellTextVal(rowNo4, 1));
+					Assert.assertEquals(CommonElementsPage.getRowCellTextVal(rowNo4, 1), webOrderNumber,
+							RomuiEnumValues.ORDER_NOTFOUND.getMessage());
+				} else {
+					found = false;
+					Assert.assertTrue(
+							txtsuccessMessage.getText().contains(RomuiEnumValues.ORDER_NOTFOUND.getMessage()));
+				}
 
+			}
 		}
 		if (searchOrderByOption.equals("Customer Name")) {
 			String custFirstName = ordersdata.getCustomer_FirstName();
@@ -322,19 +346,23 @@ public class OrdersPage {
 			Action.enter(txtCustomerLastName, custLastName);
 			// click search btn
 			btnSearchOrder.click();
-			rowNoWebOrder = CommonElementsPage.getRowNo(webOrderNumber);
-			System.out.println(
-					"Selected row for customer name search is- " + CommonElementsPage.getRowNo(webOrderNumber));
-			// System.out.println(
-			// "Selected Row Text for customer name search is:" +
-			// CommonElementsPage.getRowCellTextVal(rowNoWebOrder, 2));
-			System.out.println("Selected Row Text for customer name search is:"
-					+ CommonElementsPage.getRowCellTextVal(rowNoWebOrder, 2));
-			// Assert.assertEquals(CommonElementsPage.getRowCellTextVal(rowNoWebOrder, 2),
-			// customerName,
-			// RomuiEnumValues.ORDER_NOTFOUND.getMessage());
-			Assert.assertEquals(CommonElementsPage.getRowCellTextVal(rowNoWebOrder, 2), customerName,
-					RomuiEnumValues.ORDER_NOTFOUND.getMessage());
+			if (driver.findElements(By.cssSelector(".reflow-table")).size() > 0) {
+				rowNoWebOrder = CommonElementsPage.getRowNo(webOrderNumber, 1);
+				if (orderAuditHeader.getText().contains("Results Found") && (rowNoWebOrder > 0)) {
+					found = true;
+					System.out.println("Selected row for customer name search is- "
+							+ CommonElementsPage.getRowNo(webOrderNumber, 1));
+					System.out.println("Selected Row Text for customer name search is:"
+							+ CommonElementsPage.getRowCellTextVal(rowNoWebOrder, 2));
+					Assert.assertEquals(CommonElementsPage.getRowCellTextVal(rowNoWebOrder, 2), customerName,
+							RomuiEnumValues.ORDER_NOTFOUND.getMessage());
+				} else {
+					found = false;
+					Assert.assertTrue(
+							txtsuccessMessage.getText().contains(RomuiEnumValues.ORDER_NOTFOUND.getMessage()));
+				}
+
+			}
 		}
 		if (searchOrderByOption.equals("Email")) {
 			emailID = ordersdata.getEmailID();
@@ -342,14 +370,26 @@ public class OrdersPage {
 			Action.waitForElementToBeClickable(driver, txtorderSearchEmail, 10);
 			Action.enter(txtorderSearchEmail, emailID);
 			// click search button
-			btnSearchOrder.click();
-			System.out.println("Selected row for email id search is- " + CommonElementsPage.getRowNo(webOrderNumber));
-			rowNoWebOrder = CommonElementsPage.getRowNo(webOrderNumber);
-			System.out.println("Selected Row Text for email id search is:"
-					+ CommonElementsPage.getRowCellTextVal(rowNoWebOrder, 3));
-			Assert.assertEquals(CommonElementsPage.getRowCellTextVal(rowNoWebOrder, 3), emailID,
-					RomuiEnumValues.ORDER_NOTFOUND.getMessage());
+			Action.waitForElementToBeClickable(driver, btnSearchOrder, 10);
+			Action.clickUsingJavaScipt(btnSearchOrder);
+			if (driver.findElements(By.cssSelector(".reflow-table")).size() > 0) {
+				System.out.println(
+						"Selected row for email id search is- " + CommonElementsPage.getRowNo(webOrderNumber, 1));
+				rowNoWebOrder = CommonElementsPage.getRowNo(webOrderNumber, 1);
+				if (orderAuditHeader.getText().contains("Results Found") && (rowNoWebOrder > 0)) {
+					found = true;
+					System.out.println("Selected Row Text for email id search is:"
+							+ CommonElementsPage.getRowCellTextVal(rowNoWebOrder, 3));
+					Assert.assertEquals(CommonElementsPage.getRowCellTextVal(rowNoWebOrder, 3), emailID,
+							RomuiEnumValues.ORDER_NOTFOUND.getMessage());
 
+				} else {
+					found = false;
+					Assert.assertTrue(
+							txtsuccessMessage.getText().contains(RomuiEnumValues.ORDER_NOTFOUND.getMessage()));
+				}
+
+			}
 		}
 		if (searchOrderByOption.equals("Order Status")) {
 			String webOrderNumberOrderStatus = ordersdata.getOrderStatusID();
@@ -361,16 +401,27 @@ public class OrdersPage {
 			Action.selectByVisibleText(drpdwnOrderStatusTo, OrderStatusTo);
 			// click search btn
 			btnSearchOrder.click();
-			System.out.println("Selected row for order status search is- "
-					+ CommonElementsPage.getRowNo(webOrderNumberOrderStatus));
-			rowNoOrderStatus = CommonElementsPage.getRowNo(webOrderNumberOrderStatus);
-			System.out.println("Selected Row Text for order status search is:"
-					+ CommonElementsPage.getRowCellTextVal(rowNoOrderStatus, 5));
-			// System.out.println("Order selected:" +
-			// Webtable.getRowText(rowNoOrderStatus));
-			Assert.assertEquals(CommonElementsPage.getRowCellTextVal(rowNoOrderStatus, 5), OrderStatusFrom,
-					RomuiEnumValues.ORDER_NOTFOUND.getMessage());
+			if (driver.findElements(By.cssSelector(".reflow-table")).size() > 0) {
+				System.out.println("Selected row for order status search is- "
+						+ CommonElementsPage.getRowNo(webOrderNumberOrderStatus, 1));
+				rowNoOrderStatus = CommonElementsPage.getRowNo(webOrderNumberOrderStatus, 1);
+				if (orderAuditHeader.getText().contains("Results Found") && (rowNoOrderStatus > 0)) {
+					found = true;
+					System.out.println("selected order by order status search is:"
+							+ CommonElementsPage.getRowCellTextVal(rowNoOrderStatus, 1));
+					System.out.println("Order status for selected order by order status search is:"
+							+ CommonElementsPage.getRowCellTextVal(rowNoOrderStatus, 5));
+					Assert.assertEquals(CommonElementsPage.getRowCellTextVal(rowNoOrderStatus, 5), OrderStatusFrom,
+							RomuiEnumValues.ORDER_NOTFOUND.getMessage());
+				} else {
+					found = false;
+					Assert.assertTrue(
+							txtsuccessMessage.getText().contains(RomuiEnumValues.ORDER_NOTFOUND.getMessage()));
+				}
+
+			}
 		}
+		return found;
 
 	}
 
@@ -399,39 +450,41 @@ public class OrdersPage {
 
 	public void orderSearchFormValidation()
 			throws JsonParseException, JsonMappingException, IOException, InterruptedException {
-		Action.waitForElementToBeClickable(driver, btnSearchIcon, 10);
-		Action.clickUsingJavaScipt(btnSearchIcon);
-	//	btnSearchIcon.click();
+		btnSearchIcon.click();
 		Action.waitForElementToBeClickable(driver, btnSearchOrder, 10);
-		btnSearchOrder.click();
+		// btnSearchOrder.click();
+		Action.clickUsingJavaScipt(btnSearchOrder);
 		Assert.assertEquals(CommonElementsPage.txtAlertErrorMsg.getText(), RomuiEnumValues.FORM_ERROR.getMessage(),
 				"Order Search form Error Validation message has not been found");
 	}
 
-	public void viewOrders(int index) throws JsonParseException, JsonMappingException, IOException, Exception {
+	public boolean viewOrders(int index) throws JsonParseException, JsonMappingException, IOException, Exception {
 		ordersdata = OrdersData.get(env.getFileLocation());
 		String viewOrderBy = ordersdata.getSearchOrderBy().get(index);
 
 		if (viewOrderBy.equals("Order Number")) {
-			try {
-				Action.waitForElementToBeClickable(driver, btnSearchIcon, 20);
-				Action.clickUsingJavaScipt(btnSearchIcon);
-			}finally {
-				Action.waitForElementToBeClickable(driver, btnSearchIcon, 20);
-				Action.clickUsingJavaScipt(btnSearchIcon);
-			}
 			searchOrderBy(0);
 			// Click View Order icon
-			//Action.scrollToBottomofPage();
-			Reporter.log("Click View Order icon");
-			//Common.setImplicitWait(driver, 20);
-			CommonElementsPage.clickDivSpanLink(rowNoWebOrder, 6, 1, 1, 1);    
-			Common.waitForPageLoaded(driver);
-			System.out.println("Order numbere is:" + headerViewOrderNum.getText());
-			Assert.assertEquals(headerViewOrderNum.getText(), webOrderNumber,
-					"View Order screen has not been validated");
-			Action.waitForElementToBeClickable(driver, btnExitOrder, 10);
-			btnExitOrder.click();
+			Action.scrollToBottomofPage();
+			if (driver.findElements(By.cssSelector(".reflow-table")).size() > 0) {
+
+				if (orderAuditHeader.getText().contains("Result Found") && (rowNoWebOrder > 0)) {
+					found = true;
+
+					Reporter.log("Click View Order icon");
+					CommonElementsPage.clickDivSpanLink(rowNoWebOrder, 6, 1, 1, 1);
+					System.out.println("Order numbere is:" + headerViewOrderNum.getText());
+					Assert.assertEquals(headerViewOrderNum.getText(), webOrderNumber,
+							"View Order screen has not been validated");
+					Action.waitForElementToBeClickable(driver, btnExitOrder, 10);
+					// btnExitOrder.click();
+					Action.clickUsingJavaScipt(btnExitOrder);
+				} else {
+					found = false;
+					Assert.assertTrue(
+							txtsuccessMessage.getText().contains(RomuiEnumValues.ORDER_NOTFOUND.getMessage()));
+				}
+			}
 		}
 		if (viewOrderBy.equals("Fulfillment Order Number")) {
 			try {
@@ -443,28 +496,32 @@ public class OrdersPage {
 				Action.clickUsingJavaScipt(btnSearchIcon);
 			}
 			searchOrderBy(1);
-			// Click View Order icon
-			Action.scrollToBottomofPage();
-			Reporter.log("Click View Order icon");
-			CommonElementsPage.clickDivSpanLink(rowNo4, 6, 1, 1, 1);
-			Action.waitForElementToBeClickable(driver, drpdwntoggleReturn, 10);
-			drpdwntoggleReturn.click();
-			Action.waitForElementToBeClickable(driver, lkFulfillmentOrders, 10);
-			lkFulfillmentOrders.click();
-			// rowNoFulfillmentOrder = CommonElementsPage.getRowNo(fulfillmentOrderNum);
-			rowNoFulfillmentOrder = fulfillmentOrdersWebTable().getTableRowNumForCellText(fulfillmentOrderNum, 1);
-			// System.out.println("Fulfillment order number is " +
-			// CommonElementsPage.getRowCellTextVal(rowNoFulfillmentOrder, 1));
-			// Assert.assertEquals(CommonElementsPage.getRowCellTextVal(rowNoFulfillmentOrder,
-			// 1), fulfillmentOrderNum,
-			// RomuiEnumValues.ORDER_NOTFOUND.getMessage());
-			System.out.println("Fulfillment order number is "
-					+ fulfillmentOrdersWebTable().getTableCellText(rowNoFulfillmentOrder, 1));
-			Assert.assertEquals(fulfillmentOrdersWebTable().getTableCellText(rowNoFulfillmentOrder, 1),
-					fulfillmentOrderNum, RomuiEnumValues.ORDER_NOTFOUND.getMessage());
-			Action.clickUsingJavaScipt(lkbackToOrders);
-			Action.waitForElementToBeClickable(driver, btnExitOrder, 10);
-			btnExitOrder.click();
+			if (driver.findElements(By.cssSelector(".reflow-table")).size() > 0) {
+				if (orderAuditHeader.getText().contains("Result Found") && (rowNo4 > 0)) {
+					found = true;
+					// Click View Order icon
+					Action.scrollToBottomofPage();
+					Reporter.log("Click View Order icon");
+					CommonElementsPage.clickDivSpanLink(rowNo4, 6, 1, 1, 1);
+					Action.waitForElementToBeClickable(driver, drpdwntoggleReturn, 10);
+					drpdwntoggleReturn.click();
+					Action.waitForElementToBeClickable(driver, lkFulfillmentOrders, 10);
+					lkFulfillmentOrders.click();
+					rowNoFulfillmentOrder = fulfillmentOrdersWebTable().getTableRowNumForCellText(fulfillmentOrderNum,
+							1);
+					System.out.println("Fulfillment order number is "
+							+ fulfillmentOrdersWebTable().getTableCellText(rowNoFulfillmentOrder, 1));
+					Assert.assertEquals(fulfillmentOrdersWebTable().getTableCellText(rowNoFulfillmentOrder, 1),
+							fulfillmentOrderNum, RomuiEnumValues.ORDER_NOTFOUND.getMessage());
+					Action.clickUsingJavaScipt(lkbackToOrders);
+					Action.waitForElementToBeClickable(driver, btnExitOrder, 10);
+					btnExitOrder.click();
+				} else {
+					found = false;
+					Assert.assertTrue(
+							txtsuccessMessage.getText().contains(RomuiEnumValues.ORDER_NOTFOUND.getMessage()));
+				}
+			}
 		}
 		if (viewOrderBy.equals("Customer Name")) {
 			try {
@@ -475,18 +532,28 @@ public class OrdersPage {
 				Action.clickUsingJavaScipt(btnSearchIcon);
 			}
 			searchOrderBy(2);
-			// Click View Order icon
-			Action.scrollToBottomofPage();
-			Reporter.log("Click View Order icon");
-			CommonElementsPage.clickDivSpanLink(rowNoWebOrder, 6, 0, 1, 1);
-			Assert.assertTrue(lblCustomerName.get(1).getText().contains(customerName),
-					"Order Search By Customer Name has not been verified");
-			Action.waitForElementToBeClickable(driver, btnExitOrder, 10);
-			btnExitOrder.click();
+			if (driver.findElements(By.cssSelector(".reflow-table")).size() > 0) {
+				if (orderAuditHeader.getText().contains("Results Found") && (rowNoWebOrder > 0)) {
+					found = true;
+					// Click View Order icon
+					Action.scrollToBottomofPage();
+					Reporter.log("Click View Order icon");
+					CommonElementsPage.clickDivSpanLink(rowNoWebOrder, 6, 0, 1, 1);
+					Assert.assertTrue(lblCustomerName.get(1).getText().contains(customerName),
+							"Order Search By Customer Name has not been verified");
+					Action.waitForElementToBeClickable(driver, btnExitOrder, 10);
+					// btnExitOrder.click();
+					Action.clickUsingJavaScipt(btnExitOrder);
+				} else {
+					found = false;
+					Assert.assertTrue(
+							txtsuccessMessage.getText().contains(RomuiEnumValues.ORDER_NOTFOUND.getMessage()));
+				}
+			}
 		}
 		if (viewOrderBy.equals("Email")) {
 			try {
-				Action.waitForElementToBeClickable(driver, btnSearchIcon, 10);
+				Action.waitForElementToBeClickable(driver, btnSearchIcon, 20);
 				// btnSearchIcon.click();
 				Action.clickUsingJavaScipt(btnSearchIcon);
 			} finally {
@@ -494,14 +561,23 @@ public class OrdersPage {
 				Action.clickUsingJavaScipt(btnSearchIcon);
 			}
 			searchOrderBy(3);
-			Action.scrollToBottomofPage();
-			Reporter.log("Click View Order icon");
-			CommonElementsPage.clickDivSpanLink(rowNoWebOrder, 6, 0, 1, 1);
-			Assert.assertTrue(lblCustomerName.get(1).getText().contains(emailID),
-					"Order Search By Email ID has not been verified");
-			Action.waitForElementToBeClickable(driver, btnExitOrder, 10);
-			btnExitOrder.click();
-
+			if (driver.findElements(By.cssSelector(".reflow-table")).size() > 0) {
+				if (orderAuditHeader.getText().contains("Results Found") && (rowNoWebOrder > 0)) {
+					found = true;
+					Action.scrollToBottomofPage();
+					Reporter.log("Click View Order icon");
+					CommonElementsPage.clickDivSpanLink(rowNoWebOrder, 6, 0, 1, 1);
+					Assert.assertTrue(lblCustomerName.get(1).getText().contains(emailID),
+							"Order Search By Email ID has not been verified");
+					Action.waitForElementToBeClickable(driver, btnExitOrder, 10);
+					// btnExitOrder.click();
+					Action.clickUsingJavaScipt(btnExitOrder);
+				} else {
+					found = false;
+					Assert.assertTrue(
+							txtsuccessMessage.getText().contains(RomuiEnumValues.ORDER_NOTFOUND.getMessage()));
+				}
+			}
 		}
 		if (viewOrderBy.equals("Order Status")) {
 			try {
@@ -512,25 +588,37 @@ public class OrdersPage {
 				Action.clickUsingJavaScipt(btnSearchIcon);
 			}
 			searchOrderBy(4);
-			// Click View Order icon
-			Action.scrollToBottomofPage();
-			Reporter.log("Click View Order icon");
-			CommonElementsPage.clickDivSpanLink(rowNoOrderStatus, 6, 1, 1, 1);
+			if (driver.findElements(By.cssSelector(".reflow-table")).size() > 0) {
+				if (orderAuditHeader.getText().contains("Results Found") && (rowNoWebOrder > 0)) {
+					found = true;
+					// Click View Order icon
+					Action.scrollToBottomofPage();
+					Reporter.log("Click View Order icon");
+					CommonElementsPage.clickDivSpanLink(rowNoOrderStatus, 6, 1, 1, 1);
+
+				} else {
+					found = false;
+					Assert.assertTrue(
+							txtsuccessMessage.getText().contains(RomuiEnumValues.ORDER_NOTFOUND.getMessage()));
+				}
+			}
 		}
+		return found;
 	}
 
 	public void addZeroCostOrder()
 			throws InterruptedException, JsonParseException, JsonMappingException, IOException, AWTException {
 		// click add ZCO button
-		Action.waitForElementToBeClickable(driver, btnZCOrder, 10);
 		Action.clickUsingJavaScipt(btnZCOrder);
 		// select all fields and continue
-		Action.switchWindow("Order Lookup - Radial Order Management");
+		// Action.switchWindow("Order Lookup - Radial Order Management");
+		Common.waitForPageLoaded(driver);
+		addOrderWinTitle.click();
 		selectSourceAndContinue(0);
 		// select edit billing address
 		Action.waitForElementToBeClickable(driver, drpdwnEdit, 20);
 		Action.clickUsingJavaScipt(drpdwnEdit);
-		Action.waitForElementToBeClickable(driver, lkEditBillingAddress, 20);
+		Action.waitForElementToBeClickable(driver, lkEditBillingAddress, 10);
 		Action.clickUsingJavaScipt(lkEditBillingAddress);
 		editAddress();
 		Action.waitForElementToBeVisible(driver, btnAddItem, 10);
@@ -548,7 +636,6 @@ public class OrdersPage {
 		 */
 		Action.waitForElementToBeClickable(driver, btnSubmitOrderZCOrder, 10);
 		Action.clickUsingJavaScipt(btnSubmitOrderZCOrder);
-		Action.waitForElementToBeClickable(driver, btnSubmitOrder, 10);
 		Action.clickUsingJavaScipt(btnSubmitOrder);
 		Common.closePrintPopup();
 		System.out.println("ZCO created order is:" + txtsuccessMessage.getText());
@@ -557,9 +644,6 @@ public class OrdersPage {
 
 	public void selectSourceAndContinue(int sourceindex) throws JsonParseException, JsonMappingException, IOException {
 		ordersdata = OrdersData.get(env.getFileLocation());
-		Action.waitForElementToBeVisible(driver, addOrderscrn, 10);
-		Action.clickUsingJavaScipt(addOrderscrn);
-		//addOrderscrn.click();
 		// select source, currency & locale and click continue button
 		Action.clickUsingJavaScipt(drpdwnSource);
 		// drpdwnSource.click();
@@ -574,9 +658,7 @@ public class OrdersPage {
 	public void editAddress() throws InterruptedException, JsonParseException, JsonMappingException, IOException {
 		ordersdata = OrdersData.get(env.getFileLocation());
 		// enter all fields data
-		Action.waitForElementToBeClickable(driver, drpdwnCountry, 20);
-		Action.clickUsingJavaScipt(drpdwnCountry);
-		//drpdwnCountry.click();
+		drpdwnCountry.click();
 		Action.waitForElementToBeClickable(driver, drpdwnCountry, 20);
 		Action.selectByVisibleText(drpdwnCountry, ordersdata.getBillToCountry());
 		Action.enter(txtbxTitle, ordersdata.getBillToTitle());
@@ -640,7 +722,7 @@ public class OrdersPage {
 		Action.enter(txtOrderNumber, ordersdata.getReturnOrderID());
 		// click search btn
 		btnSearchOrder.click();
-		rowNoReturnWebOrder = CommonElementsPage.getRowNo(ordersdata.getReturnOrderID());
+		rowNoReturnWebOrder = CommonElementsPage.getRowNo(ordersdata.getReturnOrderID(), 1);
 		System.out.println("Selected Order number is:" + CommonElementsPage.getRowCellTextVal(rowNoReturnWebOrder, 1));
 	}
 
@@ -660,7 +742,9 @@ public class OrdersPage {
 		btnReturnOrder.click();
 		chkboxReturnEligibleItems.click();
 		btnNextEligibleItems.click();
-		Action.enter(txtboxReturnqty, ordersdata.getReturnQty());
+		Action.waitForElementToBeClickable(driver, txtboxReturnqty.get(0), 10);
+		System.out.println("return qty is:" + txtboxReturnqty.get(0).getText());
+		Action.enter(txtboxReturnqty.get(0), ordersdata.getReturnQty());
 		drpdwnReturnReasonCode.click();
 		Action.selectByVisibleText(drpdwnReturnReasonCode, ordersdata.getReturnReasonCode().get(0));
 		Action.enter(txtboxReturnComment, ordersdata.getReturnComment());
@@ -674,33 +758,147 @@ public class OrdersPage {
 
 	}
 
+	public void verifyOrderNoStatus(String orderNo, RomuiEnumValues status)
+			throws JsonParseException, JsonMappingException, IOException, Exception {
+		Action.waitForElementToBeClickable(driver, btnSearchIcon, 20);
+		// btnSearchIcon.click();
+		Action.clickUsingJavaScipt(btnSearchIcon);
+		// select search order type
+		Action.waitForElementToBeClickable(driver, drpdwnOrderSearchBy, 20);
+		Action.selectByVisibleText(drpdwnOrderSearchBy, "Fulfillment Order Number");
+		// Enter Web Order number
+		Action.waitForElementToBeClickable(driver, txtFulfillmentOrderNumber, 10);
+		Action.enter(txtFulfillmentOrderNumber, orderNo);
+		// click search btn
+		btnSearchOrder.click();
+		Assert.assertEquals(CommonElementsPage.getSingleRowCellTextVal(5), status,
+				"Status of the orderNo:" + orderNo + "is not " + status);
+
+	}
+
 	public boolean verifyOrderAudits(int index) throws Exception {
 		ordersdata = OrdersData.get(env.getFileLocation());
 		String viewOrderBy = ordersdata.getSearchOrderBy().get(index);
 		if (viewOrderBy.equals("Order Number")) {
 			searchOrderBy(0);
+			Reporter.log("Click Order Audits icon");
+			if (driver.findElements(By.cssSelector(".reflow-table")).size() > 0) {
+				if (orderAuditHeader.getText().contains("Result Found") && (rowNoWebOrder > 0)) {
+					found = true;
+					CommonElementsPage.clickDivSpanLink(rowNoWebOrder, 6, 0, 2, 2);
+					if (driver.findElements(By.cssSelector(".reflow-table")).size() > 0) {
+						int rowNo = CommonElementsPage.getTotalRows();
+						System.out.println("table size is::" + rowNo);
+						if (orderAuditHeader.getText().contains("Audits Found") && (rowNo > 0)) {
+							found = true;
+						}
+					}
+				} else {
+					found = false;
+					Assert.assertTrue(
+							txtsuccessMessage.getText().contains(RomuiEnumValues.ORDERAUDITS_NOTFOUND.getMessage()));
+				}
+			} else {
+				found = false;
+				Assert.assertTrue(txtsuccessMessage.getText().contains(RomuiEnumValues.ORDER_NOTFOUND.getMessage()));
+			}
 		}
 		if (viewOrderBy.equals("Fulfillment Order Number")) {
 			searchOrderBy(1);
+			Reporter.log("Click Order Audits icon");
+			if (driver.findElements(By.cssSelector(".reflow-table")).size() > 0) {
+				if (orderAuditHeader.getText().contains("Result Found") && (rowNo4 > 0)) {
+					found = true;
+					CommonElementsPage.clickDivSpanLink(rowNo4, 6, 0, 2, 2);
+					if (driver.findElements(By.cssSelector(".reflow-table")).size() > 0) {
+						int rowNo = CommonElementsPage.getTotalRows();
+						if (orderAuditHeader.getText().contains("Audits Found") && (rowNo > 0)) {
+							found = true;
+						}
+					}
+				} else {
+					found = false;
+					Assert.assertTrue(
+							txtsuccessMessage.getText().contains(RomuiEnumValues.ORDERAUDITS_NOTFOUND.getMessage()));
+				}
 
+			} else {
+				found = false;
+				Assert.assertTrue(txtsuccessMessage.getText().contains(RomuiEnumValues.ORDER_NOTFOUND.getMessage()));
+			}
 		}
 		if (viewOrderBy.equals("Customer Name")) {
 			searchOrderBy(2);
-
+			Reporter.log("Click Order Audits icon");
+			if (driver.findElements(By.cssSelector(".reflow-table")).size() > 0) {
+				if (orderAuditHeader.getText().contains("Results Found") && (rowNoWebOrder > 0)) {
+					found = true;
+					CommonElementsPage.clickDivSpanLink(rowNoWebOrder, 6, 0, 2, 2);
+					if (driver.findElements(By.cssSelector(".reflow-table")).size() > 0) {
+						int rowNo = CommonElementsPage.getTotalRows();
+						System.out.println("table size is::" + rowNo);
+						if (orderAuditHeader.getText().contains("Audits Found") && (rowNo > 0)) {
+							found = true;
+						}
+					}
+				} else {
+					found = false;
+					Assert.assertTrue(
+							txtsuccessMessage.getText().contains(RomuiEnumValues.ORDERAUDITS_NOTFOUND.getMessage()));
+				}
+			} else {
+				found = false;
+				Assert.assertTrue(txtsuccessMessage.getText().contains(RomuiEnumValues.ORDER_NOTFOUND.getMessage()));
+			}
 		}
 		if (viewOrderBy.equals("Email")) {
 			searchOrderBy(3);
-
+			Reporter.log("Click Order Audits icon");
+			if (driver.findElements(By.cssSelector(".reflow-table")).size() > 0) {
+				if (orderAuditHeader.getText().contains("Results Found") && (rowNoWebOrder > 0)) {
+					found = true;
+					CommonElementsPage.clickDivSpanLink(rowNoWebOrder, 6, 0, 2, 2);
+					if (driver.findElements(By.cssSelector(".reflow-table")).size() > 0) {
+						int rowNo = CommonElementsPage.getTotalRows();
+						System.out.println("table size is::" + rowNo);
+						if (orderAuditHeader.getText().contains("Audits Found") && (rowNo > 0)) {
+							found = true;
+						}
+					}
+				} else {
+					found = false;
+					Assert.assertTrue(
+							txtsuccessMessage.getText().contains(RomuiEnumValues.ORDERAUDITS_NOTFOUND.getMessage()));
+				}
+			} else {
+				found = false;
+				Assert.assertTrue(txtsuccessMessage.getText().contains(RomuiEnumValues.ORDER_NOTFOUND.getMessage()));
+			}
 		}
-		Reporter.log("Click Order Audits icon");
-		CommonElementsPage.clickDivSpanLink(rowNoWebOrder, 6, 0, 2, 2);
-		boolean found = false;
-		int rowNo = CommonElementsPage.getTotalRows();
-		if (orderAuditHeader.getText().contains("Audits Found") && (rowNo > 0)) {
-			found = true;
+		if (viewOrderBy.equals("Order Status")) {
+			searchOrderBy(4);
+			Reporter.log("Click Order Audits icon");
+			if (driver.findElements(By.cssSelector(".reflow-table")).size() > 0) {
+				if (orderAuditHeader.getText().contains("Results Found") && (rowNoOrderStatus > 0)) {
+					found = true;
+					CommonElementsPage.clickDivSpanLink(rowNoOrderStatus, 6, 0, 2, 2);
+					if (driver.findElements(By.cssSelector(".reflow-table")).size() > 0) {
+						int rowNo = CommonElementsPage.getTotalRows();
+						System.out.println("table size is::" + rowNo);
+						if (orderAuditHeader.getText().contains("Audits Found") && (rowNo > 0)) {
+							found = true;
+						}
+					}
+				} else {
+					found = false;
+					Assert.assertTrue(
+							txtsuccessMessage.getText().contains(RomuiEnumValues.ORDERAUDITS_NOTFOUND.getMessage()));
+				}
+			} else {
+				found = false;
+				Assert.assertTrue(txtsuccessMessage.getText().contains(RomuiEnumValues.ORDER_NOTFOUND.getMessage()));
+			}
 		}
-
 		return found;
 	}
-
 }

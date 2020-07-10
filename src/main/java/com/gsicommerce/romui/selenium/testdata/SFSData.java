@@ -12,8 +12,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class SFSData {
 
-	@JsonProperty("orderNo")
-	String orderNo;
+	@JsonProperty("orderNoList")
+	List<String> orderNoList;
 
 	@JsonProperty("nodeID")
 	String nodeID;
@@ -26,9 +26,23 @@ public class SFSData {
 
 	@JsonProperty("LocId")
 	String LocId;
+	
+	@JsonProperty("storeIndex")
+	int storeIndex;
+	
+	@JsonProperty("declineQty")
+	String declineQty;
 
-	public String getOrderNo() {
-		return orderNo;
+	public String getDeclineQty() {
+		return declineQty;
+	}
+
+	public int getStoreIndex() {
+		return storeIndex;
+	}
+
+	public List<String> getOrderNoList() {
+		return orderNoList;
 	}
 
 	public String getNodeID() {
@@ -46,6 +60,8 @@ public class SFSData {
 	public String getLocId() {
 		return LocId;
 	}
+	
+	
 
 	public static SFSData get(String filename) throws JsonParseException, JsonMappingException, IOException {
 		ObjectMapper mapper = new ObjectMapper();

@@ -11,16 +11,18 @@
   <listeners>
     <listener class-name="com.gsicommerce.romui.selenium.utilities.ExtentReporterListener"/>
   </listeners>
-  <test thread-count="5" name="NodeCalendarsTests(failed)">
-    <parameter name="dataFile" value="./src/test/resources/testdata/nodeCalendarsData.json"/>
+  <test thread-count="5" name="ATPRulesTests(failed)">
+    <parameter name="dataFile" value="./src/test/resources/testdata/inventoryAvailabilityData.json"/>
     <classes>
-      <class name="com.gsicommerce.romui.selenium.tests.NodeCalendarsTests">
+      <class name="com.gsicommerce.romui.selenium.tests.ATPRulesTests">
         <methods>
+          <include name="testEditATPRule"/>
+          <include name="testAddATPRule"/>
           <include name="tearDown"/>
+          <include name="testDeleteATPRule"/>
           <include name="setup"/>
-          <include name="testSearchOrderbyNumber"/>
         </methods>
-      </class> <!-- com.gsicommerce.romui.selenium.tests.NodeCalendarsTests -->
+      </class> <!-- com.gsicommerce.romui.selenium.tests.ATPRulesTests -->
     </classes>
-  </test> <!-- NodeCalendarsTests(failed) -->
+  </test> <!-- ATPRulesTests(failed) -->
 </suite> <!-- Failed suite [Suite] -->

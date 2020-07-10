@@ -6489,3 +6489,52 @@
 2020-07-07 00:20:55,626 [main] INFO romui - Enter data on NodeCalendars page
 2020-07-07 16:45:27,471 [main] INFO romui - Login credentials to be entered
 2020-07-07 16:45:30,102 [main] INFO romui - Navigate to ATP Rules page
+2020-07-08 12:36:20,986 [main] INFO romui - Login credentials to be entered
+2020-07-08 12:36:28,874 [main] INFO romui - Click on NodeCalendars page
+2020-07-08 12:36:31,643 [main] INFO romui - Navigated to NodeCalendars page
+2020-07-08 12:36:31,644 [main] INFO romui - Enter data on NodeCalendars page
+2020-07-08 13:00:19,296 [main] INFO romui - Login credentials to be entered
+2020-07-08 13:00:28,968 [main] INFO romui - Navigate to ATP Rules page
+2020-07-08 13:00:36,647 [main] INFO romui -  Verify Manage ATP rules displays
+2020-07-08 13:00:37,670 [main] INFO romui - Manage ATP rules display VERIFIED
+2020-07-08 13:04:12,187 [main] INFO romui - Login credentials to be entered
+2020-07-08 13:04:20,332 [main] INFO romui - Navigate to ATP Rules page
+2020-07-08 13:04:24,747 [main] INFO romui -  Verify Manage ATP rules displays
+2020-07-08 13:04:25,752 [main] INFO romui - Manage ATP rules display VERIFIED
+2020-07-08 13:04:45,106 [main] INFO romui - Login credentials to be entered
+2020-07-08 13:04:56,392 [main] INFO romui - Navigate to ATP Rules page
+2020-07-08 13:05:00,525 [main] INFO romui -  Verify user able to Add ATP rule in Manage ATP rules page
+2020-07-08 13:06:21,032 [main] INFO romui - Login credentials to be entered
+2020-07-08 13:06:30,986 [main] INFO romui - Navigate to ATP Rules page
+2020-07-08 13:06:34,939 [main] INFO romui -  Verify user able to Edit ATP rule in Manage ATP rules page
+2020-07-08 13:07:05,202 [main] INFO romui - Login credentials to be entered
+2020-07-08 13:07:12,755 [main] INFO romui - Navigate to ATP Rules page
+2020-07-08 13:07:19,475 [main] INFO romui -  Verify user able to Edit ATP rule in Manage ATP rules page
+2020-07-08 13:12:33,557 [main] INFO romui - Login credentials to be entered
+2020-07-08 13:12:38,304 [main] INFO romui - Navigate to ATP Rules page
+2020-07-08 13:12:41,288 [main] INFO romui -  Verify user able to Add ATP rule in Manage ATP rules page
+2020-07-08 13:45:23,813 [main] INFO romui - Login credentials to be entered
+2020-07-08 13:45:31,088 [main] INFO romui - Navigate to ATP Rules page
+2020-07-08 13:45:35,985 [main] INFO romui -  Verify user able to Add ATP rule in Manage ATP rules page
+2020-07-08 13:46:19,073 [main] INFO romui - Login credentials to be entered
+2020-07-08 13:46:25,901 [main] INFO romui - Navigate to ATP Rules page
+2020-07-08 13:46:28,272 [main] INFO romui -  Verify user able to Edit ATP rule in Manage ATP rules page
+2020-07-08 13:46:49,554 [main] INFO romui - Login credentials to be entered
+2020-07-08 13:46:54,406 [main] INFO romui - Navigate to ATP Rules page
+2020-07-08 13:46:57,544 [main] INFO romui -  Verify user able to Edit ATP rule in Manage ATP rules page
+2020-07-10 00:25:03,333 [main] INFO romui - Login credentials to be entered
+2020-07-10 00:25:07,496 [main] INFO romui - Navigate to ATP Rules page
+2020-07-10 00:25:09,779 [main] INFO romui -  Verify Manage ATP rules displays
+2020-07-10 00:25:09,864 [main] INFO romui - Manage ATP rules display VERIFIED
+2020-07-10 00:25:19,645 [main] INFO romui - Login credentials to be entered
+2020-07-10 00:25:25,000 [main] INFO romui - Navigate to ATP Rules page
+2020-07-10 00:25:27,602 [main] INFO romui -  Verify user able to Add ATP rule in Manage ATP rules page
+2020-07-10 00:26:10,139 [main] INFO romui - Login credentials to be entered
+2020-07-10 00:26:15,277 [main] INFO romui - Navigate to ATP Rules page
+2020-07-10 00:26:18,214 [main] INFO romui -  Verify user able to Edit ATP rule in Manage ATP rules page
+2020-07-10 00:26:39,059 [main] INFO romui - Login credentials to be entered
+2020-07-10 00:26:43,140 [main] INFO romui - Navigate to ATP Rules page
+2020-07-10 00:26:46,074 [main] INFO romui -  Verify user able to Edit ATP rule in Manage ATP rules page
+2020-07-10 00:45:34,817 [main] INFO romui - Login credentials to be entered
+2020-07-10 00:45:41,646 [main] INFO romui - Select Seller and Node
+2020-07-10 00:45:53,555 [main] INFO romui - Navigate to ATP Rules page
