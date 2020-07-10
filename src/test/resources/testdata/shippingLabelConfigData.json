@@ -25,7 +25,12 @@
 	"signatureOption": "Yes",
 	"labelStockType": "Stock",
 	"parentMeterNumber": "90909",
-	"ServiceName":["ANY_STD","ANY_STS"],
-	"CarrierCode":"FEDEX_GROUND - FEDEX_GROUND",
-	"UPSCarrierCode":"02 - UPS EXPEDITED"
+	"ServiceName": [
+		"ANY_STD",
+		"ANY_STS"
+	],
+	"CarrierCode": "FEDEX_GROUND - FEDEX_GROUND",
+	"UPSCarrierCode": "02 - UPS EXPEDITED",
+	"nodeID": "TMS_NA-Store1",
+	"storeIndex": "0"
 }

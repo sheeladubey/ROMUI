@@ -96,6 +96,7 @@ public class ShippingLabelConfigPage {
 
 	@FindBy(how = How.CSS, using = "#shipping_label_configuration_carrier_attributes_0_carrier_service_name")
 	private WebElement drpdwnServiceName;
+	
 
 	@FindBy(how = How.CSS, using = "#shipping_label_configuration_carrier_attributes_0_carrier_carrier_code")
 	private WebElement drpdwnCarrierCode;
@@ -112,7 +113,7 @@ public class ShippingLabelConfigPage {
 	@FindBy(how = How.CSS, using = ".btn-default[type='submit']")
 	public WebElement btnSave;
 
-	@FindBy(how = How.CSS, using = "[href='/en/sellers/TMSEB2/shipping_label_configurations/new?provider=CONSIGNER']")
+	@FindBy(how = How.CSS, using = "a.btn-default.btn")
 	public WebElement btnAdd;
 
 	@FindBy(how = How.CSS, using = "[data-shipping-label-configuration-carrier-delete=''][value='fulfillment-node-sourcing-index-0']")
@@ -140,26 +141,19 @@ public class ShippingLabelConfigPage {
 		Action.enter(txtAddressLine2, shipConfigdata.getAddressLine2());
 		Action.enter(txtAddressLine3, shipConfigdata.getAddressLine3());
 		Action.enter(txtCity, shipConfigdata.getCity());
-		/*
-		 * Action.waitForElementToBeVisible(driver, drpdwnState, 10);
-		 * Action.clickElementJavaScipt(drpdwnState);
-		 * Action.scrollingToElementofAPage(drpdwnState);
-		 * CommonElementsPage.selectDropDwnValues(drpdwnState,
-		 * shipConfigdata.getState()); Action.selectByValue(drpdwnState,
-		 * shipConfigdata.getState()); Action.waitForElementPresent(driver, drpdwnState,
-		 * 30); Action.clickElementJavaScipt(drpdwnState);
-		 * selectStateDropdown(shipConfigdata.getState());
-		 * Action.selectByVisibleText(drpdwnState,"Pennsylvania" );
-		 */
+		drpdwnState.click();
+		Common.waitForPageLoaded(driver);
+		Action.selectByVisibleText(drpdwnState, shipConfigdata.getState());
 		Action.enter(txtZipCode, shipConfigdata.getZipcode());
 		if (serviceProviderConfig.equals("CONSIGNOR")) {
 			Action.waitForElementToBeClickable(driver, btnSave, 20);
 			btnSave.click();
 			rowNoGroupName = CommonElementsPage.getRowNo(serviceProviderConfig, 1);
 			System.out.println("Selected row is :" + CommonElementsPage.getRowNo(serviceProviderConfig, 1));
+			System.out.println(CommonElementsPage.getRowCellTextVal(rowNoGroupName, 1).substring(0, 9));
 			System.out.println("Row text selected:"
-					+ CommonElementsPage.getRowCellTextVal(rowNoGroupName, 1).equals(serviceProviderConfig));
-			Assert.assertTrue(CommonElementsPage.getRowCellTextVal(rowNoGroupName, 1).contains(serviceProviderConfig),
+					+ CommonElementsPage.getRowCellTextVal(rowNoGroupName, 1).substring(0, 9).equals(serviceProviderConfig));
+			Assert.assertTrue(CommonElementsPage.getRowCellTextVal(rowNoGroupName, 1).substring(0, 9).equals(serviceProviderConfig),
 					"NEW SHIPPING LABEL CONFIGURATION for service provider CONSIGNOR has not been added");
 		}
 		if (serviceProviderConfig.equals("CONSIGNOR_MOCK")) {
@@ -233,7 +227,10 @@ public class ShippingLabelConfigPage {
 		rowNoEditGroupName = CommonElementsPage.getRowNo(editServiceProviderConfig, 1);
 		System.out.println("Selected row is:" + rowNoEditGroupName);
 		CommonElementsPage.clickActionsSpanIcon(rowNoEditGroupName, 3, 0);
+		System.out.println(drpdwnServiceProviderName.getAttribute("disabled").equals("true"));
+		Assert.assertTrue(drpdwnServiceProviderName.getAttribute("disabled").equals("true"));
 		if (editServiceProviderConfig.equals("CONSIGNOR")) {
+			
 			Action.waitForElementToBeClickable(driver, txtdwnSellerDescription, 20);
 			txtdwnSellerDescription.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 			Action.enter(txtdwnSellerDescription, shipConfigdata.getsellerDescription());
@@ -269,6 +266,7 @@ public class ShippingLabelConfigPage {
 			}
 		}
 		if (editServiceProviderConfig.equals("FEDEX")) {
+			
 			Action.waitForElementToBeClickable(driver, txtdwnSellerDescription, 20);
 			txtdwnSellerDescription.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 			Action.enter(txtdwnSellerDescription, shipConfigdata.getsellerDescription());
@@ -282,9 +280,15 @@ public class ShippingLabelConfigPage {
 				Action.enter(txtAddressLine2, shipConfigdata.getAddressLine2());
 				Action.enter(txtAddressLine3, shipConfigdata.getAddressLine3());
 				Action.enter(txtCity, shipConfigdata.getCity());
-
+				drpdwnState.click();
+				Common.waitForPageLoaded(driver);
+				Action.selectByVisibleText(drpdwnState, shipConfigdata.getState());
+				Action.scrollDown("500");
+				btnDeleteCarrier.click();
 			} else {
 				chkboxAddressOverride.click();
+				Action.scrollDown("500");
+				btnDeleteCarrier.click();
 			}
 			txtParentPassword.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 			Action.enter(txtParentPassword, shipConfigdata.getparentPassword());
@@ -347,7 +351,7 @@ public class ShippingLabelConfigPage {
 		Action.waitForElementToBeClickable(driver, btnAdd, 10);
 		Action.clickUsingJavaScipt(btnAdd);
 		Action.waitForElementToBeClickable(driver, btnSave, 20);
-		btnSave.click();
+		Action.clickUsingJavaScipt(btnSave);
 		Assert.assertEquals(CommonElementsPage.txtAlertErrorMsg.getText(), RomuiEnumValues.FORM_ERROR.getMessage(),
 				"shipping Label form Error Validation message has not been found");
 

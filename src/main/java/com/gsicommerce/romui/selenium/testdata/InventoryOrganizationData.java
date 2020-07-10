@@ -42,6 +42,12 @@ public class InventoryOrganizationData {
 	@JsonProperty("Priority")
 	String Priority;
 
+	@JsonProperty("nodeID")
+	String nodeID;
+
+	@JsonProperty("storeIndex")
+	int storeIndex;
+
 	public String getInventoryOrgID() {
 		return InventoryOrgID;
 	}
@@ -75,11 +81,19 @@ public class InventoryOrganizationData {
 	}
 
 	public String getAttributeName() {
-		return AttributeName + Common.generateRandomID("AUTO");
+		return AttributeName + Common.generateRandomID("");
 	}
 
 	public String getPriority() {
 		return Priority;
+	}
+
+	public int getStoreIndex() {
+		return storeIndex;
+	}
+
+	public String getNodeID() {
+		return nodeID;
 	}
 
 	public static InventoryOrganizationData get(String filename)

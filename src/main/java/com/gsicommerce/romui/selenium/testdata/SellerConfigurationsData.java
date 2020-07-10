@@ -14,7 +14,7 @@ public class SellerConfigurationsData {
 
 	@JsonProperty("SellerID")
 	String SellerID;
-	
+
 	@JsonProperty("InventoryOrganizationID")
 	String InventoryOrganizationID;
 
@@ -39,10 +39,16 @@ public class SellerConfigurationsData {
 	@JsonProperty("SellerRegionLookupStrategy")
 	String SellerRegionLookupStrategy;
 
+	@JsonProperty("nodeID")
+	String nodeID;
+
+	@JsonProperty("storeIndex")
+	int storeIndex;
+
 	public String getSellerID() {
 		return SellerID;
 	}
-	
+
 	public String getInventoryOrganizationID() {
 		return InventoryOrganizationID;
 	}
@@ -73,6 +79,16 @@ public class SellerConfigurationsData {
 
 	public String getSellerRegionLookupStrategy() {
 		return SellerRegionLookupStrategy;
+	}
+
+	public int getStoreIndex() {
+
+		return storeIndex;
+	}
+
+	public String getNodeID() {
+
+		return nodeID;
 	}
 
 	public static SellerConfigurationsData get(String filename)

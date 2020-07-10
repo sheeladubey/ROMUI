@@ -13,7 +13,7 @@ import com.gsicommerce.romui.selenium.utilities.RomuiEnumValues;
 
 public class PipelinesTests extends ROMUIBasePage {
 	private PipelineData pipelinedata;
-	@Test(enabled = false, priority = 1, description = "To Verify Add Pipeline feature")
+	@Test(enabled = true, priority = 1, description = "To Verify Add Pipeline feature")
 	public void testAddPipeline() throws JsonParseException, JsonMappingException, IOException, Exception {
 		pipelinedata = PipelineData.get(env.getFileLocation());
 		logger.info("Login credentials to be entered");
@@ -30,7 +30,7 @@ public class PipelinesTests extends ROMUIBasePage {
 		logger.info("Add Pipeline Feature Has Been validated successfully");
 	}
 
-	@Test(enabled = false, priority = 2, description = "To Verify View Pipeline feature")
+	@Test(enabled = true, priority = 2, description = "To Verify View Pipeline feature")
 	public void testViewPipeline() throws JsonParseException, JsonMappingException, IOException, Exception {
 		pipelinedata = PipelineData.get(env.getFileLocation());
 		logger.info("Login credentials to be entered");
@@ -44,7 +44,7 @@ public class PipelinesTests extends ROMUIBasePage {
 
 	}
 
-	@Test(enabled = false, priority = 3, invocationCount = 1, description = "To verfiy Edit Pipeline feature of draft status")
+	@Test(enabled = true, priority = 3, invocationCount = 1, description = "To verfiy Edit Pipeline feature of draft status")
 	public void testEditPipeline() throws JsonParseException, JsonMappingException, IOException, Exception {
 		pipelinedata = PipelineData.get(env.getFileLocation());
 		logger.info("Login credentials to be entered");
@@ -59,7 +59,7 @@ public class PipelinesTests extends ROMUIBasePage {
 		logger.info("Edit pipeline has Been validated successfully");
 	}
 
-	@Test(enabled = false, priority = 4, invocationCount = 1, description = "To Verify Edit Pipeline feature of Active Status")
+	@Test(enabled = true, priority = 4, invocationCount = 1, description = "To Verify Edit Pipeline feature of Active Status")
 	public void testeditPipelineActive() throws JsonParseException, JsonMappingException, IOException, Exception {
 		pipelinedata = PipelineData.get(env.getFileLocation());
 		logger.info("Login credentials to be entered");
@@ -73,7 +73,7 @@ public class PipelinesTests extends ROMUIBasePage {
 		logger.info("Edit Pipeline Active status has been Validated successfully.");
 	}
 
-	@Test(enabled = false, priority = 5, invocationCount = 1, description = "To Verify Edit Pipeline feature of Inactive Status")
+	@Test(enabled = true, priority = 5, invocationCount = 1, description = "To Verify Edit Pipeline feature of Inactive Status")
 	public void testeditPipelineInActive() throws JsonParseException, JsonMappingException, IOException, Exception {
 		pipelinedata = PipelineData.get(env.getFileLocation());
 		logger.info("Login credentials to be entered");
@@ -88,7 +88,7 @@ public class PipelinesTests extends ROMUIBasePage {
 
 	}
 
-	@Test(enabled = false, priority = 6, description = "To Verify Copy Pipeline feature for Draft status")
+	@Test(enabled = true, priority = 6, description = "To Verify Copy Pipeline feature for Draft status")
 	public void testCopyPipeline() throws JsonParseException, JsonMappingException, IOException, Exception {
 		pipelinedata = PipelineData.get(env.getFileLocation());
 		logger.info("Login credentials to be entered");
@@ -106,7 +106,7 @@ public class PipelinesTests extends ROMUIBasePage {
 		logger.info("Draft Status Copy pipeline has been verified successfully");
 	}
 
-	@Test(enabled = false, priority = 7, description = "To Verify Copy Pipeline feature for Active status")
+	@Test(enabled = true, priority = 7, description = "To Verify Copy Pipeline feature for Active status")
 	public void testCopyPipelineActiveStatus() throws JsonParseException, JsonMappingException, IOException, Exception {
 		pipelinedata = PipelineData.get(env.getFileLocation());
 		logger.info("Login credentials to be entered");
@@ -124,7 +124,7 @@ public class PipelinesTests extends ROMUIBasePage {
 		logger.info("Active Status Copy pipeline has been verified successfully");
 	}
 
-	@Test(enabled = false, priority = 8, description = "To Verify Copy Pipeline feature for Inactive status")
+	@Test(enabled = true, priority = 8, description = "To Verify Copy Pipeline feature for Inactive status")
 	public void testCopyPipelineInActiveStatus()
 			throws JsonParseException, JsonMappingException, IOException, Exception {
 		pipelinedata = PipelineData.get(env.getFileLocation());
@@ -143,7 +143,7 @@ public class PipelinesTests extends ROMUIBasePage {
 		logger.info("InActive Status Copy pipeline has been verified successfully");
 	}
 
-	@Test(enabled = false, priority = 9, invocationCount = 1, description = "To Verify Edit Pipeline Configuration for Active status")
+	@Test(enabled = true, priority = 9, invocationCount = 1, description = "To Verify Edit Pipeline Configuration for Active status")
 	public void testEditPipelineConfigurationActiveStatus() throws Exception {
 		pipelinedata = PipelineData.get(env.getFileLocation());
 		logger.info("Login credentials to be entered");
@@ -173,7 +173,7 @@ public class PipelinesTests extends ROMUIBasePage {
 
 	}
 
-	@Test(enabled = false, priority = 11, description = "To Verify Pipeline form validation")
+	@Test(enabled = true, priority = 11, description = "To Verify Pipeline form validation")
 	public void testPipelineFormValidation() throws JsonParseException, JsonMappingException, IOException, Exception {
 		pipelinedata = PipelineData.get(env.getFileLocation());
 		logger.info("Login credentials to be entered");
@@ -187,7 +187,7 @@ public class PipelinesTests extends ROMUIBasePage {
 
 	}
 
-	@Test(enabled = false, priority = 12, invocationCount = 1, description = "To Verify Edit Pipeline Configuration for Draft status")
+	@Test(enabled = true, priority = 12, invocationCount = 1, description = "To Verify Edit Pipeline Configuration for Draft status")
 	public void testeditPipelienConfigurationDraft() throws Exception {
 		pipelinedata = PipelineData.get(env.getFileLocation());
 		logger.info("Login credentials to be entered");

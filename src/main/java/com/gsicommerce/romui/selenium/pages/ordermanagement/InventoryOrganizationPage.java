@@ -6,10 +6,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
 import com.gsicommerce.romui.selenium.testdata.Environment;
 import com.gsicommerce.romui.selenium.testdata.InventoryOrganizationData;
 import com.gsicommerce.romui.selenium.utilities.Action;
 import com.gsicommerce.romui.selenium.utilities.Common;
+import com.gsicommerce.romui.selenium.utilities.RomuiEnumValues;
 
 public class InventoryOrganizationPage {
 
@@ -131,4 +134,16 @@ public class InventoryOrganizationPage {
 		EditInventoryOrgs();
 	}
 
+	public void inventoryOrgsformValidation() throws Exception {
+		clickEditInventoryOrgs();
+		Action.scrollToBottomofPage();
+		btnAddAttribute.click();
+		Common.waitForPageLoaded(driver);
+		int sizeAttribute = txtboxNamePriority1.size();
+		System.out.println("size of item Attribute textbox Name & Priority fields is :" + sizeAttribute);
+		CommonElementsPage.clickOnSaveBtn();
+		Assert.assertEquals(CommonElementsPage.txtAlertErrorMsg.getText(), RomuiEnumValues.FORM_ERROR.getMessage(),
+				"Inventory Organization form Error Validation message has not been found");
+
+	}
 }

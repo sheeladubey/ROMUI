@@ -13,7 +13,7 @@ public class OrdersTests extends ROMUIBasePage {
 
 	private OrdersData ordersdata;
 
-	@Test(enabled = false, priority = 1, description = "to Verify search order by Order number")
+	@Test(enabled = true, priority = 1, description = "to Verify search order by Order number")
 	public void testSearchOrderbyNumber() throws JsonParseException, JsonMappingException, IOException, Exception {
 		ordersdata = OrdersData.get(env.getFileLocation());
 		logger.info("Login credentials to be entered");
@@ -27,7 +27,7 @@ public class OrdersTests extends ROMUIBasePage {
 		logger.info("Search By Order Number verified");
 	}
 
-	@Test(enabled = false, priority = 2, description = "to Verify search order by Fullfillment number")
+	@Test(enabled = true, priority = 2, description = "to Verify search order by Fullfillment number")
 	public void testSearchOrderByFullfillmentNumber()
 			throws JsonParseException, JsonMappingException, IOException, Exception {
 		ordersdata = OrdersData.get(env.getFileLocation());
@@ -43,7 +43,7 @@ public class OrdersTests extends ROMUIBasePage {
 
 	}
 
-	@Test(enabled = false, priority = 3, description = "to Verify search order by Customer Name")
+	@Test(enabled = true, priority = 3, description = "to Verify search order by Customer Name")
 	public void testSearchOrderByCustomerName()
 			throws JsonParseException, JsonMappingException, IOException, Exception {
 		ordersdata = OrdersData.get(env.getFileLocation());
@@ -59,7 +59,7 @@ public class OrdersTests extends ROMUIBasePage {
 
 	}
 
-	@Test(enabled = false, priority = 4, description = "to Verify search order by Email id")
+	@Test(enabled = true, priority = 4, description = "to Verify search order by Email id")
 	public void testSearchOrderByEmail() throws JsonParseException, JsonMappingException, IOException, Exception {
 		ordersdata = OrdersData.get(env.getFileLocation());
 		logger.info("Login credentials to be entered");
@@ -74,7 +74,7 @@ public class OrdersTests extends ROMUIBasePage {
 
 	}
 
-	@Test(enabled = false, priority = 5, description = "to Verify search order by Order Status")
+	@Test(enabled = true, priority = 5, description = "to Verify search order by Order Status")
 	public void testSearchOrderByOrderStatus() throws JsonParseException, JsonMappingException, IOException, Exception {
 		ordersdata = OrdersData.get(env.getFileLocation());
 		logger.info("Login credentials to be entered");
@@ -89,7 +89,7 @@ public class OrdersTests extends ROMUIBasePage {
 
 	}
 
-	@Test(enabled = false, priority = 6, description = "to Verify edit search order ")
+	@Test(enabled = true, priority = 6, description = "to Verify edit search order ")
 	public void testEditSearch() throws JsonParseException, JsonMappingException, IOException, Exception {
 
 		logger.info("Login credentials to be entered");
@@ -109,7 +109,7 @@ public class OrdersTests extends ROMUIBasePage {
 		logger.info("Edit Search verified for Status order ");
 	}
 
-	@Test(enabled = false, priority = 7, description = "View Order Detail page by order number search")
+	@Test(enabled = true, priority = 7, description = "View Order Detail page by order number search")
 	public void testViewOrder() throws JsonParseException, JsonMappingException, IOException, Exception {
 		ordersdata = OrdersData.get(env.getFileLocation());
 		logger.info("Login credentials to be entered");
@@ -134,7 +134,7 @@ public class OrdersTests extends ROMUIBasePage {
 
 	}
 
-	@Test(enabled = false, priority = 8, description = "View Order Detail page by fulfillment order search")
+	@Test(enabled = true, priority = 8, description = "View Order Detail page by fulfillment order search")
 	public void testViewOrderByFulfillment() throws JsonParseException, JsonMappingException, IOException, Exception {
 
 		logger.info("Login credentials to be entered");
@@ -148,7 +148,7 @@ public class OrdersTests extends ROMUIBasePage {
 
 	}
 
-	@Test(enabled = false, priority = 9, description = "View Order Detail page by Customer name search")
+	@Test(enabled = true, priority = 9, description = "View Order Detail page by Customer name search")
 	public void testViewOrderByCustomername() throws JsonParseException, JsonMappingException, IOException, Exception {
 
 		logger.info("Login credentials to be entered");
@@ -162,7 +162,7 @@ public class OrdersTests extends ROMUIBasePage {
 
 	}
 
-	@Test(enabled = false, priority = 10, description = "View Order Detail page by Email search")
+	@Test(enabled = true, priority = 10, description = "View Order Detail page by Email search")
 	public void testViewOrderByEmail() throws JsonParseException, JsonMappingException, IOException, Exception {
 
 		logger.info("Login credentials to be entered");
@@ -175,7 +175,7 @@ public class OrdersTests extends ROMUIBasePage {
 		logger.info("View order screen has been verified by Search  Email");
 	}
 
-	@Test(enabled = false, priority = 11, description = "View Order Detail page by order status search")
+	@Test(enabled = true, priority = 11, description = "View Order Detail page by order status search")
 	public void testViewOrderByStatus() throws JsonParseException, JsonMappingException, IOException, Exception {
 
 		logger.info("Login credentials to be entered");
@@ -188,7 +188,7 @@ public class OrdersTests extends ROMUIBasePage {
 		logger.info("View order screen has been verified by Search  order status");
 	}
 
-	@Test(enabled = false, priority = 12, description = "form validation")
+	@Test(enabled = true, priority = 12, description = "form validation")
 	public void testOrderSearchFormValidation()
 			throws JsonParseException, JsonMappingException, IOException, Exception {
 
@@ -202,7 +202,7 @@ public class OrdersTests extends ROMUIBasePage {
 
 	}
 
-	@Test(enabled = false, priority = 13, description = "To Verify User able to Add Zero Cost Order via UI.")
+	@Test(enabled = true, priority = 13, description = "To Verify User able to Add Zero Cost Order via UI.")
 	public void testAddZCOrder() throws JsonParseException, JsonMappingException, IOException, Exception {
 		ordersdata = OrdersData.get(env.getFileLocation());
 		logger.info("Login credentials to be entered");
@@ -218,7 +218,7 @@ public class OrdersTests extends ROMUIBasePage {
 
 	}
 
-	@Test(enabled = false, priority = 14, description = "To Verify Create Return order")
+	@Test(enabled = true, priority = 14, description = "To Verify Create Return order")
 	public void testCreateReturnOrder() throws JsonParseException, JsonMappingException, IOException, Exception {
 
 		logger.info("Login credentials to be entered");

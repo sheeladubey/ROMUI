@@ -1,5 +1,6 @@
 package com.gsicommerce.romui.selenium.pages.ordermanagement;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -440,14 +441,19 @@ public class SafetyStockConfigsPage {
 
 	public boolean verfiySafetyStockRecord() throws Exception {
 		boolean found = false;
+		if (driver.findElements(By.cssSelector(".reflow-table")).size() > 0) {
+			found=true;
 		int rowNo = CommonElementsPage.getTotalRows();
 		if (headerSafetyStock.getText().contains("Safety Stocks Found")
 				|| headerSafetyStock.getText().contains("Safety Stock Found") && (rowNo > 0)) {
 			found = true;
-		} else {
+		}
+		}else {
+			found = false;
 			Assert.assertTrue(txtSuccessMsg.getText().contains(RomuiEnumValues.SAFETYSTOCK_NOTFOUND.getMessage()),
 					"No SAFETY STOCK search found");
 		}
+	
 		return found;
 
 	}
