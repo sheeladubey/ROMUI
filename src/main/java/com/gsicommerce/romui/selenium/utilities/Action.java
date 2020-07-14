@@ -903,5 +903,10 @@ public class Action {
 	//	executor.executeScript("document.getElementsByClassName('cancel')[0].click();");
 		driver.switchTo().window(driver.getWindowHandles().toArray()[0].toString());
 	}
+	public static void scrollToTopofPage() {
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+		jse.executeScript("window.scrollTo(document.body.scrollHeight,0);");
+	}
+
 
 }

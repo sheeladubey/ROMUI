@@ -308,15 +308,20 @@ public class OrderManagementMenusPage {
 		btnMainMenu.click();
 		Action.waitForElementToBeClickable(driver, lkOmniAdministration, 10);
 		lkOmniAdministration.click();
-		lkSellerConfig.click();
-		lkPaymtMethdConfig.click();
+		//lkSellerConfig.click();
+		Action.clickUsingJavaScipt(lkSellerConfig);
+	//	lkPaymtMethdConfig.click();
+		Action.clickUsingJavaScipt(lkPaymtMethdConfig);
 	}
 
 	public void clickOnServiceGrpConfig() {
 		btnMainMenu.click();
-		lkOmniAdministration.click();
-		lkSellerConfig.click();
-		lkServiceGrpConfig.click();
+		Action.clickUsingJavaScipt(lkOmniAdministration);
+	//	lkOmniAdministration.click();
+		Action.clickUsingJavaScipt(lkSellerConfig);
+	//	lkSellerConfig.click();
+		Action.clickUsingJavaScipt(lkServiceGrpConfig);
+	//	lkServiceGrpConfig.click();
 	}
 
 	public void clickOnShipMethdOptimztions() {
@@ -359,8 +364,10 @@ public class OrderManagementMenusPage {
 
 	public void clickOnNodeCalendars() {
 		btnMainMenu.click();
-		lkOmniAdministration.click();
-		lkNodeCaldrs.click();
+		//lkOmniAdministration.click();
+		Action.clickUsingJavaScipt(lkOmniAdministration);
+	//	lkNodeCaldrs.click();
+		Action.clickUsingJavaScipt(lkNodeCaldrs);
 	}
 
 	public void clickOnFulfillmentNodeItem() {

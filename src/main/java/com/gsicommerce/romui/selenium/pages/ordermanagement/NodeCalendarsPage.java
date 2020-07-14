@@ -13,6 +13,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.gsicommerce.romui.selenium.testdata.Environment;
 import com.gsicommerce.romui.selenium.testdata.NodeCalendarsData;
 import com.gsicommerce.romui.selenium.utilities.Action;
+import com.gsicommerce.romui.selenium.utilities.Common;
 
 public class NodeCalendarsPage {
 
@@ -55,6 +56,21 @@ public class NodeCalendarsPage {
 	@FindBy(how = How.CSS, using = "#monday-toggle .switch-shim")
 	private WebElement toggleMonday;
 
+	@FindBy(how = How.CSS, using = "#tuesday-toggle")
+	private WebElement toggleTuesday;
+	
+	@FindBy(how = How.CSS, using = "#wednesday-toggle")
+	private WebElement toggleWednesday;
+	
+	@FindBy(how = How.CSS, using = "#thursday-toggle")
+	private WebElement toggleThurday;
+	
+	@FindBy(how = How.CSS, using = "[name='store_fulfillment_calendar[friday_attributes][working_day]'][type='checkbox']")
+	private WebElement toggleFriday;
+	
+	@FindBy(how = How.CSS, using = "a.add-exception")
+	private WebElement btnAddException;
+			
 	@FindBy(how = How.CSS, using = "#store_fulfillment_calendar_monday_attributes_cut_off_time")
 	private WebElement calCutoffTimeMonday;
 
@@ -66,6 +82,21 @@ public class NodeCalendarsPage {
 
 	@FindBy(how = How.CSS, using = "#store_fulfillment_calendar_monday_attributes_shifts_attributes_0_max_items")
 	private WebElement txtboxMaxitemsMonday;
+	
+	@FindBy(how = How.CSS, using = "#store_fulfillment_calendar_friday_attributes_cut_off_time")
+	private WebElement calCutoffTimeFriday;
+	
+	@FindBy(how = How.CSS, using = "#store_fulfillment_calendar_friday_attributes_shifts_attributes_0_start_time")
+	private WebElement calStartTimeFriday;
+	
+	@FindBy(how = How.CSS, using = "#store_fulfillment_calendar_friday_attributes_shifts_attributes_0_end_time")
+	private WebElement calEndTimeFriday;
+
+	@FindBy(how = How.CSS, using = "#store_fulfillment_calendar_friday_attributes_shifts_attributes_0_max_items")
+	private WebElement txtboxMaxitemsFriday;
+	
+	@FindBy(how = How.CSS, using = ".calendar-working-day-toggle.col-sm-12")
+	private WebElement toggleCalExpection;
 	
 	@FindBy(how = How.CSS, using = ".alert-info")
 	public WebElement txtSuccessMsg;
@@ -89,10 +120,10 @@ public class NodeCalendarsPage {
 		calShifttime.get(1).click();
 		incrementhours.click();
 		Action.enter(calShifttime.get(2), nodeCalendarsData.getMaxItems());
-
 		Action.scrollDown("400");
-		Action.waitForElementToBeClickable(driver, plusIconDefaultDay.get(0), 10);
+	    Action.waitForElementToBeClickable(driver, plusIconDefaultDay.get(0), 10);
 		plusIconDefaultDay.get(0).click();
+    	Action.waitForElementToBeClickable(driver, toggleMonday, 10);
 		toggleMonday.click();
 		Action.waitForElementToBeClickable(driver, calCutoffTimeMonday, 10);
 		calCutoffTimeMonday.click();
@@ -103,6 +134,22 @@ public class NodeCalendarsPage {
 		calEndTimeMonday.click();
 		incrementhours.click();
 		Action.enter(txtboxMaxitemsMonday, nodeCalendarsData.getMaxItems());
+		Action.scrollDown("400");
+		Action.waitForElementToBeClickable(driver, plusIconDefaultDay.get(3), 10);
+		plusIconDefaultDay.get(3).click();
+		Common.waitForPageLoaded(driver);
+		Action.waitForElementToBeClickable(driver, toggleFriday,20);
+		//toggleFriday.click();
+		Action.clickUsingJavaScipt(toggleFriday);
+		Action.waitForElementToBeClickable(driver, calCutoffTimeFriday, 10);
+		calCutoffTimeFriday.click();
+		Action.scrollDown("400");
+		Action.waitForElementToBeClickable(driver, calStartTimeFriday, 10);
+		calStartTimeFriday.click();
+		Action.waitForElementToBeClickable(driver, calEndTimeFriday, 10);
+		calEndTimeFriday.click();
+		incrementhours.click();
+		Action.enter(txtboxMaxitemsFriday, nodeCalendarsData.getMaxItems());
 		CommonElementsPage.clickOnSaveBtn();
 
 	}

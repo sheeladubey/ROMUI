@@ -14,7 +14,7 @@
 	"ftcNoOfHrs":"10",
 	"returnWindowDays":"10",	
 	"returnLocOverride":"290-14411",
-	"returnEligibleRank":"10",
+	"returnEligibleRank":"2200",
 	"returnEligibleRankDesc":"Fulfilled and Invoiced",
 	"returnRefundChargeRule":"Duty",
 	"returnRefundReasonCode":"CR",
@@ -77,5 +77,13 @@
 	"packagewidth":"0.5",
 	"packagewidthUnits":"ft",
 	"packageLength":"1.5",
-	"packageLengthUnits":"ft"	
+	"packageLengthUnits":"ft",
+	"customAmtThreshold" : "10",
+	"minAmount":"10.0",
+	"reshipWindowThreshold":"17",
+	"returnAmtThreshold":"10",
+	"zcrCharge":"Duty",
+	"zcrReasonCode":"SR7177",
+	"zcrReason":"Reship Reason Code"
+	
 }

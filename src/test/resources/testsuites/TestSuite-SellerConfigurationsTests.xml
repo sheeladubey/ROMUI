@@ -15,7 +15,7 @@
 	<parameter name="storeID" value="TMS_NA-Store1" />
 	<parameter name="waitPeriod" value="5" />
 
-	<test thread-count="5" name="SellerConfigsTestsie">
+	<!-- <test thread-count="5" name="SellerConfigsTestsie">
 	<parameter name="browserType" value="remote-ie" />
 		<classes>
 			<class
@@ -23,10 +23,10 @@
 			<parameter name="dataFile"
 				value="./src/test/resources/testdata/sellerConfigsData.json" />
 		</classes>
-	</test> <!-- Test -->
+	</test> Test -->
 	
 	<test thread-count="5" name="SellerConfigsTestschrome">
-	<parameter name="browserType" value="remote-chrome" />
+	<parameter name="browserType" value="chrome" />
 		<classes>
 			<class
 				name="com.gsicommerce.romui.selenium.tests.SellerConfigsTests" />
@@ -35,7 +35,7 @@
 		</classes>
 	</test> <!-- Test -->
 	
-	<test thread-count="5" name="SellerConfigsTestsfirefox">
+	<!-- <test thread-count="5" name="SellerConfigsTestsfirefox">
 	<parameter name="browserType" value="remote-firefox"/>
 		<classes>
 			<class
@@ -43,5 +43,5 @@
 			<parameter name="dataFile"
 				value="./src/test/resources/testdata/sellerConfigsData.json" />
 		</classes>
-	</test> <!-- Test -->
+	</test> Test -->
 </suite> <!-- Suite -->
