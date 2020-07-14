@@ -246,6 +246,27 @@ public class ServiceGroupConfigsData {
 
 	@JsonProperty("packageLengthUnits")
 	String packageLengthUnits;
+	
+	@JsonProperty("customAmtThreshold")
+	String customAmtThreshold;
+	
+	@JsonProperty("minAmount")
+	String minAmount;
+	
+	@JsonProperty("reshipWindowThreshold")
+	String reshipWindowThreshold;
+	
+	@JsonProperty("returnAmtThreshold")
+	String returnAmtThreshold;
+	
+	@JsonProperty("zcrCharge")
+	String zcrCharge;
+	
+	@JsonProperty("zcrReasonCode")
+	String zcrReasonCode;
+	
+	@JsonProperty("zcrReason")
+	String zcrReason;
 
 	public String getHeaderLogoURL() {
 		return headerLogoURL;
@@ -561,6 +582,34 @@ public class ServiceGroupConfigsData {
 
 	public String getPinLength() {
 		return pinLength;
+	}
+
+	public String getCustomAmtThreshold() {
+		return customAmtThreshold;
+	}
+
+	public String getMinAmount() {
+		return minAmount;
+	}
+
+	public String getReshipWindowThreshold() {
+		return reshipWindowThreshold;
+	}
+
+	public String getReturnAmtThreshold() {
+		return returnAmtThreshold;
+	}
+
+	public String getZcrCharge() {
+		return zcrCharge;
+	}
+
+	public String getZcrReasonCode() {
+		return zcrReasonCode;
+	}
+
+	public String getZcrReason() {
+		return zcrReason;
 	}
 
 	public static ServiceGroupConfigsData get(String filename)
