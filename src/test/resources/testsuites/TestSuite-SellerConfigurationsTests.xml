@@ -16,6 +16,7 @@
 	<parameter name="waitPeriod" value="5" />
 
 	<test thread-count="5" name="SellerConfigsTestsie">
+	 <parameter name="os" value="Win10"/>
 	<parameter name="browserType" value="remote-ie" />
 		<classes>
 			<class
@@ -26,6 +27,7 @@
 	</test> <!-- Test -->
 	
 	<test thread-count="5" name="SellerConfigsTestschrome">
+	  <parameter name="os" value="Win10"/>
 	<parameter name="browserType" value="remote-chrome" />
 		<classes>
 			<class
@@ -36,6 +38,7 @@
 	</test> <!-- Test -->
 	
 	<test thread-count="5" name="SellerConfigsTestsfirefox">
+	  <parameter name="os" value="Win10"/>
 	<parameter name="browserType" value="remote-firefox"/>
 		<classes>
 			<class

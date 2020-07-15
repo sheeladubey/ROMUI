@@ -283,6 +283,7 @@ public class OrdersPage {
 		ordersdata = OrdersData.get(env.getFileLocation());
 		searchOrderByOption = ordersdata.getSearchOrderBy().get(searchindex);
 		webOrderNumber = ordersdata.getOrderID();
+		Common.waitForPageLoaded(driver);
 		Action.waitForElementToBeClickable(driver, btnSearchIcon, 30);
 		Action.clickUsingJavaScipt(btnSearchIcon);
 		// select search order type

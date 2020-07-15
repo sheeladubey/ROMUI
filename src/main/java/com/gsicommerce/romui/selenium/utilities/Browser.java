@@ -210,7 +210,8 @@ public class Browser {
 			}
 
 			if (env.getBrowserType().equalsIgnoreCase("remote-chrome")) {
-				final DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+			//	final DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+				final ChromeOptions capabilities= new ChromeOptions();
 				capabilities.setCapability("name", "Sheela CBT Chrome test");
 				capabilities.setCapability("browserName", "Chrome");
 				capabilities.setCapability("platform", "Windows 10");
@@ -219,7 +220,8 @@ public class Browser {
 				capabilities.setCapability("max_duration","1800");
 				capabilities.setCapability("idle_timeout","180");
 				capabilities.setCapability("timezone","GMT-05:00");
-				capabilities.setJavascriptEnabled(true);
+				//capabilities.setJavascriptEnabled(true);
+				capabilities.setCapability("javascript.enabled", true);
 				final RemoteWebDriver remoteDriver = new RemoteWebDriver(
 						new URL("http://" + username + ":" + authkey + "@hub.crossbrowsertesting.com:80/wd/hub"),
 						capabilities);

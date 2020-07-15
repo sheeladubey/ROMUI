@@ -9,94 +9,26 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">ATPRulesTests</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">3</td><td class="num">123,202</td><td></td><td></td></tr>
+<tr><td><a href="#t0">ReturnItemsTests</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">107</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ATPRulesTests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">com.gsicommerce.romui.selenium.tests.ATPRulesTests</td><td><a href="#m0">testAddATPRule</a></td><td rowspan="1">1594355119645</td><td rowspan="1">39879</td></tr><tr class="failedeven"><td><a href="#m1">testDeleteATPRule</a></td><td rowspan="1">1594355199058</td><td rowspan="1">17074</td></tr><tr class="failedeven"><td><a href="#m2">testEditATPRule</a></td><td rowspan="1">1594355170139</td><td rowspan="1">18163</td></tr><tr><th colspan="4">ATPRulesTests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.gsicommerce.romui.selenium.tests.ATPRulesTests</td><td><a href="#m3">testVerifyManageATPRule</a></td><td rowspan="1">1594355103329</td><td rowspan="1">6535</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ReturnItemsTests &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="2">com.gsicommerce.romui.selenium.tests.ReturnItemsTests</td><td><a href="#m0">setup</a></td><td rowspan="1">1594838251390</td><td rowspan="1">50</td></tr><tr class="failedeven"><td><a href="#m1">tearDown</a></td><td rowspan="1">1594838251457</td><td rowspan="1">7</td></tr><tr><th colspan="4">ReturnItemsTests &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.gsicommerce.romui.selenium.tests.ReturnItemsTests</td><td><a href="#m2">testReturnsItems</a></td><td rowspan="1">1594838251452</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>ATPRulesTests</h2><h3 id="m0">com.gsicommerce.romui.selenium.tests.ATPRulesTests#testAddATPRule</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">There is no page limit option displayed<br/>page limit drop down value is selected</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;span.ss-icon.ss-navigateright.ss-black-tie-bold&quot;}
-  (Session info: chrome=83.0.4103.116)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.135.213&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49901}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 40199d7361f2238faccab961cb9c6728
-*** Element info: {Using=css selector, value=span.ss-icon.ss-navigateright.ss-black-tie-bold}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy14.isEnabled(Unknown Source)
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.CommonElementsPage.clickNextPage(CommonElementsPage.java:140)
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.CommonElementsPage.getRowNo(CommonElementsPage.java:152)
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.ATPRulesPage.addATPRule(ATPRulesPage.java:83)
-	at com.gsicommerce.romui.selenium.tests.ATPRulesTests.testAddATPRule(ATPRulesTests.java:34)
+<h2>ReturnItemsTests</h2><h3 id="m0">com.gsicommerce.romui.selenium.tests.ReturnItemsTests#setup</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>org.testng.TestRunner@51f116b8</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
+	at com.gsicommerce.romui.selenium.utilities.Common.getAppUrl(Common.java:86)
+	at com.gsicommerce.romui.selenium.utilities.Common.startApplication(Common.java:80)
+	at com.gsicommerce.romui.selenium.pages.ROMUIBasePage.setup(ROMUIBasePage.java:28)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.gsicommerce.romui.selenium.tests.ReturnItemsTests#tearDown</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[TestResult name={null} status=CREATED method=ReturnItemsTests.testReturnsItems()[pri:0, instance:com.gsicommerce.romui.selenium.tests.ReturnItemsTests@1d296da] output={null}]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
+	at com.gsicommerce.romui.selenium.utilities.Browser.screenShot(Browser.java:303)
+	at com.gsicommerce.romui.selenium.pages.ROMUIBasePage.tearDown(ROMUIBasePage.java:37)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
 ... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.gsicommerce.romui.selenium.tests.ATPRulesTests#testDeleteATPRule</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Click Delete ATP Rule icon<br/>View Order icon is clicked on</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//tr[0]/td[4]/div/a[2]/span[1]&quot;}
-  (Session info: chrome=83.0.4103.116)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.135.213&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49992}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 206396ba214a14e74201097f220c31de
-*** Element info: {Using=xpath, value=.//tr[0]/td[4]/div/a[2]/span[1]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:185)
-	at org.openqa.selenium.remote.RemoteWebElement.findElementByXPath(RemoteWebElement.java:261)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:181)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy14.findElement(Unknown Source)
-	at com.gsicommerce.romui.selenium.utilities.Webtable.clickDivLinkSpanElement(Webtable.java:233)
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.CommonElementsPage.clickDivSpanLink(CommonElementsPage.java:209)
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.ATPRulesPage.deleteATPRule(ATPRulesPage.java:108)
-	at com.gsicommerce.romui.selenium.tests.ATPRulesTests.testDeleteATPRule(ATPRulesTests.java:64)
+<h3 id="m2">com.gsicommerce.romui.selenium.tests.ReturnItemsTests#testReturnsItems</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
+	at com.gsicommerce.romui.selenium.utilities.Common.getAppUrl(Common.java:86)
+	at com.gsicommerce.romui.selenium.utilities.Common.startApplication(Common.java:80)
+	at com.gsicommerce.romui.selenium.pages.ROMUIBasePage.setup(ROMUIBasePage.java:28)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.gsicommerce.romui.selenium.tests.ATPRulesTests#testEditATPRule</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Click Edit ATP Rule icon<br/>View Order icon is clicked on</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//tr[0]/td[4]/div/a[1]/span[1]&quot;}
-  (Session info: chrome=83.0.4103.116)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.135.213&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49942}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 19b057ef94eecf1148a966f596d9b92d
-*** Element info: {Using=xpath, value=.//tr[0]/td[4]/div/a[1]/span[1]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:185)
-	at org.openqa.selenium.remote.RemoteWebElement.findElementByXPath(RemoteWebElement.java:261)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:181)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy14.findElement(Unknown Source)
-	at com.gsicommerce.romui.selenium.utilities.Webtable.clickDivLinkSpanElement(Webtable.java:233)
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.CommonElementsPage.clickDivSpanLink(CommonElementsPage.java:209)
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.ATPRulesPage.editATPRule(ATPRulesPage.java:92)
-	at com.gsicommerce.romui.selenium.tests.ATPRulesTests.testEditATPRule(ATPRulesTests.java:49)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.gsicommerce.romui.selenium.tests.ATPRulesTests#testVerifyManageATPRule</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Get Total No of Rows in the webtable</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

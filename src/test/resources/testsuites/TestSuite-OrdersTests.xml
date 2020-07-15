@@ -5,8 +5,7 @@
 	<listeners>
 		<listener
 			class-name="com.gsicommerce.romui.selenium.utilities.ExtentReporterListener"></listener>
-	</listeners>
-	<parameter name="browserType" value="chrome" />
+	</listeners>	
 	<!-- parameter name="storeEnvironment" value="lvststromsso04" / -->
 	<parameter name="storeEnvironment" value="lvststromuiapp04" />
 	<parameter name="adminUserName" value="admin@tmsna" />
@@ -19,10 +18,20 @@
 	<parameter name="waitPeriod" value="5" />
 
 	<test thread-count="5" name="OrdersTests">
+	<parameter name="browserType" value="chrome" />
 		<classes>
 			<class name="com.gsicommerce.romui.selenium.tests.OrdersTests" />
 			<parameter name="dataFile"
 				value="./src/test/resources/testdata/ordersData.json" />
 		</classes>
 	</test> <!-- Test -->
+	
+	<!-- <test thread-count="5" name="OrdersTestsfirefox">
+	<parameter name="browserType" value="remote-firefox" />
+		<classes>
+			<class name="com.gsicommerce.romui.selenium.tests.OrdersTests" />
+			<parameter name="dataFile"
+				value="./src/test/resources/testdata/ordersData.json" />
+		</classes>
+	</test>  -->
 </suite> <!-- Suite -->

@@ -70,6 +70,8 @@ public class ATPRulesPage {
 		CommonElementsPage.clickOnAddBtn();
 		ATPRuleName = inventoryAvailabilityData.getATP_Rule_Name();
 		System.out.println("New ATP Rule Name is::" + ATPRuleName);
+		Reporter.log("New ATP Rule Name is::" + ATPRuleName);
+		Action.waitForElementToBeClickable(driver, txtbxatpRuleName, 20);
 		Action.enter(txtbxatpRuleName, ATPRuleName);
 		Action.enter(txtbxatpDescription, inventoryAvailabilityData.getATP_Rule_Description());
 		Action.enter(txtbxOverdueSupply, inventoryAvailabilityData.getOverdue_Supply());
@@ -80,8 +82,10 @@ public class ATPRulesPage {
 		Action.enter(txtbxAdvanceNotificationDays, inventoryAvailabilityData.getAdvance_Notification());
 		CommonElementsPage.clickOnSaveBtn();
 		System.out.println("Newly added ATP Rule Name is::" + ATPRuleName);
+		Reporter.log("Newly added ATP Rule Name is::" + ATPRuleName);
 		rowATP = CommonElementsPage.getRowNo(ATPRuleName, 1);
 		System.out.println("Newly Added ATP Rule Name is:" + CommonElementsPage.getRowCellTextVal(rowATP, 1));
+		Reporter.log("Newly selected ATP Rule Name is:" + CommonElementsPage.getRowCellTextVal(rowATP, 1));
 		Assert.assertEquals(CommonElementsPage.getRowCellTextVal(rowATP, 1),
 				inventoryAvailabilityData.getATP_Rule_Name(), "New ATP not Added");
 	}
