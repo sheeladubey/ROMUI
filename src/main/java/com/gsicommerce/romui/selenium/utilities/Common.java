@@ -78,12 +78,20 @@ public class Common {
 	 */
 	public static WebDriver startApplication(final Environment env, final String browserType) {
 		final String url = getAppUrl(env);
-		final String url1 = getUATAppUrl(env);
+		//final String url1 = getUATAppUrl(env);
 		return Browser.getBrowserInstance(browserType, url, env);
 		//return Browser.getBrowserInstance(browserType, url1, env);
 	}
 
 	public static String getAppUrl(final Environment env) {
+		if (env.getStoreEnvironment().contains("uat")) {
+			return "http://" + env.getStoreEnvironment() + "-romui.radial.com";
+		} else {
+			return "http://" + env.getStoreEnvironment() + "-vip.gspt.net";
+		}
+	}
+	
+	/*public static String getAppUrl(final Environment env) {
 
 		return "http://" + env.getStoreEnvironment() + "-vip.gspt.net";
 	}
@@ -92,6 +100,7 @@ public class Common {
 
 		return "http://" + env.getStoreEnvironment() ;
 	}
+*/
 
 	/**
 	 * Wait for the element to be present in the DOM, and displayed on the page. And

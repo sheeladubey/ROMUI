@@ -6793,3 +6793,101 @@
 2020-07-14 17:47:16,404 - romui -INFO - Login credentials to be entered
 2020-07-14 17:47:25,862 - romui -INFO - Order Management link is clicked on
 2020-07-14 17:47:30,119 - romui -INFO - Navigated to Seller Service Group Config page
+2020-07-15 19:19:10,729 - romui -INFO - Login credentials to be entered
+2020-07-15 19:19:16,709 - romui -INFO - Select Seller and Node
+2020-07-15 19:19:36,582 - romui -INFO - Navigate to Order Lookup Page
+2020-07-15 19:19:39,092 - romui -INFO - Navigated to Orders page
+2020-07-15 19:19:57,903 - romui -INFO - Search By Order Number verified
+2020-07-15 19:20:08,726 - romui -INFO - Login credentials to be entered
+2020-07-15 19:20:16,989 - romui -INFO - Select Seller and Node
+2020-07-15 19:20:29,357 - romui -INFO - Navigate to Order Lookup Page
+2020-07-15 19:20:32,575 - romui -INFO - Navigated to Orders page
+2020-07-15 19:21:04,588 - romui -INFO - Login credentials to be entered
+2020-07-15 19:21:09,009 - romui -INFO - Select Seller and Node
+2020-07-15 19:21:20,390 - romui -INFO - Navigate to Order Lookup Page
+2020-07-15 19:21:23,681 - romui -INFO - Navigated to Orders page
+2020-07-15 19:21:55,247 - romui -INFO - Login credentials to be entered
+2020-07-15 19:21:59,751 - romui -INFO - Select Seller and Node
+2020-07-15 19:22:13,371 - romui -INFO - Navigate to Order Lookup Page
+2020-07-15 19:22:15,935 - romui -INFO - Navigated to Orders page
+2020-07-15 19:22:47,483 - romui -INFO - Login credentials to be entered
+2020-07-15 19:22:52,675 - romui -INFO - Select Seller and Node
+2020-07-15 19:23:07,131 - romui -INFO - Navigate to Order Lookup Page
+2020-07-15 19:23:10,061 - romui -INFO - Navigated to Orders page
+2020-07-15 19:23:41,881 - romui -INFO - Login credentials to be entered
+2020-07-15 19:23:46,912 - romui -INFO - Navigate to Order Lookup Page
+2020-07-15 19:23:49,499 - romui -INFO - Navigated to Orders page
+2020-07-15 19:24:43,985 - romui -INFO - Login credentials to be entered
+2020-07-15 19:24:49,119 - romui -INFO - Select Seller and Node
+2020-07-15 19:25:02,217 - romui -INFO - Navigate to Order Lookup Page
+2020-07-15 19:25:05,446 - romui -INFO - Navigated to Orders page
+2020-07-15 19:25:05,446 - romui -INFO - Verify view order screen for Order number search
+2020-07-15 19:25:59,417 - romui -INFO - Login credentials to be entered
+2020-07-15 19:26:03,865 - romui -INFO - Navigate to Order Lookup Page
+2020-07-15 19:26:07,144 - romui -INFO - Navigated to Orders page
+2020-07-15 19:26:07,145 - romui -INFO - Verify view order screen for fulfillment Order number search
+2020-07-15 19:27:35,026 - romui -INFO - View order screen has been verified by Search  Fulfillment Order number
+2020-07-15 19:27:45,593 - romui -INFO - Login credentials to be entered
+2020-07-15 19:27:50,694 - romui -INFO - Navigate to Order Lookup Page
+2020-07-15 19:27:53,766 - romui -INFO - Navigated to Orders page
+2020-07-15 19:27:53,766 - romui -INFO - Verify view order screen for customer name search
+2020-07-15 19:28:25,547 - romui -INFO - Login credentials to be entered
+2020-07-15 19:28:32,349 - romui -INFO - Navigate to Order Lookup Page
+2020-07-15 19:28:35,436 - romui -INFO - Navigated to Orders page
+2020-07-15 19:28:35,437 - romui -INFO - Verify view order screen for Email search
+2020-07-15 19:29:17,202 - romui -INFO - View order screen has been verified by Search  Email
+2020-07-15 19:29:28,202 - romui -INFO - Login credentials to be entered
+2020-07-15 19:29:33,596 - romui -INFO - Navigate to Order Lookup Page
+2020-07-15 19:29:36,804 - romui -INFO - Navigated to Orders page
+2020-07-15 19:29:36,804 - romui -INFO - Verify view order screen for order status search
+2020-07-15 19:30:19,080 - romui -INFO - View order screen has been verified by Search  order status
+2020-07-15 19:30:30,101 - romui -INFO - Login credentials to be entered
+2020-07-15 19:30:35,753 - romui -INFO - Navigate to Order Lookup Page
+2020-07-15 19:30:38,791 - romui -INFO - Navigated to Orders page
+2020-07-15 19:30:41,902 - romui -INFO - Error Form Validation verified
+2020-07-15 19:30:53,436 - romui -INFO - Login credentials to be entered
+2020-07-15 19:30:58,958 - romui -INFO - Select Seller and Node
+2020-07-15 19:31:15,538 - romui -INFO - Navigate to Order Lookup Page
+2020-07-15 19:31:19,405 - romui -INFO - Navigated to Orders page
+2020-07-15 19:31:19,406 - romui -INFO - Verify ZC Order creation
+2020-07-15 19:31:43,154 - romui -INFO - Login credentials to be entered
+2020-07-15 19:31:48,154 - romui -INFO - Navigate to Order Lookup Page
+2020-07-15 19:31:51,051 - romui -INFO - Navigated to Orders page
+2020-07-15 19:31:51,052 - romui -INFO - Verify Return order creation
+2020-07-15 19:32:45,921 - romui -INFO - Login credentials to be entered
+2020-07-15 19:32:51,612 - romui -INFO - Select Seller and Node
+2020-07-15 19:33:04,677 - romui -INFO - Navigate to Order Lookup Page
+2020-07-15 19:33:07,505 - romui -INFO - Navigated to Orders page
+2020-07-15 19:33:07,506 - romui -INFO - Verify Order Audits by Order Number Search
+2020-07-15 19:33:39,834 - romui -INFO - Order Audits by Order Number search verified
+2020-07-15 19:33:51,188 - romui -INFO - Login credentials to be entered
+2020-07-15 19:33:56,477 - romui -INFO - Select Seller and Node
+2020-07-15 19:34:08,806 - romui -INFO - Navigate to Order Lookup Page
+2020-07-15 19:34:11,724 - romui -INFO - Navigated to Orders page
+2020-07-15 19:34:11,724 - romui -INFO - Verify Order Audits by Fulfillment Order Number Search
+2020-07-15 19:34:56,097 - romui -INFO - Order Audits by Fulfillment Order Number search verified
+2020-07-15 19:35:06,982 - romui -INFO - Login credentials to be entered
+2020-07-15 19:35:14,098 - romui -INFO - Select Seller and Node
+2020-07-15 19:35:27,455 - romui -INFO - Navigate to Order Lookup Page
+2020-07-15 19:35:30,333 - romui -INFO - Navigated to Orders page
+2020-07-15 19:35:30,333 - romui -INFO - Verify Order Audits by Customer Name Search
+2020-07-15 19:36:02,215 - romui -INFO - Login credentials to be entered
+2020-07-15 19:36:07,011 - romui -INFO - Select Seller and Node
+2020-07-15 19:36:20,818 - romui -INFO - Navigate to Order Lookup Page
+2020-07-15 19:36:24,485 - romui -INFO - Navigated to Orders page
+2020-07-15 19:36:24,485 - romui -INFO - Verify Order Audits by Email Search
+2020-07-15 19:36:51,872 - romui -INFO - Order Audits by Email search verified
+2020-07-15 19:37:03,173 - romui -INFO - Login credentials to be entered
+2020-07-15 19:37:08,497 - romui -INFO - Select Seller and Node
+2020-07-15 19:37:22,574 - romui -INFO - Navigate to Order Lookup Page
+2020-07-15 19:37:25,655 - romui -INFO - Navigated to Orders page
+2020-07-15 19:37:25,655 - romui -INFO - Verify Order Audits by Order Status Search
+2020-07-16 08:27:50,522 - romui -INFO - Login credentials to be entered
+2020-07-16 08:27:58,905 - romui -INFO - Select Seller and Node
+2020-07-16 08:32:16,568 - romui -INFO - Login credentials to be entered
+2020-07-16 08:32:21,894 - romui -INFO - Select Seller and Node
+2020-07-16 08:32:35,269 - romui -INFO - Navigate to Order Lookup Page
+2020-07-16 08:32:38,279 - romui -INFO - Navigated to Orders page
+2020-07-16 08:32:57,550 - romui -INFO - Search By Order Number verified
+2020-07-16 08:33:09,302 - romui -INFO - Login credentials to be entered
+2020-07-16 08:33:14,438 - romui -INFO - Select Seller and Node
