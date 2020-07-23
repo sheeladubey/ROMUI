@@ -6793,3 +6793,14 @@
 2020-07-15 12:41:09,742 [main] INFO romui - Navigate to Order Lookup Page
 2020-07-15 12:41:12,499 [main] INFO romui - Navigated to Orders page
 2020-07-15 12:41:32,025 [main] INFO romui - Search By Order Number verified
+2020-07-16 09:06:11,255 [main] INFO romui - Login credentials to be entered
+2020-07-16 09:06:16,048 [main] INFO romui - Select Seller and Node
+2020-07-16 09:36:18,750 [main] INFO romui - Login credentials to be entered
+2020-07-16 09:36:28,220 [main] INFO romui - Select Seller and Node
+2020-07-16 09:36:40,581 [main] INFO romui - Navigate to Order Lookup Page
+2020-07-16 09:36:43,572 [main] INFO romui - Navigated to Orders page
+2020-07-16 09:45:05,674 [main] INFO romui - Login credentials to be entered
+2020-07-16 09:45:10,378 [main] INFO romui - Select Seller and Node
+2020-07-16 09:45:22,145 [main] INFO romui - Navigate to Order Lookup Page
+2020-07-16 09:45:25,099 [main] INFO romui - Navigated to Orders page
+2020-07-16 09:45:45,011 [main] INFO romui - Search By Order Number verified
