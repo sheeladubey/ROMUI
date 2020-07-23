@@ -21,6 +21,9 @@ public class NodeCalendarsData {
 	@JsonProperty("Max Items")
 	String MaxItems;
 	
+	@JsonProperty("ExceptionDate")
+	Integer ExceptionDate;
+	
 	public String getCalendarID() {
 		return CalendarID + Common.generateRandomID("AUTO");
 	}
@@ -31,6 +34,11 @@ public class NodeCalendarsData {
 	
 	public String getMaxItems() {
 		return MaxItems;
+	}
+	
+	public Integer getExceptionDate()
+	{
+		return ExceptionDate;
 	}
 
 	public static NodeCalendarsData get(String filename) throws JsonParseException, JsonMappingException, IOException {
