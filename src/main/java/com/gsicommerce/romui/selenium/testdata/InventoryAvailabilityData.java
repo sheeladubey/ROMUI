@@ -150,14 +150,14 @@ public class InventoryAvailabilityData {
 	public String getEditSafety_Stock_Value() {
 		return EditSafety_Stock_Value;
 	}
-
+	
 	public int getStoreIndex() {
-
+		
 		return storeIndex;
 	}
 
 	public String getNodeID() {
-
+	
 		return nodeID;
 	}
 

@@ -12,19 +12,21 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
 
+import com.gsicommerce.romui.selenium.testdata.AssociateDeliveryData;
 import com.gsicommerce.romui.selenium.testdata.Environment;
 import com.gsicommerce.romui.selenium.testdata.ISPUData;
+import com.gsicommerce.romui.selenium.testdata.SFSData;
 import com.gsicommerce.romui.selenium.utilities.Action;
 import com.gsicommerce.romui.selenium.utilities.Common;
 
-public class ISPUPickPage {
+public class AssociateDeliveryPage {
 
 	WebDriver driver;
 	Environment env;
 	Action action;
-	private ISPUData data;
+	private AssociateDeliveryData data;
 
-	public ISPUPickPage(WebDriver driver, Environment env) {
+	public AssociateDeliveryPage(WebDriver driver, Environment env) {
 		this.driver = driver;
 		this.env = env;
 		PageFactory.initElements(driver, this);
@@ -55,25 +57,40 @@ public class ISPUPickPage {
 	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Complete Pickup')]")
 	@CacheLookup
 	private WebElement btnCompletePickup2;
+
+	@FindBy(how = How.CSS, using = "[data-tooltip='Pack Order']")
+	@CacheLookup
+	private WebElement btnPackOrder;
+
+	@FindBy(how = How.CSS, using = "#store_fulfillment_pack_packages_attributes_0_box_id")
+	@CacheLookup
+	private List<WebElement> drpdwnBoxID;
+
+	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Complete Packing')]")
+	@CacheLookup
+	private WebElement btnCompletePacking;
+
+	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Confirm Shipment')]")
+	@CacheLookup
+	private WebElement btnConfirmShipment;
+
+	@FindBy(how = How.XPATH, using = "//*[@class='panel-title pack-click-area']")
+	@CacheLookup
+	private List<WebElement> packageArea;
 	
 	@FindBy(how = How.CSS, using = "[data-tooltip='View Fulfillment Order']")
 	@CacheLookup
 	private WebElement lkViewFulfilmtOrder;
 	
-
 	@FindBy(how = How.CSS, using = ".fulfillment-order-summary-heading")
 	@CacheLookup
 	public WebElement txtFulfilmntOrderNo;
-
+	
 	@FindBy(how = How.CSS, using = ".col-sm-4.col-md-3.fulfillment-order-mobile-details")
 	private List<WebElement> fulfilmntOrderDetailSection;
 
 	@FindBy(how = How.CSS, using = ".col-xs-6.col-md-4.fulfillment-order-mobile-details")
 	private List<WebElement> fulfilmntOrderSKUDetailSection;
-	
-	@FindBy(how = How.CSS, using = "#fulfillment_order_queue_search_order_id")
-	@CacheLookup
-	private WebElement txtFulfilmentOrderNo;
 	
 	@FindBy(how = How.CSS, using = "[data-item-declined='']")
 	@CacheLookup
@@ -83,51 +100,57 @@ public class ISPUPickPage {
 	@CacheLookup
 	private List<WebElement> drpdwnSelectDeclineReason;
 	
-	@FindBy(how = How.CSS, using = "[data-pick-choices='']")
+	@FindBy(how = How.CSS, using = "#fulfillment_order_queue_search_order_id")
 	@CacheLookup
-	private List<WebElement> drpdwnSelectPickTicketQty;
+	private WebElement txtSearchFulfilmntOrderNo;
+	
+	@FindBy(how = How.CSS, using = "[data-check-all='']")
+	@CacheLookup
+	private List<WebElement> listSelectCheckboxes;
+	
+	@FindBy(how = How.CSS, using = "[name='bulk_decline']")
+	@CacheLookup
+	public WebElement btnConfirm;
 	
 	@FindBy(how = How.CSS, using = "[data-tooltip='Print Pick Ticket']")
 	@CacheLookup
 	private WebElement lkPrintPickTicket;
 
+
 	public void searchByOrderNumber(String orderNumber) throws Exception {
 		CommonElementsPage.clickOnSearchIcon();
-		Action.enter(txtFulfilmentOrderNo, orderNumber);
+		Action.enter(txtSearchFulfilmntOrderNo, orderNumber);
 		CommonElementsPage.clickOnSearchBtn();
 	}
 
-	public void pickOrder(ISPUData data) throws Exception {
+	public void pickOrder(AssociateDeliveryData data) throws Exception {
+		/*int rowNo = CommonElementsPage.getRowNo(data.getNodeID(),1);
+		CommonElementsPage.clickActionsIcon(rowNo, 4, 0);
+		searchByOrderNumber(data.getOrderNoList().get(0));*/
+		btnPickOrder.click();
+		confirmPickTicket(data.getQtyList(), data.getItemIdList());		
+	}
+
+	public void completePackOrder(AssociateDeliveryData data) throws Exception {
 		int rowNo = CommonElementsPage.getRowNo(data.getNodeID(),1);
 		CommonElementsPage.clickActionsIcon(rowNo, 4, 0);
 		searchByOrderNumber(data.getOrderNoList().get(0));
-		btnPickOrder.click();
-		selectAllItemsAndQuantities(data.getQtyList(),data.getItemIdList());
-		//Action.selectByVisibleText(drpdwnPick, data.getQtyList().get(0));
-		CommonElementsPage.clickOnConfirmBtn();
-		Action.switchWindow("Confirm Pick Ticket");
-		CommonElementsPage.enterStagingLoc(data.getLocId());
-		CommonElementsPage.clickOnContinueBtn();
-		Action.closePrintDialog();
+		btnPackOrder.click();
+		selectAllBoxID(1);
+		btnCompletePacking.click();
+		Common.closePrintPopup();
+		Action.waitForElementToBeClickable(driver, btnConfirmShipment, 30);
+		btnConfirmShipment.click();
 	}
 
-	public void customerPickup(ISPUData data) throws Exception {
-		searchByOrderNumber(data.getOrderNoList().get(0));
-		CommonElementsPage.clickActionsIconWithoutSpan(0, 8, 2);
-		selectAllItemsAndQuantities(data.getQtyList(), data.getItemIdList());
-		btnCompletePickup2.click();
-		Action.closePrintDialog();
-	}
-
-	public void completeOrderPickup(List<String> quantity, List<String> itemId) {
+	public void confirmPickTicket(List<String> quantity, List<String> itemId) {
 		selectAllItemsAndQuantities(quantity, itemId);
-		btnCompletePickup2.click();
-
+		CommonElementsPage.clickOnConfirmBtn();
 	}
 
-	public void selectItemQuantityDropdown(String quantity, String itemId) {
+	public void selectItemQuantityDropdown(String quantity, String itemNo) {
 		WebElement drpdwnPickupQty = driver
-				.findElement(By.cssSelector("#store_fulfillment_fulfillment_order_" + itemId + "_picked_quantity"));
+				.findElement(By.cssSelector("#store_fulfillment_pick_ticket_" + itemNo + "_picked_quantity"));
 		Action.selectByVisibleText(drpdwnPickupQty, quantity);
 	}
 
@@ -141,12 +164,25 @@ public class ISPUPickPage {
 
 			if ((itemId != null) && !(itemId.equalsIgnoreCase("null"))) {
 				Reporter.log("finding quantity:" + quantity);
-				selectItemQuantityDropdown(quantity, itemId);
+				String itemNo = Integer.toString(itemIdList.size() - i);
+				selectItemQuantityDropdown(quantity, itemNo);
 			}
 
 		}
 	}
 
+	public void selectAllBoxID(int index) {
+		for (int i = 0; i < packageArea.size(); i++) {
+			selectBoxIDDropdown(index, Integer.toString(i));
+		}
+	}
+
+	public void selectBoxIDDropdown(int index, String boxNo) {
+		WebElement drpdwnBoxID = driver
+				.findElement(By.cssSelector("#store_fulfillment_pack_packages_attributes_" + boxNo + "_box_id"));
+		Action.selectByIndex(drpdwnBoxID, index);
+	}
+	
 	public void viewFulfillmentOrderDetails(String nodeID, String orderNo) throws Exception {
 		int rowNo = CommonElementsPage.getRowNo(nodeID,1);
 		CommonElementsPage.clickActionsIcon(rowNo, 4, 0);
@@ -176,16 +212,6 @@ public class ISPUPickPage {
 		Action.navigateBack();
 	}
 	
-	public void singleRowPickOrder(ISPUData data) throws Exception {
-		btnPickOrder.click();
-		Action.selectByVisibleText(drpdwnPick, data.getQtyList().get(0));
-		CommonElementsPage.clickOnConfirmBtn();
-		Action.switchWindow("Confirm Pick Ticket");
-		CommonElementsPage.enterStagingLoc(data.getLocId());
-		CommonElementsPage.clickOnContinueBtn();
-		Action.closePrintDialog();
-	}
-	
 	public void selectAllDecline(String qty) {
 		for (int i = 1; i <= drpdwnSelectDecline.size(); i++) {
 			selectDeclineDropdown(qty, Integer.toString(i));
@@ -210,80 +236,61 @@ public class ISPUPickPage {
 		Action.selectByIndex(drpdwnDecline, 1);
 	}
 	
-	public void selectAllPickTicketQty() {
-		for (int i = 1; i <= drpdwnSelectPickTicketQty.size(); i++) {
-			selectPickTicketQtyDropdown(Integer.toString(i));
-		}
-	}
-
-	public void selectPickTicketQtyDropdown(String index) {
-		WebElement drpdwnPickTktQty = driver
-				.findElement(By.cssSelector("#store_fulfillment_pick_ticket_"+index+"_picked_quantity"));
-		Action.selectByIndex(drpdwnPickTktQty, 1);
-	}
-	
-	public void pickOrderDecline(ISPUData data) throws Exception {
+	public void pickOrderDecline(AssociateDeliveryData data) throws Exception {
 		int rowNo = CommonElementsPage.getRowNo(data.getNodeID(),1);
 		CommonElementsPage.clickActionsIcon(rowNo, 4, 0);
-		searchByOrderNumber(data.getOrderNoList().get(1));
+		searchByOrderNumber(data.getOrderNoList().get(0));
 		btnPickOrder.click();
-		selectAllPickTicketQty();
+		selectAllItemsAndQuantities(data.getQtyList(), data.getItemIdList());
 		selectAllDecline(data.getDeclineQty());
 		selectAllDeclineReason();
-		CommonElementsPage.clickOnConfirmBtn();
-		Action.switchWindow("Confirm Pick Ticket");
-		CommonElementsPage.enterStagingLoc(data.getLocId());
-		CommonElementsPage.clickOnContinueBtn();
-		Action.closePrintDialog();
+		CommonElementsPage.clickOnConfirmBtn();	
 	}
 	
-	public void customerPickupDecline(ISPUData data) throws Exception {
-		searchByOrderNumber(data.getOrderNoList().get(0));
-		CommonElementsPage.clickActionsIconWithoutSpan(0, 8, 2);
+	public void pickSelected(AssociateDeliveryData data) throws Exception {
+		int rowNo = CommonElementsPage.getRowNo(data.getNodeID(),1);
+		CommonElementsPage.clickActionsIcon(rowNo, 4, 0);
+		rowNo=0;
+		for (int i=0;i<data.getOrderNoList().size();i++) {
+			rowNo = CommonElementsPage.getRowNo(data.getOrderNoList().get(i),2);
+			if(rowNo!=0) {
+				listSelectCheckboxes.get(rowNo -1).click();
+			}
+		}
+		CommonElementsPage.btnPickSelected.click();
 		selectAllItemsAndQuantities(data.getQtyList(), data.getItemIdList());
-		selectCustomerPickupAllDecline("1", data.getItemIdList());
-		selectCustomerPickupAllDeclineReason(data.getItemIdList());
-		btnCompletePickup2.click();
+		CommonElementsPage.clickOnConfirmBtn();
+	}
+	
+	public void bulkDecline(AssociateDeliveryData data) throws Exception {
+		int rowNo = CommonElementsPage.getRowNo(data.getNodeID(),1);
+		CommonElementsPage.clickActionsIcon(rowNo, 4, 0);
+		rowNo=0;
+		for (int i=0;i<data.getOrderNoList().size();i++) {
+			rowNo = CommonElementsPage.getRowNo(data.getOrderNoList().get(i),2);
+			if(rowNo!=0) {
+				listSelectCheckboxes.get(rowNo -1).click();
+			}
+		}
+		CommonElementsPage.btnBulkDecline.click();
+		Action.waitForElementToBeClickable(driver, btnConfirm, 30);
+		btnConfirm.click();		
+	}
+	
+	public void printPickTicket(String nodeID, String orderNo) throws Exception {
+		int rowNo = CommonElementsPage.getRowNo(nodeID,1);
+		CommonElementsPage.clickActionsIcon(rowNo, 4, 0);
+		searchByOrderNumber(orderNo);
+		lkPrintPickTicket.click();
 		Action.closePrintDialog();
 	}
-	
-	public void selectCustomerPickupAllDecline(String qty, final List<String> itemIdList ) {
-		for (int i = 1; i <= drpdwnSelectDecline.size(); i++) {
-			selectCustomerPickupDeclineDropdown(qty, itemIdList.get(i-1));
-		}
-	}
-
-	public void selectCustomerPickupDeclineDropdown(String qty,String index) {
-		WebElement drpdwnDecline = driver
-				.findElement(By.cssSelector("#store_fulfillment_fulfillment_order_"+index+"_canceled_quantity"));
-		Action.selectByVisibleText(drpdwnDecline, qty);
-	}
-	
-	public void selectCustomerPickupAllDeclineReason(final List<String> itemIdList) {
-		for (int i = 1; i <= drpdwnSelectDeclineReason.size(); i++) {
-			selectCustomerPickupDeclineReasonDropdown(itemIdList.get(i-1));
-		}
-	}
-
-	public void selectCustomerPickupDeclineReasonDropdown(String index) {
-		WebElement drpdwnDecline = driver
-				.findElement(By.cssSelector("#store_fulfillment_fulfillment_order_"+index+"_cancellation_reason_code"));
-		Action.selectByIndex(drpdwnDecline, 1);
-	}
-	
-	public void viewPrintPickTicket(String orderNo) throws Exception {
-		int rowNo = CommonElementsPage.getRowNo(orderNo, 2);
-		CommonElementsPage.clickDivSpanLink(rowNo, 7,0, 2,1);
-		Action.closePrintDialog();
-	}
-	
 	public void getMyTicket(String nodeID, String orderNo) throws Exception {
 		int rowNo = CommonElementsPage.getRowNo(nodeID,1);
 		CommonElementsPage.clickActionsIcon(rowNo, 4, 0);
 		CommonElementsPage.clickOnSearchIcon();
-		Action.enter(txtFulfilmentOrderNo, orderNo);
+		Action.enter(txtSearchFulfilmntOrderNo, orderNo);
 		CommonElementsPage.clickOnGetMyTicketsBtn();
 		Assert.assertNotNull(CommonElementsPage.getRowCellTextVal(1, 1),"No data displayed for Pick Ticket Summary page");
 	}
-	
+
 }

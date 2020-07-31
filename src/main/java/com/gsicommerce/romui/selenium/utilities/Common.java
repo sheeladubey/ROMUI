@@ -6,7 +6,6 @@ import java.awt.event.KeyEvent;
 import java.net.IDN;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
-import java.time.LocalTime;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -31,8 +30,6 @@ import org.testng.Reporter;
 import com.gsicommerce.romui.selenium.testdata.Environment;
 import com.gsicommerce.romui.selenium.testdata.PaymentMethodConfigData;
 import com.thoughtworks.xstream.XStream;
-
-
 
 public class Common {
 
@@ -77,18 +74,18 @@ public class Common {
 	 * @return webdriver
 	 */
 	public static WebDriver startApplication(final Environment env, final String browserType) {
-		final String url = getAppUrl(env);	
+		final String url = getAppUrl(env);
 		return Browser.getBrowserInstance(browserType, url, env);
-		//return Browser.getBrowserInstance(browserType, url1, env);
 	}
 
 	public static String getAppUrl(final Environment env) {
-		if(env.getStoreEnvironment().contains("uat")) {
+		if (env.getStoreEnvironment().contains("uat")) {
 			return "http://" + env.getStoreEnvironment() + "-romui.radial.com";
 		} else {
-		return "http://" + env.getStoreEnvironment() + "-vip.gspt.net";
+			return "http://" + env.getStoreEnvironment() + "-vip.gspt.net";
 		}
 	}
+
 	/**
 	 * Wait for the element to be present in the DOM, and displayed on the page. And
 	 * returns the first WebElement using the given method.
@@ -494,7 +491,7 @@ public class Common {
 		return foo;
 	};
 
-	public static void waitForElementToLoad(WebDriver driver, final By locator) {
+	public void waitForElementToLoad(WebDriver driver, final By locator) {
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(60))
 				.pollingEvery(Duration.ofMillis(250)).ignoring(NoSuchElementException.class);
 		Function<WebDriver, WebElement> function = new Function<WebDriver, WebElement>() {
@@ -562,7 +559,6 @@ public class Common {
 		r.delay(6000);
 		r.keyPress(KeyEvent.VK_ESCAPE);
 		r.keyRelease(KeyEvent.VK_ESCAPE);
-
 	}
 
 	public static String selectDate(int days) {
@@ -585,32 +581,21 @@ public class Common {
 			el.sendKeys(selectDate(days));
 		}
 	}
-	//Wait for page to be load.
-	 public static void waitForPageLoaded(WebDriver driver) {
-	        ExpectedCondition<Boolean> expectation = new
-	                ExpectedCondition<Boolean>() {
-	                    public Boolean apply(WebDriver driver) {
-	                        return ((JavascriptExecutor) driver).executeScript("return document.readyState").toString().equals("complete");
-	                    }
-	                };
-	        try {
-	            Thread.sleep(1000);
-	            WebDriverWait wait = new WebDriverWait(driver, 40);
-	            wait.until(expectation);
-	        } catch (Throwable error) {
-	            Assert.fail("Timeout waiting for Page Load Request to complete.");
-	        }
-	    }	 
-	
 
-	public static String selectTime(int time)
-	{
-		LocalTime currenttime = LocalTime.now();  
-	    System.out.println(currenttime);  
-	    String time1 = sdf.format(currenttime);
-	    LocalTime timeahead = currenttime.plusHours(1);
-	    System.out.println(timeahead);
-		return time1;
-	  
+	// Wait for page to be load.
+	public static void waitForPageLoaded(WebDriver driver) {
+		ExpectedCondition<Boolean> expectation = new ExpectedCondition<Boolean>() {
+			public Boolean apply(WebDriver driver) {
+				return ((JavascriptExecutor) driver).executeScript("return document.readyState").toString()
+						.equals("complete");
+			}
+		};
+		try {
+			Thread.sleep(2000);
+			WebDriverWait wait = new WebDriverWait(driver, 50);
+			wait.until(expectation);
+		} catch (Throwable error) {
+			Assert.fail("Timeout waiting for Page Load Request to complete.");
+		}
 	}
 }

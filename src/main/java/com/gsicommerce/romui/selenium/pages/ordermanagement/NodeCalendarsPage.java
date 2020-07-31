@@ -116,10 +116,10 @@ public class NodeCalendarsPage {
 
 	@FindBy(how = How.XPATH, using = "//button[contains(text(),'Confirm')]")
 	private WebElement btnDeleteConfirm;
-	
+
 	@FindBy(how = How.XPATH, using = " //span[contains(text(),'Edit')]")
 	private WebElement btnEditView;
-	
+
 	public void addNodeCalendars() throws Exception {
 		nodeCalendarsData = NodeCalendarsData.get(env.getFileLocation());
 
@@ -142,7 +142,11 @@ public class NodeCalendarsPage {
 		Action.scrollDown("400");
 		Action.waitForElementToBeClickable(driver, plusIconDefaultDay.get(0), 10);
 		plusIconDefaultDay.get(0).click();
+
 		Action.waitForElementToBeClickable(driver, toggleMonday, 10);
+
+		Action.waitForElementToBeClickable(driver, toggleMonday, 10);
+
 		toggleMonday.click();
 		Action.waitForElementToBeClickable(driver, calCutoffTimeMonday, 10);
 		calCutoffTimeMonday.click();
@@ -157,6 +161,7 @@ public class NodeCalendarsPage {
 		Action.waitForElementToBeClickable(driver, plusIconDefaultDay.get(3), 10);
 		plusIconDefaultDay.get(3).click();
 		Common.waitForPageLoaded(driver);
+
 		Action.waitForElementToBeClickable(driver, toggleFriday, 20);
 		// toggleFriday.click();
 		Action.clickUsingJavaScipt(toggleFriday);
@@ -202,9 +207,8 @@ public class NodeCalendarsPage {
 		}
 		return found;
 	}
-	
-	public void clickEditNodeCalendar() throws Exception
-	{
+
+	public void clickEditNodeCalendar() throws Exception {
 		nodeCalendarsData = NodeCalendarsData.get(env.getFileLocation());
 		System.out.println("Selected row for CAL ID is::" + rowCalID);
 		System.out.println("Selected Calendar ID is:" + CommonElementsPage.getRowCellTextVal(rowCalID, 1));
@@ -231,6 +235,20 @@ public class NodeCalendarsPage {
 		Action.waitForElementToBeClickable(driver, ExceptionShiftTime.get(1), 10);
 		ExceptionShiftTime.get(1).click();
 		incrementhours.click();
+
+		Action.waitForElementToBeClickable(driver, toggleFriday, 20);
+		// toggleFriday.click();
+		Action.clickUsingJavaScipt(toggleFriday);
+		Action.waitForElementToBeClickable(driver, calCutoffTimeFriday, 10);
+		calCutoffTimeFriday.click();
+		Action.scrollDown("400");
+		Action.waitForElementToBeClickable(driver, calStartTimeFriday, 10);
+		calStartTimeFriday.click();
+		Action.waitForElementToBeClickable(driver, calEndTimeFriday, 10);
+		calEndTimeFriday.click();
+		incrementhours.click();
+		Action.enter(txtboxMaxitemsFriday, nodeCalendarsData.getMaxItems());
+
 		CommonElementsPage.clickOnSaveBtn();
 
 	}
@@ -246,17 +264,15 @@ public class NodeCalendarsPage {
 		Action.waitForElementToBeClickable(driver, btnDeleteConfirm, 10);
 		btnDeleteConfirm.click();
 	}
-	
-	public void formValidationNodeCalendar()
-	{
+
+	public void formValidationNodeCalendar() {
 		CommonElementsPage.clickOnAddBtn();
 		CommonElementsPage.clickOnSaveBtn();
 		CommonElementsPage.clickOnContinueBtn();
-		
+
 	}
-	
-	public void editNodeCalendarsFromView() throws Exception
-	{
+
+	public void editNodeCalendarsFromView() throws Exception {
 		viewNodeCalendars();
 		Action.waitForElementToBeClickable(driver, btnEditView, 20);
 		btnEditView.click();

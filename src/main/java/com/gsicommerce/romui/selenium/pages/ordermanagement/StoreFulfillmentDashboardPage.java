@@ -98,6 +98,7 @@ public class StoreFulfillmentDashboardPage {
 
 	public void navigateToISPUCustPickup() throws Exception {
 		Reporter.log("Click on ISPU Customer Pickup Icon");
+		Action.waitForElementToBeClickable(driver, lkISPUCustomerPickup, 30);
 		lkISPUCustomerPickup.click();
 	}
 
@@ -110,11 +111,20 @@ public class StoreFulfillmentDashboardPage {
 		Reporter.log("Click on SFS Pack Icon");
 		lkSFSWaitingForPack.click();
 	}
-	
+
+	public void navigateToADPick() throws Exception {
+		Reporter.log("Click on AD Pick Icon");
+		lkADWaitingForPick.click();
+	}
+
+	public void navigateToADPack() throws Exception {
+		Reporter.log("Click on AD Pack Icon");
+		lkADWaitingForPack.click();
+	}
+
 	public void navigateToReturnItems() throws Exception {
 		Reporter.log("Click on Return items Icon");
 		lkOPReturnItems.click();
 	}
-
 
 }
