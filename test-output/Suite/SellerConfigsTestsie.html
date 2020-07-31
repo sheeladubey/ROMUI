@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>SellerConfigsTestsie</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/3</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jun 23 19:08:16 EDT 2020</td>
+<td>Started on:</td><td>Tue Jul 14 22:39:27 EDT 2020</td>
 </tr>
-<tr><td>Total time:</td><td>1 seconds (1009 ms)</td>
+<tr><td>Total time:</td><td>95 seconds (95178 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,12 +75,12 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.gsicommerce.romui.selenium.tests.SellerConfigsTests.setup()'><b>setup</b><br>Test class: com.gsicommerce.romui.selenium.tests.SellerConfigsTests<br>Parameters: org.testng.TestRunner@593cadfb</td>
+<td title='com.gsicommerce.romui.selenium.tests.SellerConfigsTests.setup()'><b>setup</b><br>Test class: com.gsicommerce.romui.selenium.tests.SellerConfigsTests<br>Parameters: org.testng.TestRunner@554463f8</td>
 <td><div><pre>java.lang.IllegalStateException: Failed to create remote webdriver
-	at com.gsicommerce.romui.selenium.utilities.Browser.remoteWebDriver(Browser.java:248)
-	at com.gsicommerce.romui.selenium.utilities.Browser.buildBrowserInstance(Browser.java:125)
-	at com.gsicommerce.romui.selenium.utilities.Browser.getBrowserInstance(Browser.java:50)
-	at com.gsicommerce.romui.selenium.utilities.Common.startApplication(Common.java:79)
+	at com.gsicommerce.romui.selenium.utilities.Browser.remoteWebDriver(Browser.java:262)
+	at com.gsicommerce.romui.selenium.utilities.Browser.buildBrowserInstance(Browser.java:140)
+	at com.gsicommerce.romui.selenium.utilities.Browser.getBrowserInstance(Browser.java:57)
+	at com.gsicommerce.romui.selenium.utilities.Common.startApplication(Common.java:82)
 	at com.gsicommerce.romui.selenium.pages.ROMUIBasePage.setup(ROMUIBasePage.java:28)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
@@ -95,11 +95,11 @@ Caused by: org.openqa.selenium.WebDriverException: Unable to parse remote respon
 	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
-	at com.gsicommerce.romui.selenium.utilities.Browser.remoteWebDriver(Browser.java:202)
+	at com.gsicommerce.romui.selenium.utilities.Browser.remoteWebDriver(Browser.java:228)
 	... 31 more
 Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: F. Last 1 characters read: F
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.132.60&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.133.202&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
 Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
 	at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
@@ -109,12 +109,12 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.json.Json.toType(Json.java:50)
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
 	... 38 more
-... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1061947821", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1061947821'><pre>java.lang.IllegalStateException: Failed to create remote webdriver
-	at com.gsicommerce.romui.selenium.utilities.Browser.remoteWebDriver(Browser.java:248)
-	at com.gsicommerce.romui.selenium.utilities.Browser.buildBrowserInstance(Browser.java:125)
-	at com.gsicommerce.romui.selenium.utilities.Browser.getBrowserInstance(Browser.java:50)
-	at com.gsicommerce.romui.selenium.utilities.Common.startApplication(Common.java:79)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1670242960", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1670242960'><pre>java.lang.IllegalStateException: Failed to create remote webdriver
+	at com.gsicommerce.romui.selenium.utilities.Browser.remoteWebDriver(Browser.java:262)
+	at com.gsicommerce.romui.selenium.utilities.Browser.buildBrowserInstance(Browser.java:140)
+	at com.gsicommerce.romui.selenium.utilities.Browser.getBrowserInstance(Browser.java:57)
+	at com.gsicommerce.romui.selenium.utilities.Common.startApplication(Common.java:82)
 	at com.gsicommerce.romui.selenium.pages.ROMUIBasePage.setup(ROMUIBasePage.java:28)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -151,11 +151,11 @@ Caused by: org.openqa.selenium.WebDriverException: Unable to parse remote respon
 	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
-	at com.gsicommerce.romui.selenium.utilities.Browser.remoteWebDriver(Browser.java:202)
+	at com.gsicommerce.romui.selenium.utilities.Browser.remoteWebDriver(Browser.java:228)
 	... 31 more
 Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: F. Last 1 characters read: F
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.132.60&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.133.202&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
 Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
 	at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
@@ -167,20 +167,114 @@ Driver info: driver.version: RemoteWebDriver
 	... 38 more
 </pre></div></td>
 <td>0</td>
-<td>com.gsicommerce.romui.selenium.tests.SellerConfigsTests@38425407</td></tr>
+<td>com.gsicommerce.romui.selenium.tests.SellerConfigsTests@3857f613</td></tr>
 <tr>
-<td title='com.gsicommerce.romui.selenium.tests.SellerConfigsTests.tearDown()'><b>tearDown</b><br>Test class: com.gsicommerce.romui.selenium.tests.SellerConfigsTests<br>Parameters: [TestResult name={null} status=CREATED method=SellerConfigsTests.testEditSeller()[pri:2, instance:com.gsicommerce.romui.selenium.tests.SellerConfigsTests@38425407] output={null}]</td>
+<td title='com.gsicommerce.romui.selenium.tests.SellerConfigsTests.setup()'><b>setup</b><br>Test class: com.gsicommerce.romui.selenium.tests.SellerConfigsTests<br>Parameters: org.testng.TestRunner@20a5a2c6</td>
+<td><div><pre>java.lang.IllegalStateException: Failed to create remote webdriver
+	at com.gsicommerce.romui.selenium.utilities.Browser.remoteWebDriver(Browser.java:262)
+	at com.gsicommerce.romui.selenium.utilities.Browser.buildBrowserInstance(Browser.java:132)
+	at com.gsicommerce.romui.selenium.utilities.Browser.getBrowserInstance(Browser.java:57)
+	at com.gsicommerce.romui.selenium.utilities.Common.startApplication(Common.java:82)
+	at com.gsicommerce.romui.selenium.pages.ROMUIBasePage.setup(ROMUIBasePage.java:28)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: org.openqa.selenium.WebDriverException: Unable to parse remote response: Failed when trying to check whether the selenium caps were good. Account has reached the maximum number of queued automated  tests: 1
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at com.gsicommerce.romui.selenium.utilities.Browser.remoteWebDriver(Browser.java:201)
+	... 31 more
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: F. Last 1 characters read: F
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.133.202&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+	at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+	at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+	at org.openqa.selenium.json.Json.toType(Json.java:69)
+	at org.openqa.selenium.json.Json.toType(Json.java:55)
+	at org.openqa.selenium.json.Json.toType(Json.java:50)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+	... 38 more
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1066542912", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1066542912'><pre>java.lang.IllegalStateException: Failed to create remote webdriver
+	at com.gsicommerce.romui.selenium.utilities.Browser.remoteWebDriver(Browser.java:262)
+	at com.gsicommerce.romui.selenium.utilities.Browser.buildBrowserInstance(Browser.java:132)
+	at com.gsicommerce.romui.selenium.utilities.Browser.getBrowserInstance(Browser.java:57)
+	at com.gsicommerce.romui.selenium.utilities.Common.startApplication(Common.java:82)
+	at com.gsicommerce.romui.selenium.pages.ROMUIBasePage.setup(ROMUIBasePage.java:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:64)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:364)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:318)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:588)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: org.openqa.selenium.WebDriverException: Unable to parse remote response: Failed when trying to check whether the selenium caps were good. Account has reached the maximum number of queued automated  tests: 1
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at com.gsicommerce.romui.selenium.utilities.Browser.remoteWebDriver(Browser.java:201)
+	... 31 more
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: F. Last 1 characters read: F
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.133.202&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+	at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+	at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+	at org.openqa.selenium.json.Json.toType(Json.java:69)
+	at org.openqa.selenium.json.Json.toType(Json.java:55)
+	at org.openqa.selenium.json.Json.toType(Json.java:50)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+	... 38 more
+</pre></div></td>
+<td>0</td>
+<td>com.gsicommerce.romui.selenium.tests.SellerConfigsTests@43bc63a3</td></tr>
+<tr>
+<td title='com.gsicommerce.romui.selenium.tests.SellerConfigsTests.tearDown()'><b>tearDown</b><br>Test class: com.gsicommerce.romui.selenium.tests.SellerConfigsTests<br>Parameters: [TestResult name={null} status=CREATED method=SellerConfigsTests.testVerifyManageSellerConfig()[pri:1, instance:com.gsicommerce.romui.selenium.tests.SellerConfigsTests@3857f613] output={null}]</td>
 <td><div><pre>java.lang.NullPointerException
-	at com.gsicommerce.romui.selenium.utilities.Browser.screenShot(Browser.java:292)
+	at com.gsicommerce.romui.selenium.utilities.Browser.screenShot(Browser.java:306)
 	at com.gsicommerce.romui.selenium.pages.ROMUIBasePage.tearDown(ROMUIBasePage.java:37)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:835)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1028773337", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1028773337'><pre>java.lang.NullPointerException
-	at com.gsicommerce.romui.selenium.utilities.Browser.screenShot(Browser.java:292)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1591599335", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1591599335'><pre>java.lang.NullPointerException
+	at com.gsicommerce.romui.selenium.utilities.Browser.screenShot(Browser.java:306)
 	at com.gsicommerce.romui.selenium.pages.ROMUIBasePage.tearDown(ROMUIBasePage.java:37)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -212,7 +306,376 @@ Driver info: driver.version: RemoteWebDriver
 	at java.base/java.lang.Thread.run(Thread.java:835)
 </pre></div></td>
 <td>0</td>
-<td>com.gsicommerce.romui.selenium.tests.SellerConfigsTests@38425407</td></tr>
+<td>com.gsicommerce.romui.selenium.tests.SellerConfigsTests@3857f613</td></tr>
+<tr>
+<td title='com.gsicommerce.romui.selenium.tests.SellerConfigsTests.tearDown()'><b>tearDown</b><br>Test class: com.gsicommerce.romui.selenium.tests.SellerConfigsTests<br>Parameters: [TestResult name={null} status=CREATED method=SellerConfigsTests.testEditSeller()[pri:2, instance:com.gsicommerce.romui.selenium.tests.SellerConfigsTests@3857f613] output={null}]</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.gsicommerce.romui.selenium.utilities.Browser.screenShot(Browser.java:306)
+	at com.gsicommerce.romui.selenium.pages.ROMUIBasePage.tearDown(ROMUIBasePage.java:37)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace133609348", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace133609348'><pre>java.lang.NullPointerException
+	at com.gsicommerce.romui.selenium.utilities.Browser.screenShot(Browser.java:306)
+	at com.gsicommerce.romui.selenium.pages.ROMUIBasePage.tearDown(ROMUIBasePage.java:37)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:64)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:364)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:318)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:676)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:547)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:588)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+</pre></div></td>
+<td>0</td>
+<td>com.gsicommerce.romui.selenium.tests.SellerConfigsTests@3857f613</td></tr>
+<tr>
+<td title='com.gsicommerce.romui.selenium.tests.SellerConfigsTests.tearDown()'><b>tearDown</b><br>Test class: com.gsicommerce.romui.selenium.tests.SellerConfigsTests<br>Parameters: [TestResult name={null} status=CREATED method=SellerConfigsTests.testViewSeller()[pri:3, instance:com.gsicommerce.romui.selenium.tests.SellerConfigsTests@3857f613] output={null}]</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.gsicommerce.romui.selenium.utilities.Browser.screenShot(Browser.java:306)
+	at com.gsicommerce.romui.selenium.pages.ROMUIBasePage.tearDown(ROMUIBasePage.java:37)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace933371559", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace933371559'><pre>java.lang.NullPointerException
+	at com.gsicommerce.romui.selenium.utilities.Browser.screenShot(Browser.java:306)
+	at com.gsicommerce.romui.selenium.pages.ROMUIBasePage.tearDown(ROMUIBasePage.java:37)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:64)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:364)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:318)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:676)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:547)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:588)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+</pre></div></td>
+<td>0</td>
+<td>com.gsicommerce.romui.selenium.tests.SellerConfigsTests@3857f613</td></tr>
+<tr>
+<td title='com.gsicommerce.romui.selenium.tests.SellerConfigsTests.tearDown()'><b>tearDown</b><br>Test class: com.gsicommerce.romui.selenium.tests.SellerConfigsTests<br>Parameters: [TestResult name={null} status=CREATED method=SellerConfigsTests.testEditSellerFromViewPage()[pri:4, instance:com.gsicommerce.romui.selenium.tests.SellerConfigsTests@3857f613] output={null}]</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.gsicommerce.romui.selenium.utilities.Browser.screenShot(Browser.java:306)
+	at com.gsicommerce.romui.selenium.pages.ROMUIBasePage.tearDown(ROMUIBasePage.java:37)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace944116250", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace944116250'><pre>java.lang.NullPointerException
+	at com.gsicommerce.romui.selenium.utilities.Browser.screenShot(Browser.java:306)
+	at com.gsicommerce.romui.selenium.pages.ROMUIBasePage.tearDown(ROMUIBasePage.java:37)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:64)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:364)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:318)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:676)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:547)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:588)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+</pre></div></td>
+<td>0</td>
+<td>com.gsicommerce.romui.selenium.tests.SellerConfigsTests@3857f613</td></tr>
+<tr>
+<td title='com.gsicommerce.romui.selenium.tests.SellerConfigsTests.tearDown()'><b>tearDown</b><br>Test class: com.gsicommerce.romui.selenium.tests.SellerConfigsTests<br>Parameters: [TestResult name={null} status=CREATED method=SellerConfigsTests.testEditSeller()[pri:2, instance:com.gsicommerce.romui.selenium.tests.SellerConfigsTests@43bc63a3] output={null}]</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.133.202&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
+	at com.gsicommerce.romui.selenium.utilities.Browser.screenShot(Browser.java:306)
+	at com.gsicommerce.romui.selenium.pages.ROMUIBasePage.tearDown(ROMUIBasePage.java:37)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2052109337", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2052109337'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.133.202&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
+	at com.gsicommerce.romui.selenium.utilities.Browser.screenShot(Browser.java:306)
+	at com.gsicommerce.romui.selenium.pages.ROMUIBasePage.tearDown(ROMUIBasePage.java:37)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:64)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:364)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:318)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:676)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:547)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:588)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+</pre></div></td>
+<td>0</td>
+<td>com.gsicommerce.romui.selenium.tests.SellerConfigsTests@43bc63a3</td></tr>
+<tr>
+<td title='com.gsicommerce.romui.selenium.tests.SellerConfigsTests.tearDown()'><b>tearDown</b><br>Test class: com.gsicommerce.romui.selenium.tests.SellerConfigsTests<br>Parameters: [TestResult name={null} status=CREATED method=SellerConfigsTests.testViewSeller()[pri:3, instance:com.gsicommerce.romui.selenium.tests.SellerConfigsTests@43bc63a3] output={null}]</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.133.202&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
+	at com.gsicommerce.romui.selenium.utilities.Browser.screenShot(Browser.java:306)
+	at com.gsicommerce.romui.selenium.pages.ROMUIBasePage.tearDown(ROMUIBasePage.java:37)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace880488933", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace880488933'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.133.202&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
+	at com.gsicommerce.romui.selenium.utilities.Browser.screenShot(Browser.java:306)
+	at com.gsicommerce.romui.selenium.pages.ROMUIBasePage.tearDown(ROMUIBasePage.java:37)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:64)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:364)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:318)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:676)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:547)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:588)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+</pre></div></td>
+<td>0</td>
+<td>com.gsicommerce.romui.selenium.tests.SellerConfigsTests@43bc63a3</td></tr>
+<tr>
+<td title='com.gsicommerce.romui.selenium.tests.SellerConfigsTests.tearDown()'><b>tearDown</b><br>Test class: com.gsicommerce.romui.selenium.tests.SellerConfigsTests<br>Parameters: [TestResult name={null} status=CREATED method=SellerConfigsTests.testEditSellerFromViewPage()[pri:4, instance:com.gsicommerce.romui.selenium.tests.SellerConfigsTests@43bc63a3] output={null}]</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.133.202&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
+	at com.gsicommerce.romui.selenium.utilities.Browser.screenShot(Browser.java:306)
+	at com.gsicommerce.romui.selenium.pages.ROMUIBasePage.tearDown(ROMUIBasePage.java:37)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1896022582", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1896022582'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.133.202&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
+	at com.gsicommerce.romui.selenium.utilities.Browser.screenShot(Browser.java:306)
+	at com.gsicommerce.romui.selenium.pages.ROMUIBasePage.tearDown(ROMUIBasePage.java:37)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:64)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:364)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:318)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:676)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:547)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:588)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+</pre></div></td>
+<td>0</td>
+<td>com.gsicommerce.romui.selenium.tests.SellerConfigsTests@43bc63a3</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.gsicommerce.romui.selenium.tests.SellerConfigsTests.setup()'><b>setup</b><br>Test class: com.gsicommerce.romui.selenium.tests.SellerConfigsTests</td>
+<td></td>
+<td>-1594780768</td>
+<td>com.gsicommerce.romui.selenium.tests.SellerConfigsTests@3857f613</td></tr>
+<tr>
+<td title='com.gsicommerce.romui.selenium.tests.SellerConfigsTests.setup()'><b>setup</b><br>Test class: com.gsicommerce.romui.selenium.tests.SellerConfigsTests</td>
+<td></td>
+<td>-1594780769</td>
+<td>com.gsicommerce.romui.selenium.tests.SellerConfigsTests@3857f613</td></tr>
+<tr>
+<td title='com.gsicommerce.romui.selenium.tests.SellerConfigsTests.setup()'><b>setup</b><br>Test class: com.gsicommerce.romui.selenium.tests.SellerConfigsTests</td>
+<td></td>
+<td>-1594780769</td>
+<td>com.gsicommerce.romui.selenium.tests.SellerConfigsTests@3857f613</td></tr>
+<tr>
+<td title='com.gsicommerce.romui.selenium.tests.SellerConfigsTests.setup()'><b>setup</b><br>Test class: com.gsicommerce.romui.selenium.tests.SellerConfigsTests</td>
+<td></td>
+<td>-1594780863</td>
+<td>com.gsicommerce.romui.selenium.tests.SellerConfigsTests@43bc63a3</td></tr>
+<tr>
+<td title='com.gsicommerce.romui.selenium.tests.SellerConfigsTests.setup()'><b>setup</b><br>Test class: com.gsicommerce.romui.selenium.tests.SellerConfigsTests</td>
+<td></td>
+<td>-1594780863</td>
+<td>com.gsicommerce.romui.selenium.tests.SellerConfigsTests@43bc63a3</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.gsicommerce.romui.selenium.tests.SellerConfigsTests.testVerifyManageSellerConfig()'><b>testVerifyManageSellerConfig</b><br>Test class: com.gsicommerce.romui.selenium.tests.SellerConfigsTests<br>Test method: To Verify Manage Seller Configurations <br/>
+<a href="#Output-592554887" onClick='toggleBox("Output-592554887", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-592554887" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-592554887">
+There is no page limit option displayed<br/>
+page limit drop down value is selected<br/>
+Get Total No of Rows in the webtable<br/>
+Getting the column value of the first row<br/>
+Getting the column value of the first row<br/>
+</div>
+</td>
+<td></td>
+<td>72</td>
+<td>com.gsicommerce.romui.selenium.tests.SellerConfigsTests@43bc63a3</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -224,10 +687,10 @@ Driver info: driver.version: RemoteWebDriver
 <tr>
 <td title='com.gsicommerce.romui.selenium.tests.SellerConfigsTests.testEditSeller()'><b>testEditSeller</b><br>Test class: com.gsicommerce.romui.selenium.tests.SellerConfigsTests<br>Test method: To Verify Edit Seller Configurations feature</td>
 <td><div><pre>java.lang.IllegalStateException: Failed to create remote webdriver
-	at com.gsicommerce.romui.selenium.utilities.Browser.remoteWebDriver(Browser.java:248)
-	at com.gsicommerce.romui.selenium.utilities.Browser.buildBrowserInstance(Browser.java:125)
-	at com.gsicommerce.romui.selenium.utilities.Browser.getBrowserInstance(Browser.java:50)
-	at com.gsicommerce.romui.selenium.utilities.Common.startApplication(Common.java:79)
+	at com.gsicommerce.romui.selenium.utilities.Browser.remoteWebDriver(Browser.java:262)
+	at com.gsicommerce.romui.selenium.utilities.Browser.buildBrowserInstance(Browser.java:132)
+	at com.gsicommerce.romui.selenium.utilities.Browser.getBrowserInstance(Browser.java:57)
+	at com.gsicommerce.romui.selenium.utilities.Common.startApplication(Common.java:82)
 	at com.gsicommerce.romui.selenium.pages.ROMUIBasePage.setup(ROMUIBasePage.java:28)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
@@ -242,11 +705,11 @@ Caused by: org.openqa.selenium.WebDriverException: Unable to parse remote respon
 	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
-	at com.gsicommerce.romui.selenium.utilities.Browser.remoteWebDriver(Browser.java:202)
+	at com.gsicommerce.romui.selenium.utilities.Browser.remoteWebDriver(Browser.java:201)
 	... 31 more
 Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: F. Last 1 characters read: F
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.132.60&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.133.202&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
 Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
 	at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
@@ -256,12 +719,12 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.json.Json.toType(Json.java:50)
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
 	... 38 more
-... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1519435335", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1519435335'><pre>java.lang.IllegalStateException: Failed to create remote webdriver
-	at com.gsicommerce.romui.selenium.utilities.Browser.remoteWebDriver(Browser.java:248)
-	at com.gsicommerce.romui.selenium.utilities.Browser.buildBrowserInstance(Browser.java:125)
-	at com.gsicommerce.romui.selenium.utilities.Browser.getBrowserInstance(Browser.java:50)
-	at com.gsicommerce.romui.selenium.utilities.Common.startApplication(Common.java:79)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1184388434", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1184388434'><pre>java.lang.IllegalStateException: Failed to create remote webdriver
+	at com.gsicommerce.romui.selenium.utilities.Browser.remoteWebDriver(Browser.java:262)
+	at com.gsicommerce.romui.selenium.utilities.Browser.buildBrowserInstance(Browser.java:132)
+	at com.gsicommerce.romui.selenium.utilities.Browser.getBrowserInstance(Browser.java:57)
+	at com.gsicommerce.romui.selenium.utilities.Common.startApplication(Common.java:82)
 	at com.gsicommerce.romui.selenium.pages.ROMUIBasePage.setup(ROMUIBasePage.java:28)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -298,11 +761,11 @@ Caused by: org.openqa.selenium.WebDriverException: Unable to parse remote respon
 	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
-	at com.gsicommerce.romui.selenium.utilities.Browser.remoteWebDriver(Browser.java:202)
+	at com.gsicommerce.romui.selenium.utilities.Browser.remoteWebDriver(Browser.java:201)
 	... 31 more
 Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: F. Last 1 characters read: F
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.132.60&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.133.202&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
 Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
 	at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
@@ -314,7 +777,195 @@ Driver info: driver.version: RemoteWebDriver
 	... 38 more
 </pre></div></td>
 <td>0</td>
-<td>com.gsicommerce.romui.selenium.tests.SellerConfigsTests@38425407</td></tr>
+<td>com.gsicommerce.romui.selenium.tests.SellerConfigsTests@43bc63a3</td></tr>
+<tr>
+<td title='com.gsicommerce.romui.selenium.tests.SellerConfigsTests.testEditSellerFromViewPage()'><b>testEditSellerFromViewPage</b><br>Test class: com.gsicommerce.romui.selenium.tests.SellerConfigsTests<br>Test method: To Verify Edit Seller Configurations feature From View Seller Config Page.</td>
+<td><div><pre>java.lang.IllegalStateException: Failed to create remote webdriver
+	at com.gsicommerce.romui.selenium.utilities.Browser.remoteWebDriver(Browser.java:262)
+	at com.gsicommerce.romui.selenium.utilities.Browser.buildBrowserInstance(Browser.java:132)
+	at com.gsicommerce.romui.selenium.utilities.Browser.getBrowserInstance(Browser.java:57)
+	at com.gsicommerce.romui.selenium.utilities.Common.startApplication(Common.java:82)
+	at com.gsicommerce.romui.selenium.pages.ROMUIBasePage.setup(ROMUIBasePage.java:28)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: org.openqa.selenium.WebDriverException: Unable to parse remote response: Failed when trying to check whether the selenium caps were good. Account has reached the maximum number of queued automated  tests: 1
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at com.gsicommerce.romui.selenium.utilities.Browser.remoteWebDriver(Browser.java:201)
+	... 31 more
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: F. Last 1 characters read: F
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.133.202&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+	at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+	at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+	at org.openqa.selenium.json.Json.toType(Json.java:69)
+	at org.openqa.selenium.json.Json.toType(Json.java:55)
+	at org.openqa.selenium.json.Json.toType(Json.java:50)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+	... 38 more
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace989845148", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace989845148'><pre>java.lang.IllegalStateException: Failed to create remote webdriver
+	at com.gsicommerce.romui.selenium.utilities.Browser.remoteWebDriver(Browser.java:262)
+	at com.gsicommerce.romui.selenium.utilities.Browser.buildBrowserInstance(Browser.java:132)
+	at com.gsicommerce.romui.selenium.utilities.Browser.getBrowserInstance(Browser.java:57)
+	at com.gsicommerce.romui.selenium.utilities.Common.startApplication(Common.java:82)
+	at com.gsicommerce.romui.selenium.pages.ROMUIBasePage.setup(ROMUIBasePage.java:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:64)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:364)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:318)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:588)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: org.openqa.selenium.WebDriverException: Unable to parse remote response: Failed when trying to check whether the selenium caps were good. Account has reached the maximum number of queued automated  tests: 1
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at com.gsicommerce.romui.selenium.utilities.Browser.remoteWebDriver(Browser.java:201)
+	... 31 more
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: F. Last 1 characters read: F
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.133.202&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+	at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+	at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+	at org.openqa.selenium.json.Json.toType(Json.java:69)
+	at org.openqa.selenium.json.Json.toType(Json.java:55)
+	at org.openqa.selenium.json.Json.toType(Json.java:50)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+	... 38 more
+</pre></div></td>
+<td>0</td>
+<td>com.gsicommerce.romui.selenium.tests.SellerConfigsTests@43bc63a3</td></tr>
+<tr>
+<td title='com.gsicommerce.romui.selenium.tests.SellerConfigsTests.testViewSeller()'><b>testViewSeller</b><br>Test class: com.gsicommerce.romui.selenium.tests.SellerConfigsTests<br>Test method: To Verify View Seller Configurations feature</td>
+<td><div><pre>java.lang.IllegalStateException: Failed to create remote webdriver
+	at com.gsicommerce.romui.selenium.utilities.Browser.remoteWebDriver(Browser.java:262)
+	at com.gsicommerce.romui.selenium.utilities.Browser.buildBrowserInstance(Browser.java:132)
+	at com.gsicommerce.romui.selenium.utilities.Browser.getBrowserInstance(Browser.java:57)
+	at com.gsicommerce.romui.selenium.utilities.Common.startApplication(Common.java:82)
+	at com.gsicommerce.romui.selenium.pages.ROMUIBasePage.setup(ROMUIBasePage.java:28)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: org.openqa.selenium.WebDriverException: Unable to parse remote response: Failed when trying to check whether the selenium caps were good. Account has reached the maximum number of queued automated  tests: 1
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at com.gsicommerce.romui.selenium.utilities.Browser.remoteWebDriver(Browser.java:201)
+	... 31 more
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: F. Last 1 characters read: F
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.133.202&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+	at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+	at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+	at org.openqa.selenium.json.Json.toType(Json.java:69)
+	at org.openqa.selenium.json.Json.toType(Json.java:55)
+	at org.openqa.selenium.json.Json.toType(Json.java:50)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+	... 38 more
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace105224953", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace105224953'><pre>java.lang.IllegalStateException: Failed to create remote webdriver
+	at com.gsicommerce.romui.selenium.utilities.Browser.remoteWebDriver(Browser.java:262)
+	at com.gsicommerce.romui.selenium.utilities.Browser.buildBrowserInstance(Browser.java:132)
+	at com.gsicommerce.romui.selenium.utilities.Browser.getBrowserInstance(Browser.java:57)
+	at com.gsicommerce.romui.selenium.utilities.Common.startApplication(Common.java:82)
+	at com.gsicommerce.romui.selenium.pages.ROMUIBasePage.setup(ROMUIBasePage.java:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:64)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:364)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:318)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:588)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: org.openqa.selenium.WebDriverException: Unable to parse remote response: Failed when trying to check whether the selenium caps were good. Account has reached the maximum number of queued automated  tests: 1
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at com.gsicommerce.romui.selenium.utilities.Browser.remoteWebDriver(Browser.java:201)
+	... 31 more
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: F. Last 1 characters read: F
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.133.202&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+	at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+	at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+	at org.openqa.selenium.json.Json.toType(Json.java:69)
+	at org.openqa.selenium.json.Json.toType(Json.java:55)
+	at org.openqa.selenium.json.Json.toType(Json.java:50)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+	... 38 more
+</pre></div></td>
+<td>0</td>
+<td>com.gsicommerce.romui.selenium.tests.SellerConfigsTests@43bc63a3</td></tr>
 </table><p>
 </body>
 </html>

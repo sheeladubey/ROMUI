@@ -8,21 +8,24 @@ import org.testng.annotations.Test;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.gsicommerce.romui.selenium.pages.ROMUIBasePage;
-import com.gsicommerce.romui.selenium.pages.ordermanagement.CommonElementsPage;
 import com.gsicommerce.romui.selenium.testdata.SellerConfigurationsData;
 import com.gsicommerce.romui.selenium.utilities.Action;
+import com.gsicommerce.romui.selenium.utilities.Common;
 import com.gsicommerce.romui.selenium.utilities.RomuiEnumValues;
 
 public class SellerConfigsTests extends ROMUIBasePage {
 
 	private SellerConfigurationsData sellerConfigData;
-	private static int selleridselected;
 
 	@Test(enabled = true, priority = 1, description = "To Verify Manage Seller Configurations ")
 	public void testVerifyManageSellerConfig() throws JsonParseException, JsonMappingException, IOException, Exception {
-
+		sellerConfigData = SellerConfigurationsData.get(env.getFileLocation());
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
+		logger.info("Select Seller and Node");
+		romuipages.loginPage().selectNode(sellerConfigData.getStoreIndex(), sellerConfigData.getNodeID());
+		Common.waitForPageLoaded(driver);
+		logger.info("Navigate to Seller Configuration Page");
 		romuipages.orderMgmPage().clickOnSellerConfigurations();
 		logger.info("Navigated to Seller Configurations page");
 		logger.info("Verify Manager Seller Configuration display Seller id,Sellername");
@@ -32,14 +35,20 @@ public class SellerConfigsTests extends ROMUIBasePage {
 
 	@Test(enabled = true, priority = 2, description = "To Verify Edit Seller Configurations feature")
 	public void testEditSeller() throws JsonParseException, JsonMappingException, IOException, Exception {
-
+		sellerConfigData = SellerConfigurationsData.get(env.getFileLocation());
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
+		logger.info("Select Seller and Node");
+		romuipages.loginPage().selectNode(sellerConfigData.getStoreIndex(), sellerConfigData.getNodeID());
+		Common.waitForPageLoaded(driver);
+		logger.info("Navigate to Seller Configuration Page");
 		romuipages.orderMgmPage().clickOnSellerConfigurations();
 		logger.info("Navigated to Seller Configurations page");
-		logger.info("Click Edit Seller Icon and edit the field on Edit Seller Configuration page");
+		logger.info("Click Edit Seller Icon ");
+		romuipages.sellerConfigurationsPage().clickEditSellerConfig();
+		logger.info("edit the data on Edit Seller Configuration page");
 		romuipages.sellerConfigurationsPage().verifyEditSellerConfig();
-		logger.info("Verify Edit Seller updated successfully Message");
+		logger.info("Verify Edit Seller updated successfully Message afer edit done successfull.");
 		Assert.assertTrue(romuipages.sellerConfigurationsPage().txtSuccessMsg.getText()
 				.contains(RomuiEnumValues.SELLERCONFIG_EDIT.getMessage()));
 		logger.info("Edit Seller config verified successfully");
@@ -51,13 +60,14 @@ public class SellerConfigsTests extends ROMUIBasePage {
 
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
+		logger.info("Select Seller and Node");
+		romuipages.loginPage().selectNode(sellerConfigData.getStoreIndex(), sellerConfigData.getNodeID());
+		Common.waitForPageLoaded(driver);
+		logger.info("Navigate to Seller Configuration Page");
 		romuipages.orderMgmPage().clickOnSellerConfigurations();
 		logger.info("Navigated to Seller Configurations page");
-		selleridselected = CommonElementsPage.getRowNo(sellerConfigData.getSellerID());
-		logger.info("Clicking on View Seller icon for the View Seller Configuration screen to be viewed");
-		//CommonElementsPage.clickActionsIcon(selleridselected, 3, 1, 1);
-		CommonElementsPage.clickDivSpanLink(selleridselected, 3, 0, 1, 1);
-		// romuipages.sellerConfigurationsPage().viewSellerConfig();
+		logger.info("Click on View Seller icon for the View Seller Configuration screen to view");
+		romuipages.sellerConfigurationsPage().clickViewSellerConfig();
 		logger.info("Validate Seller ID:" + sellerConfigData.getSellerID());
 		Assert.assertTrue(
 				romuipages.sellerConfigurationsPage().verifyViewSellerConfig(0, sellerConfigData.getSellerID()),
@@ -93,6 +103,26 @@ public class SellerConfigsTests extends ROMUIBasePage {
 				(romuipages.sellerConfigurationsPage().lookupStrategyPanel.get(3).getText()
 						.contains(sellerConfigData.getSellerRegionLookupStrategy())),
 				"Seller Region Lookup Strategy not edited");
+		logger.info("View Seller config verified successfully");
 	}
 
+	@Test(enabled = true, priority = 4, description = "To Verify Edit Seller Configurations feature From View Seller Config Page.")
+	public void testEditSellerFromViewPage() throws JsonParseException, JsonMappingException, IOException, Exception {
+		sellerConfigData = SellerConfigurationsData.get(env.getFileLocation());
+		logger.info("Login credentials to be entered");
+		romuipages.loginPage().login(env.getUserName(), env.getPassword());
+		logger.info("Select Seller and Node");
+		romuipages.loginPage().selectNode(sellerConfigData.getStoreIndex(), sellerConfigData.getNodeID());
+		Common.waitForPageLoaded(driver);
+		logger.info("Navigate to Seller Configuration Page");
+		romuipages.orderMgmPage().clickOnSellerConfigurations();
+		logger.info("Navigated to Seller Configurations page");
+		logger.info(
+				"Click Edit Seller Icon and edit the data on Edit Seller Configuration page from View Seller Configuartion.");
+		romuipages.sellerConfigurationsPage().verifyEditSellerFromViewPage();
+		logger.info("Verify Edit Seller updated successfully Message afer edit done successfull.");
+		Assert.assertTrue(romuipages.sellerConfigurationsPage().txtSuccessMsg.getText()
+				.contains(RomuiEnumValues.SELLERCONFIG_EDIT.getMessage()));
+		logger.info("Edit Seller config from View Seller Config page verified successfully");
+	}
 }

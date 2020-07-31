@@ -1,8 +1,12 @@
 {
-	"pipelineName": "Sheelaaddpipeline",
-	"pipelineStatus":["DRAFT","ACTIVE","INACTIVE"],
-	"pipelineStartDate":"1",
-	"pipelineEndDate":"7",
+	"pipelineName": "ROMAutomation",
+	"pipelineStatus": [
+		"DRAFT",
+		"ACTIVE",
+		"INACTIVE"
+	],
+	"pipelineStartDate": "1",
+	"pipelineEndDate": "7",
 	"pipelineCriteriaGroup": [
 		"(",
 		")",
@@ -54,5 +58,7 @@
 		"Ship-to Home",
 		"Ship-to Store",
 		"Store Pickup"
-	]
+	],
+	"nodeID": "TMS_NA-Store1",
+	"storeIndex": "0"
 }

@@ -70,6 +70,12 @@ public class ShippingLabelConfigData {
 	@JsonProperty("UPSCarrierCode")
 	String UPSCarrierCode;
 
+	@JsonProperty("nodeID")
+	String nodeID;
+
+	@JsonProperty("storeIndex")
+	int storeIndex;
+
 	public List<String> getserviceProviderName() {
 		return serviceProviderName;
 	}
@@ -146,6 +152,14 @@ public class ShippingLabelConfigData {
 
 	public String getUPSCarrierCode() {
 		return UPSCarrierCode;
+	}
+
+	public int getStoreIndex() {
+		return storeIndex;
+	}
+
+	public String getNodeID() {
+		return nodeID;
 	}
 
 	public static ShippingLabelConfigData get(String filename)

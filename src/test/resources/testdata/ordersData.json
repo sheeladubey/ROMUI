@@ -45,7 +45,8 @@
 	"BillToPhone": "2345678901",
 	"ItemID": [
 		"21-ISPUProd01",
-		"21-RITOM0191a"
+		"21-RITOM0191a",
+		"21-sheelatestsku"
 	],
 	"QTY": [
 		"10",
@@ -63,5 +64,7 @@
 		"Customer returning for price adjustment",
 		"Non-Sellable (damaged, partially used, etc.)"
 	],
-	"ReturnComment": "Sheela"
+	"ReturnComment": "Sheela",
+	"nodeID":"TMS_NA-Store1",
+	"storeIndex":"0"
 }

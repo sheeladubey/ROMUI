@@ -63,18 +63,20 @@ public class LoginPage {
 	private static List<WebElement> btnsignout;
 
 	public void login(String username, String passwd) {
-		Common.waitForElement(driver, txtUserName, 2);
+		Common.waitForElement(driver, txtUserName, 20);
 		txtUserName.sendKeys(username);
 		txtPasswd.sendKeys(passwd);
-		// btnSingIn.click();
-		Action.clickUsingJavaScipt(btnSingIn);
-		//selectStore(env.getSellerId(), env.getStoreId());
+		if (env.getBrowserType().contains("ie")) {
+			Action.clickUsingJavaScipt(btnSingIn);
+		} else {
+			btnSingIn.click();
+		}
 	}
 
 	public void selectStore(String sellerid, String storeId) {
 		try {
-			// btnStore.click();
-			Action.clickUsingJavaScipt(btnStore);
+
+			btnStore.click();
 			Action.waitForElementToBeClickable(driver, txtbxStoreSearch, 30);
 			Action.enter(txtbxStoreSearch, storeId);
 			List<WebElement> storeList = driver.findElements(By.xpath("//button[contains(text(),'" + storeId + "')]"));
@@ -82,39 +84,34 @@ public class LoginPage {
 			for (int i = 0; i < size; i++) {
 
 				if (lststorelist.get(i).getText().contains(sellerid)) {
-					//storeList.get(i - 1).click();
-					Action.clickUsingJavaScipt(storeList.get(i - 1));
+					storeList.get(i - 1).click();
 					break;
 				}
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
 	}
 
-	
-	public void selectNode(String nodeId, String storeId,int index) {
-       // int index = 0;
-		index=0;
-        btnStore.click();
-        Action.waitForElementToBeClickable(driver, txtbxStoreSearch, 30);
-        Action.enter(txtbxStoreSearch, storeId);
-     //   if(nodeId=="TMSUS") {
-        if(nodeId==env.getSellerId()) {
-           index = 6;        	
-            } else if(nodeId==env.getSellerId()) {
-                index = 1;
-            }
-        storeId=env.getStoreId();
-        driver.findElement(By.xpath(".//li["+index+"]//form/button[contains(text(), '"+storeId+"')]")).click();
-    }
-	
-	
 	public void clickSignout() {
 		Action.clickUsingJavaScipt(btnStore);
 		// btnStore.click();
 		btnsignout.get(1).click();
 
+	}
+
+	public void selectNode(int index, String storeId) {
+
+		btnStore.click();
+		Action.waitForElementToBeClickable(driver, txtbxStoreSearch, 30);
+		Action.enter(txtbxStoreSearch, storeId);
+		if (index == 0) {
+			driver.findElement(By.xpath(".//li//form/button[contains(text(), '" + storeId + "')]")).click();
+		} else {
+			driver.findElement(By.xpath(".//li[" + index + "]//form/button[contains(text(), '" + storeId + "')]"))
+					.click();
+		}
 	}
 
 }

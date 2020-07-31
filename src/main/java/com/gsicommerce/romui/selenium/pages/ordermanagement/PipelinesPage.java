@@ -177,7 +177,7 @@ public class PipelinesPage {
 		// btnContinueConfig.click();
 		Action.waitForElementToBeClickable(driver, btnContinueConfig, 10);
 		Action.clickUsingJavaScipt(btnContinueConfig);
-		rowNoaddPipeline = CommonElementsPage.getRowNo(addpipelineName);
+		rowNoaddPipeline = CommonElementsPage.getRowNo(addpipelineName, 1);
 		System.out.println("Row Selected for recently added pipeline is :" + rowNoaddPipeline);
 		System.out.println("Newly Added pipeline is::" + CommonElementsPage.getRowCellTextVal(rowNoaddPipeline, 1));
 		Assert.assertEquals(CommonElementsPage.getRowCellTextVal(rowNoaddPipeline, 1), addpipelineName,
@@ -197,7 +197,7 @@ public class PipelinesPage {
 				.findElement(By.xpath("//div[contains(text(),'" + addpipelineName + "')]"));
 		Assert.assertEquals(lblNameViewPipeline.getText().substring(5), addpipelineName,
 				"View Pipeline screen has not been validated");
-		Action.waitForElementToBeClickable(driver, lkviewPipelineConfig, 05);
+		Action.waitForElementToBeClickable(driver, lkviewPipelineConfig, 10);
 		Action.clickUsingJavaScipt(lkviewPipelineConfig);
 		WebElement lblNameConfigurePipeline = driver.findElement(By.cssSelector(".col-sm-3.order-mobile-spacing"));
 		Assert.assertEquals(lblNameConfigurePipeline.getText().substring(5), addpipelineName,
@@ -240,7 +240,7 @@ public class PipelinesPage {
 				"Pipelne for Draft Status hasn't been updated");
 		Action.waitForElementToBeClickable(driver, btnCancel, 10);
 		Action.clickUsingJavaScipt(btnCancel);
-		rowNoeditpipelineDraft = CommonElementsPage.getRowNo(editPipelineName);
+		rowNoeditpipelineDraft = CommonElementsPage.getRowNo(editPipelineName, 1);
 		System.out
 				.println("Edited pipeline name is:" + CommonElementsPage.getRowCellTextVal(rowNoeditpipelineDraft, 1));
 		Assert.assertEquals(CommonElementsPage.getRowCellTextVal(rowNoeditpipelineDraft, 1), editPipelineName,
@@ -278,7 +278,7 @@ public class PipelinesPage {
 				"Pipelne for Active Status hasn't been updated");
 		Action.waitForElementToBeClickable(driver, btnCancel, 10);
 		Action.clickUsingJavaScipt(btnCancel);
-		rowNoeditpipelineActive = CommonElementsPage.getRowNo(editPipelineName);
+		rowNoeditpipelineActive = CommonElementsPage.getRowNo(editPipelineName, 1);
 		System.out.println("Selected row for active edit pipeline is "
 				+ CommonElementsPage.getRowCellTextVal(rowNoeditpipelineActive, 1));
 		Assert.assertEquals(CommonElementsPage.getRowCellTextVal(rowNoeditpipelineActive, 2), "INACTIVE",
@@ -316,7 +316,7 @@ public class PipelinesPage {
 				"Pipelne for Inactive status hasn't been updated");
 		Action.waitForElementToBeClickable(driver, btnCancel, 10);
 		Action.clickUsingJavaScipt(btnCancel);
-		int rowNoeditpipelineInActive = CommonElementsPage.getRowNo(editPipelineName);
+		int rowNoeditpipelineInActive = CommonElementsPage.getRowNo(editPipelineName, 1);
 		System.out.println("selected row for edit inactive status pipeline is::"
 				+ CommonElementsPage.getRowCellTextVal(rowNoeditpipelineInActive, 1));
 		Assert.assertEquals(CommonElementsPage.getRowCellTextVal(rowNoeditpipelineInActive, 2), "ACTIVE",
@@ -356,7 +356,7 @@ public class PipelinesPage {
 		Action.clickUsingJavaScipt(btnSave);
 		Action.waitForElementToBeClickable(driver, btnContinueConfig, 10);
 		btnContinueConfig.click();
-		int copypipelineDraft = CommonElementsPage.getRowNo(copypipelineName);
+		int copypipelineDraft = CommonElementsPage.getRowNo(copypipelineName, 1);
 		Assert.assertEquals(CommonElementsPage.getRowCellTextVal(copypipelineDraft, 1), copypipelineName,
 				"Copy Pipeline for Draft status has not Saved Successfull");
 
@@ -379,7 +379,7 @@ public class PipelinesPage {
 		Action.clickUsingJavaScipt(btnSave);
 		Action.waitForElementToBeClickable(driver, btnContinueConfig, 10);
 		btnContinueConfig.click();
-		int copypipelineActive = CommonElementsPage.getRowNo(copypipelineName);
+		int copypipelineActive = CommonElementsPage.getRowNo(copypipelineName, 1);
 		Assert.assertEquals(CommonElementsPage.getRowCellTextVal(copypipelineActive, 1), copypipelineName,
 				"Copy Pipeline for Active status has not Saved Successfull");
 
@@ -402,7 +402,7 @@ public class PipelinesPage {
 		Action.clickUsingJavaScipt(btnSave);
 		Action.waitForElementToBeClickable(driver, btnContinueConfig, 10);
 		btnContinueConfig.click();
-		int copypipelineInActive = CommonElementsPage.getRowNo(copypipelineName);
+		int copypipelineInActive = CommonElementsPage.getRowNo(copypipelineName, 1);
 		Assert.assertEquals(CommonElementsPage.getRowCellTextVal(copypipelineInActive, 1), copypipelineName,
 				"Copy Pipeline for Inactive status has not been Saved Successfully");
 
@@ -462,13 +462,14 @@ public class PipelinesPage {
 	public void pipelineFormValidation()
 			throws JsonParseException, JsonMappingException, IOException, InterruptedException {
 		btnAddPipeline.click();
-		btnSaveExit.click();
+		Action.waitForElementToBeClickable(driver, btnSaveExit, 10);
+		Action.clickUsingJavaScipt(btnSaveExit);
 		Assert.assertEquals(txtformvalidationError.getText(), RomuiEnumValues.PIPELINE_FORMVALIDATION.getMessage(),
 				"Pipeline form Error Validation message has not been found");
 		// Select By Fulfillment Method
 		Reporter.log("Selecting Fulfillment Method type for Pipeline Criteria");
 		selectPipelineCriteria(0, 0, 0, 0, 1);
-		btnSaveExit.click();
+		Action.clickUsingJavaScipt(btnSaveExit);
 		Assert.assertEquals(CommonElementsPage.txtAlertErrorMsg.getText(), RomuiEnumValues.FORM_ERROR.getMessage(),
 				"Pipeline form Error Validation message has not been found");
 

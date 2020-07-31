@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?><OrderCreateRequest storeCode="BBW">
+  <Order>
+    <WebOrderId>0AUTO458501</WebOrderId>
+    <SourceId type="STORE">BBW</SourceId>
+    <Locale>en_US</Locale>
+    <Source>Customer</Source>
+    <Currency>USD</Currency>
+    <Address type="Billing">
+      <Line1>3 LImited Pkwy</Line1>
+      <Line2/>
+      <City>Columbus</City>
+      <State>OH</State>
+      <CountryCode>US</CountryCode>
+      <PostalCode>43230</PostalCode>
+      <Phone>6144152377</Phone>
+      <Customer>
+        <CustomerName>
+          <FirstName>SHEELA</FirstName>
+          <LastName>DUBEY</LastName>
+        </CustomerName>
+        <Title/>
+        <EmailAddress>SHEDUBEY@RADIAL.COM</EmailAddress>
+      </Customer>
+    </Address>
+    <CreateTime>2020-05-27T09:19:19.211-04:00</CreateTime>
+    <CustomAttributes>
+      <CustomAttribute>
+        <Name>ORDTAXERR</Name>
+        <Value>N</Value>
+      </CustomAttribute>
+      <CustomAttribute>
+        <Name>TDFCALCID</Name>
+        <Value>35085761</Value>
+      </CustomAttribute>
+      <CustomAttribute>
+        <Name>RDFUID</Name>
+        <Value>9a385394-3ad0-4a8e-80a5-0b717cc82a8d_1588615365607</Value>
+      </CustomAttribute>
+      <CustomAttribute>
+        <Name>ORDERCHANNEL</Name>
+        <Value>WEB</Value>
+      </CustomAttribute>
+    </CustomAttributes>
+    <OrderItems>
+      <OrderItem>
+        <WebLineId>1</WebLineId>
+        <ItemId>023839413</ItemId>
+        <Quantity>3</Quantity>
+        <Description>
+          <Description>Rose</Description>
+          <Color>Super Smooth Body Lotion</Color>
+          <Size>8 fl oz / 236 mL</Size>
+        </Description>
+        <Pricing>
+          <Merchandise>
+            <Amount>40.50</Amount>
+            <PromotionalDiscounts>
+              <Discount>
+                <Id/>
+                <Code>TBC_b3g2_b2g1</Code>
+                <ExternalPromoId>TBC_b3g2_b2g</ExternalPromoId>
+                <Amount>13.50</Amount>
+                <Description>BASIC</Description>
+                <LongDescription>Mix &amp; Match: Buy 3, Get 2 Free or Buy 2, Get 1 Free</LongDescription>
+                <ShortDescription/>
+                <PromoType>AMOUNT</PromoType>
+                <PromoLevel>ITEM</PromoLevel>
+              </Discount>
+            </PromotionalDiscounts>
+            <TaxData>
+              <TaxClass>76800</TaxClass>
+              <Taxes>
+                <Tax taxType="SALES" taxability="TAXABLE">
+                  <Situs>ADMINISTRATIVE_ORIGIN</Situs>
+                  <Jurisdiction jurisdictionId="28101" jurisdictionLevel="STATE">OHIO</Jurisdiction>
+                  <Imposition impositionType="General Sales and Use Tax">Sales and Use Tax</Imposition>
+                  <EffectiveRate>0.0575</EffectiveRate>
+                  <TaxableAmount>40.5</TaxableAmount>
+                  <CalculatedTax>2.33</CalculatedTax>
+                </Tax>
+                <Tax taxType="SALES" taxability="TAXABLE">
+                  <Situs>ADMINISTRATIVE_ORIGIN</Situs>
+                  <Jurisdiction jurisdictionId="28565" jurisdictionLevel="COUNTY">FRANKLIN</Jurisdiction>
+                  <Imposition impositionType="General Sales and Use Tax">Local Sales and Use Tax</Imposition>
+                  <EffectiveRate>0.0125</EffectiveRate>
+                  <TaxableAmount>40.5</TaxableAmount>
+                  <CalculatedTax>0.51</CalculatedTax>
+                </Tax>
+                <Tax taxType="SALES" taxability="TAXABLE">
+                  <Situs>ADMINISTRATIVE_ORIGIN</Situs>
+                  <Jurisdiction jurisdictionId="78115" jurisdictionLevel="DISTRICT">CENTRAL OHIO TRANSIT AUTHORITY</Jurisdiction>
+                  <Imposition impositionType="General Sales and Use Tax">Local Sales and Use Tax</Imposition>
+                  <EffectiveRate>0.005</EffectiveRate>
+                  <TaxableAmount>40.5</TaxableAmount>
+                  <CalculatedTax>0.2</CalculatedTax>
+                </Tax>
+              </Taxes>
+            </TaxData>
+            <UnitPrice>13.5</UnitPrice>
+          </Merchandise>
+          <Shipping>
+            <Amount>0.00</Amount>
+            <TaxData>
+              <TaxClass>91000</TaxClass>
+              <Taxes>
+                <Tax taxType="SALES" taxability="TAXABLE">
+                  <Situs>ADMINISTRATIVE_ORIGIN</Situs>
+                  <Jurisdiction jurisdictionId="28101" jurisdictionLevel="STATE">OHIO</Jurisdiction>
+                  <Imposition impositionType="General Sales and Use Tax">Sales and Use Tax</Imposition>
+                  <EffectiveRate>0.0</EffectiveRate>
+                  <TaxableAmount>0.0</TaxableAmount>
+                  <CalculatedTax>0.0</CalculatedTax>
+                  <NonTaxableAmount>0.00</NonTaxableAmount>
+                </Tax>
+                <Tax taxType="SALES" taxability="TAXABLE">
+                  <Situs>ADMINISTRATIVE_ORIGIN</Situs>
+                  <Jurisdiction jurisdictionId="28565" jurisdictionLevel="COUNTY">FRANKLIN</Jurisdiction>
+                  <Imposition impositionType="General Sales and Use Tax">Local Sales and Use Tax</Imposition>
+                  <EffectiveRate>0.0</EffectiveRate>
+                  <TaxableAmount>0.0</TaxableAmount>
+                  <CalculatedTax>0.0</CalculatedTax>
+                  <NonTaxableAmount>0.00</NonTaxableAmount>
+                </Tax>
+                <Tax taxType="SALES" taxability="TAXABLE">
+                  <Situs>ADMINISTRATIVE_ORIGIN</Situs>
+                  <Jurisdiction jurisdictionId="78115" jurisdictionLevel="DISTRICT">CENTRAL OHIO TRANSIT AUTHORITY</Jurisdiction>
+                  <Imposition impositionType="General Sales and Use Tax">Local Sales and Use Tax</Imposition>
+                  <EffectiveRate>0.0</EffectiveRate>
+                  <TaxableAmount>0.0</TaxableAmount>
+                  <CalculatedTax>0.0</CalculatedTax>
+                  <NonTaxableAmount>0.00</NonTaxableAmount>
+                </Tax>
+              </Taxes>
+            </TaxData>
+          </Shipping>
+        </Pricing>
+        <ShippingMethod>ISPU</ShippingMethod>
+        <ReservationId>1590585560045</ReservationId>
+        <Address type="StoreFront">
+          <Line1>90 &amp; 92 MEADOW PARK AVENUE</Line1>
+          <Line2/>
+          <City>LEWIS CENTER</City>
+          <State>OH</State>
+          <CountryCode>US</CountryCode>
+          <PostalCode>43035</PostalCode>
+          <Phone>(740) 549 - 3388</Phone>
+          <Hours>
+            <openingTimeMon>10:00 AM</openingTimeMon>
+            <closingTimeMon>9:00 PM</closingTimeMon>
+            <openingTimeTue>10:00 AM</openingTimeTue>
+            <closingTimeTue>9:00 PM</closingTimeTue>
+            <openingTimeWed>10:00 AM</openingTimeWed>
+            <closingTimeWed>9:00 PM</closingTimeWed>
+            <openingTimeThu>10:00 AM</openingTimeThu>
+            <closingTimeThu>9:00 PM</closingTimeThu>
+            <openingTimeFri>10:00 AM</openingTimeFri>
+            <closingTimeFri>9:00 PM</closingTimeFri>
+            <openingTimeSat>10:00 AM</openingTimeSat>
+            <closingTimeSat>9:00 PM</closingTimeSat>
+            <openingTimeSun>12PM</openingTimeSun>
+            <closingTimeSun>6:00 PM</closingTimeSun>
+          </Hours>
+          <Store_Code>1785</Store_Code>
+          <Store_Name>NORTHPOINTE PLAZA</Store_Name>
+          <CompanyName/>
+          <Customer>
+            <CustomerName>
+              <FirstName>SHEELA</FirstName>
+              <LastName>DUBEY</LastName>
+            </CustomerName>
+            <Title/>
+            <EmailAddress>SHEDUBEY@RADIAL.COM</EmailAddress>
+          </Customer>
+        </Address>
+        <CustomAttributes>
+          <CustomAttribute>
+            <Name>IMAGEURL</Name>
+            <Value>https://development.bathandbodyworks.com/dw/image/v2/BBDL_DEV/on/demandware.static/-/Sites-master-catalog/default/dweb610f2a/hires/023839413.jpg?sh=471</Value>
+          </CustomAttribute>
+          <CustomAttribute>
+            <Name>PRODUCTURL</Name>
+            <Value>https://development.bathandbodyworks.com/p/rose-super-smooth-body-lotion-023839413.html</Value>
+          </CustomAttribute>
+        </CustomAttributes>
+      </OrderItem>
+      <OrderItem>
+        <WebLineId>2</WebLineId>
+        <ItemId>024497846</ItemId>
+        <Quantity>3</Quantity>
+        <Description>
+          <Description>Graphite</Description>
+          <Color>Travel Size 2-in-1 Hair + Body Wash</Color>
+          <Size>3 fl oz / 88 mL</Size>
+        </Description>
+        <Pricing>
+          <Merchandise>
+            <Amount>13.00</Amount>
+            <PromotionalDiscounts>
+              <Discount>
+                <Id/>
+                <Code>OBC_b2g1_multiform</Code>
+                <ExternalPromoId>OBC_b2g1_mul</ExternalPromoId>
+                <Amount>6.50</Amount>
+                <Description>BASIC</Description>
+                <LongDescription>Mix &amp; Match: Buy 2, Get 1 Free</LongDescription>
+                <ShortDescription/>
+                <PromoType>AMOUNT</PromoType>
+                <PromoLevel>ITEM</PromoLevel>
+              </Discount>
+            </PromotionalDiscounts>
+            <TaxData>
+              <TaxClass>76800</TaxClass>
+              <Taxes>
+                <Tax taxType="SALES" taxability="TAXABLE">
+                  <Situs>ADMINISTRATIVE_ORIGIN</Situs>
+                  <Jurisdiction jurisdictionId="28101" jurisdictionLevel="STATE">OHIO</Jurisdiction>
+                  <Imposition impositionType="General Sales and Use Tax">Sales and Use Tax</Imposition>
+                  <EffectiveRate>0.0575</EffectiveRate>
+                  <TaxableAmount>13.0</TaxableAmount>
+                  <CalculatedTax>0.75</CalculatedTax>
+                </Tax>
+                <Tax taxType="SALES" taxability="TAXABLE">
+                  <Situs>ADMINISTRATIVE_ORIGIN</Situs>
+                  <Jurisdiction jurisdictionId="28565" jurisdictionLevel="COUNTY">FRANKLIN</Jurisdiction>
+                  <Imposition impositionType="General Sales and Use Tax">Local Sales and Use Tax</Imposition>
+                  <EffectiveRate>0.0125</EffectiveRate>
+                  <TaxableAmount>13.0</TaxableAmount>
+                  <CalculatedTax>0.16</CalculatedTax>
+                </Tax>
+                <Tax taxType="SALES" taxability="TAXABLE">
+                  <Situs>ADMINISTRATIVE_ORIGIN</Situs>
+                  <Jurisdiction jurisdictionId="78115" jurisdictionLevel="DISTRICT">CENTRAL OHIO TRANSIT AUTHORITY</Jurisdiction>
+                  <Imposition impositionType="General Sales and Use Tax">Local Sales and Use Tax</Imposition>
+                  <EffectiveRate>0.005</EffectiveRate>
+                  <TaxableAmount>13.0</TaxableAmount>
+                  <CalculatedTax>0.07</CalculatedTax>
+                </Tax>
+              </Taxes>
+            </TaxData>
+            <UnitPrice>6.5</UnitPrice>
+          </Merchandise>
+          <Shipping>
+            <Amount>0.00</Amount>
+            <TaxData>
+              <TaxClass>91000</TaxClass>
+              <Taxes>
+                <Tax taxType="SALES" taxability="TAXABLE">
+                  <Situs>ADMINISTRATIVE_ORIGIN</Situs>
+                  <Jurisdiction jurisdictionId="28101" jurisdictionLevel="STATE">OHIO</Jurisdiction>
+                  <Imposition impositionType="General Sales and Use Tax">Sales and Use Tax</Imposition>
+                  <EffectiveRate>0.0</EffectiveRate>
+                  <TaxableAmount>0.0</TaxableAmount>
+                  <CalculatedTax>0.0</CalculatedTax>
+                  <NonTaxableAmount>0.00</NonTaxableAmount>
+                </Tax>
+                <Tax taxType="SALES" taxability="TAXABLE">
+                  <Situs>ADMINISTRATIVE_ORIGIN</Situs>
+                  <Jurisdiction jurisdictionId="28565" jurisdictionLevel="COUNTY">FRANKLIN</Jurisdiction>
+                  <Imposition impositionType="General Sales and Use Tax">Local Sales and Use Tax</Imposition>
+                  <EffectiveRate>0.0</EffectiveRate>
+                  <TaxableAmount>0.0</TaxableAmount>
+                  <CalculatedTax>0.0</CalculatedTax>
+                  <NonTaxableAmount>0.00</NonTaxableAmount>
+                </Tax>
+                <Tax taxType="SALES" taxability="TAXABLE">
+                  <Situs>ADMINISTRATIVE_ORIGIN</Situs>
+                  <Jurisdiction jurisdictionId="78115" jurisdictionLevel="DISTRICT">CENTRAL OHIO TRANSIT AUTHORITY</Jurisdiction>
+                  <Imposition impositionType="General Sales and Use Tax">Local Sales and Use Tax</Imposition>
+                  <EffectiveRate>0.0</EffectiveRate>
+                  <TaxableAmount>0.0</TaxableAmount>
+                  <CalculatedTax>0.0</CalculatedTax>
+                  <NonTaxableAmount>0.00</NonTaxableAmount>
+                </Tax>
+              </Taxes>
+            </TaxData>
+          </Shipping>
+        </Pricing>
+        <ShippingMethod>ISPU</ShippingMethod>
+        <ReservationId>1590585560045</ReservationId>
+        <Address type="StoreFront">
+          <Line1>90 &amp; 92 MEADOW PARK AVENUE</Line1>
+          <Line2/>
+          <City>LEWIS CENTER</City>
+          <State>OH</State>
+          <CountryCode>US</CountryCode>
+          <PostalCode>43035</PostalCode>
+          <Phone>(740) 549 - 3388</Phone>
+          <Hours>
+            <openingTimeMon>10:00 AM</openingTimeMon>
+            <closingTimeMon>9:00 PM</closingTimeMon>
+            <openingTimeTue>10:00 AM</openingTimeTue>
+            <closingTimeTue>9:00 PM</closingTimeTue>
+            <openingTimeWed>10:00 AM</openingTimeWed>
+            <closingTimeWed>9:00 PM</closingTimeWed>
+            <openingTimeThu>10:00 AM</openingTimeThu>
+            <closingTimeThu>9:00 PM</closingTimeThu>
+            <openingTimeFri>10:00 AM</openingTimeFri>
+            <closingTimeFri>9:00 PM</closingTimeFri>
+            <openingTimeSat>10:00 AM</openingTimeSat>
+            <closingTimeSat>9:00 PM</closingTimeSat>
+            <openingTimeSun>12PM</openingTimeSun>
+            <closingTimeSun>6:00 PM</closingTimeSun>
+          </Hours>
+          <Store_Code>1785</Store_Code>
+          <Store_Name>NORTHPOINTE PLAZA</Store_Name>
+          <CompanyName/>
+          <Customer>
+            <CustomerName>
+              <FirstName>SHEELA</FirstName>
+              <LastName>DUBEY</LastName>
+            </CustomerName>
+            <Title/>
+            <EmailAddress>SHEDUBEY@RADIAL.COM</EmailAddress>
+          </Customer>
+        </Address>
+        <CustomAttributes>
+          <CustomAttribute>
+            <Name>IMAGEURL</Name>
+            <Value>https://development.bathandbodyworks.com/dw/image/v2/BBDL_DEV/on/demandware.static/-/Sites-master-catalog/default/dwae76795c/hires/024497846.jpg?sh=471</Value>
+          </CustomAttribute>
+          <CustomAttribute>
+            <Name>PRODUCTURL</Name>
+            <Value>https://development.bathandbodyworks.com/p/graphite-travel-size-2-in-1-hair-body-wash-024497846.html</Value>
+          </CustomAttribute>
+        </CustomAttributes>
+      </OrderItem>
+      <OrderItem>
+        <WebLineId>3</WebLineId>
+        <ItemId>024510498</ItemId>
+        <Quantity>2</Quantity>
+        <Description>
+          <Description>Into the Night</Description>
+          <Color>Travel Size Shower Gel</Color>
+          <Size>3 fl oz / 88 mL</Size>
+        </Description>
+        <Pricing>
+          <Merchandise>
+            <Amount>13</Amount>
+            <TaxData>
+              <TaxClass>76800</TaxClass>
+              <Taxes>
+                <Tax taxType="SALES" taxability="TAXABLE">
+                  <Situs>ADMINISTRATIVE_ORIGIN</Situs>
+                  <Jurisdiction jurisdictionId="28101" jurisdictionLevel="STATE">OHIO</Jurisdiction>
+                  <Imposition impositionType="General Sales and Use Tax">Sales and Use Tax</Imposition>
+                  <EffectiveRate>0.0575</EffectiveRate>
+                  <TaxableAmount>13.0</TaxableAmount>
+                  <CalculatedTax>0.75</CalculatedTax>
+                </Tax>
+                <Tax taxType="SALES" taxability="TAXABLE">
+                  <Situs>ADMINISTRATIVE_ORIGIN</Situs>
+                  <Jurisdiction jurisdictionId="28565" jurisdictionLevel="COUNTY">FRANKLIN</Jurisdiction>
+                  <Imposition impositionType="General Sales and Use Tax">Local Sales and Use Tax</Imposition>
+                  <EffectiveRate>0.0125</EffectiveRate>
+                  <TaxableAmount>13.0</TaxableAmount>
+                  <CalculatedTax>0.16</CalculatedTax>
+                </Tax>
+                <Tax taxType="SALES" taxability="TAXABLE">
+                  <Situs>ADMINISTRATIVE_ORIGIN</Situs>
+                  <Jurisdiction jurisdictionId="78115" jurisdictionLevel="DISTRICT">CENTRAL OHIO TRANSIT AUTHORITY</Jurisdiction>
+                  <Imposition impositionType="General Sales and Use Tax">Local Sales and Use Tax</Imposition>
+                  <EffectiveRate>0.005</EffectiveRate>
+                  <TaxableAmount>13.0</TaxableAmount>
+                  <CalculatedTax>0.06</CalculatedTax>
+                </Tax>
+              </Taxes>
+            </TaxData>
+            <UnitPrice>6.5</UnitPrice>
+          </Merchandise>
+          <Shipping>
+            <Amount>0.00</Amount>
+            <TaxData>
+              <TaxClass>91000</TaxClass>
+              <Taxes>
+                <Tax taxType="SALES" taxability="TAXABLE">
+                  <Situs>ADMINISTRATIVE_ORIGIN</Situs>
+                  <Jurisdiction jurisdictionId="28101" jurisdictionLevel="STATE">OHIO</Jurisdiction>
+                  <Imposition impositionType="General Sales and Use Tax">Sales and Use Tax</Imposition>
+                  <EffectiveRate>0.0</EffectiveRate>
+                  <TaxableAmount>0.0</TaxableAmount>
+                  <CalculatedTax>0.0</CalculatedTax>
+                  <NonTaxableAmount>0.00</NonTaxableAmount>
+                </Tax>
+                <Tax taxType="SALES" taxability="TAXABLE">
+                  <Situs>ADMINISTRATIVE_ORIGIN</Situs>
+                  <Jurisdiction jurisdictionId="28565" jurisdictionLevel="COUNTY">FRANKLIN</Jurisdiction>
+                  <Imposition impositionType="General Sales and Use Tax">Local Sales and Use Tax</Imposition>
+                  <EffectiveRate>0.0</EffectiveRate>
+                  <TaxableAmount>0.0</TaxableAmount>
+                  <CalculatedTax>0.0</CalculatedTax>
+                  <NonTaxableAmount>0.00</NonTaxableAmount>
+                </Tax>
+                <Tax taxType="SALES" taxability="TAXABLE">
+                  <Situs>ADMINISTRATIVE_ORIGIN</Situs>
+                  <Jurisdiction jurisdictionId="78115" jurisdictionLevel="DISTRICT">CENTRAL OHIO TRANSIT AUTHORITY</Jurisdiction>
+                  <Imposition impositionType="General Sales and Use Tax">Local Sales and Use Tax</Imposition>
+                  <EffectiveRate>0.0</EffectiveRate>
+                  <TaxableAmount>0.0</TaxableAmount>
+                  <CalculatedTax>0.0</CalculatedTax>
+                  <NonTaxableAmount>0.00</NonTaxableAmount>
+                </Tax>
+              </Taxes>
+            </TaxData>
+          </Shipping>
+        </Pricing>
+        <ShippingMethod>ISPU</ShippingMethod>
+        <ReservationId>1590585560045</ReservationId>
+        <Address type="StoreFront">
+          <Line1>90 &amp; 92 MEADOW PARK AVENUE</Line1>
+          <Line2/>
+          <City>LEWIS CENTER</City>
+          <State>OH</State>
+          <CountryCode>US</CountryCode>
+          <PostalCode>43035</PostalCode>
+          <Phone>(740) 549 - 3388</Phone>
+          <Hours>
+            <openingTimeMon>10:00 AM</openingTimeMon>
+            <closingTimeMon>9:00 PM</closingTimeMon>
+            <openingTimeTue>10:00 AM</openingTimeTue>
+            <closingTimeTue>9:00 PM</closingTimeTue>
+            <openingTimeWed>10:00 AM</openingTimeWed>
+            <closingTimeWed>9:00 PM</closingTimeWed>
+            <openingTimeThu>10:00 AM</openingTimeThu>
+            <closingTimeThu>9:00 PM</closingTimeThu>
+            <openingTimeFri>10:00 AM</openingTimeFri>
+            <closingTimeFri>9:00 PM</closingTimeFri>
+            <openingTimeSat>10:00 AM</openingTimeSat>
+            <closingTimeSat>9:00 PM</closingTimeSat>
+            <openingTimeSun>12PM</openingTimeSun>
+            <closingTimeSun>6:00 PM</closingTimeSun>
+          </Hours>
+          <Store_Code>1785</Store_Code>
+          <Store_Name>NORTHPOINTE PLAZA</Store_Name>
+          <CompanyName/>
+          <Customer>
+            <CustomerName>
+              <FirstName>SHEELA</FirstName>
+              <LastName>DUBEY</LastName>
+            </CustomerName>
+            <Title/>
+            <EmailAddress>SHEDUBEY@RADIAL.COM</EmailAddress>
+          </Customer>
+        </Address>
+        <CustomAttributes>
+          <CustomAttribute>
+            <Name>IMAGEURL</Name>
+            <Value>https://development.bathandbodyworks.com/dw/image/v2/BBDL_DEV/on/demandware.static/-/Sites-master-catalog/default/dwf4def619/hires/024510498.jpg?sh=471</Value>
+          </CustomAttribute>
+          <CustomAttribute>
+            <Name>PRODUCTURL</Name>
+            <Value>https://development.bathandbodyworks.com/p/into-the-night-travel-size-shower-gel-024510498.html</Value>
+          </CustomAttribute>
+        </CustomAttributes>
+      </OrderItem>
+    </OrderItems>
+    <Payments>
+      <CreditCard>
+        <PaymentContext>
+          <OrderAppId>BBW</OrderAppId>
+          <PaymentSessionId>08020195</PaymentSessionId>
+          <TenderType>DC</TenderType>
+          <PaymentAccountUniqueId isToken="true">601100cwY6r92780</PaymentAccountUniqueId>
+        </PaymentContext>
+        <PaymentRequestId>1590585561218</PaymentRequestId>
+        <CreateTimeStamp>2020-05-27T09:19:19.211-04:00</CreateTimeStamp>
+        <Amount>71.49</Amount>
+        <Authorization>
+          <ResponseCode>APPROVED</ResponseCode>
+          <BankAuthorizationCode>004442</BankAuthorizationCode>
+          <CVV2ResponseCode>M</CVV2ResponseCode>
+          <AVSResponseCode>Y</AVSResponseCode>
+          <ExtendedAuthorizationResponseCodes>
+            <ResponseCodeDescription>AP01</ResponseCodeDescription>
+            <ReasonCode>AP01</ReasonCode>
+          </ExtendedAuthorizationResponseCodes>
+          <AmountAuthorized>71.49</AmountAuthorized>
+        </Authorization>
+        <ExpirationDate>2022-11</ExpirationDate>
+      </CreditCard>
+    </Payments>
+  </Order>
+  <Context>
+    <Locale>en_US</Locale>
+    <BrowserData>
+      <HostName>65.60.232.255</HostName>
+      <IPAddress>65.60.232.255</IPAddress>
+      <SessionId>8W5pesIQfxWs03OmU156SFdtnqG8U5h2YQk=</SessionId>
+      <UserAgent>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36</UserAgent>
+      <Connection>Keep-Alive</Connection>
+      <JavascriptData>TF1;015;;;;;;;;;;;;;;;;;;;;;;Mozilla;Netscape;5.0%6C20%6C28Windows%6C20NT%6C2010.0%6C3B%6C20Win64%6C3B%6C20x64%6C29%6C20AppleWebKit/537.36%6C20%6C28KHTML%6C2C%6C20like%6C20Gecko%6C29%6C20Chrome/81.0.4044.138%6C20Safari/537.36;20030107;undefined;true;;true;Win32;undefined;Mozilla/5.0%6C20%6C28Windows%6C20NT%6C2010.0%6C3B%6C20Win64%6C3B%6C20x64%6C29%6C20AppleWebKit/537.36%6C20%6C28KHTML%6C2C%6C20like%6C20Gecko%6C29%6C20Chrome/81.0.4044.138%6C20Safari/537.36;en-US;undefined;development.bathandbodyworks.com;undefined;undefined;undefined;undefined;true;true;1590585558923;-5;6/7/2005%6C2C%6C209%6C3A33%6C3A44%6C20PM;1366;768;;;;;;;11;300;240;5/27/2020%6C2C%6C209%6C3A19%6C3A18%6C20AM;24;1366;728;0;0;;;;;;;;;;;;;;;;;;;14;</JavascriptData>
+      <Referrer>https://development.bathandbodyworks.com/cart?dwcont=C172206519</Referrer>
+      <HTTPAcceptData>
+        <ContentTypes>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</ContentTypes>
+        <Encoding>gzip</Encoding>
+        <Language>en-US,en;q=0.9</Language>
+        <CharSet>UTF-8</CharSet>
+      </HTTPAcceptData>
+      <Cookies/>
+    </BrowserData>
+    <TdlOrderTimestamp>2020-05-27T09:19:19.211-04:00</TdlOrderTimestamp>
+    <SessionInfo>
+      <TimeSpentOnSite>199257</TimeSpentOnSite>
+      <AuthorizationAttempts>1</AuthorizationAttempts>
+    </SessionInfo>
+  </Context>
+</OrderCreateRequest>

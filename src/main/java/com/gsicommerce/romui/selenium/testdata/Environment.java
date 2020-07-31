@@ -23,10 +23,6 @@ public class Environment {
 		return getParam("storeEnvironment");
 	}
 
-	public String getStoreEnvironmentUAT() {
-		return getParam("storeEnvironmentUAT");
-	}
-
 	public String getUserName() {
 		return getParam("adminUserName");
 	}
@@ -38,19 +34,6 @@ public class Environment {
 	public String getFileLocation() {
 		return getParam("dataFile");
 	}
-	
-	public String getHost() {
-		return getParam("HOST");
-	}
-	
-	public String getApikey() {
-		return getParam("apikey");
-	}
-	
-	public String getContentType() {
-		return getParam("content-type");
-	}
-	
 
 	public Integer getWaitPeriod() {
 		try {
@@ -79,11 +62,4 @@ public class Environment {
 		}
 	}
 
-	public String getStoreId() {
-		return getParam("storeID");
-	}
-
-	public String getSellerId() {
-		return getParam("sellerID");
-	}
 }

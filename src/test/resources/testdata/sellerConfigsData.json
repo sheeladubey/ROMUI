@@ -7,5 +7,7 @@
 "OSDescriptionsPre-SellLineCreated":"Pre-Sell Line Created",
 "OSDescriptionsDummyReturn":"DummyReturn Sheela",
 "InventoryAdjReasonsCode":"Sheela",
-"SellerRegionLookupStrategy":"Country Code"
+"SellerRegionLookupStrategy":"Country Code",
+"nodeID":"TMS_NA-Store1",
+"storeIndex":"0"
 }

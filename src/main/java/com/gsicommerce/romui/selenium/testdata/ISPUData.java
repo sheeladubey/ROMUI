@@ -12,8 +12,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class ISPUData {
 
-	@JsonProperty("orderNo")
-	String orderNo;
+	@JsonProperty("orderNoList")
+	List<String> orderNoList;
 
 	@JsonProperty("nodeID")
 	String nodeID;
@@ -26,9 +26,30 @@ public class ISPUData {
 
 	@JsonProperty("LocId")
 	String LocId;
+	
+	@JsonProperty("shipMethod")
+	String shipMethod;
+	
+	@JsonProperty("declineQty")
+	String declineQty;
+	
+	@JsonProperty("storeIndex")
+	int storeIndex;
 
-	public String getOrderNo() {
-		return orderNo;
+	public int getStoreIndex() {
+		return storeIndex;
+	}
+
+	public String getDeclineQty() {
+		return declineQty;
+	}
+
+	public String getShipMethod() {
+		return shipMethod;
+	}
+
+	public List<String> getOrderNoList() {
+		return orderNoList;
 	}
 
 	public String getNodeID() {
@@ -46,6 +67,8 @@ public class ISPUData {
 	public String getLocId() {
 		return LocId;
 	}
+	
+	
 
 	public static ISPUData get(String filename) throws JsonParseException, JsonMappingException, IOException {
 		ObjectMapper mapper = new ObjectMapper();

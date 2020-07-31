@@ -1,42 +1,35 @@
 package com.gsicommerce.romui.selenium.utilities;
 
-import static org.testng.Assert.fail;
-
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.NoSuchFrameException;
 import org.openqa.selenium.UnhandledAlertException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.gsicommerce.romui.selenium.testdata.Environment;
-import com.gsicommerce.romui.selenium.utilities.ElementPresent;
 
 public class Action {
 
 	// DELAY is a value which will be used in waitForElement method and can be
 	// increased if the environment is slow.
 	private static final Integer DELAY = 3;
-	private static final String GENERAL_ERROR = "/waroot/system_branding.gif";
 	public static WebDriver driver;
 	public Environment env;
 	protected Integer WAIT_PERIOD;
@@ -68,251 +61,12 @@ public class Action {
 		}
 	}
 
-	/**
-	 * This is a protected method which waits for the webelement to appear on the
-	 * page and returns the webelement object. This method will be used by
-	 * webelement class constructor.
-	 * 
-	 * @param driver
-	 * @param element
-	 * @param sec     - Waiting period for webelement. it is in seconds.
-	 * @return WebElement
-	 */
-	private WebElement waitForElement(final By element, final int sec) {
-		final Wait<WebDriver> wait = new WebDriverWait(driver, DELAY * sec);
-		final ExpectedCondition<WebElement> condition = new ElementPresent(element);
-		;
-		try {
-			final WebElement we = wait.until(condition);
-			return we;
-		} catch (final WebDriverException e) {
-			return null;
-		}
-	}
-
-	/**
-	 * find a web element by chaining the list of locators together. ex:
-	 * findElement(By.id("main_content"), By.linkText("Storefront"))
-	 * 
-	 * @param locators
-	 * @return
-	 */
-	public GsiWebElement findElement(final By... locators) {
-		return findElement(EXPLICIT_WAIT, locators);
-
-	}
-
-	public GsiWebElement findElement(final boolean wait, final By... locators) {
-		if (locators.length < 1) {
-			throw new IllegalArgumentException("at least one locator must be provided");
-		}
-
-		WebElement element;
-		if (wait) {
-			element = waitForElement(locators[0], this.WAIT_PERIOD);
-		} else {
-			try {
-				element = driver.findElement(locators[0]);
-			} catch (final WebDriverException e) {
-				element = null;
-			}
-		}
-
-		if (element == null) {
-			if (verifyTextPresentIn(GENERAL_ERROR)) {
-				fail("APPLICATION CRASHED. TEST FAILED.");
-			}
-		}
-
-		// walk the chain of By locators
-		for (int i = 1; i < locators.length; i++) {
-			element = wrapElement(element, (String) null).findElement(locators[i]);
-		}
-
-		return wrapElement(element, locators[locators.length - 1]);
-	}
-
-	protected Webtable_Old findWebTable(final By locator, final WebDriver driver, final Environment env) {
-		return new Webtable_Old(findElement(locator), driver, env);
-	}
-
-	public List<GsiWebElement> findElements(final By locator) {
-		return findElements(EXPLICIT_WAIT, locator);
-	}
-
-	/**
-	 * This findElements is a wrapper for webdriver FindElements method and uses
-	 * wait
-	 * 
-	 * @param wait
-	 * @param locator
-	 * @return
-	 */
-	protected List<GsiWebElement> findElements(final boolean wait, final By locator) {
-
-		if (wait) {
-			waitForElement(locator, this.WAIT_PERIOD);
-		}
-
-		final List<GsiWebElement> list = new ArrayList<GsiWebElement>();
-
-		final List<WebElement> elements = driver.findElements(locator);
-		if (elements == null) {
-			if (verifyTextPresentIn(GENERAL_ERROR)) {
-				fail("APPLICATION CRASHED. TEST FAILED.");
-			}
-
-			return list;
-		}
-
-		for (final WebElement element : elements) {
-			list.add(wrapElement(element, locator));
-		}
-
-		return list;
-	}
-
 	protected void enableWait() {
 		driver.manage().timeouts().implicitlyWait(WAIT_PERIOD, TimeUnit.SECONDS);
 	}
 
 	protected void disableWait() {
 		driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-	}
-
-	protected GsiWebElement wrapElement(final WebElement element, final By locator) {
-		return new AssertingWebElement(element, locator);
-	}
-
-	protected WebElement wrapElement(final WebElement element, final String locator) {
-		return new AssertingWebElement(element, locator);
-	}
-
-	/**
-	 * This method will search the page for a webtable which has a column header
-	 * provided and return the webtable object.
-	 * 
-	 * @param driver
-	 * @param columnHeader
-	 * @return Webtable object
-	 */
-	protected Webtable_Old findWebTable(final String columnHeader) {
-		enableExplicitWait();
-		try {
-			for (int i = 0; i < 2; i++) {
-
-				for (final WebElement webtable : findElements(By.tagName("table"))) {
-					final List<WebElement> headerColumns = new ArrayList<WebElement>();
-					try {
-						headerColumns.addAll(webtable.findElements(By.xpath("thead/tr/th")));
-					} catch (final NoSuchElementException ignored) {
-						// roll on!
-					}
-
-					headerColumns.addAll(webtable.findElements(By.xpath("tbody/tr/td")));
-					headerColumns.addAll(webtable.findElements(By.xpath("tbody/tr/th")));
-
-					for (final WebElement headerColumn : headerColumns) {
-						if (headerColumn.getText().equalsIgnoreCase(columnHeader)) {
-							return new Webtable_Old(new AssertingWebElement(webtable), driver, env);
-						}
-					}
-				}
-
-				// Common.sleepFor(DELAY * 5000);
-			}
-			return new Webtable_Old(null, driver, env);
-		} finally {
-			enableImplicitWait();
-		}
-	}
-
-	/**
-	 * This method will search the page for a webtable which has a column header
-	 * provided and return the webtable object. This method should be used if you
-	 * have more than one webtable using same column headers. Use index parameter to
-	 * specify which one you want.
-	 * 
-	 * @param driver
-	 * @param columnHeader
-	 * @index integer which decides which webtable
-	 * @return Webtable object
-	 */
-	protected Webtable_Old findWebTable(final String columnHeader, final int index) {
-
-		enableExplicitWait();
-		try {
-			final List<Webtable_Old> matchingWebtables = new ArrayList<Webtable_Old>();
-			final List<GsiWebElement> webtables = findElements(By.tagName("table"));
-
-			for (final GsiWebElement webtable : webtables) {
-				final List<WebElement> headerColumns = new ArrayList<WebElement>();
-				try {
-					headerColumns.addAll(webtable.findElements(By.xpath("thead/tr/th")));
-				} catch (final NoSuchElementException ignored) {
-					// roll on!
-				}
-				headerColumns.addAll(webtable.findElements(By.xpath("tbody/tr/td")));
-				headerColumns.addAll(webtable.findElements(By.xpath("tbody/tr/th")));
-
-				for (final WebElement headerColumn : headerColumns) {
-					if (headerColumn.getText().equalsIgnoreCase(columnHeader)) {
-						final Webtable_Old wt = new Webtable_Old(webtable, driver, env);
-						matchingWebtables.add(wt);
-						break;
-					}
-				}
-			}
-
-			if (index >= matchingWebtables.size()) {
-				fail("Search for Table Failed. No table found with specified column header.");
-				return null;
-			}
-			return matchingWebtables.get(index);
-		} finally {
-			enableImplicitWait();
-		}
-	}
-
-	/**
-	 * This method will search the page for a webtable which has a column header
-	 * provided and return the collection of webtable objects. This method should be
-	 * used if you have more than one webtable using same column headers.
-	 * 
-	 * @param driver
-	 * @param columnHeader
-	 * 
-	 * @return List<Webtable> object
-	 */
-	protected List<Webtable_Old> findWebTables(final String columnHeader) {
-
-		enableExplicitWait();
-		try {
-			final List<Webtable_Old> matchingWebtables = new ArrayList<Webtable_Old>();
-			final List<GsiWebElement> webtables = findElements(By.tagName("table"));
-
-			for (final GsiWebElement webtable : webtables) {
-				final List<WebElement> headerColumns = new ArrayList<WebElement>();
-				try {
-					headerColumns.addAll(webtable.findElements(By.xpath("thead/tr/th")));
-				} catch (final NoSuchElementException ignored) {
-					// roll on!
-				}
-				headerColumns.addAll(webtable.findElements(By.xpath("tbody/tr/td")));
-				headerColumns.addAll(webtable.findElements(By.xpath("tbody/tr/th")));
-
-				for (final WebElement headerColumn : headerColumns) {
-					if (headerColumn.getText().equalsIgnoreCase(columnHeader)) {
-						final Webtable_Old wt = new Webtable_Old(webtable, driver, env);
-						matchingWebtables.add(wt);
-						break;
-					}
-				}
-			}
-			return matchingWebtables;
-		} finally {
-			enableImplicitWait();
-		}
 	}
 
 	/**
@@ -389,15 +143,6 @@ public class Action {
 	}
 
 	/**
-	 * count how many times link text shows up on a page.
-	 * 
-	 * @param linkText displayed string to find in links on-screen
-	 */
-	public int countLinks(final String linkText) {
-		return findElements(By.linkText(linkText)).size();
-	}
-
-	/**
 	 * Search the page for the text passed in
 	 * 
 	 * @param expectedText
@@ -417,40 +162,6 @@ public class Action {
 		return false;
 	}
 
-	public boolean verifyTextNotPresentIn(WebDriver driver, By locator, String expectedText, int sec) {
-		WebElement we = waitForElement(driver, locator, sec);
-		if (we != null) {
-			if (we.getText().contains(expectedText)) {
-				Assert.fail("[TEXT SEARCH FAILED] ELEMENT WITH TEXT " + expectedText
-						+ " HAS BEEN FOUND; TEXT SHOULD NOT APPEAR!");
-				return false;
-			} else if (we.getText().equalsIgnoreCase(expectedText)) {
-				Assert.fail("[TEXT SEARCH FAILED] ELEMENT WITH TEXT " + expectedText
-						+ " HAS BEEN FOUND; TEXT SHOULD NOT APPEAR!");
-				return false;
-			} else if (driver.getPageSource().contains(expectedText)) {
-				Assert.fail("[TEXT SEARCH FAILED] ELEMENT WITH TEXT " + expectedText
-						+ " HAS BEEN FOUND; TEXT SHOULD NOT APPEAR!");
-				return false;
-			} else if (driver.getPageSource().equalsIgnoreCase(expectedText)) {
-				Assert.fail("[TEXT SEARCH FAILED] ELEMENT WITH TEXT " + expectedText
-						+ " HAS BEEN FOUND; TEXT SHOULD NOT APPEAR!");
-				return false;
-			} else {
-				return true;
-			}
-		} else if (driver.getPageSource().contains(expectedText)) {
-			Assert.fail("[TEXT SEARCH FAILED] ELEMENT WITH TEXT " + expectedText
-					+ " HAS BEEN FOUND; TEXT SHOULD NOT APPEAR!");
-			return false;
-		} else if (driver.getPageSource().equalsIgnoreCase(expectedText)) {
-			Assert.fail("[TEXT SEARCH FAILED] ELEMENT WITH TEXT " + expectedText
-					+ " HAS BEEN FOUND; TEXT SHOULD NOT APPEAR!");
-			return false;
-		}
-		return true;
-	}
-
 	/**
 	 * 
 	 * @param driver
@@ -468,26 +179,6 @@ public class Action {
 			return true;
 		}
 
-	}
-
-	/**
-	 * This method is used to find Element by Label (traces label "for" attribute to
-	 * Input "id")
-	 * 
-	 * @param labelName
-	 * @return WebElement
-	 */
-	protected WebElement findElementByLabel(final String labelName) {
-		return findElement(By.id(getIdByLabel(labelName)));
-	}
-
-	private String getIdByLabel(final String labelName) {
-		for (final WebElement e : findElements(By.tagName("label"))) {
-			if (e.getText().contains(labelName)) {
-				return e.getAttribute("for");
-			}
-		}
-		return null;
 	}
 
 	public static void saveScreenShot(final String pSource, final String name, final String folderName) {
@@ -510,54 +201,6 @@ public class Action {
 		} catch (final Exception e) {// Catch exception if any
 			System.err.println("Error: " + e.getMessage());
 		}
-	}
-
-	protected WebElement findElementByHref(final String sub) {
-		final String desc = String.format("href contains <%s>", sub);
-
-		if (null == sub) {
-			return wrapElement(null, desc);
-		}
-
-		for (final WebElement e : findElements(By.tagName("a"))) {
-			if (e.getAttribute("href").contains(sub)) {
-				return e;
-			}
-		}
-
-		return wrapElement(null, desc);
-	}
-
-	/**
-	 * 
-	 * @param driver
-	 * @param element
-	 * @param sec
-	 * @return
-	 */
-	public WebElement waitForElement(WebDriver driver, By element, int sec) {
-		Wait<WebDriver> wait = new WebDriverWait(driver, DELAY * sec);
-		ExpectedCondition<WebElement> condition = new ElementPresent(element);
-		try {
-			WebElement we = wait.until(condition);
-			return we;
-		} catch (WebDriverException e) {
-			return null;
-		}
-	}
-
-	/**
-	 * This function is used to wait for a certain time until a element is loaded It
-	 * is used for ensuring the elements are loaded before taking screenshots
-	 * 
-	 * @param driver
-	 * @param element
-	 * @param sec
-	 * @return
-	 */
-	public void waitForPresenceOfElement(WebDriver driver, By element, long sec) {
-		Wait<WebDriver> wait = new WebDriverWait(driver, sec);
-		wait.until(ExpectedConditions.presenceOfElementLocated(element));
 	}
 
 	/**
@@ -625,102 +268,6 @@ public class Action {
 		return null;
 	}
 
-	/**
-	 * 
-	 * @param driver
-	 * @param locator
-	 * @param expectedText
-	 * @param sec
-	 * @return
-	 */
-	public boolean verifyTextPresentIn(WebDriver driver, By locator, String expectedText, int sec) {
-		WebElement we = waitForElement(driver, locator, sec);
-		if (we != null) {
-			// Common.sleepFor(1000);
-			if (we.getText().contains(expectedText)) {
-				return true;
-			} else if (we.getText().equalsIgnoreCase(expectedText)) {
-				return true;
-			} else if (we.getText().replace("\n", "").replace("\r", "")
-					.contains(expectedText.replace("\r", "").replace("\n", ""))) {
-				return true;
-			} else if (driver.getPageSource().contains(expectedText)) {
-				return true;
-			} else if (driver.getPageSource().equalsIgnoreCase(expectedText)) {
-				return true;
-			} else {
-				Assert.fail("[TEXT SEARCH FAILED] ELEMENT WITH TEXT " + expectedText
-						+ " NOT FOUND; TEXT CANNOT BE VERIFIED!");
-				return false;
-			}
-		} else if (driver.getPageSource().contains(expectedText)) {
-			return true;
-		} else if (driver.getPageSource().equalsIgnoreCase(expectedText)) {
-			return true;
-		}
-		Assert.fail("[TEXT SEARCH FAILED] ELEMENT WITH TEXT " + expectedText + " NOT FOUND; TEXT CANNOT BE VERIFIED!");
-		return false;
-	}
-
-	/**
-	 * 
-	 * @param driver
-	 * @param locator
-	 * @param selectAction
-	 * @param value
-	 * @return
-	 */
-	public Select selectByVisibleText(WebDriver driver, By locator, String selectAction, String value) {
-
-		Select localeList;
-
-		WebElement element = waitForElement(driver, locator, 20);
-		if (element == null) {
-			element = waitForElement(driver, locator, 20);
-		}
-
-		if (element != null) {
-			try {
-				if (element.getAttribute("type").equalsIgnoreCase("hidden")) {
-					element = null;
-				}
-			} catch (IllegalStateException e) {
-			} catch (NullPointerException e) {
-			}
-		}
-
-		if (element != null) {
-			try {
-				localeList = new Select(element);
-			} catch (IllegalStateException e) {
-				localeList = new Select(element);
-			}
-		} else {
-			localeList = null;
-		}
-
-		if (!selectAction.equalsIgnoreCase("exists")) {
-
-			try {
-				if (selectAction.equalsIgnoreCase("select")) {
-					localeList.selectByVisibleText(value);
-				} else {
-					Assert.fail(" SELECT ACTION NOT VALID. TEST FAILED.");
-				}
-			} catch (IllegalStateException e) {
-				localeList.selectByVisibleText(value);
-			} catch (NoSuchElementException e) {
-				Assert.fail(locator + " LISTBOX NOT FOUND. TEST FAILED.");
-			} catch (NullPointerException e) {
-				Assert.fail(locator + " LISTBOX NOT FOUND. TEST FAILED.");
-			} catch (org.openqa.selenium.WebDriverException e) {
-				Assert.fail(locator + " ACTION FAILED. TEST FAILED.");
-			}
-		}
-
-		return localeList;
-	}
-
 	public void moveToElement(WebElement element) {
 		actions.moveToElement(element);
 	}
@@ -743,6 +290,7 @@ public class Action {
 	/// <param name="el"></param>
 	/// <param name="Text"></param>
 	public static Select selectByVisibleText(WebElement el, String Text) {
+		clickUsingJavaScipt(el);
 		Select statusBySelect = new Select(el);
 		statusBySelect.selectByVisibleText(Text);
 		return statusBySelect;
@@ -854,6 +402,11 @@ public class Action {
 		jse.executeScript("window.scrollTo(0, document.body.scrollHeight);");
 	}
 
+	public static void scrollToTopofPage() {
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+		jse.executeScript("window.scrollTo(document.body.scrollHeight,0);");
+	}
+
 	// This will scroll the page till the element is found
 
 	public static void scrollToElementofPage(WebElement el) {
@@ -878,6 +431,28 @@ public class Action {
 			Reporter.log(e.getMessage());
 		}
 
+	}
+
+	public static void navigateBack() {
+		try {
+			driver.navigate().back();
+		} catch (final NoSuchFrameException ne) {
+			ne.printStackTrace();
+		}
+	}
+
+	public static void closePrintDialog() throws InterruptedException, AWTException {
+		Thread.sleep(15000L);
+		driver.switchTo().window(driver.getWindowHandles().toArray()[1].toString());
+		Robot r = new Robot();
+		r.delay(6000);
+		r.keyPress(KeyEvent.VK_ESCAPE);
+		r.keyRelease(KeyEvent.VK_ESCAPE);
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		// executor.executeScript("return
+		// document.querySelector('print-preview-app').shadowRoot.querySelector('print-preview-sidebar').shadowRoot.querySelector('print-preview-button-strip').shadowRoot.querySelector('cr-button.cancel-button').click();");
+		// executor.executeScript("document.getElementsByClassName('cancel')[0].click();");
+		driver.switchTo().window(driver.getWindowHandles().toArray()[0].toString());
 	}
 
 }

@@ -1,12 +1,14 @@
 {
-"Inventory Organization ID":"TMSNA_INV_ORG",
-"Inventory Organization Name":"RIT Inventory Organization",
-"Inventory Organization Defaults":"",
-"Default Shipping Calendar ID":"shippingCalendar1",
-"Default ATP Rule":"RadialRom",
-"Node Rejected Supply Action":"No Hold",
-"Group ID":"SheelaNodeGroup",
-"Calendar ID":"sheela_Cal",
-"AttributeName":"Sheela",
-"Priority":"10"
+	"Inventory Organization ID": "TMSNA_INV_ORG",
+	"Inventory Organization Name": "RIT Inventory Organization",
+	"Inventory Organization Defaults": "",
+	"Default Shipping Calendar ID": "shippingCalendar1",
+	"Default ATP Rule": "RadialRom",
+	"Node Rejected Supply Action": "No Hold",
+	"Group ID": "SheelaNodeGroup",
+	"Calendar ID": "sheela_Cal",
+	"AttributeName": "ROMAutomation",
+	"Priority": "10",
+	"nodeID": "TMS_NA-Store1",
+	"storeIndex": "0"
 }

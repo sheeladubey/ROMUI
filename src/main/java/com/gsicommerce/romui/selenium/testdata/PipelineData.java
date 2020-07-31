@@ -43,8 +43,14 @@ public class PipelineData {
 	@JsonProperty("pipelineValueFulfillmentMethod")
 	List<String> pipelineValueFulfillmentMethod;
 
+	@JsonProperty("nodeID")
+	String nodeID;
+
+	@JsonProperty("storeIndex")
+	int storeIndex;
+
 	public String getPipelineName() {
-		String pipelinename = pipelineName + Common.generateRandomID("Auto");
+		String pipelinename = pipelineName + Common.generateRandomID("");
 		return pipelinename;
 	}
 
@@ -82,6 +88,14 @@ public class PipelineData {
 
 	public List<String> getpipelineValueFulfillmentMethod() {
 		return pipelineValueFulfillmentMethod;
+	}
+
+	public int getStoreIndex() {
+		return storeIndex;
+	}
+
+	public String getNodeID() {
+		return nodeID;
 	}
 
 	public static PipelineData get(String filename) throws JsonParseException, JsonMappingException, IOException {

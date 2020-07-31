@@ -47,6 +47,7 @@ public class ExtentReporterListener implements IReporter {
 		if (tests.size() > 0) {
 			for (ITestResult result : tests.getAllResults()) {
 				test = extent.startTest(result.getMethod().getMethodName());
+				 test.log(LogStatus.INFO, result.getMethod().getMethodName() + "test is started");
 
 				test.setStartedTime(getTime(result.getStartMillis()));
 				test.setEndedTime(getTime(result.getEndMillis()));

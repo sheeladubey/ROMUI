@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu May 14 10:29:02 EDT 2020</td>
+<td>Started on:</td><td>Tue Jul 14 17:47:05 EDT 2020</td>
 </tr>
-<tr><td>Total time:</td><td>16 seconds (16860 ms)</td>
+<tr><td>Total time:</td><td>27 seconds (27624 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,20 +76,20 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.gsicommerce.romui.selenium.tests.ServiceGroupConfigsTests.testEditSellerServiceGroupConfigs()'><b>testEditSellerServiceGroupConfigs</b><br>Test class: com.gsicommerce.romui.selenium.tests.ServiceGroupConfigsTests<br>Test method: to Verify Edit Seller Service Group Configurations<br/>
-<a href="#Output-780843029" onClick='toggleBox("Output-780843029", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-2047744862" onClick='toggleBox("Output-2047744862", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-780843029" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-780843029">
+<a href="#Output-2047744862" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2047744862">
 class com.sun.proxy.$Proxy15 cannot be cast to class org.openqa.selenium.By (com.sun.proxy.$Proxy15 and org.openqa.selenium.By are in unnamed module of loader 'app')<br/>
 </div>
 </td>
-<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=81.0.4044.138)
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a href=&quot;#reship-section&quot; data-toggle=&quot;tab&quot;&gt;...&lt;/a&gt; is not clickable at point (198, 27). Other element would receive the click: &lt;img src=&quot;/assets/radial-pl/logo-bef4cc6b7119f9b49ab9234186124f9ef40d6180df314ff88f95b4e2c902a641.png&quot;&gt;
+  (Session info: chrome=83.0.4103.116)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.135.142&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.135.194&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65021}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: b3b4bdbdafda02ca55cbf01abb111995
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60206}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: cbd8067952b96f0a0e8956383aadd73e
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -100,17 +100,17 @@ Session ID: b3b4bdbdafda02ca55cbf01abb111995
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at com.sun.proxy.$Proxy14.click(Unknown Source)
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.OrderManagementMenusPage.clickOnServiceGrpConfig(OrderManagementMenusPage.java:343)
-	at com.gsicommerce.romui.selenium.tests.ServiceGroupConfigsTests.testEditSellerServiceGroupConfigs(ServiceGroupConfigsTests.java:21)
+	at com.gsicommerce.romui.selenium.pages.ordermanagement.ServiceGroupConfigsPage.editSellerServiceGroupConfigs(ServiceGroupConfigsPage.java:676)
+	at com.gsicommerce.romui.selenium.tests.ServiceGroupConfigsTests.testEditSellerServiceGroupConfigs(ServiceGroupConfigsTests.java:23)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace780843029", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace780843029'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=81.0.4044.138)
+... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2047744862", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2047744862'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a href=&quot;#reship-section&quot; data-toggle=&quot;tab&quot;&gt;...&lt;/a&gt; is not clickable at point (198, 27). Other element would receive the click: &lt;img src=&quot;/assets/radial-pl/logo-bef4cc6b7119f9b49ab9234186124f9ef40d6180df314ff88f95b4e2c902a641.png&quot;&gt;
+  (Session info: chrome=83.0.4103.116)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.135.142&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+System info: host: &apos;KOP-BM5TNF2&apos;, ip: &apos;10.140.135.194&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65021}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: b3b4bdbdafda02ca55cbf01abb111995
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\shedubey\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60206}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: cbd8067952b96f0a0e8956383aadd73e
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -130,8 +130,8 @@ Session ID: b3b4bdbdafda02ca55cbf01abb111995
 	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at com.sun.proxy.$Proxy14.click(Unknown Source)
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.OrderManagementMenusPage.clickOnServiceGrpConfig(OrderManagementMenusPage.java:343)
-	at com.gsicommerce.romui.selenium.tests.ServiceGroupConfigsTests.testEditSellerServiceGroupConfigs(ServiceGroupConfigsTests.java:21)
+	at com.gsicommerce.romui.selenium.pages.ordermanagement.ServiceGroupConfigsPage.editSellerServiceGroupConfigs(ServiceGroupConfigsPage.java:676)
+	at com.gsicommerce.romui.selenium.tests.ServiceGroupConfigsTests.testEditSellerServiceGroupConfigs(ServiceGroupConfigsTests.java:23)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -161,8 +161,8 @@ Session ID: b3b4bdbdafda02ca55cbf01abb111995
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>7</td>
-<td>com.gsicommerce.romui.selenium.tests.ServiceGroupConfigsTests@51399530</td></tr>
+<td>16</td>
+<td>com.gsicommerce.romui.selenium.tests.ServiceGroupConfigsTests@3c41ed1d</td></tr>
 </table><p>
 </body>
 </html>

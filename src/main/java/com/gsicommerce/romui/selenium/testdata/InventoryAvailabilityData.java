@@ -68,6 +68,12 @@ public class InventoryAvailabilityData {
 
 	@JsonProperty("Edit Safety Stock Value")
 	String EditSafety_Stock_Value;
+	
+	@JsonProperty("nodeID")
+	String nodeID;
+	
+	@JsonProperty("storeIndex")
+	int storeIndex;
 
 	public String getATP_Rule_Name() {
 		return ATP_Rule_Name + Common.generateRandomID("Automation");
@@ -143,6 +149,16 @@ public class InventoryAvailabilityData {
 
 	public String getEditSafety_Stock_Value() {
 		return EditSafety_Stock_Value;
+	}
+	
+	public int getStoreIndex() {
+		
+		return storeIndex;
+	}
+
+	public String getNodeID() {
+	
+		return nodeID;
 	}
 
 	public static InventoryAvailabilityData get(String filename)

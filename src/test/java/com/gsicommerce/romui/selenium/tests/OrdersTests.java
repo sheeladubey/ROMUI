@@ -7,62 +7,66 @@ import org.testng.annotations.Test;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.gsicommerce.romui.selenium.pages.ROMUIBasePage;
+import com.gsicommerce.romui.selenium.testdata.OrdersData;
 
 public class OrdersTests extends ROMUIBasePage {
 
+	private OrdersData ordersdata;
+
 	@Test(enabled = true, priority = 1, description = "to Verify search order by Order number")
 	public void testSearchOrderbyNumber() throws JsonParseException, JsonMappingException, IOException, Exception {
-
+		ordersdata = OrdersData.get(env.getFileLocation());
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		// romuipages.loginPage().loginSSO(env.getUserName(), env.getPassword());
-		// romuipages.homePage().clickOnLandingButton("Order Management");
-		// logger.info("Order Management link is clicked on");
+		logger.info("Select Seller and Node");
+		romuipages.loginPage().selectNode(ordersdata.getStoreIndex(), ordersdata.getNodeID());
+		logger.info("Navigate to Order Lookup Page");
 		romuipages.orderMgmPage().clickOnOrders();
 		logger.info("Navigated to Orders page");
 		romuipages.ordersPage().searchOrderBy(0);
 		logger.info("Search By Order Number verified");
 	}
 
-	@Test(enabled = true, priority = 2, description = "to Verify search order by Fullfillment number")
+	@Test(enabled = false, priority = 2, description = "to Verify search order by Fullfillment number")
 	public void testSearchOrderByFullfillmentNumber()
 			throws JsonParseException, JsonMappingException, IOException, Exception {
-
+		ordersdata = OrdersData.get(env.getFileLocation());
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		// romuipages.homePage().clickOnLandingButton("Order Management");
-		// logger.info("Order Management link is clicked on");
+		logger.info("Select Seller and Node");
+		romuipages.loginPage().selectNode(ordersdata.getStoreIndex(), ordersdata.getNodeID());
+		logger.info("Navigate to Order Lookup Page");
 		romuipages.orderMgmPage().clickOnOrders();
 		logger.info("Navigated to Orders page");
-		// romuipages.ordersPage().searchOrderByFulfillOrderNum("FulfillmentOrderID");
 		romuipages.ordersPage().searchOrderBy(1);
 		logger.info("Search By Fulfillment Order Number verified");
 
 	}
 
-	@Test(enabled = true, priority = 3, description = "to Verify search order by Customer Name")
+	@Test(enabled = false, priority = 3, description = "to Verify search order by Customer Name")
 	public void testSearchOrderByCustomerName()
 			throws JsonParseException, JsonMappingException, IOException, Exception {
-
+		ordersdata = OrdersData.get(env.getFileLocation());
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		// romuipages.homePage().clickOnLandingButton("Order Management");
-		// logger.info("Order Management link is clicked on");
+		logger.info("Select Seller and Node");
+		romuipages.loginPage().selectNode(ordersdata.getStoreIndex(), ordersdata.getNodeID());
+		logger.info("Navigate to Order Lookup Page");
 		romuipages.orderMgmPage().clickOnOrders();
 		logger.info("Navigated to Orders page");
-		// romuipages.ordersPage().searchOrderByCustomerName("firstname", "lastname");
 		romuipages.ordersPage().searchOrderBy(2);
 		logger.info("Search By Customer Name verified");
 
 	}
 
-	@Test(enabled = true, priority = 4, description = "to Verify search order by Email id")
+	@Test(enabled = false, priority = 4, description = "to Verify search order by Email id")
 	public void testSearchOrderByEmail() throws JsonParseException, JsonMappingException, IOException, Exception {
-
+		ordersdata = OrdersData.get(env.getFileLocation());
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		// romuipages.homePage().clickOnLandingButton("Order Management");
-		// logger.info("Order Management link is clicked on");
+		logger.info("Select Seller and Node");
+		romuipages.loginPage().selectNode(ordersdata.getStoreIndex(), ordersdata.getNodeID());
+		logger.info("Navigate to Order Lookup Page");
 		romuipages.orderMgmPage().clickOnOrders();
 		logger.info("Navigated to Orders page");
 		romuipages.ordersPage().searchOrderBy(3);
@@ -70,13 +74,14 @@ public class OrdersTests extends ROMUIBasePage {
 
 	}
 
-	@Test(enabled = true, priority = 5, description = "to Verify search order by Order Status")
+	@Test(enabled = false, priority = 5, description = "to Verify search order by Order Status")
 	public void testSearchOrderByOrderStatus() throws JsonParseException, JsonMappingException, IOException, Exception {
-
+		ordersdata = OrdersData.get(env.getFileLocation());
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		// romuipages.homePage().clickOnLandingButton("Order Management");
-		// logger.info("Order Management link is clicked on");
+		logger.info("Select Seller and Node");
+		romuipages.loginPage().selectNode(ordersdata.getStoreIndex(), ordersdata.getNodeID());
+		logger.info("Navigate to Order Lookup Page");
 		romuipages.orderMgmPage().clickOnOrders();
 		logger.info("Navigated to Orders page");
 		romuipages.ordersPage().searchOrderBy(4);
@@ -84,13 +89,12 @@ public class OrdersTests extends ROMUIBasePage {
 
 	}
 
-	@Test(enabled = true, priority = 6, description = "to Verify edit search order ")
+	@Test(enabled = false, priority = 6, description = "to Verify edit search order ")
 	public void testEditSearch() throws JsonParseException, JsonMappingException, IOException, Exception {
 
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		// romuipages.homePage().clickOnLandingButton("Order Management");
-		// logger.info("Order Management link is clicked on");
+		logger.info("Navigate to Order Lookup Page");
 		romuipages.orderMgmPage().clickOnOrders();
 		logger.info("Navigated to Orders page");
 		romuipages.ordersPage().clickEditSearch(0);
@@ -105,38 +109,37 @@ public class OrdersTests extends ROMUIBasePage {
 		logger.info("Edit Search verified for Status order ");
 	}
 
-	@Test(enabled = true, priority = 7, description = "View Order Detail page by order number search")
+	@Test(enabled = false, priority = 7, description = "View Order Detail page by order number search")
 	public void testViewOrder() throws JsonParseException, JsonMappingException, IOException, Exception {
-
+		ordersdata = OrdersData.get(env.getFileLocation());
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		romuipages.homePage().clickOnLandingButton("Order Management");
-		logger.info("Order Management link is clicked on");
+		logger.info("Select Seller and Node");
+		romuipages.loginPage().selectNode(ordersdata.getStoreIndex(), ordersdata.getNodeID());
+		logger.info("Navigate to Order Lookup Page");
 		romuipages.orderMgmPage().clickOnOrders();
 		logger.info("Navigated to Orders page");
 		logger.info("Verify view order screen for Order number search");
 		romuipages.ordersPage().viewOrders(0);
 		logger.info("View order screen has been verified by Search  Order number");
-		/*
-		 * romuipages.ordersPage().viewOrders(1); logger.
-		 * info("View order screen has been verified by Search  Fulfillment Order number"
-		 * ); romuipages.ordersPage().viewOrders(2);
-		 * logger.info("View order screen has been verified by Search  Customer Name");
-		 * romuipages.ordersPage().viewOrders(3);
-		 * logger.info("View order screen has been verified by Search  Email");
-		 * romuipages.ordersPage().viewOrders(4);
-		 * logger.info("View order screen has been verified by Search  order status");
-		 */
+		// below commented code is for running testcase without closing the browser.Please don't delete.
+		/*romuipages.ordersPage().viewOrders(1);
+		logger.info("View order screen has been verified by Search  Fulfillment Order number");
+		romuipages.ordersPage().viewOrders(2);
+		logger.info("View order screen has been verified by Search  Customer Name");
+		romuipages.ordersPage().viewOrders(3);
+		logger.info("View order screen has been verified by Search  Email");
+		romuipages.ordersPage().viewOrders(4);
+		logger.info("View order screen has been verified by Search  order status");*/
 
 	}
 
-	@Test(enabled = true, priority = 8, description = "View Order Detail page by fulfillment order search")
+	@Test(enabled = false, priority = 8, description = "View Order Detail page by fulfillment order search")
 	public void testViewOrderByFulfillment() throws JsonParseException, JsonMappingException, IOException, Exception {
 
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		romuipages.homePage().clickOnLandingButton("Order Management");
-		logger.info("Order Management link is clicked on");
+		logger.info("Navigate to Order Lookup Page");
 		romuipages.orderMgmPage().clickOnOrders();
 		logger.info("Navigated to Orders page");
 		logger.info("Verify view order screen for fulfillment Order number search");
@@ -145,13 +148,12 @@ public class OrdersTests extends ROMUIBasePage {
 
 	}
 
-	@Test(enabled = true, priority = 9, description = "View Order Detail page by Customer name search")
+	@Test(enabled = false, priority = 9, description = "View Order Detail page by Customer name search")
 	public void testViewOrderByCustomername() throws JsonParseException, JsonMappingException, IOException, Exception {
 
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		romuipages.homePage().clickOnLandingButton("Order Management");
-		logger.info("Order Management link is clicked on");
+		logger.info("Navigate to Order Lookup Page");
 		romuipages.orderMgmPage().clickOnOrders();
 		logger.info("Navigated to Orders page");
 		logger.info("Verify view order screen for customer name search");
@@ -160,13 +162,12 @@ public class OrdersTests extends ROMUIBasePage {
 
 	}
 
-	@Test(enabled = true, priority = 10, description = "View Order Detail page by Email search")
+	@Test(enabled = false, priority = 10, description = "View Order Detail page by Email search")
 	public void testViewOrderByEmail() throws JsonParseException, JsonMappingException, IOException, Exception {
 
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		romuipages.homePage().clickOnLandingButton("Order Management");
-		logger.info("Order Management link is clicked on");
+		logger.info("Navigate to Order Lookup Page");
 		romuipages.orderMgmPage().clickOnOrders();
 		logger.info("Navigated to Orders page");
 		logger.info("Verify view order screen for Email search");
@@ -174,13 +175,12 @@ public class OrdersTests extends ROMUIBasePage {
 		logger.info("View order screen has been verified by Search  Email");
 	}
 
-	@Test(enabled = true, priority = 11, description = "View Order Detail page by order status search")
+	@Test(enabled = false, priority = 11, description = "View Order Detail page by order status search")
 	public void testViewOrderByStatus() throws JsonParseException, JsonMappingException, IOException, Exception {
 
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		romuipages.homePage().clickOnLandingButton("Order Management");
-		logger.info("Order Management link is clicked on");
+		logger.info("Navigate to Order Lookup Page");
 		romuipages.orderMgmPage().clickOnOrders();
 		logger.info("Navigated to Orders page");
 		logger.info("Verify view order screen for order status search");
@@ -188,14 +188,13 @@ public class OrdersTests extends ROMUIBasePage {
 		logger.info("View order screen has been verified by Search  order status");
 	}
 
-	@Test(enabled = true, priority = 12, description = "form validation")
+	@Test(enabled = false, priority = 12, description = "form validation")
 	public void testOrderSearchFormValidation()
 			throws JsonParseException, JsonMappingException, IOException, Exception {
 
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		romuipages.homePage().clickOnLandingButton("Order Management");
-		logger.info("Order Management link is clicked on");
+		logger.info("Navigate to Order Lookup Page");
 		romuipages.orderMgmPage().clickOnOrders();
 		logger.info("Navigated to Orders page");
 		romuipages.ordersPage().orderSearchFormValidation();
@@ -203,29 +202,28 @@ public class OrdersTests extends ROMUIBasePage {
 
 	}
 
-	@Test(enabled = true, priority = 13, description = "To Verify Add Zero Cost Order")
+	@Test(enabled = false, priority = 13, description = "To Verify User able to Add Zero Cost Order via UI.")
 	public void testAddZCOrder() throws JsonParseException, JsonMappingException, IOException, Exception {
-
+		ordersdata = OrdersData.get(env.getFileLocation());
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		romuipages.homePage().clickOnLandingButton("Order Management");
-		logger.info("Order Management link is clicked on");
+		logger.info("Select Seller and Node");
+		romuipages.loginPage().selectNode(ordersdata.getStoreIndex(), ordersdata.getNodeID());
+		logger.info("Navigate to Order Lookup Page");
 		romuipages.orderMgmPage().clickOnOrders();
 		logger.info("Navigated to Orders page");
 		logger.info("Verify ZC Order creation");
 		romuipages.ordersPage().addZeroCostOrder();
-		logger.info("Add Zero Cost Order Validated");
-		// romuipages.loginPage().clickSignout();
+		logger.info("Add Zero Cost Order has been Validated");
 
 	}
 
-	@Test(enabled = true, priority = 14, description = "To Verify Create Return order")
+	@Test(enabled = false, priority = 14, description = "To Verify Create Return order")
 	public void testCreateReturnOrder() throws JsonParseException, JsonMappingException, IOException, Exception {
 
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		romuipages.homePage().clickOnLandingButton("Order Management");
-		logger.info("Order Management link is clicked on");
+		logger.info("Navigate to Order Lookup Page");
 		romuipages.orderMgmPage().clickOnOrders();
 		logger.info("Navigated to Orders page");
 		logger.info("Verify Return order creation");
@@ -233,30 +231,32 @@ public class OrdersTests extends ROMUIBasePage {
 		logger.info("Return order creation Validated");
 	}
 
-	@Test(enabled = true, priority = 15, description = "To Verify Order Audits by order number search")
+	@Test(enabled = false, priority = 15, description = "To Verify Order Audits by order number search")
 	public void testOrderAuditsByOrderNumberSearch()
 			throws JsonParseException, JsonMappingException, IOException, Exception {
-
+		ordersdata = OrdersData.get(env.getFileLocation());
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		romuipages.homePage().clickOnLandingButton("Order Management");
-		logger.info("Order Management link is clicked on");
+		logger.info("Select Seller and Node");
+		romuipages.loginPage().selectNode(ordersdata.getStoreIndex(), ordersdata.getNodeID());
+		logger.info("Navigate to Order Lookup Page");
 		romuipages.orderMgmPage().clickOnOrders();
 		logger.info("Navigated to Orders page");
 		logger.info("Verify Order Audits by Order Number Search");
 		romuipages.ordersPage().verifyOrderAudits(0);
 		logger.info("Order Audits by Order Number search verified");
-
+		
 	}
 
-	@Test(enabled = true, priority = 16, description = "To Verify Order Audits by Fulfillment order number search")
+	@Test(enabled = false, priority = 16, description = "To Verify Order Audits by Fulfillment order number search")
 	public void testOrderAuditsByFulfillmentOrder()
 			throws JsonParseException, JsonMappingException, IOException, Exception {
-
+		ordersdata = OrdersData.get(env.getFileLocation());
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		romuipages.homePage().clickOnLandingButton("Order Management");
-		logger.info("Order Management link is clicked on");
+		logger.info("Select Seller and Node");
+		romuipages.loginPage().selectNode(ordersdata.getStoreIndex(), ordersdata.getNodeID());
+		logger.info("Navigate to Order Lookup Page");
 		romuipages.orderMgmPage().clickOnOrders();
 		logger.info("Navigated to Orders page");
 		logger.info("Verify Order Audits by Fulfillment Order Number Search");
@@ -265,14 +265,15 @@ public class OrdersTests extends ROMUIBasePage {
 
 	}
 
-	@Test(enabled = true, priority = 17, description = "To Verify Order Audits by Customer Name search")
+	@Test(enabled = false, priority = 17, description = "To Verify Order Audits by Customer Name search")
 	public void testOrderAuditsByCustomerName()
 			throws JsonParseException, JsonMappingException, IOException, Exception {
-
+		ordersdata = OrdersData.get(env.getFileLocation());
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		romuipages.homePage().clickOnLandingButton("Order Management");
-		logger.info("Order Management link is clicked on");
+		logger.info("Select Seller and Node");
+		romuipages.loginPage().selectNode(ordersdata.getStoreIndex(), ordersdata.getNodeID());
+		logger.info("Navigate to Order Lookup Page");
 		romuipages.orderMgmPage().clickOnOrders();
 		logger.info("Navigated to Orders page");
 		logger.info("Verify Order Audits by Customer Name Search");
@@ -281,18 +282,35 @@ public class OrdersTests extends ROMUIBasePage {
 
 	}
 
-	@Test(enabled = true, priority = 18, description = "To Verify Order Audits by Email search")
+	@Test(enabled = false, priority = 18, description = "To Verify Order Audits by Email search")
 	public void testOrderAuditsByEmail() throws JsonParseException, JsonMappingException, IOException, Exception {
-
+		ordersdata = OrdersData.get(env.getFileLocation());
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		romuipages.homePage().clickOnLandingButton("Order Management");
-		logger.info("Order Management link is clicked on");
+		logger.info("Select Seller and Node");
+		romuipages.loginPage().selectNode(ordersdata.getStoreIndex(), ordersdata.getNodeID());
+		logger.info("Navigate to Order Lookup Page");
 		romuipages.orderMgmPage().clickOnOrders();
 		logger.info("Navigated to Orders page");
 		logger.info("Verify Order Audits by Email Search");
 		romuipages.ordersPage().verifyOrderAudits(3);
 		logger.info("Order Audits by Email search verified");
 	}
+	
+	@Test(enabled = false, priority = 19, description = "To Verify Order Audits by Order Status search")
+	public void testOrderAuditsByOrderStatus() throws JsonParseException, JsonMappingException, IOException, Exception {
+		ordersdata = OrdersData.get(env.getFileLocation());
+		logger.info("Login credentials to be entered");
+		romuipages.loginPage().login(env.getUserName(), env.getPassword());
+		logger.info("Select Seller and Node");
+		romuipages.loginPage().selectNode(ordersdata.getStoreIndex(), ordersdata.getNodeID());
+		logger.info("Navigate to Order Lookup Page");
+		romuipages.orderMgmPage().clickOnOrders();
+		logger.info("Navigated to Orders page");
+		logger.info("Verify Order Audits by Order Status Search");
+		romuipages.ordersPage().verifyOrderAudits(4);
+		logger.info("Order Audits by Email search verified");
+	}
+
 
 }

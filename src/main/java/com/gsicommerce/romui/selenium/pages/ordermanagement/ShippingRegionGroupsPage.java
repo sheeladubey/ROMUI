@@ -109,7 +109,7 @@ public class ShippingRegionGroupsPage {
 	}
 
 	public void editShippingRegionGroups(RegionConfigurationData data, String regionGrpName) throws Exception {
-		int rowNo = CommonElementsPage.getRowNo(regionGrpName);
+		int rowNo = CommonElementsPage.getRowNo(regionGrpName,1);
 		Action.scrollToBottomofPage();
 		CommonElementsPage.clickActionsSpanIcon(rowNo, 5, 0);
 		driver.findElements(
@@ -120,7 +120,7 @@ public class ShippingRegionGroupsPage {
 	}
 
 	public void deleteShippingRegionGroups(RegionConfigurationData data, String regionGrpName) throws Exception {
-		int rowNo = CommonElementsPage.getRowNo(regionGrpName);
+		int rowNo = CommonElementsPage.getRowNo(regionGrpName,1);
 		Action.scrollToBottomofPage();
 		CommonElementsPage.clickActionsSpanIcon(rowNo, 5, 1);
 		CommonElementsPage.clickOnSearchBtn();
@@ -147,7 +147,7 @@ public class ShippingRegionGroupsPage {
 	}
 
 	public void editShippingRegion(RegionConfigurationData data, String regionName) throws Exception {
-		int rowNo = CommonElementsPage.getRowNo(regionName);
+		int rowNo = CommonElementsPage.getRowNo(regionName,1);
 		WebElement element = driver.findElement(By.cssSelector("[data-lookup-id='" + regionName + "']"));
 		Action.scrollToElementofPage(element);
 		Action.scrollDown("-150");
@@ -157,7 +157,7 @@ public class ShippingRegionGroupsPage {
 	}
 
 	public void deleteShippingRegion(RegionConfigurationData data, String regionName) throws Exception {
-		int rowNo = CommonElementsPage.getRowNo(regionName);
+		int rowNo = CommonElementsPage.getRowNo(regionName,1);
 		WebElement element = driver.findElement(By.cssSelector("[data-lookup-id='" + regionName + "']"));
 		Action.scrollToElementofPage(element);
 		Action.scrollDown("-150");

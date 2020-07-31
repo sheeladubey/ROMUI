@@ -37,9 +37,9 @@ public class ServiceGroupConfigsPage {
 	@CacheLookup
 	WebElement lkInvoiceShipmtServcGrp;
 
-	@FindBy(how = How.XPATH, using = "//li/a[contains(text(),'Release Service Group')]")
+	@FindBy(how = How.XPATH, using = "//li/a[contains(text(),'Reship Service Group')]")
 	@CacheLookup
-	WebElement lkReleaseServcGrp;
+	WebElement lkReshipServcGrp;
 
 	@FindBy(how = How.XPATH, using = "//li/a[contains(text(),'Return Service Group')]")
 	@CacheLookup
@@ -135,7 +135,7 @@ public class ServiceGroupConfigsPage {
 
 	@FindBy(how = How.CSS, using = "#seller_service_group_return_service_attributes_return_eligible_ranks_attributes_0_id")
 	@CacheLookup
-	private WebElement txtReturnEligibleRank;
+	private WebElement drpdwnReturnEligibleRank;
 
 	@FindBy(how = How.CSS, using = "#seller_service_group_return_service_attributes_return_eligible_ranks_attributes_0_description")
 	@CacheLookup
@@ -620,6 +620,42 @@ public class ServiceGroupConfigsPage {
 	@FindBy(how = How.CSS, using = ".alert-info")
 	@CacheLookup
 	public WebElement txtEditSuccessMsg;
+	
+	@FindBy(how = How.CSS, using = "#seller_service_group_reship_attributes_zcr_configs_attributes_custom_amount_threshold")
+	@CacheLookup
+	public WebElement txtBoxReshipCustAmtThreshold;
+	
+	@FindBy(how = How.CSS, using = "#seller_service_group_reship_attributes_zcr_configs_attributes_min_amount")
+	@CacheLookup
+	public WebElement txtBoxReshipMinAmt;
+	
+	@FindBy(how = How.CSS, using = "#seller_service_group_reship_attributes_zcr_configs_attributes_reship_window_threshold")
+	@CacheLookup
+	public WebElement txtBoxReshipWindowThreshold;
+	
+	@FindBy(how = How.CSS, using = "#seller_service_group_reship_attributes_zcr_configs_attributes_return_amount_threshold")
+	@CacheLookup
+	public WebElement txtBoxReturnAmtThreshold;
+	
+	@FindBy(how = How.CSS, using = "#seller_service_group_reship_attributes_zcr_configs_attributes_return_window_in_days")
+	@CacheLookup
+	public WebElement txtBoxReturnWindowDays;
+	
+	@FindBy(how = How.CSS, using = "[type='checkbox'][name='seller_service_group[reship_attributes][zcr_configs-attributes][uneven_zcr_support]']")
+	@CacheLookup
+	private WebElement chkboxUnevenZeroCostReshipSupport;
+	
+	@FindBy(how = How.CSS, using = "#seller_service_group_reship_attributes_zcr_charges_attributes_0_value")
+	@CacheLookup
+	private WebElement drpdwnZCRCharge;
+	
+	@FindBy(how = How.CSS, using = "#seller_service_group_reship_attributes_zcr_reason_codes_attributes_0_id")
+	@CacheLookup
+	public WebElement txtBoxZCRReasonCode;
+	
+	@FindBy(how = How.CSS, using = "#seller_service_group_reship_attributes_zcr_reason_codes_attributes_0_description")
+	@CacheLookup
+	public WebElement txtBoxZCRReason;
 
 	public void editSellerServiceGroupConfigs() throws JsonParseException, JsonMappingException, IOException {
 		data = ServiceGroupConfigsData.get(env.getFileLocation());
@@ -635,13 +671,25 @@ public class ServiceGroupConfigsPage {
 		Action.selectByVisibleText(drpdwnInvoiceVal, data.getPublishInvoiceValue());
 		Action.enter(txtNonSellableReturnReasonCode, data.getReturnReasonCode());
 		Action.enter(txtNonSellableReturnReason, data.getReturnReason());
+		
+		//Reship Service Group
+		lkReshipServcGrp.click();
+		Action.enter(txtBoxReshipCustAmtThreshold, data.getCustomAmtThreshold());
+		Action.enter(txtBoxReshipMinAmt, data.getMinAmount());
+		Action.enter(txtBoxReshipWindowThreshold, data.getReshipWindowThreshold());
+		Action.enter(txtBoxReturnAmtThreshold, data.getReturnAmtThreshold());
+		Action.enter(txtBoxReturnWindowDays, data.getReturnWindowDays());
+		Action.selectByVisibleText(drpdwnZCRCharge, data.getZcrCharge());
+		Action.enter(txtBoxZCRReasonCode, data.getZcrReasonCode());
+		Action.enter(txtBoxZCRReason, data.getZcrReason());
 
 		// Return Service Group
+		Action.scrollToTopofPage();
 		lkReturnServcGrp.click();
 		Action.enter(txtReturnWindowDays, data.getReturnWindowDays());
 		Action.selectByVisibleText(drpdwnReturnLocOverride, data.getReturnLocOverride());
-		Action.enter(txtReturnEligibleRank, data.getReturnEligibleRank());
-		Action.enter(txtReturnEligibleDesc, data.getReturnEligibleRankDesc());
+		Action.selectByVisibleText(drpdwnReturnEligibleRank, data.getReturnEligibleRank());
+		//Action.enter(txtReturnEligibleDesc, data.getReturnEligibleRankDesc());
 		Action.selectByVisibleText(drpdwnReturnRefundChargeRule, data.getReturnRefundChargeRule());
 		Action.enter(txtReturnReasonCode, data.getReturnReasonCode());
 		Action.enter(txtReturnReason, data.getReturnReason());
@@ -650,6 +698,7 @@ public class ServiceGroupConfigsPage {
 		Action.scrollDown("-500");
 
 		// Sales Order Create Service Group
+		Action.scrollToTopofPage();
 		lkBSalesOrderCreateServcGrp.click();
 		Action.selectByVisibleText(drpdwnIShipSolVer, data.getiShipSolVer());
 		Action.selectByVisibleText(drpdwnAdminAddrTaxCalc, data.getAdminAddrTaxCalc());
@@ -707,15 +756,15 @@ public class ServiceGroupConfigsPage {
 			chkboxSTSAutoResource.click();
 			Action.enter(txtSTSPickExprdCancelSLA, data.getSsgSTSPickExpiredCanclSLA());
 		}
-
-		Action.enter(txtADStPickProcessApprchg, data.getSsgAssctStPickProcessApprng());
+		
+		/*Action.enter(txtADStPickProcessApprchg, data.getSsgAssctStPickProcessApprng());
 		Action.enter(txtADStPickProcessExpired, data.getSsgAssctStPickProcessExpired());
 		Action.enter(txtADCompltPickingApprchg, data.getSsgAssctCompletePickingApprng());
 		Action.enter(txtADCompltPickingExpired, data.getSsgAssctCompletePickingExpired());
 		Action.enter(txtADCmpltPackngApprchg, data.getSsgAssctCmpltPackingApprng());
 		Action.enter(txtADCmpltPackngExpired, data.getSsgAssctCmpltPackingExpired());
 		Action.enter(txtADCustDelvryApprchg, data.getSsgAssctCustDelvryApprng());
-		Action.enter(txtADCustDelvryExpired, data.getSsgAssctCustDelvryExpired());
+		Action.enter(txtADCustDelvryExpired, data.getSsgAssctCustDelvryExpired());*/
 
 		Action.enter(txtPickDeclineReasonCode, data.getSsgPickDeclineReasonCode());
 		Action.enter(txtPickDeclineReason, data.getSsgPickDeclineReason());
@@ -782,7 +831,7 @@ public class ServiceGroupConfigsPage {
 			chkboxSTSPickTkGenerateExpired.click();
 			chkboxSTSNewOrderWaitingToPick.click();
 
-			chkboxADBRPickApprchng.click();
+			/*chkboxADBRPickApprchng.click();
 			chkboxADBRPickExpired.click();
 			Action.scrollDown("500");
 			chkboxADPackShpmtApprchng.click();
@@ -791,14 +840,9 @@ public class ServiceGroupConfigsPage {
 			chkboxADDelvryExpired.click();
 			chkboxADPickTkGenerateApprchng.click();
 			chkboxADPickTkGenerateExpired.click();
-			chkboxADNewOrderWaitingToPick.click();
+			chkboxADNewOrderWaitingToPick.click();*/
 		}
 		CommonElementsPage.clickOnSaveBtn();
-	}
-
-	public void addSvcFlwProcess() {
-		// TODO Auto-generated method stub
-		
 	}
 
 }

@@ -198,7 +198,7 @@ public class ServiceFlowPage {
 		Action.selectByValue(drpdwnService, "Shipment");
 		btnSearch.click();
 		//int rowNo = CommonElementsPage.getSvcFlwRowNum(svcflowName);
-		int rowNo = CommonElementsPage.getRowNo(svcflowName);
+		int rowNo = CommonElementsPage.getRowNo(svcflowName, 1);
 		System.out.println(rowNo);
 		Action.waitForElementToBeClickable(driver, btnAddSvcFlw, 30);
 		CommonElementsPage.clickDivSpanLink(rowNo, 3, 0,3, 1);
@@ -238,7 +238,7 @@ public class ServiceFlowPage {
 		Action.selectByValue(drpdwnService, "Shipment");
 		btnSearch.click();
 		//int rowNo = CommonElementsPage.getSvcFlwRowNum(svcflowName);
-		int rowNo = CommonElementsPage.getRowNo(svcflowName);
+		int rowNo = CommonElementsPage.getRowNo(svcflowName, 1);
 		System.out.println(rowNo);
 		Action.waitForElementToBeClickable(driver, btnAddSvcFlw, 30);
 		CommonElementsPage.clickDivSpanLink(rowNo, 3,0, 1, 1);
@@ -260,7 +260,7 @@ public class ServiceFlowPage {
 		Common.waitForElementPresent(driver, btnAddSvcFlw, 06);
 		Action.selectByValue(drpdwnService, "Shipment");
 		btnSearch.click();
-		int rowNo = CommonElementsPage.getRowNo(svcflowName);
+		int rowNo = CommonElementsPage.getRowNo(svcflowName, 1);
 		Action.waitForElementToBeClickable(driver, btnAddSvcFlw, 30);
 		CommonElementsPage.clickDivSpanLink(rowNo, 3,0, 2, 1);
 		Action.enter(txtBoxSvcFlwName, data.getSvcFlwName());
@@ -273,7 +273,7 @@ public class ServiceFlowPage {
 		Common.waitForElementPresent(driver, btnAddSvcFlw, 06);
 		Action.selectByValue(drpdwnService, "Shipment");
 		btnSearch.click();
-		int rowNo = CommonElementsPage.getRowNo(svcflowName);
+		int rowNo = CommonElementsPage.getRowNo(svcflowName, 1);
 		Action.waitForElementToBeClickable(driver, btnAddSvcFlw, 30);
 		CommonElementsPage.clickDivSpanLink(rowNo, 3,0, 4, 1);
 

@@ -16,14 +16,25 @@ public class Webtable {
 	public Collection<WebElement> ColCollection;
 	public Collection<WebElement> RowCollection;
 	public WebElement Table;
+	public List<WebElement> Table1;
 	private String _xpath = "";
+	public List<WebElement> RowCollection1;
 
 	public Webtable(WebDriver driver, WebElement el) {
 		_driver = driver;
 		_driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		Table = el;
 		RowCollection = Table.findElements(By.xpath(".//tr")); //// div//table//tbody
+		
 	}
+	
+/*	public void Webtable1(WebDriver driver, List<WebElement> el,int tblindex) {
+		_driver = driver;
+		_driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		Table1 = el;
+		RowCollection1 =((By) Table1).findElement(By.xpath(".//table")).get(tblindex); //// div//table//tbody
+		
+	}*/
 
 	public int GetNumOfRows() {
 		return RowCollection.size();
@@ -93,7 +104,11 @@ public class Webtable {
 	}
 
 	public String getTableCellText(int row, int col) {
-		_xpath = String.format(".//tr[" + row + "]/td[" + col + "]", row, col);
+		if (row == 0) {
+			_xpath = String.format(".//tr/td[" + col + "]", col);
+		} else {
+			_xpath = String.format(".//tr[" + row + "]/td[" + col + "]", row, col);
+		}
 		return Table.findElement(By.xpath(_xpath)).getText();
 	}
 
@@ -172,7 +187,7 @@ public class Webtable {
 
 	public void clickSpanElement(int row, int col, int index) {
 		_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/*//span[1]", row, col);
-		Table.findElements(By.xpath(_xpath)).get(index).click();
+		Action.clickUsingJavaScipt(Table.findElements(By.xpath(_xpath)).get(index));
 	}
 
 	/// <summary>
@@ -206,13 +221,21 @@ public class Webtable {
 		return rowNum;
 	}
 
-	public void clickButton(int row, int col,int divchild,int buttonchild) {
-		if(divchild==0 && buttonchild==0) {
-		_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/button", row, col);
-		
-		}else
-		{
-			_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div["+divchild+"]/button["+buttonchild+"]", row, col);
+	/*
+	 * public void clickButton(int row, int col) { _xpath = String.format(".//tr[" +
+	 * row + "]/td[" + col + "]/div/button", row, col);
+	 * Table.findElement(By.xpath(_xpath)).click();
+	 * 
+	 * }
+	 */
+
+	public void clickButton(int row, int col, int divchild, int buttonchild) {
+		if (divchild == 0 && buttonchild == 0) {
+			_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/button", row, col);
+
+		} else {
+			_xpath = String.format(
+					".//tr[" + row + "]/td[" + col + "]/div[" + divchild + "]/button[" + buttonchild + "]", row, col);
 		}
 		Action.clickUsingJavaScipt(Table.findElement(By.xpath(_xpath)));
 	}
@@ -226,29 +249,47 @@ public class Webtable {
 					".//tr[" + row + "]/td[" + col + "]/div[" + divchild + "]/a[" + child + "]/span[" + spanchild + "]",
 					row, col);
 		}
-	
-		Action.clickUsingJavaScipt(Table.findElement(By.xpath(_xpath)));
-
-	}
-	
-	public void clickDivChildLinkSpanElement(int row, int col, int divchild, int child, int spanchild) {
-		if (divchild == 0 && child==0) {
-			_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/a/span[" + spanchild + "]",
-					row, col);
-		} else {
-			_xpath = String.format(
-					".//tr[" + row + "]/td[" + col + "]/div[" + divchild + "]/a[" + child + "]/span[" + spanchild + "]",
-					row, col);
-		}
-	
 		Action.clickUsingJavaScipt(Table.findElement(By.xpath(_xpath)));
 
 	}
 
 	public void clickButtonSpanElement(int row, int col, int spanChild) {
-		_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/button/span[" + spanChild + "]", row, col);
+		if (row == 0) {
+			_xpath = String.format(".//tr/td[" + col + "]/div/button/span[" + spanChild + "]", row, col);
+		} else {
+			_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/button/span[" + spanChild + "]", row, col);
+		}
+		Action.clickUsingJavaScipt(Table.findElement(By.xpath(_xpath)));
+
+	}
+
+	public void clickSingleRowActionIconWithChild(int col, int child) {
+		if (child == 0) {
+			_xpath = String.format(".//tr/td[" + col + "]/div/a", col);
+		} else {
+			_xpath = String.format(".//tr/td[" + col + "]/div/a[" + child + "]", col, child);
+		}
 		Table.findElement(By.xpath(_xpath)).click();
 
 	}
 
+	public void clickInputCellText(int row, int col) {
+		if (row == 0) {
+			_xpath = String.format(".//tr/td[" + col + "]/*//input", col);
+		} else {
+			_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/*//input", row, col);
+		}
+		Action.clickUsingJavaScipt(Table.findElement(By.xpath(_xpath)));
+	}
+
+	public void clickDivChildLinkSpanElement(int row, int col, int divchild, int child, int spanchild) {
+		if (divchild == 0 && child == 0) {
+			_xpath = String.format(".//tr[" + row + "]/td[" + col + "]/div/a/span[" + spanchild + "]", row, col);
+		} else {
+			_xpath = String.format(
+					".//tr[" + row + "]/td[" + col + "]/div[" + divchild + "]/a[" + child + "]/span[" + spanchild + "]",
+					row, col);
+		}
+		Action.clickUsingJavaScipt(Table.findElement(By.xpath(_xpath)));
+	}
 }

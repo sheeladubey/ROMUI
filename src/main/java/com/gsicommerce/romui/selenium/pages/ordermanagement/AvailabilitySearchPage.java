@@ -58,13 +58,22 @@ public class AvailabilitySearchPage {
 		Assert.assertEquals(CommonElementsPage.txtAlertErrorMsg.getText(), RomuiEnumValues.FORM_ERROR.getMessage(),
 				"No error message displayed for blank mandatory field");
 		CommonElementsPage.clickOnSearchIcon();
+		Action.waitForElementToBeClickable(driver, txtItemIDSearch, 30);
 		Action.enter(txtItemIDSearch, data.getItemID());
+		if("ie".contains(env.getBrowserType())){
+			Action.clickUsingJavaScipt(lookUpList.get(1));
+		} else {
 		lookUpList.get(1).click();
+		}
 		Action.waitForElementToBeClickable(driver, txtNodeID.get(1), 30);
 		Action.enter(txtNodeID.get(1), data.getNodeID());
 		clickOnManageInventorySearchBtn(5);
 		Action.waitForElementToBeClickable(driver, chkboxNodeID, 30);
+		if("ie".contains(env.getBrowserType())){
+			Action.clickUsingJavaScipt(chkboxNodeID);
+		} else {
 		chkboxNodeID.click();
+		}
 		Action.clickUsingJavaScipt(lkSelectItem);
 		Action.selectByVisibleText(drpdwnNodeType, data.getNodeType());
 
@@ -73,7 +82,11 @@ public class AvailabilitySearchPage {
 	}
 
 	public void clickOnManageInventorySearchBtn(int index) {
+		if("ie".contains(env.getBrowserType())) {
+			Action.clickUsingJavaScipt(btnManageInventoryNodeSearch.get(index));
+		} else {
 		btnManageInventoryNodeSearch.get(index).click();
+		}
 	}
 
 	public boolean verifyAvailability(CatalogInventorySearchData data) throws Exception {

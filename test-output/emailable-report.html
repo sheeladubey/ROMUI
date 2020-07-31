@@ -9,17 +9,26 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">NodeCalendarsTests</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">21,249</td><td></td><td></td></tr>
+<tr><td><a href="#t0">ReturnItemsTests</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">74</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">NodeCalendarsTests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.gsicommerce.romui.selenium.tests.NodeCalendarsTests</td><td><a href="#m0">testSearchOrderbyNumber</a></td><td rowspan="1">1594095648066</td><td rowspan="1">10456</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ReturnItemsTests &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="2">com.gsicommerce.romui.selenium.tests.ReturnItemsTests</td><td><a href="#m0">setup</a></td><td rowspan="1">1595535503535</td><td rowspan="1">28</td></tr><tr class="failedeven"><td><a href="#m1">tearDown</a></td><td rowspan="1">1595535503581</td><td rowspan="1">4</td></tr><tr><th colspan="4">ReturnItemsTests &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.gsicommerce.romui.selenium.tests.ReturnItemsTests</td><td><a href="#m2">testReturnsItems</a></td><td rowspan="1">1595535503576</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>NodeCalendarsTests</h2><h3 id="m0">com.gsicommerce.romui.selenium.tests.NodeCalendarsTests#testSearchOrderbyNumber</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalArgumentException: Cannot format given Object as a Date
-	at java.base/java.text.DateFormat.format(DateFormat.java:338)
-	at java.base/java.text.Format.format(Format.java:158)
-	at com.gsicommerce.romui.selenium.utilities.Common.selectTime(Common.java:614)
-	at com.gsicommerce.romui.selenium.pages.ordermanagement.NodeCalendarsPage.addNodeCalendars(NodeCalendarsPage.java:81)
-	at com.gsicommerce.romui.selenium.tests.NodeCalendarsTests.testSearchOrderbyNumber(NodeCalendarsTests.java:22)
+<h2>ReturnItemsTests</h2><h3 id="m0">com.gsicommerce.romui.selenium.tests.ReturnItemsTests#setup</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>org.testng.TestRunner@51f116b8</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
+	at com.gsicommerce.romui.selenium.utilities.Common.getAppUrl(Common.java:86)
+	at com.gsicommerce.romui.selenium.utilities.Common.startApplication(Common.java:80)
+	at com.gsicommerce.romui.selenium.pages.ROMUIBasePage.setup(ROMUIBasePage.java:28)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.gsicommerce.romui.selenium.tests.ReturnItemsTests#tearDown</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[TestResult name={null} status=CREATED method=ReturnItemsTests.testReturnsItems()[pri:0, instance:com.gsicommerce.romui.selenium.tests.ReturnItemsTests@1d296da] output={null}]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
+	at com.gsicommerce.romui.selenium.utilities.Browser.screenShot(Browser.java:303)
+	at com.gsicommerce.romui.selenium.pages.ROMUIBasePage.tearDown(ROMUIBasePage.java:37)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.gsicommerce.romui.selenium.tests.ReturnItemsTests#testReturnsItems</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
+	at com.gsicommerce.romui.selenium.utilities.Common.getAppUrl(Common.java:86)
+	at com.gsicommerce.romui.selenium.utilities.Common.startApplication(Common.java:80)
+	at com.gsicommerce.romui.selenium.pages.ROMUIBasePage.setup(ROMUIBasePage.java:28)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
