@@ -45,7 +45,13 @@ public enum RomuiEnumValues {
 	SAFETYSTOCK_EXIST("Oh snap! Safety Stock already exists"),
 	ORDERAUDITS_NOTFOUND("Heads up! No Audits Found"),
 	NODECALENDARS_ADD("Heads up! Calendar Successfully Saved!"),
-	SERVICEFLOW_CRITERIA_VALIDATION(""), SERVICEFLOW_VALIDATION("");
+	SERVICEFLOW_CRITERIA_VALIDATION(""), SERVICEFLOW_VALIDATION(""),
+	NODECALENDARS_EDIT("Heads up! Calendar Successfully Updated!"),
+	NODECALENDARS_DELETE("Heads up! The Calendar was successfully deleted!"),
+	REASONCODES_ADD("Heads up! Reason successfully created!"),
+	REASONCODES_DELETE("Heads up! Reason successfully deleted!"),
+	REASONCODES_EDIT("Heads up! Reason successfully updated!"),
+	REASONCODES_DUPLICATE("Oh snap! Reason code already exists");
 
 	private String updateMsg;
 

@@ -16,7 +16,7 @@ public class ServiceGroupConfigsTests extends ROMUIBasePage {
 	public void testEditSellerServiceGroupConfigs() throws JsonParseException, JsonMappingException, IOException {
 		logger.info("Login credentials to be entered");
 		romuipages.loginPage().login(env.getUserName(), env.getPassword());
-		romuipages.homePage().clickOnLandingButton("Order Management");
+	//	romuipages.homePage().clickOnLandingButton("Order Management");
 		logger.info("Order Management link is clicked on");
 		romuipages.orderMgmPage().clickOnServiceGrpConfig();
 		logger.info("Navigated to Seller Service Group Config page");

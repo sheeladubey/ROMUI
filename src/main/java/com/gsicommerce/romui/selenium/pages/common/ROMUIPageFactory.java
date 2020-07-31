@@ -17,6 +17,7 @@ import com.gsicommerce.romui.selenium.pages.ordermanagement.OrderManagementMenus
 import com.gsicommerce.romui.selenium.pages.ordermanagement.OrdersPage;
 import com.gsicommerce.romui.selenium.pages.ordermanagement.PaymentMethodConfigPage;
 import com.gsicommerce.romui.selenium.pages.ordermanagement.PipelinesPage;
+import com.gsicommerce.romui.selenium.pages.ordermanagement.ReasonCodesPage;
 import com.gsicommerce.romui.selenium.pages.ordermanagement.SFSPage;
 import com.gsicommerce.romui.selenium.pages.ordermanagement.SafetyStockConfigsPage;
 import com.gsicommerce.romui.selenium.pages.ordermanagement.SellerConfigurationsPage;
@@ -51,6 +52,7 @@ public class ROMUIPageFactory extends PageFactory {
 	private final InventoryOrganizationPage inventoryOrganizationPage;
 	// private final OrderCreatePage orderCreatePage;
 	private final NodeCalendarsPage nodeCalendarsPage;
+	private final ReasonCodesPage reasonCodesPage;
 
 	public ROMUIPageFactory(WebDriver driver, Environment env) {
 		super(driver, env);
@@ -77,6 +79,7 @@ public class ROMUIPageFactory extends PageFactory {
 		inventoryOrganizationPage = new InventoryOrganizationPage(driver, env);
 		// orderCreatePage = new OrderCreatePage(driver, env);
 		nodeCalendarsPage = new NodeCalendarsPage(driver, env);
+		reasonCodesPage=new ReasonCodesPage(driver,env);
 	}
 
 	public LoginPage loginPage() {
@@ -176,5 +179,10 @@ public class ROMUIPageFactory extends PageFactory {
 	public NodeCalendarsPage nodeCalendarsPage() {
 
 		return nodeCalendarsPage;
+	}
+
+	public ReasonCodesPage reasonCodesPage() {
+	
+		return reasonCodesPage;
 	}
 }

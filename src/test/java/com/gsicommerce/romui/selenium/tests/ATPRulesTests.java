@@ -11,7 +11,7 @@ import com.gsicommerce.romui.selenium.utilities.RomuiEnumValues;
 public class ATPRulesTests extends ROMUIBasePage {
 	private InventoryAvailabilityData inventoryAvailabilityData;
 
-	@Test(enabled = true, priority = 1, description = "to Verify Manage ATP rules displays all the ATP rules available for the store")
+	@Test(enabled = false, priority = 1, description = "to Verify Manage ATP rules displays all the ATP rules available for the store")
 	public void testVerifyManageATPRule() throws Exception {
 		inventoryAvailabilityData = InventoryAvailabilityData.get(env.getFileLocation());
 		logger.info("Login credentials to be entered");

@@ -7,6 +7,9 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
@@ -30,7 +33,7 @@ public class Reporting extends TestListenerAdapter {
 
 		sparkReporter = new ExtentSparkReporter(System.getProperty("user.dir") + "/test-output/" + repName);// specify
 																											// location
-																											// of the
+																									// of the
 																											// report
 		sparkReporter.loadXMLConfig(System.getProperty("user.dir") + "/extent-config.xml");
 
@@ -50,17 +53,17 @@ public class Reporting extends TestListenerAdapter {
 
 	public void onTestSuccess(ITestResult tr) {
 		logger = extent.createTest(tr.getName()); // create new entry in the report
-		logger.log(Status.PASS, MarkupHelper.createLabel(tr.getName(), ExtentColor.GREEN)); // send the passed
-																							// information to the report
-																							// with GREEN color
-																							// highlighted
+		logger.log(Status.PASS, MarkupHelper.createLabel(tr.getName(), ExtentColor.GREEN)); // send the passed information to the report with GREEN color highlighted
+		logger=	extent.createTest(tr.getMethod().getMethodName());	
+		logger.log(Status.INFO, tr.getMethod().getMethodName() + "test is Passed"); 
+																						
 	}
 
 	public void onTestFailure(ITestResult tr) {
 		logger = extent.createTest(tr.getName()); // create new entry in the report
 		logger.log(Status.FAIL, MarkupHelper.createLabel(tr.getName(), ExtentColor.RED)); // send the failed information
 																							// to the report with GREEN
-																							// color highlighted
+																						// color highlighted
 
 		String screenshotPath = System.getProperty("user.dir") + "\\Screenshots\\" + tr.getName() + ".png";
 
@@ -73,6 +76,7 @@ public class Reporting extends TestListenerAdapter {
 				e.printStackTrace();
 			}
 		}
+		 
 
 	}
 
