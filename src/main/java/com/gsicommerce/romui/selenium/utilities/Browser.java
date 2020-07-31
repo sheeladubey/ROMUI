@@ -34,8 +34,6 @@ import org.openqa.selenium.safari.SafariOptions;
 import org.testng.ITestResult;
 
 import com.crossbrowsertesting.AutomatedTest;
-import com.crossbrowsertesting.Snapshot;
-import com.crossbrowsertesting.Video;
 import com.gsicommerce.romui.selenium.testdata.Environment;
 
 public class Browser {

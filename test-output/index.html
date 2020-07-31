@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-skipped">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\shedubey\Desktop\ROM\ROMUI_Automation\ROMUI-sheela\src\test\resources\testsuites\TestSuite-OrdersTests.xml</span>
+                    <span>C:\Users\shedubey\Desktop\ROM\ROMUI_Automation\ROMUI-sheela\src\test\resources\testsuites\TestSuite-ReturnItemsTests.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,21 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method,  1 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Suite">
+                    <div class="method-list-content skipped suite-Suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.OrdersTests" class="method navigator-link" hash-for-method="testSearchOrderbyNumber">testSearchOrderbyNumber</a> <!-- method navigator-link -->
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.gsicommerce.romui.selenium.tests.ReturnItemsTests" class="method navigator-link" hash-for-method="testReturnsItems">testReturnsItems</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -119,49 +119,54 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.gsicommerce.romui.selenium.tests.OrdersTests</span>
+              <img src="skipped.png"/>
+              <span class="class-name">com.gsicommerce.romui.selenium.tests.ReturnItemsTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testSearchOrderbyNumber">
-                  </a> <!-- testSearchOrderbyNumber -->
-                  <span class="method-name">testSearchOrderbyNumber</span>
+                  <a name="testReturnsItems">
+                  </a> <!-- testReturnsItems -->
+                  <span class="method-name">testReturnsItems</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.gsicommerce.romui.selenium.utilities.Common.getAppUrl(Common.java:86)
+	at com.gsicommerce.romui.selenium.utilities.Common.startApplication(Common.java:80)
+	at com.gsicommerce.romui.selenium.pages.ROMUIBasePage.setup(ROMUIBasePage.java:28)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
                   <em>
-(to Verify search order by Order number)                  </em>
+(to Verify Return items via Store Fulfillment screen)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-skipped -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\shedubey\Desktop\ROM\ROMUI_Automation\ROMUI-sheela\src\test\resources\testsuites\TestSuite-OrdersTests.xml</span>
+            <span class="header-content">C:\Users\shedubey\Desktop\ROM\ROMUI_Automation\ROMUI-sheela\src\test\resources\testsuites\TestSuite-ReturnItemsTests.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;parameter name=&quot;adminUserName&quot; value=&quot;admin@tmsna&quot;/&gt;
-  &lt;parameter name=&quot;sellerID&quot; value=&quot;TMSEB2&quot;/&gt;
-  &lt;parameter name=&quot;storeEnvironment&quot; value=&quot;lvststromuiapp04&quot;/&gt;
-  &lt;parameter name=&quot;adminPasswd&quot; value=&quot;Password123@&quot;/&gt;
-  &lt;parameter name=&quot;storeID&quot; value=&quot;TMS-NA-Store1&quot;/&gt;
+  &lt;parameter name=&quot;adminUserName&quot; value=&quot;dubey1290@BBWNA&quot;/&gt;
+  &lt;parameter name=&quot;adminPasswd&quot; value=&quot;Welcome1!&quot;/&gt;
+  &lt;parameter name=&quot;storeEnvironmentUAT&quot; value=&quot;uat-romui.radial.com/en&quot;/&gt;
   &lt;parameter name=&quot;waitPeriod&quot; value=&quot;5&quot;/&gt;
+  &lt;parameter name=&quot;browserType&quot; value=&quot;chrome&quot;/&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.gsicommerce.romui.selenium.utilities.ExtentReporterListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;OrdersTests&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;ReturnItemsTests&quot;&gt;
     &lt;parameter name=&quot;dataFile&quot; value=&quot;./src/test/resources/testdata/ordersData.json&quot;/&gt;
-    &lt;parameter name=&quot;browserType&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.gsicommerce.romui.selenium.tests.OrdersTests&quot;/&gt;
+      &lt;class name=&quot;com.gsicommerce.romui.selenium.tests.ReturnItemsTests&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- OrdersTests --&gt;
+  &lt;/test&gt; &lt;!-- ReturnItemsTests --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -173,7 +178,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">OrdersTests (1 class)</span>
+                <span class="test-name">ReturnItemsTests (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -201,14 +206,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testSearchOrderbyNumber')
-data.setCell(0, 2, 'com.gsicommerce.romui.selenium.tests.OrdersTests')
-data.setCell(0, 3, 39681);
+data.setCell(0, 1, 'testReturnsItems')
+data.setCell(0, 2, 'com.gsicommerce.romui.selenium.tests.ReturnItemsTests')
+data.setCell(0, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 39 seconds</span>
+              <span class="suite-total-time">Total running time: 0 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -219,63 +224,13 @@ return data;
             <span class="header-content">Reporter output for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">testSearchOrderbyNumber</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">There is no page limit option displayed</span>
-                <span class="reporter-method-output">page limit drop down value is selected</span>
-                <span class="reporter-method-output">Getting the column value of the first row</span>
-                <span class="reporter-method-output">Getting the column value of the first row</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">18 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.gsicommerce.romui.selenium.tests.OrdersTests</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">testOrderAuditsByFulfillmentOrder</span>
-                <br/>
-                <span class="ignored-method-name">testOrderAuditsByEmail</span>
-                <br/>
-                <span class="ignored-method-name">testSearchOrderByEmail</span>
-                <br/>
-                <span class="ignored-method-name">testOrderAuditsByCustomerName</span>
-                <br/>
-                <span class="ignored-method-name">testViewOrderByCustomername</span>
-                <br/>
-                <span class="ignored-method-name">testViewOrderByEmail</span>
-                <br/>
-                <span class="ignored-method-name">testCreateReturnOrder</span>
-                <br/>
-                <span class="ignored-method-name">testViewOrderByStatus</span>
-                <br/>
-                <span class="ignored-method-name">testViewOrderByFulfillment</span>
-                <br/>
-                <span class="ignored-method-name">testSearchOrderByOrderStatus</span>
-                <br/>
-                <span class="ignored-method-name">testOrderAuditsByOrderStatus</span>
-                <br/>
-                <span class="ignored-method-name">testAddZCOrder</span>
-                <br/>
-                <span class="ignored-method-name">testSearchOrderByCustomerName</span>
-                <br/>
-                <span class="ignored-method-name">testOrderSearchFormValidation</span>
-                <br/>
-                <span class="ignored-method-name">testOrderAuditsByOrderNumberSearch</span>
-                <br/>
-                <span class="ignored-method-name">testViewOrder</span>
-                <br/>
-                <span class="ignored-method-name">testEditSearch</span>
-                <br/>
-                <span class="ignored-method-name">testSearchOrderByFullfillmentNumber</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -284,18 +239,22 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.gsicommerce.romui.selenium.tests.OrdersTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.gsicommerce.romui.selenium.tests.ReturnItemsTests</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setup(org.testng.TestRunner@4a8df3e2)</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setup(org.testng.TestRunner@51f116b8)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testSearchOrderbyNumber</span>
-                <span class="method-start">13635 ms</span>
+                <span class="method-name">testReturnsItems</span>
+                <span class="method-start">41 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=testSearchOrderbyNumber status=SUCCESS method=OrdersTests.testSearchOrderbyNumber()...)</span>
-                <span class="method-start">53319 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">tearDown([TestResult name={null} status=CREATED method=ReturnItemsTests.testReturnsItems()[pri:0, instance:co...)</span>
+                <span class="method-start">46 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
